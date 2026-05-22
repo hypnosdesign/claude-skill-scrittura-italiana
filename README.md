@@ -18,8 +18,9 @@ Una skill che dà a Claude il quadro completo per scrivere in italiano, organizz
 alle **quattro virtù dell'espressione** (*virtutes elocutionis*) della retorica classica:
 
 1. **aptum** — appropriatezza a scopo, destinatario, registro.
-2. **puritas** — correttezza grammaticale e **tipografica**: virgola, punto e virgola, due
-   punti, virgolette (caporali « » vs dritte), trattino vs lineetta, maiuscole, sigle.
+2. **puritas** — correttezza **tipografica** (virgola, punto e virgola, due punti, virgolette
+   caporali « » vs dritte, trattino vs lineetta, maiuscole, sigle) e **di parola** (accenti,
+   omofoni come *da/dà*, *qual è*, *un po'*, *sé stesso*, plurali difficili, *tu/te*).
 3. **perspicuitas** — chiarezza: il lettore capisce alla prima.
 4. **ornatus** — bellezza *regolata*: figure, ritmo, argomentazione. Il suo eccesso (la
    *mala affectatio*) è esattamente lo **slop dell'AI** — perifrasi, gerundite, triadi,
@@ -36,7 +37,9 @@ un **workflow ordinato** che va dalla struttura alla pelle.
 .
 ├── SKILL.md                      # modello (4 virtù), workflow, principî cardine
 └── references/
-    ├── punteggiatura.md          # puritas: 15 schede di segni, regole, errori, esempi
+    ├── punteggiatura.md          # puritas (segni): 15 schede, regole, errori, esempi
+    ├── dubbi-e-errori.md         # puritas (parole): accenti, omofoni, plurali,
+    │                             #   pronomi, ortografia, congiuntivo, preposizioni
     ├── retorica-efficacia.md     # aptum/perspicuitas/ornatus: 4 virtù, 3 stili,
     │                             #   repertorio di figure, compositio, tópoi
     └── stile-naturale.md         # anti-slop: 36 pattern AI + "Dare voce" + audit
@@ -124,7 +127,9 @@ Questa skill è un'opera derivata e cita le sue fonti:
   Bice Mortara Garavelli, *Prontuario di punteggiatura*, Laterza (2003).
 - **Retorica ed efficacia** (4 virtù, stili, figure, *compositio*, *tópoi*) — concetti
   *distillati e riformulati* da Bice Mortara Garavelli, *Manuale di retorica*, Bompiani.
-  Sono nozioni della retorica classica, patrimonio comune; le definizioni e gli esempi della
+- **Dubbi ed errori comuni** (accenti, omofoni, plurali, pronomi…) — regole *sintetizzate e
+  riscritte* da Manolo Trinci, *Le basi proprio della grammatica*, Bompiani (2019).
+  Sono norme e nozioni della lingua, patrimonio comune; le definizioni e gli esempi della
   skill sono originali, **non** una riproduzione dei libri. Per lo studio approfondito,
   leggete le opere: sono i riferimenti sull'argomento.
 - **Stile / pattern anti-AI** — adattamento italiano di
@@ -178,9 +183,10 @@ demonstrations.
 ### Sources & license
 
 Punctuation rules are synthesized from B. Mortara Garavelli, *Prontuario di punteggiatura*
-(Laterza, 2003); the rhetoric layer distills her *Manuale di retorica* (Bompiani). These are
-facts of usage and classical-rhetoric concepts, not copyrightable; the skill's wording and
-examples are original, not a reproduction. The style layer adapts
+(Laterza, 2003); the rhetoric layer distills her *Manuale di retorica* (Bompiani); the
+common-mistakes layer rewrites rules from M. Trinci, *Le basi proprio della grammatica*
+(Bompiani, 2019). These are facts of usage and classical-rhetoric concepts, not copyrightable;
+the skill's wording and examples are original, not a reproduction. The style layer adapts
 [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
 (CC BY-SA 4.0); per share-alike, this skill is released under the same license. Contributions
 welcome via issues and pull requests — see [`CONTRIBUTING.md`](CONTRIBUTING.md).

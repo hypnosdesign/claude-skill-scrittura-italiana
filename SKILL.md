@@ -1,18 +1,18 @@
 ---
 name: scrittura-italiana
-version: 2.0.0
+version: 2.1.0
 description: |
   Guida completa per scrivere e correggere testi in italiano impeccabili, organizzata
   attorno alle quattro virtù dell'espressione della retorica classica (aptum, puritas,
   perspicuitas, ornatus). Tre livelli che si tengono insieme: CORRETTEZZA (punteggiatura
-  e tipografia, dal "Prontuario di punteggiatura"), CHIAREZZA + EFFICACIA (retorica
-  applicata: stili, figure, ritmo, argomentazione, dal "Manuale di retorica") e
-  NATURALEZZA (rimozione dei segni della scrittura AI e cura della voce). Entrambi i
-  manuali sono di Bice Mortara Garavelli. Usala ogni volta che scrivi, revisioni,
-  correggi o editi un testo in italiano — saggistica, tesi, articoli, copy, narrativa,
-  email, documentazione, discorsi — o per dubbi su virgola, punto e virgola, due punti,
-  virgolette, trattini/lineette, parentesi, maiuscole; per scrivere in modo chiaro,
-  efficace e persuasivo; e per far suonare un testo naturale, umano e non generato da AI.
+  e tipografia + dubbi e errori comuni: accenti, omofoni, apostrofo, plurali, pronomi),
+  CHIAREZZA + EFFICACIA (retorica applicata: stili, figure, ritmo, argomentazione) e
+  NATURALEZZA (rimozione dei segni della scrittura AI e cura della voce). Usala ogni volta
+  che scrivi, revisioni, correggi o editi un testo in italiano — saggistica, tesi,
+  articoli, copy, narrativa, email, documentazione, discorsi — o per dubbi di lingua
+  (virgola, punto e virgola, due punti, virgolette, trattini, maiuscole; qual è, un po',
+  da/dà, sé stesso, accenti, plurali difficili, tu/te, congiuntivo); per scrivere in modo
+  chiaro, efficace e persuasivo; e per far suonare un testo naturale e non generato da AI.
 license: CC-BY-SA-4.0
 language: it
 compatibility: claude-code opencode claude.ai
@@ -34,7 +34,7 @@ unifica correttezza, chiarezza, efficacia e naturalezza.
 | Virtù | Significato | Dove approfondire |
 |---|---|---|
 | **aptum** | appropriatezza a scopo, destinatario, registro, genere | `references/retorica-efficacia.md` §1-2 |
-| **puritas** | correttezza grammaticale, ortografica, **tipografica** | `references/punteggiatura.md` |
+| **puritas** | correttezza tipografica (segni) e di parola (accenti, omofoni, plurali…) | `references/punteggiatura.md` + `references/dubbi-e-errori.md` |
 | **perspicuitas** | chiarezza: il lettore capisce alla prima | `references/retorica-efficacia.md` §1 + `stile-naturale.md` |
 | **ornatus** | bellezza *regolata*: figure, ritmo — mai *mala affectatio* | `references/retorica-efficacia.md` §3-4 + `stile-naturale.md` |
 
@@ -68,10 +68,13 @@ Applica le passate nell'ordine delle virtù, **dalla struttura alla pelle**:
 1. **aptum — inquadra** (`retorica-efficacia.md` §1-2)
    Identifica scopo, destinatario, registro. Tutto il resto si misura su questo. Se il
    registro è incoerente, è il primo problema da risolvere.
-2. **puritas — correggi** (`punteggiatura.md`)
-   Punteggiatura e tipografia: virgole spaiate, virgola tra soggetto e verbo, relative
-   restrittive/esplicative, incisi da chiudere, gerarchia virgola/`;`/punto, due punti,
-   maiuscole; virgolette uniformi, trattino vs lineetta, sentence case, puntini.
+2. **puritas — correggi** (`punteggiatura.md` + `dubbi-e-errori.md`)
+   - *Segni:* virgole spaiate, virgola tra soggetto e verbo, relative restrittive/esplicative,
+     incisi da chiudere, gerarchia virgola/`;`/punto, due punti, maiuscole; virgolette
+     uniformi, trattino vs lineetta, sentence case, puntini.
+   - *Parole:* accenti (perché, è, qual è, un po', sé stesso), omofoni (da/dà, ne/né, ho/o),
+     ortografia, congiuntivo (stessi non «stassi»), plurali difficili, pronomi (tu/te, gli/le),
+     preposizioni e «che» polivalente.
 3. **perspicuitas — chiarisci** (`retorica-efficacia.md` §1 + `stile-naturale.md`)
    Una proposizione = un'idea; soggetto vicino al verbo; spezza i periodi troppo lunghi;
    sciogli gli astratti in catena; togli il burocratese. Il lettore deve capire alla prima.
@@ -107,6 +110,9 @@ da ripulire dopo. Chiudi con l'**audit anti-AI** e la **checklist tipografica**.
 - **Virgolette:** caporali « » (editoria) o dritte " " (web) — uniformi, **mai curve né miste**.
 - **Trattino `-`** unisce senza spazi; **lineetta `–`** separa con spazi e in italiano si usa
   **poco**. **Titoli in sentence case.** **Puntini sempre tre.** **Sigle senza punti** (`ISTAT`).
+- **Errori di parola ad alta frequenza:** `qual è` (mai `qual'è`), `un po'` (mai `pò`),
+  `da/dà/da'`, `né` (acuto), `sé stesso`, `perché`/`è`, `ho/o`; `stessi` (non «stassi»);
+  `tu hai` (non «te hai»); niente doppione di `ne` («da questo consegue», non «ne consegue»).
 
 **perspicuitas — chiarezza**
 - **Spezza i periodi** sopra 35-40 parole o con più di due *che*.
@@ -129,10 +135,14 @@ da ripulire dopo. Chiudi con l'**audit anti-AI** e la **checklist tipografica**.
 
 ## Indice dei riferimenti
 
-- **`references/punteggiatura.md`** — *puritas tipografica*. Scheda per ogni segno (virgola,
+- **`references/punteggiatura.md`** — *puritas: i segni*. Scheda per ogni segno (virgola,
   punto e virgola, due punti, punto, interrogativo, esclamativo, virgolette, lineette/trattini,
   parentesi, puntini, barra/asterisco, abbreviazioni e sigle, a capo), con regole, errori
   comuni ed esempi.
+- **`references/dubbi-e-errori.md`** — *puritas: le parole*. Repertorio completo di dubbi ed
+  errori comuni: accenti, omofoni, apostrofo/elisione/troncamento, *sé stesso*, ortografia
+  insidiosa, congiuntivo, plurali difficili e doppi, pronomi (tu/te, gli/le, ne), avverbi,
+  preposizioni, «che» polivalente, ausiliari, più note su punteggiatura in chat.
 - **`references/retorica-efficacia.md`** — *scrivere bene*. Le 4 virtù dell'espressione, i 3
   stili (tenue/medio/sublime ↔ docere/delectare/movere), repertorio essenziale di figure
   (tropi, figure di parola e di pensiero), *compositio* (ordine/ritmo/eufonia), argomentazione
@@ -156,7 +166,8 @@ corretto** (e, se istruttivo, l'errore da evitare), citando la scheda pertinente
 ## Fonti
 
 - Punteggiatura e retorica: B. Mortara Garavelli, *Prontuario di punteggiatura* (Laterza,
-  2003) e *Manuale di retorica* (Bompiani). Concetti e regole sono patrimonio classico e
+  2003) e *Manuale di retorica* (Bompiani). Dubbi ed errori comuni: M. Trinci, *Le basi
+  proprio della grammatica* (Bompiani, 2019). Concetti e regole sono patrimonio classico e
   fatti della lingua; testi ed esempi della skill sono rielaborazioni originali.
 - Stile/anti-AI: adattamento italiano di [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
   (WikiProject AI Cleanup), ampliato per i tic dell'italiano.
