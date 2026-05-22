@@ -1,0 +1,27 @@
+name: "Bug o refuso"
+description: "Refuso, link rotto, incoerenza tra SKILL.md e i file di riferimento"
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: dove
+    attributes:
+      label: Dove
+      description: File e, se possibile, sezione o riga.
+      placeholder: "references/punteggiatura.md → sezione Virgolette"
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema
+      description: Cosa c'è che non va.
+    validations:
+      required: true
+  - type: textarea
+    id: correzione
+    attributes:
+      label: Correzione proposta
+      description: Opzionale. Come dovrebbe essere.
+    validations:
+      required: false

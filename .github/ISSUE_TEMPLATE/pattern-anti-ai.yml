@@ -1,0 +1,55 @@
+name: "Nuovo pattern anti-AI"
+description: "Proponi un tic ricorrente dell'italiano generato da AI non ancora coperto"
+title: "[pattern] "
+labels: ["pattern-anti-ai"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie! I pattern vivono di esempi concreti. Compila i campi: servono parole-spia e un caso reale *prima → dopo*.
+  - type: input
+    id: nome
+    attributes:
+      label: Nome del pattern
+      description: Una formula breve e descrittiva.
+      placeholder: "es. Accumulo di sostantivi astratti"
+    validations:
+      required: true
+  - type: textarea
+    id: parole-spia
+    attributes:
+      label: Parole-spia / segnali
+      description: Le espressioni o le strutture che fanno scattare il pattern.
+      placeholder: "processo di, dimensione, valorizzazione, ottimizzazione…"
+    validations:
+      required: true
+  - type: textarea
+    id: prima
+    attributes:
+      label: Esempio "prima" (AI-suonante)
+      description: Una frase reale o realistica che mostra il problema.
+    validations:
+      required: true
+  - type: textarea
+    id: dopo
+    attributes:
+      label: Esempio "dopo" (riscritto)
+      description: La versione naturale, italiano vero.
+    validations:
+      required: true
+  - type: textarea
+    id: note
+    attributes:
+      label: Perché è un tell / note
+      description: Opzionale. Perché suona da AI, in quali registri compare, eccezioni lecite.
+    validations:
+      required: false
+  - type: checkboxes
+    id: conferme
+    attributes:
+      label: Conferme
+      options:
+        - label: "Ho controllato che il pattern non sia già in `references/stile-naturale.md`"
+          required: true
+        - label: "Gli esempi sono originali (non copiati da fonti protette)"
+          required: true

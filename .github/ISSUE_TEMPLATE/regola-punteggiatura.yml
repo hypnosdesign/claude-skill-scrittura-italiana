@@ -1,0 +1,49 @@
+name: "Regola di punteggiatura"
+description: "Correggi, precisa o aggiungi una regola di punteggiatura/tipografia"
+title: "[punteggiatura] "
+labels: ["punteggiatura"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Per le regole di punteggiatura serve **una fonte o un uso attestato**. Niente regole "a orecchio".
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo di intervento
+      options:
+        - "Correzione di una regola esistente"
+        - "Precisazione / caso mancante"
+        - "Nuova regola"
+        - "Esempio migliore"
+    validations:
+      required: true
+  - type: input
+    id: segno
+    attributes:
+      label: Segno interessato
+      placeholder: "virgola, punto e virgola, due punti, virgolette, lineetta…"
+    validations:
+      required: true
+  - type: textarea
+    id: regola
+    attributes:
+      label: Regola proposta
+      description: Formulazione operativa ("usa X quando…", "non mettere Y tra…").
+    validations:
+      required: true
+  - type: textarea
+    id: esempi
+    attributes:
+      label: Esempi
+      description: Corretto e, se utile, l'errore da evitare. Frasi brevi e originali.
+      placeholder: "✓ …\n✗ …"
+    validations:
+      required: true
+  - type: input
+    id: fonte
+    attributes:
+      label: Fonte / uso attestato
+      description: Mortara Garavelli, Serianni, Treccani, Accademia della Crusca, o riferimento all'uso.
+    validations:
+      required: true

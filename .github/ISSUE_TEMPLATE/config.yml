@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Domanda o discussione
+    url: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/discussions
+    about: Per domande generali, idee e confronto, usa le Discussions (non le issue).
+  - name: Come contribuire
+    url: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/blob/main/CONTRIBUTING.md
+    about: Leggi le linee guida prima di aprire una issue o una pull request.
