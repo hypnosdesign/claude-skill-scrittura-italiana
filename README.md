@@ -62,10 +62,18 @@ git clone https://github.com/hypnosdesign/claude-skill-scrittura-italiana \
 Oppure, per un singolo progetto, in `.claude/skills/scrittura-italiana` nella radice del repo.
 Riavvia/riapri Claude Code: la skill comparirà tra quelle disponibili.
 
-### claude.ai / Claude Desktop
+### Claude Desktop / claude.ai
 
-Carica la cartella come Skill dalle impostazioni (Capabilities → Skills), oppure comprimi la
-cartella in `.zip` e caricala.
+1. Scarica lo **zip** della skill: dalla pagina GitHub → *Code → Download ZIP* (oppure usa
+   `scrittura-italiana.zip` allegato alle [Release](../../releases)).
+2. Apri Claude → **Impostazioni → Capabilities (Funzionalità) → Skills**.
+3. **Carica** la cartella `scrittura-italiana` (o il suo `.zip`). I file in `references/`
+   viaggiano con la skill: la skill li legge dal proprio sandbox quando servono.
+
+> La funzionalità **Skills** nelle app consumer richiede che *code execution* sia attivo
+> (dipende dal piano: Pro/Max/Team/Enterprise). Se non vedi "Skills" in Impostazioni,
+> abilitala lì o aggiorna l'app. Claude Desktop e claude.ai condividono lo stesso account:
+> una skill caricata è disponibile in entrambi.
 
 ## Uso
 

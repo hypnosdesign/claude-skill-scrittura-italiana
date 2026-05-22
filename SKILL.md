@@ -15,7 +15,7 @@ description: |
   chiaro, efficace e persuasivo; e per far suonare un testo naturale e non generato da AI.
 license: CC-BY-SA-4.0
 language: it
-compatibility: claude-code opencode claude.ai
+compatibility: claude-code claude-desktop opencode claude.ai
 allowed-tools:
   - Read
   - Write
