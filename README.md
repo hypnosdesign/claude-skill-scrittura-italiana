@@ -1,42 +1,49 @@
 # scrittura-italiana — skill per Claude
 
-> Guida completa per **scrivere e correggere testi in italiano impeccabili**: punteggiatura
-> e tipografia secondo la norma + stile naturale (senza i segni della scrittura AI).
+> Guida completa per **scrivere e correggere testi in italiano impeccabili**, organizzata
+> attorno alle **quattro virtù dell'espressione** della retorica classica: correttezza
+> (punteggiatura e tipografia), chiarezza ed efficacia (retorica applicata), naturalezza
+> (senza i segni della scrittura AI).
 >
 > *A Claude [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills) for writing
-> and editing flawless Italian — punctuation & typography rules plus an "anti-AI", natural-voice
-> style layer. Content is in Italian.*
+> and editing flawless Italian, organized around the four classical virtues of style:
+> correctness (punctuation & typography), clarity & effectiveness (applied rhetoric), and
+> naturalness (anti-AI). Content is in Italian.*
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ## Cos'è
 
-Una skill che dà a Claude il quadro completo delle regole per scrivere in italiano. Lavora
-su **due livelli complementari**:
+Una skill che dà a Claude il quadro completo per scrivere in italiano, organizzato attorno
+alle **quattro virtù dell'espressione** (*virtutes elocutionis*) della retorica classica:
 
-1. **Correttezza** — punteggiatura e tipografia secondo la norma italiana: virgola, punto e
-   virgola, due punti, virgolette (caporali « » vs dritte), trattino vs lineetta, parentesi,
-   puntini, maiuscole, abbreviazioni e sigle.
-2. **Naturalezza** — riconosce e rimuove i 36 pattern tipici dell'italiano generato da AI
-   (perifrasi, gerundite, avverbi in *-mente*, burocratese, triadi forzate, trattini lunghi
-   all'inglese, capitalizzazione dei titoli…) e cura voce e ritmo.
+1. **aptum** — appropriatezza a scopo, destinatario, registro.
+2. **puritas** — correttezza grammaticale e **tipografica**: virgola, punto e virgola, due
+   punti, virgolette (caporali « » vs dritte), trattino vs lineetta, maiuscole, sigle.
+3. **perspicuitas** — chiarezza: il lettore capisce alla prima.
+4. **ornatus** — bellezza *regolata*: figure, ritmo, argomentazione. Il suo eccesso (la
+   *mala affectatio*) è esattamente lo **slop dell'AI** — perifrasi, gerundite, triadi,
+   avverbi in *-mente*, aggettivi pomposi — che la skill riconosce e rimuove (36 pattern).
 
-La differenza rispetto a un semplice "umanizzatore": qui c'è anche il livello prescrittivo
-della punteggiatura, e un **workflow ordinato** (prima la struttura, poi la pelle) che le
-fonti separate non offrono.
+Il principio guida è l'**equilibrio**: ogni virtù sta tra due vizi, per difetto (sciatteria,
+oscurità) e per eccesso (slop). La differenza rispetto a un semplice "umanizzatore": qui c'è
+sia il livello prescrittivo (punteggiatura) sia quello costruttivo (retorica applicata), con
+un **workflow ordinato** che va dalla struttura alla pelle.
 
 ## Struttura
 
 ```
 .
-├── SKILL.md                      # orchestratore: quando attivarsi, workflow, principî cardine
+├── SKILL.md                      # modello (4 virtù), workflow, principî cardine
 └── references/
-    ├── punteggiatura.md          # 15 schede di segni, con regole, errori comuni ed esempi
-    └── stile-naturale.md         # 36 pattern anti-AI + "Dare voce" + audit finale
+    ├── punteggiatura.md          # puritas: 15 schede di segni, regole, errori, esempi
+    ├── retorica-efficacia.md     # aptum/perspicuitas/ornatus: 4 virtù, 3 stili,
+    │                             #   repertorio di figure, compositio, tópoi
+    └── stile-naturale.md         # anti-slop: 36 pattern AI + "Dare voce" + audit
 ```
 
-`SKILL.md` è autosufficiente per i casi frequenti; i due file in `references/` vengono
-consultati quando serve il dettaglio (*progressive disclosure*).
+`SKILL.md` è autosufficiente per i casi frequenti; i file in `references/` vengono consultati
+quando serve il dettaglio (*progressive disclosure*).
 
 ## Installazione
 
@@ -114,10 +121,12 @@ La virgola cambia il significato della frase.
 Questa skill è un'opera derivata e cita le sue fonti:
 
 - **Punteggiatura e tipografia** — regole *sintetizzate e riscritte* da
-  Bice Mortara Garavelli, *Prontuario di punteggiatura*, Laterza (2003). Le norme di
-  punteggiatura sono fatti d'uso della lingua, non protetti da copyright; questo materiale è
-  una rielaborazione originale con esempi brevi e illustrativi, **non** una riproduzione del
-  libro. Per lo studio approfondito, leggete il libro: è la fonte di riferimento sull'argomento.
+  Bice Mortara Garavelli, *Prontuario di punteggiatura*, Laterza (2003).
+- **Retorica ed efficacia** (4 virtù, stili, figure, *compositio*, *tópoi*) — concetti
+  *distillati e riformulati* da Bice Mortara Garavelli, *Manuale di retorica*, Bompiani.
+  Sono nozioni della retorica classica, patrimonio comune; le definizioni e gli esempi della
+  skill sono originali, **non** una riproduzione dei libri. Per lo studio approfondito,
+  leggete le opere: sono i riferimenti sull'argomento.
 - **Stile / pattern anti-AI** — adattamento italiano di
   [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
   (WikiProject AI Cleanup), disponibile sotto **CC BY-SA 4.0**. In conformità con il
@@ -126,21 +135,26 @@ Questa skill è un'opera derivata e cita le sue fonti:
 ## In English
 
 **scrittura-italiana** is a Claude [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills)
-that gives Claude the full set of rules for **writing and editing Italian**. The skill's
+that gives Claude the full framework for **writing and editing Italian**. The skill's
 content is in Italian (it has to be), but here's what it does and how to use it.
 
-### What it does — two layers
+### What it does — the four virtues of style
 
-1. **Correctness** — Italian punctuation and typography by the book: comma, semicolon, colon,
-   quotation marks (Italian guillemets « » vs straight quotes), hyphen vs dash, parentheses,
-   ellipsis, capitalization, abbreviations and acronyms.
-2. **Naturalness** — detects and removes the 36 patterns typical of AI-generated Italian
-   (copula-avoidance periphrasis, trailing gerunds, *-mente* adverb pile-ups, bureaucratese,
-   forced triads, English-style em dashes, title-case headings…) and restores voice and rhythm.
+The skill is organized around the four classical *virtutes elocutionis*:
 
-Unlike a generic "humanizer", this skill also carries the **prescriptive punctuation layer**
-and an **ordered workflow**: fix structure first (syntax/punctuation → typography), then the
-surface (anti-AI style → voice), then a final anti-AI audit.
+1. **aptum** — appropriateness to purpose, audience, register.
+2. **puritas** — grammatical and typographical correctness: comma, semicolon, colon,
+   quotation marks (Italian guillemets « » vs straight quotes), hyphen vs dash, capitalization,
+   acronyms.
+3. **perspicuitas** — clarity: the reader gets it on first read.
+4. **ornatus** — *measured* beauty: figures, rhythm, argumentation. Its excess (*mala
+   affectatio*) is exactly AI slop — periphrasis, trailing gerunds, forced triads, *-mente*
+   adverbs — which the skill detects and removes (36 patterns).
+
+The guiding principle is **balance**: each virtue sits between two vices, by deficiency
+(sloppiness, obscurity) and by excess (slop). Unlike a generic "humanizer", this skill carries
+both the prescriptive layer (punctuation) and the constructive one (applied rhetoric), with an
+**ordered workflow** from structure to surface, ending in an anti-AI audit.
 
 ### Install
 
@@ -163,9 +177,10 @@ demonstrations.
 
 ### Sources & license
 
-Punctuation rules are synthesized and rewritten from B. Mortara Garavelli, *Prontuario di
-punteggiatura* (Laterza, 2003) — punctuation norms are facts of usage, not copyrightable, and
-this is an original rework, not a reproduction. The style layer adapts
+Punctuation rules are synthesized from B. Mortara Garavelli, *Prontuario di punteggiatura*
+(Laterza, 2003); the rhetoric layer distills her *Manuale di retorica* (Bompiani). These are
+facts of usage and classical-rhetoric concepts, not copyrightable; the skill's wording and
+examples are original, not a reproduction. The style layer adapts
 [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
 (CC BY-SA 4.0); per share-alike, this skill is released under the same license. Contributions
 welcome via issues and pull requests — see [`CONTRIBUTING.md`](CONTRIBUTING.md).
