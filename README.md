@@ -50,6 +50,12 @@ un **workflow ordinato** che va dalla struttura alla pelle.
 `SKILL.md` è autosufficiente per i casi frequenti; i file in `references/` vengono consultati
 quando serve il dettaglio (*progressive disclosure*).
 
+## Documentazione
+
+- **[FAQ.md](FAQ.md)** — domande ricorrenti (per testi umani o AI? non è un autocorrettore? mi impone uno stile?…).
+- **[ESEMPI.md](ESEMPI.md)** — casi *prima → dopo* (testo AI, revisione di testo umano, registro informale).
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** — come contribuire.
+
 ## Installazione
 
 ### Via `npx skills` (consigliato — multi-agente)
