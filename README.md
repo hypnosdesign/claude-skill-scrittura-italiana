@@ -101,6 +101,10 @@ appiattire tutto a un italiano neutro.
 
 ## Esempi (prima → dopo)
 
+> 📄 Esempi completi e commentati in **[ESEMPI.md](ESEMPI.md)**: testo generato dall'AI,
+> revisione di un testo umano (con la regola spiegata), e quando la skill *non* corregge
+> (registro informale). Qui sotto, alcuni casi rapidi.
+
 ### 1. Stile: rimuovere i segni dell'AI
 
 **Prima** (perifrasi, gerundite, triadi, avverbi in *-mente*, chiusura ottimistica vuota):
