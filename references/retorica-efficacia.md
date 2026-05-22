@@ -28,6 +28,27 @@ frase può essere corretta, chiara e bella, ma se è fuori registro ha fallito.
 - Vizio: lo stridore di registro (latinismo aulico in un testo colloquiale; gergo intimo in
   un documento formale).
 
+#### Il livello di controllo del testo (regola tipografica chiave)
+
+L'*aptum* governa anche **quali norme tipografiche si applicano**. Distingui due livelli:
+
+- **Testo controllato** — editoria, documenti, saggistica, tesi, contenuti pubblicati. Si
+  applicano tutte le norme: caporali « », accenti corretti (*perché* con l'acuto), lineette
+  spaziate, sentence case nei titoli, virgolette uniformi.
+- **Testo non controllato** — web, social, chat, commenti, forum, email veloci, messaggi.
+  Valgono le **convenzioni da tastiera**, accettate e *non* considerate errori:
+  - virgolette **dritte** `" "` o **assenti** (i caporali « » non sono sulla tastiera);
+  - accenti "da tastiera": `perche`, `e'`, `pero'` (sulla tastiera italiana c'è `è` ma non
+    `é`, quindi *perché* richiede uno sforzo che in chat si salta);
+  - niente em dash `—` né lineette spaziate;
+  - maiuscole e punteggiatura più rilassate.
+
+> ⚠ **Non "ipercorreggere".** Applicare la tipografia editoriale a un testo non controllato
+> (es. correggere i caporali in un commento Reddit) è esso stesso un errore di *aptum*: si
+> impone un registro sbagliato. In quei testi le scelte da tastiera sono volute e umane —
+> lasciale. Correggi la tipografia editoriale **solo** se il testo è controllato o se l'utente
+> chiede esplicitamente quel livello di rifinitura. Nel dubbio, chiedi.
+
 ### Puritas — correttezza
 Rispetto della norma grammaticale, lessicale e ortografica/tipografica.
 → Per la punteggiatura e la tipografia vedi **`punteggiatura.md`**.

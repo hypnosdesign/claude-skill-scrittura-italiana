@@ -17,7 +17,9 @@
 Una skill che dà a Claude il quadro completo per scrivere in italiano, organizzato attorno
 alle **quattro virtù dell'espressione** (*virtutes elocutionis*) della retorica classica:
 
-1. **aptum** — appropriatezza a scopo, destinatario, registro.
+1. **aptum** — appropriatezza a scopo, destinatario, registro e **livello di controllo** del
+   testo (editoriale vs web/social): nel testo informale le convenzioni da tastiera — virgolette
+   dritte, accenti "da tastiera" — non sono errori e non vanno corrette.
 2. **puritas** — correttezza **tipografica** (virgola, punto e virgola, due punti, virgolette
    caporali « » vs dritte, trattino vs lineetta, maiuscole, sigle) e **di parola** (accenti,
    omofoni come *da/dà*, *qual è*, *un po'*, *sé stesso*, plurali difficili, *tu/te*).

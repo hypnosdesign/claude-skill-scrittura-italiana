@@ -155,9 +155,14 @@ copre i segni). Regole sintetizzate da M. Trinci, *Le basi proprio della grammat
 - **Interiezioni:** sole → punto esclamativo/interrogativo (Boh! Eh?); dentro la frase →
   isolate da virgola (Oh, cavolo!).
 
-## 10. Punteggiatura in chat e social
+## 10. Punteggiatura in chat e social (testo "non controllato")
 
-- **Il punto a fine messaggio breve** suona secco/definitivo: «No.» risulta tagliente. Non è
+> ⚠ Nel web/social/chat valgono le **convenzioni da tastiera**: virgolette dritte o assenti
+> (mai pretendere i caporali « »), accenti "da tastiera" tollerati (`perche`, `e'`, `pero'`),
+> niente lineette lunghe. **Non sono errori**: sono scelte umane e di registro, non vanno
+> "corrette". Vedi `retorica-efficacia.md` §1 → livello di controllo del testo.
+
+- **Il punto a fine messaggio breve** suona secco/definitivo: "No." risulta tagliente. Non è
   un errore, ma cambia il tono — usalo con consapevolezza.
 - **Puntini di sospensione: sempre e solo tre**, mai due/quattro/sei, mai come decorazione.
   ✓ Non so... forse. / ✗ Allora...... Dopo i tre puntini uno spazio; nelle citazioni le

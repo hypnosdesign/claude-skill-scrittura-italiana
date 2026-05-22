@@ -16,6 +16,11 @@ Sintesi azionabile da B. Mortara Garavelli, *Prontuario di punteggiatura* (Later
   Non punteggiare a orecchio sulle pause della lettura.
 - **Coerenza interna:** ogni convenzione facoltativa (tipo di virgolette, trattino
   sì/no…) si sceglie una volta e si mantiene in tutto il testo.
+- **⚠ Registro (aptum):** queste norme valgono per il **testo controllato** (editoria,
+  documenti, pubblicazioni). Nel **testo non controllato** (web, social, chat, commenti)
+  valgono le convenzioni da tastiera — virgolette dritte o assenti, accenti "da tastiera"
+  (`perche`, `e'`), niente lineette lunghe — che **non sono errori e non vanno corrette**.
+  Vedi `retorica-efficacia.md` §1 → "livello di controllo del testo".
 
 ---
 
@@ -186,10 +191,14 @@ maiuscola dopo di sé.
 
 **Forme (tipografia italiana)**
 
-- **Caporali / basse / "francesi" `« »`:** scelta d'elezione in italiano per citazioni
-  e discorso diretto (editoria, saggistica).
-- **Alte / doppie / "inglesi" `" "`:** comuni nel web, giornali, testi digitali.
+- **Caporali / basse / "francesi" `« »`:** scelta d'elezione nel **testo controllato**
+  (editoria, saggistica) per citazioni e discorso diretto.
+- **Alte / doppie / "inglesi" `" "`:** comuni nel web, giornali, testi digitali — e la
+  scelta giusta nel **testo non controllato** (non essendo i caporali sulla tastiera).
 - **Apici / semplici `' '`:** per citazioni dentro citazioni o per i significati.
+
+> ⚠ Nel web/social/chat non pretendere i caporali: le virgolette dritte (o l'assenza di
+> virgolette) sono la norma da tastiera, non un errore. Vedi `retorica-efficacia.md` §1.
 
 **Regole**
 

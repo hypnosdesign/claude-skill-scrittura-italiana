@@ -1,6 +1,6 @@
 ---
 name: scrittura-italiana
-version: 2.1.0
+version: 2.2.0
 description: |
   Guida completa per scrivere e correggere testi in italiano impeccabili, organizzata
   attorno alle quattro virtù dell'espressione della retorica classica (aptum, puritas,
@@ -33,7 +33,7 @@ unifica correttezza, chiarezza, efficacia e naturalezza.
 
 | Virtù | Significato | Dove approfondire |
 |---|---|---|
-| **aptum** | appropriatezza a scopo, destinatario, registro, genere | `references/retorica-efficacia.md` §1-2 |
+| **aptum** | appropriatezza a scopo, destinatario, registro, genere e **livello di controllo** del testo | `references/retorica-efficacia.md` §1-2 |
 | **puritas** | correttezza tipografica (segni) e di parola (accenti, omofoni, plurali…) | `references/punteggiatura.md` + `references/dubbi-e-errori.md` |
 | **perspicuitas** | chiarezza: il lettore capisce alla prima | `references/retorica-efficacia.md` §1 + `stile-naturale.md` |
 | **ornatus** | bellezza *regolata*: figure, ritmo — mai *mala affectatio* | `references/retorica-efficacia.md` §3-4 + `stile-naturale.md` |
@@ -42,6 +42,17 @@ unifica correttezza, chiarezza, efficacia e naturalezza.
 > oscurità, prosa grigia) e per **eccesso**. L'eccesso di *ornatus* — la ***mala affectatio***
 > — è esattamente lo **slop dell'AI**: perifrasi, triadi, aggettivi pomposi, gerundite. Buona
 > scrittura è trovare la misura adatta allo scopo.
+
+> **⚠ Guardia di registro (aptum) — leggila prima di correggere.** Le norme tipografiche
+> dipendono dal **livello di controllo** del testo:
+> - **Testo controllato** (editoria, documenti, saggistica, pubblicazioni): tutte le norme —
+>   caporali « », accenti corretti (*perché*), lineette spaziate, sentence case.
+> - **Testo non controllato** (web, social, chat, commenti, email veloci): valgono le
+>   convenzioni da tastiera — virgolette **dritte o assenti**, accenti "da tastiera" tollerati
+>   (`perche`, `e'`), niente em dash. **Non sono errori: non correggerli** se il registro è
+>   quello. Imporre la tipografia editoriale a un commento social è esso stesso un errore di *aptum*.
+>
+> Nel dubbio sul registro, **chiedi** prima di "ipercorreggere".
 
 > **Leggi i file di riferimento quando servono.** Questo SKILL.md contiene il modello e i
 > precetti ad alta frequenza. Per il dettaglio (una regola sulla virgola, una figura, un
@@ -66,8 +77,10 @@ unifica correttezza, chiarezza, efficacia e naturalezza.
 Applica le passate nell'ordine delle virtù, **dalla struttura alla pelle**:
 
 1. **aptum — inquadra** (`retorica-efficacia.md` §1-2)
-   Identifica scopo, destinatario, registro. Tutto il resto si misura su questo. Se il
-   registro è incoerente, è il primo problema da risolvere.
+   Identifica scopo, destinatario, registro e **livello di controllo** (testo editoriale vs
+   informale/social). Tutto il resto si misura su questo. ⚠ Se il testo è "non controllato"
+   (chat, commenti), **non applicare la tipografia editoriale**: le convenzioni da tastiera
+   non sono errori. Se il registro è incoerente, è il primo problema da risolvere.
 2. **puritas — correggi** (`punteggiatura.md` + `dubbi-e-errori.md`)
    - *Segni:* virgole spaiate, virgola tra soggetto e verbo, relative restrittive/esplicative,
      incisi da chiudere, gerarchia virgola/`;`/punto, due punti, maiuscole; virgolette
@@ -107,7 +120,8 @@ da ripulire dopo. Chiudi con l'**audit anti-AI** e la **checklist tipografica**.
 - **Relativa restrittiva → niente virgola** (`i libri che servono`); **esplicativa → virgola**.
 - **Gerarchia:** virgola < punto e virgola < punto. `;` per serie lunghe o cambi di soggetto.
 - **Due punti:** niente maiuscola dopo (tranne il discorso diretto citato).
-- **Virgolette:** caporali « » (editoria) o dritte " " (web) — uniformi, **mai curve né miste**.
+- **Virgolette:** caporali « » solo nel **testo controllato** (editoria); nel web/social
+  dritte " " o assenti — uniformi, **mai curve né miste**.
 - **Trattino `-`** unisce senza spazi; **lineetta `–`** separa con spazi e in italiano si usa
   **poco**. **Titoli in sentence case.** **Puntini sempre tre.** **Sigle senza punti** (`ISTAT`).
 - **Errori di parola ad alta frequenza:** `qual è` (mai `qual'è`), `un po'` (mai `pò`),
@@ -127,7 +141,9 @@ da ripulire dopo. Chiudi con l'**audit anti-AI** e la **checklist tipografica**.
 - **Varia il ritmo**, leggi ad alta voce (scova rime involontarie e cacofonie).
 
 **aptum + voce**
-- Scegli **scopo e registro** prima di scrivere, e tienili coerenti.
+- Scegli **scopo, registro e livello di controllo** prima di scrivere, e tienili coerenti.
+- **Testo non controllato** (web/social/chat): rispetta le convenzioni da tastiera, non
+  ipercorreggere (niente caporali, accenti "da tastiera" ok, niente lineette lunghe).
 - **Un solo marcatore di incertezza** per affermazione.
 - **Dai voce:** opinione, dettagli concreti al posto di formule vaghe.
 
