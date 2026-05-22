@@ -54,6 +54,7 @@ quando serve il dettaglio (*progressive disclosure*).
 
 - **[FAQ.md](FAQ.md)** — domande ricorrenti (per testi umani o AI? non è un autocorrettore? mi impone uno stile?…).
 - **[ESEMPI.md](ESEMPI.md)** — casi *prima → dopo* (testo AI, revisione di testo umano, registro informale).
+- **[scrittura-italiana-single-file.md](scrittura-italiana-single-file.md)** — tutta la skill in un file, per Gemini/ChatGPT e assistenti senza supporto nativo alle Skill.
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** — come contribuire.
 
 ## Installazione
@@ -91,6 +92,16 @@ Riavvia/riapri Claude Code: la skill comparirà tra quelle disponibili.
 > (dipende dal piano: Pro/Max/Team/Enterprise). Se non vedi "Skills" in Impostazioni,
 > abilitala lì o aggiorna l'app. Claude Desktop e claude.ai condividono lo stesso account:
 > una skill caricata è disponibile in entrambi.
+
+### Altri assistenti (Gemini, ChatGPT…)
+
+- **Gemini CLI** e altri agent compatibili col formato Agent Skills: usa lo stesso
+  `npx skills add hypnosdesign/claude-skill-scrittura-italiana` (rileva l'agent installato).
+- **App Gemini, Custom GPT di ChatGPT** e simili (niente supporto nativo alle Skill): usa la
+  **[versione in un solo file](scrittura-italiana-single-file.md)** — incolla quel documento
+  nelle istruzioni di un *Gem* / Custom GPT, o caricalo come file di conoscenza. La skill è
+  istruzioni in markdown: qualsiasi LLM capace ne segue le regole; si perde solo l'attivazione
+  automatica e il caricamento on-demand dei riferimenti.
 
 ## Uso
 
