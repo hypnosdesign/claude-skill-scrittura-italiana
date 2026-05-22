@@ -9,8 +9,8 @@
 > (o caricalo come file di conoscenza). Su Claude (Code, Desktop, claude.ai) usa invece la
 > skill vera e propria — vedi il [repository](https://github.com/hypnosdesign/claude-skill-scrittura-italiana).
 >
-> *Generato da `SKILL.md` + `references/`. Va rigenerato quando la skill cambia.*
-> Licenza CC BY-SA 4.0.
+> *Generato da `SKILL.md` + `references/` con `build-single-file.py`. Rigenerare quando la
+> skill cambia.* Licenza CC BY-SA 4.0.
 
 ---
 

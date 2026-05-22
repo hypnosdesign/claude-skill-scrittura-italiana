@@ -47,6 +47,12 @@ Questa skill ha una linea precisa. Per restare coerenti:
 - Il frontmatter di `SKILL.md` è intatto (delimitatori `---`, campo `name`, `description`).
 - Hai provato la modifica caricando la skill in Claude e verificando che si comporti come
   previsto su un testo di esempio.
+- **Se hai modificato `SKILL.md` o un file in `references/`, rigenera la versione single-file:**
+  ```bash
+  python3 build-single-file.py
+  ```
+  e includi `scrittura-italiana-single-file.md` aggiornato nella PR (è un file generato, non
+  va modificato a mano).
 
 ## Licenza dei contributi
 
