@@ -50,7 +50,16 @@ quando serve il dettaglio (*progressive disclosure*).
 
 ## Installazione
 
-### Claude Code (CLI)
+### Via `npx skills` (consigliato — multi-agente)
+
+Installazione in un comando, da [skills.sh](https://www.skills.sh) (rileva da solo gli agent
+installati: Claude Code, Cursor, Copilot…):
+
+```bash
+npx skills add hypnosdesign/claude-skill-scrittura-italiana
+```
+
+### Claude Code (CLI) — manuale
 
 Clona dentro la cartella delle skill personali:
 
