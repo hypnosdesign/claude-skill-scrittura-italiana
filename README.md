@@ -13,7 +13,7 @@
 </p>
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.4.1-blue.svg)
+![Version](https://img.shields.io/badge/version-2.5.0-blue.svg)
 
 ## Cos'è
 
@@ -200,7 +200,8 @@ Questa skill è un'opera derivata e cita le sue fonti:
 - **Grammatica, sintassi, coesione, argomentazione, divulgazione, narrativa e revisione**
   (dalla v2.4.0) — distillati da una libreria di manuali italiani: L. Serianni (*Italiano*, 1997;
   *L'italiano: parlare scrivere digitare*, 2019; *Leggere, scrivere, argomentare*, 2015),
-  E. Rigotti (*Il filo del pensiero*, 2020), G. Barattelli (*Scrivere bene*, 2015), G. Pontiggia
+  M. Dardano e P. Trifone (*La lingua italiana*, 1995), A. Perini (*Grammatica italiana per tutti*,
+  2018), E. Rigotti (*Il filo del pensiero*, 2020), G. Barattelli (*Scrivere bene*, 2015), G. Pontiggia
   (*Per scrivere bene imparate a nuotare*, 2020), C. Birattari (2011), D. Gouthier (*Scrivere di
   scienza*, 2019), F. Massai (*L'idea narrativa*, 2015), Martino–Alfieri (*Scrivere ganzo*, 2015),
   A. Julita (*Scrivere con l'AI*, 2025).

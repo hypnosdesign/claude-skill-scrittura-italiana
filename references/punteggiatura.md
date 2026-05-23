@@ -303,6 +303,31 @@ in linguistica descrittiva costrutto **agrammaticale** (`*un bello libro`).
 
 ---
 
+## MAIUSCOLE E MINUSCOLE
+
+**Maiuscola:**
+- a inizio frase e dopo `.` `?` `!` che chiudono il periodo;
+- nomi propri (persone, luoghi, fiumi, monti): *Roma, il Po, le Alpi*;
+- enti e istituzioni nella forma ufficiale: *il Senato, l'Università di Bologna, la Costituzione*;
+- feste: *Natale, Pasqua, Ferragosto*;
+- epoche e secoli sostantivati: *il Rinascimento, il Novecento, il Sessantotto*;
+- punti cardinali come **regione**: *il Sud, l'Oriente* (ma direzione → minuscola: *vado a sud*);
+- corpi celesti in senso **astronomico**: *la Terra, il Sole, la Luna* (ma *un bel sole* → minuscola).
+
+**Minuscola in italiano (≠ inglese):**
+- **mesi e giorni:** ✓ *gennaio, lunedì* (✗ *Gennaio, Lunedì*);
+- **nazionalità e lingue** (nomi e aggettivi): ✓ *un italiano, il pane francese, parla spagnolo* (✗ *un Italiano*);
+- **titoli e cariche** nell'uso comune: ✓ *il presidente, il papa, il ministro* (maiuscola solo nel
+  protocollo o per la carica specifica: *il Presidente della Repubblica*).
+
+**Oscillanti** (scegli e mantieni la coerenza): abitanti al plurale (*gli italiani / gli Italiani*),
+cariche di rilievo (*il Re / il re*). Maiuscola di riguardo *La, Le* nelle lettere formali: vedi
+`dubbi-e-errori.md` §23.
+
+> ⚠ **Tic da calco inglese / da AI:** ✗ *ogni Lunedì, nel mese di Gennaio, Direttore Generale*,
+> titoli in *Title Case* → ✓ *ogni lunedì, gennaio, direttore generale*, titoli in **sentence case**
+> (solo prima parola e nomi propri). Vedi `stile-naturale.md` §24.
+
 ## IL PUNTO NELLE ABBREVIAZIONI E SIGLE
 
 - **Contrazione** (restano iniziale e finale): punto interno/finale — `ill.mo`, `f.lli`, `ca.`

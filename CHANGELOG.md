@@ -5,6 +5,39 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.5.0] — 2026-05-23
+
+Rinforzo grammaticale da due grammatiche di riferimento: M. Dardano e P. Trifone, *La lingua
+italiana* (1995), e A. Perini, *Grammatica italiana per tutti* (2018). `dubbi-e-errori.md` si
+estende dalla morfologia di base alla **morfosintassi**.
+
+### Aggiunto
+- **`dubbi-e-errori.md`** — §19 posizione dell'aggettivo (cambia significato: *vecchio amico* ≠
+  *amico vecchio*); §20 articolo partitivo; §21 pronomi combinati (*glielo, gliene*) + enclitici dopo
+  imperativi tronchi (*dimmi, fammelo*); §22 risalita del clitico con servili e causativi (*fare/
+  lasciare*); §23 *Lei* di cortesia (accordo col genere della persona); §24 comparativi e superlativi
+  organici (*migliore/ottimo*; ✗ *più migliore, molto ottimo*); §25 *si* passivante vs impersonale
+  (+ *ci si*, ausiliare *essere* nei composti); §26 concessive (*benché* + congiuntivo / *anche se* +
+  indicativo); §27 temporali (*prima che* + congiuntivo / *dopo che* + indicativo); §28 dislocazione a
+  sinistra (ripresa pronominale); §29 frase scissa; §30 periodo ipotetico misto; §31 articolo davanti
+  a possessivi (parentela) e cognomi.
+- **`dubbi-e-errori.md`** (secondo passaggio) — §32 forme dell'articolo (*il/lo/gli, un/uno*: *lo
+  studente, gli gnocchi, uno zaino*); §33 genere che cambia significato (*il fine/la fine*); §34
+  concordanza del verbo (soggetti multipli, collettivi, *la maggior parte*); §35 concordanza
+  dell'aggettivo con più nomi (genere misto → maschile plurale); §36 numerali (*mille/mila*,
+  *ventitré*, *milioni di*, *entrambi/ambedue*); §37 indefiniti (*qualche/ogni* + singolare,
+  *nessuno/ciascuno*, *alcuno*).
+- **`punteggiatura.md`** — nuova sezione *Maiuscole e minuscole* (mesi/giorni e nazionalità in
+  minuscolo, anti-calco inglese; quando va la maiuscola).
+- Integrazioni puntuali: §7 forestierismi a plurale invariabile (*i film*, *i computer*) ed
+  eccezioni *-essa* (✓ *dottoressa*); §9 *piuttosto che* ≠ *o/oppure*, *neanche/neppure/nemmeno* +
+  *non*, preposizioni improprie + *di*, ausiliare dei servili col clitico; §13 accordo del participio
+  reso più preciso (clitico → obbligatorio, *che* → facoltativo).
+
+### Modificato
+- **`SKILL.md`** → `version: 2.5.0`; indice e Fonti aggiornati (Dardano-Trifone, Perini). Single-file
+  rigenerato.
+
 ## [2.4.1] — 2026-05-23
 
 Audit di completamento sui manuali della 2.4.0: integrate le ultime lacune di rilievo.
@@ -159,6 +192,7 @@ la dimensione, prima assente, della **costruzione del testo**.
   di *Wikipedia: Signs of AI writing*).
 - `README.md` bilingue, `CONTRIBUTING.md`, template per issue e pull request.
 
+[2.5.0]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.5.0
 [2.4.1]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.4.1
 [2.4.0]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.4.0
 [2.3.2]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.3.2

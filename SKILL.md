@@ -1,6 +1,6 @@
 ---
 name: scrittura-italiana
-version: 2.4.1
+version: 2.5.0
 description: |
   Humanizer dell'italiano con i superpoteri: rende naturale e non "da AI"
   un testo — via perifrasi, gerundite, triadi, avverbi in -mente, trattini
@@ -199,14 +199,18 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
 
 - **`references/punteggiatura.md`** — *puritas: i segni*. Scheda per ogni segno (virgola,
   punto e virgola, due punti, punto, interrogativo, esclamativo, virgolette, lineette/trattini,
-  parentesi, puntini, barra/asterisco, abbreviazioni e sigle, a capo), con regole, errori
-  comuni ed esempi.
+  parentesi, puntini, barra/asterisco, abbreviazioni e sigle, a capo, maiuscole/minuscole), con
+  regole, errori comuni ed esempi.
 - **`references/dubbi-e-errori.md`** — *puritas: le parole e la sintassi*. Repertorio di dubbi ed
   errori comuni: accenti, omofoni, apostrofo/elisione/troncamento, *sé stesso*, ortografia
   insidiosa, plurali difficili e doppi, pronomi (tu/te, gli/le, ne), avverbi, preposizioni, «che»
   polivalente, ausiliari; **sintassi del verbo** (congiuntivo vs indicativo, *consecutio temporum*,
-  periodo ipotetico, accordo del participio, modi espressivi, soggetto delle implicite); e il
-  **digitato** (punto, punto e virgola, emoji, maiuscole espressive in chat e social).
+  periodo ipotetico, accordo del participio, modi espressivi, soggetto delle implicite);
+  **morfosintassi** (forme dell'articolo *il/lo/gli, un/uno*; pronomi combinati *glielo/gliene* e
+  risalita clitica; *si* passivante vs impersonale; comparativi/superlativi organici; concessive e
+  temporali; dislocazioni e frase scissa; articolo partitivo e con possessivi/cognomi; posizione
+  dell'aggettivo; concordanza del verbo e dell'aggettivo; numerali; indefiniti; genere che cambia
+  significato); e il **digitato** (punto, punto e virgola, emoji, maiuscole espressive in chat e social).
 - **`references/retorica-efficacia.md`** — *scrivere bene*. Le 4 virtù dell'espressione, i 3
   stili (tenue/medio/sublime ↔ docere/delectare/movere), repertorio essenziale di figure
   (tropi, figure di parola e di pensiero), *compositio* (ordine/ritmo/eufonia), argomentazione
@@ -258,7 +262,9 @@ corretto** (e, se istruttivo, l'errore da evitare), citando la scheda pertinente
   (UTET, 2018); con i classici a cui rimanda — I. Calvino, *L'antilingua* (1965); G. Orwell,
   *Politics and the English Language* (1946); A. Savinio, *Nuova enciclopedia*.
 - Grammatica, sintassi e proprietà di lingua: L. Serianni, *Italiano* (Garzanti, 1997) e
-  *L'italiano: parlare, scrivere, digitare* (con G. Antonelli, Treccani, 2019). Argomentazione,
+  *L'italiano: parlare, scrivere, digitare* (con G. Antonelli, Treccani, 2019); M. Dardano e P.
+  Trifone, *La lingua italiana* (Zanichelli, 1995); A. Perini, *Grammatica italiana per tutti*
+  (2018). Argomentazione,
   coesione e riassunto: L. Serianni, *Leggere, scrivere, argomentare* (Laterza, 2015); E. Rigotti,
   *Il filo del pensiero* (2020); G. Barattelli, *Scrivere bene* (2015). Chiarezza, stile e
   revisione: G. Pontiggia, *Per scrivere bene imparate a nuotare* (2020); C. Birattari, *È più
