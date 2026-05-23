@@ -32,6 +32,11 @@ cronaca neutra, nessuna opinione, nessuna prima persona, niente ironia. Per inie
 prima (lunghezza periodi, livello lessicale, abitudini di punteggiatura, tic, uso di
 tu/Lei) e **replica quella voce**, non limitarti a togliere i tic.
 
+**Autorità = impegno, non tono.** «Se non rendi quel che scrivi al meglio delle tue possibilità, che
+scrivi a fare? […] poi non ti giustificare» (Carver). L'autorità non è un tono assertivo: è il
+rifiuto di scrivere sotto le proprie possibilità. Un testo «fatto di fretta, e si vede» lo dice al
+lettore, che lo registra.
+
 ---
 
 ## A. Pattern di contenuto
@@ -279,7 +284,10 @@ commenti emotivi indebiti nel testo oggettivo (*purtroppo, per fortuna*). → Ve
 **42. Individuazione — concreto batte generico.** Non *animali* ma *pinguini*; non *una
 staccionata* ma *una staccionata color avio*. Dai un nome alle cose, soprattutto se un nome ce
 l'hanno. Bandisci le **informazioni vuote**: *«ha influenzato Camus e altri autori del
-Novecento»* (chi? quali?) → di' *chi/cosa/quando*, o non dire niente. (Collega §2, §5.)
+Novecento»* (chi? quali?) → di' *chi/cosa/quando*, o non dire niente. (Collega §2, §5.) Il dettaglio
+concreto nasce dall'**interesse vero**, non dalla regola: «a volte lo scrittore deve restare a bocca
+aperta davanti a qualcosa — un tramonto o una scarpa vecchia» (Carver). Un dettaglio che non ha
+sorpreso te, raramente sorprenderà il lettore: se è concreto ma neutro, l'hai inserito, non visto.
 
 **43. Non sussurrare (falsa modestia citazionale).** Togli le perifrasi che attenuano il
 giudizio o lo scaricano su "autorità" vaghe: *Dante può essere considerato il più grande poeta
@@ -370,6 +378,15 @@ registro e persona all'inizio e tienili; in rilettura cerca *tu/ti/tuo* e *voi/v
   pratica è respinta* → *Dopo aver esaminato i documenti…*.
 → Fuori dal linguaggio giuridico stretto, riscrivi con una subordinata esplicita (relativa, causale,
 temporale).
+
+**57. Niente trucchi — contro la scrittura "chic" e lo sperimentalismo gratuito.** «Niente trucchi.
+Punto e basta» (Carver). Non sono trucchi solo i finali a sorpresa: lo sono anche la prosa oscura che
+*simula* profondità, lo sperimentalismo formale usato «come licenza per scrivere in modo sciatto», la
+scrittura «estremamente elaborata e chic» che tiene fuori il lettore, l'astrazione che copre la
+mancanza di un'osservazione vera. → Una forma insolita è legittima quando **porta più chiarezza o più
+forza** (McCarthy che toglie la punteggiatura dei dialoghi); se isola invece di connettere, è un
+trucco. Test: sai dire *perché* hai usato quella forma? Se no, probabilmente è un trucco. (Collega
+`retorica-efficacia.md` → "Errore vs licenza"; `narrativa.md` §6, §12.)
 
 ## Audit finale anti-AI (passaggio obbligato)
 

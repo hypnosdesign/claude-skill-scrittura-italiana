@@ -13,7 +13,7 @@
 </p>
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.5.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.6.0-blue.svg)
 
 ## Cos'è
 
@@ -35,7 +35,7 @@ l'italiano per davvero, perché è costruita sulle **quattro virtù dell'espress
 4. **ornatus** — bellezza *regolata*: figure, ritmo, argomentazione, costruzione del testo
    (incipit, sviluppo, chiusura). Il suo eccesso (la *mala affectatio*) è esattamente lo
    **slop dell'AI** — perifrasi, gerundite, triadi, avverbi in *-mente*, aggettivi pomposi,
-   antilingua e affettazione all'italiana — che la skill riconosce e rimuove (56 pattern, più
+   antilingua e affettazione all'italiana — che la skill riconosce e rimuove (57 pattern, più
    il repertorio di cliché e frasi fatte).
 
 Il principio guida è l'**equilibrio**: ogni virtù sta tra due vizi, per difetto (sciatteria,
@@ -61,11 +61,11 @@ una libreria di manuali italiani — Serianni, Mortara Garavelli, Giunta, Pontig
     ├── retorica-efficacia.md     # aptum/perspicuitas/ornatus: 4 virtù, 3 stili, figure,
     │                             #   compositio, tópoi, dispositio, tesi, riassunto, discorso riferito
     ├── coesione-e-connettivi.md  # il filo: coesione vs coerenza, tassonomia dei connettivi
-    ├── stile-naturale.md         # anti-slop: 56 pattern AI + antilingua/affettazione
+    ├── stile-naturale.md         # anti-slop: 57 pattern AI + antilingua/affettazione
     │                             #   + "Dare voce" + audit
     ├── cliche-e-parole-alla-moda.md  # parole alla moda, tormentoni, luoghi comuni, cliché, plastismi
     ├── spiegare-con-chiarezza.md # divulgare/documentare: chiarezza, numeri, termine tecnico, anti-hype
-    ├── narrativa.md              # raccontare: l'idea vs trama, forme dell'idea, punto di vista
+    ├── narrativa.md              # raccontare: idea vs trama, personaggio, dialogo, scena, tensione, revisione
     └── revisione-e-proprieta.md  # la parola giusta (le mot juste), collaudo metafore, revisione a freddo
 ```
 
@@ -203,8 +203,9 @@ Questa skill è un'opera derivata e cita le sue fonti:
   M. Dardano e P. Trifone (*La lingua italiana*, 1995), A. Perini (*Grammatica italiana per tutti*,
   2018), E. Rigotti (*Il filo del pensiero*, 2020), G. Barattelli (*Scrivere bene*, 2015), G. Pontiggia
   (*Per scrivere bene imparate a nuotare*, 2020), C. Birattari (2011), D. Gouthier (*Scrivere di
-  scienza*, 2019), F. Massai (*L'idea narrativa*, 2015), Martino–Alfieri (*Scrivere ganzo*, 2015),
-  A. Julita (*Scrivere con l'AI*, 2025).
+  scienza*, 2019), F. Massai (*L'idea narrativa*, 2015), Gotham Writers' Workshop (*Lezioni di
+  scrittura creativa*, 2014), R. Carver (*Il mestiere di scrivere*), Martino–Alfieri (*Scrivere
+  ganzo*, 2015), A. Julita (*Scrivere con l'AI*, 2025).
 - **Stile / pattern anti-AI** — adattamento italiano di
   [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
   (WikiProject AI Cleanup), disponibile sotto **CC BY-SA 4.0**. In conformità con il
@@ -231,7 +232,7 @@ it's built on the four classical *virtutes elocutionis*:
 4. **ornatus** — *measured* beauty: figures, rhythm, argumentation, text construction
    (opening, development, closing). Its excess (*mala affectatio*) is exactly AI slop —
    periphrasis, trailing gerunds, forced triads, *-mente* adverbs, the Italian "antilingua"
-   affectation — which the skill detects and removes (56 patterns, plus a register of clichés
+   affectation — which the skill detects and removes (57 patterns, plus a register of clichés
    and stock phrases).
 
 The guiding principle is **balance**: each virtue sits between two vices, by deficiency

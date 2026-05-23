@@ -5,6 +5,32 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.6.0] — 2026-05-23
+
+Il **mestiere narrativo** entra nella skill, da Gotham Writers' Workshop, *Lezioni di scrittura
+creativa*, e R. Carver, *Il mestiere di scrivere*. `narrativa.md` passa da 6 a 15 sezioni.
+
+### Aggiunto
+- **`narrativa.md`** — §7 personaggio (desiderio, contrasto, rivelato dalle azioni); §8 trama,
+  conflitto, struttura (causa-effetto, domanda drammatica, inizio che «lancia»); §9 mostrare e
+  raccontare (con equilibrio; correlativo oggettivo; dettaglio "carico"); §10 dialogo (sottotesto,
+  «disse» invisibile); §11 descrizione e ambientazione (i sensi, il dettaglio significativo); §12
+  tensione e non detto (la «minaccia sotto la superficie», niente trucchi, lo scorcio — Carver); §13
+  voce narrativa; §14 tema; §15 revisione della narrativa (prima il disegno grande).
+- **`revisione-e-proprieta.md`** — la precisione come onestà (Carver via Pound); *terra/suolo* (le
+  ramificazioni parassite della parola "scelta"); §5b riscrivere per *scoprire*, non solo per togliere.
+- **`stile-naturale.md`** — §57 *niente trucchi* (contro la scrittura "chic" e lo sperimentalismo
+  gratuito); note su autorità-impegno ("Dare voce") e sullo stupore come fonte della concretezza (§42).
+
+### Note
+- **Goldsmith, *Ctrl+C Ctrl+V*** è stato valutato e **scartato**: il libro (avanguardia
+  concettuale: voce che sparisce, appropriazione, illeggibilità) è agli antipodi degli scopi della
+  skill; nessun materiale azionabile.
+
+### Modificato
+- **`SKILL.md`** → `version: 2.6.0`; conteggio pattern anti-AI 56 → 57; indice e Fonti aggiornati.
+  Single-file rigenerato.
+
 ## [2.5.0] — 2026-05-23
 
 Rinforzo grammaticale da due grammatiche di riferimento: M. Dardano e P. Trifone, *La lingua
@@ -192,6 +218,7 @@ la dimensione, prima assente, della **costruzione del testo**.
   di *Wikipedia: Signs of AI writing*).
 - `README.md` bilingue, `CONTRIBUTING.md`, template per issue e pull request.
 
+[2.6.0]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.6.0
 [2.5.0]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.5.0
 [2.4.1]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.4.1
 [2.4.0]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.4.0

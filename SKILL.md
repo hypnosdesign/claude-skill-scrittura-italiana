@@ -1,6 +1,6 @@
 ---
 name: scrittura-italiana
-version: 2.5.0
+version: 2.6.0
 description: |
   Humanizer dell'italiano con i superpoteri: rende naturale e non "da AI"
   un testo — via perifrasi, gerundite, triadi, avverbi in -mente, trattini
@@ -232,8 +232,10 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
 - **`references/spiegare-con-chiarezza.md`** — *divulgare e documentare*. Spiegare cose complesse:
   chiarezza ≠ semplificazione, astratto→concreto (esempi), numeri contestualizzati, gestione del
   termine tecnico, metafore esplicative, anti-hype. Per divulgazione, documentazione, testi tecnici.
-- **`references/narrativa.md`** — *raccontare*. L'idea (il "dinosauro") vs la trama, le forme
-  dell'idea, il punto di vista, la licenza sperimentale. Per racconto e romanzo.
+- **`references/narrativa.md`** — *raccontare*. La *scelta dell'idea* (il "dinosauro" vs la trama,
+  le forme dell'idea, il punto di vista, la licenza) e il *mestiere*: personaggio (desiderio,
+  azione), trama e conflitto, mostrare/raccontare, dialogo e sottotesto, descrizione, tensione e non
+  detto, voce narrativa, tema, revisione. Per racconto e romanzo.
 - **`references/revisione-e-proprieta.md`** — *la parola giusta e la lima*. La proprietà
   (*le mot juste*, "non esistono sinonimi"), il collaudo letterale delle metafore, gli
   intensificatori, la revisione a freddo (cavare dal pieno, lettore-cavia).
@@ -269,7 +271,8 @@ corretto** (e, se istruttivo, l'errore da evitare), citando la scheda pertinente
   *Il filo del pensiero* (2020); G. Barattelli, *Scrivere bene* (2015). Chiarezza, stile e
   revisione: G. Pontiggia, *Per scrivere bene imparate a nuotare* (2020); C. Birattari, *È più
   facile scrivere bene che scrivere male* (2011). Divulgazione: D. Gouthier, *Scrivere di scienza*
-  (Codice, 2019). Narrativa: F. Massai, *L'idea narrativa* (2015). Copy/web: F. Martino e A.
+  (Codice, 2019). Narrativa: F. Massai, *L'idea narrativa* (2015); Gotham Writers' Workshop,
+  *Lezioni di scrittura creativa* (2014); R. Carver, *Il mestiere di scrivere* (Einaudi). Copy/web: F. Martino e A.
   Alfieri, *Scrivere ganzo* (2015). Scrivere con l'AI e umanizzazione: A. Julita, *Scrivere con
   l'AI* (Hoepli, 2025).
 - Concetti e regole sono patrimonio comune; testi ed esempi della skill sono rielaborazioni

@@ -19,6 +19,11 @@ decenni per capire che era vero il contrario.» È lo stesso principio dell'anti
 (`stile-naturale.md` §37): prima di scegliere la parola "elegante", chiediti se quella comune
 non dica la stessa cosa con più forza.
 
+Non è solo questione di semplicità: la parola comune ha **meno ramificazioni parassite**. Carver
+discusse con un allievo per un quarto d'ora la differenza tra *terra* e *suolo*: «*terra* è terra,
+quella roba lì»; *suolo* ha altre eco (agronomico, tecnico). Ogni parola "scelta" porta una nebbia di
+connotazioni; la parola comune dice la cosa e si ferma.
+
 ---
 
 ## 2. Non esistono sinonimi — la parola necessaria
@@ -36,6 +41,12 @@ contrasto, la necessità dell'originale.
 > Diverso dal vizio opposto — la *variazione elegante* forzata, cioè cambiare parola pur di non
 > ripetere un nome (`stile-naturale.md` §11). Lì: non variare per vezzo. Qui: cerca *la* parola
 > giusta, e se è già quella, ripetila senza paura.
+
+**La precisione è onestà** (Carver, via Pound: «una fondamentale accuratezza d'espressione è il solo
+e unico principio morale della scrittura»). La parola vaga non è solo «meno bella»: è il segnale che
+chi scrive non ha ancora capito cosa vuole dire. ✗ *Era in qualche modo turbato dalla situazione* →
+finché non sai *cosa* lo turba, non puoi scriverlo: trovare la parola precisa costringe a trovare il
+pensiero preciso. «Se le parole sono sfocate, l'occhio del lettore scivola sopra di esse» (Carver).
 
 ---
 
@@ -112,6 +123,15 @@ parallelismi e ossimori che aveva usato come rifugio quando l'idea non reggeva d
 > **Segnale d'allarme:** se una frase ti sembra bella per come *suona* ma non sai dire
 > esattamente cosa *significa*, è probabile che sia ornamento che copre un vuoto. L'ornamento non
 > risolve il problema, lo nasconde: toglilo, e se il testo crolla, il problema era il pensiero.
+
+### 5b. Riscrivere per scoprire (non solo per togliere)
+La sottrazione (§5a) non esaurisce la revisione. Carver riscriveva un racconto anche venti volte, e
+con piacere: «così facendo mi avvicino pian piano al cuore dell'argomento. È un processo, non una
+posizione stabile.» Sottrarre toglie il superfluo; riscrivere **avanza** — a ogni stesura capisci
+meglio cosa il testo vuole dire. Se dopo tre passate il testo è solo *più pulito* ma non cambia
+direzione, chiediti: *cosa non ho ancora capito di quello che sto dicendo?*
+> **Regola.** La prima stesura è un'ipotesi, la revisione la verifica. Fermati quando il testo non ti
+> sorprende più — non quando lo trovi «abbastanza bello».
 
 ---
 

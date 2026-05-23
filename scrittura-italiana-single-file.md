@@ -215,8 +215,10 @@ termini tecnici) → **Parte G**; **narrativa** (idea, punto di vista, licenze) 
 - ****Parte G**** — *divulgare e documentare*. Spiegare cose complesse:
   chiarezza ≠ semplificazione, astratto→concreto (esempi), numeri contestualizzati, gestione del
   termine tecnico, metafore esplicative, anti-hype. Per divulgazione, documentazione, testi tecnici.
-- ****Parte H**** — *raccontare*. L'idea (il "dinosauro") vs la trama, le forme
-  dell'idea, il punto di vista, la licenza sperimentale. Per racconto e romanzo.
+- ****Parte H**** — *raccontare*. La *scelta dell'idea* (il "dinosauro" vs la trama,
+  le forme dell'idea, il punto di vista, la licenza) e il *mestiere*: personaggio (desiderio,
+  azione), trama e conflitto, mostrare/raccontare, dialogo e sottotesto, descrizione, tensione e non
+  detto, voce narrativa, tema, revisione. Per racconto e romanzo.
 - ****Parte I**** — *la parola giusta e la lima*. La proprietà
   (*le mot juste*, "non esistono sinonimi"), il collaudo letterale delle metafore, gli
   intensificatori, la revisione a freddo (cavare dal pieno, lettore-cavia).
@@ -252,7 +254,8 @@ corretto** (e, se istruttivo, l'errore da evitare), citando la scheda pertinente
   *Il filo del pensiero* (2020); G. Barattelli, *Scrivere bene* (2015). Chiarezza, stile e
   revisione: G. Pontiggia, *Per scrivere bene imparate a nuotare* (2020); C. Birattari, *È più
   facile scrivere bene che scrivere male* (2011). Divulgazione: D. Gouthier, *Scrivere di scienza*
-  (Codice, 2019). Narrativa: F. Massai, *L'idea narrativa* (2015). Copy/web: F. Martino e A.
+  (Codice, 2019). Narrativa: F. Massai, *L'idea narrativa* (2015); Gotham Writers' Workshop,
+  *Lezioni di scrittura creativa* (2014); R. Carver, *Il mestiere di scrivere* (Einaudi). Copy/web: F. Martino e A.
   Alfieri, *Scrivere ganzo* (2015). Scrivere con l'AI e umanizzazione: A. Julita, *Scrivere con
   l'AI* (Hoepli, 2025).
 - Concetti e regole sono patrimonio comune; testi ed esempi della skill sono rielaborazioni
@@ -1911,6 +1914,11 @@ cronaca neutra, nessuna opinione, nessuna prima persona, niente ironia. Per inie
 prima (lunghezza periodi, livello lessicale, abitudini di punteggiatura, tic, uso di
 tu/Lei) e **replica quella voce**, non limitarti a togliere i tic.
 
+**Autorità = impegno, non tono.** «Se non rendi quel che scrivi al meglio delle tue possibilità, che
+scrivi a fare? […] poi non ti giustificare» (Carver). L'autorità non è un tono assertivo: è il
+rifiuto di scrivere sotto le proprie possibilità. Un testo «fatto di fretta, e si vede» lo dice al
+lettore, che lo registra.
+
 ---
 
 ## A. Pattern di contenuto
@@ -2158,7 +2166,10 @@ commenti emotivi indebiti nel testo oggettivo (*purtroppo, per fortuna*). → Ve
 **42. Individuazione — concreto batte generico.** Non *animali* ma *pinguini*; non *una
 staccionata* ma *una staccionata color avio*. Dai un nome alle cose, soprattutto se un nome ce
 l'hanno. Bandisci le **informazioni vuote**: *«ha influenzato Camus e altri autori del
-Novecento»* (chi? quali?) → di' *chi/cosa/quando*, o non dire niente. (Collega §2, §5.)
+Novecento»* (chi? quali?) → di' *chi/cosa/quando*, o non dire niente. (Collega §2, §5.) Il dettaglio
+concreto nasce dall'**interesse vero**, non dalla regola: «a volte lo scrittore deve restare a bocca
+aperta davanti a qualcosa — un tramonto o una scarpa vecchia» (Carver). Un dettaglio che non ha
+sorpreso te, raramente sorprenderà il lettore: se è concreto ma neutro, l'hai inserito, non visto.
 
 **43. Non sussurrare (falsa modestia citazionale).** Togli le perifrasi che attenuano il
 giudizio o lo scaricano su "autorità" vaghe: *Dante può essere considerato il più grande poeta
@@ -2249,6 +2260,15 @@ registro e persona all'inizio e tienili; in rilettura cerca *tu/ti/tuo* e *voi/v
   pratica è respinta* → *Dopo aver esaminato i documenti…*.
 → Fuori dal linguaggio giuridico stretto, riscrivi con una subordinata esplicita (relativa, causale,
 temporale).
+
+**57. Niente trucchi — contro la scrittura "chic" e lo sperimentalismo gratuito.** «Niente trucchi.
+Punto e basta» (Carver). Non sono trucchi solo i finali a sorpresa: lo sono anche la prosa oscura che
+*simula* profondità, lo sperimentalismo formale usato «come licenza per scrivere in modo sciatto», la
+scrittura «estremamente elaborata e chic» che tiene fuori il lettore, l'astrazione che copre la
+mancanza di un'osservazione vera. → Una forma insolita è legittima quando **porta più chiarezza o più
+forza** (McCarthy che toglie la punteggiatura dei dialoghi); se isola invece di connettere, è un
+trucco. Test: sai dire *perché* hai usato quella forma? Se no, probabilmente è un trucco. (Collega
+**Parte C** → "Errore vs licenza"; **Parte H** §6, §12.)
 
 ## Audit finale anti-AI (passaggio obbligato)
 
@@ -2724,6 +2744,144 @@ infrante — ma come **licenza consapevole**, non per disattenzione (vedi **Part
 
 ---
 
+> Le sezioni §1–§6 riguardano la *scelta* dell'idea; §7–§15 il **mestiere** del raccontarla.
+> Distillate da Gotham Writers' Workshop, *Lezioni di scrittura creativa*, e da R. Carver, *Il
+> mestiere di scrivere*. Esempi originali.
+
+## 7. Il personaggio — desiderio, contrasto, azione
+
+Un personaggio vive se **vuole** qualcosa: il desiderio è il motore, senza non parte niente. Meglio
+se forte e concreto (non «l'amore», ma «riconquistare la moglie prima che firmi le carte»).
+> **Test.** Sai dire in una riga *cosa vuole* il protagonista e *cosa glielo impedisce*? Se la
+> risposta è vaga («cerca sé stesso»), manca il motore.
+
+- **Contrasto, non tipi.** I personaggi vivi hanno tratti in tensione: il poliziotto integerrimo
+  che di notte spia i figli sui social. Il contrasto si **mostra**, non si dichiara (✗ *era gentile
+  ma dura*).
+- **Coerenza sorprendente.** Può fare cose inattese, purché il lettore — rileggendo — dica «i
+  segnali c'erano». Se dice «non l'avrebbe mai fatto», manca la semina.
+- **Rivelalo con le azioni, non con l'analisi.** «Le azioni della gente sono più interessanti del
+  perché le compiono» (Carver). ✗ *Era geloso.* → ✓ *Riordinò la cucina. Poi la riordinò di nuovo.*
+  Quattro canali: **azione**, **dialogo** (§10), **aspetto** (un dettaglio scelto, non il catalogo),
+  **pensiero** (se il punto di vista lo permette).
+- **Il cambiamento.** Spesso la storia chiede: *cambierà?* Sì, no o forse — purché guadagnato.
+
+## 8. Trama, conflitto, struttura
+
+La trama non è una sequenza di eventi: è una catena di **causa-effetto**. «La regina morì, poi morì
+il re» è cronaca; «la regina morì, e il re morì di dolore» è trama (Forster).
+- **Conflitto:** il protagonista vuole, qualcosa si oppone (ostacoli esterni e/o interni). Senza
+  ostacolo non c'è storia; il conflitto deve **crescere** verso il climax, non stagnare.
+- **Domanda drammatica:** la domanda secca (spesso sì/no) che regge il lettore fino in fondo —
+  *riuscirà a tornare al paese senza affrontare il padre?* Aprila presto, rispondila alla fine (alla
+  domanda *giusta*, non a un'altra).
+- **Tre parti:** *inizio* (entra quando il conflitto sta per scattare — non prima, non dopo);
+  *centro* (gli ostacoli crescono, ogni scena fa avanzare la domanda); *fine* (crisi → climax →
+  conseguenze brevi).
+- **L'inizio «benedice o maledice» il racconto** (Carver): la prima frase non riscalda, **lancia** —
+  *«Stava passando l'aspirapolvere quando squillò il telefono»* (due azioni ordinarie in conflitto).
+  ✗ aperture-scenografia (*«Era una mattina d'autunno del 1987…»*) o catalogo del personaggio.
+- **Finale:** inevitabile *e* inaspettato — rileggendo, gli indizi c'erano; mai *deus ex machina*
+  (la risposta nasce dalle azioni del protagonista, non dal caso).
+
+## 9. Mostrare e raccontare
+
+«Show, don't tell» è il precetto più frainteso: **servono entrambi.** *Mostrare* (scena: azione,
+dialogo, dettaglio) per i momenti importanti; *raccontare* (sommario) per transizioni, antefatto, il
+secondario. Il difetto non è il *tell* in sé, ma il *tell* che **sostituisce** una scena che il
+lettore meriterebbe di vivere.
+- ✗ *Greta era un'artista eccentrica.* → ✓ [la scena: Greta monta scheletri di cartapesta sul tavolo
+  della cucina alle tre di notte].
+- **Le emozioni: il correlativo oggettivo.** Non nominare il sentimento, mostra il fatto concreto che
+  lo produce. ✗ *Era disperata.* → ✓ *Rimise gli occhiali di lui nel cassetto. Poi li tirò fuori. Poi
+  li rimise dentro.*
+- **Il dettaglio "carico"** (Carver): un oggetto comune reso con precisione può avere «un potere
+  immenso». Vale se **fa** qualcosa — rivela un personaggio, crea tensione, ritorna come immagine —
+  non se è inventario. (→ **Parte E** §42 *individuazione*; **Parte I** §3.)
+
+## 10. Dialogo
+
+Il dialogo non è trascrizione del parlato (pieno di vuoti e ripetizioni): gli **somiglia** ma è molto
+più concentrato. Fa tre cose, spesso insieme: avanza la storia, rivela il personaggio, crea tensione.
+- **Sottotesto:** le persone non dicono ciò che pensano, specie quando conta. Il dialogo forte ha due
+  livelli. ✗ *«Sei arrabbiata?» «Sì, perché non hai chiamato.»* → ✓ *«Bella serata.» «Già.» «Sei qui
+  da molto?» «Abbastanza.»*
+- **Voce distinta:** se togli le attribuzioni e non capisci chi parla, il dialogo è troppo uniforme;
+  ogni personaggio ha lessico e ritmo propri.
+- **«disse» è invisibile:** usalo senza paura (✗ *esclamò, proferì, asserì*). Niente avverbi
+  nell'attribuzione: ✗ *«Tutto bene» disse nervosamente* → ✓ *«Tutto bene» disse, spostando il
+  bicchiere all'altro lato del tavolo*.
+- **Evita** il dialogo-spiegazione (*«Come sai, Maria, tuo padre è morto tre anni fa»*: nessuno parla
+  così a chi già sa) e il dialogo-comizio (il personaggio che recita la tesi dell'autore).
+
+## 11. Descrizione e ambientazione
+
+La descrizione che funziona non ferma l'azione per spiegare: si **intesse** mentre accade.
+- **Tutti i sensi,** non solo la vista: spesso un odore o un suono fissa un luogo meglio di una pagina
+  visiva. ✗ *L'appartamento era piccolo e disordinato.* → ✓ *Da sotto la porta filtravano odore di
+  fritto e una radio a basso volume.*
+- **Il dettaglio significativo,** non il catalogo: quello che, rileggendo, non puoi togliere (Čechov:
+  «un pezzo di ghiaccio che non si scioglie»).
+- **Verbi e nomi forti** battono aggettivi e avverbi: non *camminava velocemente* ma *sfrecciava*
+  (→ **Parte I** §3, test bidirezionale dell'aggettivo).
+- **Ambientazione:** se puoi togliere i personaggi dal luogo senza che cambi nulla, il luogo non
+  lavora. Lo stesso posto cambia con l'ora e con lo stato d'animo di chi guarda (il punto di vista
+  colora la scena, §4).
+
+## 12. Tensione e non detto
+
+«Mi piace quando in un racconto c'è un senso di minaccia» (Carver). La tensione non nasce dal
+conflitto *dichiarato* ma da ciò che sta «appena sotto la superficie»: le cose implicite, le azioni
+non spiegate.
+- **Non spiegare ogni causa.** ✗ *Era nervoso perché sapeva che lei stava per lasciarlo.* → ✓ [le sue
+  azioni inquiete lo dicono senza dirlo].
+- **Il finale non deve risolvere.** Spesso si chiude con la tensione ancora viva, solo spostata.
+  *Test:* se togli l'ultima frase, il racconto migliora o si svuota? Se migliora, era una spiegazione
+  di troppo.
+- **Niente trucchi** (Carver): la rivelazione che «era tutto un sogno» nell'ultima pagina, o
+  l'informazione sottratta solo per stupire, tradiscono il patto col lettore. La sorpresa è lecita se,
+  rileggendo, i segnali c'erano (diverso dalla licenza, §6).
+- Il racconto è uno **scorcio** — «qualcosa intravisto con la coda dell'occhio» (Pritchett): mostra
+  uno spigolo, non spiega la stanza intera.
+
+## 13. Voce narrativa
+
+La voce è il suono della storia — non lo stile dell'autore, ma quello del **narratore** (cambia da
+racconto a racconto). Nasce da scelte concrete: parole, lunghezza delle frasi, sintassi.
+- **Legata al punto di vista** (§4): in prima persona il lessico è quello del narratore (un lessico
+  forbito in bocca a un bambino stona, salvo effetto voluto).
+- **Ritmo:** frasi brevi accelerano e colpiscono; lunghe avvolgono. Alterna di proposito; leggi ad
+  alta voce (→ **Parte C** §4).
+- **Coerenza:** il difetto tipico è partire colloquiali e scivolare nel burocratico quando la storia
+  «si fa seria». È incoerenza, non registro alto.
+
+## 14. Tema
+
+Il tema non è la morale: è ciò che la storia mostra sul mondo (il bicchiere che contiene il vino).
+Non si dichiara, si lascia scoprire.
+- **Non partire dal tema** (otterresti una tesi, non una storia): affiora *dopo* la prima stesura, in
+  ciò che si ripete (oggetti, gesti, parole). Condensalo in una riga — non «un uomo cerca lavoro»
+  (è la trama) ma «la fatica di ricominciare».
+- **Guida la revisione:** ciò che non gli risponde è candidato al taglio. Ma il tema deve
+  **funzionare**, non spiegarsi (✗ il protagonista che gli dedica un comizio).
+
+## 15. Revisione della narrativa
+
+Scrivere è riscrivere: la prima stesura è per te (capire la storia), le successive per il lettore
+(raccontarla). Carver riscriveva anche venti volte — non per pulizia ma per «avvicinarsi al cuore»
+della storia: a ogni passata capiva meglio cosa voleva dire (→ **Parte I** §5).
+
+**Prima il disegno grande, poi i dettagli:** 1) personaggi (desiderio chiaro? cambiano?); 2) trama
+(domanda drammatica aperta presto e risolta? causa-effetto?); 3) punto di vista (il migliore?
+coerente?); 4) voce (contratto mantenuto?); 5) tema (tutto converge?). Solo dopo: frasi, dialoghi,
+descrizioni.
+
+**Taglia** ciò che hai scritto per *capire* ma il lettore non deve *leggere*; e l'inizio: *qual è la
+prima cosa davvero interessante?* Parti da lì. **Test finale:** leggi ad alta voce — dove ti annoi, si
+annoia il lettore.
+
+---
+
 # Parte I — Revisione e proprietà della parola
 
 Riferimento sul **mestiere micro**: scegliere la parola necessaria (*proprietas*, *le mot
@@ -2745,6 +2903,11 @@ decenni per capire che era vero il contrario.» È lo stesso principio dell'anti
 (**Parte E** §37): prima di scegliere la parola "elegante", chiediti se quella comune
 non dica la stessa cosa con più forza.
 
+Non è solo questione di semplicità: la parola comune ha **meno ramificazioni parassite**. Carver
+discusse con un allievo per un quarto d'ora la differenza tra *terra* e *suolo*: «*terra* è terra,
+quella roba lì»; *suolo* ha altre eco (agronomico, tecnico). Ogni parola "scelta" porta una nebbia di
+connotazioni; la parola comune dice la cosa e si ferma.
+
 ---
 
 ## 2. Non esistono sinonimi — la parola necessaria
@@ -2762,6 +2925,12 @@ contrasto, la necessità dell'originale.
 > Diverso dal vizio opposto — la *variazione elegante* forzata, cioè cambiare parola pur di non
 > ripetere un nome (**Parte E** §11). Lì: non variare per vezzo. Qui: cerca *la* parola
 > giusta, e se è già quella, ripetila senza paura.
+
+**La precisione è onestà** (Carver, via Pound: «una fondamentale accuratezza d'espressione è il solo
+e unico principio morale della scrittura»). La parola vaga non è solo «meno bella»: è il segnale che
+chi scrive non ha ancora capito cosa vuole dire. ✗ *Era in qualche modo turbato dalla situazione* →
+finché non sai *cosa* lo turba, non puoi scriverlo: trovare la parola precisa costringe a trovare il
+pensiero preciso. «Se le parole sono sfocate, l'occhio del lettore scivola sopra di esse» (Carver).
 
 ---
 
@@ -2838,6 +3007,15 @@ parallelismi e ossimori che aveva usato come rifugio quando l'idea non reggeva d
 > **Segnale d'allarme:** se una frase ti sembra bella per come *suona* ma non sai dire
 > esattamente cosa *significa*, è probabile che sia ornamento che copre un vuoto. L'ornamento non
 > risolve il problema, lo nasconde: toglilo, e se il testo crolla, il problema era il pensiero.
+
+### 5b. Riscrivere per scoprire (non solo per togliere)
+La sottrazione (§5a) non esaurisce la revisione. Carver riscriveva un racconto anche venti volte, e
+con piacere: «così facendo mi avvicino pian piano al cuore dell'argomento. È un processo, non una
+posizione stabile.» Sottrarre toglie il superfluo; riscrivere **avanza** — a ogni stesura capisci
+meglio cosa il testo vuole dire. Se dopo tre passate il testo è solo *più pulito* ma non cambia
+direzione, chiediti: *cosa non ho ancora capito di quello che sto dicendo?*
+> **Regola.** La prima stesura è un'ipotesi, la revisione la verifica. Fermati quando il testo non ti
+> sorprende più — non quando lo trovi «abbastanza bello».
 
 ---
 
