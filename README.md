@@ -61,6 +61,7 @@ quando serve il dettaglio (*progressive disclosure*).
 - **[ESEMPI.md](ESEMPI.md)** — casi *prima → dopo* (testo AI, revisione di testo umano, registro informale).
 - **[scrittura-italiana-single-file.md](scrittura-italiana-single-file.md)** — tutta la skill in un file, per Gemini/ChatGPT e assistenti senza supporto nativo alle Skill.
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** — come contribuire.
+- **[CHANGELOG.md](CHANGELOG.md)** — storia delle versioni.
 
 ## Installazione
 
