@@ -5,6 +5,27 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.4.1] — 2026-05-23
+
+Audit di completamento sui manuali della 2.4.0: integrate le ultime lacune di rilievo.
+
+### Aggiunto
+- **`dubbi-e-errori.md`** — §16 *passato remoto vs prossimo* (criterio psicologico, variazione
+  geografica); §17 *superlativi impliciti* (*più ottimale, molto unico*) e stime incoerenti
+  (*circa una cinquantina*); §18 *proprietà delle parole — usi impropri* (*snocciolare, minare,
+  blitz, escalation*; restrizioni semantiche *controverso/abbiente/pregiato*; coppie
+  *legislatura≠legislazione, transizione≠transazione*).
+- **`stile-naturale.md`** — §56 *participi del burocratese* (participio presente con valore di
+  relativa: *i componenti il comitato → i membri*; ablativo assoluto: *tenuto conto…, si procede →
+  poiché…*).
+- **`retorica-efficacia.md`** — §4 nota *testi destinati all'ascolto* (discorsi, podcast: periodi
+  brevi, paratassi, niente incisi, connettivi espliciti — norme di Gadda per la radio).
+- **`SKILL.md`** — guardia *anti-eco-chamber* nel workflow: per i testi argomentativi, esame
+  critico esplicito (l'AI tende a confermare la tesi, non a contestarla).
+
+### Modificato
+- **`SKILL.md`** → `version: 2.4.1`; conteggio pattern anti-AI 55 → 56. Single-file rigenerato.
+
 ## [2.4.0] — 2026-05-23
 
 Integrazione di **undici manuali** di lingua e scrittura italiana (lettura approfondita +
@@ -138,6 +159,7 @@ la dimensione, prima assente, della **costruzione del testo**.
   di *Wikipedia: Signs of AI writing*).
 - `README.md` bilingue, `CONTRIBUTING.md`, template per issue e pull request.
 
+[2.4.1]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.4.1
 [2.4.0]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.4.0
 [2.3.2]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.3.2
 [2.3.1]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.3.1

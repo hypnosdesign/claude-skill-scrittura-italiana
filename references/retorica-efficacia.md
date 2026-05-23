@@ -217,6 +217,13 @@ della prosa.
   - sequenze di parole con la stessa desinenza (*-zione, -mente, -ità* a catena).
 - Leggi sempre **ad alta voce**: l'orecchio trova ciò che l'occhio salta.
 
+> **Testi destinati all'ascolto** (discorsi, podcast, sottotitoli, audioguide). Chi ascolta non può
+> tornare indietro: le norme della chiarezza diventano *urgenti*. Periodi **brevi** (3-4 righe);
+> **paratassi** più che ipotassi (coordinate e giustapposte reggono meglio delle subordinate
+> incassate); **niente incisi** o parentesi lunghe (interrompono il filo e si perdono); **connettivi
+> espliciti** a ogni svolta logica; lessico concreto e comune. (Gadda, norme per la scrittura
+> radiofonica.)
+
 ---
 
 ## 5. Argomentazione — i *tópoi* (luoghi)

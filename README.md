@@ -13,7 +13,7 @@
 </p>
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.4.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.4.1-blue.svg)
 
 ## Cos'è
 
@@ -35,7 +35,7 @@ l'italiano per davvero, perché è costruita sulle **quattro virtù dell'espress
 4. **ornatus** — bellezza *regolata*: figure, ritmo, argomentazione, costruzione del testo
    (incipit, sviluppo, chiusura). Il suo eccesso (la *mala affectatio*) è esattamente lo
    **slop dell'AI** — perifrasi, gerundite, triadi, avverbi in *-mente*, aggettivi pomposi,
-   antilingua e affettazione all'italiana — che la skill riconosce e rimuove (55 pattern, più
+   antilingua e affettazione all'italiana — che la skill riconosce e rimuove (56 pattern, più
    il repertorio di cliché e frasi fatte).
 
 Il principio guida è l'**equilibrio**: ogni virtù sta tra due vizi, per difetto (sciatteria,
@@ -61,7 +61,7 @@ una libreria di manuali italiani — Serianni, Mortara Garavelli, Giunta, Pontig
     ├── retorica-efficacia.md     # aptum/perspicuitas/ornatus: 4 virtù, 3 stili, figure,
     │                             #   compositio, tópoi, dispositio, tesi, riassunto, discorso riferito
     ├── coesione-e-connettivi.md  # il filo: coesione vs coerenza, tassonomia dei connettivi
-    ├── stile-naturale.md         # anti-slop: 55 pattern AI + antilingua/affettazione
+    ├── stile-naturale.md         # anti-slop: 56 pattern AI + antilingua/affettazione
     │                             #   + "Dare voce" + audit
     ├── cliche-e-parole-alla-moda.md  # parole alla moda, tormentoni, luoghi comuni, cliché, plastismi
     ├── spiegare-con-chiarezza.md # divulgare/documentare: chiarezza, numeri, termine tecnico, anti-hype
@@ -230,7 +230,7 @@ it's built on the four classical *virtutes elocutionis*:
 4. **ornatus** — *measured* beauty: figures, rhythm, argumentation, text construction
    (opening, development, closing). Its excess (*mala affectatio*) is exactly AI slop —
    periphrasis, trailing gerunds, forced triads, *-mente* adverbs, the Italian "antilingua"
-   affectation — which the skill detects and removes (55 patterns, plus a register of clichés
+   affectation — which the skill detects and removes (56 patterns, plus a register of clichés
    and stock phrases).
 
 The guiding principle is **balance**: each virtue sits between two vices, by deficiency

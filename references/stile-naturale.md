@@ -361,6 +361,16 @@ veramente tanta roba* in una relazione. (b) *Deriva del punto di vista:* *tu/voi
 nello stesso testo (*…se siete freddolosi… ti semplifica la vita… cosa volete di più?*). → Scegli
 registro e persona all'inizio e tienili; in rilettura cerca *tu/ti/tuo* e *voi/vi/vostro*.
 
+**56. Participi del burocratese.** Due costruzioni amministrative da sciogliere (completano §18):
+- **participio presente con valore di relativa:** *i componenti il comitato* → *i membri del
+  comitato* / *chi fa parte del comitato*; *gli aventi diritto* → *chi ha diritto*; *il personale
+  frequentante il corso* → *…che frequenta il corso*.
+- **ablativo assoluto / participio "sciolto"** (con soggetto diverso dalla reggente): *Tenuto conto
+  della situazione, si procederà* → *Poiché la situazione…, si procederà*; *Esaminati i documenti, la
+  pratica è respinta* → *Dopo aver esaminato i documenti…*.
+→ Fuori dal linguaggio giuridico stretto, riscrivi con una subordinata esplicita (relativa, causale,
+temporale).
+
 ## Audit finale anti-AI (passaggio obbligato)
 
 Dopo la riscrittura, domandati: **"Cosa rende questo testo evidentemente generato da AI?"**

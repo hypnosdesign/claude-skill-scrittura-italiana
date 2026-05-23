@@ -103,6 +103,9 @@ Applica le passate nell'ordine delle virtù, **dalla struttura alla pelle**:
 5. **voce e audit finale** (**Parte E** → "Dare voce" + audit)
    Dai opinione, prima persona dove il registro lo consente, ritmo non simmetrico. Poi
    chiediti *"Cosa rende ancora AI questo testo?"*, elenca i tell residui, rivedi.
+   ⚠ Per i testi **argomentativi/persuasivi** fai anche un **esame critico** esplicito
+   (incoerenze, salti logici, affermazioni non dimostrate): l'AI tende a *confermare* la tesi di chi
+   scrive, non a contestarla — vai cercato il punto debole, non aspettarlo.
 
 Mantieni sempre **significato e registro**. Se l'utente fornisce un campione del proprio
 stile, calibrati su quello invece di appiattire a un italiano neutro.
@@ -868,6 +871,48 @@ giornalistica).
 > **Regola.** Prima di usare un gerundio o un infinito, verifica che il suo soggetto implicito sia
 > quello della reggente. Altrimenti usa una subordinata esplicita, col soggetto dichiarato.
 
+## 16. Passato remoto o prossimo?
+
+Il criterio è **psicologico, non cronologico**:
+- **passato prossimo** — fatto legato al presente, con effetti che durano: *Ho letto molto da
+  giovane* (e mi è rimasto). Per persone viventi: *Saviano è nato nel 1979.*
+- **passato remoto** — fatto concluso e staccato: *Lessi quel libro a vent'anni.* Per fatti storici
+  o persone non più viventi: *Verga nacque nel 1840.*
+
+⚠ Variazione geografica: al Nord il remoto è quasi sparito dal parlato, al Sud è tenace; ma nello
+**scritto narrativo** regge bene ovunque. Regola: non alternare i due sullo stesso piano senza
+ragione (✗ *Entrò, e poi ha detto…*).
+
+## 17. Superlativi impliciti e stime
+
+Alcune parole contengono già un assoluto: aggiungere *molto / più / assolutamente* è ridondante o
+errato.
+- ✗ più ottimale → ✓ **ottimale**; ✗ molto/assolutamente unico → ✓ **unico**; ✗ più principale →
+  ✓ **principale**; ✗ molto fondamentale → ✓ **fondamentale**; ✗ il più ideale → ✓ **ideale**;
+  ✗ i punti più salienti → ✓ **i punti salienti**.
+- **Stime:** *circa* (o *quasi, all'incirca*) non si somma a un termine già approssimativo.
+  ✗ circa una cinquantina → ✓ *una cinquantina* / *circa cinquanta*; ✗ all'incirca sui trent'anni →
+  ✓ *sui trent'anni*. Regola: *circa* + numero preciso **oppure** termine approssimativo, mai entrambi.
+
+## 18. Proprietà delle parole — usi impropri
+
+Parole usate in senso vago o sbagliato perché "suonano bene" o per somiglianza. Non sono errori di
+grammatica, ma di **proprietà**: suonano stonate a un orecchio competente.
+- **significato preciso tradito:** *snocciolare* = sgranare / dire una serie in modo rapido e
+  meccanico (non neutro: ha una sfumatura di abbondanza o ironia, non vale «elencare con cura»);
+  *minare* = logorare lentamente dall'interno (non «distruggere di colpo»); *blitz* = azione
+  fulminea (non un'operazione che dura settimane); *escalation* = aumento progressivo e
+  incontrollabile (non ogni aumento).
+- **restrizioni semantiche** (tratti nascosti che limitano le combinazioni): *controverso* si dice
+  di **questioni**, non di domande; *abbiente* solo di **persone**; *pregiato* di **oggetti/prodotti**
+  (✗ *un autore pregiato*).
+- **coppie da non confondere** (suonano simili, dicono altro): *legislatura* (durata dell'assemblea)
+  ≠ *legislazione* (insieme delle leggi); *transizione* (passaggio) ≠ *transazione* (accordo,
+  compromesso); *prezzolato* (pagato per fini loschi) ≠ semplicemente «pagato».
+
+> **Regola.** Prima di usare una parola evocativa o "colta", verifica il significato esatto: l'immagine
+> che evoca potrebbe non corrispondere a ciò che vuoi dire.
+
 ---
 
 # Parte C — Scrivere con efficacia (retorica)
@@ -1088,6 +1133,13 @@ della prosa.
   - **iati** sgradevoli e accumuli di vocali;
   - sequenze di parole con la stessa desinenza (*-zione, -mente, -ità* a catena).
 - Leggi sempre **ad alta voce**: l'orecchio trova ciò che l'occhio salta.
+
+> **Testi destinati all'ascolto** (discorsi, podcast, sottotitoli, audioguide). Chi ascolta non può
+> tornare indietro: le norme della chiarezza diventano *urgenti*. Periodi **brevi** (3-4 righe);
+> **paratassi** più che ipotassi (coordinate e giustapposte reggono meglio delle subordinate
+> incassate); **niente incisi** o parentesi lunghe (interrompono il filo e si perdono); **connettivi
+> espliciti** a ogni svolta logica; lessico concreto e comune. (Gadda, norme per la scrittura
+> radiofonica.)
 
 ---
 
@@ -1807,6 +1859,16 @@ diverso — *ci siamo confrontati sulle problematiche* in un messaggio tra amici
 veramente tanta roba* in una relazione. (b) *Deriva del punto di vista:* *tu/voi/Lei* che cambiano
 nello stesso testo (*…se siete freddolosi… ti semplifica la vita… cosa volete di più?*). → Scegli
 registro e persona all'inizio e tienili; in rilettura cerca *tu/ti/tuo* e *voi/vi/vostro*.
+
+**56. Participi del burocratese.** Due costruzioni amministrative da sciogliere (completano §18):
+- **participio presente con valore di relativa:** *i componenti il comitato* → *i membri del
+  comitato* / *chi fa parte del comitato*; *gli aventi diritto* → *chi ha diritto*; *il personale
+  frequentante il corso* → *…che frequenta il corso*.
+- **ablativo assoluto / participio "sciolto"** (con soggetto diverso dalla reggente): *Tenuto conto
+  della situazione, si procederà* → *Poiché la situazione…, si procederà*; *Esaminati i documenti, la
+  pratica è respinta* → *Dopo aver esaminato i documenti…*.
+→ Fuori dal linguaggio giuridico stretto, riscrivi con una subordinata esplicita (relativa, causale,
+temporale).
 
 ## Audit finale anti-AI (passaggio obbligato)
 

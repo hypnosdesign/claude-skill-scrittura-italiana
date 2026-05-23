@@ -1,6 +1,6 @@
 ---
 name: scrittura-italiana
-version: 2.4.0
+version: 2.4.1
 description: |
   Humanizer dell'italiano con i superpoteri: rende naturale e non "da AI"
   un testo — via perifrasi, gerundite, triadi, avverbi in -mente, trattini
@@ -120,6 +120,9 @@ Applica le passate nell'ordine delle virtù, **dalla struttura alla pelle**:
 5. **voce e audit finale** (`stile-naturale.md` → "Dare voce" + audit)
    Dai opinione, prima persona dove il registro lo consente, ritmo non simmetrico. Poi
    chiediti *"Cosa rende ancora AI questo testo?"*, elenca i tell residui, rivedi.
+   ⚠ Per i testi **argomentativi/persuasivi** fai anche un **esame critico** esplicito
+   (incoerenze, salti logici, affermazioni non dimostrate): l'AI tende a *confermare* la tesi di chi
+   scrive, non a contestarla — vai cercato il punto debole, non aspettarlo.
 
 Mantieni sempre **significato e registro**. Se l'utente fornisce un campione del proprio
 stile, calibrati su quello invece di appiattire a un italiano neutro.
