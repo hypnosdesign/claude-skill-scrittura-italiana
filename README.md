@@ -13,7 +13,7 @@
 </p>
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.3.2-blue.svg)
+![Version](https://img.shields.io/badge/version-2.4.0-blue.svg)
 
 ## Cos'è
 
@@ -35,7 +35,7 @@ l'italiano per davvero, perché è costruita sulle **quattro virtù dell'espress
 4. **ornatus** — bellezza *regolata*: figure, ritmo, argomentazione, costruzione del testo
    (incipit, sviluppo, chiusura). Il suo eccesso (la *mala affectatio*) è esattamente lo
    **slop dell'AI** — perifrasi, gerundite, triadi, avverbi in *-mente*, aggettivi pomposi,
-   antilingua e affettazione all'italiana — che la skill riconosce e rimuove (43 pattern, più
+   antilingua e affettazione all'italiana — che la skill riconosce e rimuove (55 pattern, più
    il repertorio di cliché e frasi fatte).
 
 Il principio guida è l'**equilibrio**: ogni virtù sta tra due vizi, per difetto (sciatteria,
@@ -43,20 +43,30 @@ oscurità) e per eccesso (slop). La differenza rispetto a un semplice "umanizzat
 sia il livello prescrittivo (punteggiatura) sia quello costruttivo (retorica applicata), con
 un **workflow ordinato** che va dalla struttura alla pelle.
 
+Oltre all'umanizzazione, la skill copre l'intero arco della scrittura: **sintassi** (congiuntivo,
+*consecutio*, periodo ipotetico), **coesione** (il filo tra frasi e capoversi, i connettivi),
+**argomentazione** (costruire una tesi, riassumere), **divulgazione** (spiegare cose complesse),
+**narrativa** (idea, punto di vista) e **revisione** (la parola giusta, la lima). Distillata da
+una libreria di manuali italiani — Serianni, Mortara Garavelli, Giunta, Pontiggia, Rigotti e altri.
+
 ## Struttura
 
 ```
 .
-├── SKILL.md                      # modello (4 virtù), workflow, principî cardine
+├── SKILL.md                      # modello (4 virtù), workflow, principî cardine, guardia sui fatti
 └── references/
     ├── punteggiatura.md          # puritas (segni): 15 schede, regole, errori, esempi
-    ├── dubbi-e-errori.md         # puritas (parole): accenti, omofoni, plurali, pronomi,
-    │                             #   ortografia, congiuntivo, preposizioni, reggenze
+    ├── dubbi-e-errori.md         # puritas (parole + sintassi): accenti, omofoni, plurali,
+    │                             #   pronomi, congiuntivo/consecutio/ipotetico, participio, digitato
     ├── retorica-efficacia.md     # aptum/perspicuitas/ornatus: 4 virtù, 3 stili, figure,
-    │                             #   compositio, tópoi, dispositio (costruzione del testo)
-    ├── stile-naturale.md         # anti-slop: 43 pattern AI + antilingua/affettazione
+    │                             #   compositio, tópoi, dispositio, tesi, riassunto, discorso riferito
+    ├── coesione-e-connettivi.md  # il filo: coesione vs coerenza, tassonomia dei connettivi
+    ├── stile-naturale.md         # anti-slop: 55 pattern AI + antilingua/affettazione
     │                             #   + "Dare voce" + audit
-    └── cliche-e-parole-alla-moda.md  # parole alla moda, tormentoni, luoghi comuni, cliché
+    ├── cliche-e-parole-alla-moda.md  # parole alla moda, tormentoni, luoghi comuni, cliché, plastismi
+    ├── spiegare-con-chiarezza.md # divulgare/documentare: chiarezza, numeri, termine tecnico, anti-hype
+    ├── narrativa.md              # raccontare: l'idea vs trama, forme dell'idea, punto di vista
+    └── revisione-e-proprieta.md  # la parola giusta (le mot juste), collaudo metafore, revisione a freddo
 ```
 
 `SKILL.md` è autosufficiente per i casi frequenti; i file in `references/` vengono consultati
@@ -185,6 +195,15 @@ Questa skill è un'opera derivata e cita le sue fonti:
   Sono norme e nozioni della lingua, patrimonio comune; le definizioni e gli esempi della
   skill sono originali, **non** una riproduzione dei libri. Per lo studio approfondito,
   leggete le opere: sono i riferimenti sull'argomento.
+- **Costruzione del testo, antilingua e cliché** — C. Giunta, *Come non scrivere* (UTET, 2018),
+  e i classici a cui rimanda (Calvino, Orwell, Savinio).
+- **Grammatica, sintassi, coesione, argomentazione, divulgazione, narrativa e revisione**
+  (dalla v2.4.0) — distillati da una libreria di manuali italiani: L. Serianni (*Italiano*, 1997;
+  *L'italiano: parlare scrivere digitare*, 2019; *Leggere, scrivere, argomentare*, 2015),
+  E. Rigotti (*Il filo del pensiero*, 2020), G. Barattelli (*Scrivere bene*, 2015), G. Pontiggia
+  (*Per scrivere bene imparate a nuotare*, 2020), C. Birattari (2011), D. Gouthier (*Scrivere di
+  scienza*, 2019), F. Massai (*L'idea narrativa*, 2015), Martino–Alfieri (*Scrivere ganzo*, 2015),
+  A. Julita (*Scrivere con l'AI*, 2025).
 - **Stile / pattern anti-AI** — adattamento italiano di
   [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
   (WikiProject AI Cleanup), disponibile sotto **CC BY-SA 4.0**. In conformità con il
@@ -211,13 +230,18 @@ it's built on the four classical *virtutes elocutionis*:
 4. **ornatus** — *measured* beauty: figures, rhythm, argumentation, text construction
    (opening, development, closing). Its excess (*mala affectatio*) is exactly AI slop —
    periphrasis, trailing gerunds, forced triads, *-mente* adverbs, the Italian "antilingua"
-   affectation — which the skill detects and removes (43 patterns, plus a register of clichés
+   affectation — which the skill detects and removes (55 patterns, plus a register of clichés
    and stock phrases).
 
 The guiding principle is **balance**: each virtue sits between two vices, by deficiency
 (sloppiness, obscurity) and by excess (slop). Unlike a generic "humanizer", this skill carries
 both the prescriptive layer (punctuation) and the constructive one (applied rhetoric), with an
-**ordered workflow** from structure to surface, ending in an anti-AI audit.
+**ordered workflow** from structure to surface, ending in an anti-AI audit. Beyond humanizing, it
+covers the full arc of writing: **syntax** (subjunctive, *consecutio*, conditionals),
+**cohesion** (connectives, the thread of discourse), **argumentation** (building a thesis,
+summarizing), **explanatory writing** (science/technical), **narrative** and **revision** —
+distilled from a library of Italian writing manuals (Serianni, Mortara Garavelli, Giunta,
+Pontiggia, Rigotti and others).
 
 ### Install
 
@@ -245,8 +269,12 @@ Punctuation rules are synthesized from B. Mortara Garavelli, *Prontuario di punt
 common-mistakes layer rewrites rules from M. Trinci, *Le basi proprio della grammatica*
 (Bompiani, 2019); text construction, the "antilingua", affectation and clichés draw on
 C. Giunta, *Come non scrivere* (UTET, 2018) and the classics it points to (Calvino, Orwell,
-Savinio). These are facts of usage and classical-rhetoric concepts, not copyrightable;
-the skill's wording and examples are original, not a reproduction. The style layer adapts
+Savinio). Since v2.4.0 the grammar, syntax, cohesion, argumentation, explanatory-writing,
+narrative and revision layers are distilled from a library of Italian writing manuals (Serianni,
+Rigotti, Barattelli, Pontiggia, Birattari, Gouthier, Massai, Martino–Alfieri, and A. Julita's
+*Scrivere con l'AI*, 2025). These are facts of usage and classical-rhetoric concepts, not
+copyrightable; the skill's wording and examples are original, not a reproduction. The style layer
+adapts
 [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
 (CC BY-SA 4.0); per share-alike, this skill is released under the same license. Contributions
 welcome via issues and pull requests — see [`CONTRIBUTING.md`](CONTRIBUTING.md).

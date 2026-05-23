@@ -5,6 +5,50 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.4.0] — 2026-05-23
+
+Integrazione di **undici manuali** di lingua e scrittura italiana (lettura approfondita +
+distillazione): Serianni (*Italiano*, 1997; *L'italiano: parlare scrivere digitare*, 2019;
+*Leggere, scrivere, argomentare*, 2015), Birattari (2011), Barattelli (2015), Martino–Alfieri
+(*Scrivere ganzo*, 2015), Massai (*L'idea narrativa*, 2015), Gouthier (*Scrivere di scienza*,
+2019), Pontiggia (2020), Rigotti (*Il filo del pensiero*, 2020), Julita (*Scrivere con l'AI*,
+2025). La skill passa da humanizer + correttore + retorica di base a **compagno di scrittura
+completo**: coesione, argomentazione, divulgazione, narrativa, revisione.
+
+### Aggiunto
+- **Quattro nuovi riferimenti:**
+  - **`coesione-e-connettivi.md`** — il filo del discorso: coesione (tema/rema, ganci, capoverso)
+    vs coerenza (filo rosso); tassonomia dei connettivi (quattro famiglie + bilanciamento).
+  - **`spiegare-con-chiarezza.md`** — divulgare e documentare: chiarezza ≠ semplificazione,
+    astratto→concreto, numeri contestualizzati, termine tecnico, metafore esplicative, anti-hype.
+  - **`narrativa.md`** — l'idea ("dinosauro") vs trama, le forme dell'idea, il punto di vista, la
+    licenza sperimentale.
+  - **`revisione-e-proprieta.md`** — *le mot juste* ("non esistono sinonimi"), collaudo letterale
+    delle metafore, intensificatori, revisione a freddo (cavare dal pieno, lettore-cavia).
+- **`SKILL.md`** — **Guardia sui fatti** (humanizer ≠ fact-checker: la responsabilità
+  dell'accuratezza resta dell'utente); workflow e principî estesi alla coesione; *Quando si attiva*
+  con i nuovi domini.
+- **`dubbi-e-errori.md`** — **sintassi del verbo** (congiuntivo vs indicativo, *consecutio
+  temporum*, periodo ipotetico, accordo del participio, modi espressivi, soggetto delle implicite)
+  e il **digitato** (punto, punto e virgola, emoji, maiuscole espressive in chat); più *ed*
+  eufonica, *anche se/se anche*, *lo stesso*, *virtualmente*.
+- **`retorica-efficacia.md`** — costruire la tesi, riassumere, discorso riferito; triade
+  parlato/scritto/digitato ed email come testo controllato; nuove figure (eufemismo, preterizione,
+  perissologia); *pars destruens/construens*; *ars est celare artem*; spersonalizzazione.
+- **`stile-naturale.md`** — pattern §44–§55 (antilingua scolastica, incipit "Nel mondo di…",
+  domanda retorica d'apertura, capoversi omogenei, virgolettati inventati, testo "a mosaico",
+  metafore miste, pleonasmi, doppie negazioni, coerenza di registro/persona); checklist positiva
+  nell'audit; hype scientifico in §1.
+- **`cliche-e-parole-alla-moda.md`** — plastismi e aggettivi obbligatori, cliché del discorso
+  scientifico, anglismi spocchiosi, paradosso sapienziale vuoto, comicità involontaria, feticci
+  *interessante/importante*.
+- **`punteggiatura.md`** — due punti come connettivo (e norma sui segni adiacenti); abuso delle
+  virgolette di distanziamento.
+
+### Modificato
+- **`SKILL.md`** → `version: 2.4.0`; tabella delle virtù, indice e Fonti aggiornati.
+- **`build-single-file.py`** → 9 riferimenti (Parti A–I); rigenerato `scrittura-italiana-single-file.md`.
+
 ## [2.3.2] — 2026-05-23
 
 ### Cambiato
@@ -94,6 +138,7 @@ la dimensione, prima assente, della **costruzione del testo**.
   di *Wikipedia: Signs of AI writing*).
 - `README.md` bilingue, `CONTRIBUTING.md`, template per issue e pull request.
 
+[2.4.0]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.4.0
 [2.3.2]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.3.2
 [2.3.1]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.3.1
 [2.3.0]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.3.0

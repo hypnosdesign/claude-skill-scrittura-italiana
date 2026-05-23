@@ -1,6 +1,6 @@
 # scrittura-italiana — versione in un solo file
 
-> **Cos'è.** È la skill *scrittura-italiana* (SKILL.md + i suoi 4 riferimenti) raccolta in un
+> **Cos'è.** È la skill *scrittura-italiana* (SKILL.md + i suoi 9 riferimenti) raccolta in un
 > unico documento, per gli assistenti che **non** supportano il formato Agent Skills e quindi
 > non caricano i file `references/` separati: app Gemini (come istruzioni di un *Gem*), Custom
 > GPT di ChatGPT, ecc.
@@ -23,9 +23,9 @@ unifica correttezza, chiarezza, efficacia e naturalezza.
 | Virtù | Significato | Dove approfondire |
 |---|---|---|
 | **aptum** | appropriatezza a scopo, destinatario, registro, genere e **livello di controllo** del testo | **Parte C** §1-2 |
-| **puritas** | correttezza tipografica (segni) e di parola (accenti, omofoni, plurali…) | **Parte A** + **Parte B** |
-| **perspicuitas** | chiarezza: il lettore capisce alla prima | **Parte C** §1 + **Parte D** |
-| **ornatus** | bellezza *regolata*: figure, ritmo — mai *mala affectatio* | **Parte C** §3-4 + **Parte D** |
+| **puritas** | correttezza tipografica (segni) e di parola/sintassi (accenti, omofoni, plurali, congiuntivo, consecutio…) | **Parte A** + **Parte B** |
+| **perspicuitas** | chiarezza: il lettore capisce alla prima; il testo "tiene" (coesione, coerenza) | **Parte C** §1 + **Parte D** + **Parte E** |
+| **ornatus** | bellezza *regolata*: figure, ritmo, *la parola necessaria* — mai *mala affectatio* | **Parte C** §3-4 + **Parte E** + **Parte I** |
 
 > **Il principio è l'equilibrio:** ogni virtù sta tra due vizi, per **difetto** (sciatteria,
 > oscurità, prosa grigia) e per **eccesso**. L'eccesso di *ornatus* — la ***mala affectatio***
@@ -43,17 +43,28 @@ unifica correttezza, chiarezza, efficacia e naturalezza.
 >
 > Nel dubbio sul registro, **chiedi** prima di "ipercorreggere".
 
+> **⚠ Guardia sui fatti (humanizer ≠ fact-checker).** La skill cura forma, chiarezza e voce, ma
+> **non verifica i fatti**. Un testo AI è convincente anche quando inventa: statistiche, citazioni,
+> studi, persone, sentenze. La responsabilità dell'accuratezza resta sempre dell'utente. Non
+> introdurre dati o citazioni "verosimili" per riempire un vuoto: segnala il vuoto e lascia che sia
+> l'utente a metterci un fatto vero (vedi **Parte E** §51 e §42). Verifica ogni virgolettato
+> attribuito a una persona reale.
+
 
 ---
 
 ## Quando si attiva
 
 - L'utente chiede di **scrivere** un testo in italiano (anche persuasivo, efficace, "che
-  funzioni").
+  funzioni"): saggio, tesi, articolo, copy, **divulgazione/documentazione tecnica**, **racconto**,
+  email, discorso.
 - L'utente chiede di **correggere, revisionare, editare, "sistemare", "umanizzare"** un testo.
+- L'utente chiede aiuto a **argomentare** (costruire una tesi, ordinare le ragioni), a **far
+  scorrere** un testo (coesione, connettivi, "non si capisce il filo"), a **riassumere**, o a
+  **spiegare** qualcosa di complesso con chiarezza.
 - L'utente fa una **domanda di lingua**: punteggiatura/tipografia ("ci va la virgola?",
-  "caporali o virgolette?"), oppure di stile/retorica ("come rendo più efficace questo
-  passaggio?", "che registro uso?").
+  "caporali o virgolette?"), grammatica/sintassi ("congiuntivo o indicativo?", "che tempo qui?"),
+  oppure di stile/retorica ("come rendo più efficace questo passaggio?", "che registro uso?").
 - Stai producendo tu stesso prosa italiana per l'utente e vuoi che sia impeccabile.
 
 ---
@@ -72,19 +83,24 @@ Applica le passate nell'ordine delle virtù, **dalla struttura alla pelle**:
      incisi da chiudere, gerarchia virgola/`;`/punto, due punti, maiuscole; virgolette
      uniformi, trattino vs lineetta, sentence case, puntini.
    - *Parole:* accenti (perché, è, qual è, un po', sé stesso), omofoni (da/dà, ne/né, ho/o),
-     ortografia, congiuntivo (stessi non «stassi»), plurali difficili, pronomi (tu/te, gli/le),
-     preposizioni e «che» polivalente.
-3. **perspicuitas — chiarisci** (**Parte C** §1 + **Parte D**)
+     ortografia, plurali difficili, pronomi (tu/te, gli/le), preposizioni e «che» polivalente.
+   - *Sintassi del verbo:* congiuntivo vs indicativo, *consecutio temporum*, periodo ipotetico
+     (mai condizionale nella protasi), accordo del participio, soggetto delle implicite
+     (**Parte B** §11-15).
+3. **perspicuitas — chiarisci** (**Parte C** §1 + **Parte D** +
+   **Parte E**)
    Una proposizione = un'idea; soggetto vicino al verbo; spezza i periodi troppo lunghi;
-   sciogli gli astratti in catena; togli il burocratese. Il lettore deve capire alla prima.
-4. **ornatus — affina, senza eccedere** (**Parte C** §3-4 + **Parte D**)
+   sciogli gli astratti in catena; togli il burocratese. Poi cura il **filo**: ogni frase si
+   aggancia alla precedente (tema/rema, connettivi *giusti*), ogni capoverso porta un'informazione
+   di peso. Il lettore deve capire alla prima e non perdere il filo.
+4. **ornatus — affina, senza eccedere** (**Parte C** §3-4 + **Parte E**)
    - *Togli l'eccesso* (= anti-AI): perifrasi → `è/sono`; **antilingua** (parola "scelta" →
      comune, verbo+astratto → verbo pieno); gerundite; avverbi in *-mente*; triadi forzate;
      connettori sovrabbondanti; riempitivi; chiusure ottimistiche vuote; pathos kitsch; cliché
-     e frasi fatte (**Parte E**); residui da chatbot.
+     e frasi fatte (**Parte F**); residui da chatbot.
    - *Aggiungi il giusto*: una figura quando serve (metafora che chiarisce, chiasmo in
      chiusura), ritmo variato, cadenza finale piena. Mai ornamento gratuito.
-5. **voce e audit finale** (**Parte D** → "Dare voce" + audit)
+5. **voce e audit finale** (**Parte E** → "Dare voce" + audit)
    Dai opinione, prima persona dove il registro lo consente, ritmo non simmetrico. Poi
    chiediti *"Cosa rende ancora AI questo testo?"*, elenca i tell residui, rivedi.
 
@@ -95,8 +111,14 @@ stile, calibrati su quello invece di appiattire a un italiano neutro.
 
 Fissa prima **aptum** (scopo → stile: *docere*=tenue, *delectare*=medio, *movere*=alto;
 vedi **Parte C** §2). Imposta la **dispositio** (come entri, come articoli, come
-chiudi: **Parte C** §6). Poi scrivi già rispettando le virtù: non produrre prosa
-da ripulire dopo. Chiudi con l'**audit anti-AI** e la **checklist tipografica**.
+chiudi: **Parte C** §6) e tieni il **filo** (**Parte D**). Poi scrivi
+già rispettando le virtù: non produrre prosa da ripulire dopo. Chiudi con l'**audit anti-AI** e la
+**checklist tipografica**.
+
+A seconda del genere, apri il riferimento dedicato: **argomentare/persuadere** →
+**Parte C** §5, §7-8; **divulgare/documentare** (spiegare cose complesse, numeri,
+termini tecnici) → **Parte G**; **narrativa** (idea, punto di vista, licenze) →
+**Parte H**; **scegliere la parola giusta e rivedere** → **Parte I**.
 
 ---
 
@@ -120,6 +142,9 @@ da ripulire dopo. Chiudi con l'**audit anti-AI** e la **checklist tipografica**.
 - **Spezza i periodi** sopra 35-40 parole o con più di due *che*.
 - **Tre astratti in fila legati da *di*** → riscrivi con un verbo.
 - Soggetto vicino al verbo; una proposizione, un'idea.
+- **Tieni il filo:** ogni frase si aggancia alla precedente; il connettivo *giusto* per la
+  relazione (non *però* per causa, non *quindi* per concessione). Un testo "a mosaico" (frasi vere
+  ma scollegate, riordinabili a piacere) non argomenta: collega (**Parte D**).
 
 **ornatus — efficacia senza eccesso**
 - Preferisci **`è/sono/ha`** alle perifrasi (*si configura come, rappresenta, costituisce*).
@@ -156,23 +181,38 @@ da ripulire dopo. Chiudi con l'**audit anti-AI** e la **checklist tipografica**.
   punto e virgola, due punti, punto, interrogativo, esclamativo, virgolette, lineette/trattini,
   parentesi, puntini, barra/asterisco, abbreviazioni e sigle, a capo), con regole, errori
   comuni ed esempi.
-- ****Parte B**** — *puritas: le parole*. Repertorio completo di dubbi ed
+- ****Parte B**** — *puritas: le parole e la sintassi*. Repertorio di dubbi ed
   errori comuni: accenti, omofoni, apostrofo/elisione/troncamento, *sé stesso*, ortografia
-  insidiosa, congiuntivo, plurali difficili e doppi, pronomi (tu/te, gli/le, ne), avverbi,
-  preposizioni, «che» polivalente, ausiliari, più note su punteggiatura in chat.
+  insidiosa, plurali difficili e doppi, pronomi (tu/te, gli/le, ne), avverbi, preposizioni, «che»
+  polivalente, ausiliari; **sintassi del verbo** (congiuntivo vs indicativo, *consecutio temporum*,
+  periodo ipotetico, accordo del participio, modi espressivi, soggetto delle implicite); e il
+  **digitato** (punto, punto e virgola, emoji, maiuscole espressive in chat e social).
 - ****Parte C**** — *scrivere bene*. Le 4 virtù dell'espressione, i 3
   stili (tenue/medio/sublime ↔ docere/delectare/movere), repertorio essenziale di figure
   (tropi, figure di parola e di pensiero), *compositio* (ordine/ritmo/eufonia), argomentazione
   per *tópoi* e **costruzione del testo (*dispositio*: iniziare/andare avanti/chiudere, voce ed
-  *ethos*, buona vs cattiva retorica)**.
-- ****Parte D**** — *togliere lo slop*. Pattern dell'italiano AI (contenuto,
+  *ethos*, buona vs cattiva retorica)**; **costruire la tesi** (selezionare, gerarchizzare,
+  errori argomentativi), **riassumere** e il **discorso riferito**.
+- ****Parte E**** — *togliere lo slop*. Pattern dell'italiano AI (contenuto,
   grammatica, stile, comunicazione, riempitivi) con parole-spia e prima→dopo; **l'antilingua e
   l'affettazione all'italiana (sostituzione colta, verbo+astratto, parole di plastica, less is
   more) e la guardia "verità e misura" (pathos, vaghezza, timidezza)**; sezione "Dare voce" e
   audit finale.
-- ****Parte E**** — *non pensare per formule*. Repertorio di
-  parole alla moda, locuzioni e tormentoni, formule d'elogio trite, luoghi comuni e metafore
-  morte da evitare (con misura), distillato da Giunta.
+- ****Parte F**** — *non pensare per formule*. Repertorio di
+  parole alla moda, locuzioni e tormentoni, formule d'elogio trite, luoghi comuni, metafore
+  morte, **plastismi e aggettivi obbligatori**, e i **cliché del discorso scientifico**.
+- ****Parte D**** — *il filo del discorso*. Coesione (tema/rema,
+  ganci, capoverso) vs coerenza (il "filo rosso"); **tassonomia dei connettivi** (le quattro
+  famiglie + quelli di bilanciamento) e i loro errori. Per testi che "non si capiscono" o "non
+  scorrono".
+- ****Parte G**** — *divulgare e documentare*. Spiegare cose complesse:
+  chiarezza ≠ semplificazione, astratto→concreto (esempi), numeri contestualizzati, gestione del
+  termine tecnico, metafore esplicative, anti-hype. Per divulgazione, documentazione, testi tecnici.
+- ****Parte H**** — *raccontare*. L'idea (il "dinosauro") vs la trama, le forme
+  dell'idea, il punto di vista, la licenza sperimentale. Per racconto e romanzo.
+- ****Parte I**** — *la parola giusta e la lima*. La proprietà
+  (*le mot juste*, "non esistono sinonimi"), il collaudo letterale delle metafore, gli
+  intensificatori, la revisione a freddo (cavare dal pieno, lettore-cavia).
 
 ---
 
@@ -196,8 +236,18 @@ corretto** (e, se istruttivo, l'errore da evitare), citando la scheda pertinente
   (WikiProject AI Cleanup), ampliato per i tic dell'italiano.
 - Costruzione del testo, antilingua, affettazione e cliché: C. Giunta, *Come non scrivere*
   (UTET, 2018); con i classici a cui rimanda — I. Calvino, *L'antilingua* (1965); G. Orwell,
-  *Politics and the English Language* (1946); A. Savinio, *Nuova enciclopedia*. Princìpi ed
-  esempi della skill sono rielaborazioni originali.
+  *Politics and the English Language* (1946); A. Savinio, *Nuova enciclopedia*.
+- Grammatica, sintassi e proprietà di lingua: L. Serianni, *Italiano* (Garzanti, 1997) e
+  *L'italiano: parlare, scrivere, digitare* (con G. Antonelli, Treccani, 2019). Argomentazione,
+  coesione e riassunto: L. Serianni, *Leggere, scrivere, argomentare* (Laterza, 2015); E. Rigotti,
+  *Il filo del pensiero* (2020); G. Barattelli, *Scrivere bene* (2015). Chiarezza, stile e
+  revisione: G. Pontiggia, *Per scrivere bene imparate a nuotare* (2020); C. Birattari, *È più
+  facile scrivere bene che scrivere male* (2011). Divulgazione: D. Gouthier, *Scrivere di scienza*
+  (Codice, 2019). Narrativa: F. Massai, *L'idea narrativa* (2015). Copy/web: F. Martino e A.
+  Alfieri, *Scrivere ganzo* (2015). Scrivere con l'AI e umanizzazione: A. Julita, *Scrivere con
+  l'AI* (Hoepli, 2025).
+- Concetti e regole sono patrimonio comune; testi ed esempi della skill sono rielaborazioni
+  originali.
 
 ---
 
@@ -332,6 +382,10 @@ sostituire congiunzioni causali, dichiarative, consecutive.
   in catene consequenziali).
 - Davanti a un elenco: se i membri sono oggetto/soggetto diretto del verbo che precede,
   **niente** due punti (`Ci permettono di elaborare emozioni, idee, paure…`).
+- **Come connettivo "snello":** i due punti possono sostituire un nesso logico con vantaggio di
+  scioltezza — `La rapina fallì: la vittima diede l'allarme` (= perché). ⚠ Evita due segni
+  intermedi forti uguali (`:` o `;`) in **periodi adiacenti**: alterna, o i due periodi si
+  leggono come un unico blocco.
 
 ---
 
@@ -415,6 +469,10 @@ maiuscola dopo di sé.
 - **Distanziamento / ironia:** le virgolette equivalgono a *cosiddetto / sedicente /
   si fa per dire*.
 - **Mai virgolette curve "all'inglese" miste a dritte:** scegli uno stile uniforme.
+- **⚠ Non abusare delle virgolette di distanziamento.** Mettile solo per ironia *vera* o per
+  segnalare che la parola non è tua (citazione, gergo, neologismo dubbio). ✗ *ieri ho visto le
+  "amiche del cuore"*, ✗ *ha fatto una "bella figura"* — espressioni comuni che non chiedono
+  riserva. È un tic della scrittura non esperta.
 
 ---
 
@@ -438,7 +496,7 @@ maiuscola dopo di sé.
 
 > ⚠️ **In italiano la lineetta lunga è rara.** La tipografia italiana si appoggia su
 > virgole, due punti, parentesi tonde, punto e virgola. Un testo con molte `—` è quasi
-> sempre tradotto dall'inglese o generato da AI: vedi **Parte D** §21.
+> sempre tradotto dall'inglese o generato da AI: vedi **Parte E** §21.
 
 **Scelta tra parentesi / lineette / virgole per gli incisi:** in un periodo già pieno di
 virgole, usa parentesi o lineette. Le **parentesi tonde** marcano l'estraneità in modo
@@ -682,6 +740,19 @@ copre i segni). Regole sintetizzate da M. Trinci, *Le basi proprio della grammat
   ✓ tra loro corre cattivo sangue (✗ "cattive acque"; *essere in cattive acque* è altra cosa).
 - **Interiezioni:** sole → punto esclamativo/interrogativo (Boh! Eh?); dentro la frase →
   isolate da virgola (Oh, cavolo!).
+- **D eufonica (*ed, ad*):** la norma moderna la vuole **solo davanti alla stessa vocale**:
+  ✓ *ed entrare*, *ad andare* / ma ✓ *e io*, *a Ostia* (non *ed io*, *ad Ostia*). *od* è ormai
+  obsoleto. Eccezione cristallizzata: *ad esempio*. ✗ *ed ora, ad ogni costo, ed io* sono
+  ipercorrettismi.
+- **anche se ≠ se anche:** *anche se* è concessivo (= benché): *esce **anche se** piove*. *se
+  anche* è ipotetico-ammissivo (ammesso pure che): ***se anche** piovesse, uscirei*. Non sono
+  intercambiabili.
+- **«lo stesso / la stessa» non è un pronome personale:** significa «il medesimo» (identità). ✗
+  *Ho scritto al direttore. **Lo stesso** ha risposto subito* → ✓ *…**Lui** ha risposto subito*
+  / *…, **che** ha risposto subito*. È un tic burocratico da evitare.
+- **virtualmente** in italiano = «di fatto, in sostanza» (anche se non formalmente): *il regime è
+  virtualmente finito*. ✗ Non usarlo come calco dell'inglese per «online/a distanza»: ✗ *ci siamo
+  visti virtualmente* → ✓ *…online / in videochiamata*.
 
 ## 10. Punteggiatura in chat e social (testo "non controllato")
 
@@ -691,17 +762,118 @@ copre i segni). Regole sintetizzate da M. Trinci, *Le basi proprio della grammat
 > "corrette". Vedi **Parte C** §1 → livello di controllo del testo.
 
 - **Il punto a fine messaggio breve** suona secco/definitivo: "No." risulta tagliente. Non è
-  un errore, ma cambia il tono — usalo con consapevolezza.
-- **Puntini di sospensione: sempre e solo tre**, mai due/quattro/sei, mai come decorazione.
-  ✓ Non so... forse. / ✗ Allora...... Dopo i tre puntini uno spazio; nelle citazioni le
-  omissioni vanno tra parentesi: [...].
+  un errore, ma cambia il tono — usalo con consapevolezza. *Perché:* in chat ogni invio separato
+  funziona già da demarcazione, quindi il punto resta solo come segnale **emotivo** (chiusura,
+  distanza, disappunto). ✓ `Ci vediamo domani` (neutro) vs ✓ `Ci vediamo domani.` (può suonare
+  freddo). Nell'email o nel documento formale, invece, il punto è obbligatorio come sempre.
+- **Punto e virgola in chat:** è il segno più formale dell'italiano; nel digitato risulta fuori
+  registro — «usarlo in chat è un po' come truccarsi per andare in palestra». Non è un errore, ma
+  preferisci il punto fermo (o niente). Nello scritto controllato resta perfetto.
+- **Emoticon ed emoji:** le **emoticon** (`:-) ;-)`) accompagnano le parole come *punteggiatura
+  mimica* (segnalano il tono); gli **emoji** (😅👍❤️) tendono a *sostituire* parole o frasi. Nel
+  testo digitato nessuno dei due è un errore e non vanno tolti; un emoji isolato può valere una
+  frase (`👍` = d'accordo). Nel **semi-formale** (email di lavoro, LinkedIn) sono un segnale di
+  registro: valuta se è appropriato. Nel **controllato** sono fuori posto (**Parte E** §25).
+- **Maiuscole espressive:** nel digitato lo `STAMPATELLO` vale enfasi/«grido» (`che BELLO!`), la
+  maiuscola interna mette a fuoco una parola (`sono IO che…`). Non sono errori ortografici, ma
+  segnali paralinguistici. Nel controllato rendi l'enfasi col corsivo o ristrutturando.
+- **Assenza di spazi / *scriptio continua*:** negli sms e nella messaggistica veloce (`nonloso`,
+  `Sì,vado.Poi ti dico`) non sono errori ortografici: evocano il flusso del parlato o nascono dai
+  limiti del mezzo. Nel testo controllato gli spazi dopo la punteggiatura sono obbligatori: **uno**
+  spazio dopo `, ; : . ? !`, nessuno prima.
+
+## 11. Congiuntivo: quando si usa, e la *consecutio temporum*
+
+**Quando il verbo reggente vuole il congiuntivo** (nelle completive con *che*):
+- ✓ **congiuntivo** dopo verbi di volontà, opinione, attesa, timore, dubbio: *voglio / spero /
+  temo / credo / penso / suppongo / dubito* che… → *Credo che **abbia** ragione.*
+- ✓ **indicativo** dopo verbi di percezione, affermazione, constatazione: *so / vedo / dico /
+  è certo / ricordo* che… → *So che **hai** ragione.*
+- Vogliono il congiuntivo anche: la **negazione** (*Non dico che **sia** colpa sua*),
+  l'interrogativa retorica (*Chi dice che non **sia** possibile?*), la completiva **anteposta**
+  (*Che **fosse** tardi, lo sapevo*).
+- Alcuni verbi cambiano senso col modo: *capisco che **è** stanco* (constato) ≠ *capisco che
+  **sia** stanco* (trovo comprensibile).
+
+**Consecutio temporum** (il tempo della subordinata dipende dalla reggente):
+
+| Reggente | Contemporaneità | Anteriorità | Posteriorità |
+|---|---|---|---|
+| **presente/futuro** | cong. presente (*che venga*) | cong. passato (*che sia venuto*) | indic. futuro (*che verrà*) |
+| **passato** | cong. imperfetto (*che venisse*) | cong. trapassato (*che fosse venuto*) | condiz. composto (*che sarebbe venuto*) |
+
+> **Regola: il passato regge il passato.** Se la reggente è al passato, la completiva vuole il
+> congiuntivo imperfetto o trapassato — mai il presente.
+- ✗ *Pensavo che tu **abbia** ragione* → ✓ *…che tu **avessi** ragione.*
+- ✗ *Temevo che **arrivi** tardi* → ✓ *…che **arrivasse** tardi.*
+- ✗ *Speravo che **verrai*** → ✓ *…che **saresti venuto**.*
+
+## 12. Periodo ipotetico
+
+Protasi (*se…*) + apodosi (la conseguenza). Tre tipi:
+
+| Tipo | Protasi (*se…*) | Apodosi | Esempio |
+|---|---|---|---|
+| **realtà** | indicativo | indic./imperativo/futuro | *Se piove, resto a casa.* |
+| **possibilità** | cong. imperfetto | condizionale presente | *Se piovesse, resterei a casa.* |
+| **irrealtà** | cong. trapassato | condizionale passato | *Se fosse piovuto, sarei rimasto.* |
+
+> **Regola: mai il condizionale nella protasi.** ✗ *Se **avrei** tempo, verrei* → ✓ *Se **avessi**
+> tempo, verrei.* ✗ *Se l'**avrei** saputo* → ✓ *Se l'**avessi** saputo.*
+- **Tipo misto** (frequente e corretto): *Se avessi studiato* (irrealtà passata) *, ora saresti
+  preparato* (conseguenza presente).
+- **Indicativo «irreale» colloquiale:** *se lo sapevo non venivo* (imperfetto in entrambi i membri)
+  è antico e legittimo nel **parlato**; nello scritto sorvegliato usa il sistema congiuntivo-condizionale.
+
+## 13. Accordo del participio passato
+
+- **Ausiliare *essere*:** sempre concordato col soggetto. ✓ *Maria è **partita**.* / *Sono
+  **arrivati**.*
+- **Ausiliare *avere* + oggetto posposto:** participio **invariato**. ✓ *Ho **letto** le lettere*
+  (l'accordo *ho lette* è arcaico).
+- **Ausiliare *avere* + pronome oggetto anteposto (*lo, la, li, le, ne*):** accordo **facoltativo**;
+  nello scritto sorvegliato preferisci l'accordo. ✓ *Le ho **viste*** (meglio di *viste→visto*);
+  ✓ *La lettera che ho **scritto/scritta***.
+- **Riflessivi:** accordo col soggetto. ✓ *Si è **lavata** le mani.*
+
+⚠ Errore AI tipico: invariato anche dopo *essere* (✗ *Maria è partito*) o, all'opposto, accordo
+meccanico dopo *avere* con oggetto posposto.
+
+## 14. Modi verbali come strumenti espressivi
+
+Usarli bene rende lo stile più naturale e preciso (l'AI tende a non sfruttarli).
+- **Imperfetto di cortesia/attenuazione:** ammorbidisce richieste e proposte. ✓ *Volevo chiederle
+  un consiglio* (= vorrei). Parlato e semi-formale; nel formale preferisci il condizionale.
+- **Condizionale di cortesia:** segnala che è un'opinione o un desiderio, non un ordine. ✓
+  *Le chiederei di verificare* (più gentile di *le chiedo*); *Sarebbe il caso di rivedere*.
+- **Futuro epistemico (di congettura):** esprime una stima sul presente, non un'azione futura. ✓
+  *Avrà cinquant'anni* (= immagino che li abbia); *Dove sarà finito?*
+- **Futuro concessivo:** concede un punto per poi ribattere. ✓ *Sarà anche un esperto, ma qui si
+  sbaglia.*
+- **Condizionale di dissociazione (giornalistico):** prende le distanze da una notizia non
+  confermata. ✓ *Secondo fonti di stampa, il ministro **avrebbe firmato** il decreto.* È
+  precisione, non incertezza vaga — diverso dall'hedging eccessivo (**Parte E** §31).
+
+## 15. Soggetto della subordinata implicita
+
+Una subordinata implicita (gerundio, infinito, participio) ha lo **stesso soggetto** della
+reggente. Se il soggetto cambia, la frase è scorretta o ambigua (errore frequente anche in prosa
+giornalistica).
+- ✗ *Uscendo di casa, il telefono squillò.* (chi usciva? non il telefono) → ✓ *Mentre uscivo di
+  casa, il telefono squillò.*
+- ✗ *Sbloccherà i fondi per essere utilizzati nel progetto.* → ✓ *…per utilizzarli nel progetto.*
+- ✗ *Il direttore ha convocato i dipendenti per discutere il bilancio* (chi discute?) → ✓ *…perché
+  discutessero il bilancio* (se discutono loro).
+
+> **Regola.** Prima di usare un gerundio o un infinito, verifica che il suo soggetto implicito sia
+> quello della reggente. Altrimenti usa una subordinata esplicita, col soggetto dichiarato.
 
 ---
 
 # Parte C — Scrivere con efficacia (retorica)
 
 Riferimento *costruttivo*: non come evitare errori (vedi **Parte A**) né come
-togliere i segni dell'AI (vedi **Parte D**), ma come scrivere **bene**, in modo
+togliere i segni dell'AI (vedi **Parte E**), ma come scrivere **bene**, in modo
 chiaro ed efficace. Distillato dalla tradizione retorica classica, sintetizzato da
 B. Mortara Garavelli, *Manuale di retorica* (Bompiani). Concetti e termini sono patrimonio
 classico; definizioni ed esempi sono originali.
@@ -749,6 +921,21 @@ L'*aptum* governa anche **quali norme tipografiche si applicano**. Distingui due
 > lasciale. Correggi la tipografia editoriale **solo** se il testo è controllato o se l'utente
 > chiede esplicitamente quel livello di rifinitura. Nel dubbio, chiedi.
 
+**Tre varietà, non due (parlato / scritto / digitato).** Il "non controllato" è in realtà una
+varietà a sé — il **digitato** (*e-taliano*: chat, social, messaggistica) — con norme proprie, non
+un semplice "scritto sbagliato": punteggiatura espressiva (vedi **Parte B** §10), maiuscole
+enfatiche, emoji, frammenti. È una *scelta di varietà*, non sciatteria.
+- ⚠ **L'email formale è scritto controllato, non digitato.** L'errore tipico è scriverla con le
+  abitudini della chat: ✗ *Salve!* a un professore → ✓ *Gentile Prof. Rossi,* (apertura con
+  titolo/cognome, corpo coeso, formula di chiusura). L'informale è legittimo tra chi si conosce; col
+  superiore o lo sconosciuto il registro alto è l'unica scelta. È un errore di *aptum*, non di
+  *puritas*.
+
+**Griglia di posizionamento (prima di correggere).** Posiziona il testo su quattro assi:
+*scrivente* (occasionale → esperto), *messaggio* (privato → pubblico), *supporto* (chat → stampa),
+*destinatari* (pochi e noti → indefiniti). Più gli assi sono alti, più si applicano tutte le norme;
+tutti bassi (sms tra amici) = nessuna correzione tipografica.
+
 ### Puritas — correttezza
 Rispetto della norma grammaticale, lessicale e ortografica/tipografica.
 → Per la punteggiatura e la tipografia vedi ****Parte A****.
@@ -759,7 +946,7 @@ Rispetto della norma grammaticale, lessicale e ortografica/tipografica.
 Il testo dev'essere **comprensibile** senza sforzo. È la virtù che l'italiano AI tradisce
 più spesso, sotto la maschera della complessità.
 - **In pratica:** una proposizione = un'idea; soggetto vicino al verbo; periodi non troppo
-  lunghi (vedi **Parte D** §19); termini concreti al posto di astratti in catena
+  lunghi (vedi **Parte E** §19); termini concreti al posto di astratti in catena
   (§16). La chiarezza non è povertà: è il lettore che capisce alla prima lettura.
 - Vizi: l'**oscurità** (difetto) e la **prolissità** che annega il senso (eccesso).
 
@@ -768,7 +955,7 @@ La bellezza formale: figure, ritmo, scelta delle parole. È la virtù **meno nec
 quella che fa "fare presa". Va dosata.
 - Difetto = ***oratio inornata***, prosa grigia e piatta.
 - Eccesso = ***mala affectatio***, l'ornamento gratuito e sovrabbondante — **è esattamente
-  lo slop dell'AI** (perifrasi, triadi, aggettivi pomposi, gerundite). Vedi **Parte D**.
+  lo slop dell'AI** (perifrasi, triadi, aggettivi pomposi, gerundite). Vedi **Parte E**.
 - **In pratica:** usa una figura quando *aggiunge* (chiarezza, forza, memorabilità), non per
   decorare. Una metafora giusta vale dieci aggettivi.
 
@@ -801,7 +988,7 @@ L'*aptum* impone di scegliere lo stile in base allo **scopo**. Tre scopi, tre st
 ## 3. Repertorio essenziale di figure
 
 Le figure utili a chi scrive, con definizione breve, esempio e — dove serve — l'avvertenza
-**⚠ AI** quando l'AI ne abusa (rimanda a **Parte D**).
+**⚠ AI** quando l'AI ne abusa (rimanda a **Parte E**).
 
 ### 3a. Tropi (slittamenti di significato)
 - **Metafora** — trasferimento per somiglianza: «un *mare* di guai». La figura regina: una
@@ -813,7 +1000,7 @@ Le figure utili a chi scrive, con definizione breve, esempio e — dove serve �
 - **Antonomasia** — il nome proprio per una qualità o viceversa: «un *Mecenate*», «il *Poeta*»
   (= Dante).
 - **Perifrasi** — dire con un giro ciò che avrebbe un nome solo: «il *re della foresta*».
-  ⚠ Spesso è solo evitamento della parola diretta (vedi **Parte D** §8, §30).
+  ⚠ Spesso è solo evitamento della parola diretta (vedi **Parte E** §8, §30).
 - **Litote** — affermare negando il contrario: «non *è male*» (= è buono). Attenua o sfuma.
 - **Iperbole** — esagerazione: «*te l'ho detto mille volte*».
 - **Ironia** — dire il contrario di ciò che si pensa, con segnale di distanza.
@@ -831,7 +1018,7 @@ Le figure utili a chi scrive, con definizione breve, esempio e — dove serve �
   = scala discendente (spesso per effetto comico/deflattivo).
 - **Chiasmo** — incrocio simmetrico ABBA: «*mangiare per vivere*, non *vivere per mangiare*».
 - **Parallelismo** — strutture sintattiche speculari. Dà ritmo. ⚠ Attento al *parallelismo
-  negativo* «non solo… ma anche», tic AI (**Parte D** §9).
+  negativo* «non solo… ma anche», tic AI (**Parte E** §9).
 - **Asindeto** — coordinazione senza congiunzioni: «venni, vidi, vinsi». Accelera.
   **Polisindeto** — congiunzioni ripetute: «e… e… e…». Rallenta, solennizza.
 - **Ellissi** — omissione di elementi sottintesi: «(Io) a casa, tu al lavoro».
@@ -842,10 +1029,21 @@ Le figure utili a chi scrive, con definizione breve, esempio e — dove serve �
 - **Endiadi** — un concetto espresso con due termini coordinati: «con *forza e decisione*».
   ⚠ Spesso è ridondanza (= la triade/coppia di riempimento).
 - **Enumerazione / accumulazione** — serie di elementi. ⚠ L'**accumulazione caotica** e la
-  **triade** (regola del tre) sono abusate dall'AI (**Parte D** §10).
+  **triade** (regola del tre) sono abusate dall'AI (**Parte E** §10).
 
 ### 3c. Figure di pensiero (operano sul senso, non sulle parole)
-- **Antitesi** — accostamento di opposti: «*pochi* ma *buoni*».
+- **Antitesi** — accostamento di opposti: «*pochi* ma *buoni*». Non solo figura: è un **principio
+  costruttivo** della prosa efficace (Gorgia in poi). «Perdoniamo *spesso* chi ci annoia, ma *non
+  possiamo* perdonare quelli che annoiamo *noi*» (La Rochefoucauld): doppia antitesi + rovesciamento
+  dell'opinione comune. ⚠ Prima la verità, poi la forma: il gioco antitetico può produrre frasi
+  false («soltanto chi è spregevole teme di essere disprezzato» — quel *soltanto* mente per simmetria).
+- **Eufemismo** — espressione attenuata al posto di quella diretta. ✓ legittimo per rispetto o
+  cortesia («è venuto a mancare»); ✗ manipolatorio quando nasconde responsabilità («ottimizzazione
+  del personale» = licenziamenti).
+- **Preterizione** — dire di voler tacere qualcosa per metterlo in risalto: «Non starò a ricordare
+  i suoi fallimenti…». Efficace se consapevole; controproducente se il lettore sente il trucco.
+- **Perissologia** — ribadire negando il contrario: «è solo l'inizio, *non certo la fine*».
+  Rafforza (diversa dalla litote, che attenua, e dall'antitesi, che contrappone).
 - **Ossimoro** — unione di contraddittori: «*silenzio assordante*», «*dolce naufragar*».
 - **Domanda retorica** — interrogativa che non attende risposta: «Chi non lo vorrebbe?»
   ⚠ A grappoli è un tic da tutorial.
@@ -863,6 +1061,12 @@ Le figure utili a chi scrive, con definizione breve, esempio e — dove serve �
 > dosano. Una sola figura giusta nel punto giusto (un chiasmo in chiusura, una metafora che
 > illumina) vale più di un paragrafo carico. Se una figura non aggiunge senso o forza,
 > toglila: ricadi nella *mala affectatio*.
+>
+> **L'arte di nascondere l'arte (*ars est celare artem*).** La retorica ben usata **non si
+> vede**: quando si vede troppo (il lettore *aspetta* l'antitesi prima che arrivi, conta i
+> parallelismi) diventa manierismo. La naturalezza non si raggiunge rifiutando la tecnica, ma
+> padroneggiandola fino a dimenticarla — come nel nuoto: chi non conosce la bracciata annega
+> proprio mentre crede di essere "spontaneo" (Pontiggia).
 
 ---
 
@@ -874,7 +1078,7 @@ della prosa.
 - **Ordine delle parole:** l'italiano ha ordine flessibile. Sposta in **prima** o **ultima**
   posizione ciò che vuoi mettere in rilievo (le posizioni forti). «*Questo* non lo accetto»
   ≠ «Non accetto questo».
-- **Ritmo:** alterna periodi brevi e lunghi (vedi **Parte D** → "Dare voce"). Una
+- **Ritmo:** alterna periodi brevi e lunghi (vedi **Parte E** → "Dare voce"). Una
   frase corta dopo alcune lunghe colpisce. La monotonia ritmica è il segno dell'algoritmo.
 - **Cadenza finale (clausola):** chiudi frasi e paragrafi su parole piene, non in dissolvenza.
   Le posizioni finali restano in mente.
@@ -903,12 +1107,12 @@ Utili per testi persuasivi, saggistici, di opinione.
 - **Esempio** — dal particolare al particolare, o induzione da casi.
 - **Analogia / similitudine** — «come X sta a Y, così…».
 - **Autorità** — appoggiarsi a una fonte autorevole (⚠ con fonte vera e citata, vedi
-  **Parte D** §5: niente autorità vaghe).
+  **Parte E** §5: niente autorità vaghe).
 - **A fortiori** — «se vale nel caso difficile, a maggior ragione in quello facile».
 - **A contrario** — argomentare dal caso opposto.
 
 > ⚠ **Luoghi comuni.** Il *tópos* logoro (la frase fatta, l'ovvietà spacciata per saggezza) è
-> il rovescio del *tópos* argomentativo. L'AI ne è piena (**Parte D** §1, §32, §34).
+> il rovescio del *tópos* argomentativo. L'AI ne è piena (**Parte E** §1, §32, §34).
 > Un argomento è forte quando il luogo è *applicato* a un caso concreto, non enunciato in
 > astratto.
 
@@ -925,10 +1129,15 @@ ogni testo di una certa estensione (saggio, tesi, relazione, articolo).
   preamboli grigi che ripetono ciò che il lettore già sa.
 - Evita gli **avvii morti:** la definizione da vocabolario (*«Secondo lo Zingarelli, X
   significa…»*), la biografia piatta (*«Nacque a … nel … da famiglia …»*), il "riscaldamento"
-  che ripete il titolo (**Parte D** §36).
+  che ripete il titolo (**Parte E** §36).
 - Ma niente **avvii da romanzo** in un saggio (*«Bang bang. E quei due colpi…»*): cerca la via
   di mezzo, una prospettiva netta o un dato forte. Scegliere *da dove* partire (l'esilio di
   Dante, non la data di nascita) è già metà del lavoro.
+- **Tre attacchi che funzionano:** (1) **limitare una certezza condivisa** — parti dalla notizia
+  nota e subito ribaltala o restringila (*«Il regime è caduto. Ma non era impopolare»*); (2) **dato
+  forte + domanda** (*«Gli under 15 si sono dimezzati in un secolo. Come ci siamo arrivati?»*); (3)
+  **citazione/scena *in medias res*** e poi inquadra. In ogni caso, niente ovvietà: spiazza
+  l'orizzonte d'attesa.
 
 ### 6b. Andare avanti (*narratio / argumentatio*) — rendi visibile l'articolazione
 - **Scandisci** il ragionamento con formule esplicite: *da un lato… dall'altro*; *in primo
@@ -937,19 +1146,38 @@ ogni testo di una certa estensione (saggio, tesi, relazione, articolo).
   Mostrare l'obiezione e ribatterla persuade più che ignorarla.
 - **Metadiscorso con misura:** dire al lettore dove sei (*«Nel capitolo precedente abbiamo
   visto…; ora…»*) lo orienta. Utile nei testi lunghi, superfluo nei brevi.
+- **Modello bipartito (*pars destruens* → *pars construens*):** prima i problemi (dati negativi,
+  errori da confutare, gravità del nodo), poi la proposta, nella parte finale che resta in mente.
+  L'ottimismo conclusivo, se c'è, va *guadagnato* con l'analisi — non è la chiusura edificante di
+  §6c, perché la proposta è specificata e motivata.
+- **La concessiva è forza, non debolezza:** *«Pur riconoscendo X, però Y»*, *«Sebbene X, resta
+  Y»* mostrano che il ragionamento tiene conto delle obiezioni reali. Un testo senza concessioni
+  suona dogmatico o ingenuo. ⚠ L'AI le sostituisce col parallelismo *«non solo… ma anche»* (che
+  accumula senza cedere) o con l'hedging: la concessiva vera ammette il punto avversario *e poi lo
+  supera*.
 
 ### 6c. Chiudere (*peroratio*) — senza do di petto
 - **Niente finale a effetto forzato** né *pointe* a tutti i costi: va benissimo un **riassunto
   sobrio** (*«In conclusione, le prove non bastano…»*) o una **domanda** che lascia pensare.
 - ⚠ **Mai "lanciare messaggi".** Le chiusure edificanti sono il tell peggiore: *«…ma sono certo
   che l'Uomo saprà trovare una soluzione», «…un'opera ancora attuale, perché ci insegna molto»*.
-  Coincidono con le conclusioni generiche positive (**Parte D** §32). Se non hai una
+  Coincidono con le conclusioni generiche positive (**Parte E** §32). Se non hai una
   chiusura migliore, **finisci prima**.
+- **Due chiuse che funzionano:** un'**affermazione paradossale** che lega fatti lontani
+  (*«Dall'unità dell'Europa dipende il futuro della Libia»*) — una deduzione a sorpresa, non
+  un'iperbole vuota; oppure una **citazione/un dato** che argomenta da sé. In entrambi i casi il
+  lettore deve uscire con un'idea che prima non aveva.
 
 ### 6d. La voce e l'*ethos*
 - **Io / noi:** nel testo **oggettivo** (manuale, voce d'enciclopedia, cronaca) tieni l'io fuori;
   nel **saggio, reportage, opinione** l'io può e deve affiorare — è lì che nasce la voce (vedi
-  **Parte D** → "Dare voce").
+  **Parte E** → "Dare voce").
+- **Spersonalizzare è una scelta, non un default.** Il *si* impersonale e il passivo dànno
+  oggettività (testi tecnici/istituzionali); *bisogna/occorre* dànno l'obbligo neutro
+  (istruzioni); il *noi* inclusivo crea alleanza (saggio, persuasione); l'*io* esplicito si prende
+  la responsabilità (editoriale, lettera). Scegline **uno** per il testo e non saltare da un piano
+  all'altro. ⚠ Il passivo che nasconde l'agente noto è codardo, non oggettivo (*«sono stati
+  commessi errori»*): è una decisione retorica, non grammaticale.
 - **Modestia:** parla dell'argomento, non di te; niente auto-incensamento.
 - **Drammatizzare (*percontatio*):** immagina la domanda del lettore e rispondi (*«L'ultima
   *che*? Lasciate che spieghi.»*). Anima il discorso senza alzare la voce.
@@ -959,9 +1187,67 @@ ogni testo di una certa estensione (saggio, tesi, relazione, articolo).
 > solenne per dire poco, pathos al posto degli argomenti, paroloni per nascondere il vuoto.
 > Regola pratica: **tieniti un'ottava sotto** — sobrietà, asciuttezza, *understatement*, e quando
 > puoi un filo d'ironia e autoironia. (L'eccesso opposto, il pathos kitsch, è in
-> **Parte D** §41.)
+> **Parte E** §41.)
 
 ---
+
+## 7. Argomentare: costruire la tesi
+
+I *tópoi* (§5) sono il serbatoio; la *dispositio* (§6) l'architettura. Qui: come si **ordina** il
+materiale per convincere.
+
+- **Selezionare.** Non dire tutto ciò che sai: fa' emergere **una** tesi e tieni solo gli argomenti
+  pertinenti. Il materiale irrilevante indebolisce.
+- **Gerarchizzare.** L'argomento che vuoi far vincere va **dopo** quello più debole, in posizione di
+  rilievo, e va **potenziato** con una ragione in più e un esempio. L'argomento che cedi (o quello
+  avversario) si espone per primo, di sfuggita.
+- **Anticipare le obiezioni.** Formula l'obiezione più forte e rispondile (*«Si obietterà che…
+  Tuttavia…»*). Se non sai rispondere, quell'anello è debole: riformulalo o abbandonalo.
+- **L'esempio è una prova, non un ornamento.** È il ponte tra la tesi astratta e il verificabile.
+  ✗ *Molte donne faticano a trovare lavoro.* ✓ *Insegnanti con vent'anni di servizio sono ancora
+  precarie perché non entrano in ruolo.* Un *tópos* applicato a un caso concreto vale dieci volte lo
+  stesso *tópos* enunciato in astratto.
+
+**Errori argomentativi frequenti:**
+- **Citazioni in fila** invece di un discorso: le fonti si *inseriscono* in un ragionamento, non si
+  elencano per dovere.
+- **Argomento non pertinente:** la conclusione non *segue* dalle premesse, la affermi soltanto.
+- **Verosimiglianza scambiata per verità:** una tesi coerente con gli umori del momento, o
+  sostenuta da un'autorità, non è per ciò vera. L'autorevolezza non sostituisce la prova.
+- **Falsa modestia / metadiscorso superfluo:** *«nella mia umile opinione», «per così dire»* — di'
+  la cosa (vedi **Parte F** §2 e **Parte E** §43).
+
+## 8. Riassumere — condensare senza tradire
+
+Riassumere è **gerarchizzare**: prima individua i **nuclei** (le affermazioni senza cui il testo
+non sta in piedi: tesi, premesse, prove principali, conclusione); il resto — esempi, sfumature,
+citazioni — è sacrificabile. *Test:* se tolgo questo capoverso, il senso regge? Allora era
+secondario.
+
+| Riduzione | Cosa tieni |
+|---|---|
+| ~75% | tesi + prove principali + qualche sfumatura |
+| ~85% | tesi + prove essenziali |
+| ~95% | solo la tesi centrale e la sua ragione |
+
+Tre regole: **non aggiungere** (niente implicazioni che il testo non dice — un'affermazione
+"verosimile" ma assente è un errore); **non ricopiare** a blocchi le parole dell'originale
+(riformula: copiare fa sospettare che non si sia capito); **il filo deve reggere** (anche il
+riassunto più corto dice qualcosa di senso compiuto, non è una lista di parole-chiave). È la
+competenza inversa allo slop, che gonfia tutto allo stesso peso.
+
+## 9. Discorso riferito (diretto → indiretto)
+
+Passare dal discorso diretto all'indiretto richiede tre adeguamenti coordinati: **tempi** (secondo
+la *consecutio*, vedi **Parte B** §11), **deittici**, **pronomi**.
+- *«Verrò domani»* → *Disse che **sarebbe venuto** il giorno dopo* (futuro → condizionale composto;
+  *domani* → *il giorno dopo*).
+- *«Sono stanco»* → *Disse **che era** stanco*. *«Esci!»* → *Gli disse **di uscire**.*
+- **Deittici:** *qui→lì*, *questo→quello*, *oggi→quel giorno*, *ieri→il giorno prima*.
+- **Discorso indiretto libero** (narrativa): niente verbo introduttivo, imperfetto + condizionale
+  composto, tono del parlato conservato — *«Tra poco Leo sarebbe partito, e lei sarebbe rimasta
+  sola»*. ⚠ Errore AI: tenere il futuro semplice nel riferito (✗ *disse che verrà* → ✓ *che sarebbe
+  venuto*).
 
 ## In sintesi
 
@@ -969,10 +1255,197 @@ Scrivere bene = **aptum** (scegli scopo e registro) → **puritas** (corretto) �
 **perspicuitas** (chiaro) → **ornatus** (bello *quanto basta*, mai *mala affectatio*).
 E **disponi** bene il testo (*dispositio*): entra subito, articola, chiudi senza enfasi.
 Le figure e i *tópoi* sono strumenti al servizio di queste virtù, non fini in sé.
+Per **argomentare** seleziona e gerarchizza (§7), per **riassumere** gerarchizza ancora (§8); e per
+tenere insieme il tutto — il *filo* tra frasi e capoversi — vedi **Parte D**.
 
 ---
 
-# Parte D — Stile naturale (anti-AI)
+# Parte D — Coesione e connettivi
+
+Riferimento *costruttivo* per tenere insieme un testo: come si lega una frase alla
+successiva (**coesione**), come tutto il testo resta una cosa sola (**coerenza**), e come
+si scelgono i **connettivi**. Complementa **Parte C** (che cura figure,
+*dispositio* e argomentazione) e **Parte E** §20 (che mette in guardia dai
+connettori *sovrabbondanti*): qui la guida è positiva — usarli **bene**, non solo di meno.
+Distillato da G. Barattelli, *Scrivere bene*; L. Serianni, *Leggere, scrivere, argomentare*;
+E. Rigotti, *Il filo del pensiero*. Esempi originali.
+
+> *Discorso* viene dal latino *sermo*, da *sero* = intrecciare. Un testo non è un mucchio
+> di frasi giuste accostate: è un **tessuto**. Chi non intreccia non discorre — elenca.
+
+---
+
+## 1. Coesione vs coerenza — due piani, due problemi
+
+- **Coesione** = tenuta *linguistica*, frase per frase. Le frasi sono agganciate da
+  connettivi, pronomi, riprese lessicali. Un testo è poco coeso quando il lettore deve
+  *indovinare* il legame tra una frase e la successiva.
+- **Coerenza** = tenuta *tematica*, su tutto il testo. Il testo parla di una cosa sola (o
+  di più cose legate); ogni capoverso lavora per la tesi centrale; la fine risponde
+  all'inizio. Un testo è incoerente quando apre un tema e non lo sviluppa, o quando le parti
+  sembrano scritte da persone diverse.
+
+Si può essere coesi e incoerenti (frasi ben cucite che però vanno in direzioni diverse) e
+coerenti ma poco coesi (idee giuste ma scucite). Servono entrambe.
+
+**Due check rapidi:**
+- *Coerenza:* leggi **solo la prima frase di ogni capoverso**. Devono formare da sole uno
+  schema logico leggibile. Se non lo formano, la struttura va rifatta.
+- *Coesione:* leggi ogni **coppia di frasi consecutive**. Il legame è esplicito (o
+  chiaramente implicito)? Se no, aggancia o riordina.
+
+---
+
+## 2. Il filo: come si tiene la coesione
+
+### 2a. Tema e rema (dato e nuovo)
+Ogni frase dice qualcosa di **nuovo** (*rema*) a partire da una base **già nota** (*tema*).
+Il lettore deve sempre sapere *di che cosa* gli stai parlando prima che tu gli dica *cosa*.
+Schema più scorrevole: ciò che è nuovo in una frase diventa il noto della successiva
+(progressione "a catena").
+
+✗ (ogni frase introduce un tema nuovo, scollegato):
+> Il mercato è cambiato. Gli strumenti digitali sono fondamentali. Le aziende devono
+> adattarsi. La formazione conta molto.
+
+✓ (ogni frase riprende un elemento della precedente e lo sviluppa):
+> Il mercato è cambiato, e il cambiamento ha reso indispensabili gli strumenti digitali.
+> Usarli bene, però, richiede formazione — quella che molte aziende ancora trascurano.
+
+### 2b. Il gancio tra frasi
+Una frase si lega alla precedente con almeno uno di questi mezzi:
+- **ripresa lessicale:** ripeti una parola-chiave (o un iperonimo preciso: *la Sicilia →
+  l'isola*). La ripetizione del nome non è un male (vedi **Parte E** §11): è coesione.
+- **pronome o dimostrativo:** *questo, ciò, tale, lo, ne* — agganciano in modo esplicito.
+- **connettivo:** segnala la relazione logica (§3).
+
+> **Regola.** In revisione, controlla che ogni frase "agganci" la precedente. Se due frasi
+> consecutive si leggono senza alcuna transizione lessicale o logica, manca un gancio.
+
+### 2c. Fibra su fibra
+La robustezza di un filo non viene da un'unica fibra che corre per tutta la lunghezza, ma
+dal sovrapporsi di molte fibre corte (Wittgenstein). Tradotto: la coesione non è ripetere
+la stessa tesi a ogni riga, ma far sì che ogni paragrafo riceva qualcosa dai precedenti e
+passi qualcosa ai successivi.
+
+---
+
+## 3. I connettivi — tassonomia operativa
+
+I connettivi rendono **esplicito** il rapporto logico tra le proposizioni. Sceglierli male
+(o ometterli) è la causa più frequente di testi opachi.
+
+| Funzione | Connettivi |
+|---|---|
+| **Aggiunta** | e, anche, inoltre, in più, per di più, oltre a ciò |
+| **Contrapposizione** | ma, però, tuttavia, eppure, invece, al contrario, d'altra parte |
+| **Concessione** (ammetto e poi ribatto) | sebbene, benché, nonostante, malgrado, per quanto, pur + gerundio |
+| **Causa** | perché, poiché, in quanto, dato che, visto che, siccome |
+| **Conseguenza** | quindi, dunque, perciò, pertanto, di conseguenza, così |
+| **Scopo** | per, affinché, in modo da, allo scopo di |
+| **Spiegazione/riformulazione** | cioè, ossia, vale a dire, in altre parole, in sostanza |
+| **Dimostrazione** | infatti, in effetti, come mostra, come prova |
+| **Ipotesi** | se, qualora, nel caso in cui, purché, a patto che |
+| **Tempo/ordine** | prima, poi, infine, in seguito, nel frattempo; in primo luogo… in secondo luogo |
+| **Ripresa/anticipazione** | come si è visto, tornando a…; come vedremo, su questo si tornerà |
+
+### 3a. Quattro famiglie da non confondere
+- **Conclusivi** (*quindi, dunque, pertanto*) "guardano avanti": inferiscono una conseguenza
+  da ciò che precede. ⚠ Sono i più abusati dall'AI come riempitivi a inizio paragrafo, senza
+  una vera premessa: togli o sostituisci con il punto.
+- **Esplicativi/causali** (*infatti, poiché*) "guardano indietro": motivano ciò che è appena
+  stato detto. *infatti* serve a **motivare** l'affermazione precedente — non è sinonimo di
+  *tuttavia* né di *inoltre*.
+- **Avversativi/concessivi** (*ma, tuttavia; sebbene, pur*): costruiscono la complessità.
+- **Di bilanciamento** (*peraltro, anzi, semmai, del resto, a dire il vero, quantomeno*):
+  precisano, graduano, limitano **senza** contraddire. Sono la classe più sofisticata: la
+  loro presenza è la spia di un discorso che tiene conto delle sfumature.
+
+| Connettivo | Funzione | Esempio |
+|---|---|---|
+| *peraltro* | avversativo lieve: aggiunge un dato che corregge l'attesa | «Costa molto; **peraltro**, rende più di quanto costa.» |
+| *anzi* | potenzia l'avversativa (non solo, ma di più) | «Non lo ignorava: **anzi**, lo temeva.» |
+| *del resto* | rafforza con una conferma data per acquisita | «**Del resto**, funziona da anni: è la prova migliore.» |
+| *semmai* | concede qualcosa a un punto che si confuta | «Non è pigro; **semmai**, è disorganizzato.» |
+| *a dire il vero* | corregge un assunto implicito | «**A dire il vero**, il problema era un altro.» |
+
+### 3b. Errori frequenti
+- ✗ *però* con valore di causa: «Non è venuto, **però** era malato.» → ✓ «…**perché** era malato.»
+- ✗ *quindi* con valore concessivo: «È bravo, **quindi** ha dei limiti.» → ✓ «È bravo, **ma** ha dei limiti.»
+- ✗ aprire ogni frase con *inoltre*: *inoltre* aggiunge, non salva un paragrafo che non sviluppa.
+- ✗ abusare di *tuttavia, nondimeno, altresì* in testi semplici: connettivi alti fuori registro creano attrito (vedi **Parte E** §20).
+
+> **Regola.** Ogni connettivo deve poter essere sostituito dalla sua parafrasi logica. Se non
+> sai quale relazione (causa? opposizione? conseguenza?) sta segnalando, lo stai usando a caso.
+
+### 3c. Connettivi *mancanti* (il vizio opposto)
+La prosa acerba (e il parlato trascritto) **omette** i nessi o li usa a sproposito,
+giustapponendo frasi che dovrebbero stare in rapporto di causa, conseguenza o concessione.
+- ✗ avversativa impossibile: «Non voleva denaro, **ma** monete d'argento.» (le monete *sono*
+  denaro: manca il vero termine di opposizione).
+- ✗ giustapposizione senza nesso: una serie di frasi unite da *e* dove servirebbe un *perché*
+  o un *però*.
+
+> Nello scritto argomentativo la relazione logica va **esplicitata**. Se la relazione non c'è,
+> ristruttura — non incollare un connettivo a caso.
+
+---
+
+## 4. Il capoverso — unità di costruzione
+
+Il capoverso non è uno spazio bianco casuale: è la **promessa di un'informazione di peso**.
+Andare a capo segnala al lettore che ciò che segue ha un rilievo autonomo: usalo con
+intenzione.
+
+**Un capoverso legittimo fa almeno una di queste cose** rispetto a ciò che precede:
+- **precisa / sviluppa** un concetto appena enunciato;
+- **esemplifica** ciò che si è affermato;
+- aggiunge un anello nella catena **causa → effetto** (una ragione, una conseguenza).
+
+> **Regola.** Se un capoverso non fa nessuna delle tre — se ripete, riassume o riempie —
+> accorpalo o eliminalo.
+
+**Frase-guida.** Mettere in apertura la frase che dice il punto del capoverso è la scelta
+più comune ed efficace: il lettore sa subito di cosa si parla. In alternativa (narrazione,
+colpo di scena) la si mette in chiusura, creando attesa.
+
+⚠ **Equilibrio.** Capoversi di lunghezze molto diverse segnalano squilibrio: un capoverso di
+tre righe tra due da venti va sviluppato o accorpato. Due estremi tipici dell'AI: ogni frase
+è un capoverso (lista mascherata da prosa); oppure un unico muro di testo senza respiro. Punta
+a capoversi di 3–6 frasi, ciascuno con una funzione riconoscibile.
+
+---
+
+## 5. Il filo rosso — la coerenza profonda
+
+Nel sartiame della marina inglese correva un filo rosso, intrecciato in ogni corda, che la
+rendeva riconoscibile: non lo si poteva togliere senza disfare tutto (Goethe). È l'immagine
+della **coerenza**. Il filo rosso di un testo è:
+- la **tesi centrale** (o la domanda che il testo porta fino in fondo);
+- il **punto di vista** (chi parla, da dove, con quale scopo);
+- il **tono** (coerente con il registro — vedi *aptum*, **Parte C** §1).
+
+✗ senza filo rosso: si capiscono le singole frasi, ma non *perché* stiano insieme; ogni
+sezione sembra di un altro autore.
+✓ con filo rosso: anche una digressione si legge come parte del disegno; il lettore sa sempre
+dove si trova e intuisce dove si va.
+
+> **Regola.** Prima di scrivere, enuncia il filo rosso in **una frase**. Se non ci riesci, il
+> testo non ce l'ha ancora — e nessun connettivo lo salverà.
+
+---
+
+## In sintesi
+
+Un testo tiene quando **intreccia** invece di accumulare: ogni frase ha un gancio con la
+precedente (**coesione**: tema/rema, riprese, connettivi *giusti*), ogni capoverso porta
+un'informazione di peso, e un **filo rosso** (tesi, voce, tono) attraversa il tutto
+(**coerenza**). I connettivi non sono decorazione: sono i segnali stradali del ragionamento —
+indispensabili dove la relazione non è ovvia, fastidiosi dove lo è.
+
+---
+
+# Parte E — Stile naturale (anti-AI)
 
 Riferimento per far suonare un testo italiano **naturale, umano, con una voce**.
 Adattato dalla guida "Signs of AI writing" (WikiProject AI Cleanup), riscritta per
@@ -1014,7 +1487,10 @@ tu/Lei) e **replica quella voce**, non limitarti a togliere i tic.
 una testimonianza di, gioca un ruolo cruciale/vitale/fondamentale, riflette una tendenza
 più ampia, punto di svolta, pietra miliare, snodo cruciale, panorama in evoluzione, lascia
 un'impronta indelebile, profondamente radicato, patrimonio inestimabile.* → Gonfia
-l'importanza di qualunque cosa. Di' cosa è successo, in concreto.
+l'importanza di qualunque cosa. Di' cosa è successo, in concreto. **Hype della scoperta**
+(scienza, tech, medicina, startup): *rivoluzionario, epocale, senza precedenti, cambierà tutto,
+svolta storica, cura definitiva, potrebbe un giorno risolvere…* → descrivi cosa è stato fatto, da
+chi, con quale margine; non cosa potrebbe essere un giorno (vedi **Parte G** §8).
 
 **2. Rilievo mediatico esagerato.** *ampia copertura mediatica, citata in numerose testate,
 solida presenza sui social, voce autorevole del settore.* → Un fatto datato e specifico
@@ -1080,7 +1556,10 @@ in un paragrafo conti più di un gerundio, riscrivi il resto in proposizioni esp
 **15. Avverbi in -mente a raffica.** *particolarmente, significativamente, sostanzialmente,
 fondamentalmente, effettivamente, sicuramente, praticamente, principalmente, profondamente,
 generalmente, essenzialmente, indubbiamente.* → **Regola:** prova a togliere ogni avverbio
-in *-mente*; se la frase regge senza, è meglio.
+in *-mente*; se la frase regge senza, è meglio. **Gli intensificatori** (*estremamente,
+assolutamente, incredibilmente, straordinariamente*) non potenziano: sottraggono. *Una mattina
+estremamente gelida* fa meno freddo di *una mattina gelida*; *sono assolutamente deciso* insinua
+già un dubbio. (Sul meccanismo vedi **Parte I** §3.)
 
 **16. Accumulo di sostantivi astratti.** *processo, dimensione, prospettiva, modalità,
 contesto, ambito, dinamica, configurazione, valorizzazione, ottimizzazione, declinazione,
@@ -1118,6 +1597,10 @@ sostituisci ogni em dash con virgola, due punti, parentesi o punto.
 
 **23. Liste con header in linea.** Ogni voce inizia con un termine in **grassetto:** più
 definizione. Schema da manuale aziendale/LinkedIn. → Prosa scorrevole o liste semplici.
+*Varianti:* (a) **articolo tutto a bullet** dove la prosa scorrerebbe meglio; (b)
+**segmentazione eccessiva**, un sottotitolo per ogni paragrafo anche breve (*Benefici / Vantaggi
+/ Conclusione*), che simula profondità senza averla. → Se due-tre punti si leggono meglio come
+frase, ricomponi in prosa; se il sottotitolo ripete il paragrafo, toglilo.
 
 **24. Capitalizzazione anglosassone nei titoli.** L'italiano usa **sentence case** (solo
 prima parola e nomi propri). ✗ `Negoziazioni Strategiche E Partenariati` →
@@ -1156,7 +1639,10 @@ mostrino"* → *"I dati mostrano"*.
 
 **32. Conclusioni generiche positive.** *il futuro si prospetta brillante, tempi
 entusiasmanti ci attendono, una nuova era, un orizzonte di possibilità, un viaggio ricco
-di promesse.* → Sostituisci con un fatto concreto e verificabile.
+di promesse.* → Sostituisci con un fatto concreto e verificabile. **Variante "morale a goccia"
+(2024–25):** la chiusura edificante che si dà un'aria concreta con la grana minima — *ognuno di
+noi può fare la differenza, un giorno alla volta, una scelta alla volta*; *il cambiamento inizia
+da te, oggi stesso*. Stessa cura: un fatto concreto, o niente.
 
 **33. Aggettivi turistico-promozionali.** *mozzafiato, suggestivo, incantevole, pittoresco,
 caratteristico, pregevole, imperdibile, gioiello, perla, scrigno, antico borgo, maestoso,
@@ -1205,13 +1691,16 @@ porta il senso, al posto del verbo pieno. → *effettuare un controllo* → **co
 un incontro* → **incontrare**; *procedere alla verifica* → **verificare**; *dare comunicazione*
 → **comunicare**; *portare a compimento* → **concludere**; *sottoporre a esame* → **esaminare**;
 *porre attenzione* → **fare attenzione**. **Regola:** se "verbo + nome astratto" si dice con un
-solo verbo, usalo.
+solo verbo, usalo. **Nominalizzazione (sottotipo AI):** l'AI preferisce il sostantivo d'azione al
+verbo — *l'acquisizione delle competenze è utile al miglioramento delle capacità* → *acquisire
+competenze è utile a migliorare le capacità*. È lo **stile nominale** (il nome che schiaccia il
+verbo: *le dichiarazioni del ministro* per *il ministro dichiara*); riportalo al verbo pieno.
 
 **39. Parole di plastica (aziendalese alla moda).** *criticità, attenzionare, concretizzare,
 ottimizzare, problematizzare, evidenziare, implementare, efficientare, tempistica, progettualità,
 professionalità, percorso (figurato), focalizzare, approcciare, rapportarsi, interloquire.* →
 Appesantiscono e non aggiungono nulla. Linguaggio diretto. (Repertorio in
-**Parte E**.)
+**Parte F**.)
 
 **40. Less is more — togli i parassiti.** Regola di Orwell: *se puoi togliere una parola,
 toglila*.
@@ -1248,6 +1737,77 @@ altri.
 
 ---
 
+## H. Antilingua scolastica, copy e tic recenti
+
+**44. Antilingua scolastica.** Registro pseudo-formale dei temi liceali (l'AI lo produce facile,
+i suoi dati ne sono pieni): *egli/ella* → *lui/lei*; *ciò* → *questo / il fatto che*; *il quale* a
+raffica → *che*; *allorché* → *quando*; *in seno a* → *in/dentro*; **aggettivo preposto**
+innaturale (*importanti conseguenze* → *conseguenze importanti*); **verbi ricercati per banali**
+(*osservare* → *guardare*, *constatare* → *notare*, *trascorrere* → *passare*, *terminare* →
+*finire*). I pronomi soggetto *egli/essi* sopravvivono solo nella prosa scolastica: nello scritto
+moderno **ripeti il nome**. → Completa la sezione F (antilingua).
+
+**45. Incipit contestualizzante ("Nel mondo di…").** L'AI apre con una cornice
+geografica/settoriale/temporale: *Nel mondo della gastronomia… / Nell'era digitale… / Nel
+panorama attuale…*. Parole-spia in **prima** posizione: *nel mondo di, nell'industria, nel
+panorama, nell'era di, in questo contesto*. → Entra subito nel soggetto. ✗ *Nel mondo degli
+accessori tech, gli ombrelli smart rivoluzionano il mercato.* ✓ *L'ombrello di BrellaCiao ha un
+GPS: lo perdi di rado.*
+
+**46. Domanda retorica / "Se… allora" d'apertura.** Incipit pubblicitari abusati: *Stanchi della
+solita pizza? / Se ami la buona cucina, non perderti…*. → Entra con un fatto o un dato. ✗
+*Stanchi della solita pizza?* ✓ *Da Bella Napoli l'impasto lievita 72 ore.*
+
+**47. Capoversi con attacco omogeneo.** Tutti i paragrafi iniziano con la stessa struttura (tutti
+*Il/La…* + sintagma, o tutti con un avverbio). Letto ad alta voce è un metro meccanico. → Varia
+gli attacchi: soggetto, complemento anteposto, frase breve nominale, subordinata in apertura.
+
+**48. Sinestesie decorative (copy gastro-lifestyle).** *sinfonia di sapori, danza sul palato,
+tripudio di gusti, opera d'arte commestibile, racconto di ingredienti.* → Descrivi in modo diretto,
+o usa **una** metafora, non tre. ✗ *un cucchiaio che racconta una sinfonia di sapori* ✓ *un gusto
+per cucchiaio: pistacchio, fragola, cioccolato amaro.*
+
+**49. Parole vuote del copy professionale** ("potrebbe dirlo chiunque?"). *prodotti di qualità,
+materie prime d'eccellenza, leader del settore, soluzioni innovative, al servizio del cliente.*
+Test: la frase starebbe sul sito di cento concorrenti senza cambiare? Allora è vuota. → Un numero,
+un dato, una caratteristica non condivisa. ✗ *Capi di alta qualità con materie prime d'eccellenza.*
+✓ *Maglioni in cashmere di alpaca: non infeltriscono, spediti in 5 giorni.* (Collega §33, §42.)
+
+**50. Testo "a mosaico".** Frasi corrette ma slegate: ognuna vera, nessuna connessa per
+causa/conseguenza/concessione. Sintomo: puoi riordinarle senza che il senso cambi. ✗ *La
+situazione è complessa. I dati mostrano un calo. Le aspettative erano alte. Bisogna riflettere.*
+✓ *I dati calano nonostante le aspettative alte: la situazione è più complessa del previsto. Vale
+la pena capire perché.* → Ogni frase risponda a «perché viene *qui*, dopo la precedente?». (Guida
+positiva in **Parte D**.)
+
+**51. Virgolettati e citazioni inventati.** L'AI produce virgolettati verosimili attribuiti a
+persone reali, o a personaggi generici spacciati per veri: *«Come dice Piero, uno degli ultimi
+pescatori…»* (Piero non esiste); *«Come disse Einstein, "…"»* (citazione mai pronunciata). →
+Verifica ogni virgolettato attribuito a una persona reale; se è fittizio, dichiaralo. Mai spacciare
+citazioni AI per documentazione. (Collega §5 e la guardia sui fatti in SKILL.md.)
+
+**52. Metafore miste.** Due immagini incompatibili nella stessa frase → effetto comico
+involontario. ✗ *la morsa del freddo incombeva sulla città* (la morsa stringe, non incombe); ✗
+*gettare benzina sul fuoco aprendo una finestra di dialogo.* → Una sola immagine, sviluppala. (Sul
+collaudo letterale vedi **Parte I** §4.)
+
+**53. Pleonasmi e ridondanze lessicali.** L'aggettivo/avverbio è già contenuto nel nome o nel
+verbo: *approccio iniziale, conclusione finale, esperienza passata, periodo di tempo, scendere
+giù, tornare indietro, pianificare in anticipo, prerequisito necessario.* → Togli il di più. Anche
+i **possessivi ridondanti** con parti del corpo se il soggetto è chiaro: *aprì i suoi occhi* →
+*aprì gli occhi*.
+
+**54. Doppie negazioni e forma negativa.** La litote ha valore retorico (attenuare, ironizzare);
+fuori da quello, sciogli in positivo — si legge con meno sforzo. ✗ *non si può non ammettere che*
+→ *bisogna ammettere che*; ✗ *non è privo di interesse* → *è interessante*; ✗ *non di rado* →
+*spesso*.
+
+**55. Coerenza di registro e di persona.** (a) *Cadute di stile:* un'intrusione di registro
+diverso — *ci siamo confrontati sulle problematiche* in un messaggio tra amici; *risultati
+veramente tanta roba* in una relazione. (b) *Deriva del punto di vista:* *tu/voi/Lei* che cambiano
+nello stesso testo (*…se siete freddolosi… ti semplifica la vita… cosa volete di più?*). → Scegli
+registro e persona all'inizio e tienili; in rilettura cerca *tu/ti/tuo* e *voi/vi/vostro*.
+
 ## Audit finale anti-AI (passaggio obbligato)
 
 Dopo la riscrittura, domandati: **"Cosa rende questo testo evidentemente generato da AI?"**
@@ -1264,15 +1824,21 @@ Elenca i tell residui. Poi: **"Ora rendilo non evidentemente AI"** e rivedi. Ver
 - non abbia più di un avverbio in *-mente* né più di un gerundio in coda per paragrafo;
 - non abbia periodi sopra 35-40 parole senza ragione.
 
+**Checklist positiva (non basta togliere — controlla che ci sia):** almeno un **dato specifico**
+e verificato; almeno una **voce reale** (esperienza, opinione dell'autore, citazione verificabile);
+**variazione ritmica** (periodi brevi e lunghi alternati); il testo **regge la lettura ad alta
+voce** senza inciampi né rime involontarie. Se nessuna di queste ha risposta affermativa, il testo
+è "pulito ma morto" — l'altra faccia, ugualmente riconoscibile, dello slop. → Vedi "Dare voce".
+
 ---
 
-# Parte E — Cliché e parole alla moda
+# Parte F — Cliché e parole alla moda
 
 Repertorio di **parole e formule logorate dall'uso**: non sono *errori* (la lingua non è il
 codice della strada), ma suonano già sentite mille volte, e chi le usa mostra di pensare per
 frasi fatte. Evitarle è insieme questione di stile e di onestà intellettuale: il cattivo uso
 delle parole confina col cattivo uso del pensiero. Distillato da C. Giunta, *Come non
-scrivere* (UTET, 2018); esempi originali. Complementa **Parte D** (i tic dell'AI) e
+scrivere* (UTET, 2018); esempi originali. Complementa **Parte E** (i tic dell'AI) e
 **Parte C** (i *tópoi* logori). `✓` = preferibile, `✗`/`⚠` = da evitare.
 
 > **Non un divieto, una guardia.** Si possono usare *con misura*, e a volte con ironia (*«la
@@ -1303,8 +1869,12 @@ darsi un tono:
 - **tempistica/tempistiche** → tempi.
 - **progettualità, professionalità** (astratti gonfi) → progetti / competenza, bravura.
 - **focalizzare, approcciare, rapportarsi, interloquire, discettare, enfatizzare** → mettere a
-  fuoco, affrontare, rivolgersi a, parlare con, sottolineare. (Vedi anche **Parte D**
+  fuoco, affrontare, rivolgersi a, parlare con, sottolineare. (Vedi anche **Parte E**
   → "parole di plastica".)
+- **interessante / importante** (i feticci da giudizio): aggettivi-jolly che si usano per non
+  dire. *interessante* «si dice di solito da chi è disposto a provarne pochissimo, per quasi
+  tutto» (Pontiggia). Quando li usi *di default* per un giudizio, è segno che non corrispondono a
+  ciò che provi davvero: di' *cosa* ti colpisce, e in che senso.
 
 ## 2. Locuzioni e tormentoni
 
@@ -1321,6 +1891,13 @@ darsi un tono:
 - **il tema è… / il discorso…** (aziendalese: *«il tema è un approccio sinergico», «per quanto
   riguarda il discorso infiltrazioni»*) → la questione è, il problema è.
 - **combinato disposto, in termini di** → gergo migrato fuori sede; semplifica.
+- **anglismi spocchiosi** (≠ anglismi tecnici necessari come *computer, mouse*): usati per darsi un
+  tono al posto di parole italiane diffuse. *player* → protagonista/operatore; *brand* → marchio;
+  *competitor* → concorrente; *device* → dispositivo; *shift* → svolta/spostamento; *asset* →
+  risorsa. Usa l'inglese solo quando nomina qualcosa di nuovo o davvero più preciso.
+- **disse non è una parola da evitare.** Nel giornalismo si fugge il verbo neutro con *affermò,
+  sottolineò, evidenziò, rimarcò, asserì*: ma *disse* funziona come punteggiatura, è invisibile; le
+  varianti attirano l'attenzione su di sé. ✓ *«…», ha detto il ministro.*
 
 ## 3. Formule d'elogio trite
 
@@ -1346,6 +1923,10 @@ verificarle. Suonano come il gesso che stride sulla lavagna:
   guadagni* (perfette solo come parodia).
 - gli **slogan da campagna**: *di' no alla cultura dello sballo* (il "giovanilese" che nessun
   giovane userebbe).
+- il **paradosso sapienziale vuoto:** un rovesciamento che suona profondo ma non porta nulla — *la
+  vita è morte; vincere è illusorio come perdere; sognare è vivere.* ⚠ Tipico delle "chiusure
+  filosofiche" dell'AI. *Test:* se la frase regge anche invertita (*la morte è vita*), non dice
+  niente. → un'affermazione concreta e verificabile.
 
 ## 5. Metafore morte e cliché giornalistici
 
@@ -1356,8 +1937,38 @@ Immagini ripetute fino a non far più immagine:
   **l'altra faccia della medaglia**, **la punta dell'iceberg**, **tirare le fila**.
 - → Una metafora vale se è *viva* e aggiunge senso (vedi **Parte C** §3a). Quella
   morta non è ornamento: è zavorra. Se non te ne viene una tua, di' la cosa alla lettera.
+- ⚠ **Comicità involontaria:** due metafore morte accostate riattivano il senso letterale e
+  diventano assurde. ✗ *sull'orlo del baratro, il governo deve fare un passo avanti* (= cadere);
+  ✗ *gettare benzina sul fuoco aprendo una finestra di dialogo.* → Visualizza sempre la
+  letteralità: se insieme fanno ridere, riformula.
 
 ---
+
+## 6. Plastismi e aggettivi obbligatori
+
+- **Plastismi** (O. Castellani Pollidori): coppie sostantivo+aggettivo del giornalismo, ripetute
+  fino a perdere contatto con la realtà — funzionano come etichetta, non come descrizione: *esodo
+  ferragostano, prova generale del traffico, generale inverno, Italia spaccata in due, maggioranza
+  bulgara/blindata, caldo record, emergenza/allarme/rischio + sostantivo.* → Di' il fatto: ✗
+  *l'esodo ferragostano è iniziato* → ✓ *le partenze di ferragosto sono iniziate.*
+- **Aggettivi obbligatori (solidarietà lessicale):** l'aggettivo che si "incolla" sempre allo
+  stesso nome, scritto in automatico: *stragrande maggioranza, polemica strumentale, dibattito
+  ampio e articolato, delitto efferato, stretto riserbo, intervento deciso e tempestivo.* → Se
+  scrivi l'aggettivo senza pensarci, fermati: aggiunge informazione? Se no, toglilo.
+
+## 7. Cliché del discorso scientifico
+
+Formule logorate della divulgazione, che l'AI riproduce con particolare affetto su scienza,
+medicina, tecnologia.
+- **Metafore-totem:** *torre d'avorio, il Santo Graal della X, nani sulle spalle dei giganti, la
+  frontiera della conoscenza, spingersi oltre i confini, la scatola nera.*
+- **Formule del comunicato stampa:** *una scoperta che potrebbe rivoluzionare…, gli scienziati non
+  escludono che…, per la prima volta nella storia…, apre la strada a nuove terapie, lo studio
+  dimostra che…* (di solito una correlazione spacciata per causa).
+- **Chiuse vuote:** *la scienza ha ancora molto da insegnarci, ulteriori ricerche saranno
+  necessarie, i risultati aprono nuove domande* (sempre vere, mai informative).
+- → Sostituisci coi fatti: cosa è stato fatto, da chi, con quale metodo, con quale margine. (Vedi
+  **Parte G** §8 e **Parte E** §1.)
 
 ## In sintesi
 
@@ -1365,3 +1976,446 @@ Il filo è uno: **non pensare per formule.** La frase fatta ti risparmia la fati
 davvero la cosa e di trovarle le parole giuste. Sfuggire ai cliché non serve solo a scrivere
 meglio, ma a non assorbire le idee trite che la conversazione, i media e la scuola ci passano
 di continuo.
+
+---
+
+# Parte G — Spiegare con chiarezza (divulgare)
+
+Riferimento per chi scrive, corregge o genera **testi esplicativi**: documentazione tecnica,
+articoli divulgativi, schede didattiche, tutorial, testi scientifici per non specialisti.
+Complementa **Parte C** (perspicuitas) e **Parte E** (anti-slop): qui il
+fuoco è *spiegare bene una cosa difficile*. Distillato da D. Gouthier, *Scrivere di scienza*
+(Codice, 2019); esempi originali.
+
+> «Se non si è chiari non c'è messaggio affatto. Chiarezza non è sinonimo di semplicità: è
+> rendere palese la complessità.» — Primo Levi
+
+---
+
+## 1. Chiarezza ≠ semplificazione
+
+**Chiarezza** = rendere palese la complessità, comprese le qualifiche e i limiti.
+**Semplificazione** = ridurre, livellare, togliere le sfumature. L'AI le confonde di continuo,
+e nel "levigare" un testo per renderlo scorrevole spesso elimina proprio ciò che lo rende vero.
+
+✗ semplificazione → *I vaccini sono sicuri e proteggono tutti.*
+✓ chiarezza → *I vaccini proteggono la grande maggioranza di chi li riceve; in una piccola
+percentuale danno effetti lievi, rarissimamente gravi. Il bilancio rischio/beneficio è
+nettamente favorevole.*
+
+La prima frase è più semplice; la seconda è più chiara. La prima convince i già convinti, la
+seconda dà strumenti a chi ha dubbi.
+
+> **Segnale d'allarme:** se "rendere fluido" un testo ha tolto le condizioni, le eccezioni e i
+> margini, non l'hai reso chiaro — l'hai reso impreciso.
+
+---
+
+## 2. Rigore ed efficacia sono in tensione
+
+Chi spiega a un pubblico non esperto affronta un compromesso strutturale: **più rigore =
+meno efficacia, e viceversa**. Non si possono avere entrambi al massimo.
+- **Più rigore** (tutte le qualifiche, tutti i margini) → inattaccabile ma pesante.
+- **Più efficacia** (esempi, immagini, ritmo) → coinvolgente ma parziale.
+
+> **Regola.** Scegli *consapevolmente* dove stare, in base a destinatario e scopo: verso
+> l'efficacia per il grande pubblico, verso il rigore per i decisori tecnici. **Dichiarare** le
+> semplificazioni («per semplicità qui ignoriamo X») è più onesto che finto rigore.
+
+⚠ Il testo AI tende a *sembrare* rigoroso (hedging e avverbi di incertezza a raffica) senza
+esserlo, e a non essere efficace: il peggio dei due estremi (vedi **Parte E** §31).
+
+---
+
+## 3. Astratto → concreto: la catena dell'esempio
+
+L'astrazione senza esempi dà al lettore l'**illusione** di aver capito: ha capito le parole,
+non la cosa. Tre strumenti, dal più puntuale al più narrativo:
+- **Esempio:** il caso singolo che mostra il concetto in azione. Va *guidato*, non lasciato da
+  interpretare.
+- **Caso di studio:** un caso emblematico che non perde di generalità — il rappresentante del
+  fenomeno.
+- **Aneddoto:** il ponte narrativo tra ciò che il lettore sa e ciò che deve capire. Non è
+  "fuffa": spesso è la via più breve.
+
+✗ *La teoria dei gruppi descrive strutture algebriche con un'operazione associativa, un elemento
+neutro e gli inversi.*
+✓ *Pensa ai modi di girare un triangolo equilatero senza cambiarne l'aspetto: tre rotazioni e
+tre ribaltamenti. Combinandone due ne ottieni sempre una delle sei, e ogni mossa si può disfare.
+Quelle sei mosse formano un "gruppo" — la stessa struttura che descrive la simmetria delle
+molecole e regge la crittografia.*
+
+> **Regola.** Formula almeno un esempio per ogni concetto astratto. Non è obbligatorio metterlo
+> nel testo finale, ma deve esistere nel tuo materiale di lavoro: se non sai farlo, non hai
+> ancora capito abbastanza per spiegarlo.
+
+---
+
+## 4. I numeri: confronta, scala, converti
+
+Un dato senza contesto non informa: intimorisce o viene ignorato. Tre tecniche:
+1. **Confronta** con un numero della stessa natura, noto al lettore. *384.000 km Terra-Luna →
+   circa dieci volte il giro del mondo.*
+2. **Dai l'ordine di grandezza** prima del dettaglio: decine, migliaia, milioni. Un'analisi con
+   sette cifre decimali non è precisione, è rumore.
+3. **Converti in concreto:** *un milione di euro* → quante ore di lezione? quanti km di strada?
+
+⚠ **Falsa precisione:** non riportare più cifre significative di quante ne abbia la misura.
+Sette decimali su un sondaggio sono finta autorevolezza.
+
+✗ *L'acceleratore raggiunge 13 TeV con luminosità di 10³⁴ cm⁻² s⁻¹.*
+✓ *L'acceleratore spinge i protoni a energie diecimila volte la loro massa a riposo — per ogni
+particella, quanto un moscerino in volo; solo che ne fa scontrare miliardi al secondo.*
+
+---
+
+## 5. Il termine tecnico: barriera o risonanza?
+
+Un termine specialistico non è sempre un ostacolo: dipende da come lo gestisci.
+
+| Postura | Quando | Come |
+|---|---|---|
+| **Definire subito** | il termine serve al discorso che segue | «il bosone di Higgs — la particella legata al campo che dà massa —» |
+| **Evitare** | il termine non aggiunge comprensione | parafrasi con linguaggio naturale |
+| **Lasciare con risonanza** | vuoi evocare il senso, non spiegarlo nel dettaglio | usalo nel contesto giusto, senza fermarti a definirlo |
+
+> **Chi comanda.** È chi scrive a rispondere al *lettore*, non alla fonte. Se il ricercatore
+> dice *luminosità integrata*, non è detto che il lettore debba leggerlo. Scegli il termine che
+> serve al lettore, non quello che impressiona l'esperto.
+
+⚠ Attento alla falsa chiarezza per sostituzione: rimpiazzare ogni termine con una perifrasi
+vaga non spiega, banalizza. *La particella della massa* è peggio di *bosone di Higgs* con una
+breve apposizione.
+
+---
+
+## 6. La metafora esplicativa — potente e infida
+
+Una buona metafora porta il lettore da A a B; una metafora non governata lo porta da A a C
+senza che né lui né tu ve ne accorgiate. (Diversa dalla metafora *morta*, che non fa danni
+perché nessuno la visualizza più: vedi **Parte F** §5.)
+
+> **Regola.** Dopo un'analogia esplicativa, **chiudi lo scarto**: mostra dove la somiglianza si
+> ferma.
+
+✗ *L'atomo è come un sistema solare in miniatura.* (il lettore si porta a casa orbite precise,
+comete, traiettorie: un modello sbagliato che dura decenni)
+✓ *L'atomo è stato paragonato a un sistema solare: un nucleo al centro, gli elettroni intorno.
+L'immagine aiuta, ma fermati qui — gli elettroni non percorrono orbite come i pianeti: la loro
+posizione è una nuvola di probabilità.*
+
+**Come scegliere il termine di paragone:** dev'essere vicino all'esperienza del *lettore*, non
+a quella dell'autore. La metafora giusta non è la prima che ti viene in mente.
+
+---
+
+## 7. Essenzialità e ridondanza utile
+
+- **Essenzialità.** Ogni concetto che il lettore deve reggere occupa spazio mentale:
+  sovraccaricare lo fa scappare. *Serve* davvero quella citazione, quel concetto, quella
+  digressione? Un testo asciutto nella sostanza arriva più di uno che esibisce tutta la
+  competenza dell'autore. (Esercizio: prendi 20 righe, riducile a 10 **tagliando**, non
+  riassumendo; ciò che resta è il nucleo.)
+- **Ridondanza utile.** Nel testo esplicativo una certa ridondanza è *funzionale*: spiegare lo
+  stesso punto con parole diverse, poi con un esempio, poi con un'immagine — ogni passaggio
+  recupera chi non aveva capito il precedente. Diversa dalla ridondanza burocratica (tre
+  sinonimi al posto di uno: vedi **Parte E** §10–11), che ripete senza aggiungere.
+
+---
+
+## 8. Anti-hype — la scienza non è «meravigliosa»
+
+L'enfasi della scoperta è slop specifico del comunicato stampa e della divulgazione gonfia:
+non avvicina la scienza, la allontana, perché crea aspettative che vengono deluse.
+
+**Parole-spia:** *rivoluzionario, epocale, senza precedenti, cambierà tutto, svolta storica,
+cura definitiva, potrebbe un giorno risolvere/eliminare, gli scienziati hanno finalmente
+dimostrato.*
+
+> **Regola.** Descrivi cosa è stato fatto — concretamente, da chi, con quale metodo e con quale
+> margine d'incertezza. Se la cosa è importante, i fatti lo diranno. Un «Wow!» può essere un
+> gancio, non il punto d'arrivo.
+
+✗ *I ricercatori hanno fatto una scoperta rivoluzionaria che potrebbe cambiare per sempre la
+cura del cancro.*
+✓ *Un gruppo dell'Università di X ha individuato una proteina che nei topi riduce di un terzo la
+crescita di alcuni tumori. I test sull'uomo, se arriveranno, sono lontani anni.*
+
+(Vedi anche **Parte F** → cliché del discorso scientifico.)
+
+---
+
+## In sintesi
+
+Spiegare bene = **saperne più di quanto scrivi** → **astratto → concreto** (esempi, casi,
+aneddoti) → **numeri contestualizzati** (confronto, scala, conversione) → **termini tecnici
+governati** (quelli del lettore, non della fonte) → **metafore chiuse** (mostra dove si
+rompono) → **essenzialità** (taglia il non necessario, tieni la ridondanza utile) →
+**chiarezza, non semplificazione** → **zero hype**.
+
+---
+
+# Parte H — Narrativa
+
+Riferimento per chi scrive o revisiona **testi narrativi** (racconto, romanzo, scena). Non è
+un trattato di narratologia: raccoglie i nodi più utili a *valutare un'idea prima di scriverla*
+e a non spegnerla in revisione. Complementa **Parte C** (*dispositio*, che è
+architettura del discorso, non della storia) e **Parte E** (concretezza, voce).
+Distillato da F. Massai, *L'idea narrativa* (2015); esempi originali.
+
+> Per il resto la narrativa segue le stesse virtù del resto della skill: concretezza
+> (**Parte E** §42, *individuazione*), voce, ritmo variato, *less is more*. Qui ci sono
+> i nodi propri del raccontare.
+
+---
+
+## 1. L'idea non è la trama — il «dinosauro»
+
+L'**idea** è l'elemento forte della storia, quello che la rende esotica, dicibile in **una o
+due righe**. La **trama** è la sequenza degli eventi. Sono cose diverse: il dinosauro che ti
+passa davanti è l'idea; tutto ciò che succede dopo è la trama.
+
+✗ trama (un paragrafo di meccanismi): *1984. Un cyborg arriva dal 2029 a Los Angeles per
+uccidere una donna il cui figlio non ancora nato guiderà la resistenza, mentre un soldato
+inviato a proteggerla…*
+✓ idea (due righe): *Una macchina indistruttibile viene mandata dal futuro per uccidere una
+ragazza qualunque, perché suo figlio — che ancora non esiste — un giorno salverà l'umanità.*
+
+> **Test del dinosauro.** Se non riesci a sintetizzare in due righe l'elemento esotico della
+> storia, hai un problema: o l'idea non è ancora chiara, o non c'è e hai solo una trama. Se non
+> lo trovi tu che la scrivi, il lettore non lo troverà mai. (Spesso è in quarta di copertina.)
+
+---
+
+## 2. Da dove nasce un'idea — cinque forme
+
+Una storia può accendersi da cinque tipi di innesco. Riconoscere *quale* aiuta a scrivere (sai
+cosa servire) e a revisionare (verifichi che il testo lo serva, non lo soffochi sotto i dettagli).
+
+| Forma | L'elemento forte è… | Esempio |
+|---|---|---|
+| **Evento** | un fatto che mette in moto tutto | i dinosauri tornano a vivere |
+| **Personaggio** | il protagonista, non la trama | un investigatore cieco che indaga con l'olfatto |
+| **Punto di vista** | *chi* racconta e da dove | il dottor Watson che racconta Holmes |
+| **Titolo** | una formula che condensa e anticipa | *La solitudine dei numeri primi* |
+| **Stile** | il modo stesso di scrivere | la prosa scarnificata di McCarthy in *La strada* |
+
+⚠ Nel giallo/crime la forma è spesso il **personaggio** (l'investigatore), non il delitto:
+Maigret, Montalbano, Poirot restano mentre i casi cambiano. Se l'investigatore è
+intercambiabile, manca l'idea.
+
+---
+
+## 3. Universalità — se la devi spiegare, non funziona
+
+Un'idea narrativa è come una barzelletta: se devi spiegarla perché "ci arrivino", non funziona.
+Due segnali che non è pronta:
+- **è chiara solo a te:** *una storia d'amore tra fluttuazioni quantiche* — il lettore si ferma
+  al secondo sostantivo;
+- **è già stata fatta così:** un detective geniale che risolve casi impossibili = Holmes, già
+  fatto al meglio. → la **variante** la rinnova: lo stesso detective, *ma cieco, che si affida
+  all'olfatto*.
+
+> Dopo secoli di racconti, poche idee sono inedite; quasi sempre è inedito il *modo*. Non
+> cercare solo idee nuove: impara a rendere tua un'idea esistente. Prima di partire, chiediti:
+> in quale forma è già stata pubblicata? La mia variante è davvero distinta?
+
+---
+
+## 4. Il punto di vista — chi racconta cambia la storia
+
+Il punto di vista (PDV) non è un dettaglio tecnico: può essere **l'idea stessa**.
+- **Watson racconta Holmes.** Legando il lettore a Watson — sempre un passo indietro — Doyle
+  rende stupefacenti le deduzioni: non sappiamo mai in anticipo come ragionerà Holmes. La scelta
+  del PDV *è* l'invenzione.
+- **Alternanza e contrasto.** Alternare due PDV opposti (la vittima che indaga / l'assassino)
+  crea tensione per *difetto di informazione*: il lettore sa solo quello che sa chi racconta.
+
+In pratica:
+- chiediti *chi vede* questa storia (non "da dove comincia"). Se la risposta è "chiunque", manca
+  una scelta. Un PDV insolito (il colpevole, il testimone, il bambino) può rinnovare una storia
+  già nota.
+- PDV coerente → suspense (il lettore scopre insieme al personaggio); PDV onnisciente → ironia
+  drammatica (il lettore sa più del personaggio).
+
+> ⚠ **Salti di testa** ("head hopping"): cambiare PDV dentro la stessa scena, senza segnale,
+> disorienta. Ogni cambio va motivato e segnalato (nuovo capitolo, stacco, narratore esplicito).
+
+---
+
+## 5. Covare l'idea — il tempo è un filtro
+
+> «Non basta avere un'idea. Bisogna lavorarci sopra, custodirla, farla maturare prima di
+> trasformarla in romanzo.» — Ennio Flaiano
+
+Annota l'idea e lasciala riposare (settimane, mesi). Se ti colpisce ancora come al primo
+impatto, è un buon segno; se è sfumata, non era forte. Le idee vere non si cancellano: ci si
+addormenta rimuginandole e ci si sveglia con la stessa urgenza.
+
+**Tre domande prima di aprire il documento:**
+1. La sintetizzo in due righe? (§1)
+2. Dopo qualche settimana mi colpisce ancora? (il filtro del tempo)
+3. Interesserebbe a qualcuno che non sono io? (§3)
+
+> ⚠ L'attaccamento morboso è il vizio del dilettante: il professionista sa mettere nel cassetto
+> le idee che non passano il filtro, per quanto le ami. Amare la propria idea non prova che sia
+> buona.
+
+---
+
+## 6. La licenza richiede padronanza
+
+In narrativa molte "regole" della skill (punteggiatura piena, prosa lineare) possono essere
+infrante — ma come **licenza consapevole**, non per disattenzione (vedi **Parte C**
+→ "Errore vs licenza").
+- McCarthy elimina quasi tutta la punteggiatura dei dialoghi; Saramago usa virgole al posto dei
+  punti e non segna le domande. L'effetto è potentissimo *perché* nasce dal pieno controllo
+  della norma.
+- L'**anacoluto**, il frammento, il discorso indiretto libero, il parlato sgrammaticato sono
+  legittimi quando *mimano* una voce. In un testo che riproduce il parlato (dialogo, monologo,
+  chat dentro la storia) **non vanno "corretti"**.
+
+> **Regola.** Prima si imparano le regole, poi si scelgono le licenze. Chi toglie la
+> punteggiatura senza padronanza non ottiene McCarthy: ottiene illeggibilità. In revisione,
+> distingui la trasgressione *voluta* (lasciala) da quella *involontaria* (correggila) — e nel
+> dubbio, chiedi.
+
+---
+
+# Parte I — Revisione e proprietà della parola
+
+Riferimento sul **mestiere micro**: scegliere la parola necessaria (*proprietas*, *le mot
+juste*) e rivedere il testo a freddo. Dove **Parte E** insegna a *togliere* lo slop,
+qui si impara a *trovare* la precisione e a *limare*. Distillato da G. Pontiggia, *Per scrivere
+bene imparate a nuotare*, e C. Birattari, *È più facile scrivere bene che scrivere male*;
+citazioni brevi e attribuite, esempi originali.
+
+> «Non ci sono sinonimi. Ci sono solo parole necessarie, e il buon scrittore le conosce.»
+> — Jules Renard
+
+---
+
+## 1. La parola comune batte quella «scelta»
+
+La parola lunga ed elevata *sembra* più precisa; quasi sempre non lo è. Pontiggia: «Alle
+elementari avevo creduto di imparare che *recarsi* era meglio di *andare*. Mi ci sono voluti
+decenni per capire che era vero il contrario.» È lo stesso principio dell'antilingua
+(**Parte E** §37): prima di scegliere la parola "elegante", chiediti se quella comune
+non dica la stessa cosa con più forza.
+
+---
+
+## 2. Non esistono sinonimi — la parola necessaria
+
+Dal punto di vista espressivo i sinonimi non esistono: due parole di significato contiguo non
+producono lo stesso effetto, e una variazione anche minima fa crollare la frase.
+
+**Esercizio delle varianti mancate** (Pontiggia): prendi una frase che ti colpisce, sostituisci
+la parola-chiave con un "sinonimo", osserva il crollo. La variante fallita rivela, per
+contrasto, la necessità dell'originale.
+- La Rochefoucauld: *non possiamo perdonare quelli che annoiamo noi.* Prova *assolvere* (suona
+  giudiziario), *scusare* (catastrofe), *compatire* (ambiguo): solo *perdonare* tiene viva
+  l'antitesi.
+
+> Diverso dal vizio opposto — la *variazione elegante* forzata, cioè cambiare parola pur di non
+> ripetere un nome (**Parte E** §11). Lì: non variare per vezzo. Qui: cerca *la* parola
+> giusta, e se è già quella, ripetila senza paura.
+
+---
+
+## 3. Gli aggettivi e gli avverbi: test bidirezionale
+
+Non basta chiedersi se un aggettivo *si può togliere*. Chiediti in due direzioni:
+- **togliendolo**, il testo perde forza o precisione? → era necessario, tienilo.
+- **tenendolo**, cosa aggiunge di preciso che non ci fosse già? → se nulla, via.
+
+✓ *un atto che a quel tempo mi fece una **profonda** impressione*: togli *profonda* e svanisce
+la distanza, il paradosso. Non era decorazione, era il senso.
+✗ *cielo **azzurro**, **gelida** mattina*: aggettivi prevedibili, cliché, spesso da togliere o
+da sostituire con uno imprevisto. *Cielo* è meglio di *cielo azzurro* (Renard) — non come legge,
+ma come esercizio di coscienza.
+✗ aggettivi moltiplicati: *mite **e buono*** è più debole di *mite*: il secondo diluisce.
+
+### 3a. L'intensificatore controproducente
+L'avverbio intensificatore (*estremamente, assolutamente, incredibilmente, straordinariamente*)
+non potenzia l'aggettivo: gli **sottrae** energia, spostando l'attenzione su di sé. Paradosso
+della scala: *felice → molto felice → felicissimo*, dove il superlativo è il più *debole*. *Una
+mattina **estremamente** gelida* fa meno freddo di *una mattina gelida*. *Sono **assolutamente**
+deciso* introduce già un dubbio; *sono deciso* no.
+
+> **Regola.** Prova a togliere *tutti* gli intensificatori. Dove la frase guadagna peso, lascia
+> il testo nudo. (Collega **Parte E** §15, avverbi in *-mente*.)
+
+### 3b. La ridondanza come spia del dubbio
+Chi è insicuro di ciò che dice tende ad **aggiungere** avverbi e aggettivi perentori, per
+compensare con la forza delle parole quel che gli argomenti non reggono — ottenendo l'opposto.
+✗ *giudizio di **assoluta** colpevolezza, la cui responsabilità è **pienamente** provata*
+✓ *giudizio di colpevolezza, la cui responsabilità è provata* (più pacato e più attendibile).
+
+> Se rileggendo trovi intensificatori accumulati su una stessa affermazione, forse non ne sei
+> convinto neanche tu: riduci le parole, rafforza l'argomento — o togli l'affermazione.
+
+---
+
+## 4. Il collaudo letterale delle metafore
+
+Prima di usare un'immagine, riportala alla sua **letteralità**: se nella letteralità è grottesca
+o incoerente, non funziona neanche in senso traslato.
+- ✗ *stile graffiante* (unghie su un muro?), *si versano fiumi d'inchiostro* (l'inchiostro non
+  scorre a fiumi, e non si versa più da decenni), *la molla che ha fatto scattare il meccanismo
+  della conversione* (la fede come fonderia?).
+- ✓ *stile incisivo* — lo stilo latino incideva la cera: la letteralità regge.
+
+> **Regola.** Se non riesci a immaginare la metafora alla lettera senza ridere, cercane
+> un'altra. Se non te ne viene una tua, di' la cosa in modo diretto.
+> Sulle metafore *miste* (due immagini incompatibili nella stessa frase) vedi **Parte E**.
+
+---
+
+## 5. Rivedere a freddo — il processo
+
+Scrivere è riscrivere. Tre passaggi, non negoziabili:
+1. **Prima stesura:** scarica tutto senza freni. È giusto che pecchi per eccesso.
+2. **Riposo nel cassetto:** lascia raffreddare il testo (anche solo un'ora; un giorno per i testi
+   importanti). La distanza ti restituisce l'occhio del lettore.
+3. **Revisione a freddo:** rileggi come se il testo fosse di un altro.
+
+**Tre euristiche di Primo Levi (via Birattari):**
+- **Cavare dal pieno.** La prima stesura pecca per eccesso: il compito della revisione è
+  *togliere*, non aggiungere. Ogni frase rimasta deve guadagnarsi il posto.
+- **Lettore-cavia.** Fa' leggere il testo a chi non sa nulla dell'argomento e chiedigli di dirti
+  in tre frasi di cosa parla. Dove si ferma o non sa rispondere, lì c'è il problema — nel testo,
+  non nel lettore.
+- **Rem tene, verba sequentur** (Catone). Tieni saldo l'argomento e le parole seguiranno. Prima
+  di scrivere, prova a dire la tesi in *una riga*: se non ci riesci, l'idea non è ancora pronta —
+  e si vedrà nello stile (frasi vaghe, giri lunghi, conclusioni che non concludono).
+
+### 5a. Revisione per sottrazione (non nascondere i vuoti)
+Pontiggia rivide *La grande sera* per oltre un anno *dopo* la pubblicazione, togliendo antitesi,
+parallelismi e ossimori che aveva usato come rifugio quando l'idea non reggeva da sola.
+> **Segnale d'allarme:** se una frase ti sembra bella per come *suona* ma non sai dire
+> esattamente cosa *significa*, è probabile che sia ornamento che copre un vuoto. L'ornamento non
+> risolve il problema, lo nasconde: toglilo, e se il testo crolla, il problema era il pensiero.
+
+---
+
+## 6. Due bussole mentre scrivi
+
+- **La curiosità.** Se mentre scrivi non senti curiosità per ciò che stai scoprendo sulla
+  pagina, probabilmente hai imboccato un vicolo cieco: stai trascrivendo quello che sai già, non
+  inventando nulla. Il testo dovrebbe sorprendere prima di tutto il suo autore. (Manzoni, sul
+  segreto dello scrivere: «Pensarci sopra».)
+- **Nessuna parte è esente.** Non esiste un pezzo "di transizione" o "di servizio" che si possa
+  scrivere male perché tanto è solo strutturale. Il lettore registra i cali di attenzione
+  dell'autore con altrettanti cali dei propri. Se non provi interesse per un passaggio, non
+  scriverlo ancora: cerca l'angolazione che lo rende necessario (Flaubert e la torta nuziale di
+  *Madame Bovary*: un "passaggio obbligato" trasformato in immagine memorabile).
+
+---
+
+## In sintesi
+
+La proprietà è cercare *la* parola — non quella elegante, non quella sinonima, non quella a
+portata di mano. La revisione è togliere a freddo ciò che non si guadagna il posto, collaudare
+le metafore alla lettera, diffidare degli intensificatori. Due segnali infallibili: la *curiosità*
+mentre scrivi, e il *lettore-cavia* quando hai finito.

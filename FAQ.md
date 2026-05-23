@@ -1,6 +1,6 @@
 # FAQ
 
-![Version](https://img.shields.io/badge/version-2.3.2-blue.svg)
+![Version](https://img.shields.io/badge/version-2.4.0-blue.svg)
 
 Domande ricorrenti su *scrittura-italiana*. Per esempi concreti vedi **[ESEMPI.md](ESEMPI.md)**.
 
@@ -21,10 +21,16 @@ generato dall'AI. E non riscrive di testa sua: la indirizzi tu, propone e spiega
 
 ### Cosa copre, oltre a punteggiatura e anti-AI?
 
-Anche la **costruzione del testo** (come iniziare, articolare e chiudere — la *dispositio*),
-l'**antilingua**, cioè l'affettazione "all'italiana" (*recarsi* per *andare*, *effettuare* per
-*fare*, *criticità* per *problemi*), e un repertorio di **frasi fatte e cliché** da evitare con
-misura. Insomma, dalla virgola all'architettura del discorso.
+Tutto l'arco della scrittura. Oltre alla **costruzione del testo** (*dispositio*: come iniziare,
+articolare e chiudere), all'**antilingua** (l'affettazione "all'italiana": *recarsi* per *andare*,
+*criticità* per *problemi*) e a un repertorio di **frasi fatte e cliché**, dalla v2.4.0 ci sono:
+**sintassi** (congiuntivo vs indicativo, *consecutio temporum*, periodo ipotetico, accordo del
+participio); **coesione e coerenza** (il "filo" tra frasi e capoversi, i connettivi giusti);
+**argomentazione** (costruire una tesi, riassumere); **divulgazione** (spiegare cose complesse:
+numeri, termini tecnici, metafore esplicative); **narrativa** (l'idea, il punto di vista); e
+**revisione** (trovare la parola giusta, limare a freddo). Insomma, dalla virgola all'architettura
+del discorso. Distillata da una libreria di manuali italiani (Serianni, Mortara Garavelli, Giunta,
+Pontiggia, Rigotti e altri).
 
 ### Non mi rende pigro o "incapace"?
 

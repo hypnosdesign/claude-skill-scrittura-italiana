@@ -129,6 +129,10 @@ sostituire congiunzioni causali, dichiarative, consecutive.
   in catene consequenziali).
 - Davanti a un elenco: se i membri sono oggetto/soggetto diretto del verbo che precede,
   **niente** due punti (`Ci permettono di elaborare emozioni, idee, paure…`).
+- **Come connettivo "snello":** i due punti possono sostituire un nesso logico con vantaggio di
+  scioltezza — `La rapina fallì: la vittima diede l'allarme` (= perché). ⚠ Evita due segni
+  intermedi forti uguali (`:` o `;`) in **periodi adiacenti**: alterna, o i due periodi si
+  leggono come un unico blocco.
 
 ---
 
@@ -212,6 +216,10 @@ maiuscola dopo di sé.
 - **Distanziamento / ironia:** le virgolette equivalgono a *cosiddetto / sedicente /
   si fa per dire*.
 - **Mai virgolette curve "all'inglese" miste a dritte:** scegli uno stile uniforme.
+- **⚠ Non abusare delle virgolette di distanziamento.** Mettile solo per ironia *vera* o per
+  segnalare che la parola non è tua (citazione, gergo, neologismo dubbio). ✗ *ieri ho visto le
+  "amiche del cuore"*, ✗ *ha fatto una "bella figura"* — espressioni comuni che non chiedono
+  riserva. È un tic della scrittura non esperta.
 
 ---
 

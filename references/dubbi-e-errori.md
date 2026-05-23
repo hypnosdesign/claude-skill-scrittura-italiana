@@ -169,6 +169,19 @@ copre i segni). Regole sintetizzate da M. Trinci, *Le basi proprio della grammat
   ✓ tra loro corre cattivo sangue (✗ "cattive acque"; *essere in cattive acque* è altra cosa).
 - **Interiezioni:** sole → punto esclamativo/interrogativo (Boh! Eh?); dentro la frase →
   isolate da virgola (Oh, cavolo!).
+- **D eufonica (*ed, ad*):** la norma moderna la vuole **solo davanti alla stessa vocale**:
+  ✓ *ed entrare*, *ad andare* / ma ✓ *e io*, *a Ostia* (non *ed io*, *ad Ostia*). *od* è ormai
+  obsoleto. Eccezione cristallizzata: *ad esempio*. ✗ *ed ora, ad ogni costo, ed io* sono
+  ipercorrettismi.
+- **anche se ≠ se anche:** *anche se* è concessivo (= benché): *esce **anche se** piove*. *se
+  anche* è ipotetico-ammissivo (ammesso pure che): ***se anche** piovesse, uscirei*. Non sono
+  intercambiabili.
+- **«lo stesso / la stessa» non è un pronome personale:** significa «il medesimo» (identità). ✗
+  *Ho scritto al direttore. **Lo stesso** ha risposto subito* → ✓ *…**Lui** ha risposto subito*
+  / *…, **che** ha risposto subito*. È un tic burocratico da evitare.
+- **virtualmente** in italiano = «di fatto, in sostanza» (anche se non formalmente): *il regime è
+  virtualmente finito*. ✗ Non usarlo come calco dell'inglese per «online/a distanza»: ✗ *ci siamo
+  visti virtualmente* → ✓ *…online / in videochiamata*.
 
 ## 10. Punteggiatura in chat e social (testo "non controllato")
 
@@ -178,7 +191,108 @@ copre i segni). Regole sintetizzate da M. Trinci, *Le basi proprio della grammat
 > "corrette". Vedi `retorica-efficacia.md` §1 → livello di controllo del testo.
 
 - **Il punto a fine messaggio breve** suona secco/definitivo: "No." risulta tagliente. Non è
-  un errore, ma cambia il tono — usalo con consapevolezza.
-- **Puntini di sospensione: sempre e solo tre**, mai due/quattro/sei, mai come decorazione.
-  ✓ Non so... forse. / ✗ Allora...... Dopo i tre puntini uno spazio; nelle citazioni le
-  omissioni vanno tra parentesi: [...].
+  un errore, ma cambia il tono — usalo con consapevolezza. *Perché:* in chat ogni invio separato
+  funziona già da demarcazione, quindi il punto resta solo come segnale **emotivo** (chiusura,
+  distanza, disappunto). ✓ `Ci vediamo domani` (neutro) vs ✓ `Ci vediamo domani.` (può suonare
+  freddo). Nell'email o nel documento formale, invece, il punto è obbligatorio come sempre.
+- **Punto e virgola in chat:** è il segno più formale dell'italiano; nel digitato risulta fuori
+  registro — «usarlo in chat è un po' come truccarsi per andare in palestra». Non è un errore, ma
+  preferisci il punto fermo (o niente). Nello scritto controllato resta perfetto.
+- **Emoticon ed emoji:** le **emoticon** (`:-) ;-)`) accompagnano le parole come *punteggiatura
+  mimica* (segnalano il tono); gli **emoji** (😅👍❤️) tendono a *sostituire* parole o frasi. Nel
+  testo digitato nessuno dei due è un errore e non vanno tolti; un emoji isolato può valere una
+  frase (`👍` = d'accordo). Nel **semi-formale** (email di lavoro, LinkedIn) sono un segnale di
+  registro: valuta se è appropriato. Nel **controllato** sono fuori posto (`stile-naturale.md` §25).
+- **Maiuscole espressive:** nel digitato lo `STAMPATELLO` vale enfasi/«grido» (`che BELLO!`), la
+  maiuscola interna mette a fuoco una parola (`sono IO che…`). Non sono errori ortografici, ma
+  segnali paralinguistici. Nel controllato rendi l'enfasi col corsivo o ristrutturando.
+- **Assenza di spazi / *scriptio continua*:** negli sms e nella messaggistica veloce (`nonloso`,
+  `Sì,vado.Poi ti dico`) non sono errori ortografici: evocano il flusso del parlato o nascono dai
+  limiti del mezzo. Nel testo controllato gli spazi dopo la punteggiatura sono obbligatori: **uno**
+  spazio dopo `, ; : . ? !`, nessuno prima.
+
+## 11. Congiuntivo: quando si usa, e la *consecutio temporum*
+
+**Quando il verbo reggente vuole il congiuntivo** (nelle completive con *che*):
+- ✓ **congiuntivo** dopo verbi di volontà, opinione, attesa, timore, dubbio: *voglio / spero /
+  temo / credo / penso / suppongo / dubito* che… → *Credo che **abbia** ragione.*
+- ✓ **indicativo** dopo verbi di percezione, affermazione, constatazione: *so / vedo / dico /
+  è certo / ricordo* che… → *So che **hai** ragione.*
+- Vogliono il congiuntivo anche: la **negazione** (*Non dico che **sia** colpa sua*),
+  l'interrogativa retorica (*Chi dice che non **sia** possibile?*), la completiva **anteposta**
+  (*Che **fosse** tardi, lo sapevo*).
+- Alcuni verbi cambiano senso col modo: *capisco che **è** stanco* (constato) ≠ *capisco che
+  **sia** stanco* (trovo comprensibile).
+
+**Consecutio temporum** (il tempo della subordinata dipende dalla reggente):
+
+| Reggente | Contemporaneità | Anteriorità | Posteriorità |
+|---|---|---|---|
+| **presente/futuro** | cong. presente (*che venga*) | cong. passato (*che sia venuto*) | indic. futuro (*che verrà*) |
+| **passato** | cong. imperfetto (*che venisse*) | cong. trapassato (*che fosse venuto*) | condiz. composto (*che sarebbe venuto*) |
+
+> **Regola: il passato regge il passato.** Se la reggente è al passato, la completiva vuole il
+> congiuntivo imperfetto o trapassato — mai il presente.
+- ✗ *Pensavo che tu **abbia** ragione* → ✓ *…che tu **avessi** ragione.*
+- ✗ *Temevo che **arrivi** tardi* → ✓ *…che **arrivasse** tardi.*
+- ✗ *Speravo che **verrai*** → ✓ *…che **saresti venuto**.*
+
+## 12. Periodo ipotetico
+
+Protasi (*se…*) + apodosi (la conseguenza). Tre tipi:
+
+| Tipo | Protasi (*se…*) | Apodosi | Esempio |
+|---|---|---|---|
+| **realtà** | indicativo | indic./imperativo/futuro | *Se piove, resto a casa.* |
+| **possibilità** | cong. imperfetto | condizionale presente | *Se piovesse, resterei a casa.* |
+| **irrealtà** | cong. trapassato | condizionale passato | *Se fosse piovuto, sarei rimasto.* |
+
+> **Regola: mai il condizionale nella protasi.** ✗ *Se **avrei** tempo, verrei* → ✓ *Se **avessi**
+> tempo, verrei.* ✗ *Se l'**avrei** saputo* → ✓ *Se l'**avessi** saputo.*
+- **Tipo misto** (frequente e corretto): *Se avessi studiato* (irrealtà passata) *, ora saresti
+  preparato* (conseguenza presente).
+- **Indicativo «irreale» colloquiale:** *se lo sapevo non venivo* (imperfetto in entrambi i membri)
+  è antico e legittimo nel **parlato**; nello scritto sorvegliato usa il sistema congiuntivo-condizionale.
+
+## 13. Accordo del participio passato
+
+- **Ausiliare *essere*:** sempre concordato col soggetto. ✓ *Maria è **partita**.* / *Sono
+  **arrivati**.*
+- **Ausiliare *avere* + oggetto posposto:** participio **invariato**. ✓ *Ho **letto** le lettere*
+  (l'accordo *ho lette* è arcaico).
+- **Ausiliare *avere* + pronome oggetto anteposto (*lo, la, li, le, ne*):** accordo **facoltativo**;
+  nello scritto sorvegliato preferisci l'accordo. ✓ *Le ho **viste*** (meglio di *viste→visto*);
+  ✓ *La lettera che ho **scritto/scritta***.
+- **Riflessivi:** accordo col soggetto. ✓ *Si è **lavata** le mani.*
+
+⚠ Errore AI tipico: invariato anche dopo *essere* (✗ *Maria è partito*) o, all'opposto, accordo
+meccanico dopo *avere* con oggetto posposto.
+
+## 14. Modi verbali come strumenti espressivi
+
+Usarli bene rende lo stile più naturale e preciso (l'AI tende a non sfruttarli).
+- **Imperfetto di cortesia/attenuazione:** ammorbidisce richieste e proposte. ✓ *Volevo chiederle
+  un consiglio* (= vorrei). Parlato e semi-formale; nel formale preferisci il condizionale.
+- **Condizionale di cortesia:** segnala che è un'opinione o un desiderio, non un ordine. ✓
+  *Le chiederei di verificare* (più gentile di *le chiedo*); *Sarebbe il caso di rivedere*.
+- **Futuro epistemico (di congettura):** esprime una stima sul presente, non un'azione futura. ✓
+  *Avrà cinquant'anni* (= immagino che li abbia); *Dove sarà finito?*
+- **Futuro concessivo:** concede un punto per poi ribattere. ✓ *Sarà anche un esperto, ma qui si
+  sbaglia.*
+- **Condizionale di dissociazione (giornalistico):** prende le distanze da una notizia non
+  confermata. ✓ *Secondo fonti di stampa, il ministro **avrebbe firmato** il decreto.* È
+  precisione, non incertezza vaga — diverso dall'hedging eccessivo (`stile-naturale.md` §31).
+
+## 15. Soggetto della subordinata implicita
+
+Una subordinata implicita (gerundio, infinito, participio) ha lo **stesso soggetto** della
+reggente. Se il soggetto cambia, la frase è scorretta o ambigua (errore frequente anche in prosa
+giornalistica).
+- ✗ *Uscendo di casa, il telefono squillò.* (chi usciva? non il telefono) → ✓ *Mentre uscivo di
+  casa, il telefono squillò.*
+- ✗ *Sbloccherà i fondi per essere utilizzati nel progetto.* → ✓ *…per utilizzarli nel progetto.*
+- ✗ *Il direttore ha convocato i dipendenti per discutere il bilancio* (chi discute?) → ✓ *…perché
+  discutessero il bilancio* (se discutono loro).
+
+> **Regola.** Prima di usare un gerundio o un infinito, verifica che il suo soggetto implicito sia
+> quello della reggente. Altrimenti usa una subordinata esplicita, col soggetto dichiarato.

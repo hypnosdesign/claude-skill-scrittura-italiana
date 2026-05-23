@@ -1,6 +1,6 @@
 ---
 name: scrittura-italiana
-version: 2.3.2
+version: 2.4.0
 description: |
   Humanizer dell'italiano con i superpoteri: rende naturale e non "da AI"
   un testo — via perifrasi, gerundite, triadi, avverbi in -mente, trattini
@@ -37,9 +37,9 @@ unifica correttezza, chiarezza, efficacia e naturalezza.
 | Virtù | Significato | Dove approfondire |
 |---|---|---|
 | **aptum** | appropriatezza a scopo, destinatario, registro, genere e **livello di controllo** del testo | `references/retorica-efficacia.md` §1-2 |
-| **puritas** | correttezza tipografica (segni) e di parola (accenti, omofoni, plurali…) | `references/punteggiatura.md` + `references/dubbi-e-errori.md` |
-| **perspicuitas** | chiarezza: il lettore capisce alla prima | `references/retorica-efficacia.md` §1 + `stile-naturale.md` |
-| **ornatus** | bellezza *regolata*: figure, ritmo — mai *mala affectatio* | `references/retorica-efficacia.md` §3-4 + `stile-naturale.md` |
+| **puritas** | correttezza tipografica (segni) e di parola/sintassi (accenti, omofoni, plurali, congiuntivo, consecutio…) | `references/punteggiatura.md` + `references/dubbi-e-errori.md` |
+| **perspicuitas** | chiarezza: il lettore capisce alla prima; il testo "tiene" (coesione, coerenza) | `references/retorica-efficacia.md` §1 + `coesione-e-connettivi.md` + `stile-naturale.md` |
+| **ornatus** | bellezza *regolata*: figure, ritmo, *la parola necessaria* — mai *mala affectatio* | `references/retorica-efficacia.md` §3-4 + `stile-naturale.md` + `revisione-e-proprieta.md` |
 
 > **Il principio è l'equilibrio:** ogni virtù sta tra due vizi, per **difetto** (sciatteria,
 > oscurità, prosa grigia) e per **eccesso**. L'eccesso di *ornatus* — la ***mala affectatio***
@@ -57,6 +57,13 @@ unifica correttezza, chiarezza, efficacia e naturalezza.
 >
 > Nel dubbio sul registro, **chiedi** prima di "ipercorreggere".
 
+> **⚠ Guardia sui fatti (humanizer ≠ fact-checker).** La skill cura forma, chiarezza e voce, ma
+> **non verifica i fatti**. Un testo AI è convincente anche quando inventa: statistiche, citazioni,
+> studi, persone, sentenze. La responsabilità dell'accuratezza resta sempre dell'utente. Non
+> introdurre dati o citazioni "verosimili" per riempire un vuoto: segnala il vuoto e lascia che sia
+> l'utente a metterci un fatto vero (vedi `stile-naturale.md` §51 e §42). Verifica ogni virgolettato
+> attribuito a una persona reale.
+
 > **Leggi i file di riferimento quando servono.** Questo SKILL.md contiene il modello e i
 > precetti ad alta frequenza. Per il dettaglio (una regola sulla virgola, una figura, un
 > pattern AI) apri il riferimento pertinente.
@@ -66,11 +73,15 @@ unifica correttezza, chiarezza, efficacia e naturalezza.
 ## Quando si attiva
 
 - L'utente chiede di **scrivere** un testo in italiano (anche persuasivo, efficace, "che
-  funzioni").
+  funzioni"): saggio, tesi, articolo, copy, **divulgazione/documentazione tecnica**, **racconto**,
+  email, discorso.
 - L'utente chiede di **correggere, revisionare, editare, "sistemare", "umanizzare"** un testo.
+- L'utente chiede aiuto a **argomentare** (costruire una tesi, ordinare le ragioni), a **far
+  scorrere** un testo (coesione, connettivi, "non si capisce il filo"), a **riassumere**, o a
+  **spiegare** qualcosa di complesso con chiarezza.
 - L'utente fa una **domanda di lingua**: punteggiatura/tipografia ("ci va la virgola?",
-  "caporali o virgolette?"), oppure di stile/retorica ("come rendo più efficace questo
-  passaggio?", "che registro uso?").
+  "caporali o virgolette?"), grammatica/sintassi ("congiuntivo o indicativo?", "che tempo qui?"),
+  oppure di stile/retorica ("come rendo più efficace questo passaggio?", "che registro uso?").
 - Stai producendo tu stesso prosa italiana per l'utente e vuoi che sia impeccabile.
 
 ---
@@ -89,11 +100,16 @@ Applica le passate nell'ordine delle virtù, **dalla struttura alla pelle**:
      incisi da chiudere, gerarchia virgola/`;`/punto, due punti, maiuscole; virgolette
      uniformi, trattino vs lineetta, sentence case, puntini.
    - *Parole:* accenti (perché, è, qual è, un po', sé stesso), omofoni (da/dà, ne/né, ho/o),
-     ortografia, congiuntivo (stessi non «stassi»), plurali difficili, pronomi (tu/te, gli/le),
-     preposizioni e «che» polivalente.
-3. **perspicuitas — chiarisci** (`retorica-efficacia.md` §1 + `stile-naturale.md`)
+     ortografia, plurali difficili, pronomi (tu/te, gli/le), preposizioni e «che» polivalente.
+   - *Sintassi del verbo:* congiuntivo vs indicativo, *consecutio temporum*, periodo ipotetico
+     (mai condizionale nella protasi), accordo del participio, soggetto delle implicite
+     (`dubbi-e-errori.md` §11-15).
+3. **perspicuitas — chiarisci** (`retorica-efficacia.md` §1 + `coesione-e-connettivi.md` +
+   `stile-naturale.md`)
    Una proposizione = un'idea; soggetto vicino al verbo; spezza i periodi troppo lunghi;
-   sciogli gli astratti in catena; togli il burocratese. Il lettore deve capire alla prima.
+   sciogli gli astratti in catena; togli il burocratese. Poi cura il **filo**: ogni frase si
+   aggancia alla precedente (tema/rema, connettivi *giusti*), ogni capoverso porta un'informazione
+   di peso. Il lettore deve capire alla prima e non perdere il filo.
 4. **ornatus — affina, senza eccedere** (`retorica-efficacia.md` §3-4 + `stile-naturale.md`)
    - *Togli l'eccesso* (= anti-AI): perifrasi → `è/sono`; **antilingua** (parola "scelta" →
      comune, verbo+astratto → verbo pieno); gerundite; avverbi in *-mente*; triadi forzate;
@@ -112,8 +128,14 @@ stile, calibrati su quello invece di appiattire a un italiano neutro.
 
 Fissa prima **aptum** (scopo → stile: *docere*=tenue, *delectare*=medio, *movere*=alto;
 vedi `retorica-efficacia.md` §2). Imposta la **dispositio** (come entri, come articoli, come
-chiudi: `retorica-efficacia.md` §6). Poi scrivi già rispettando le virtù: non produrre prosa
-da ripulire dopo. Chiudi con l'**audit anti-AI** e la **checklist tipografica**.
+chiudi: `retorica-efficacia.md` §6) e tieni il **filo** (`coesione-e-connettivi.md`). Poi scrivi
+già rispettando le virtù: non produrre prosa da ripulire dopo. Chiudi con l'**audit anti-AI** e la
+**checklist tipografica**.
+
+A seconda del genere, apri il riferimento dedicato: **argomentare/persuadere** →
+`retorica-efficacia.md` §5, §7-8; **divulgare/documentare** (spiegare cose complesse, numeri,
+termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di vista, licenze) →
+`narrativa.md`; **scegliere la parola giusta e rivedere** → `revisione-e-proprieta.md`.
 
 ---
 
@@ -137,6 +159,9 @@ da ripulire dopo. Chiudi con l'**audit anti-AI** e la **checklist tipografica**.
 - **Spezza i periodi** sopra 35-40 parole o con più di due *che*.
 - **Tre astratti in fila legati da *di*** → riscrivi con un verbo.
 - Soggetto vicino al verbo; una proposizione, un'idea.
+- **Tieni il filo:** ogni frase si aggancia alla precedente; il connettivo *giusto* per la
+  relazione (non *però* per causa, non *quindi* per concessione). Un testo "a mosaico" (frasi vere
+  ma scollegate, riordinabili a piacere) non argomenta: collega (`coesione-e-connettivi.md`).
 
 **ornatus — efficacia senza eccesso**
 - Preferisci **`è/sono/ha`** alle perifrasi (*si configura come, rappresenta, costituisce*).
@@ -173,23 +198,38 @@ da ripulire dopo. Chiudi con l'**audit anti-AI** e la **checklist tipografica**.
   punto e virgola, due punti, punto, interrogativo, esclamativo, virgolette, lineette/trattini,
   parentesi, puntini, barra/asterisco, abbreviazioni e sigle, a capo), con regole, errori
   comuni ed esempi.
-- **`references/dubbi-e-errori.md`** — *puritas: le parole*. Repertorio completo di dubbi ed
+- **`references/dubbi-e-errori.md`** — *puritas: le parole e la sintassi*. Repertorio di dubbi ed
   errori comuni: accenti, omofoni, apostrofo/elisione/troncamento, *sé stesso*, ortografia
-  insidiosa, congiuntivo, plurali difficili e doppi, pronomi (tu/te, gli/le, ne), avverbi,
-  preposizioni, «che» polivalente, ausiliari, più note su punteggiatura in chat.
+  insidiosa, plurali difficili e doppi, pronomi (tu/te, gli/le, ne), avverbi, preposizioni, «che»
+  polivalente, ausiliari; **sintassi del verbo** (congiuntivo vs indicativo, *consecutio temporum*,
+  periodo ipotetico, accordo del participio, modi espressivi, soggetto delle implicite); e il
+  **digitato** (punto, punto e virgola, emoji, maiuscole espressive in chat e social).
 - **`references/retorica-efficacia.md`** — *scrivere bene*. Le 4 virtù dell'espressione, i 3
   stili (tenue/medio/sublime ↔ docere/delectare/movere), repertorio essenziale di figure
   (tropi, figure di parola e di pensiero), *compositio* (ordine/ritmo/eufonia), argomentazione
   per *tópoi* e **costruzione del testo (*dispositio*: iniziare/andare avanti/chiudere, voce ed
-  *ethos*, buona vs cattiva retorica)**.
+  *ethos*, buona vs cattiva retorica)**; **costruire la tesi** (selezionare, gerarchizzare,
+  errori argomentativi), **riassumere** e il **discorso riferito**.
 - **`references/stile-naturale.md`** — *togliere lo slop*. Pattern dell'italiano AI (contenuto,
   grammatica, stile, comunicazione, riempitivi) con parole-spia e prima→dopo; **l'antilingua e
   l'affettazione all'italiana (sostituzione colta, verbo+astratto, parole di plastica, less is
   more) e la guardia "verità e misura" (pathos, vaghezza, timidezza)**; sezione "Dare voce" e
   audit finale.
 - **`references/cliche-e-parole-alla-moda.md`** — *non pensare per formule*. Repertorio di
-  parole alla moda, locuzioni e tormentoni, formule d'elogio trite, luoghi comuni e metafore
-  morte da evitare (con misura), distillato da Giunta.
+  parole alla moda, locuzioni e tormentoni, formule d'elogio trite, luoghi comuni, metafore
+  morte, **plastismi e aggettivi obbligatori**, e i **cliché del discorso scientifico**.
+- **`references/coesione-e-connettivi.md`** — *il filo del discorso*. Coesione (tema/rema,
+  ganci, capoverso) vs coerenza (il "filo rosso"); **tassonomia dei connettivi** (le quattro
+  famiglie + quelli di bilanciamento) e i loro errori. Per testi che "non si capiscono" o "non
+  scorrono".
+- **`references/spiegare-con-chiarezza.md`** — *divulgare e documentare*. Spiegare cose complesse:
+  chiarezza ≠ semplificazione, astratto→concreto (esempi), numeri contestualizzati, gestione del
+  termine tecnico, metafore esplicative, anti-hype. Per divulgazione, documentazione, testi tecnici.
+- **`references/narrativa.md`** — *raccontare*. L'idea (il "dinosauro") vs la trama, le forme
+  dell'idea, il punto di vista, la licenza sperimentale. Per racconto e romanzo.
+- **`references/revisione-e-proprieta.md`** — *la parola giusta e la lima*. La proprietà
+  (*le mot juste*, "non esistono sinonimi"), il collaudo letterale delle metafore, gli
+  intensificatori, la revisione a freddo (cavare dal pieno, lettore-cavia).
 
 ---
 
@@ -213,5 +253,15 @@ corretto** (e, se istruttivo, l'errore da evitare), citando la scheda pertinente
   (WikiProject AI Cleanup), ampliato per i tic dell'italiano.
 - Costruzione del testo, antilingua, affettazione e cliché: C. Giunta, *Come non scrivere*
   (UTET, 2018); con i classici a cui rimanda — I. Calvino, *L'antilingua* (1965); G. Orwell,
-  *Politics and the English Language* (1946); A. Savinio, *Nuova enciclopedia*. Princìpi ed
-  esempi della skill sono rielaborazioni originali.
+  *Politics and the English Language* (1946); A. Savinio, *Nuova enciclopedia*.
+- Grammatica, sintassi e proprietà di lingua: L. Serianni, *Italiano* (Garzanti, 1997) e
+  *L'italiano: parlare, scrivere, digitare* (con G. Antonelli, Treccani, 2019). Argomentazione,
+  coesione e riassunto: L. Serianni, *Leggere, scrivere, argomentare* (Laterza, 2015); E. Rigotti,
+  *Il filo del pensiero* (2020); G. Barattelli, *Scrivere bene* (2015). Chiarezza, stile e
+  revisione: G. Pontiggia, *Per scrivere bene imparate a nuotare* (2020); C. Birattari, *È più
+  facile scrivere bene che scrivere male* (2011). Divulgazione: D. Gouthier, *Scrivere di scienza*
+  (Codice, 2019). Narrativa: F. Massai, *L'idea narrativa* (2015). Copy/web: F. Martino e A.
+  Alfieri, *Scrivere ganzo* (2015). Scrivere con l'AI e umanizzazione: A. Julita, *Scrivere con
+  l'AI* (Hoepli, 2025).
+- Concetti e regole sono patrimonio comune; testi ed esempi della skill sono rielaborazioni
+  originali.

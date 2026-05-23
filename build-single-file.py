@@ -2,12 +2,12 @@
 """
 build-single-file.py — Genera `scrittura-italiana-single-file.md`.
 
-Concatena SKILL.md + i 4 file in references/ in un unico documento, pensato per gli
+Concatena SKILL.md + i file in references/ in un unico documento, pensato per gli
 assistenti che NON supportano il formato Agent Skills (app Gemini come istruzioni di un
 Gem, Custom GPT di ChatGPT, ecc.), dove i `references/` non si caricano separatamente.
 
 I rimandi interni del tipo `references/x.md` vengono convertiti in rimandi alle Parti
-(Parte A/B/C/D) così il documento resta coerente da solo.
+(Parte A/B/C/…) così il documento resta coerente da solo.
 
 Uso:
     python3 build-single-file.py
@@ -23,16 +23,20 @@ OUT = BASE / "scrittura-italiana-single-file.md"
 
 # (file in references/, titolo della Parte, etichetta per i rimandi interni)
 PARTS = [
-    ("punteggiatura.md",              "Parte A — Punteggiatura e tipografia",         "Parte A"),
-    ("dubbi-e-errori.md",             "Parte B — Dubbi e errori comuni",              "Parte B"),
-    ("retorica-efficacia.md",         "Parte C — Scrivere con efficacia (retorica)",  "Parte C"),
-    ("stile-naturale.md",             "Parte D — Stile naturale (anti-AI)",           "Parte D"),
-    ("cliche-e-parole-alla-moda.md",  "Parte E — Cliché e parole alla moda",          "Parte E"),
+    ("punteggiatura.md",              "Parte A — Punteggiatura e tipografia",          "Parte A"),
+    ("dubbi-e-errori.md",             "Parte B — Dubbi e errori comuni",               "Parte B"),
+    ("retorica-efficacia.md",         "Parte C — Scrivere con efficacia (retorica)",   "Parte C"),
+    ("coesione-e-connettivi.md",      "Parte D — Coesione e connettivi",               "Parte D"),
+    ("stile-naturale.md",             "Parte E — Stile naturale (anti-AI)",            "Parte E"),
+    ("cliche-e-parole-alla-moda.md",  "Parte F — Cliché e parole alla moda",           "Parte F"),
+    ("spiegare-con-chiarezza.md",     "Parte G — Spiegare con chiarezza (divulgare)",  "Parte G"),
+    ("narrativa.md",                  "Parte H — Narrativa",                           "Parte H"),
+    ("revisione-e-proprieta.md",      "Parte I — Revisione e proprietà della parola",  "Parte I"),
 ]
 
 INTRO = """# scrittura-italiana — versione in un solo file
 
-> **Cos'è.** È la skill *scrittura-italiana* (SKILL.md + i suoi 4 riferimenti) raccolta in un
+> **Cos'è.** È la skill *scrittura-italiana* (SKILL.md + i suoi 9 riferimenti) raccolta in un
 > unico documento, per gli assistenti che **non** supportano il formato Agent Skills e quindi
 > non caricano i file `references/` separati: app Gemini (come istruzioni di un *Gem*), Custom
 > GPT di ChatGPT, ecc.
@@ -75,7 +79,7 @@ def build() -> str:
 def main():
     doc = build()
     OUT.write_text(doc, encoding="utf-8")
-    residui = len(re.findall(r"(punteggiatura|dubbi-e-errori|retorica-efficacia|stile-naturale|cliche-e-parole-alla-moda)\.md", doc))
+    residui = len(re.findall(r"(punteggiatura|dubbi-e-errori|retorica-efficacia|coesione-e-connettivi|stile-naturale|cliche-e-parole-alla-moda|spiegare-con-chiarezza|narrativa|revisione-e-proprieta)\.md", doc))
     h1 = len(re.findall(r"^# ", doc, flags=re.M))
     print(f"Generato {OUT.name}: {h1} titoli H1, {len(doc):,} caratteri, rimandi a file residui: {residui}")
     if residui:
