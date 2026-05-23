@@ -23,10 +23,11 @@ OUT = BASE / "scrittura-italiana-single-file.md"
 
 # (file in references/, titolo della Parte, etichetta per i rimandi interni)
 PARTS = [
-    ("punteggiatura.md",      "Parte A — Punteggiatura e tipografia",        "Parte A"),
-    ("dubbi-e-errori.md",     "Parte B — Dubbi e errori comuni",             "Parte B"),
-    ("retorica-efficacia.md", "Parte C — Scrivere con efficacia (retorica)", "Parte C"),
-    ("stile-naturale.md",     "Parte D — Stile naturale (anti-AI)",          "Parte D"),
+    ("punteggiatura.md",              "Parte A — Punteggiatura e tipografia",         "Parte A"),
+    ("dubbi-e-errori.md",             "Parte B — Dubbi e errori comuni",              "Parte B"),
+    ("retorica-efficacia.md",         "Parte C — Scrivere con efficacia (retorica)",  "Parte C"),
+    ("stile-naturale.md",             "Parte D — Stile naturale (anti-AI)",           "Parte D"),
+    ("cliche-e-parole-alla-moda.md",  "Parte E — Cliché e parole alla moda",          "Parte E"),
 ]
 
 INTRO = """# scrittura-italiana — versione in un solo file
@@ -74,7 +75,7 @@ def build() -> str:
 def main():
     doc = build()
     OUT.write_text(doc, encoding="utf-8")
-    residui = len(re.findall(r"(punteggiatura|dubbi-e-errori|retorica-efficacia|stile-naturale)\.md", doc))
+    residui = len(re.findall(r"(punteggiatura|dubbi-e-errori|retorica-efficacia|stile-naturale|cliche-e-parole-alla-moda)\.md", doc))
     h1 = len(re.findall(r"^# ", doc, flags=re.M))
     print(f"Generato {OUT.name}: {h1} titoli H1, {len(doc):,} caratteri, rimandi a file residui: {residui}")
     if residui:

@@ -24,9 +24,11 @@ alle **quattro virtù dell'espressione** (*virtutes elocutionis*) della retorica
    caporali « » vs dritte, trattino vs lineetta, maiuscole, sigle) e **di parola** (accenti,
    omofoni come *da/dà*, *qual è*, *un po'*, *sé stesso*, plurali difficili, *tu/te*).
 3. **perspicuitas** — chiarezza: il lettore capisce alla prima.
-4. **ornatus** — bellezza *regolata*: figure, ritmo, argomentazione. Il suo eccesso (la
-   *mala affectatio*) è esattamente lo **slop dell'AI** — perifrasi, gerundite, triadi,
-   avverbi in *-mente*, aggettivi pomposi — che la skill riconosce e rimuove (36 pattern).
+4. **ornatus** — bellezza *regolata*: figure, ritmo, argomentazione, costruzione del testo
+   (incipit, sviluppo, chiusura). Il suo eccesso (la *mala affectatio*) è esattamente lo
+   **slop dell'AI** — perifrasi, gerundite, triadi, avverbi in *-mente*, aggettivi pomposi,
+   antilingua e affettazione all'italiana — che la skill riconosce e rimuove (43 pattern, più
+   il repertorio di cliché e frasi fatte).
 
 Il principio guida è l'**equilibrio**: ogni virtù sta tra due vizi, per difetto (sciatteria,
 oscurità) e per eccesso (slop). La differenza rispetto a un semplice "umanizzatore": qui c'è
@@ -40,11 +42,13 @@ un **workflow ordinato** che va dalla struttura alla pelle.
 ├── SKILL.md                      # modello (4 virtù), workflow, principî cardine
 └── references/
     ├── punteggiatura.md          # puritas (segni): 15 schede, regole, errori, esempi
-    ├── dubbi-e-errori.md         # puritas (parole): accenti, omofoni, plurali,
-    │                             #   pronomi, ortografia, congiuntivo, preposizioni
-    ├── retorica-efficacia.md     # aptum/perspicuitas/ornatus: 4 virtù, 3 stili,
-    │                             #   repertorio di figure, compositio, tópoi
-    └── stile-naturale.md         # anti-slop: 36 pattern AI + "Dare voce" + audit
+    ├── dubbi-e-errori.md         # puritas (parole): accenti, omofoni, plurali, pronomi,
+    │                             #   ortografia, congiuntivo, preposizioni, reggenze
+    ├── retorica-efficacia.md     # aptum/perspicuitas/ornatus: 4 virtù, 3 stili, figure,
+    │                             #   compositio, tópoi, dispositio (costruzione del testo)
+    ├── stile-naturale.md         # anti-slop: 43 pattern AI + antilingua/affettazione
+    │                             #   + "Dare voce" + audit
+    └── cliche-e-parole-alla-moda.md  # parole alla moda, tormentoni, luoghi comuni, cliché
 ```
 
 `SKILL.md` è autosufficiente per i casi frequenti; i file in `references/` vengono consultati
@@ -192,9 +196,11 @@ The skill is organized around the four classical *virtutes elocutionis*:
    quotation marks (Italian guillemets « » vs straight quotes), hyphen vs dash, capitalization,
    acronyms.
 3. **perspicuitas** — clarity: the reader gets it on first read.
-4. **ornatus** — *measured* beauty: figures, rhythm, argumentation. Its excess (*mala
-   affectatio*) is exactly AI slop — periphrasis, trailing gerunds, forced triads, *-mente*
-   adverbs — which the skill detects and removes (36 patterns).
+4. **ornatus** — *measured* beauty: figures, rhythm, argumentation, text construction
+   (opening, development, closing). Its excess (*mala affectatio*) is exactly AI slop —
+   periphrasis, trailing gerunds, forced triads, *-mente* adverbs, the Italian "antilingua"
+   affectation — which the skill detects and removes (43 patterns, plus a register of clichés
+   and stock phrases).
 
 The guiding principle is **balance**: each virtue sits between two vices, by deficiency
 (sloppiness, obscurity) and by excess (slop). Unlike a generic "humanizer", this skill carries
@@ -225,7 +231,9 @@ demonstrations.
 Punctuation rules are synthesized from B. Mortara Garavelli, *Prontuario di punteggiatura*
 (Laterza, 2003); the rhetoric layer distills her *Manuale di retorica* (Bompiani); the
 common-mistakes layer rewrites rules from M. Trinci, *Le basi proprio della grammatica*
-(Bompiani, 2019). These are facts of usage and classical-rhetoric concepts, not copyrightable;
+(Bompiani, 2019); text construction, the "antilingua", affectation and clichés draw on
+C. Giunta, *Come non scrivere* (UTET, 2018) and the classics it points to (Calvino, Orwell,
+Savinio). These are facts of usage and classical-rhetoric concepts, not copyrightable;
 the skill's wording and examples are original, not a reproduction. The style layer adapts
 [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
 (CC BY-SA 4.0); per share-alike, this skill is released under the same license. Contributions

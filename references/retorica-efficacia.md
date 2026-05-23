@@ -214,8 +214,58 @@ Utili per testi persuasivi, saggistici, di opinione.
 
 ---
 
+## 6. Costruire il testo (*dispositio*)
+
+Le virtù (§1) curano la frase; la *dispositio* cura **l'architettura**: come si entra, come si
+procede, come si esce. Tradizione: *exordium → narratio → argumentatio → peroratio*. Vale per
+ogni testo di una certa estensione (saggio, tesi, relazione, articolo).
+
+### 6a. Iniziare (*exordium*) — un pieno, non un vuoto
+- **Entra subito in argomento.** Di' dalla prima riga qualcosa che catturi; non perderti in
+  preamboli grigi che ripetono ciò che il lettore già sa.
+- Evita gli **avvii morti:** la definizione da vocabolario (*«Secondo lo Zingarelli, X
+  significa…»*), la biografia piatta (*«Nacque a … nel … da famiglia …»*), il "riscaldamento"
+  che ripete il titolo (`stile-naturale.md` §36).
+- Ma niente **avvii da romanzo** in un saggio (*«Bang bang. E quei due colpi…»*): cerca la via
+  di mezzo, una prospettiva netta o un dato forte. Scegliere *da dove* partire (l'esilio di
+  Dante, non la data di nascita) è già metà del lavoro.
+
+### 6b. Andare avanti (*narratio / argumentatio*) — rendi visibile l'articolazione
+- **Scandisci** il ragionamento con formule esplicite: *da un lato… dall'altro*; *in primo
+  luogo… in secondo luogo*; *la prima ragione è… la seconda è*.
+- **Anticipa e confuta le obiezioni:** *Si obietterà che…*; *È vero, come nota X, che… ma…*.
+  Mostrare l'obiezione e ribatterla persuade più che ignorarla.
+- **Metadiscorso con misura:** dire al lettore dove sei (*«Nel capitolo precedente abbiamo
+  visto…; ora…»*) lo orienta. Utile nei testi lunghi, superfluo nei brevi.
+
+### 6c. Chiudere (*peroratio*) — senza do di petto
+- **Niente finale a effetto forzato** né *pointe* a tutti i costi: va benissimo un **riassunto
+  sobrio** (*«In conclusione, le prove non bastano…»*) o una **domanda** che lascia pensare.
+- ⚠ **Mai "lanciare messaggi".** Le chiusure edificanti sono il tell peggiore: *«…ma sono certo
+  che l'Uomo saprà trovare una soluzione», «…un'opera ancora attuale, perché ci insegna molto»*.
+  Coincidono con le conclusioni generiche positive (`stile-naturale.md` §32). Se non hai una
+  chiusura migliore, **finisci prima**.
+
+### 6d. La voce e l'*ethos*
+- **Io / noi:** nel testo **oggettivo** (manuale, voce d'enciclopedia, cronaca) tieni l'io fuori;
+  nel **saggio, reportage, opinione** l'io può e deve affiorare — è lì che nasce la voce (vedi
+  `stile-naturale.md` → "Dare voce").
+- **Modestia:** parla dell'argomento, non di te; niente auto-incensamento.
+- **Drammatizzare (*percontatio*):** immagina la domanda del lettore e rispondi (*«L'ultima
+  *che*? Lasciate che spieghi.»*). Anima il discorso senza alzare la voce.
+
+> **Buona vs cattiva retorica.** La retorica non è un male in sé: King e Lincoln la usano
+> benissimo. È cattiva quando c'è **sproporzione tra la cosa e l'enunciazione** (Savinio): tono
+> solenne per dire poco, pathos al posto degli argomenti, paroloni per nascondere il vuoto.
+> Regola pratica: **tieniti un'ottava sotto** — sobrietà, asciuttezza, *understatement*, e quando
+> puoi un filo d'ironia e autoironia. (L'eccesso opposto, il pathos kitsch, è in
+> `stile-naturale.md` §41.)
+
+---
+
 ## In sintesi
 
 Scrivere bene = **aptum** (scegli scopo e registro) → **puritas** (corretto) →
 **perspicuitas** (chiaro) → **ornatus** (bello *quanto basta*, mai *mala affectatio*).
+E **disponi** bene il testo (*dispositio*): entra subito, articola, chiudi senza enfasi.
 Le figure e i *tópoi* sono strumenti al servizio di queste virtù, non fini in sé.

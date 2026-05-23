@@ -78,9 +78,10 @@ Applica le passate nell'ordine delle virtù, **dalla struttura alla pelle**:
    Una proposizione = un'idea; soggetto vicino al verbo; spezza i periodi troppo lunghi;
    sciogli gli astratti in catena; togli il burocratese. Il lettore deve capire alla prima.
 4. **ornatus — affina, senza eccedere** (**Parte C** §3-4 + **Parte D**)
-   - *Togli l'eccesso* (= anti-AI): perifrasi → `è/sono`; gerundite; avverbi in *-mente*;
-     triadi forzate; connettori sovrabbondanti; riempitivi; chiusure ottimistiche vuote;
-     residui da chatbot.
+   - *Togli l'eccesso* (= anti-AI): perifrasi → `è/sono`; **antilingua** (parola "scelta" →
+     comune, verbo+astratto → verbo pieno); gerundite; avverbi in *-mente*; triadi forzate;
+     connettori sovrabbondanti; riempitivi; chiusure ottimistiche vuote; pathos kitsch; cliché
+     e frasi fatte (**Parte E**); residui da chatbot.
    - *Aggiungi il giusto*: una figura quando serve (metafora che chiarisce, chiasmo in
      chiusura), ritmo variato, cadenza finale piena. Mai ornamento gratuito.
 5. **voce e audit finale** (**Parte D** → "Dare voce" + audit)
@@ -93,7 +94,8 @@ stile, calibrati su quello invece di appiattire a un italiano neutro.
 ## Workflow — SCRIVERE da zero
 
 Fissa prima **aptum** (scopo → stile: *docere*=tenue, *delectare*=medio, *movere*=alto;
-vedi **Parte C** §2). Poi scrivi già rispettando le virtù: non produrre prosa
+vedi **Parte C** §2). Imposta la **dispositio** (come entri, come articoli, come
+chiudi: **Parte C** §6). Poi scrivi già rispettando le virtù: non produrre prosa
 da ripulire dopo. Chiudi con l'**audit anti-AI** e la **checklist tipografica**.
 
 ---
@@ -121,10 +123,23 @@ da ripulire dopo. Chiudi con l'**audit anti-AI** e la **checklist tipografica**.
 
 **ornatus — efficacia senza eccesso**
 - Preferisci **`è/sono/ha`** alle perifrasi (*si configura come, rappresenta, costituisce*).
+- **Antilingua:** preferisci sempre la **parola comune** (*fare* non *effettuare*, *casa* non
+  *abitazione*, *problema* non *problematica*); usa il **verbo pieno** al posto di "verbo vuoto +
+  astratto" (*effettuare un controllo* → *controllare*).
 - **Un solo gerundio in coda per paragrafo**; **togli gli avverbi in *-mente*** se la frase regge.
 - **Niente triadi forzate** né *"non solo… ma anche"* a ripetizione.
+- **La ripetizione non è il male:** non inventare perifrasi o antonomasie pur di non ripetere
+  un nome (*Federer* non *il tennista svizzero*).
 - **Una figura solo se aggiunge** senso o forza; altrimenti è *mala affectatio*.
+- **Tieniti un'ottava sotto:** sobrietà, niente pathos né paroloni; *less is more* (taglia
+  aggettivi, avverbi e *quello che è* superflui).
 - **Varia il ritmo**, leggi ad alta voce (scova rime involontarie e cacofonie).
+
+**dispositio — costruzione del testo** (**Parte C** §6)
+- **Entra subito** in argomento (un pieno, non un vuoto): niente preamboli grigi né definizione
+  da vocabolario.
+- **Articola** il discorso (*da un lato… dall'altro*; anticipa e confuta le obiezioni).
+- **Chiudi senza enfasi:** riassunto sobrio o domanda; **mai "lanciare messaggi"** edificanti.
 
 **aptum + voce**
 - Scegli **scopo, registro e livello di controllo** prima di scrivere, e tienili coerenti.
@@ -148,10 +163,16 @@ da ripulire dopo. Chiudi con l'**audit anti-AI** e la **checklist tipografica**.
 - ****Parte C**** — *scrivere bene*. Le 4 virtù dell'espressione, i 3
   stili (tenue/medio/sublime ↔ docere/delectare/movere), repertorio essenziale di figure
   (tropi, figure di parola e di pensiero), *compositio* (ordine/ritmo/eufonia), argomentazione
-  per *tópoi*.
-- ****Parte D**** — *togliere lo slop*. 36 pattern dell'italiano AI
-  (contenuto, grammatica, stile, comunicazione, riempitivi) con parole-spia e prima→dopo,
-  sezione "Dare voce" e audit finale.
+  per *tópoi* e **costruzione del testo (*dispositio*: iniziare/andare avanti/chiudere, voce ed
+  *ethos*, buona vs cattiva retorica)**.
+- ****Parte D**** — *togliere lo slop*. Pattern dell'italiano AI (contenuto,
+  grammatica, stile, comunicazione, riempitivi) con parole-spia e prima→dopo; **l'antilingua e
+  l'affettazione all'italiana (sostituzione colta, verbo+astratto, parole di plastica, less is
+  more) e la guardia "verità e misura" (pathos, vaghezza, timidezza)**; sezione "Dare voce" e
+  audit finale.
+- ****Parte E**** — *non pensare per formule*. Repertorio di
+  parole alla moda, locuzioni e tormentoni, formule d'elogio trite, luoghi comuni e metafore
+  morte da evitare (con misura), distillato da Giunta.
 
 ---
 
@@ -173,6 +194,10 @@ corretto** (e, se istruttivo, l'errore da evitare), citando la scheda pertinente
   fatti della lingua; testi ed esempi della skill sono rielaborazioni originali.
 - Stile/anti-AI: adattamento italiano di [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
   (WikiProject AI Cleanup), ampliato per i tic dell'italiano.
+- Costruzione del testo, antilingua, affettazione e cliché: C. Giunta, *Come non scrivere*
+  (UTET, 2018); con i classici a cui rimanda — I. Calvino, *L'antilingua* (1965); G. Orwell,
+  *Politics and the English Language* (1946); A. Savinio, *Nuova enciclopedia*. Princìpi ed
+  esempi della skill sono rielaborazioni originali.
 
 ---
 
@@ -640,6 +665,21 @@ copre i segni). Regole sintetizzate da M. Trinci, *Le basi proprio della grammat
   ✗ insegnare → imparare a qualcuno (✓ insegnare a qualcuno); ✗ immune a → ✓ immune da;
   ✗ dentro me → ✓ dentro di me; ✗ davanti la palestra → ✓ davanti alla palestra; ✗ tifo alla
   Fiorentina → ✓ tifo per…; ✗ vicino casa → ✓ vicino a casa.
+- **Reggenze da verificare (sul dizionario, alla voce del verbo/nome):** ✗ confondere qualcuno
+  *per* → ✓ confondere *con* (ma *prendere per*: ti ho preso per un ladro); ✗ ingerenze *sulle*
+  vicende → ✓ ingerenze *nelle*; ✗ avere l'abitudine *a* → ✓ abitudine *di* (ma *abituato a*);
+  ✗ capace *a* fare → ✓ capace *di*; ✗ appassionato *di* questa vicenda → ✓ appassionato *a* (a un
+  fatto) / *di* (di una materia); ✗ un bilancio *sulle* attività → ✓ bilancio *delle*; ✗ molte
+  interpretazioni *a* questa canzone → ✓ *di*.
+- **Collocazioni: il verbo giusto col nome giusto.** ✗ intraprendere *direzioni* → ✓ prendere
+  una direzione / intraprendere un'*azione*; ✗ nutrire *un rapporto* → ✓ *avere* un rapporto
+  (nutrire semmai *simpatia, stima, ammirazione*); ✗ far *gesto* di → ✓ fare *un* gesto / fare
+  *cenno*; ✗ giungere a *riflessioni* → ✓ giungere a *conclusioni* (le riflessioni si *fanno*);
+  ✗ *paventare* nel senso di prevedere → ✓ paventare = *temere*.
+- **Modi di dire da non incrociare:** ✓ tra l'incudine e il martello (≠ tra la padella e la
+  brace, che vale "da un male a uno peggiore"); ✓ avere il pelo sullo stomaco / non avere peli
+  sulla lingua (✗ "peli sullo stomaco"); ✓ essere di bocca buona (✗ "avere la bocca buona");
+  ✓ tra loro corre cattivo sangue (✗ "cattive acque"; *essere in cattive acque* è altra cosa).
 - **Interiezioni:** sole → punto esclamativo/interrogativo (Boh! Eh?); dentro la frase →
   isolate da virgola (Oh, cavolo!).
 
@@ -874,10 +914,60 @@ Utili per testi persuasivi, saggistici, di opinione.
 
 ---
 
+## 6. Costruire il testo (*dispositio*)
+
+Le virtù (§1) curano la frase; la *dispositio* cura **l'architettura**: come si entra, come si
+procede, come si esce. Tradizione: *exordium → narratio → argumentatio → peroratio*. Vale per
+ogni testo di una certa estensione (saggio, tesi, relazione, articolo).
+
+### 6a. Iniziare (*exordium*) — un pieno, non un vuoto
+- **Entra subito in argomento.** Di' dalla prima riga qualcosa che catturi; non perderti in
+  preamboli grigi che ripetono ciò che il lettore già sa.
+- Evita gli **avvii morti:** la definizione da vocabolario (*«Secondo lo Zingarelli, X
+  significa…»*), la biografia piatta (*«Nacque a … nel … da famiglia …»*), il "riscaldamento"
+  che ripete il titolo (**Parte D** §36).
+- Ma niente **avvii da romanzo** in un saggio (*«Bang bang. E quei due colpi…»*): cerca la via
+  di mezzo, una prospettiva netta o un dato forte. Scegliere *da dove* partire (l'esilio di
+  Dante, non la data di nascita) è già metà del lavoro.
+
+### 6b. Andare avanti (*narratio / argumentatio*) — rendi visibile l'articolazione
+- **Scandisci** il ragionamento con formule esplicite: *da un lato… dall'altro*; *in primo
+  luogo… in secondo luogo*; *la prima ragione è… la seconda è*.
+- **Anticipa e confuta le obiezioni:** *Si obietterà che…*; *È vero, come nota X, che… ma…*.
+  Mostrare l'obiezione e ribatterla persuade più che ignorarla.
+- **Metadiscorso con misura:** dire al lettore dove sei (*«Nel capitolo precedente abbiamo
+  visto…; ora…»*) lo orienta. Utile nei testi lunghi, superfluo nei brevi.
+
+### 6c. Chiudere (*peroratio*) — senza do di petto
+- **Niente finale a effetto forzato** né *pointe* a tutti i costi: va benissimo un **riassunto
+  sobrio** (*«In conclusione, le prove non bastano…»*) o una **domanda** che lascia pensare.
+- ⚠ **Mai "lanciare messaggi".** Le chiusure edificanti sono il tell peggiore: *«…ma sono certo
+  che l'Uomo saprà trovare una soluzione», «…un'opera ancora attuale, perché ci insegna molto»*.
+  Coincidono con le conclusioni generiche positive (**Parte D** §32). Se non hai una
+  chiusura migliore, **finisci prima**.
+
+### 6d. La voce e l'*ethos*
+- **Io / noi:** nel testo **oggettivo** (manuale, voce d'enciclopedia, cronaca) tieni l'io fuori;
+  nel **saggio, reportage, opinione** l'io può e deve affiorare — è lì che nasce la voce (vedi
+  **Parte D** → "Dare voce").
+- **Modestia:** parla dell'argomento, non di te; niente auto-incensamento.
+- **Drammatizzare (*percontatio*):** immagina la domanda del lettore e rispondi (*«L'ultima
+  *che*? Lasciate che spieghi.»*). Anima il discorso senza alzare la voce.
+
+> **Buona vs cattiva retorica.** La retorica non è un male in sé: King e Lincoln la usano
+> benissimo. È cattiva quando c'è **sproporzione tra la cosa e l'enunciazione** (Savinio): tono
+> solenne per dire poco, pathos al posto degli argomenti, paroloni per nascondere il vuoto.
+> Regola pratica: **tieniti un'ottava sotto** — sobrietà, asciuttezza, *understatement*, e quando
+> puoi un filo d'ironia e autoironia. (L'eccesso opposto, il pathos kitsch, è in
+> **Parte D** §41.)
+
+---
+
 ## In sintesi
 
 Scrivere bene = **aptum** (scegli scopo e registro) → **puritas** (corretto) →
 **perspicuitas** (chiaro) → **ornatus** (bello *quanto basta*, mai *mala affectatio*).
+E **disponi** bene il testo (*dispositio*): entra subito, articola, chiudi senza enfasi.
 Le figure e i *tópoi* sono strumenti al servizio di queste virtù, non fini in sé.
 
 ---
@@ -968,8 +1058,12 @@ positivo.
 **10. Regola del tre.** Triadi forzate (*innovazione, ispirazione e nuove prospettive*).
 Se ne conti tre o quattro in un paragrafo, è AI.
 
-**11. Variazione elegante.** Rotazione compulsiva di sinonimi (*la protagonista → il
-personaggio → la figura centrale → la nostra eroina*). La ripetizione naturale va bene.
+**11. Variazione elegante (e antonomasie).** Rotazione compulsiva di sinonimi e perifrasi pur
+di non ripetere un nome: *Federer → il tennista svizzero*, *Montale → il poeta ligure*, *i
+Baustelle → il gruppo musicale toscano*. **La ripetizione non è il male:** ripeti pure il nome,
+anche a poca distanza — la variazione forzata si sente, ed è un tell (la si avverte come
+artificio). Stessa cosa per le **antonomasie** da sussidiario (*il Sommo Poeta, il Cigno di
+Busseto, la nostra eroina*): chiama le cose e le persone col loro nome.
 
 **12. False scale ("da X a Y").** *"dal Big Bang alla rete cosmica, dalla nascita delle
 stelle alla materia oscura"* dove X e Y non stanno su una scala sensata. → Elenca e basta.
@@ -1083,6 +1177,77 @@ annunciarlo.
 
 ---
 
+## F. L'antilingua — l'affettazione all'italiana
+
+Lo slop *prima* dell'AI, e che l'AI amplifica. È la malattia descritta da Calvino
+(*L'antilingua*), Savinio ("la teoria dell'eleganza") e Giunta: chi scrive scambia la
+semplicità per sciatteria e sostituisce la parola viva con quella "scelta", per darsi un tono.
+Risultato: una prosa che tiene a distanza invece di comunicare.
+
+**37. Sostituzione colta.** Preferisci **sempre** la parola comune a quella "elegante" (di
+default; non è una Legge, ma una direzione):
+
+| ✗ "scelto" | ✓ comune | | ✗ "scelto" | ✓ comune |
+|---|---|---|---|---|
+| attendere | aspettare | | decesso | morte |
+| recarsi | andare | | effettuare | fare |
+| giungere | arrivare | | optare per | scegliere |
+| dimora/abitazione | casa | | utilizzare | usare |
+| acquistare | comprare | | visionare | vedere |
+| problematica | problema | | tematica | tema |
+| tipologia | tipo | | maggiormente | più |
+| evento fieristico | fiera | | terminare | finire |
+
+→ Per *costituire/rappresentare/risultare* al posto di **è/sono/ha** vedi §8.
+
+**38. Verbo generico + sostantivo astratto.** Un verbo vuoto seguito da un nome astratto che ne
+porta il senso, al posto del verbo pieno. → *effettuare un controllo* → **controllare**; *fare
+un incontro* → **incontrare**; *procedere alla verifica* → **verificare**; *dare comunicazione*
+→ **comunicare**; *portare a compimento* → **concludere**; *sottoporre a esame* → **esaminare**;
+*porre attenzione* → **fare attenzione**. **Regola:** se "verbo + nome astratto" si dice con un
+solo verbo, usalo.
+
+**39. Parole di plastica (aziendalese alla moda).** *criticità, attenzionare, concretizzare,
+ottimizzare, problematizzare, evidenziare, implementare, efficientare, tempistica, progettualità,
+professionalità, percorso (figurato), focalizzare, approcciare, rapportarsi, interloquire.* →
+Appesantiscono e non aggiungono nulla. Linguaggio diretto. (Repertorio in
+**Parte E**.)
+
+**40. Less is more — togli i parassiti.** Regola di Orwell: *se puoi togliere una parola,
+toglila*.
+- **aggettivi/avverbi inutili:** *un seno armonioso e prominente* → *un bel seno*; *via i
+  "beastly adjectives"* (Dahl). Scuoti il testo e fa' cadere gli avverbi superflui (Simenon).
+- **sostantivo-parassita generico:** *descrizioni di carattere realistico* → *descrizioni
+  realistiche*; *perfetto in termini di clima* → *ha un clima perfetto*; *il processo di
+  elaborazione* → *l'elaborazione* (un'elaborazione *è già* un processo).
+- **«quello che è» superfluo:** *vorrei parlare di quelli che sono i miei gusti* → *dei miei
+  gusti*; *ci ha raccontato quelle che sono le sue paure* → *le sue paure*.
+
+---
+
+## G. Verità e misura — contro pathos, vaghezza, timidezza
+
+**41. Tieniti un'ottava sotto (contro il pathos kitsch).** La retorica emotiva è slop dei
+sentimenti: melodramma, stile a singhiozzo, sottolineature strappalacrime — *«un boato dentro
+l'anima», «la bellezza distrutta», «cosa vedono quegli occhi?»*. Più la materia è grave
+(tragedie, lutti), più il tono va tenuto **sobrio**: *understatement*, non effettacci. Niente
+commenti emotivi indebiti nel testo oggettivo (*purtroppo, per fortuna*). → Vedi anche
+**Parte C** §6 (buona vs cattiva retorica).
+
+**42. Individuazione — concreto batte generico.** Non *animali* ma *pinguini*; non *una
+staccionata* ma *una staccionata color avio*. Dai un nome alle cose, soprattutto se un nome ce
+l'hanno. Bandisci le **informazioni vuote**: *«ha influenzato Camus e altri autori del
+Novecento»* (chi? quali?) → di' *chi/cosa/quando*, o non dire niente. (Collega §2, §5.)
+
+**43. Non sussurrare (falsa modestia citazionale).** Togli le perifrasi che attenuano il
+giudizio o lo scaricano su "autorità" vaghe: *Dante può essere considerato il più grande poeta
+italiano* → *Dante è il più grande poeta italiano*; *è ritenuto da più parti uno dei maggiori* →
+*è stato uno dei maggiori*. Se è il tuo giudizio (e l'hanno chiesto a te), prenditelo. Diverso
+dall'hedging §31: lì togli l'incertezza accumulata, qui la timidezza che si nasconde dietro gli
+altri.
+
+---
+
 ## Audit finale anti-AI (passaggio obbligato)
 
 Dopo la riscrittura, domandati: **"Cosa rende questo testo evidentemente generato da AI?"**
@@ -1092,6 +1257,111 @@ Elenca i tell residui. Poi: **"Ora rendilo non evidentemente AI"** e rivedi. Ver
 - vari la struttura dei periodi senza forzature;
 - usi dettagli specifici al posto di affermazioni vaghe;
 - usi *è/sono/ha* dove c'era perifrasi pretenziosa;
+- non sostituisca la parola comune con quella "scelta" (antilingua: *fare* non *effettuare*,
+  *casa* non *abitazione*) e usi il verbo pieno al posto di "verbo vuoto + astratto";
+- non tenga un tono più alto del necessario (niente pathos, niente paroloni: un'ottava sotto);
 - rispetti le convenzioni tipografiche (vedi **Parte A**);
 - non abbia più di un avverbio in *-mente* né più di un gerundio in coda per paragrafo;
 - non abbia periodi sopra 35-40 parole senza ragione.
+
+---
+
+# Parte E — Cliché e parole alla moda
+
+Repertorio di **parole e formule logorate dall'uso**: non sono *errori* (la lingua non è il
+codice della strada), ma suonano già sentite mille volte, e chi le usa mostra di pensare per
+frasi fatte. Evitarle è insieme questione di stile e di onestà intellettuale: il cattivo uso
+delle parole confina col cattivo uso del pensiero. Distillato da C. Giunta, *Come non
+scrivere* (UTET, 2018); esempi originali. Complementa **Parte D** (i tic dell'AI) e
+**Parte C** (i *tópoi* logori). `✓` = preferibile, `✗`/`⚠` = da evitare.
+
+> **Non un divieto, una guardia.** Si possono usare *con misura*, e a volte con ironia (*«la
+> tigre di Cremona», ma solo col sorriso*). Il problema è l'automatismo: la formula che si
+> capta al volo e si riusa per "decorare" il discorso senza più sapere cosa significa. Nel
+> dubbio, di' la cosa in modo diretto e tuo.
+
+---
+
+## 1. Parole alla moda (usurate o pretenziose)
+
+Aggettivi e sostantivi che a forza di ripetizioni hanno perso significato, o che si usano per
+darsi un tono:
+
+- **mitico, mostruoso, pazzesco, assurdo, bestiale** (come superlativi generici) → di' *cosa*
+  era notevole, e in che senso.
+- **importante** (nel senso di forte/valido: *«un attacco importante»*) → forte, valido, di rilievo.
+- **accattivante, intrigante** (di un titolo, un claim) → ⚠ parole da imbonitore; di' perché attira.
+- **prestigioso, esclusivo** (*«un immobile prestigioso», «una località esclusiva»*) → ⚠ lessico
+  ciarlatanesco da pubblicità; togli o sostituisci con un fatto.
+- **eccellenze, eccellenza** (*«le eccellenze del territorio»*) → prodotti, specialità; di' quali.
+- **criticità** → problema, difficoltà.
+- **confrontarsi** (nel senso di parlare/discutere: *«ci siamo confrontati»*) → ⚠ tronfio; parlare,
+  discutere, vedersi.
+- **sfaccettatura, sfaccettato** (*«un problema con molte sfaccettature»*) → aspetti, sfumature, lati.
+- **riferimento** (passe-partout: *«questi riferimenti ci fanno capire»*) → di' a cosa ti riferisci.
+- **percorso** (figurato: *«un percorso spirituale», «il mio percorso»*) → cammino, esperienza, storia.
+- **tempistica/tempistiche** → tempi.
+- **progettualità, professionalità** (astratti gonfi) → progetti / competenza, bravura.
+- **focalizzare, approcciare, rapportarsi, interloquire, discettare, enfatizzare** → mettere a
+  fuoco, affrontare, rivolgersi a, parlare con, sottolineare. (Vedi anche **Parte D**
+  → "parole di plastica".)
+
+## 2. Locuzioni e tormentoni
+
+- **assolutamente sì / assolutamente no** → bastano *sì* e *no*.
+- **a 360 gradi** (*«confrontarsi a 360 gradi»*) → su tutto, completamente — o togli.
+- **quant'altro, e via dicendo, di tutto di più** → ⚠ non vogliono dire niente; *eccetera*, o
+  meglio finisci l'elenco.
+- **al passo coi tempi** → chi lo dice di solito non lo è.
+- **nel mio piccolo, nella mia limitata esperienza** → falsa modestia; togli.
+- **sopra le righe, una caduta di stile, una levata di scudi** → cliché belli e pronti; di' la cosa.
+- **senza se e senza ma** → ormai logora e involontariamente comica.
+- **il territorio, la voce dei territori** → ⚠ parola-bandiera; di' *dove*, *chi*.
+- **all'insegna di** (*«un incontro all'insegna della cultura»*) → di' di cosa si tratta.
+- **il tema è… / il discorso…** (aziendalese: *«il tema è un approccio sinergico», «per quanto
+  riguarda il discorso infiltrazioni»*) → la questione è, il problema è.
+- **combinato disposto, in termini di** → gergo migrato fuori sede; semplifica.
+
+## 3. Formule d'elogio trite
+
+Vuote perché applicabili a chiunque:
+
+- **un intellettuale scomodo** (e chi non crede di esserlo?)
+- **un pensatore fuori dagli schemi** (e chi crede di starci dentro?)
+- **uno scrittore che non fa sconti a nessuno / una voce fuori dal coro** (ma che vuol dire?)
+- **onestà intellettuale** (di solito detto di sé)
+- **classifiche-slogan:** *il più bel romanzo degli ultimi dieci anni, il film dell'anno, la più
+  grande rock band in circolazione* → equivalgono a una fila di punti esclamativi: nessuna
+  informazione. Non esagerare con elogi e paragoni, non fare classifiche.
+
+## 4. Luoghi comuni (idee triviali travestite da saggezza)
+
+Non si tratta più di *parole* ma di *pensiero*: chi le usa ripete idee ricevute senza
+verificarle. Suonano come il gesso che stride sulla lavagna:
+
+- **oggi come oggi, oggigiorno** + lamento nostalgico (*«non c'è più rispetto», «una volta era
+  tutta campagna»*) → se paragoni presente e passato, fallo con cautela, senza nostalgie d'ufficio.
+- **le contraddizioni del mondo in cui viviamo; manca la volontà politica; è un tema scottante.**
+- **frasi-tormentone da talk-show:** *io non l'ho interrotta, in contesto signorile, più studi meno
+  guadagni* (perfette solo come parodia).
+- gli **slogan da campagna**: *di' no alla cultura dello sballo* (il "giovanilese" che nessun
+  giovane userebbe).
+
+## 5. Metafore morte e cliché giornalistici
+
+Immagini ripetute fino a non far più immagine:
+
+- **un bollettino di guerra** (per gli incidenti), **la madre di tutte le X**, **un fiume di
+  parole/persone**, **un boato dentro l'anima**, **fare la differenza**, **il deus ex machina**,
+  **l'altra faccia della medaglia**, **la punta dell'iceberg**, **tirare le fila**.
+- → Una metafora vale se è *viva* e aggiunge senso (vedi **Parte C** §3a). Quella
+  morta non è ornamento: è zavorra. Se non te ne viene una tua, di' la cosa alla lettera.
+
+---
+
+## In sintesi
+
+Il filo è uno: **non pensare per formule.** La frase fatta ti risparmia la fatica di guardare
+davvero la cosa e di trovarle le parole giuste. Sfuggire ai cliché non serve solo a scrivere
+meglio, ma a non assorbire le idee trite che la conversazione, i media e la scuola ci passano
+di continuo.

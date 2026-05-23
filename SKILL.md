@@ -1,13 +1,15 @@
 ---
 name: scrittura-italiana
-version: 2.2.0
+version: 2.3.0
 description: |
   Guida completa per scrivere e correggere testi in italiano impeccabili, organizzata
   attorno alle quattro virtù dell'espressione della retorica classica (aptum, puritas,
   perspicuitas, ornatus). Tre livelli che si tengono insieme: CORRETTEZZA (punteggiatura
   e tipografia + dubbi e errori comuni: accenti, omofoni, apostrofo, plurali, pronomi),
-  CHIAREZZA + EFFICACIA (retorica applicata: stili, figure, ritmo, argomentazione) e
-  NATURALEZZA (rimozione dei segni della scrittura AI e cura della voce). Usala ogni volta
+  CHIAREZZA + EFFICACIA (retorica applicata: stili, figure, ritmo, argomentazione e
+  costruzione del testo — incipit, sviluppo, chiusura) e NATURALEZZA (rimozione dei segni
+  della scrittura AI, antilingua e affettazione all'italiana, frasi fatte e cliché, cura
+  della voce). Usala ogni volta
   che scrivi, revisioni, correggi o editi un testo in italiano — saggistica, tesi,
   articoli, copy, narrativa, email, documentazione, discorsi — o per dubbi di lingua
   (virgola, punto e virgola, due punti, virgolette, trattini, maiuscole; qual è, un po',
@@ -92,9 +94,10 @@ Applica le passate nell'ordine delle virtù, **dalla struttura alla pelle**:
    Una proposizione = un'idea; soggetto vicino al verbo; spezza i periodi troppo lunghi;
    sciogli gli astratti in catena; togli il burocratese. Il lettore deve capire alla prima.
 4. **ornatus — affina, senza eccedere** (`retorica-efficacia.md` §3-4 + `stile-naturale.md`)
-   - *Togli l'eccesso* (= anti-AI): perifrasi → `è/sono`; gerundite; avverbi in *-mente*;
-     triadi forzate; connettori sovrabbondanti; riempitivi; chiusure ottimistiche vuote;
-     residui da chatbot.
+   - *Togli l'eccesso* (= anti-AI): perifrasi → `è/sono`; **antilingua** (parola "scelta" →
+     comune, verbo+astratto → verbo pieno); gerundite; avverbi in *-mente*; triadi forzate;
+     connettori sovrabbondanti; riempitivi; chiusure ottimistiche vuote; pathos kitsch; cliché
+     e frasi fatte (`cliche-e-parole-alla-moda.md`); residui da chatbot.
    - *Aggiungi il giusto*: una figura quando serve (metafora che chiarisce, chiasmo in
      chiusura), ritmo variato, cadenza finale piena. Mai ornamento gratuito.
 5. **voce e audit finale** (`stile-naturale.md` → "Dare voce" + audit)
@@ -107,7 +110,8 @@ stile, calibrati su quello invece di appiattire a un italiano neutro.
 ## Workflow — SCRIVERE da zero
 
 Fissa prima **aptum** (scopo → stile: *docere*=tenue, *delectare*=medio, *movere*=alto;
-vedi `retorica-efficacia.md` §2). Poi scrivi già rispettando le virtù: non produrre prosa
+vedi `retorica-efficacia.md` §2). Imposta la **dispositio** (come entri, come articoli, come
+chiudi: `retorica-efficacia.md` §6). Poi scrivi già rispettando le virtù: non produrre prosa
 da ripulire dopo. Chiudi con l'**audit anti-AI** e la **checklist tipografica**.
 
 ---
@@ -135,10 +139,23 @@ da ripulire dopo. Chiudi con l'**audit anti-AI** e la **checklist tipografica**.
 
 **ornatus — efficacia senza eccesso**
 - Preferisci **`è/sono/ha`** alle perifrasi (*si configura come, rappresenta, costituisce*).
+- **Antilingua:** preferisci sempre la **parola comune** (*fare* non *effettuare*, *casa* non
+  *abitazione*, *problema* non *problematica*); usa il **verbo pieno** al posto di "verbo vuoto +
+  astratto" (*effettuare un controllo* → *controllare*).
 - **Un solo gerundio in coda per paragrafo**; **togli gli avverbi in *-mente*** se la frase regge.
 - **Niente triadi forzate** né *"non solo… ma anche"* a ripetizione.
+- **La ripetizione non è il male:** non inventare perifrasi o antonomasie pur di non ripetere
+  un nome (*Federer* non *il tennista svizzero*).
 - **Una figura solo se aggiunge** senso o forza; altrimenti è *mala affectatio*.
+- **Tieniti un'ottava sotto:** sobrietà, niente pathos né paroloni; *less is more* (taglia
+  aggettivi, avverbi e *quello che è* superflui).
 - **Varia il ritmo**, leggi ad alta voce (scova rime involontarie e cacofonie).
+
+**dispositio — costruzione del testo** (`retorica-efficacia.md` §6)
+- **Entra subito** in argomento (un pieno, non un vuoto): niente preamboli grigi né definizione
+  da vocabolario.
+- **Articola** il discorso (*da un lato… dall'altro*; anticipa e confuta le obiezioni).
+- **Chiudi senza enfasi:** riassunto sobrio o domanda; **mai "lanciare messaggi"** edificanti.
 
 **aptum + voce**
 - Scegli **scopo, registro e livello di controllo** prima di scrivere, e tienili coerenti.
@@ -162,10 +179,16 @@ da ripulire dopo. Chiudi con l'**audit anti-AI** e la **checklist tipografica**.
 - **`references/retorica-efficacia.md`** — *scrivere bene*. Le 4 virtù dell'espressione, i 3
   stili (tenue/medio/sublime ↔ docere/delectare/movere), repertorio essenziale di figure
   (tropi, figure di parola e di pensiero), *compositio* (ordine/ritmo/eufonia), argomentazione
-  per *tópoi*.
-- **`references/stile-naturale.md`** — *togliere lo slop*. 36 pattern dell'italiano AI
-  (contenuto, grammatica, stile, comunicazione, riempitivi) con parole-spia e prima→dopo,
-  sezione "Dare voce" e audit finale.
+  per *tópoi* e **costruzione del testo (*dispositio*: iniziare/andare avanti/chiudere, voce ed
+  *ethos*, buona vs cattiva retorica)**.
+- **`references/stile-naturale.md`** — *togliere lo slop*. Pattern dell'italiano AI (contenuto,
+  grammatica, stile, comunicazione, riempitivi) con parole-spia e prima→dopo; **l'antilingua e
+  l'affettazione all'italiana (sostituzione colta, verbo+astratto, parole di plastica, less is
+  more) e la guardia "verità e misura" (pathos, vaghezza, timidezza)**; sezione "Dare voce" e
+  audit finale.
+- **`references/cliche-e-parole-alla-moda.md`** — *non pensare per formule*. Repertorio di
+  parole alla moda, locuzioni e tormentoni, formule d'elogio trite, luoghi comuni e metafore
+  morte da evitare (con misura), distillato da Giunta.
 
 ---
 
@@ -187,3 +210,7 @@ corretto** (e, se istruttivo, l'errore da evitare), citando la scheda pertinente
   fatti della lingua; testi ed esempi della skill sono rielaborazioni originali.
 - Stile/anti-AI: adattamento italiano di [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
   (WikiProject AI Cleanup), ampliato per i tic dell'italiano.
+- Costruzione del testo, antilingua, affettazione e cliché: C. Giunta, *Come non scrivere*
+  (UTET, 2018); con i classici a cui rimanda — I. Calvino, *L'antilingua* (1965); G. Orwell,
+  *Politics and the English Language* (1946); A. Savinio, *Nuova enciclopedia*. Princìpi ed
+  esempi della skill sono rielaborazioni originali.

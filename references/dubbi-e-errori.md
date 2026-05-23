@@ -152,6 +152,21 @@ copre i segni). Regole sintetizzate da M. Trinci, *Le basi proprio della grammat
   ✗ insegnare → imparare a qualcuno (✓ insegnare a qualcuno); ✗ immune a → ✓ immune da;
   ✗ dentro me → ✓ dentro di me; ✗ davanti la palestra → ✓ davanti alla palestra; ✗ tifo alla
   Fiorentina → ✓ tifo per…; ✗ vicino casa → ✓ vicino a casa.
+- **Reggenze da verificare (sul dizionario, alla voce del verbo/nome):** ✗ confondere qualcuno
+  *per* → ✓ confondere *con* (ma *prendere per*: ti ho preso per un ladro); ✗ ingerenze *sulle*
+  vicende → ✓ ingerenze *nelle*; ✗ avere l'abitudine *a* → ✓ abitudine *di* (ma *abituato a*);
+  ✗ capace *a* fare → ✓ capace *di*; ✗ appassionato *di* questa vicenda → ✓ appassionato *a* (a un
+  fatto) / *di* (di una materia); ✗ un bilancio *sulle* attività → ✓ bilancio *delle*; ✗ molte
+  interpretazioni *a* questa canzone → ✓ *di*.
+- **Collocazioni: il verbo giusto col nome giusto.** ✗ intraprendere *direzioni* → ✓ prendere
+  una direzione / intraprendere un'*azione*; ✗ nutrire *un rapporto* → ✓ *avere* un rapporto
+  (nutrire semmai *simpatia, stima, ammirazione*); ✗ far *gesto* di → ✓ fare *un* gesto / fare
+  *cenno*; ✗ giungere a *riflessioni* → ✓ giungere a *conclusioni* (le riflessioni si *fanno*);
+  ✗ *paventare* nel senso di prevedere → ✓ paventare = *temere*.
+- **Modi di dire da non incrociare:** ✓ tra l'incudine e il martello (≠ tra la padella e la
+  brace, che vale "da un male a uno peggiore"); ✓ avere il pelo sullo stomaco / non avere peli
+  sulla lingua (✗ "peli sullo stomaco"); ✓ essere di bocca buona (✗ "avere la bocca buona");
+  ✓ tra loro corre cattivo sangue (✗ "cattive acque"; *essere in cattive acque* è altra cosa).
 - **Interiezioni:** sole → punto esclamativo/interrogativo (Boh! Eh?); dentro la frase →
   isolate da virgola (Oh, cavolo!).
 
