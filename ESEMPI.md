@@ -102,6 +102,10 @@ In questo registro **sono scelte legittime, non errori**.
 | i programmi, che non guardo | i programmi che non guardo | relativa restrittiva: niente virgola |
 | ti ho confuso per tuo fratello | ti ho confuso con tuo fratello | si confonde *con*, non *per* |
 | effettuare un controllo | controllare | verbo pieno, non «verbo vuoto + astratto» |
+| pensavo che ha ragione | pensavo che avesse ragione | *consecutio*: il passato regge il congiuntivo imperfetto |
+| se avrei tempo, verrei | se avessi tempo, verrei | mai il condizionale nella protasi del periodo ipotetico |
+| ed io, ad ogni costo | e io, a ogni costo | *d* eufonica solo davanti alla stessa vocale |
+| ci siamo visti virtualmente | ci siamo visti online | *virtualmente* = «di fatto», non «a distanza» |
 
 ---
 
@@ -129,6 +133,103 @@ comune), le frasi fatte, e l'architettura del testo (come si entra e come si chi
 - **dispositio + individuazione:** la conclusione che "lancia un messaggio" edificante diventa
   un fatto concreto (cosa sistemare, entro quando); il generico *molteplici* lascia il posto
   all'elenco dei problemi reali.
+
+---
+
+## 6. Coesione: ricucire un testo «a mosaico»
+
+Un tell tipico dell'AI: frasi tutte vere, tutte corrette, ma scollegate — le potresti riordinare
+senza che il senso cambi. Non argomenta: cataloga. Qui la skill rimette il **filo**.
+
+**Prima** (giustapposizione: nessun nesso di causa, conseguenza o scopo):
+
+> Il borgo conta meno di mille abitanti. La scuola ha chiuso nel 2009. Molti giovani si sono
+> trasferiti in città. Il comune ha avviato un piano di ripopolamento. Le case costano poco.
+
+**Dopo** (tema/rema e connettivi giusti: il testo ha una direzione):
+
+> Il borgo conta meno di mille abitanti, e ogni anno sono di meno: la scuola ha chiuso nel 2009 e
+> i giovani si sono trasferiti in città. Per invertire la rotta il comune ha avviato un piano di
+> ripopolamento — e una leva ce l'ha già: qui le case costano pochissimo.
+
+*Cosa è cambiato*
+- **coesione:** ogni frase si aggancia alla precedente (la fine di una diventa l'inizio della
+  successiva); il *test del mosaico* non passa più, l'ordine ora conta.
+- **connettivi giusti:** la causa (i due punti = *perché*), lo scopo (*per invertire la rotta*),
+  la concessione implicita (*e una leva ce l'ha già*) al posto della fila di punti fermi.
+- **niente di inventato:** stessi fatti di prima, solo collegati. (Vedi `coesione-e-connettivi.md`
+  e `stile-naturale.md` §50.)
+
+---
+
+## 7. Divulgazione: spiegare con chiarezza (non semplificare)
+
+Quando si spiega qualcosa di tecnico, l'AI tende a *semplificare* (togliere le sfumature) e a
+sparare numeri-totem senza contesto. La skill fa il contrario: contestualizza e qualifica.
+
+**Prima** (hype + numero senza scala + chiusura vuota):
+
+> Il nuovo chip esegue 200 trilioni di operazioni al secondo: una potenza di calcolo
+> straordinaria che rivoluziona il settore.
+
+**Dopo** (numero contestualizzato + chiarezza al posto di semplificazione):
+
+> Il nuovo chip esegue circa 200.000 miliardi di operazioni al secondo — in un secondo fa quello
+> che un computer da ufficio di dieci anni fa avrebbe fatto in una giornata. Sulla carta è dieci
+> volte il modello precedente; quanto serva davvero dipende dai programmi che lo sfrutteranno.
+
+*Cosa è cambiato*
+- **numero leggibile:** *200 trilioni* (ambiguo in italiano) → cifra esplicita + un **confronto**
+  tangibile e l'**ordine di grandezza** (×10 sul modello prima).
+- **chiarezza ≠ semplificazione:** *rivoluziona il settore* (slogan vuoto) → cosa cambia davvero,
+  **con il suo limite** («dipende dai programmi»). Una qualifica in più, non in meno.
+- **anti-hype:** via *straordinaria* e *rivoluziona* (`stile-naturale.md` §1; `spiegare-con-chiarezza.md`).
+
+---
+
+## 8. Sintassi del verbo: congiuntivo, *consecutio*, periodo ipotetico
+
+Errori frequenti anche in chi scrive bene — e che l'AI a volte replica. La skill li corregge
+**spiegando la regola**.
+
+**Prima:**
+
+> Pensavo che era una buona idea, ma se l'avrei saputo che costava così tanto non l'avrei
+> comprato. Speravo che me lo dicevi prima.
+
+**Dopo:**
+
+> Pensavo che fosse una buona idea; ma se l'avessi saputo che costava così tanto, non l'avrei
+> comprato. Speravo che me lo dicessi prima.
+
+*Cosa è cambiato (con la regola)*
+- `pensavo che era` → **fosse**: *consecutio temporum*, il passato regge il congiuntivo imperfetto.
+- `se l'avrei saputo` → **se l'avessi saputo**: nel periodo ipotetico **mai il condizionale nella
+  protasi** (irrealtà = congiuntivo trapassato + condizionale passato).
+- `speravo che me lo dicevi` → **dicessi**: dopo un verbo di speranza al passato, congiuntivo
+  imperfetto. (Vedi `dubbi-e-errori.md` §11-12.)
+
+---
+
+## 9. Revisione: trovare la parola giusta
+
+Non basta togliere lo slop: a volte serve *aggiungere precisione*. Qui la skill smonta gli
+intensificatori che indeboliscono e collauda le metafore.
+
+**Prima** (intensificatori, metafora-cliché, antilingua):
+
+> Un libro estremamente avvincente, dallo stile graffiante, che affronta tematiche di assoluta
+> attualità.
+
+**Dopo** (l'aggettivo nudo o un'immagine precisa, parola comune):
+
+> Un libro che non si molla, scritto con nervo, sui temi di oggi.
+
+*Cosa è cambiato*
+- **intensificatori:** *estremamente avvincente*, *assoluta attualità* → l'avverbio che potenzia in
+  realtà sottrae; meglio l'immagine precisa («non si molla») o l'aggettivo nudo.
+- **collaudo letterale:** *stile graffiante* è un cliché che alla lettera non regge (`revisione-e-proprieta.md` §4) → *scritto con nervo*.
+- **antilingua:** *tematiche di attualità* → *i temi di oggi* (la parola comune batte quella "scelta").
 
 ---
 
