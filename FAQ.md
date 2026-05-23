@@ -1,5 +1,7 @@
 # FAQ
 
+![Version](https://img.shields.io/badge/version-2.3.0-blue.svg)
+
 Domande ricorrenti su *scrittura-italiana*. Per esempi concreti vedi **[ESEMPI.md](ESEMPI.md)**.
 
 ### È per testi scritti da esseri umani o dall'AI?
@@ -14,6 +16,13 @@ coesione, retorica) e ti spiega *perché* corregge. Dove rende di più è però 
 Fa molto di più. Un correttore vede refusi e accordi; questa skill lavora anche su punteggiatura
 fine, registro, figure retoriche, ritmo, coesione lessicale e sui tic ricorrenti dell'italiano
 generato dall'AI. E non riscrive di testa sua: la indirizzi tu, propone e spiega.
+
+### Cosa copre, oltre a punteggiatura e anti-AI?
+
+Anche la **costruzione del testo** (come iniziare, articolare e chiudere — la *dispositio*),
+l'**antilingua**, cioè l'affettazione "all'italiana" (*recarsi* per *andare*, *effettuare* per
+*fare*, *criticità* per *problemi*), e un repertorio di **frasi fatte e cliché** da evitare con
+misura. Insomma, dalla virgola all'architettura del discorso.
 
 ### Non mi rende pigro o "incapace"?
 

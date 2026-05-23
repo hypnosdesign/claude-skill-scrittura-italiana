@@ -1,5 +1,7 @@
 # Esempi (prima → dopo)
 
+![Version](https://img.shields.io/badge/version-2.3.0-blue.svg)
+
 Cosa fa la skill, su testi reali. Tre cose da tenere a mente, perché rispondono alle domande
 più frequenti:
 
@@ -97,6 +99,35 @@ In questo registro **sono scelte legittime, non errori**.
 | se stesso *(o)* sé stesso | sé stesso | acuto consigliato per uniformità |
 | da/dà confusi | da (prep.) / dà (verbo) | accento solo sul verbo |
 | i programmi, che non guardo | i programmi che non guardo | relativa restrittiva: niente virgola |
+| ti ho confuso per tuo fratello | ti ho confuso con tuo fratello | si confonde *con*, non *per* |
+| effettuare un controllo | controllare | verbo pieno, non «verbo vuoto + astratto» |
+
+---
+
+## 5. Antilingua, cliché e costruzione del testo
+
+Le novità della 2.3.0: l'affettazione "all'italiana" (la parola "scelta" al posto di quella
+comune), le frasi fatte, e l'architettura del testo (come si entra e come si chiude).
+
+**Prima** (antilingua, burocratese, cliché, chiusura che "lancia un messaggio"):
+
+> In data odierna il sottoscritto si è recato presso la struttura al fine di effettuare un
+> sopralluogo. Le criticità riscontrate sono molteplici e a 360 gradi. In conclusione, sono
+> certo che, con impegno e determinazione, sapremo trasformare ogni sfida in un'opportunità.
+
+**Dopo** (parole comuni, verbo pieno, niente frasi fatte, chiusura asciutta):
+
+> Oggi sono andato a vedere la struttura. I problemi sono parecchi: l'impianto elettrico è
+> fuori norma, il tetto perde, due uscite di sicurezza sono bloccate. Vanno sistemati prima
+> della riapertura.
+
+*Cosa è cambiato*
+- **antilingua:** *recarsi presso → andare a*, *effettuare un sopralluogo → vedere*, *criticità
+  → problemi*, *in data odierna → oggi* (parola comune e verbo pieno).
+- **cliché:** via *a 360 gradi* e la chiusura *"trasformare ogni sfida in un'opportunità"*.
+- **dispositio + individuazione:** la conclusione che "lancia un messaggio" edificante diventa
+  un fatto concreto (cosa sistemare, entro quando); il generico *molteplici* lascia il posto
+  all'elenco dei problemi reali.
 
 ---
 
