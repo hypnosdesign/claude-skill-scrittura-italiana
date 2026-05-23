@@ -1,15 +1,17 @@
 # FAQ
 
-![Version](https://img.shields.io/badge/version-2.3.1-blue.svg)
+![Version](https://img.shields.io/badge/version-2.3.2-blue.svg)
 
 Domande ricorrenti su *scrittura-italiana*. Per esempi concreti vedi **[ESEMPI.md](ESEMPI.md)**.
 
-### È per testi scritti da esseri umani o dall'AI?
+### È un humanizer? Fa sembrare umano un testo scritto dall'AI?
 
-Entrambi. Su un testo umano fa da revisore (punteggiatura, grammatica, registro, ritmo,
-coesione, retorica) e ti spiega *perché* corregge. Dove rende di più è però sui testi
-**generati dall'AI**, soprattutto quando partono da appunti, idee, brainstorming o tabelle — la
-"brutta" da cui oggi si fa stendere un testo — e non vuoi che l'output suoni artificiale.
+Sì, è il suo gancio principale: incolli un testo che "sa di AI" e te lo restituisce naturale —
+via perifrasi, gerundite, triadi, avverbi in *-mente*, trattini lunghi, antilingua, cliché,
+chiusure ottimistiche vuote. La differenza con un humanizer qualsiasi: non fa
+trova-e-sostituisci, **conosce l'italiano**, perciò te lo rende anche corretto (punteggiatura,
+tipografia), chiaro ed efficace. Funziona anche su **testi tuoi**: lì fa da revisore che
+*spiega* la regola, soprattutto quando parti da appunti o da una "brutta" stesa da un modello.
 
 ### Non è solo un correttore come quello di Word?
 

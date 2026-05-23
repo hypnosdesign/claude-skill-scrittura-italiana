@@ -5,6 +5,17 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.3.2] — 2026-05-23
+
+### Cambiato
+- **Riposizionamento:** la skill è presentata come *un humanizer con i superpoteri* — il gancio
+  è l'umanizzazione (togliere i segni dell'AI), correttezza e retorica sono ciò che la
+  distingue da un trova-e-sostituisci. Aggiornati `README.md` (hero + "Cos'è" + sezione
+  inglese), la `description` di `SKILL.md` (guidata dall'umanizzazione, sempre ≤ 1024
+  caratteri), `FAQ.md` (prima domanda) ed `ESEMPI.md` (intro).
+- Nessuna modifica alle regole o ai contenuti dei riferimenti: cambia solo come la skill si
+  presenta e viene attivata.
+
 ## [2.3.1] — 2026-05-23
 
 ### Corretto
@@ -83,6 +94,7 @@ la dimensione, prima assente, della **costruzione del testo**.
   di *Wikipedia: Signs of AI writing*).
 - `README.md` bilingue, `CONTRIBUTING.md`, template per issue e pull request.
 
+[2.3.2]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.3.2
 [2.3.1]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.3.1
 [2.3.0]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.3.0
 [2.2.0]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.2.0

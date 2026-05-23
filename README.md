@@ -1,22 +1,25 @@
-# scrittura-italiana — skill per Claude
+# scrittura-italiana — l'humanizer italiano con i superpoteri
 
-> Guida completa per **scrivere e correggere testi in italiano impeccabili**, organizzata
-> attorno alle **quattro virtù dell'espressione** della retorica classica: correttezza
-> (punteggiatura e tipografia), chiarezza ed efficacia (retorica applicata), naturalezza
-> (senza i segni della scrittura AI).
+> Cancella l'odore di AI dai tuoi testi italiani — perifrasi, gerundite, triadi, avverbi in
+> *-mente*, trattini lunghi, frasi fatte. E già che c'è li scrive *giusti*: punteggiatura,
+> tipografia, registro, ritmo, retorica. **Non un trova-e-sostituisci: sa l'italiano.**
 >
-> *A Claude [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills) for writing
-> and editing flawless Italian, organized around the four classical virtues of style:
-> correctness (punctuation & typography), clarity & effectiveness (applied rhetoric), and
-> naturalness (anti-AI). Content is in Italian.*
+> *A Claude [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills) that humanizes
+> Italian text — and actually knows the language: punctuation, typography, register, rhythm,
+> rhetoric. Not a find-and-replace. Content is in Italian.*
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.3.1-blue.svg)
+![Version](https://img.shields.io/badge/version-2.3.2-blue.svg)
 
 ## Cos'è
 
-Una skill che dà a Claude il quadro completo per scrivere in italiano, organizzato attorno
-alle **quattro virtù dell'espressione** (*virtutes elocutionis*) della retorica classica:
+Il punto di partenza di quasi tutti: **incolli un testo che "sa di AI" e te lo restituisce
+umano** — via perifrasi, gerundite, triadi, avverbi in *-mente*, trattini lunghi, antilingua,
+cliché, chiusure ottimistiche vuote. Fin qui, un humanizer.
+
+I **superpoteri** stanno sotto: a differenza di un trova-e-sostituisci, questa skill conosce
+l'italiano per davvero, perché è costruita sulle **quattro virtù dell'espressione**
+(*virtutes elocutionis*) della retorica classica:
 
 1. **aptum** — appropriatezza a scopo, destinatario, registro e **livello di controllo** del
    testo (editoriale vs web/social): nel testo informale le convenzioni da tastiera — virgolette
@@ -57,7 +60,7 @@ quando serve il dettaglio (*progressive disclosure*).
 
 ## Documentazione
 
-- **[FAQ.md](FAQ.md)** — domande ricorrenti (per testi umani o AI? non è un autocorrettore? mi impone uno stile?…).
+- **[FAQ.md](FAQ.md)** — domande ricorrenti (è un humanizer? non è un autocorrettore? mi impone uno stile?…).
 - **[ESEMPI.md](ESEMPI.md)** — casi *prima → dopo* (testo AI, revisione di testo umano, registro informale).
 - **[scrittura-italiana-single-file.md](scrittura-italiana-single-file.md)** — tutta la skill in un file, per Gemini/ChatGPT e assistenti senza supporto nativo alle Skill.
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** — come contribuire.
@@ -189,9 +192,12 @@ Questa skill è un'opera derivata e cita le sue fonti:
 that gives Claude the full framework for **writing and editing Italian**. The skill's
 content is in Italian (it has to be), but here's what it does and how to use it.
 
-### What it does — the four virtues of style
+### What it does — a humanizer that knows Italian
 
-The skill is organized around the four classical *virtutes elocutionis*:
+Paste AI-sounding text and get it back human — no periphrasis, trailing gerunds, forced
+triads, *-mente* adverbs, em dashes, "antilingua" affectation or clichés. That much is a
+humanizer. The **superpower**: unlike a find-and-replace, it actually knows Italian, because
+it's built on the four classical *virtutes elocutionis*:
 
 1. **aptum** — appropriateness to purpose, audience, register.
 2. **puritas** — grammatical and typographical correctness: comma, semicolon, colon,

@@ -1,9 +1,10 @@
 # Esempi (prima → dopo)
 
-![Version](https://img.shields.io/badge/version-2.3.1-blue.svg)
+![Version](https://img.shields.io/badge/version-2.3.2-blue.svg)
 
-Cosa fa la skill, su testi reali. Tre cose da tenere a mente, perché rispondono alle domande
-più frequenti:
+Cosa fa la skill, su testi reali. Il caso d'uso principale è **umanizzare** un testo che "sa
+di AI" (§1); ma è un humanizer con i superpoteri, perciò sa anche correggere, chiarire e dare
+voce. Tre cose da tenere a mente:
 
 - **Funziona sia su testi AI sia su testi umani.** Su quelli AI rende di più (vedi §1); su
   quelli umani fa da revisore che *spiega* la regola (§2).
