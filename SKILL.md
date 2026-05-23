@@ -1,20 +1,20 @@
 ---
 name: scrittura-italiana
-version: 2.3.0
+version: 2.3.1
 description: |
-  Guida completa per scrivere e correggere testi in italiano impeccabili, organizzata
-  attorno alle quattro virtù dell'espressione della retorica classica (aptum, puritas,
-  perspicuitas, ornatus). Tre livelli che si tengono insieme: CORRETTEZZA (punteggiatura
-  e tipografia + dubbi e errori comuni: accenti, omofoni, apostrofo, plurali, pronomi),
-  CHIAREZZA + EFFICACIA (retorica applicata: stili, figure, ritmo, argomentazione e
-  costruzione del testo — incipit, sviluppo, chiusura) e NATURALEZZA (rimozione dei segni
-  della scrittura AI, antilingua e affettazione all'italiana, frasi fatte e cliché, cura
-  della voce). Usala ogni volta
-  che scrivi, revisioni, correggi o editi un testo in italiano — saggistica, tesi,
-  articoli, copy, narrativa, email, documentazione, discorsi — o per dubbi di lingua
-  (virgola, punto e virgola, due punti, virgolette, trattini, maiuscole; qual è, un po',
-  da/dà, sé stesso, accenti, plurali difficili, tu/te, congiuntivo); per scrivere in modo
-  chiaro, efficace e persuasivo; e per far suonare un testo naturale e non generato da AI.
+  Guida per scrivere e correggere testi in italiano impeccabili, organizzata
+  attorno alle quattro virtù dell'espressione (aptum, puritas, perspicuitas,
+  ornatus). Tre livelli: CORRETTEZZA (punteggiatura e tipografia + dubbi ed
+  errori: accenti, omofoni, apostrofo, plurali, pronomi), CHIAREZZA ed EFFICACIA
+  (retorica applicata: stili, figure, ritmo, argomentazione, costruzione del
+  testo — incipit, sviluppo, chiusura) e NATURALEZZA (rimozione dei segni dell'AI,
+  antilingua e affettazione all'italiana, frasi fatte e cliché, cura della voce).
+  Usala per scrivere, revisionare, correggere o editare qualunque testo italiano
+  — saggistica, tesi, articoli, copy, narrativa, email, documentazione, discorsi —
+  o per dubbi di lingua (virgola, punto e virgola, due punti, virgolette, trattini,
+  maiuscole; qual è, un po', da/dà, sé stesso, plurali difficili, tu/te,
+  congiuntivo); per scrivere in modo chiaro, efficace e persuasivo; e per far
+  suonare un testo naturale e non generato da AI.
 license: CC-BY-SA-4.0
 language: it
 compatibility: claude-code claude-desktop opencode claude.ai

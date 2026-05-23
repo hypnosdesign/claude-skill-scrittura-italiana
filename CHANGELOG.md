@@ -5,6 +5,14 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.3.1] — 2026-05-23
+
+### Corretto
+- **`SKILL.md`**: accorciata la `description` (da ~1056 a 975 caratteri) per rientrare nel
+  limite di **1024 caratteri** imposto dal caricamento delle Skill su Claude Desktop/claude.ai.
+  Nessuna modifica al comportamento: stesse virtù, stessi contenuti, stesse parole-chiave di
+  attivazione. Lo zip allegato alla release è rigenerato di conseguenza.
+
 ## [2.3.0] — 2026-05-23
 
 Integrazione di C. Giunta, *Come non scrivere* (UTET, 2018): l'affettazione "all'italiana" e
@@ -75,6 +83,7 @@ la dimensione, prima assente, della **costruzione del testo**.
   di *Wikipedia: Signs of AI writing*).
 - `README.md` bilingue, `CONTRIBUTING.md`, template per issue e pull request.
 
+[2.3.1]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.3.1
 [2.3.0]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.3.0
 [2.2.0]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.2.0
 [2.1.0]: https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/tag/v2.1.0
