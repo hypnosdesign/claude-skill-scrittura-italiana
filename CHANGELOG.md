@@ -5,6 +5,34 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.8.0] — 2026-05-26
+
+**Tic della prosa saggistico-accademica AI.** Otto pattern nuovi emersi dallo stesso audit
+della v2.7.0 (libro accademico ~44k parole), specifici del sotto-genere in cui l'AI scrive
+di teoria, cita autori, costruisce argomentazioni. Registro diverso dal copy e dal
+divulgativo, con tic propri che né il vocabolario AI generico né l'antilingua scolastica
+catturano.
+
+### Aggiunto
+- **`stile-naturale.md` § I (58-65)** — nuova sezione *Tic della prosa saggistico-accademica
+  AI*: §58 catene di transizione fra autori (*«X arriva in soccorso da una direzione…»*);
+  §59 glossa metalinguistica vuota (*«in questo senso preciso»*, pseudo-precisione); §60
+  termini metalinguistici-ombrello dell'accademica umanistica (*posta concettuale, cifra,
+  asse, mossa, postura*) con spia di densità; §61 autoriferimento metatestuale formale
+  (*«il presente paragrafo»*); §62 meta-frasi che annunciano la sintesi prima di farla
+  (*«Le N voci convergono in un'unica conclusione: …»*); §63 *«Resta vero che X»* come
+  chiusura paragrafo; §64 autovalutazioni di precisione (*«L'implicazione è esatta»*); §65
+  *«La pertinenza di X per Y è…»* come incipit applicativo. Ogni voce con esempi
+  prima/dopo dal corpus auditato e differenziazione dai pattern vicini.
+- **`stile-naturale.md` §9** — nota in coda: il pattern bipolare si annida anche dentro
+  l'apparato di citazione (glossa esplicativa scambiata per "parte della citazione"
+  intoccabile).
+- **`evals/02-prosa-saggistica.md`** — secondo eval della skill: paragrafo con 4+ tic
+  saggistici sovrapposti, output atteso e FAIL tipici (incluso il bipolare annidato in
+  glossa e la sostituzione di un tic con un altro della stessa famiglia).
+- **`evals/01-tic-bipolare.md`** — aggiunto FAIL per il pattern bipolare annidato nella
+  glossa di citazione.
+
 ## [2.7.0] — 2026-05-26
 
 **Famiglia del tic bipolare** «non è X ma Y». Lezione emersa da un audit reale su un libro

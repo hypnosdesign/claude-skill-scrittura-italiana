@@ -185,6 +185,16 @@ punteggiandola — interviene anche se ogni singola occorrenza è motivabile in 
 è una misura empirica: è una soglia di lavoro che si alza per la saggistica filosofica e
 si abbassa per il copy.
 
+> **Attenzione: il pattern si annida anche dentro l'apparato di citazione.** Quando l'AI
+> espone la citazione di un autore con una glossa esplicativa, la formula bipolare riemerge
+> dentro la glossa come se fosse parte dell'esposizione neutra del pensiero altrui. Es. *«La
+> parola decisiva, "carne" (chair nel francese originale), non designa il corpo individuale
+> dell'osservatore né la materia delle cose, ma il tessuto comune che li tiene insieme»* — la
+> struttura *«X non designa Y né Z, ma A»* è bipolare ternaria, generata nell'esposizione,
+> non è citazione diretta dell'autore. In audit, controlla **esplicitamente** anche le frasi
+> di glossa che accompagnano le citazioni: chi legge tende a trattarle come "parte della
+> citazione" e quindi intoccabili, ed è lì che il tic sopravvive.
+
 **10. Regola del tre.** Triadi forzate (*innovazione, ispirazione e nuove prospettive*).
 Se ne conti tre o quattro in un paragrafo, è AI.
 
@@ -483,6 +493,119 @@ mancanza di un'osservazione vera. → Una forma insolita è legittima quando **p
 forza** (McCarthy che toglie la punteggiatura dei dialoghi); se isola invece di connettere, è un
 trucco. Test: sai dire *perché* hai usato quella forma? Se no, probabilmente è un trucco. (Collega
 `retorica-efficacia.md` → "Errore vs licenza"; `narrativa.md` §6, §12.)
+
+---
+
+## I. Tic della prosa saggistico-accademica AI
+
+Tic specifici del sotto-genere in cui l'AI scrive di teoria, cita autori, costruisce
+argomentazioni — un registro diverso dal copy o dal divulgativo, con tic propri che né il
+vocabolario AI generico (§7) né l'antilingua scolastica (§44) catturano del tutto. Esempi
+tratti da un audit reale su una tesi accademica italiana ~44.000 parole.
+
+**58. Catene di transizione fra autori.** L'AI in saggistica enumera autori connessi da
+formule prefabbricate che fanno da ponte ma non aggiungono argomento: ogni autore *arriva
+in soccorso*, *porta lo stesso argomento*, *aggiunge la chiusura*, *conferma da
+un'angolatura diversa*, *lavora nella stessa direzione con un altro lessico*. Pattern del
+genere: *«X + verbo-ponte + da Y direzione/angolatura/piano»*. Verbi-ponte ricorrenti:
+*arriva, porta, aggiunge, conferma, lavora, opera, si muove, riprende, prolunga*.
+
+✗ *Merleau-Ponty arriva in soccorso da una direzione filologicamente diversa ma
+argomentativamente identica.* ✓ *Merleau-Ponty parte da una filologia diversa e arriva alla
+stessa conclusione.* Oppure: sopprimere del tutto la transizione, se il paragrafo nuovo
+parla da sé. → **Differenziazione:** non è §35 (segnaletica al lettore, *«vediamo
+insieme»*); non è §11 (variazione elegante, sinonimi per lo stesso oggetto): qui la
+formula-tipo si ripete per *oggetti diversi*, gli autori.
+
+**59. Glossa metalinguistica vuota (pseudo-precisione).** Mosse di precisazione che non
+precisano. *«in questo senso preciso», «nel senso stretto/forte/debole del termine», «in
+modo dichiarato», «in senso proprio», «in senso tecnico», «dichiaratamente»*. Sembrano
+rigorose, ma il referente preciso che la glossa promette di specificare quasi sempre
+manca.
+
+✗ *Il fenotipo nuovo è, in questo senso preciso, un condividuo temporale.* ✓ *Il fenotipo
+nuovo è un condividuo temporale.* — La glossa va tolta. Se la precisazione serve davvero,
+sostituiscila con la specificazione concreta che la glossa promette ma non dà: *«in senso
+tecnico»* → *«in senso biologico»* / *«secondo Lenski»*. → **Differenziazione:** non è §31
+(hedging, *«si potrebbe forse argomentare che»*), che attenua: qui la mossa è
+*finto-rafforzativa*. Non è §34 (*«la vera domanda è»*), che rivendica autorità sul
+lettore: qui si rivendica precisione filologica.
+
+**60. Termini metalinguistici-ombrello dell'accademica umanistica.** Famiglia di
+nomi-ombrello per astrazioni di livello superiore: *posta concettuale, cifra retorica,
+asse identitario, matrice argomentativa, articolazione, mossa, operazione, gesto, figura,
+postura, taglio, registro*. Singolarmente sono parole legittime, e la saggistica naturale
+le usa. Il tic AI è la **densità**: in una pagina compaiono cinque o sei di questi
+nomi-ombrello, uno per concetto.
+
+✗ *La mossa wildiana, la cifra del progetto, la posta concettuale del paragrafo, l'asse
+identitario del posizionamento.* ✓ *La distinzione wildiana fra real world e world of art;
+ciò che distingue The Blind Gardeners; il punto del paragrafo; come il progetto si
+colloca.* — Nomina il referente concreto. **Spia di densità:** se in un capoverso di 200
+parole ci sono 3+ nomi-ombrello di questa famiglia, sta lavorando il tic. →
+**Differenziazione:** non è §16 (astratti generici amministrativi, *processo, dimensione,
+prospettiva*); non è §39 (aziendalese, *criticità, attenzionare*): qui il registro è
+*accademico-teorico*, non burocratico né corporate.
+
+**61. Autoriferimento metatestuale formale.** *«il presente paragrafo, la presente
+sezione, questo Liber, il paragrafo che segue, la sezione successiva»*. Calco di prosa
+accademica tradizionale (latino *praesens*, *infra*, *supra*); in piccola dose è
+legittimo, ma l'AI ne abusa.
+
+✗ *Il Merleau-Ponty di* Il visibile e l'invisibile, *quello che il presente paragrafo
+adotta, è già un altro autore.* ✓ *Il Merleau-Ponty di* Il visibile e l'invisibile, *che
+adottiamo qui, è già un altro autore.* — Nella maggioranza dei casi si toglie senza
+perdita. Quando l'autoriferimento è davvero strutturale (annuncio dell'organizzazione del
+libro), riformula in voce attiva: *«nel paragrafo successivo articoliamo»*. →
+**Differenziazione:** non è §35 (segnaletica al lettore, *«approfondiamo»*): qui il testo
+parla *di sé* in terza persona formale.
+
+**62. Meta-frasi che annunciano la sintesi prima di farla.** L'AI chiude paragrafi e
+sezioni con frasi che annunciano la sintesi che immediatamente segue. *«Le N voci
+convergono in un'unica conclusione: …»; «Il filo che le tiene è uno solo: …»; «In quattro
+proposizioni il punto è: …»; «Tutto questo si riassume in: …»*. L'annuncio precede una
+sintesi che il lettore vedrà comunque: ridondanza strutturale.
+
+✗ *Le quattro voci convergono in un'unica conclusione, che il Liber pone alla porta della
+propria sintesi: la non-condivisione di codice è la condizione operativa del dispositivo.*
+✓ *La non-condivisione di codice è la condizione operativa del dispositivo.* — Togli
+l'annuncio, lascia la sintesi sola. Se serve davvero un'apertura, un connettivo asciutto
+(*«In sintesi:», «Insomma:», «Detto altrimenti:»*), non un auto-annuncio gonfiato. →
+**Differenziazione:** non è §35 (segnaletica al lettore in imperativo, *«vediamo
+insieme»*): qui è *constatativa-dichiarativa*, in terza persona. Non è §36 (header
+frammentato, ridondanza fra titolo e prima frase): qui è interna al paragrafo.
+
+**63. *«Resta vero che X»* come chiusura paragrafo.** Formula di chiusura che dà un'ultima
+parola "che suona conclusiva senza esserlo". Varianti: *«Resta che X»*, *«Vale comunque
+che X»*.
+
+✗ *Resta vero, in tutti i piani, che la cecità non è il fallimento del dispositivo.* ✓ *In
+tutti i piani, la cecità non è il fallimento del dispositivo.* — Togli la formula, lascia
+l'asserzione. → **Differenziazione:** non è §32 (chiusure ottimistiche edificanti, *«il
+futuro si prospetta brillante»*): qui la chiusura è *dichiarativo-assertoria*, non
+positiva.
+
+**64. Autovalutazioni di precisione.** L'AI dichiara la qualità della propria analogia o
+distinzione invece di lasciar parlare l'analogia: *«L'implicazione è esatta; La somiglianza
+è precisa; La conseguenza è duplice; La distinzione è netta; Il parallelo è puntuale»*.
+
+✗ *La somiglianza con il dispositivo BG è precisa: entrambi mettono in scena
+l'inaccessibilità del segno.* ✓ *Entrambi mettono in scena l'inaccessibilità del segno.* —
+Se l'analogia è davvero precisa, parla da sé; se non lo è, dichiararlo non la rende tale.
+→ **Differenziazione:** non è §7 (vocabolario AI generico, *cruciale, fondamentale*): qui
+gli aggettivi sono in posizione *metalinguistica-autovalutativa*, non descrittiva.
+
+**65. *«La pertinenza/rilevanza di X per Y è…»* come incipit applicativo.** Apertura di
+paragrafo quando si "aggancia" una cornice teorica appena evocata al caso specifico.
+Varianti: *«Per Y l'implicazione è…», «Per il nostro caso la conseguenza è…», «Applicato
+a Y, il concetto rende…»*.
+
+✗ *La pertinenza di queste figure per The Blind Gardeners è strutturale. La triade di
+emergenza è simpoietica nel senso di Dempster e Haraway.* ✓ *La triade di emergenza di The
+Blind Gardeners è simpoietica nel senso di Dempster e Haraway.* — Entra direttamente
+nell'applicazione, salta l'annuncio. → **Differenziazione:** parente di §62 (meta-frase
+che annuncia), ma qui l'annuncio non riguarda *la sintesi* del paragrafo che chiude, bensì
+*l'aggancio* del paragrafo che si apre.
 
 ## Audit finale anti-AI (passaggio obbligato)
 

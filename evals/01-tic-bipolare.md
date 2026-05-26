@@ -66,6 +66,12 @@ Con note esplicite della skill, per esempio:
 - Tutte le occorrenze trattate come un unico pattern, senza riconoscere le varianti.
 - Nessuna nota di motivazione sulla preservazione: la skill deve mostrare il *perché*,
   non solo il *cosa*.
+- **Pattern bipolare annidato nella glossa di una citazione**, scambiato per "parte della
+  citazione" e quindi non riscritto. Test: dopo un virgolettato attribuito a un autore,
+  segue una glossa esplicativa contenente *«X non designa Y, ma A»* (struttura bipolare
+  ternaria o binaria). La skill deve trattare la glossa come prosa propria del testo —
+  riscrivibile assertiva pura — non come materiale citato intoccabile. La nota in coda al
+  §9 lo prescrive: se la skill lascia intatta la glossa adducendo "è citazione", è FAIL.
 
 ## Note
 

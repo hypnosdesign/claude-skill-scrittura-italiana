@@ -1,18 +1,19 @@
 ---
 name: scrittura-italiana
-version: 2.7.0
+version: 2.8.0
 description: |
   Humanizer dell'italiano: rende naturale e non "da AI" un testo — via
   perifrasi, gerundite, triadi, avverbi in -mente, trattini lunghi,
-  definizioni bipolari «non è X ma Y», antilingua, frasi fatte — e, a
-  differenza di un trova-e-sostituisci, lo scrive anche corretto, chiaro
-  ed efficace perché conosce l'italiano. Quattro virtù dell'espressione:
-  NATURALEZZA (segni dell'AI, voce), CORRETTEZZA (punteggiatura, accenti,
-  omofoni, plurali, pronomi), CHIAREZZA ed EFFICACIA (retorica, figure,
-  ritmo, argomentazione). Per umanizzare, scrivere, revisionare o editare
-  testi italiani — saggistica, tesi, articoli, copy, narrativa, email — o
-  per dubbi di lingua (virgola, due punti, virgolette; qual è, un po',
-  da/dà, sé stesso, congiuntivo).
+  definizioni bipolari «non è X ma Y», tic della prosa saggistica (catene
+  di transizione fra autori, glosse di pseudo-precisione, nomi-ombrello),
+  antilingua, frasi fatte — e, a differenza di un trova-e-sostituisci, lo
+  scrive anche corretto, chiaro ed efficace perché conosce l'italiano.
+  Quattro virtù dell'espressione: NATURALEZZA (segni dell'AI, voce),
+  CORRETTEZZA (punteggiatura, accenti, omofoni, plurali, pronomi),
+  CHIAREZZA ed EFFICACIA (retorica, figure, ritmo, argomentazione). Per
+  umanizzare, scrivere, revisionare o editare testi italiani — saggistica,
+  tesi, articoli, copy, narrativa, email — o per dubbi di lingua (virgola,
+  due punti, virgolette; qual è, un po', da/dà, sé stesso, congiuntivo).
 license: CC-BY-SA-4.0
 language: it
 compatibility: claude-code claude-desktop opencode claude.ai
@@ -223,8 +224,11 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
 - **`references/stile-naturale.md`** — *togliere lo slop*. Pattern dell'italiano AI (contenuto,
   grammatica, stile, comunicazione, riempitivi) con parole-spia e prima→dopo; **l'antilingua e
   l'affettazione all'italiana (sostituzione colta, verbo+astratto, parole di plastica, less is
-  more) e la guardia "verità e misura" (pathos, vaghezza, timidezza)**; sezione "Dare voce" e
-  audit finale.
+  more) e la guardia "verità e misura" (pathos, vaghezza, timidezza)**; **i tic della prosa
+  saggistico-accademica** (catene di transizione fra autori, glosse di pseudo-precisione,
+  nomi-ombrello dell'accademica umanistica, autoriferimento metatestuale, meta-frasi di
+  sintesi, *«resta vero che»*, autovalutazioni di precisione); sezione "Dare voce" e audit
+  finale.
 - **`references/cliche-e-parole-alla-moda.md`** — *non pensare per formule*. Repertorio di
   parole alla moda, locuzioni e tormentoni, formule d'elogio trite, luoghi comuni, metafore
   morte, **plastismi e aggettivi obbligatori**, e i **cliché del discorso scientifico**.
