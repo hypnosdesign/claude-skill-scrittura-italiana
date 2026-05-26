@@ -2,20 +2,17 @@
 name: scrittura-italiana
 version: 2.7.0
 description: |
-  Humanizer dell'italiano con i superpoteri: rende naturale e non "da AI"
-  un testo — via perifrasi, gerundite, triadi, avverbi in -mente, trattini
-  lunghi, definizioni bipolari «non è X ma Y» (5 varianti), antilingua,
-  frasi fatte e cliché — e, a differenza di un trova-e-sostituisci, lo
-  scrive anche corretto, chiaro ed efficace perché conosce l'italiano.
-  Costruita sulle quattro virtù dell'espressione (aptum, puritas,
-  perspicuitas, ornatus): NATURALEZZA (segni dell'AI, voce), CORRETTEZZA
-  (punteggiatura, accenti, omofoni, plurali, pronomi), CHIAREZZA ed
-  EFFICACIA (retorica: stili, figure, ritmo, argomentazione, costruzione).
-  Usala per umanizzare, scrivere, revisionare o editare testi italiani —
-  saggistica, tesi, articoli, copy, narrativa, email, documentazione — o
-  per dubbi di lingua (virgola, due punti, virgolette, trattini; qual è,
-  un po', da/dà, sé stesso, congiuntivo); per far suonare un testo
-  naturale e non generato da AI.
+  Humanizer dell'italiano: rende naturale e non "da AI" un testo — via
+  perifrasi, gerundite, triadi, avverbi in -mente, trattini lunghi,
+  definizioni bipolari «non è X ma Y», antilingua, frasi fatte — e, a
+  differenza di un trova-e-sostituisci, lo scrive anche corretto, chiaro
+  ed efficace perché conosce l'italiano. Quattro virtù dell'espressione:
+  NATURALEZZA (segni dell'AI, voce), CORRETTEZZA (punteggiatura, accenti,
+  omofoni, plurali, pronomi), CHIAREZZA ed EFFICACIA (retorica, figure,
+  ritmo, argomentazione). Per umanizzare, scrivere, revisionare o editare
+  testi italiani — saggistica, tesi, articoli, copy, narrativa, email — o
+  per dubbi di lingua (virgola, due punti, virgolette; qual è, un po',
+  da/dà, sé stesso, congiuntivo).
 license: CC-BY-SA-4.0
 language: it
 compatibility: claude-code claude-desktop opencode claude.ai
