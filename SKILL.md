@@ -4,19 +4,18 @@ version: 2.7.0
 description: |
   Humanizer dell'italiano con i superpoteri: rende naturale e non "da AI"
   un testo — via perifrasi, gerundite, triadi, avverbi in -mente, trattini
-  lunghi, definizioni bipolari «non è X ma Y» (in tutte e cinque le
-  varianti, due punti inclusi), antilingua, frasi fatte e cliché — e, a differenza di un
-  trova-e-sostituisci, lo scrive anche corretto, chiaro ed efficace perché
-  conosce l'italiano. Costruita sulle quattro virtù dell'espressione (aptum,
-  puritas, perspicuitas, ornatus): NATURALEZZA (via i segni dell'AI, cura
-  della voce), CORRETTEZZA (punteggiatura e tipografia + accenti, omofoni,
-  apostrofo, plurali, pronomi), CHIAREZZA ed EFFICACIA (retorica: stili,
-  figure, ritmo, argomentazione, costruzione del testo). Usala per umanizzare,
-  scrivere, revisionare, correggere o editare testi italiani — saggistica,
-  tesi, articoli, copy, narrativa, email, documentazione, discorsi — o per
-  dubbi di lingua (virgola, punto e virgola, due punti, virgolette, trattini,
-  maiuscole; qual è, un po', da/dà, sé stesso, plurali difficili, tu/te,
-  congiuntivo); per far suonare un testo naturale e non generato da AI.
+  lunghi, definizioni bipolari «non è X ma Y» (5 varianti), antilingua,
+  frasi fatte e cliché — e, a differenza di un trova-e-sostituisci, lo
+  scrive anche corretto, chiaro ed efficace perché conosce l'italiano.
+  Costruita sulle quattro virtù dell'espressione (aptum, puritas,
+  perspicuitas, ornatus): NATURALEZZA (segni dell'AI, voce), CORRETTEZZA
+  (punteggiatura, accenti, omofoni, plurali, pronomi), CHIAREZZA ed
+  EFFICACIA (retorica: stili, figure, ritmo, argomentazione, costruzione).
+  Usala per umanizzare, scrivere, revisionare o editare testi italiani —
+  saggistica, tesi, articoli, copy, narrativa, email, documentazione — o
+  per dubbi di lingua (virgola, due punti, virgolette, trattini; qual è,
+  un po', da/dà, sé stesso, congiuntivo); per far suonare un testo
+  naturale e non generato da AI.
 license: CC-BY-SA-4.0
 language: it
 compatibility: claude-code claude-desktop opencode claude.ai
