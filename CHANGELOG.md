@@ -5,6 +5,26 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.7.0] — 2026-05-26
+
+**Famiglia del tic bipolare** «non è X ma Y». Lezione emersa da un audit reale su un libro
+accademico ~44k parole: la forma letterale è solo una di **cinque varianti morfosintattiche**,
+e la riscrittura per inversione («è Y, non X») è una pseudo-correzione che lascia in piedi il tic.
+
+### Aggiunto
+- **`stile-naturale.md` §9** — espansione completa dei *Parallelismi negativi*: cinque varianti
+  del bipolare (letterale, inversione, plurali/tempi, senza secondo «è», due punti, «e non»);
+  regola «riscrittura assertiva pura, non per inversione» con tabella di esempi da quattro generi
+  (filosofia, accademico, giornalismo, copy); cinque casi di preservazione motivata (citazioni,
+  anafore triadiche, frasi-tesi, distinzioni filosofiche con autore contrastato, glossari);
+  workflow di audit a 3 giri minimi + 1 di pulizia, con grep per ciascun giro; spia di densità
+  come euristica indicativa.
+- **`SKILL.md`** — riga di richiamo nei Principî cardine (ornatus / anti-AI) con disambiguazione
+  esplicita («tic di naturalezza, qui per contiguità con la voce anti-AI») e rimando al §9.
+- **`evals/01-tic-bipolare.md`** — primo eval della skill: spot check qualitativo con paragrafo
+  a 4 occorrenze miste delle varianti, output atteso, criteri PASS/FAIL, e lista di FAIL tipici
+  da intercettare (incluso il caso della pseudo-correzione per inversione).
+
 ## [2.6.0] — 2026-05-23
 
 Il **mestiere narrativo** entra nella skill, da Gotham Writers' Workshop, *Lezioni di scrittura
