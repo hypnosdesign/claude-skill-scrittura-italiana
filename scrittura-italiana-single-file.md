@@ -156,6 +156,12 @@ termini tecnici) → **Parte G**; **narrativa** (idea, punto di vista, licenze) 
   astratto" (*effettuare un controllo* → *controllare*).
 - **Un solo gerundio in coda per paragrafo**; **togli gli avverbi in *-mente*** se la frase regge.
 - **Niente triadi forzate** né *"non solo… ma anche"* a ripetizione.
+- **Via la definizione bipolare** *«non è X, ma è Y»* e le sue cinque varianti (inversione
+  *«X, non Y»*; plurali/tempi *«non sono… ma»*; senza secondo *è*; con due punti *«non è
+  X: è Y»*; con *e non*): riscrivi **assertiva pura** (*«è Y»*), **non per inversione**
+  (*«è Y, non X»* lascia in piedi il tic). Preserva solo in citazioni, anafore triadiche,
+  frasi-tesi programmatiche, distinzioni filosofiche con autore contrastato, glossari.
+  *Tic di naturalezza, qui per contiguità con la voce "anti-AI" — vedi **Parte E** §9.*
 - **La ripetizione non è il male:** non inventare perifrasi o antonomasie pur di non ripetere
   un nome (*Federer* non *il tennista svizzero*).
 - **Una figura solo se aggiunge** senso o forza; altrimenti è *mala affectatio*.
@@ -1967,9 +1973,105 @@ dialogo; delicato equilibrio, sapiente miscela.* → Il problema è la **densit�
 si rivela, si erge a, assurge a, costituisce, rappresenta, risulta essere, appare come.*
 → Usa **è / sono / ha**.
 
-**9. Parallelismi negativi.** *"Non solo… ma anche", "Non è solo X, è Y", "Non si tratta
-tanto di X quanto di Y"*; code tipo *"nessuna ambiguità", "niente sprechi"*. → Afferma in
-positivo.
+**9. Parallelismi negativi — la famiglia del tic bipolare.** *"Non solo… ma anche", "Non
+si tratta tanto di X quanto di Y"*; code tipo *"nessuna ambiguità", "niente sprechi"*. →
+Afferma in positivo. Caso a parte, **il più diffuso e il più sfuggente**, è la **definizione
+bipolare** *«non è X, ma è Y»*: l'AI definisce una cosa dicendo prima cosa *non* è, poi
+cosa è. Sembra precisione, è un tic. Su un saggio di 40.000 parole se ne contano facilmente
+50-70: una grep ingenua sulla forma letterale ne trova zero, perché il pattern vive in
+**almeno cinque varianti morfosintattiche** che vanno tutte censite prima di dichiarare
+"pulito" un testo.
+
+**Le cinque varianti del bipolare** (da cercare tutte, non solo la prima):
+
+- (a) **Inversione del polo:** *«X, non Y»* — *«è strutturale, non decorativa»*, *«è
+  co-attore, non substrato»*. Stessa identica bipolarità, ordine invertito.
+- (b) **Plurali e tempi diversi del verbo essere:** *non sono X ma Y*, *non viene X ma Y*,
+  *non hanno X ma Y*, *non era X ma Y*, *non saranno X ma Y*, *non si tratta di X ma di
+  Y*. Es. *«non sono interpretate ma usate»*, *«non viene dall'interno ma da fonti
+  esterne»*.
+- (c) **Senza secondo "è" dopo "ma":** *«non è X ma Y»* dove Y non comincia con *è*. Es.
+  *«non è il caso controllato dall'autore, ma un organismo vivente»*.
+- (d) **Bipolare con i due punti — statisticamente il più frequente nei testi accademici
+  accurati:** *«non è X: è Y»*. Es. *«non è un guasto da riparare: è la forma ordinaria
+  del linguaggio»*; *«non è metafora: è la condizione strutturale del nostro abitare le
+  parole»*. È la variante meno intuitiva da riconoscere — la grep su *"non è… ma"* non
+  la prende — ed è quella che sopravvive a tutte le passate.
+- (e) **Bipolare con "e non":** *«è X, e non Y»*, *«è X e non Y»*. Es. *«la carne di
+  Merleau-Ponty 1964 è la simpoiesi di Haraway 2016 in un altro lessico, e non è la
+  fenomenologia umanistica»*.
+
+**Riscrittura: assertiva pura, non per inversione.** L'errore tipico è "correggere"
+*«non è X, ma è Y»* in *«è Y, non X»*: non è una correzione, è la **variante (a)** della
+stessa famiglia — la bipolarità resta, solo più compatta. La riscrittura corretta
+**elimina del tutto il polo negativo**. Il tic attraversa i generi: ecco quattro esempi
+da generi diversi, per mostrare che non è un problema solo di prosa accademica.
+
+| genere | ✗ pseudo-correzione (inversione) | ✓ assertiva pura |
+|---|---|---|
+| saggistica filosofica | *non è metafora, ma è la condizione strutturale* → *è la condizione strutturale, non una metafora* | *è la condizione strutturale del nostro abitare le parole* |
+| accademico (forma con due punti) | *non è X: è Y* → *è Y, non X* | *è Y* (e basta) |
+| giornalismo | *la protesta non è una rivolta, ma una richiesta di ascolto* → *la protesta è una richiesta di ascolto, non una rivolta* | *la protesta è una richiesta di ascolto* |
+| copy/professionale | *il nostro servizio non è solo un'assistenza tecnica: è un partner di crescita* → *il nostro servizio è un partner di crescita, non solo assistenza tecnica* | *il nostro servizio accompagna la tua crescita* |
+
+Se serve segnalare al lettore il contrasto con la lettura comune, fallo con una **clausola
+breve a margine** (*«contro la lettura corrente, è Y»*, *«più che una metafora, è Y»*) —
+non rimettendo X in posizione speculare.
+
+**Quando il polo negativo va PRESERVATO (con motivazione esplicita).** Non tutto va
+tagliato: la grep produce falsi positivi e in 5 casi la negazione fa lavoro genuino.
+
+1. **Citazioni dirette.** Il polo negativo è dentro caporali di un autore: intoccabile.
+   Es. Dawkins, *«cieco perché non vede dinanzi a sé, non pianifica conseguenze, non ha
+   in vista alcun fine»*.
+2. **Anafora retorica triadica** *«non X, non Y, non Z»*: figura legittima, falso
+   positivo della grep. Es. *«Non è prodotto per essere ricevuto da un destinatario
+   esterno, non è codificato secondo una grammatica condivisibile, non porta in sé
+   un'intenzione comunicativa»*.
+3. **Frase-tesi-manifesto in apertura** di capitolo o sezione: il polo negativo è la
+   lettura standard che il testo deve smentire programmaticamente — tagliarlo svuota la
+   mossa. Es. *«la non-condivisione di codice fra specie è la condizione operativa del
+   dispositivo, non il suo limite»*.
+4. **Distinzione filosofica cardine** che esclude esplicitamente la posizione di un
+   autore contrastato. Es. Uexküll, *«il tempo non è un contenitore neutro ma un prodotto
+   del soggetto»* — il polo «contenitore neutro» è la posizione kantiana che Uexküll
+   smonta, e va detta.
+5. **Definizioni in glossario o cappello tecnico**, dove la chiarificazione bipolare è
+   didascalica per il lettore. Es. *«la plant blindness non è il rapporto cieco con il
+   segno né la cecità reciproca della triade, ma la marginalità del vegetale nello
+   sguardo umano»*.
+
+In tutti gli altri casi, **taglia il polo negativo**.
+
+**Workflow di audit per testi lunghi** (saggi, tesi, libri). Procedi a **3 giri minimi + 1
+di pulizia**, in quest'ordine:
+
+1. **Giro 1 — letterale:** *«non è X, ma è Y»* (`non è … ma è`). La forma "da manuale".
+2. **Giro 2 — inversione:** *«X, non Y»* (`, non `). Pattern (a). È quello che sfugge
+   perché *sembra* già una correzione.
+3. **Giro 3 — due punti:** *«non è X: è Y»* (`non è … :`). Pattern (d). La variante più
+   frequente nei testi accademici accurati.
+4. **Giro 4 (pulizia) — plurali, tempi, *e non*:** *non sono*, *non viene*, *non hanno*,
+   *non era*, *non saranno*, *non si tratta di*; e *«è X, e non Y»* (`, e non`). Pattern
+   (b) ed (e).
+
+**Copertura attesa:** i tre giri minimi catturano la grande maggioranza delle occorrenze
+in un testo accademico medio; il quarto giro chiude la coda (plurali, tempi diversi, *e
+non*). La proporzione varia col genere — il copy è più ricco di (a) e (d), la prosa
+giornalistica di (b) — e con lo stile dell'autore. Dichiara un testo "pulito" solo dopo
+che **tutti e quattro** i giri danno zero occorrenze non motivate.
+
+5. **Censimento per file/capitolo, in batch.** Presenta tutte le occorrenze di un capitolo
+   insieme — non una per una — così l'utente vede la densità e decide in blocco.
+6. **Per ogni occorrenza, 2-3 opzioni:** (a) preserva motivatamente — citando uno dei 5
+   casi di preservazione; (b) riscrivi assertiva pura; (c) compromesso (clausola a
+   margine). **Decide l'utente**; tu applichi.
+
+**Spia di densità (euristica indicativa, da tarare sul tipo di testo):** se in un capitolo
+di 3.000-5.000 parole ne conti più di 4-5, il tic sta colonizzando la voce, non
+punteggiandola — interviene anche se ogni singola occorrenza è motivabile in astratto. Non
+è una misura empirica: è una soglia di lavoro che si alza per la saggistica filosofica e
+si abbassa per il copy.
 
 **10. Regola del tre.** Triadi forzate (*innovazione, ispirazione e nuove prospettive*).
 Se ne conti tre o quattro in un paragrafo, è AI.

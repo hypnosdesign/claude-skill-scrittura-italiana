@@ -1,10 +1,11 @@
 ---
 name: scrittura-italiana
-version: 2.6.0
+version: 2.7.0
 description: |
   Humanizer dell'italiano con i superpoteri: rende naturale e non "da AI"
   un testo — via perifrasi, gerundite, triadi, avverbi in -mente, trattini
-  lunghi, antilingua, frasi fatte e cliché — e, a differenza di un
+  lunghi, definizioni bipolari «non è X ma Y» (in tutte e cinque le
+  varianti, due punti inclusi), antilingua, frasi fatte e cliché — e, a differenza di un
   trova-e-sostituisci, lo scrive anche corretto, chiaro ed efficace perché
   conosce l'italiano. Costruita sulle quattro virtù dell'espressione (aptum,
   puritas, perspicuitas, ornatus): NATURALEZZA (via i segni dell'AI, cura
@@ -173,6 +174,12 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
   astratto" (*effettuare un controllo* → *controllare*).
 - **Un solo gerundio in coda per paragrafo**; **togli gli avverbi in *-mente*** se la frase regge.
 - **Niente triadi forzate** né *"non solo… ma anche"* a ripetizione.
+- **Via la definizione bipolare** *«non è X, ma è Y»* e le sue cinque varianti (inversione
+  *«X, non Y»*; plurali/tempi *«non sono… ma»*; senza secondo *è*; con due punti *«non è
+  X: è Y»*; con *e non*): riscrivi **assertiva pura** (*«è Y»*), **non per inversione**
+  (*«è Y, non X»* lascia in piedi il tic). Preserva solo in citazioni, anafore triadiche,
+  frasi-tesi programmatiche, distinzioni filosofiche con autore contrastato, glossari.
+  *Tic di naturalezza, qui per contiguità con la voce "anti-AI" — vedi `stile-naturale.md` §9.*
 - **La ripetizione non è il male:** non inventare perifrasi o antonomasie pur di non ripetere
   un nome (*Federer* non *il tennista svizzero*).
 - **Una figura solo se aggiunge** senso o forza; altrimenti è *mala affectatio*.
