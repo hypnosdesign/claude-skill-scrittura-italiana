@@ -12,8 +12,11 @@
   <img src="assets/prima-dopo.gif" alt="Prima → dopo: un testo che «sa di AI» diventa umano — via perifrasi, triadi, gerundite, chiusure vuote" width="760">
 </p>
 
+[![Sito](https://img.shields.io/badge/sito-scrittura--italiana-9c2a1f.svg)](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.6.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.8.0-blue.svg)
+
+🔗 **[Sito del progetto →](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)**
 
 ## Cos'è
 
