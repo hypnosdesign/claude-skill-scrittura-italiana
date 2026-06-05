@@ -14,7 +14,7 @@
 
 [![Sito](https://img.shields.io/badge/sito-scrittura--italiana-9c2a1f.svg)](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.8.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.9.0-blue.svg)
 
 🔗 **[Sito del progetto →](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)**
 
@@ -209,6 +209,11 @@ Questa skill è un'opera derivata e cita le sue fonti:
   scienza*, 2019), F. Massai (*L'idea narrativa*, 2015), Gotham Writers' Workshop (*Lezioni di
   scrittura creativa*, 2014), R. Carver (*Il mestiere di scrivere*), Martino–Alfieri (*Scrivere
   ganzo*, 2015), A. Julita (*Scrivere con l'AI*, 2025).
+- **Mosse del divulgatore e calibrazione di registro** (dalla v2.9.0) — distillati non da
+  manuali ma da un *corpus di prosa italiana nativa*: M. Ferrari (*Le piante non sono animali
+  verdi*), G. Vallortigara (*Pensieri della mosca con la testa storta*), L. Floridi (*Pensare
+  l'infosfera*); con G. Simondon (*Del modo di esistenza degli oggetti tecnici*) come contrasto
+  di registro.
 - **Stile / pattern anti-AI** — adattamento italiano di
   [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
   (WikiProject AI Cleanup), disponibile sotto **CC BY-SA 4.0**. In conformità con il

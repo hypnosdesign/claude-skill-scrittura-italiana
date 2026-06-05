@@ -28,9 +28,32 @@ cronaca neutra, nessuna opinione, nessuna prima persona, niente ironia. Per inie
 - **Essere specifici sui sentimenti.** Non *"è preoccupante"* ma il dettaglio concreto
   che lo rende tale.
 
-**Calibrazione voce:** se l'utente fornisce un campione del proprio scrivere, analizzalo
-prima (lunghezza periodi, livello lessicale, abitudini di punteggiatura, tic, uso di
-tu/Lei) e **replica quella voce**, non limitarti a togliere i tic.
+**Calibrazione voce:** se l'utente fornisce un campione del proprio scrivere, **profilalo**
+prima di replicarlo, lungo dimensioni concrete:
+- **ritmo e *varianza*** — non solo la lunghezza media del periodo, ma quanto oscilla: una
+  voce viva alterna frasi brevissime e periodi lunghi; una piatta tiene tutto uguale;
+- **persona** — *io* (memoir, voce personale), *noi* inclusivo (porta il lettore con sé),
+  o impersonale (trattato);
+- **dose di inciso** — quanto la voce vive di parentesi, trattini, digressioni: tanta in
+  certi autori, quasi nulla in altri;
+- **densità di domande** — chi struttura per problemi ne fa molte, chi per affermazioni
+  quasi nessuna;
+- **punteggiatura di pensiero** — il *mix* personale di due punti (introdurre, spiegare),
+  punto e virgola (concatenare), trattino (incidere);
+- **glossa del tecnico** — se e come scioglie i termini specialistici (vedi
+  `spiegare-con-chiarezza.md` §9);
+- **livello lessicale, tic ricorrenti, uso di tu/Lei.**
+
+**Replica quella voce**, non limitarti a togliere i tic.
+
+> **Il registro è un fascio di scelte, e si misura.** Gli estremi si riconoscono anche a
+> occhio: una **divulgazione viva** tiene periodi medi (~18–20 parole), molte frasi brevi,
+> domande frequenti, prima persona, quasi nessun esclamativo, e glossa i termini; un
+> **trattato ad alta astrazione** ha periodi lunghi (~30 e oltre), pochissime frasi brevi,
+> niente domande, impersonale, punto e virgola fittissimo a reggere le subordinate. Nessuno
+> dei due è "giusto" in sé: scegli il punto del fascio che serve a *scopo e lettore* — è
+> l'*aptum* (vedi `retorica-efficacia.md`). Spostare un testo da un registro all'altro vuol
+> dire muovere queste leve **insieme**, non solo cambiare qualche parola.
 
 **Autorità = impegno, non tono.** «Se non rendi quel che scrivi al meglio delle tue possibilità, che
 scrivi a fare? […] poi non ti giustificare» (Carver). L'autorità non è un tono assertivo: è il

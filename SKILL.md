@@ -1,6 +1,6 @@
 ---
 name: scrittura-italiana
-version: 2.8.0
+version: 2.9.0
 description: |
   Humanizer dell'italiano: rende naturale e non "da AI" un testo — via
   perifrasi, gerundite, triadi, avverbi in -mente, trattini lunghi,

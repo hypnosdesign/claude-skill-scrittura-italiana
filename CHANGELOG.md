@@ -5,6 +5,33 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.9.0] — 2026-06-06
+
+**Le mosse del divulgatore + calibrazione di registro misurabile.** Primo distillato da un
+corpus di prosa italiana *nativa e umana* (non da manuali normativi): due divulgatori
+scientifici indipendenti — M. Ferrari (*Le piante non sono animali verdi*) e G. Vallortigara
+(*Pensieri della mosca con la testa storta*) — più L. Floridi (*Pensare l'infosfera*, tr.
+Durante) come voce di conferma su materia diversa. Tre pattern espositivi convergono fra loro
+(verificati anche su base quantitativa: domande 23–29/10k parole, glosse esplicative 14–15/10k,
+esclamativi ~2/10k) e un contrasto di registro misurato emerge da G. Simondon (*Del modo di
+esistenza degli oggetti tecnici*, tr. Caridi: periodo medio ~32 parole, domande ~3/10k,
+impersonale).
+
+### Aggiunto
+- **`spiegare-con-chiarezza.md` §9** — nuova sezione *Le mosse del divulgatore: glossa,
+  domanda, segnavia*: (1) **glossa lampo** del termine tecnico (*cioè/ovvero* nella stessa
+  frase); (2) **domanda-motore** che struttura il ragionamento per problemi, distinta dalla
+  domanda retorica-amo pubblicitaria (rimando al pattern 46 di `stile-naturale.md`); (3)
+  **segnavia** asciutti vs metadiscorso burocratico; nota sul tono (enfasi dal ritmo, non dal
+  `!`). Sintesi di Parte G aggiornata.
+
+### Modificato
+- **`stile-naturale.md` → «Dare voce» / Calibrazione voce** — la calibrazione, prima sintetica,
+  diventa una griglia di dimensioni concrete (ritmo e *varianza*, persona io/noi/impersonale,
+  dose di inciso, densità di domande, punteggiatura di pensiero, glossa del tecnico) + nota
+  *«il registro è un fascio di scelte, e si misura»* con i due estremi (divulgazione viva vs
+  trattato ad alta astrazione) come ancore di taratura.
+
 ## [2.8.0] — 2026-05-26
 
 **Tic della prosa saggistico-accademica AI.** Otto pattern nuovi emersi dallo stesso audit

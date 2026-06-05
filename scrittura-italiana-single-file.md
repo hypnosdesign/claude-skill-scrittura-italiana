@@ -1919,9 +1919,32 @@ cronaca neutra, nessuna opinione, nessuna prima persona, niente ironia. Per inie
 - **Essere specifici sui sentimenti.** Non *"è preoccupante"* ma il dettaglio concreto
   che lo rende tale.
 
-**Calibrazione voce:** se l'utente fornisce un campione del proprio scrivere, analizzalo
-prima (lunghezza periodi, livello lessicale, abitudini di punteggiatura, tic, uso di
-tu/Lei) e **replica quella voce**, non limitarti a togliere i tic.
+**Calibrazione voce:** se l'utente fornisce un campione del proprio scrivere, **profilalo**
+prima di replicarlo, lungo dimensioni concrete:
+- **ritmo e *varianza*** — non solo la lunghezza media del periodo, ma quanto oscilla: una
+  voce viva alterna frasi brevissime e periodi lunghi; una piatta tiene tutto uguale;
+- **persona** — *io* (memoir, voce personale), *noi* inclusivo (porta il lettore con sé),
+  o impersonale (trattato);
+- **dose di inciso** — quanto la voce vive di parentesi, trattini, digressioni: tanta in
+  certi autori, quasi nulla in altri;
+- **densità di domande** — chi struttura per problemi ne fa molte, chi per affermazioni
+  quasi nessuna;
+- **punteggiatura di pensiero** — il *mix* personale di due punti (introdurre, spiegare),
+  punto e virgola (concatenare), trattino (incidere);
+- **glossa del tecnico** — se e come scioglie i termini specialistici (vedi
+  **Parte G** §9);
+- **livello lessicale, tic ricorrenti, uso di tu/Lei.**
+
+**Replica quella voce**, non limitarti a togliere i tic.
+
+> **Il registro è un fascio di scelte, e si misura.** Gli estremi si riconoscono anche a
+> occhio: una **divulgazione viva** tiene periodi medi (~18–20 parole), molte frasi brevi,
+> domande frequenti, prima persona, quasi nessun esclamativo, e glossa i termini; un
+> **trattato ad alta astrazione** ha periodi lunghi (~30 e oltre), pochissime frasi brevi,
+> niente domande, impersonale, punto e virgola fittissimo a reggere le subordinate. Nessuno
+> dei due è "giusto" in sé: scegli il punto del fascio che serve a *scopo e lettore* — è
+> l'*aptum* (vedi **Parte C**). Spostare un testo da un registro all'altro vuol
+> dire muovere queste leve **insieme**, non solo cambiare qualche parola.
 
 **Autorità = impegno, non tono.** «Se non rendi quel che scrivi al meglio delle tue possibilità, che
 scrivi a fare? […] poi non ti giustificare» (Carver). L'autorità non è un tono assertivo: è il
@@ -2835,13 +2858,46 @@ crescita di alcuni tumori. I test sull'uomo, se arriveranno, sono lontani anni.*
 
 ---
 
+## 9. Le mosse del divulgatore: glossa, domanda, segnavia
+
+Tre riflessi ricorrono in chi spiega bene a un pubblico non specialista — convergono anche
+su materie lontane (botanica, neuroscienze, filosofia: M. Ferrari, G. Vallortigara, L.
+Floridi). Non sono ornamenti: sono il modo in cui l'astratto resta camminabile.
+
+- **Glossa lampo del termine.** Il termine tecnico, appena introdotto, è sciolto *subito* in
+  parole comuni — con *cioè / ovvero / ossia*, nella stessa frase, non in nota e non più
+  tardi. *«autotrofi, cioè che si nutrono da sé»*; *«cianobatteri, ovvero batteri azzurri»*.
+  È la versione riflessa del §5 «definire subito»: nel divulgativo non è una scelta caso per
+  caso, è un automatismo (nei testi citati, in media una glossa ogni ~700 parole).
+
+- **La domanda come motore.** La *vera* domanda che apre il passo successivo e mette il
+  lettore nella condizione di porsela con te: *«È possibile che tutto ciò sia inevitabile? Che
+  non se ne potesse fare a meno?»*. Struttura il ragionamento per problemi, non per
+  affermazioni: usala per **aprire**, poi rispondi. ⚠ Da non confondere con la domanda
+  retorica-amo pubblicitaria (*«Stanchi di…?»*), che è un tic: vedi **Parte E**,
+  pattern 46. La differenza: la domanda-motore *fa avanzare il contenuto*, l'amo no.
+
+- **I segnavia.** Brevi segnali di percorso che dicono al lettore dove si trova e dove si va:
+  *«Fine della parentesi»*, *«Siamo arrivati a un punto importante»*, *«guardiamo il tutto con
+  la nostra prospettiva di mammiferi»*. Orientano senza appesantire — asciutti, spesso
+  ironici. L'opposto del metadiscorso burocratico (*«come si evincerà dal paragrafo che
+  segue…»*).
+
+> **Tono.** Nei tre autori, **quasi zero punti esclamativi**: l'enfasi viene dal ritmo
+> (un periodo breve e secco dopo uno lungo) e dall'understatement, non dal `!`. La meraviglia
+> si mostra, non si dichiara (→ §8 anti-hype). Per la *voce* — opinione, prima persona,
+> ironia — vedi **Parte E** → «Dare voce».
+
+---
+
 ## In sintesi
 
 Spiegare bene = **saperne più di quanto scrivi** → **astratto → concreto** (esempi, casi,
 aneddoti) → **numeri contestualizzati** (confronto, scala, conversione) → **termini tecnici
-governati** (quelli del lettore, non della fonte) → **metafore chiuse** (mostra dove si
-rompono) → **essenzialità** (taglia il non necessario, tieni la ridondanza utile) →
-**chiarezza, non semplificazione** → **zero hype**.
+governati** (quelli del lettore, non della fonte, *glossati* al volo) → **metafore chiuse**
+(mostra dove si rompono) → **essenzialità** (taglia il non necessario, tieni la ridondanza
+utile) → **chiarezza, non semplificazione** → **zero hype** → **mosse del divulgatore**
+(glossa lampo, domanda-motore, segnavia; enfasi dal ritmo, non dal `!`).
 
 ---
 

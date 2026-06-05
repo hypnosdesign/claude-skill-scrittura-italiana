@@ -164,10 +164,43 @@ crescita di alcuni tumori. I test sull'uomo, se arriveranno, sono lontani anni.*
 
 ---
 
+## 9. Le mosse del divulgatore: glossa, domanda, segnavia
+
+Tre riflessi ricorrono in chi spiega bene a un pubblico non specialista — convergono anche
+su materie lontane (botanica, neuroscienze, filosofia: M. Ferrari, G. Vallortigara, L.
+Floridi). Non sono ornamenti: sono il modo in cui l'astratto resta camminabile.
+
+- **Glossa lampo del termine.** Il termine tecnico, appena introdotto, è sciolto *subito* in
+  parole comuni — con *cioè / ovvero / ossia*, nella stessa frase, non in nota e non più
+  tardi. *«autotrofi, cioè che si nutrono da sé»*; *«cianobatteri, ovvero batteri azzurri»*.
+  È la versione riflessa del §5 «definire subito»: nel divulgativo non è una scelta caso per
+  caso, è un automatismo (nei testi citati, in media una glossa ogni ~700 parole).
+
+- **La domanda come motore.** La *vera* domanda che apre il passo successivo e mette il
+  lettore nella condizione di porsela con te: *«È possibile che tutto ciò sia inevitabile? Che
+  non se ne potesse fare a meno?»*. Struttura il ragionamento per problemi, non per
+  affermazioni: usala per **aprire**, poi rispondi. ⚠ Da non confondere con la domanda
+  retorica-amo pubblicitaria (*«Stanchi di…?»*), che è un tic: vedi `stile-naturale.md`,
+  pattern 46. La differenza: la domanda-motore *fa avanzare il contenuto*, l'amo no.
+
+- **I segnavia.** Brevi segnali di percorso che dicono al lettore dove si trova e dove si va:
+  *«Fine della parentesi»*, *«Siamo arrivati a un punto importante»*, *«guardiamo il tutto con
+  la nostra prospettiva di mammiferi»*. Orientano senza appesantire — asciutti, spesso
+  ironici. L'opposto del metadiscorso burocratico (*«come si evincerà dal paragrafo che
+  segue…»*).
+
+> **Tono.** Nei tre autori, **quasi zero punti esclamativi**: l'enfasi viene dal ritmo
+> (un periodo breve e secco dopo uno lungo) e dall'understatement, non dal `!`. La meraviglia
+> si mostra, non si dichiara (→ §8 anti-hype). Per la *voce* — opinione, prima persona,
+> ironia — vedi `stile-naturale.md` → «Dare voce».
+
+---
+
 ## In sintesi
 
 Spiegare bene = **saperne più di quanto scrivi** → **astratto → concreto** (esempi, casi,
 aneddoti) → **numeri contestualizzati** (confronto, scala, conversione) → **termini tecnici
-governati** (quelli del lettore, non della fonte) → **metafore chiuse** (mostra dove si
-rompono) → **essenzialità** (taglia il non necessario, tieni la ridondanza utile) →
-**chiarezza, non semplificazione** → **zero hype**.
+governati** (quelli del lettore, non della fonte, *glossati* al volo) → **metafore chiuse**
+(mostra dove si rompono) → **essenzialità** (taglia il non necessario, tieni la ridondanza
+utile) → **chiarezza, non semplificazione** → **zero hype** → **mosse del divulgatore**
+(glossa lampo, domanda-motore, segnavia; enfasi dal ritmo, non dal `!`).
