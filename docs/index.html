@@ -27,6 +27,7 @@
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
+  html,body{overflow-x:hidden}
   body{
     margin:0;
     background:var(--paper);
@@ -61,10 +62,11 @@
   h1{
     font-family:"Fraunces",serif;
     font-weight:600;
-    font-size:clamp(40px,8vw,72px);
+    font-size:clamp(36px,9vw,72px);
     line-height:.98;
     letter-spacing:-.02em;
     margin:0 0 8px;
+    overflow-wrap:break-word;
   }
   h1 .quill{color:var(--accent)}
   .subtitle{
@@ -206,6 +208,16 @@
   footer .colophon{font-family:"Fraunces",serif;font-style:italic;font-size:18px;color:var(--ink);margin-bottom:22px}
 
   .quotes{font-family:"Fraunces",serif;color:var(--accent);font-style:italic}
+
+  @media(max-width:560px){
+    body{font-size:18px}
+    .wrap{padding:0 20px}
+    header.hero{padding:46px 0 34px}
+    section{padding:46px 0}
+    .lede{font-size:19px}
+    h2 + p.intro{font-size:18px}
+    .cta-row .btn{flex:1 1 auto;justify-content:center}
+  }
 </style>
 </head>
 <body>
@@ -213,7 +225,7 @@
 <header class="hero">
   <div class="wrap">
     <p class="kicker">Claude Agent Skill · italiano · v2.8.0</p>
-    <h1>scrittura<span class="quill">·</span>italiana</h1>
+    <h1>scrittura<span class="quill">·</span><wbr>italiana</h1>
     <p class="subtitle">l'humanizer italiano con i superpoteri</p>
     <p class="lede">
       Incolli un testo che <em>«sa di AI»</em> e te lo restituisce umano — via perifrasi,
