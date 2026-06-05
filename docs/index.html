@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>scrittura-italiana — l'humanizer italiano con i superpoteri</title>
+<meta name="description" content="Una Claude Agent Skill che cancella l'odore di AI dai testi italiani — perifrasi, gerundite, triadi, avverbi in -mente, trattini lunghi, frasi fatte — e li scrive giusti. Non un trova-e-sostituisci: sa l'italiano.">
+<meta property="og:title" content="scrittura-italiana — l'humanizer italiano con i superpoteri">
+<meta property="og:description" content="Cancella l'odore di AI dai testi italiani e li scrive giusti: punteggiatura, tipografia, registro, ritmo, retorica. Non un trova-e-sostituisci: sa l'italiano.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/assets/prima-dopo.gif">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a1614;
+    --ink-soft:#4a423c;
+    --paper:#f4efe6;
+    --paper-2:#ece4d6;
+    --line:#d8cdb8;
+    --accent:#9c2a1f;
+    --accent-2:#7a5c2e;
+    --green:#3f6b3f;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Newsreader",Georgia,serif;
+    font-size:19px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    background-image:radial-gradient(circle at 1px 1px, rgba(60,40,20,.035) 1px, transparent 0);
+    background-size:22px 22px;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(156,42,31,.28)}
+  a:hover{border-bottom-color:var(--accent)}
+  em{font-style:italic}
+
+  /* ── HERO ───────────────────────────────── */
+  header.hero{
+    padding:64px 0 40px;
+    border-bottom:1px solid var(--line);
+  }
+  .kicker{
+    font-family:"JetBrains Mono",monospace;
+    font-size:12.5px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--accent-2);
+    margin:0 0 22px;
+  }
+  h1{
+    font-family:"Fraunces",serif;
+    font-weight:600;
+    font-size:clamp(40px,8vw,72px);
+    line-height:.98;
+    letter-spacing:-.02em;
+    margin:0 0 8px;
+  }
+  h1 .quill{color:var(--accent)}
+  .subtitle{
+    font-family:"Fraunces",serif;
+    font-weight:400;
+    font-style:italic;
+    font-size:clamp(20px,3.6vw,27px);
+    color:var(--ink-soft);
+    line-height:1.25;
+    margin:14px 0 0;
+    max-width:30ch;
+  }
+  .lede{
+    font-size:21px;
+    margin:30px 0 0;
+    max-width:54ch;
+  }
+  .lede strong{font-weight:600}
+  .badges{
+    display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+    margin:30px 0 0;
+    font-family:"JetBrains Mono",monospace;font-size:12.5px;
+  }
+  .badge{
+    display:inline-flex;align-items:center;gap:7px;
+    padding:5px 11px;border:1px solid var(--line);border-radius:999px;
+    background:rgba(255,255,255,.4);color:var(--ink-soft);
+    letter-spacing:.02em;
+  }
+  .badge b{color:var(--ink);font-weight:500}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--green)}
+
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:34px 0 0}
+  .btn{
+    font-family:"JetBrains Mono",monospace;font-size:13.5px;letter-spacing:.02em;
+    padding:12px 20px;border-radius:8px;border:1px solid var(--ink);
+    background:var(--ink);color:var(--paper);
+    display:inline-flex;align-items:center;gap:9px;
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:3px 5px 0 rgba(26,22,20,.18)}
+  .btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn.ghost:hover{border-color:var(--ink);box-shadow:3px 5px 0 rgba(26,22,20,.1)}
+
+  /* ── install snippet ─────────────────────── */
+  .snippet{
+    margin:30px 0 0;
+    background:var(--ink);color:#f4efe6;border-radius:10px;
+    font-family:"JetBrains Mono",monospace;font-size:13.5px;line-height:1.55;
+    overflow:hidden;border:1px solid #000;
+  }
+  .snippet .bar{
+    display:flex;align-items:center;gap:7px;
+    padding:9px 14px;background:#28221f;border-bottom:1px solid #000;
+  }
+  .snippet .bar span{width:11px;height:11px;border-radius:50%;background:#5a504a}
+  .snippet .bar .t{margin-left:8px;font-size:11.5px;color:#9b9089;letter-spacing:.04em}
+  .snippet pre{margin:0;padding:16px 18px;overflow-x:auto;white-space:pre}
+  .snippet .pr{color:#c98a7e;user-select:none}
+  .snippet .cm{color:#8a9b78}
+
+  /* ── sections ────────────────────────────── */
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  .eyebrow{
+    font-family:"JetBrains Mono",monospace;font-size:12px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);
+    margin:0 0 18px;
+  }
+  h2{
+    font-family:"Fraunces",serif;font-weight:600;
+    font-size:clamp(28px,5vw,40px);line-height:1.05;letter-spacing:-.015em;
+    margin:0 0 18px;
+  }
+  h2 + p.intro{font-size:20px;color:var(--ink-soft);margin:0 0 34px;max-width:56ch}
+
+  /* before / after demo */
+  figure.demo{margin:0}
+  figure.demo img{width:100%;border-radius:10px;border:1px solid var(--line);display:block;box-shadow:6px 8px 0 rgba(26,22,20,.06)}
+  figure.demo figcaption{font-style:italic;color:var(--ink-soft);font-size:16px;margin-top:14px}
+
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+  @media(max-width:620px){.ba{grid-template-columns:1fr}}
+  .ba .card{
+    border:1px solid var(--line);border-radius:10px;padding:20px 22px;
+    background:rgba(255,255,255,.45);position:relative;
+  }
+  .ba .tag{
+    font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.1em;
+    text-transform:uppercase;margin:0 0 12px;display:inline-block;
+  }
+  .ba .before .tag{color:var(--accent)}
+  .ba .after .tag{color:var(--green)}
+  .ba p{margin:0;font-size:17px;line-height:1.5}
+  .ba .before p{color:var(--ink-soft)}
+
+  /* virtù grid */
+  .virtues{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:8px}
+  @media(max-width:620px){.virtues{grid-template-columns:1fr}}
+  .virtue{background:var(--paper);padding:26px 24px}
+  .virtue .lat{
+    font-family:"Fraunces",serif;font-style:italic;font-weight:500;
+    font-size:24px;color:var(--accent);margin:0 0 4px;
+  }
+  .virtue h3{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);margin:0 0 12px;font-weight:500}
+  .virtue p{margin:0;font-size:16.5px;line-height:1.5;color:var(--ink-soft)}
+  .virtue p b{color:var(--ink);font-weight:600}
+
+  /* coverage list */
+  .cover{columns:2;column-gap:36px;margin:30px 0 0;padding:0;list-style:none}
+  @media(max-width:560px){.cover{columns:1}}
+  .cover li{break-inside:avoid;margin:0 0 14px;padding-left:20px;position:relative;font-size:17px}
+  .cover li::before{content:"§";position:absolute;left:0;color:var(--accent);font-family:"Fraunces",serif}
+  .cover li b{font-weight:600}
+  .cover li span{display:block;color:var(--ink-soft);font-size:15px;font-style:italic}
+
+  /* docs links */
+  .docs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+  @media(max-width:560px){.docs{grid-template-columns:1fr}}
+  .doc{
+    border:1px solid var(--line);border-radius:10px;padding:18px 20px;
+    background:rgba(255,255,255,.4);display:block;color:inherit;border-bottom:1px solid var(--line);
+    transition:transform .12s ease,box-shadow .12s ease;
+  }
+  .doc:hover{transform:translateY(-2px);box-shadow:4px 6px 0 rgba(26,22,20,.08);border-color:var(--ink)}
+  .doc .n{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--accent);margin:0 0 6px}
+  .doc .d{margin:0;font-size:16px;color:var(--ink-soft)}
+
+  /* install steps */
+  .steps{margin-top:8px}
+  .step{padding:22px 0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:none}
+  .step h3{font-family:"Fraunces",serif;font-weight:600;font-size:22px;margin:0 0 8px}
+  .step h3 .num{color:var(--accent);font-style:italic;margin-right:10px}
+  .step p{margin:0 0 14px;font-size:17px;color:var(--ink-soft)}
+  .step .snippet{margin-top:6px}
+
+  footer{padding:54px 0 70px;text-align:left}
+  footer p{font-size:15px;color:var(--ink-soft);margin:0 0 12px;max-width:60ch}
+  footer .colophon{font-family:"Fraunces",serif;font-style:italic;font-size:18px;color:var(--ink);margin-bottom:22px}
+
+  .quotes{font-family:"Fraunces",serif;color:var(--accent);font-style:italic}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Claude Agent Skill · italiano · v2.8.0</p>
+    <h1>scrittura<span class="quill">·</span>italiana</h1>
+    <p class="subtitle">l'humanizer italiano con i superpoteri</p>
+    <p class="lede">
+      Incolli un testo che <em>«sa di AI»</em> e te lo restituisce umano — via perifrasi,
+      gerundite, triadi, avverbi in <em>-mente</em>, trattini lunghi, frasi fatte. E già che
+      c'è lo scrive <strong>giusto</strong>: punteggiatura, tipografia, registro, ritmo,
+      retorica. <strong>Non un trova-e-sostituisci: sa l'italiano.</strong>
+    </p>
+
+    <div class="badges">
+      <span class="badge"><span class="dot"></span><b>9</b> reference</span>
+      <span class="badge"><b>65+</b> pattern anti-AI</span>
+      <span class="badge"><b>4</b> virtù dell'espressione</span>
+      <span class="badge">CC&nbsp;BY-SA&nbsp;4.0</span>
+    </div>
+
+    <div class="snippet">
+      <div class="bar"><span></span><span></span><span></span><span class="t">terminale — installazione in un comando</span></div>
+      <pre><span class="pr">$ </span>npx skills add hypnosdesign/claude-skill-scrittura-italiana</pre>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn" href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana">
+        ★ Repository su GitHub
+      </a>
+      <a class="btn ghost" href="#installazione">Come si installa →</a>
+    </div>
+  </div>
+</header>
+
+<!-- DEMO -->
+<section id="demo">
+  <div class="wrap">
+    <p class="eyebrow">Prima → dopo</p>
+    <h2>Il testo si toglie di dosso l'odore di AI</h2>
+    <p class="intro">Un testo «vivente», «cruciale» e «indubbiamente brillante» diventa fatti
+      concreti, frasi spezzate, una voce.</p>
+    <figure class="demo">
+      <img src="assets/prima-dopo.gif" alt="Animazione: un testo che «sa di AI» viene umanizzato — via perifrasi, triadi, gerundite e chiusure ottimistiche vuote">
+      <figcaption>Demo: rimozione dei segni dell'AI mantenendo il registro dell'autore.</figcaption>
+    </figure>
+
+    <div class="ba">
+      <div class="card before">
+        <span class="tag">✗ prima — slop</span>
+        <p>Il nuovo museo si configura come una testimonianza vivente del patrimonio cittadino,
+        rappresentando un punto di svolta cruciale e contribuendo significativamente a valorizzare
+        l'identità del territorio. Il futuro si prospetta indubbiamente brillante.</p>
+      </div>
+      <div class="card after">
+        <span class="tag">✓ dopo — umano</span>
+        <p>Il museo ha aperto a marzo in un ex pastificio. Tre sale al piano terra ospitano la
+        collezione permanente; quella al primo piano è riservata alle mostre temporanee. La prima,
+        sui manifesti degli anni Trenta, resta aperta fino a giugno.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIRTÙ -->
+<section id="virtu">
+  <div class="wrap">
+    <p class="eyebrow">Il modello</p>
+    <h2>Le quattro virtù dell'espressione</h2>
+    <p class="intro">Non una lista di regole, ma la cornice della retorica classica — le
+      <em>virtutes elocutionis</em>. Ogni virtù sta in equilibrio tra due vizi: la sciatteria
+      per difetto, lo <em>slop</em> per eccesso.</p>
+    <div class="virtues">
+      <div class="virtue">
+        <p class="lat">aptum</p>
+        <h3>Naturalezza</h3>
+        <p>Appropriatezza a scopo, destinatario e <b>registro</b>. Nel testo informale le
+          virgolette dritte non sono un errore: non le «corregge».</p>
+      </div>
+      <div class="virtue">
+        <p class="lat">puritas</p>
+        <h3>Correttezza</h3>
+        <p>Punteggiatura e tipografia (caporali <b>« »</b>, lineetta, due punti) + parola:
+          accenti, omofoni <b>da/dà</b>, <b>qual è</b>, <b>un po'</b>, plurali, pronomi.</p>
+      </div>
+      <div class="virtue">
+        <p class="lat">perspicuitas</p>
+        <h3>Chiarezza</h3>
+        <p>Il lettore capisce <b>alla prima</b>. Coesione, connettivi, il termine tecnico al
+          punto giusto, l'anti-hype della divulgazione.</p>
+      </div>
+      <div class="virtue">
+        <p class="lat">ornatus</p>
+        <h3>Efficacia</h3>
+        <p>Bellezza <b>regolata</b>: figure, ritmo, argomentazione. Il suo eccesso — la
+          <em>mala affectatio</em> — è esattamente lo slop dell'AI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section id="copre">
+  <div class="wrap">
+    <p class="eyebrow">Oltre l'humanizer</p>
+    <h2>Copre l'intero arco della scrittura</h2>
+    <p class="intro">Distillata da una libreria di manuali italiani — Serianni, Mortara
+      Garavelli, Giunta, Pontiggia, Rigotti e altri.</p>
+    <ul class="cover">
+      <li><b>Stile anti-AI</b><span>65+ pattern + antilingua e affettazione</span></li>
+      <li><b>Punteggiatura</b><span>15 schede: virgola, punto e virgola, due punti</span></li>
+      <li><b>Dubbi ed errori</b><span>accenti, omofoni, plurali, pronomi</span></li>
+      <li><b>Retorica</b><span>3 stili, figure, compositio, tópoi, dispositio</span></li>
+      <li><b>Coesione</b><span>il filo del discorso, i connettivi</span></li>
+      <li><b>Cliché e parole alla moda</b><span>tormentoni, luoghi comuni, plastismi</span></li>
+      <li><b>Divulgazione</b><span>spiegare con chiarezza, numeri, termine tecnico</span></li>
+      <li><b>Narrativa</b><span>idea, personaggio, dialogo, scena, tensione</span></li>
+      <li><b>Revisione</b><span>la parola giusta, collaudo metafore, lima a freddo</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- INSTALL -->
+<section id="installazione">
+  <div class="wrap">
+    <p class="eyebrow">Installazione</p>
+    <h2>Tre modi per metterla in mano a Claude</h2>
+    <div class="steps">
+
+      <div class="step">
+        <h3><span class="num">01</span>Via <code>npx skills</code> — consigliato</h3>
+        <p>Un comando, rileva da solo gli agent installati (Claude Code, Cursor, Copilot…).</p>
+        <div class="snippet">
+          <div class="bar"><span></span><span></span><span></span><span class="t">multi-agente · skills.sh</span></div>
+          <pre><span class="pr">$ </span>npx skills add hypnosdesign/claude-skill-scrittura-italiana</pre>
+        </div>
+      </div>
+
+      <div class="step">
+        <h3><span class="num">02</span>Claude Code (CLI) — manuale</h3>
+        <p>Clona nella cartella delle skill personali, poi riapri Claude Code.</p>
+        <div class="snippet">
+          <div class="bar"><span></span><span></span><span></span><span class="t">git</span></div>
+          <pre><span class="pr">$ </span>git clone https://github.com/hypnosdesign/claude-skill-scrittura-italiana \
+    ~/.claude/skills/scrittura-italiana</pre>
+        </div>
+      </div>
+
+      <div class="step">
+        <h3><span class="num">03</span>Claude Desktop / claude.ai · altri assistenti</h3>
+        <p>Scarica lo zip e caricalo in <em>Impostazioni → Capabilities → Skills</em>. Per
+          Gemini, Custom GPT e simili senza supporto nativo, usa la
+          <a href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/blob/main/scrittura-italiana-single-file.md">versione in un solo file</a>.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DOCS -->
+<section id="docs">
+  <div class="wrap">
+    <p class="eyebrow">Documentazione</p>
+    <h2>Da leggere</h2>
+    <div class="docs">
+      <a class="doc" href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/blob/main/README.md">
+        <p class="n">README.md</p><p class="d">Cos'è, struttura, fonti e attribuzione.</p></a>
+      <a class="doc" href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/blob/main/ESEMPI.md">
+        <p class="n">ESEMPI.md</p><p class="d">Casi prima → dopo, commentati e spiegati.</p></a>
+      <a class="doc" href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/blob/main/FAQ.md">
+        <p class="n">FAQ.md</p><p class="d">È un humanizer? Mi impone uno stile?</p></a>
+      <a class="doc" href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/blob/main/CHANGELOG.md">
+        <p class="n">CHANGELOG.md</p><p class="d">La storia delle versioni.</p></a>
+      <a class="doc" href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/blob/main/scrittura-italiana-single-file.md">
+        <p class="n">single-file.md</p><p class="d">Tutta la skill in un documento solo.</p></a>
+      <a class="doc" href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/blob/main/CONTRIBUTING.md">
+        <p class="n">CONTRIBUTING.md</p><p class="d">Come contribuire: pattern, regole, refusi.</p></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="colophon">«&nbsp;Ogni virtù sta tra due vizi: la sciatteria per difetto, lo slop per eccesso.&nbsp;»</p>
+    <p>Opera derivata che cita le sue fonti. Lo strato di stile adatta
+      <a href="https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing">Wikipedia: Signs of AI writing</a>
+      (CC BY-SA 4.0); per <em>share-alike</em>, la skill è rilasciata sotto la stessa licenza.</p>
+    <p>© scrittura-italiana · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> ·
+      <a href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana">GitHub</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
