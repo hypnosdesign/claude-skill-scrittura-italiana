@@ -5,6 +5,31 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.10.0] — 2026-06-18
+
+**L'imprinting inglese: i calchi strutturali dell'italiano AI.** Distillato da una conversazione
+con la linguista Y. Pani su lingua e modelli linguistici: la tesi che molti segni dell'italiano
+"da AI" non sono lessicali (anglismi) ma **strutturali** — l'AI calca la sintassi inglese anche
+scrivendo in italiano. Riconosciuto il cluster, si aggiungono due tell finora assenti e una
+precisazione, riusando la numerazione esistente di `stile-naturale.md` Parte B (nessun rimando
+incrociato §13/§14/§15/§24 toccato).
+
+### Aggiunto
+- **`stile-naturale.md` §B — cappello *«L'imprinting inglese»***: nota che unifica il cluster di
+  tell strutturali (passivo §13, gerundite §14, aggettivo anteposto §15, pronome soggetto §21,
+  frasi brevi paratattiche §19, *title case* in `punteggiatura.md` §327). Spia comune: una
+  costruzione *grammaticalmente possibile* ma che un nativo non sceglierebbe, perché suona "tradotta".
+- **`stile-naturale.md` §21 — *Pronome soggetto ridondante*** (nuovo item): in italiano il soggetto
+  è di norma implicito; *io penso… io credo…* davanti a ogni verbo (o la terza persona ripetuta) è
+  calco dall'obbligo inglese. Regola di taglio, con rinvio a §11 per non forzare la variazione.
+
+### Modificato
+- **`stile-naturale.md` §19** — aggiunta nota sul vizio opposto alle subordinate annidate: la
+  **corsa di frasi brevi paratattiche**, neutra in inglese ma in italiano segno di povertà (nessi
+  scaricati sul punto fermo). Non un divieto della frase breve: sospetto verso il *blocco uniforme*.
+- **`stile-naturale.md` §15** — riga sull'**aggettivo valutativo anteposto** (*uno straordinario
+  risultato*) come calco inglese: in italiano dà affettazione; posporre o tagliare.
+
 ## [2.9.0] — 2026-06-06
 
 **Le mosse del divulgatore + calibrazione di registro misurabile.** Primo distillato da un

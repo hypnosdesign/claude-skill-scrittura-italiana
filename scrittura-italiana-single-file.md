@@ -1988,6 +1988,15 @@ Sostituisci con un fatto concreto.
 
 ## B. Lingua e grammatica
 
+> **L'imprinting inglese.** Molti tell di questa sezione non sono lessicali (anglismi) ma
+> **strutturali**: l'AI nasce con un fortissimo addestramento sull'inglese e ne calca la
+> sintassi anche quando scrive in italiano. Riconoscere il cluster aiuta a stanarli — il
+> passivo a raffica (§13), la **gerundite** (§14), l'aggettivo valutativo anteposto (§15),
+> il **pronome soggetto ridondante** (§21), la **corsa di frasi brevi paratattiche** (§19),
+> più le maiuscole all'inglese / *title case* (**Parte A** §327). La spia comune:
+> una costruzione *grammaticalmente possibile* in italiano ma che un nativo non sceglierebbe,
+> perché suona "tradotta".
+
 **7. Vocabolario AI ad alta frequenza.** *cruciale, fondamentale, imprescindibile;
 evidenziare, sottolineare, mettere in luce; valorizzare, esaltare; intricato, articolato,
 sfaccettato, stratificato; intreccio, mosaico, trama, tessuto, ordito; panorama, scenario,
@@ -2137,7 +2146,11 @@ generalmente, essenzialmente, indubbiamente.* → **Regola:** prova a togliere o
 in *-mente*; se la frase regge senza, è meglio. **Gli intensificatori** (*estremamente,
 assolutamente, incredibilmente, straordinariamente*) non potenziano: sottraggono. *Una mattina
 estremamente gelida* fa meno freddo di *una mattina gelida*; *sono assolutamente deciso* insinua
-già un dubbio. (Sul meccanismo vedi **Parte I** §3.)
+già un dubbio. (Sul meccanismo vedi **Parte I** §3.) **Aggettivo valutativo
+anteposto (calco inglese):** *uno straordinario risultato, un meraviglioso esempio, una
+profonda riflessione*. In inglese l'aggettivo sta sempre prima del nome; in italiano
+l'anteposizione dell'aggettivo valutativo dà subito affettazione ed enfasi. → Posponi
+(*un risultato straordinario*) o, meglio, taglia l'aggettivo se non porta informazione.
 
 **16. Accumulo di sostantivi astratti.** *processo, dimensione, prospettiva, modalità,
 contesto, ambito, dinamica, configurazione, valorizzazione, ottimizzazione, declinazione,
@@ -2157,10 +2170,29 @@ con riferimento a, sulla base di quanto previsto.* → Linguaggio diretto.
 polifunzionali ambigui. → **Regola:** se un periodo supera 35-40 parole o ha più di due
 *che*, spezzalo.
 
+> **Il vizio opposto, da calco inglese: la corsa di frasi brevi paratattiche.** L'inglese
+> tollera serie di periodi corti giustapposti; in italiano, letti in fila, suonano come
+> povertà — incapacità di reggere gli snodi del discorso, ogni nesso scaricato sul punto
+> fermo. Non è un divieto della frase breve (serve al ritmo, e la divulgazione viva ne tiene
+> molte): è il sospetto verso il **blocco uniforme** di periodi corti senza subordinazione né
+> connettivi, dove causa, conseguenza e tempo restano impliciti per default. → Dove la
+> relazione logica lo chiede, **subordina** e collega; varia la lunghezza (vedi "Dare voce"
+> in apertura: la voce viva alterna frasi brevissime e periodi lunghi).
+
 **20. Connettori sovrabbondanti.** *altresì, peraltro, d'altro canto, ciò nonostante,
 cionondimeno, nondimeno, pertanto, perciò, dunque, di conseguenza, ovvero, vale a dire,
 nello specifico, tuttavia, inoltre, per di più, oltretutto.* → L'italiano umano lascia
 molti nessi impliciti; evita i connettori troppo formali fuori registro.
+
+**21. Pronome soggetto ridondante (calco inglese).** In italiano il soggetto è di norma
+**implicito**: il verbo ne porta già la persona. L'inglese deve esprimerlo sempre (*I think,
+I believe, I go*), e l'AI calca l'abitudine — *io penso… io credo… io vado…* davanti a ogni
+verbo, oppure il nome/pronome di terza persona ripetuto a ogni frase (*Leopardi scrive… lui
+sente… lui torna…*). In italiano il pronome esplicito serve solo per **contrasto** (*io resto,
+tu vai*), **enfasi** voluta o **disambiguazione** reale (terza persona ambigua); altrove pesa
+e suona tradotto. → **Regola:** togli il pronome soggetto se non c'è contrasto o ambiguità; per
+la terza persona varia il referente con naturalezza (`Leopardi → il poeta`) invece di ripetere
+*lui/lei* — ma senza forzare antonomasie da sussidiario (vedi §11).
 
 ---
 
