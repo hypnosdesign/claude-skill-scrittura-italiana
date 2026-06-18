@@ -1,6 +1,6 @@
 ---
 name: scrittura-italiana
-version: 2.11.0
+version: 2.12.0
 description: |
   Humanizer dell'italiano: rende naturale e non "da AI" un testo — via
   perifrasi, gerundite, triadi, avverbi in -mente, trattini lunghi,
@@ -62,6 +62,18 @@ unifica correttezza, chiarezza, efficacia e naturalezza.
 > l'utente a metterci un fatto vero (vedi `stile-naturale.md` §51 e §42). Verifica ogni virgolettato
 > attribuito a una persona reale.
 
+> **⚠ Contratto di conservazione (il principio che tiene insieme tutto).** Rivedere un testo
+> **non** è riscriverne il contenuto. *Preservare ciò che esiste, mai simulare ciò che non c'è.*
+> In una revisione **non inventare né rafforzare:** fatti, date, luoghi, quantità, nomi; citazioni
+> o fonti; rapporti causali; confronti numerici; opinioni, emozioni, ironia o esperienze in prima
+> persona; giudizi di valore; conclusioni non presenti. **Preserva sempre:** polarità e negazioni
+> informative (test antonimi/categorie, `stile-naturale.md` §9); modalità (*può, potrebbe, sembra,
+> è, deve* — non promuovere possibilità a certezza né correlazione a causa); condizioni, eccezioni,
+> limiti e grado di certezza; ambito delle affermazioni; relazioni temporali e causali; significato
+> delle citazioni; **voce dell'autore**, quando ricavabile dal testo o da un campione. Se manca un
+> dato necessario, usa un segnaposto (*[dato da verificare]*) o segnala il vuoto: non colmarlo con
+> dettagli plausibili. È la cornice di `stile-naturale.md` §70, §73, §75 e dell'argine in «Dare voce».
+
 > **Leggi i file di riferimento quando servono.** Questo SKILL.md contiene il modello e i
 > precetti ad alta frequenza. Per il dettaglio (una regola sulla virgola, una figura, un
 > pattern AI) apri il riferimento pertinente.
@@ -83,6 +95,25 @@ unifica correttezza, chiarezza, efficacia e naturalezza.
 - Stai producendo tu stesso prosa italiana per l'utente e vuoi che sia impeccabile.
 
 ---
+
+## Livello di intervento (quanto toccare)
+
+Prima di correggere, fissa **quanto** intervenire. Le quattro virtù restano la cornice; il
+livello ne regola l'aggressività. Tre gradi:
+
+1. **`proofread`** — solo errori e refusi: ortografia, accenti, accordi, punteggiatura
+   oggettivamente sbagliata. Intervento minimo, zero stile.
+2. **`line edit`** — chiarezza e ritmo a contatto stretto col testo: scioglie un periodo
+   contorto, toglie un tic, varia una cadenza. **Nessuna informazione nuova**, modifiche
+   conservative.
+3. **`deep rewrite` / `humanize`** — struttura e stile: riscrive, riordina, dà voce. **Anche
+   qui niente contenuto nuovo**: i vuoti diventano segnaposto, non invenzioni (contratto di
+   conservazione).
+
+**Inferisci il livello dal verbo e dal contesto** («correggi/sistema gli errori» → proofread;
+«rendi più chiaro/scorrevole» → line edit; «riscrivi/umanizza» → deep). **Chiedi solo** se la
+scelta cambierebbe materialmente l'output e il segnale è ambiguo; altrimenti procedi col livello
+inferito e dichiaralo in una riga.
 
 ## Workflow — CORREGGERE un testo
 
@@ -146,6 +177,13 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
 
 ## Principî cardine (precetti ad alta frequenza)
 
+> **Le soglie numeriche sono euristiche indicative, non leggi.** «Periodi sopra 35-40 parole»,
+> «un gerundio per paragrafo», «un avverbio in *-mente*», «un marcatore d'incertezza», «tre
+> astratti in fila», «zero occorrenze» diagnosticano una **tendenza**, non sono divieti: vanno
+> tarate su **genere e registro** (un trattato tiene periodi lunghi; la narrativa lirica vive di
+> avverbi; un testo scientifico accumula qualificazioni legittime). Producono falsi positivi su
+> prosa d'autore valida. Usale come spie da verificare, non come metro automatico.
+
 **puritas — correttezza** (`punteggiatura.md`)
 - **Mai virgola tra soggetto e verbo** né tra verbo e suoi argomenti, se contigui.
 - **Inciso = due virgole** (apri e chiudi); mai una sola.
@@ -175,12 +213,15 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
   astratto" (*effettuare un controllo* → *controllare*).
 - **Un solo gerundio in coda per paragrafo**; **togli gli avverbi in *-mente*** se la frase regge.
 - **Niente triadi forzate** né *"non solo… ma anche"* a ripetizione.
-- **Via la definizione bipolare** *«non è X, ma è Y»* e le sue cinque varianti (inversione
-  *«X, non Y»*; plurali/tempi *«non sono… ma»*; senza secondo *è*; con due punti *«non è
-  X: è Y»*; con *e non*): riscrivi **assertiva pura** (*«è Y»*), **non per inversione**
-  (*«è Y, non X»* lascia in piedi il tic). Preserva solo in citazioni, anafore triadiche,
-  frasi-tesi programmatiche, distinzioni filosofiche con autore contrastato, glossari.
-  *Tic di naturalezza, qui per contiguità con la voce "anti-AI" — vedi `stile-naturale.md` §9.*
+- **Definizione bipolare** *«non è X, ma è Y»* (e varianti: inversione *«X, non Y»*; plurali/
+  tempi; senza secondo *è*; due punti *«non è X: è Y»*; *e non*): **il default è tagliare** in
+  **assertiva pura** (*«è Y»*), **non per inversione**. Vale soprattutto per gli **antonimi**
+  (*modulare/monolitica*) e per l'**elevazione** del copy (*«non un semplice X, ma Y»* → *«è una
+  soluzione completa»*, non *«ma»* sostituito coi due punti). **Preserva o compensa solo** se la
+  negazione porta informazione non ricostruibile dal positivo: **esclusione di categoria** con X
+  = lettura di default (*«non è una scelta tecnica: è organizzativa»*), citazioni, anafore
+  triadiche, frasi-tesi programmatiche, distinzioni filosofiche con autore contrastato, glossari.
+  Nel dubbio, taglia. *Vedi `stile-naturale.md` §9 (test + 6 casi).*
 - **La ripetizione non è il male:** non inventare perifrasi o antonomasie pur di non ripetere
   un nome (*Federer* non *il tennista svizzero*).
 - **Una figura solo se aggiunge** senso o forza; altrimenti è *mala affectatio*.

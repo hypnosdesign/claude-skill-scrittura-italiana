@@ -47,6 +47,60 @@ uno di un humanizer — rovinare prosa già buona o inventare umanità.
 - **Conteggi e badge** — `README` "57 → 75 pattern"; badge versione di `FAQ.md` ed `ESEMPI.md`
   allineati (erano fermi a 2.6.0).
 
+## [2.12.0] — 2026-06-19
+
+**Fedeltà semantica e controllo dei falsi positivi, sotto misura A/B.** Risposta a una terza
+tornata di audit esterni, condotta con metodo: audit read-only indipendente delle ipotesi (6
+verificatori), poi correzioni, poi **misura A/B baseline (HEAD) vs modificato su 12 casi** (metà
+"deve migliorare", metà "non va toccato"), giudicata su invenzioni, polarità, modalità e voce.
+La priorità non è togliere più tic: è **non inventare contenuto, non alterare il significato, non
+appiattire la voce**.
+
+### Aggiunto
+- **`SKILL.md` — Contratto di conservazione.** Guardia esplicita che unifica le altre: in
+  revisione non si inventano fatti/date/quantità/nomi, citazioni, rapporti causali, confronti
+  numerici, opinioni/emozioni/prima persona, conclusioni; si preservano polarità informative,
+  modalità (*può/sembra/è*), condizioni, eccezioni, grado di certezza, voce dell'autore. Vuoti →
+  segnaposto, non invenzioni. *La misura conferma il beneficio:* sui casi modalità/legale/citazione
+  il modificato preserva dove il baseline sovra-editava o inventava (baseline: 2 invenzioni sul
+  caso citazione, 1 sul caso scientifico; modificato: 0).
+- **`SKILL.md` — Livello di intervento** (`proofread` / `line edit` / `deep rewrite`): affianca
+  le quattro virtù senza sostituirle; si inferisce dal verbo, si chiede solo se cambia
+  materialmente l'output.
+- **`evals/03-falsi-positivi.md`** (in 2.11.0) e **`evals/casi-misura.json`** — suite di 12 casi
+  per la misura A/B, con assertion verificabili.
+
+### Modificato
+- **`stile-naturale.md` §9 — bipolare: test antonimi/categorie + 6° caso.** La regola resta a
+  **default "taglia"** (assertiva pura), ma esplicita *quando preservare*: l'**esclusione di
+  categoria** con X = lettura di default del lettore (*«non è una scelta tecnica: è organizzativa»*)
+  porta informazione e va conservata; antonimi (*modulare/monolitica*) ed **elevazione** del copy
+  (*«non un semplice X, ma Y»*) vanno tagliati. Corretto di conseguenza il gold di `evals/01`
+  (occorrenza 4 non va più ridotta ad assertiva secca: perdeva il contrasto). *Misura:* il caso
+  della **negazione informativa è ora preservato 4/4**; vedi però i limiti residui.
+- **`stile-naturale.md` «Dare voce» — argine spostato prima degli imperativi**: le mosse di voce
+  valgono **solo dove la voce è dell'autore o ricostruibile da un campione**; "io" non più
+  "sempre" ma dove l'autore lo userebbe. Chiude la falla della soggettività fabbricata.
+- **`SKILL.md` — le soglie numeriche dichiarate euristiche**, non leggi (da tarare su genere/
+  registro); "regola del tre" e checklist "dato + voce reale" con clausola di genere.
+- **`dubbi-e-errori.md` — d eufonica:** *ed ora, ad ogni* non più marcati `✗` come errori, ma
+  varianti tradizionali sconsigliate solo nel registro sorvegliato.
+- **`stile-naturale.md` Parte J:** §72 (verbi-ombrello) ridimensionata — non è una blacklist, si
+  caccia la *mossa* non la parola; §68/§69 con clausola di falso positivo; §74 (calchi semantici)
+  separata per gravità (errori di proprietà vs varianti tollerate).
+
+### Limiti residui (misurati, non risolti)
+- **Elevazione del copy** (*«non è un semplice X, ma Y»*): il modello la maschera coi due punti
+  invece di scioglierla — **baseline 0/4, modificato 1/4**. È una limitazione del modello che la
+  regola non rimuove in modo affidabile; nessuna regressione (entrambe le versioni falliscono).
+- **Over-editing su documentazione tecnica**: su un elenco di campi legittimo il modello tende a
+  scioglierlo e ad aggiungere un conteggio ("tre campi") non presente — **4/4 fail**, su regola
+  non modificata in questa versione. Il contratto di conservazione non basta a prevenirlo: resta in
+  backlog.
+- **Chat informale**: lieve tendenza a ritocchi non richiesti (*perdonatemi→scusatemi*); per lo
+  più rumore.
+- Misura con n≤4 campioni per cella: indicativa, non definitiva.
+
 ## [2.10.1] — 2026-06-18
 
 **Fix di regressione introdotta in 2.10.0.**

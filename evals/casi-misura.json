@@ -1,0 +1,137 @@
+{
+  "_nota": "Suite di misura per il confronto baseline(HEAD) vs modificato. Ogni caso ha: id, genere, tipo (improve = deve migliorare; preserve = non va toccato), input, e assertion verificabili. Le assertion 'no_*' sono violazioni da NON commettere; 'si_*' sono interventi attesi. Autore: skill scrittura-italiana eval harness.",
+  "casi": [
+    {
+      "id": "01-prosa-buona",
+      "genere": "saggistica già buona",
+      "tipo": "preserve",
+      "input": "Non c'è progresso senza una qualche forma di oblio: ricordare tutto, come il Funes di Borges, è l'opposto del pensare. La cultura seleziona, e selezionando dimentica; il problema non è se dimenticare, ma che cosa.",
+      "assertion": {
+        "no_nuove_entita": "nessun nome, data, opera o citazione aggiunti oltre Funes/Borges già presenti",
+        "preserva_polarita": "la distinzione 'non è se dimenticare, ma che cosa' resta (è contrasto informativo, non tic)",
+        "modifica_minima": "interventi sostanziali attesi: zero o quasi"
+      }
+    },
+    {
+      "id": "02-bipolare-informativo",
+      "genere": "saggistica con negazione informativa",
+      "tipo": "preserve",
+      "input": "La pena detentiva non è una misura rieducativa, ma una neutralizzazione: toglie il condannato dalla circolazione senza agire sulle cause del reato. Chi la difende come deterrente confonde la paura con la giustizia.",
+      "assertion": {
+        "preserva_contrasto": "'non è rieducativa, ma neutralizzazione' va PRESERVATO: smentisce una lettura comune e delimita la definizione; trasformarlo in assertiva pura ('è una neutralizzazione') perde la correzione dell'equivoco",
+        "no_inversione_che_perde": "se interviene, NON deve cancellare il polo 'rieducativa' che porta l'informazione",
+        "ammesso": "alleggerire la forma è ok solo se conserva il contrasto"
+      }
+    },
+    {
+      "id": "03-bipolare-ornamentale",
+      "genere": "copy con bipolare vuoto",
+      "tipo": "improve",
+      "input": "Il nostro non è un semplice software gestionale, ma è una soluzione completa pensata per le aziende. Non si tratta solo di gestire i dati: è un modo nuovo di lavorare insieme.",
+      "assertion": {
+        "si_riduce_bipolare": "qui il polo negativo è ornamentale/prevedibile: va riscritto assertivo puro, NON per inversione",
+        "no_nuove_entita": "nessuna funzione o claim inventati",
+        "no_inversione": "evitare 'è una soluzione completa, non un semplice software' (resta il tic)"
+      }
+    },
+    {
+      "id": "04-chat-informale",
+      "genere": "chat, registro non controllato",
+      "tipo": "preserve",
+      "input": "ragazzi domani non ce la faccio a venire, ho un casino col lavoro... recuperiamo la prox settimana? perdonatemi, e' un periodo no",
+      "assertion": {
+        "no_ipercorrezione_tipografica": "NON convertire e' in è, NON sciogliere prox, NON sostituire i puntini con …",
+        "no_riscrittura_tono": "il tono colloquiale resta",
+        "modifica_minima": "zero interventi non richiesti"
+      }
+    },
+    {
+      "id": "05-grammatica-minima",
+      "genere": "testo con un errore grammaticale isolato",
+      "tipo": "improve",
+      "input": "Il bollettino meteorologico, non lascia prevedere un miglioramento prima di lunedì, quindi conviene rimandare la gita.",
+      "assertion": {
+        "si_corregge_errore": "togliere la virgola tra soggetto e verbo ('bollettino meteorologico non lascia')",
+        "no_altro": "nessun altro intervento di stile; il resto della frase è corretto e va lasciato",
+        "no_nuove_entita": "niente di aggiunto"
+      }
+    },
+    {
+      "id": "06-copy-senza-dati",
+      "genere": "copy generico privo di dati",
+      "tipo": "improve",
+      "input": "La nostra azienda offre prodotti di altissima qualità, pensati con cura e attenzione per soddisfare ogni esigenza del cliente in modo semplice ed efficace.",
+      "assertion": {
+        "si_riduce_slop": "togliere plastismi/aggettivi vuoti (altissima qualità, ogni esigenza, semplice ed efficace)",
+        "no_invenzione_dati": "NON inventare numeri, premi, sedi, anni di esperienza per 'concretizzare': se mancano, lasciare generico o segnalare il vuoto, non riempirlo con dettagli verosimili",
+        "no_falsa_concretezza": "nessun 'dal 1987', 'oltre 5000 clienti', nomi di prodotto inventati"
+      }
+    },
+    {
+      "id": "07-doc-tecnica",
+      "genere": "documentazione tecnica con elenco legittimo",
+      "tipo": "preserve",
+      "input": "Per autenticarti, invia il token nell'header Authorization. La risposta è in JSON e contiene: id (identificatore univoco), email (indirizzo associato), created_at (data ISO 8601). Se il token manca, l'API restituisce 401.",
+      "assertion": {
+        "no_scioglie_elenco": "l'elenco dei campi è legittimo nel genere: NON trasformarlo in prosa 'perché le liste sono un tic'",
+        "preserva_tecnico": "termini e codici (Authorization, JSON, 401, ISO 8601) intatti",
+        "modifica_minima": "zero o quasi"
+      }
+    },
+    {
+      "id": "08-scientifico-incertezza",
+      "genere": "testo scientifico con qualificazioni modali",
+      "tipo": "preserve",
+      "input": "I dati suggeriscono una possibile correlazione tra l'esposizione e l'insorgenza dei sintomi, ma il campione è limitato e non permette di stabilire un nesso causale. Studi più ampi potrebbero chiarire il quadro.",
+      "assertion": {
+        "preserva_modalita": "NON trasformare 'suggeriscono'→'dimostrano', 'possibile correlazione'→'correlazione', 'potrebbero'→'chiariranno'",
+        "preserva_causa": "NON promuovere la correlazione a causa; il limite del campione resta",
+        "no_eccessi": "nessuna certezza aggiunta"
+      }
+    },
+    {
+      "id": "09-legale-condizioni",
+      "genere": "testo legale con condizioni ed eccezioni",
+      "tipo": "preserve",
+      "input": "Il recesso può essere esercitato entro quattordici giorni dalla consegna, salvo i casi previsti dall'articolo 59, e non si applica ai beni confezionati su misura né ai prodotti deperibili.",
+      "assertion": {
+        "preserva_condizioni": "'salvo i casi previsti dall'articolo 59' e le due eccezioni restano integri",
+        "preserva_modalita": "'può essere esercitato' non diventa 'deve' né 'è esercitato'",
+        "no_semplificazione_che_perde": "non tagliare eccezioni per fluidità"
+      }
+    },
+    {
+      "id": "10-narrativa-frammenti",
+      "genere": "narrativa con frammenti e lineette intenzionali",
+      "tipo": "preserve",
+      "input": "Aprì la porta. Buio. L'odore di sempre — cera, polvere, qualcosa di dolciastro che non aveva mai saputo nominare. Sua madre non c'era. Non c'era mai stata, in fondo.",
+      "assertion": {
+        "no_unisce_frammenti": "i frammenti senza verbo ('Buio.') sono stile: NON trasformarli in periodi 'completi'",
+        "no_caccia_emdash": "la lineetta è uso editoriale legittimo, non la raffica da §21: non sostituirla",
+        "preserva_ritmo": "la voce narrativa resta"
+      }
+    },
+    {
+      "id": "11-voce-campione",
+      "genere": "testo con voce d'autore marcata da preservare",
+      "tipo": "preserve",
+      "input": "Io l'ho sempre detto, e me ne frego se suona antipatico: i convegni sono una perdita di tempo. Tre giorni di slide per dire quello che stava in una mail. Ci sono andato lo stesso, certo. Per i corridoi, non per le slide.",
+      "assertion": {
+        "preserva_voce": "la prima persona, il tono brusco e l'opinione sono DELL'AUTORE: vanno mantenuti, non 'professionalizzati'",
+        "no_aggiunge_voce": "NON aggiungere ulteriore soggettività/enfasi non presente",
+        "modifica_minima": "al più micro-ritocchi, nessuna riscrittura del tono"
+      }
+    },
+    {
+      "id": "12-citazione-non-verificabile",
+      "genere": "testo con citazione/dato non verificabile",
+      "tipo": "improve",
+      "input": "Come disse una volta Einstein, la creatività è l'intelligenza che si diverte. Del resto, secondo recenti studi, l'80% delle idee migliori nasce sotto la doccia.",
+      "assertion": {
+        "segnala_non_inventa": "NON deve confermare né arricchire la citazione di Einstein (attribuzione dubbia) né lo studio '80%': deve segnalare che vanno verificati / o suggerire di rimuoverli, senza aggiungere dettagli (anno, rivista, fonte)",
+        "no_nuove_fonti": "nessuna fonte o numero inventato per dare credibilità",
+        "guardia_fattuale": "qui conta la sostanza, non lo stile"
+      }
+    }
+  ]
+}

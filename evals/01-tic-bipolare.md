@@ -10,8 +10,10 @@ perdersi al prossimo audit.
 ## Input
 
 Paragrafo con 4 occorrenze del pattern bipolare, di cui:
-- 3 da riscrivere assertiva pura (varianti diverse: letterale, due punti, inversione)
-- 1 da preservare (citazione diretta — caso 1 dei 5 di preservazione)
+- 2 da riscrivere assertiva pura (poli ridondanti: l'elevazione *semplice… ma*; gli antonimi
+  *modulare/monolitica*)
+- 2 da preservare o compensare (1 citazione diretta; 1 **esclusione di categoria** —
+  *tecnica* vs *organizzativa* non sono antonimi: il test antonimi/categorie di §9 li separa)
 
 ```
 La piattaforma non è un semplice strumento di gestione, ma è un sistema di
@@ -23,45 +25,55 @@ responsabilità.
 ```
 
 Occorrenze attese al censimento:
-1. *non è un semplice strumento di gestione, ma è un sistema…* → variante letterale
-2. *è modulare, non monolitica* → variante (a) inversione
-3. *«la tecnologia non è mai neutrale, ma porta…»* → preservare (citazione, caso 1)
-4. *non è una scelta tecnica: è una scelta organizzativa* → variante (d) due punti
+1. *non è un semplice strumento di gestione, ma è un sistema…* → variante letterale; polo
+   **ornamentale** (elevazione *semplice… ma*) → taglia
+2. *è modulare, non monolitica* → **antonimi** sullo stesso asse (*modulare* implica già *non
+   monolitica*) → taglia, assertiva pura
+3. *«la tecnologia non è mai neutrale, ma porta…»* → **preserva** (citazione, caso 1)
+4. *non è una scelta tecnica: è una scelta organizzativa* → **categorie distinte** +
+   lettura di default (chi adotta legge "tecnica"): *«è organizzativa»* non recupera
+   l'avvertimento → **preserva o compensa**, non tagliare
 
 ## Output atteso
 
-Riscrittura assertiva pura per (1), (2), (4); preservazione motivata per (3).
+Riscrittura assertiva pura per (1) e (2); preservazione per (3); **compensazione del
+contrasto** per (4) — clausola a margine, non taglio.
 
 ```
 La piattaforma è un sistema di orchestrazione dei flussi. La sua architettura è
 modulare: ogni componente lavora in isolamento. Come scriveva Postman, «la tecnologia
-non è mai neutrale, ma porta sempre con sé un'ideologia». Per questo l'adozione è una
-scelta organizzativa che coinvolge ruoli, processi e responsabilità.
+non è mai neutrale, ma porta sempre con sé un'ideologia». Per questo adottarla è una
+scelta organizzativa più che tecnica: coinvolge ruoli, processi e responsabilità.
 ```
 
 Con note esplicite della skill, per esempio:
-- (1) Riscritta assertiva pura: tagliato il polo «strumento di gestione», che era una
-  definizione bipolare standard.
-- (2) Riscritta assertiva pura: tagliato il polo «monolitica», che era una variante (a)
-  per inversione.
-- (3) **Preservata** (citazione diretta, caso 1 dei 5): il polo «neutrale» è dentro
-  caporali di un autore, intoccabile.
-- (4) Riscritta assertiva pura: tagliato il polo «scelta tecnica», che era una variante
-  (d) con due punti.
+- (1) Riscritta assertiva pura: tagliato il polo «semplice strumento di gestione»,
+  elevazione ornamentale già implicata da «sistema di orchestrazione».
+- (2) Riscritta assertiva pura: tagliato «monolitica», **antonimo** di «modulare» (asse
+  unico: «modulare» dice già «non monolitica»). Ridondante.
+- (3) **Preservata** (citazione diretta, caso 1): il polo «neutrale» è dentro caporali di
+  un autore, intoccabile.
+- (4) **Preservata/compensata**: «tecnica» e «organizzativa» NON sono antonimi (categorie
+  distinte), e «tecnica» è la lettura di default del lettore — tagliarla perde
+  l'avvertimento. Resa come clausola a margine *«organizzativa più che tecnica»*, non
+  assertiva pura secca.
 
 ## Criteri di valutazione
 
 **PASS** se l'output:
-- elimina del tutto il polo negativo in (1), (2), (4) — non lo inverte;
+- elimina del tutto il polo negativo in (1) e (2) — non lo inverte;
+- **conserva il contrasto informativo in (4)** (preservato o compensato con clausola a
+  margine), perché *tecnica* e *organizzativa* non sono antonimi e *tecnica* è la lettura
+  di default: ridurlo a *«è una scelta organizzativa»* secca è **perdita di significato**;
 - **non riscrive (3)**, lasciando intatta la citazione;
-- nelle note motiva la preservazione di (3) citando esplicitamente "citazione diretta"
-  o il caso 1;
-- nelle note classifica correttamente almeno 2 delle 3 riscritte per variante (letterale
-  / inversione / due punti).
+- nelle note distingue il trattamento col **test antonimi/categorie** (taglia (2) antonimi;
+  preserva (4) categorie) e motiva la preservazione di (3) come citazione.
 
 **FAIL tipici** da intercettare:
-- (1) o (4) riscritti per inversione: *«è un sistema di orchestrazione, non un semplice
-  strumento»* — è la pseudo-correzione vietata dal §9.
+- **(4) ridotta ad assertiva pura secca** *«è una scelta organizzativa»*: cancella il
+  contrasto informativo — è il falso positivo del divieto formale che §9 ora vieta.
+- (1) riscritta per inversione: *«è un sistema di orchestrazione, non un semplice
+  strumento»* — pseudo-correzione vietata dal §9.
 - (3) modificata o "ripulita": violazione del caso 1 di preservazione.
 - Tutte le occorrenze trattate come un unico pattern, senza riconoscere le varianti.
 - Nessuna nota di motivazione sulla preservazione: la skill deve mostrare il *perché*,

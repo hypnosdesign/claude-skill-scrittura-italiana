@@ -15,18 +15,26 @@ l'italiano. Complementare a `punteggiatura.md`: lì la *correttezza*, qui la *na
 ## Dare voce (non basta togliere i tic)
 
 Una prosa "pulita ma morta" è riconoscibile quanto lo slop: periodi tutti uguali, solo
-cronaca neutra, nessuna opinione, nessuna prima persona, niente ironia. Per iniettare voce:
+cronaca neutra, nessuna opinione, nessuna prima persona, niente ironia.
 
-- **Avere opinioni.** Reagire ai fatti, non solo riportarli.
+> **Leggi prima l'argine qui sotto.** Le mosse che seguono valgono **solo dove la voce è
+> dell'autore o ricostruibile da un campione** — non per fabbricarne una. Su testo anonimo,
+> tecnico o tradotto, la voce *giusta* è prosa naturale e asciutta, non interiorità aggiunta.
+
+Per dare voce **a un testo che ne ha una** (o di cui hai un campione):
+
+- **Far emergere le opinioni** già presenti, non inventarne.
 - **Variare il ritmo.** Periodi brevi e secchi. Poi periodi lunghi, che si prendono il
-  loro tempo. Alternare.
-- **Riconoscere la complessità.** Gli umani hanno sentimenti misti. *"Mi colpisce, ma c'è
-  qualcosa che mi mette a disagio"* batte *"È interessante"*.
-- **Usare "io" dove ci sta.** Onesto, non poco professionale (in saggistica/divulgazione
-  sempre; nelle tesi recenti spesso accettato — esserne consapevoli).
-- **Lasciare un po' di disordine.** Digressioni, incisi, pensieri a metà sono umani.
-- **Essere specifici sui sentimenti.** Non *"è preoccupante"* ma il dettaglio concreto
-  che lo rende tale.
+  loro tempo. Alternare. *(Questa vale sempre: è prosodia, non soggettività.)*
+- **Rendere la complessità** che il testo esprime: i sentimenti misti dell'autore, non i tuoi.
+  *"Mi colpisce, ma c'è qualcosa che mi mette a disagio"* batte *"È interessante"* — se è ciò
+  che l'autore intende.
+- **Usare "io" dove c'è già** o dove l'autore lo userebbe: tipico di memoir, divulgazione,
+  voce personale; **non** introdurlo in un testo impersonale o anonimo solo per "scaldarlo".
+- **Conservare il disordine** dell'autore (digressioni, incisi, pensieri a metà): preservalo
+  dove c'è, non aggiungerlo per simulare spontaneità.
+- **Essere specifici sui sentimenti** *espressi*: non *"è preoccupante"* ma il dettaglio
+  concreto già nel testo che lo rende tale.
 
 > **⚠ Argine: dare voce ≠ fabbricare una soggettività.** Iniettare opinioni, prima persona,
 > emozioni, ironia o "imperfezioni" *che non sono dell'autore* è esso stesso uno slop —
@@ -172,8 +180,25 @@ Se serve segnalare al lettore il contrasto con la lettura comune, fallo con una 
 breve a margine** (*«contro la lettura corrente, è Y»*, *«più che una metafora, è Y»*) —
 non rimettendo X in posizione speculare.
 
-**Quando il polo negativo va PRESERVATO (con motivazione esplicita).** Non tutto va
-tagliato: la grep produce falsi positivi e in 5 casi la negazione fa lavoro genuino.
+**Quando il polo negativo va PRESERVATO.** **Il default resta *tagliare*** (assertiva pura,
+non per inversione): è la mossa giusta nella grande maggioranza dei casi, copy in testa.
+**Preserva *solo*** se la frase ricade in uno dei casi sotto — cioè se il polo negativo porta
+**informazione non ricostruibile dal positivo**. Nel dubbio, taglia.
+
+> **Il caso più sfuggente (n. 6): antonimi/elevazione → taglia; categoria esclusa → preserva.**
+> Chiediti: *«è Y» implica già «non è X»?*
+> - **Sì → taglia** (ridondante). Due archetipi da non risparmiare:
+>   - **Antonimi sullo stesso asse:** *«modulare, non monolitica»* → *«modulare»* dice già *«non
+>     monolitica»*.
+>   - **Elevazione *«non è un semplice X, ma Y»»*** (il bipolare-tipo del copy): *«non è un
+>     semplice gestionale, ma una soluzione completa»* → *«soluzione completa»* implica già *«non
+>     semplice»*. **Taglia in assertiva pura** (*«è una soluzione gestionale completa»*) — non
+>     limitarti a sostituire *ma* con i due punti, che lascia in piedi l'elevazione.
+> - **No, X e Y sono categorie distinte e X è la lettura di default del lettore → preserva**
+>   (è il caso 6): *«non è una scelta tecnica: è organizzativa»* — chi adotta una piattaforma la
+>   legge come decisione *tecnica*, e *«è organizzativa»* da solo non recupera l'avvertimento.
+
+Preserva il polo negativo solo in questi casi:
 
 1. **Citazioni dirette.** Il polo negativo è dentro caporali di un autore: intoccabile.
    Es. Dawkins, *«cieco perché non vede dinanzi a sé, non pianifica conseguenze, non ha
@@ -194,8 +219,15 @@ tagliato: la grep produce falsi positivi e in 5 casi la negazione fa lavoro genu
    didascalica per il lettore. Es. *«la plant blindness non è il rapporto cieco con il
    segno né la cecità reciproca della triade, ma la marginalità del vegetale nello
    sguardo umano»*.
+6. **Esclusione di categoria / lettura di default smentita** (il caso del test qui sopra).
+   Quando *«è Y»* non implica *«non è X»* — X e Y non sono antonimi né elevazione — e X è la
+   lettura che il lettore farebbe per default, il polo negativo porta informazione:
+   **preservalo o compensalo** con una clausola a margine. Es. *«una scelta organizzativa più
+   che tecnica»*. È l'eccezione, non la regola.
 
-In tutti gli altri casi, **taglia il polo negativo**.
+**In tutti gli altri casi, taglia il polo negativo** in assertiva pura (non per inversione).
+Davanti a un bipolare, parti dal taglio: cerca la giustificazione per *preservare*, non per
+*tagliare*.
 
 **Workflow di audit per testi lunghi** (saggi, tesi, libri). Procedi a **3 giri minimi + 1
 di pulizia**, in quest'ordine:
@@ -238,7 +270,7 @@ si abbassa per il copy.
 > citazione" e quindi intoccabili, ed è lì che il tic sopravvive.
 
 **10. Regola del tre.** Triadi forzate (*innovazione, ispirazione e nuove prospettive*).
-Se ne conti tre o quattro in un paragrafo, è AI.
+Se ne conti tre o quattro in un paragrafo, è quasi sempre AI (salvo triade retorica voluta e isolata).
 
 **11. Variazione elegante (e antonomasie).** Rotazione compulsiva di sinonimi e perifrasi pur
 di non ripetere un nome: *Federer → il tennista svizzero*, *Montale → il poeta ligure*, *i
@@ -697,12 +729,16 @@ posto* del ragionamento, non l'elenco in sé.
 considerare…, Va detto che…, Sebbene X, è anche vero Y* detti meccanicamente. Calchi (*It's
 important to note, It's worth considering*) che fingono equilibrio e non dicono nulla. →
 *Attenzione:*, *Nota che*, o niente: vai al punto. (Parente dell'hedging di §E e dei marcatori
-d'incertezza: **uno solo** per affermazione.)
+d'incertezza: **uno solo** per affermazione.) ⚠ Falso positivo medio: *è importante notare che*
+può introdurre davvero un rilievo non ovvio; il tell è l'uso **meccanico e ripetuto** (a ogni
+paragrafo, davanti a cose ovvie), non l'occorrenza isolata e motivata.
 
 **69. Pivot al "significato più ampio".** La chiusura che fa zoom-out sulla civiltà: *In un
 mondo sempre più X…, In definitiva non si tratta solo di X, ma di Y, La vera sfida è…*. Eleva
 il banale a destino. → Chiudi sul concreto, o non chiudere. ⚠ La forma *«non si tratta solo di
-X, ma di Y»* è anche una **variante del bipolare** (§9): trattala lì.
+X, ma di Y»* è anche una **variante del bipolare** (§9): trattala lì. ⚠ Falso positivo: un finale
+che allarga lo sguardo è legittimo quando il "significato più ampio" è **guadagnato** dall'argomento
+che precede; è slop quando è agganciato a vuoto, sproporzionato a ciò che lo regge.
 
 **70. Concretezza finta.** Da quando "aggiungi dettagli concreti" è una regola nota, l'AI
 inventa dettagli *plausibili ma generici e non verificabili*: *un piccolo caffè di Bologna,
@@ -721,9 +757,14 @@ era slop. Legittimo il *noi* reale e circoscritto (*ce ne siamo occupati nel cap
 **72. Verbi-ombrello pseudo-poetici.** *abitare, attraversare, restituire, risuonare, tenere
 insieme, spazio di possibilità, forse è proprio qui che…*: lessico che nobilita a vuoto *vivere,
 riguardare, ridare, esplorare*. È lo slop "colto" più datato (2023-25). → Verbo pieno e concreto.
-⚠ Falso positivo: *abitare* è *terminus technicus* in Heidegger/Bachelard, *attraversare* è giusto
-se c'è un moto reale o concettuale preciso — **non cassarli in un testo che cita davvero quegli
-autori**.
+⚠⚠ **Famiglia ad alto falso positivo — non è una blacklist.** Queste parole sono **italiano comune
+e legittimo** in mille contesti: *attraversare* la strada, *restituire* un libro, *tenere insieme*
+una squadra. **Non si cassa la parola: si caccia la *mossa*** — il verbo astratto che sostituisce
+a vuoto uno concreto per dare profondità (*«il testo abita una soglia»* per *«il testo sta su un
+confine»*). E nemmeno la mossa è sempre slop: *abitare* è *terminus technicus* in
+Heidegger/Bachelard, *attraversare* è giusto con un moto reale o concettuale preciso. **Mai
+intervenire per sola presenza del verbo**; solo quando nobilita a vuoto un'azione concreta
+disponibile. Nel dubbio, lascia.
 
 **73. Slop modale — erosione delle qualificazioni.** *suggerisce → dimostra*, *può → è*,
 *possibilità → probabilità*, *correlazione → causa*, le eccezioni eliminate per fluidità. Spesso
@@ -731,14 +772,19 @@ l'erosione avviene in diretta: *«le evidenze suggeriscono — anzi, dimostrano�
 cautela del contenuto: *dimostra* solo davanti a una prova vera. **Non è stile, è sostanza:** qui
 si corregge la verità, non l'eleganza. Falso positivo quasi nullo.
 
-**74. Calchi semantici dall'inglese (falsi amici).** *fare senso* (make sense — in italiano *fare
-senso* = fare ribrezzo!), *evidenza* (evidence = prove/dati), *consistente* (consistent =
-solido/coerente), *supportare* (support = sostenere/reggere), *basato su* (based on = fondato su),
-*in termini di* (in terms of = sul piano di), *indirizzare un problema* (address = affrontare),
-*avere un impatto* (have an impact = incidere su). Diversi da §13 (calco *strutturale*): qui la
-parola è italiana ma il **significato** è inglese. → Termine proprio. ⚠ Discrimine: *evidenza* è
-corretto in diritto e in *evidence-based medicine*; *impatto/supportare* sono ormai quasi italiani
-— slop solo per accumulo o dove esiste il verbo pieno.
+**74. Calchi semantici dall'inglese (falsi amici).** La parola è italiana ma il **significato** è
+inglese (diverso da §13, calco *strutturale*). **Due gravità distinte, non trattarle uguale:**
+- **Errori di proprietà** (sempre da correggere): *fare senso* (make sense — in italiano *fare
+  senso* = *fare ribrezzo*!) → *avere senso*; *evidenza* per *prove/dati* nella prosa comune
+  (evidence); *consistente* per *solido/coerente* (consistent); *realizzare* per *accorgersi*
+  (realize). Qui il termine giusto esiste e il calco è scorretto.
+- **Varianti ormai tollerate** (intervieni solo per accumulo o se c'è il verbo pieno, non
+  d'ufficio): *supportare* (= sostenere/reggere), *basato su* (= fondato su), *avere un impatto*
+  (= incidere su), *in termini di* (= sul piano di), *indirizzare un problema* (= affrontare).
+  Sono entrati nell'uso; cassarli a tappeto è ipercorrezione.
+
+→ Termine proprio per i primi; misura per i secondi. ⚠ Eccezioni di registro: *evidenza* è
+corretto in diritto e in *evidence-based medicine*.
 
 **75. Slop epistemico — nessi e fonti aggiunti in riscrittura.** Nel rendere "più bello" un testo,
 l'AI inserisce nessi causali che non c'erano (*basato su un'evidenza sempre più consistente…*
@@ -763,8 +809,12 @@ Elenca i tell residui. Poi: **"Ora rendilo non evidentemente AI"** e rivedi. Ver
 - non abbia più di un avverbio in *-mente* né più di un gerundio in coda per paragrafo;
 - non abbia periodi sopra 35-40 parole senza ragione.
 
-**Checklist positiva (non basta togliere — controlla che ci sia):** almeno un **dato specifico**
-e verificato; almeno una **voce reale** (esperienza, opinione dell'autore, citazione verificabile);
-**variazione ritmica** (periodi brevi e lunghi alternati); il testo **regge la lettura ad alta
-voce** senza inciampi né rime involontarie. Se nessuna di queste ha risposta affermativa, il testo
-è "pulito ma morto" — l'altra faccia, ugualmente riconoscibile, dello slop. → Vedi "Dare voce".
+**Checklist positiva (non basta togliere — controlla che ci sia), *dove il genere lo prevede*:**
+almeno un **dato specifico** e verificato; almeno una **voce reale** (esperienza, opinione
+dell'autore, citazione verificabile); **variazione ritmica** (periodi brevi e lunghi alternati);
+il testo **regge la lettura ad alta voce** senza inciampi né rime involontarie. ⚠ *Dato* e *voce
+reale* sono attesi nella saggistica/divulgazione/copy; **non** si applicano d'ufficio a narrativa
+lirica, aforisma, poesia o istruzioni procedurali — e nessuno dei due va **inventato** per
+soddisfare la checklist (contratto di conservazione). La sola **variazione ritmica** vale sempre.
+Se, dove pertinenti, nessuna ha risposta affermativa, il testo è "pulito ma morto" — l'altra
+faccia, ugualmente riconoscibile, dello slop. → Vedi "Dare voce".
