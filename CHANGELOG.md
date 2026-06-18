@@ -5,6 +5,19 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.10.1] — 2026-06-18
+
+**Fix di regressione introdotta in 2.10.0.**
+
+### Corretto
+- **Collisione di numerazione in `stile-naturale.md`.** Il *pronome soggetto ridondante*, aggiunto
+  in 2.10.0 come §21, collideva con il §21 esistente (*trattino lungo / em dash*) e rompeva il
+  rimando `punteggiatura.md → stile-naturale.md §21` (che punta all'em dash). Il pronome soggetto
+  è stato **fuso nel §13** (*voce passiva e frammenti senza soggetto*), di cui è il rovescio dello
+  stesso calco inglese sul soggetto; §21 torna a indicare solo l'em dash.
+- **Rimando impreciso.** Nel cappello §B, `punteggiatura.md §327` (numero di riga, non di sezione)
+  → `punteggiatura.md` «Maiuscole e minuscole».
+
 ## [2.10.0] — 2026-06-18
 
 **L'imprinting inglese: i calchi strutturali dell'italiano AI.** Distillato da una conversazione

@@ -100,9 +100,10 @@ Sostituisci con un fatto concreto.
 > **L'imprinting inglese.** Molti tell di questa sezione non sono lessicali (anglismi) ma
 > **strutturali**: l'AI nasce con un fortissimo addestramento sull'inglese e ne calca la
 > sintassi anche quando scrive in italiano. Riconoscere il cluster aiuta a stanarli — il
-> passivo a raffica (§13), la **gerundite** (§14), l'aggettivo valutativo anteposto (§15),
-> il **pronome soggetto ridondante** (§21), la **corsa di frasi brevi paratattiche** (§19),
-> più le maiuscole all'inglese / *title case* (`punteggiatura.md` §327). La spia comune:
+> passivo a raffica e il **pronome soggetto ridondante** (§13), la **gerundite** (§14),
+> l'aggettivo valutativo anteposto (§15), la **corsa di frasi brevi paratattiche** (§19),
+> più le maiuscole all'inglese / *title case* (`punteggiatura.md`, «Maiuscole e minuscole»).
+> La spia comune:
 > una costruzione *grammaticalmente possibile* in italiano ma che un nativo non sceglierebbe,
 > perché suona "tradotta".
 
@@ -240,9 +241,17 @@ Busseto, la nostra eroina*): chiama le cose e le persone col loro nome.
 **12. False scale ("da X a Y").** *"dal Big Bang alla rete cosmica, dalla nascita delle
 stelle alla materia oscura"* dove X e Y non stanno su una scala sensata. → Elenca e basta.
 
-**13. Voce passiva e frammenti senza soggetto.** L'italiano usa passivo e *si* impersonale
-più dell'inglese: calibra. Sospetto quando nasconde l'agente dove servirebbe, o accumula
-*"viene utilizzato / viene gestito / viene processato"*. → Soggetto esplicito.
+**13. Voce passiva, frammenti senza soggetto e pronome soggetto ridondante.** L'italiano usa
+passivo e *si* impersonale più dell'inglese: calibra. Sospetto quando nasconde l'agente dove
+servirebbe, o accumula *"viene utilizzato / viene gestito / viene processato"*. → Soggetto
+esplicito. **Rovescio dello stesso calco — il pronome soggetto ridondante:** in italiano il
+soggetto è di norma **implicito** (il verbo ne porta già la persona); l'inglese deve esprimerlo
+sempre (*I think, I go*) e l'AI ne calca l'abitudine — *io penso… io credo… io vado…* davanti a
+ogni verbo, o la terza persona ripetuta a ogni frase (*Leopardi scrive… lui sente… lui torna…*).
+Il pronome esplicito serve solo per **contrasto** (*io resto, tu vai*), **enfasi** voluta o
+**disambiguazione** reale; altrove pesa e suona tradotto. → Toglilo se non c'è contrasto o
+ambiguità; per la terza persona varia il referente con naturalezza (`Leopardi → il poeta`)
+senza forzare antonomasie da sussidiario (vedi §11).
 
 **14. Gerundite — il gerundio pleonastico in coda.** Uno dei tell più riconoscibili.
 Frasi che dovrebbero finire si estendono con *"…generando…, …portando a…, …creando…,
@@ -292,16 +301,6 @@ polifunzionali ambigui. → **Regola:** se un periodo supera 35-40 parole o ha p
 cionondimeno, nondimeno, pertanto, perciò, dunque, di conseguenza, ovvero, vale a dire,
 nello specifico, tuttavia, inoltre, per di più, oltretutto.* → L'italiano umano lascia
 molti nessi impliciti; evita i connettori troppo formali fuori registro.
-
-**21. Pronome soggetto ridondante (calco inglese).** In italiano il soggetto è di norma
-**implicito**: il verbo ne porta già la persona. L'inglese deve esprimerlo sempre (*I think,
-I believe, I go*), e l'AI calca l'abitudine — *io penso… io credo… io vado…* davanti a ogni
-verbo, oppure il nome/pronome di terza persona ripetuto a ogni frase (*Leopardi scrive… lui
-sente… lui torna…*). In italiano il pronome esplicito serve solo per **contrasto** (*io resto,
-tu vai*), **enfasi** voluta o **disambiguazione** reale (terza persona ambigua); altrove pesa
-e suona tradotto. → **Regola:** togli il pronome soggetto se non c'è contrasto o ambiguità; per
-la terza persona varia il referente con naturalezza (`Leopardi → il poeta`) invece di ripetere
-*lui/lei* — ma senza forzare antonomasie da sussidiario (vedi §11).
 
 ---
 
