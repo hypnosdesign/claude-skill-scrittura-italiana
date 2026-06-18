@@ -177,12 +177,12 @@ tutti*); definizioni ed esempi originali. `✓` = corretto, `✗` = da evitare.
 - **Interiezioni:** sole → punto esclamativo/interrogativo (Boh! Eh?); dentro la frase →
   isolate da virgola (Oh, cavolo!).
 - **D eufonica (*ed, ad*):** la norma moderna la **raccomanda solo davanti alla stessa
-  vocale**: ✓ *ed entrare*, *ad andare*; e ✓ *e io*, *a Ostia*. Eccezioni cristallizzate (con
-  la d anche davanti a vocale diversa): *ad esempio*, *ad ogni*, *ad eccezione*. *od* è ormai
-  obsoleto. ⚠ *ed ora, ad ogni costo, ed io* **non sono errori**: sono varianti tradizionali,
-  diffuse in autori e stampa — solo **sconsigliate nel registro sorvegliato** (non marcarle con
-  ✗ come una scorrettezza ortografica). Nel dubbio, in un testo controllato, preferisci la d
-  solo davanti alla stessa vocale.
+  vocale**: ✓ *ed entrare*, *ad andare*; e ✓ *e io*, *a Ostia*. Unica eccezione davvero
+  cristallizzata: *ad esempio*. *od* è ormai obsoleto. ⚠ Le altre forme con d davanti a vocale
+  diversa — *ed ora, ad ogni, ad ogni costo, ed io* — **non sono errori**: sono varianti
+  tradizionali, diffuse in autori e stampa, solo **sconsigliate nel registro sorvegliato** (non
+  marcarle con ✗ come una scorrettezza ortografica). Nel dubbio, in un testo controllato,
+  preferisci la d solo davanti alla stessa vocale.
 - **anche se ≠ se anche:** *anche se* è concessivo (= benché): *esce **anche se** piove*. *se
   anche* è ipotetico-ammissivo (ammesso pure che): ***se anche** piovesse, uscirei*. Non sono
   intercambiabili.

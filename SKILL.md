@@ -1,6 +1,6 @@
 ---
 name: scrittura-italiana
-version: 2.12.0
+version: 2.12.1
 description: |
   Humanizer dell'italiano: rende naturale e non "da AI" un testo — via
   perifrasi, gerundite, triadi, avverbi in -mente, trattini lunghi,
@@ -59,8 +59,11 @@ unifica correttezza, chiarezza, efficacia e naturalezza.
 > **non verifica i fatti**. Un testo AI è convincente anche quando inventa: statistiche, citazioni,
 > studi, persone, sentenze. La responsabilità dell'accuratezza resta sempre dell'utente. Non
 > introdurre dati o citazioni "verosimili" per riempire un vuoto: segnala il vuoto e lascia che sia
-> l'utente a metterci un fatto vero (vedi `stile-naturale.md` §51 e §42). Verifica ogni virgolettato
-> attribuito a una persona reale.
+> l'utente a metterci un fatto vero (vedi `stile-naturale.md` §51 e §42).
+> **Protocollo per citazioni e dati non verificabili:** (a) se l'utente chiede esplicitamente un
+> fact-check *e* hai strumenti per farlo → verifica; (b) altrimenti **conserva e marca come da
+> verificare** (es. *«[citazione da verificare]»*); (c) in nessun caso **confermare, correggere o
+> arricchire** un'attribuzione o un dato (anno, fonte, percentuale) senza una fonte reale.
 
 > **⚠ Contratto di conservazione (il principio che tiene insieme tutto).** Rivedere un testo
 > **non** è riscriverne il contenuto. *Preservare ciò che esiste, mai simulare ciò che non c'è.*
@@ -106,9 +109,9 @@ livello ne regola l'aggressività. Tre gradi:
 2. **`line edit`** — chiarezza e ritmo a contatto stretto col testo: scioglie un periodo
    contorto, toglie un tic, varia una cadenza. **Nessuna informazione nuova**, modifiche
    conservative.
-3. **`deep rewrite` / `humanize`** — struttura e stile: riscrive, riordina, dà voce. **Anche
-   qui niente contenuto nuovo**: i vuoti diventano segnaposto, non invenzioni (contratto di
-   conservazione).
+3. **`deep rewrite` / `humanize`** — struttura e stile: riscrive, riordina, **preserva o
+   ricostruisce la voce disponibile** (non ne fabbrica una). **Anche qui niente contenuto
+   nuovo**: i vuoti diventano segnaposto, non invenzioni (contratto di conservazione).
 
 **Inferisci il livello dal verbo e dal contesto** («correggi/sistema gli errori» → proofread;
 «rendi più chiaro/scorrevole» → line edit; «riscrivi/umanizza» → deep). **Chiedi solo** se la
@@ -147,9 +150,10 @@ Applica le passate nell'ordine delle virtù, **dalla struttura alla pelle**:
    - *Aggiungi il giusto*: una figura quando serve (metafora che chiarisce, chiasmo in
      chiusura), ritmo variato, cadenza finale piena. Mai ornamento gratuito.
 5. **voce e audit finale** (`stile-naturale.md` → "Dare voce" + audit)
-   Dai opinione, prima persona dove il registro lo consente, ritmo non simmetrico — ma **non
-   fabbricare soggettività**: la voce si preserva o si ricostruisce da un campione, non si
-   inventa (argine in "Dare voce"). Per **chat, email, social, divulgazione** applica anche la
+   **Fai emergere l'opinione e la prima persona già presenti** nel testo o ricavabili dal
+   campione dell'autore, e varia il ritmo — ma **non fabbricare soggettività**: la voce si
+   **preserva o si ricostruisce**, non si inventa (argine in "Dare voce"). Su testo anonimo o
+   tecnico, la voce giusta è prosa naturale e asciutta, non interiorità aggiunta. Per **chat, email, social, divulgazione** applica anche la
    **Parte J** (slop da assistente: aperture/chiuse di servizio, struttura da chatbot, falso
    bilanciamento, calchi semantici). Poi chiediti *"Cosa rende ancora AI questo testo?"*, elenca
    i tell residui, rivedi.
@@ -214,14 +218,14 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
 - **Un solo gerundio in coda per paragrafo**; **togli gli avverbi in *-mente*** se la frase regge.
 - **Niente triadi forzate** né *"non solo… ma anche"* a ripetizione.
 - **Definizione bipolare** *«non è X, ma è Y»* (e varianti: inversione *«X, non Y»*; plurali/
-  tempi; senza secondo *è*; due punti *«non è X: è Y»*; *e non*): **il default è tagliare** in
-  **assertiva pura** (*«è Y»*), **non per inversione**. Vale soprattutto per gli **antonimi**
-  (*modulare/monolitica*) e per l'**elevazione** del copy (*«non un semplice X, ma Y»* → *«è una
-  soluzione completa»*, non *«ma»* sostituito coi due punti). **Preserva o compensa solo** se la
-  negazione porta informazione non ricostruibile dal positivo: **esclusione di categoria** con X
-  = lettura di default (*«non è una scelta tecnica: è organizzativa»*), citazioni, anafore
-  triadiche, frasi-tesi programmatiche, distinzioni filosofiche con autore contrastato, glossari.
-  Nel dubbio, taglia. *Vedi `stile-naturale.md` §9 (test + 6 casi).*
+  tempi; senza secondo *è*; due punti *«non è X: è Y»*; *e non*): **taglia in assertiva pura**
+  (*«è Y»*, non per inversione) **quando è chiaramente ornamentale** — antonimi netti
+  (*«gratuito, non a pagamento»*) ed **elevazione** del copy (*«non un semplice X, ma Y»* → *«è
+  una soluzione completa»*, non *«ma»* coi due punti). **Preserva quando porta informazione o sei
+  in dubbio** (fedeltà > pulizia): **esclusione di categoria** con X = lettura di default (*«non è
+  una scelta tecnica: è organizzativa»*), citazioni, anafore triadiche, frasi-tesi, distinzioni
+  filosofiche, glossari. Il test è di **implicazione nel contesto** (*«è Y» implica già «non
+  X»?*), non lessicale. *Vedi `stile-naturale.md` §9 (test + 6 casi).*
 - **La ripetizione non è il male:** non inventare perifrasi o antonomasie pur di non ripetere
   un nome (*Federer* non *il tennista svizzero*).
 - **Una figura solo se aggiunge** senso o forza; altrimenti è *mala affectatio*.

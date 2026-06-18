@@ -14,7 +14,7 @@
 
 [![Sito](https://img.shields.io/badge/sito-scrittura--italiana-9c2a1f.svg)](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.12.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.12.1-blue.svg)
 
 🔗 **[Sito del progetto →](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)**
 
@@ -158,17 +158,20 @@ appiattire tutto a un italiano neutro.
 > sono stati sapientemente progettati per accogliere mostre, laboratori ed eventi. Il futuro
 > si prospetta indubbiamente brillante.
 
-**Dopo** (copula, frasi spezzate, fatti concreti, voce):
+**Fatti forniti dall'autore** (la skill *non li inventa*: davanti a un testo vago li **chiede** o
+lascia un segnaposto — vedi nota sotto): aperto a marzo, in un ex pastificio; tre sale al piano
+terra (collezione permanente) + una al primo piano (mostre temporanee); prima mostra sui manifesti
+pubblicitari degli anni Trenta, fino a giugno.
+
+**Dopo** (copula, frasi spezzate, gli stessi fatti, voce):
 
 > Il museo ha aperto a marzo in un ex pastificio. Tre sale al piano terra ospitano la
 > collezione permanente; quella al primo piano è riservata alle mostre temporanee. La prima,
 > sui manifesti pubblicitari degli anni Trenta, resta aperta fino a giugno.
 
-> **Nota:** i fatti concreti (*marzo, ex pastificio, tre sale, anni Trenta, giugno*) qui sono
-> **forniti dall'autore** — servono a mostrare la *resa* asciutta, non a dire che la skill li
-> inventa. Davanti a un testo vago e senza fatti, la skill **non riempie il vuoto con dettagli
-> verosimili**: lo segnala (es. *«qui serve un dato concreto: quando ha aperto? dove?»*) o usa
-> un segnaposto. Inventare specifici plausibili è esso stesso un tic AI (la *concretezza finta*).
+> **Nota:** il "dopo" usa **solo** i fatti del blocco sopra, forniti dall'autore — mostra la
+> *resa* asciutta, non una generazione di dettagli. Inventare specifici plausibili per riempire
+> un vuoto è esso stesso un tic AI (la *concretezza finta*): la skill segnala il vuoto, non lo colma.
 
 ### 2. Punteggiatura: virgola tra soggetto e verbo
 

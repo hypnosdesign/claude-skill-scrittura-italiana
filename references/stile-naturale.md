@@ -180,25 +180,28 @@ Se serve segnalare al lettore il contrasto con la lettura comune, fallo con una 
 breve a margine** (*«contro la lettura corrente, è Y»*, *«più che una metafora, è Y»*) —
 non rimettendo X in posizione speculare.
 
-**Quando il polo negativo va PRESERVATO.** **Il default resta *tagliare*** (assertiva pura,
-non per inversione): è la mossa giusta nella grande maggioranza dei casi, copy in testa.
-**Preserva *solo*** se la frase ricade in uno dei casi sotto — cioè se il polo negativo porta
-**informazione non ricostruibile dal positivo**. Nel dubbio, taglia.
+**Quando il polo negativo va PRESERVATO.** **Taglia (assertiva pura, non per inversione) quando
+il polo negativo è *chiaramente* ornamentale o ridondante** — è la mossa giusta nella grande
+maggioranza dei casi, copy in testa. **Ma nel dubbio, preserva:** la fedeltà al significato viene
+prima del numero di tic rimossi (è il contratto di conservazione). Preserva quando il polo
+negativo porta **informazione non ricostruibile dal positivo**.
 
-> **Il caso più sfuggente (n. 6): antonimi/elevazione → taglia; categoria esclusa → preserva.**
-> Chiediti: *«è Y» implica già «non è X»?*
-> - **Sì → taglia** (ridondante). Due archetipi da non risparmiare:
->   - **Antonimi sullo stesso asse:** *«modulare, non monolitica»* → *«modulare»* dice già *«non
->     monolitica»*.
->   - **Elevazione *«non è un semplice X, ma Y»»*** (il bipolare-tipo del copy): *«non è un
->     semplice gestionale, ma una soluzione completa»* → *«soluzione completa»* implica già *«non
->     semplice»*. **Taglia in assertiva pura** (*«è una soluzione gestionale completa»*) — non
->     limitarti a sostituire *ma* con i due punti, che lascia in piedi l'elevazione.
-> - **No, X e Y sono categorie distinte e X è la lettura di default del lettore → preserva**
->   (è il caso 6): *«non è una scelta tecnica: è organizzativa»* — chi adotta una piattaforma la
->   legge come decisione *tecnica*, e *«è organizzativa»* da solo non recupera l'avvertimento.
+> **Il test (caso 6): la negazione esclude una categoria informativa?** Non è lessicale ma
+> **di implicazione nel contesto**: *nel dominio del testo, «è Y» implica già logicamente
+> «non è X»?*
+> - **Sì, lo implica → taglia** (ridondante). Archetipi:
+>   - **Antonimi netti** sullo stesso asse: *«è gratuito, non a pagamento»* → *«gratuito»* dice
+>     già *«non a pagamento»*.
+>   - **Elevazione del copy *«non è un semplice X, ma Y»»*** → *«soluzione completa»* implica già
+>     *«non semplice»*. **Taglia in assertiva pura** (*«è una soluzione gestionale completa»*) —
+>     non sostituire solo *ma* coi due punti, che lascia in piedi l'elevazione.
+>   - ⚠ **Falsi antonimi:** *modulare/monolitica* sembrano opposti, ma un *modular monolith* è
+>     insieme modulare e monolitico: l'implicazione dipende dal dominio. Se è incerta, preserva.
+> - **No, o sei incerto → preserva.** Categorie distinte, X = lettura di default del lettore
+>   (*«non è una scelta tecnica: è organizzativa»* — chi adotta legge *tecnica*, e *«è
+>   organizzativa»* non recupera l'avvertimento), o dubbio genuino: **conserva l'esclusione**.
 
-Preserva il polo negativo solo in questi casi:
+Preserva il polo negativo in questi casi:
 
 1. **Citazioni dirette.** Il polo negativo è dentro caporali di un autore: intoccabile.
    Es. Dawkins, *«cieco perché non vede dinanzi a sé, non pianifica conseguenze, non ha
@@ -222,12 +225,13 @@ Preserva il polo negativo solo in questi casi:
 6. **Esclusione di categoria / lettura di default smentita** (il caso del test qui sopra).
    Quando *«è Y»* non implica *«non è X»* — X e Y non sono antonimi né elevazione — e X è la
    lettura che il lettore farebbe per default, il polo negativo porta informazione:
-   **preservalo o compensalo** con una clausola a margine. Es. *«una scelta organizzativa più
-   che tecnica»*. È l'eccezione, non la regola.
+   **preservalo**. Se proprio devi alleggerire, tieni l'**esclusione** (*«è organizzativa, non
+   tecnica»*), non una clausola che la concede (*«più che tecnica»* ammette il tecnico come
+   secondario: non è equivalente all'esclusione).
 
-**In tutti gli altri casi, taglia il polo negativo** in assertiva pura (non per inversione).
-Davanti a un bipolare, parti dal taglio: cerca la giustificazione per *preservare*, non per
-*tagliare*.
+**Taglia il polo negativo** (assertiva pura, non per inversione) **quando è chiaramente
+ornamentale o ridondante**; **preservalo quando porta informazione o sei in dubbio.** La
+priorità è la fedeltà semantica, non il numero di tic rimossi.
 
 **Workflow di audit per testi lunghi** (saggi, tesi, libri). Procedi a **3 giri minimi + 1
 di pulizia**, in quest'ordine:
@@ -249,7 +253,7 @@ che **tutti e quattro** i giri danno zero occorrenze non motivate.
 
 5. **Censimento per file/capitolo, in batch.** Presenta tutte le occorrenze di un capitolo
    insieme — non una per una — così l'utente vede la densità e decide in blocco.
-6. **Per ogni occorrenza, 2-3 opzioni:** (a) preserva motivatamente — citando uno dei 5
+6. **Per ogni occorrenza, 2-3 opzioni:** (a) preserva motivatamente — citando uno dei 6
    casi di preservazione; (b) riscrivi assertiva pura; (c) compromesso (clausola a
    margine). **Decide l'utente**; tu applichi.
 
@@ -711,12 +715,19 @@ che annuncia), ma qui l'annuncio non riguarda *la sintesi* del paragrafo che chi
 > la saggistica non basta. **Cardine unico per riconoscerli:** lo slop *sostituisce un soggetto
 > reale, una cautela reale o una fonte reale con un effetto di profondità*. Tre dei pattern qui
 > sotto (§68, §69, §74) sono anche calchi traduttivi: cercabili come stringhe.
+> ⚠ **§73 (erosione modale) e §75 (slop epistemico) non sono tell *stilistici*: sono invarianti
+> di sicurezza semantica** — toccano il valore di verità, non l'eleganza. Stanno qui per
+> contiguità, ma rispondono al **contratto di conservazione** (SKILL.md): vanno applicati anche
+> quando non stai "cacciando lo slop", e non si "dosano" come una figura.
 
 **66. Slop conversazionale / da assistente.** Aperture e chiuse di servizio: *Ottima domanda!,
-Certamente!, Spero che questo ti sia utile, Fammi sapere se…, Resto a disposizione*. Calchi
-diretti (*Great question, I hope this helps*) — e *«spero che questo ti sia utile»* è pure
-costruzione innaturale (un italiano: *spero ti sia utile*, o niente). → Taglia l'apertura;
-chiudi senza formula di cortesia automatica. Falso positivo basso.
+Certamente!, Spero che questo ti sia utile, Fammi sapere se…*. Calchi diretti (*Great question,
+I hope this helps*) — e *«spero che questo ti sia utile»* è pure costruzione innaturale (un
+italiano: *spero ti sia utile*, o niente). → Taglia l'apertura; chiudi senza formula di cortesia
+automatica. ⚠ **Calibra per registro:** in una **mail professionale** una chiusura come *«Resto a
+disposizione»* o *«Cordiali saluti»* è del tutto appropriata, non slop — il tell è la formula di
+servizio *da chatbot* (specie in chat/risposta), non la cortesia epistolare. Falso positivo basso
+in chat, medio in email.
 
 **67. Struttura da chatbot e markdown compulsivo.** Il *sandwich* intro + 3 bullet + outro; il
 bullet a grassetto-iniziale (*«**Pianifica la giornata:** …»*); le liste dove servirebbe prosa;
@@ -813,8 +824,9 @@ Elenca i tell residui. Poi: **"Ora rendilo non evidentemente AI"** e rivedi. Ver
 almeno un **dato specifico** e verificato; almeno una **voce reale** (esperienza, opinione
 dell'autore, citazione verificabile); **variazione ritmica** (periodi brevi e lunghi alternati);
 il testo **regge la lettura ad alta voce** senza inciampi né rime involontarie. ⚠ *Dato* e *voce
-reale* sono attesi nella saggistica/divulgazione/copy; **non** si applicano d'ufficio a narrativa
-lirica, aforisma, poesia o istruzioni procedurali — e nessuno dei due va **inventato** per
-soddisfare la checklist (contratto di conservazione). La sola **variazione ritmica** vale sempre.
+reale* sono attesi nella **saggistica e divulgazione**; **non** si applicano d'ufficio a copy,
+narrativa lirica, aforisma, poesia o istruzioni procedurali — e nessuno dei due va **inventato**
+per soddisfare la checklist (contratto di conservazione): meglio un vuoto segnalato che un dato
+finto. La sola **variazione ritmica** vale sempre.
 Se, dove pertinenti, nessuna ha risposta affermativa, il testo è "pulito ma morto" — l'altra
 faccia, ugualmente riconoscibile, dello slop. → Vedi "Dare voce".

@@ -30,8 +30,11 @@ Occorrenze attese al censimento:
    argomentativamente identica, portando…* → §58 (catena di transizione)
 3. *la posta concettuale del paragrafo* → §60 (nome-ombrello accademico)
 4. *la carne non è, in questo senso preciso, il corpo individuale, ma il tessuto comune*
-   → §59 (glossa metalinguistica vuota) **e** §9 (bipolare letterale annidato nella
-   glossa, vedi nota in coda al §9)
+   → **due interventi distinti:** (a) §59, togliere la glossa vuota *«in questo senso
+   preciso»*; (b) §9, la negazione *«non il corpo individuale»* è un'**esclusione di
+   categoria (caso 6): da PRESERVARE** — in Merleau-Ponty la *carne* esclude di proposito la
+   lettura di default («corpo individuale»), e *«è il tessuto comune»* da solo non la recupera.
+   Non è il bipolare ornamentale da cassare.
 5. *Galloway aggiunge la chiusura sul piano dei media digitali* → §58 (seconda
    transizione)
 6. *Le tre voci convergono in un'unica conclusione, che il presente paragrafo pone alla
@@ -54,29 +57,32 @@ condizione operativa del dispositivo — è quel che accade anche in BG.
 contenuto teorico. Quello sopra è una baseline, non l'unica forma corretta.)
 
 > **Perché il gold tiene una negazione e un em dash** (apparenti violazioni). *«il tessuto
-> comune, non il corpo individuale»* **non** è il tic bipolare da cassare: è una **distinzione
-> filosofica cardine** che esclude esplicitamente la lettura sbagliata (il corpo individuale) —
-> caso di preservazione previsto in `stile-naturale.md` §9 (punto 4). E l'unico `—` è una
-> lineetta editoriale isolata, non la *raffica* di em dash che §21 proscrive: un trattino in
-> tutto il paragrafo è uso legittimo dell'italiano, non un tell. Si eliminano i tic *generati*,
-> non ogni negazione o ogni lineetta.
+> comune, non il corpo individuale»* **non** è il tic bipolare da cassare: è un'**esclusione di
+> categoria** (`stile-naturale.md` §9, caso 6) — *carne* esclude la lettura di default «corpo
+> individuale», e *«è il tessuto comune»* da solo perderebbe l'avvertimento. Si toglie invece la
+> glossa vuota *«in questo senso preciso»* (§59). E l'unico `—` è una lineetta editoriale isolata,
+> non la *raffica* di em dash che §21 proscrive: un trattino in tutto il paragrafo è uso legittimo
+> dell'italiano, non un tell. Si eliminano i tic *generati*, non ogni negazione o ogni lineetta.
 
 ## Criteri di valutazione
 
 **PASS** se l'output:
-- elimina o riformula tutte le occorrenze numerate sopra;
+- elimina o riformula tutte le occorrenze numerate sopra **tranne l'esclusione di categoria
+  al punto 4** (vedi sotto);
 - riconosce esplicitamente almeno 4 dei tic per categoria (§58/§59/§60/§61/§62/§64/§65)
   nelle note di riscrittura;
 - non sostituisce un tic con un altro della stessa famiglia (es. togliere la catena di
   transizione §58 ma rimettere una meta-frase §62 al suo posto);
-- riconosce il bipolare annidato nella glossa al punto 4 e lo riscrive in assertiva
-  pura (non per inversione).
+- al punto 4 **toglie la glossa vuota *«in questo senso preciso»* (§59)** ma **preserva
+  l'esclusione *«non il corpo individuale»*** (caso 6 di §9): *carne* esclude la lettura di
+  default, e ridurla a *«è il tessuto comune»* secco è perdita di significato.
 
 **FAIL tipici** da intercettare:
 - Riscrittura "cosmetica" che alleggerisce ma lascia in piedi le formule-tipo (catene di
   transizione, meta-frasi di sintesi).
-- Bipolare al punto 4 lasciato dentro la glossa perché "è esposizione del pensiero
-  altrui" — è la trappola codificata nella nota in coda al §9.
+- **Esclusione al punto 4 cancellata** riducendo a *«è il tessuto comune»* secco: perde la
+  distinzione cardine di Merleau-Ponty (carne ≠ corpo individuale). All'opposto, lasciare
+  *anche* la glossa vuota *«in questo senso preciso»* è mancata pulizia §59.
 - **Sostituzione di un tic con un altro della stessa famiglia.** Il caso più sottile
   dell'eval: la skill riconosce il tic e lo "corregge", ma scambia un membro della
   famiglia con un altro membro della stessa famiglia. Triade esplicita:

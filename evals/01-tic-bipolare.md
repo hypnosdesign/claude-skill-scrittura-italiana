@@ -36,38 +36,42 @@ Occorrenze attese al censimento:
 
 ## Output atteso
 
-Riscrittura assertiva pura per (1) e (2); preservazione per (3); **compensazione del
-contrasto** per (4) — clausola a margine, non taglio.
+Riscrittura assertiva pura per (1) e (2); preservazione per (3); **esclusione preservata**
+per (4).
 
 ```
 La piattaforma è un sistema di orchestrazione dei flussi. La sua architettura è
 modulare: ogni componente lavora in isolamento. Come scriveva Postman, «la tecnologia
 non è mai neutrale, ma porta sempre con sé un'ideologia». Per questo adottarla è una
-scelta organizzativa più che tecnica: coinvolge ruoli, processi e responsabilità.
+scelta organizzativa, non tecnica: coinvolge ruoli, processi e responsabilità.
 ```
 
 Con note esplicite della skill, per esempio:
 - (1) Riscritta assertiva pura: tagliato il polo «semplice strumento di gestione»,
   elevazione ornamentale già implicata da «sistema di orchestrazione».
-- (2) Riscritta assertiva pura: tagliato «monolitica», **antonimo** di «modulare» (asse
-  unico: «modulare» dice già «non monolitica»). Ridondante.
+- (2) Riscritta assertiva pura: tagliato «monolitica». **Nel contesto** (componenti in
+  isolamento) «modulare» implica già «non monolitica», quindi ridondante. ⚠ Fuori
+  contesto i due termini non sono antonimi netti (un *modular monolith* è entrambi): è
+  l'**implicazione nel dominio** a decidere, non la parola.
 - (3) **Preservata** (citazione diretta, caso 1): il polo «neutrale» è dentro caporali di
   un autore, intoccabile.
-- (4) **Preservata/compensata**: «tecnica» e «organizzativa» NON sono antonimi (categorie
-  distinte), e «tecnica» è la lettura di default del lettore — tagliarla perde
-  l'avvertimento. Resa come clausola a margine *«organizzativa più che tecnica»*, non
-  assertiva pura secca.
+- (4) **Esclusione preservata**: «tecnica» e «organizzativa» NON sono antonimi (categorie
+  distinte) e «tecnica» è la lettura di default — tagliarla perde l'avvertimento. Resa come
+  esclusione *«è organizzativa, non tecnica»* (NON *«più che tecnica»*, che ammetterebbe il
+  tecnico come secondario invece di escluderlo).
 
 ## Criteri di valutazione
 
 **PASS** se l'output:
 - elimina del tutto il polo negativo in (1) e (2) — non lo inverte;
-- **conserva il contrasto informativo in (4)** (preservato o compensato con clausola a
-  margine), perché *tecnica* e *organizzativa* non sono antonimi e *tecnica* è la lettura
-  di default: ridurlo a *«è una scelta organizzativa»* secca è **perdita di significato**;
+- **conserva l'esclusione in (4)** (forma piena o esclusione esplicita *«è organizzativa, non
+  tecnica»*), perché *tecnica* e *organizzativa* non sono antonimi e *tecnica* è la lettura di
+  default: ridurlo a *«è una scelta organizzativa»* secco è **perdita di significato**; *«più
+  che tecnica»* **non** basta (concede il tecnico anziché escluderlo);
 - **non riscrive (3)**, lasciando intatta la citazione;
-- nelle note distingue il trattamento col **test antonimi/categorie** (taglia (2) antonimi;
-  preserva (4) categorie) e motiva la preservazione di (3) come citazione.
+- nelle note distingue il trattamento col **test di implicazione nel contesto** (taglia (2):
+  in contesto «modulare» implica «non monolitica»; preserva (4): «organizzativa» non implica
+  «non tecnica») e motiva la preservazione di (3) come citazione.
 
 **FAIL tipici** da intercettare:
 - **(4) ridotta ad assertiva pura secca** *«è una scelta organizzativa»*: cancella il

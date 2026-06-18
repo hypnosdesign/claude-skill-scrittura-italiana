@@ -5,6 +5,109 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.12.1] — 2026-06-19
+
+**Correzioni da un quarto audit esterno: contraddizioni semantiche e onestà empirica.** Patch che
+risolve difetti reali della 2.12.0, alcuni introdotti da me.
+
+### Corretto
+- **`evals/02` — contraddizione risolta.** L'eval chiedeva al punto 4 (*«la carne non è il corpo
+  individuale, ma il tessuto comune»*) sia di riscriverlo in assertiva pura sia di preservarlo. Ora
+  è chiaro: si toglie la glossa vuota *«in questo senso preciso»* (§59) ma si **preserva
+  l'esclusione** *«non il corpo individuale»* (caso 6 di §9 — *carne* esclude la lettura di default).
+  Criteri PASS/FAIL e nota allineati.
+- **`stile-naturale.md` §9 / `SKILL.md` — bipolare: default coerente col contratto.** «Nel dubbio,
+  taglia» → **«nel dubbio, preserva»** (la fedeltà semantica viene prima della pulizia). Il test
+  diventa di **implicazione nel contesto** (*nel dominio, «è Y» implica già «non X»?*), non
+  lessicale; aggiunto l'avviso sui **falsi antonimi** (*modulare/monolitica*: un *modular monolith*
+  è entrambi). Taglio riservato ai casi *chiaramente* ornamentali (elevazione, antonimi netti).
+- **`evals/01` — gold dell'esclusione.** *«è organizzativa più che tecnica»* (concede il tecnico)
+  → *«è organizzativa, non tecnica»* (preserva l'esclusione). Note e criteri aggiornati.
+- **`SKILL.md` «Dare voce» / livello deep:** «dai opinione, prima persona» → **«fai emergere
+  l'opinione e la prima persona già presenti o ricavabili dal campione»**; deep rewrite «dà voce»
+  → «preserva o ricostruisce la voce disponibile».
+- **`SKILL.md` — protocollo per citazioni/dati non verificabili:** se l'utente chiede fact-check e
+  hai strumenti → verifica; altrimenti conserva e marca «da verificare»; mai confermare, correggere
+  o arricchire un'attribuzione senza fonte.
+- **`README.md` — esempio del museo autosufficiente:** blocco *«fatti forniti dall'autore»*
+  inserito **tra** prima e dopo, così la trasformazione non insegna più ad aggiungere fatti.
+- **`stile-naturale.md` Parte J:** §66 calibrato per registro (*«Resto a disposizione»* è
+  appropriato in una mail, non slop); §73/§75 marcati come **invarianti di conservazione**, non
+  tell stilistici; checklist «dato + voce reale» non più attesa nel copy.
+- **`dubbi-e-errori.md` — d eufonica:** unica eccezione cristallizzata *ad esempio*; *ad ogni / ad
+  ogni costo* trattati coerentemente come varianti sconsigliate, non più elencati come eccezioni.
+- **`CHANGELOG` — ordine e onestà:** 2.12.0 rimesso in cima (era sotto 2.11.0); conteggio casi
+  corretto (**8 preserve / 4 improve**, non «metà e metà»); la prova A/B ridichiarata **prova di
+  sviluppo con test leakage e output non persistiti — indizi, non dimostrazioni**; «tre campi»
+  riclassificato come over-editing, non invenzione fattuale.
+- **`stile-naturale.md` §9 — «uno dei 5 casi»** → **6 casi**.
+
+### Noto, non risolto (backlog)
+- **Frontmatter non pienamente portabile** secondo lo standard agentskills.io (`allowed-tools` come
+  lista anziché stringa; `version`/`language` fuori da `metadata`): funziona in Claude Code ma non
+  giustificava il «struttura tutta pulita» dichiarato nell'audit. Non modificato per non rischiare
+  il client primario; da affrontare con verifica.
+- Resta aperto un **benchmark riproducibile e indipendente** (held-out set, output persistiti,
+  più run, baseline senza skill, controlli deterministici): finché non c'è, ogni claim di efficacia
+  è un indizio.
+
+## [2.12.0] — 2026-06-19
+
+**Fedeltà semantica e controllo dei falsi positivi.** Risposta a una terza tornata di audit
+esterni, condotta con metodo: audit read-only indipendente delle ipotesi (6 verificatori), poi
+correzioni, poi una **prova A/B di sviluppo** baseline (HEAD) vs modificato su 12 casi (**8
+*preserve*, 4 *improve***), giudicata su invenzioni, polarità, modalità e voce. ⚠ *Prova su
+development set, non benchmark indipendente:* gli output non sono persistiti, n≤4 per cella, e le
+regole sono state ritoccate dopo aver osservato i fallimenti sugli stessi casi (test leakage). I
+risultati sono **indizi, non dimostrazioni**. La priorità non è togliere più tic: è **non inventare
+contenuto, non alterare il significato, non appiattire la voce**.
+
+### Aggiunto
+- **`SKILL.md` — Contratto di conservazione.** Guardia esplicita che unifica le altre: in
+  revisione non si inventano fatti/date/quantità/nomi, citazioni, rapporti causali, confronti
+  numerici, opinioni/emozioni/prima persona, conclusioni; si preservano polarità informative,
+  modalità (*può/sembra/è*), condizioni, eccezioni, grado di certezza, voce dell'autore. Vuoti →
+  segnaposto, non invenzioni. *La prova suggerisce un beneficio* (da confermare con un benchmark
+  vero): sui casi modalità/legale/citazione il modificato preserva dove il baseline sovra-editava
+  o aggiungeva materiale (baseline: 2 aggiunte sul caso citazione, 1 sul caso scientifico;
+  modificato: 0).
+- **`SKILL.md` — Livello di intervento** (`proofread` / `line edit` / `deep rewrite`): affianca
+  le quattro virtù senza sostituirle; si inferisce dal verbo, si chiede solo se cambia
+  materialmente l'output.
+- **`evals/03-falsi-positivi.md`** (in 2.11.0) e **`evals/casi-misura.json`** — suite di 12 casi
+  per la misura A/B, con assertion verificabili.
+
+### Modificato
+- **`stile-naturale.md` §9 — bipolare: test antonimi/categorie + 6° caso.** La regola resta a
+  **default "taglia"** (assertiva pura), ma esplicita *quando preservare*: l'**esclusione di
+  categoria** con X = lettura di default del lettore (*«non è una scelta tecnica: è organizzativa»*)
+  porta informazione e va conservata; antonimi (*modulare/monolitica*) ed **elevazione** del copy
+  (*«non un semplice X, ma Y»*) vanno tagliati. Corretto di conseguenza il gold di `evals/01`
+  (occorrenza 4 non va più ridotta ad assertiva secca: perdeva il contrasto). *Misura:* il caso
+  della **negazione informativa è ora preservato 4/4**; vedi però i limiti residui.
+- **`stile-naturale.md` «Dare voce» — argine spostato prima degli imperativi**: le mosse di voce
+  valgono **solo dove la voce è dell'autore o ricostruibile da un campione**; "io" non più
+  "sempre" ma dove l'autore lo userebbe. Chiude la falla della soggettività fabbricata.
+- **`SKILL.md` — le soglie numeriche dichiarate euristiche**, non leggi (da tarare su genere/
+  registro); "regola del tre" e checklist "dato + voce reale" con clausola di genere.
+- **`dubbi-e-errori.md` — d eufonica:** *ed ora, ad ogni* non più marcati `✗` come errori, ma
+  varianti tradizionali sconsigliate solo nel registro sorvegliato.
+- **`stile-naturale.md` Parte J:** §72 (verbi-ombrello) ridimensionata — non è una blacklist, si
+  caccia la *mossa* non la parola; §68/§69 con clausola di falso positivo; §74 (calchi semantici)
+  separata per gravità (errori di proprietà vs varianti tollerate).
+
+### Limiti residui (misurati, non risolti)
+- **Elevazione del copy** (*«non è un semplice X, ma Y»*): il modello la maschera coi due punti
+  invece di scioglierla — **baseline 0/4, modificato 1/4**. È una limitazione del modello che la
+  regola non rimuove in modo affidabile; nessuna regressione (entrambe le versioni falliscono).
+- **Over-editing su documentazione tecnica**: su un elenco di campi legittimo il modello tende a
+  scioglierlo e ad aggiungere una meta-spiegazione («tre campi») — **4/4 fail**, su regola non
+  modificata in questa versione. (Nota: «tre campi» è *over-editing*, non invenzione fattuale — il
+  numero è ricavabile dall'elenco.) Il contratto di conservazione non basta a prevenirlo: resta in
+  backlog.
+- **Chat informale**: lieve tendenza a ritocchi non richiesti (*perdonatemi→scusatemi*); per lo
+  più rumore.
+
 ## [2.11.0] — 2026-06-18
 
 **Il secondo imprinting: lo slop da assistente, e gli argini contro l'over-editing.** Risposta a
@@ -46,60 +149,6 @@ uno di un humanizer — rovinare prosa già buona o inventare umanità.
 - **`SKILL.md`** — audit finale e indice rimandano alla Parte J e all'argine sulla voce.
 - **Conteggi e badge** — `README` "57 → 75 pattern"; badge versione di `FAQ.md` ed `ESEMPI.md`
   allineati (erano fermi a 2.6.0).
-
-## [2.12.0] — 2026-06-19
-
-**Fedeltà semantica e controllo dei falsi positivi, sotto misura A/B.** Risposta a una terza
-tornata di audit esterni, condotta con metodo: audit read-only indipendente delle ipotesi (6
-verificatori), poi correzioni, poi **misura A/B baseline (HEAD) vs modificato su 12 casi** (metà
-"deve migliorare", metà "non va toccato"), giudicata su invenzioni, polarità, modalità e voce.
-La priorità non è togliere più tic: è **non inventare contenuto, non alterare il significato, non
-appiattire la voce**.
-
-### Aggiunto
-- **`SKILL.md` — Contratto di conservazione.** Guardia esplicita che unifica le altre: in
-  revisione non si inventano fatti/date/quantità/nomi, citazioni, rapporti causali, confronti
-  numerici, opinioni/emozioni/prima persona, conclusioni; si preservano polarità informative,
-  modalità (*può/sembra/è*), condizioni, eccezioni, grado di certezza, voce dell'autore. Vuoti →
-  segnaposto, non invenzioni. *La misura conferma il beneficio:* sui casi modalità/legale/citazione
-  il modificato preserva dove il baseline sovra-editava o inventava (baseline: 2 invenzioni sul
-  caso citazione, 1 sul caso scientifico; modificato: 0).
-- **`SKILL.md` — Livello di intervento** (`proofread` / `line edit` / `deep rewrite`): affianca
-  le quattro virtù senza sostituirle; si inferisce dal verbo, si chiede solo se cambia
-  materialmente l'output.
-- **`evals/03-falsi-positivi.md`** (in 2.11.0) e **`evals/casi-misura.json`** — suite di 12 casi
-  per la misura A/B, con assertion verificabili.
-
-### Modificato
-- **`stile-naturale.md` §9 — bipolare: test antonimi/categorie + 6° caso.** La regola resta a
-  **default "taglia"** (assertiva pura), ma esplicita *quando preservare*: l'**esclusione di
-  categoria** con X = lettura di default del lettore (*«non è una scelta tecnica: è organizzativa»*)
-  porta informazione e va conservata; antonimi (*modulare/monolitica*) ed **elevazione** del copy
-  (*«non un semplice X, ma Y»*) vanno tagliati. Corretto di conseguenza il gold di `evals/01`
-  (occorrenza 4 non va più ridotta ad assertiva secca: perdeva il contrasto). *Misura:* il caso
-  della **negazione informativa è ora preservato 4/4**; vedi però i limiti residui.
-- **`stile-naturale.md` «Dare voce» — argine spostato prima degli imperativi**: le mosse di voce
-  valgono **solo dove la voce è dell'autore o ricostruibile da un campione**; "io" non più
-  "sempre" ma dove l'autore lo userebbe. Chiude la falla della soggettività fabbricata.
-- **`SKILL.md` — le soglie numeriche dichiarate euristiche**, non leggi (da tarare su genere/
-  registro); "regola del tre" e checklist "dato + voce reale" con clausola di genere.
-- **`dubbi-e-errori.md` — d eufonica:** *ed ora, ad ogni* non più marcati `✗` come errori, ma
-  varianti tradizionali sconsigliate solo nel registro sorvegliato.
-- **`stile-naturale.md` Parte J:** §72 (verbi-ombrello) ridimensionata — non è una blacklist, si
-  caccia la *mossa* non la parola; §68/§69 con clausola di falso positivo; §74 (calchi semantici)
-  separata per gravità (errori di proprietà vs varianti tollerate).
-
-### Limiti residui (misurati, non risolti)
-- **Elevazione del copy** (*«non è un semplice X, ma Y»*): il modello la maschera coi due punti
-  invece di scioglierla — **baseline 0/4, modificato 1/4**. È una limitazione del modello che la
-  regola non rimuove in modo affidabile; nessuna regressione (entrambe le versioni falliscono).
-- **Over-editing su documentazione tecnica**: su un elenco di campi legittimo il modello tende a
-  scioglierlo e ad aggiungere un conteggio ("tre campi") non presente — **4/4 fail**, su regola
-  non modificata in questa versione. Il contratto di conservazione non basta a prevenirlo: resta in
-  backlog.
-- **Chat informale**: lieve tendenza a ritocchi non richiesti (*perdonatemi→scusatemi*); per lo
-  più rumore.
-- Misura con n≤4 campioni per cella: indicativa, non definitiva.
 
 ## [2.10.1] — 2026-06-18
 
