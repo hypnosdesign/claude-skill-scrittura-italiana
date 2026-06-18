@@ -14,7 +14,7 @@
 
 [![Sito](https://img.shields.io/badge/sito-scrittura--italiana-9c2a1f.svg)](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.10.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.11.0-blue.svg)
 
 🔗 **[Sito del progetto →](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)**
 
@@ -38,7 +38,7 @@ l'italiano per davvero, perché è costruita sulle **quattro virtù dell'espress
 4. **ornatus** — bellezza *regolata*: figure, ritmo, argomentazione, costruzione del testo
    (incipit, sviluppo, chiusura). Il suo eccesso (la *mala affectatio*) è esattamente lo
    **slop dell'AI** — perifrasi, gerundite, triadi, avverbi in *-mente*, aggettivi pomposi,
-   antilingua e affettazione all'italiana — che la skill riconosce e rimuove (57 pattern, più
+   antilingua e affettazione all'italiana — che la skill riconosce e rimuove (75 pattern, più
    il repertorio di cliché e frasi fatte).
 
 Il principio guida è l'**equilibrio**: ogni virtù sta tra due vizi, per difetto (sciatteria,
@@ -64,7 +64,7 @@ una libreria di manuali italiani — Serianni, Mortara Garavelli, Giunta, Pontig
     ├── retorica-efficacia.md     # aptum/perspicuitas/ornatus: 4 virtù, 3 stili, figure,
     │                             #   compositio, tópoi, dispositio, tesi, riassunto, discorso riferito
     ├── coesione-e-connettivi.md  # il filo: coesione vs coerenza, tassonomia dei connettivi
-    ├── stile-naturale.md         # anti-slop: 57 pattern AI + antilingua/affettazione
+    ├── stile-naturale.md         # anti-slop: 75 pattern AI + antilingua/affettazione
     │                             #   + "Dare voce" + audit
     ├── cliche-e-parole-alla-moda.md  # parole alla moda, tormentoni, luoghi comuni, cliché, plastismi
     ├── spiegare-con-chiarezza.md # divulgare/documentare: chiarezza, numeri, termine tecnico, anti-hype
@@ -164,6 +164,12 @@ appiattire tutto a un italiano neutro.
 > collezione permanente; quella al primo piano è riservata alle mostre temporanee. La prima,
 > sui manifesti pubblicitari degli anni Trenta, resta aperta fino a giugno.
 
+> **Nota:** i fatti concreti (*marzo, ex pastificio, tre sale, anni Trenta, giugno*) qui sono
+> **forniti dall'autore** — servono a mostrare la *resa* asciutta, non a dire che la skill li
+> inventa. Davanti a un testo vago e senza fatti, la skill **non riempie il vuoto con dettagli
+> verosimili**: lo segnala (es. *«qui serve un dato concreto: quando ha aperto? dove?»*) o usa
+> un segnaposto. Inventare specifici plausibili è esso stesso un tic AI (la *concretezza finta*).
+
 ### 2. Punteggiatura: virgola tra soggetto e verbo
 
 > ✗ `Il bollettino meteorologico, non lascia prevedere un miglioramento.`
@@ -240,7 +246,7 @@ it's built on the four classical *virtutes elocutionis*:
 4. **ornatus** — *measured* beauty: figures, rhythm, argumentation, text construction
    (opening, development, closing). Its excess (*mala affectatio*) is exactly AI slop —
    periphrasis, trailing gerunds, forced triads, *-mente* adverbs, the Italian "antilingua"
-   affectation — which the skill detects and removes (57 patterns, plus a register of clichés
+   affectation — which the skill detects and removes (75 patterns, plus a register of clichés
    and stock phrases).
 
 The guiding principle is **balance**: each virtue sits between two vices, by deficiency

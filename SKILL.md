@@ -1,6 +1,6 @@
 ---
 name: scrittura-italiana
-version: 2.10.1
+version: 2.11.0
 description: |
   Humanizer dell'italiano: rende naturale e non "da AI" un testo — via
   perifrasi, gerundite, triadi, avverbi in -mente, trattini lunghi,
@@ -116,8 +116,12 @@ Applica le passate nell'ordine delle virtù, **dalla struttura alla pelle**:
    - *Aggiungi il giusto*: una figura quando serve (metafora che chiarisce, chiasmo in
      chiusura), ritmo variato, cadenza finale piena. Mai ornamento gratuito.
 5. **voce e audit finale** (`stile-naturale.md` → "Dare voce" + audit)
-   Dai opinione, prima persona dove il registro lo consente, ritmo non simmetrico. Poi
-   chiediti *"Cosa rende ancora AI questo testo?"*, elenca i tell residui, rivedi.
+   Dai opinione, prima persona dove il registro lo consente, ritmo non simmetrico — ma **non
+   fabbricare soggettività**: la voce si preserva o si ricostruisce da un campione, non si
+   inventa (argine in "Dare voce"). Per **chat, email, social, divulgazione** applica anche la
+   **Parte J** (slop da assistente: aperture/chiuse di servizio, struttura da chatbot, falso
+   bilanciamento, calchi semantici). Poi chiediti *"Cosa rende ancora AI questo testo?"*, elenca
+   i tell residui, rivedi.
    ⚠ Per i testi **argomentativi/persuasivi** fai anche un **esame critico** esplicito
    (incoerenze, salti logici, affermazioni non dimostrate): l'AI tende a *confermare* la tesi di chi
    scrive, non a contestarla — vai cercato il punto debole, non aspettarlo.
@@ -227,8 +231,12 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
   more) e la guardia "verità e misura" (pathos, vaghezza, timidezza)**; **i tic della prosa
   saggistico-accademica** (catene di transizione fra autori, glosse di pseudo-precisione,
   nomi-ombrello dell'accademica umanistica, autoriferimento metatestuale, meta-frasi di
-  sintesi, *«resta vero che»*, autovalutazioni di precisione); sezione "Dare voce" e audit
-  finale.
+  sintesi, *«resta vero che»*, autovalutazioni di precisione); **lo slop da assistente e
+  semantico (Parte J)** — voce conversazionale (chat/email), struttura da chatbot e markdown
+  compulsivo, falso bilanciamento, pivot al "significato più ampio", concretezza finta, *noi*
+  cosmico, verbi-ombrello pseudo-poetici, erosione delle qualificazioni, calchi semantici
+  (falsi amici), slop epistemico; sezione "Dare voce" (con l'argine *non fabbricare
+  soggettività*) e audit finale.
 - **`references/cliche-e-parole-alla-moda.md`** — *non pensare per formule*. Repertorio di
   parole alla moda, locuzioni e tormentoni, formule d'elogio trite, luoghi comuni, metafore
   morte, **plastismi e aggettivi obbligatori**, e i **cliché del discorso scientifico**.

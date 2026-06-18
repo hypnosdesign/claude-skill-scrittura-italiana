@@ -5,6 +5,48 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.11.0] — 2026-06-18
+
+**Il secondo imprinting: lo slop da assistente, e gli argini contro l'over-editing.** Risposta a
+due audit esterni convergenti. Se la Parte B raccoglie i calchi *strutturali* dall'inglese, una
+nuova **Parte J** raccoglie i tell di *registro* che vengono dall'essere un assistente
+conversazionale — i generi (chat, email, social, divulgazione) che la skill promette ma su cui la
+saggistica non bastava. Dieci pattern validati su corpus AI reale (generato e analizzato, non *a
+sentimento*), con un cardine unico: *lo slop sostituisce un soggetto reale, una cautela reale o
+una fonte reale con un effetto di profondità*. In parallelo, tre argini contro il rischio numero
+uno di un humanizer — rovinare prosa già buona o inventare umanità.
+
+### Aggiunto
+- **`stile-naturale.md` Parte J §66–75** — slop conversazionale/da assistente, struttura da
+  chatbot e markdown compulsivo (calibrato per genere), falso bilanciamento/hedging di servizio,
+  pivot al "significato più ampio", **concretezza finta**, *noi/ci* cosmico (slop relazionale),
+  verbi-ombrello pseudo-poetici (*abitare, attraversare, restituire*), **slop modale** (erosione
+  delle qualificazioni: *suggerisce→dimostra, può→è, correlazione→causa*), **calchi semantici/
+  falsi amici** (*fare senso, evidenza, consistente, supportare, basato su*), **slop epistemico**
+  (nessi e fonti aggiunti in riscrittura). Ogni pattern con discrimine slop/legittimo e rischio
+  di falso positivo.
+- **`evals/03-falsi-positivi.md`** — nuovo eval contro l'**over-editing**: cinque testi umani e
+  corretti (chat informale, saggistica colta, doc tecnica con elenco legittimo, narrativa con
+  frammenti/lineette, copy social) che la skill deve lasciare **intatti**. Metrica-chiave: tasso
+  di modifiche indebite (target zero), con confronto cieco vs baseline senza skill.
+
+### Modificato
+- **`stile-naturale.md` → «Dare voce»** — aggiunto l'**argine «dare voce ≠ fabbricare
+  soggettività»**: opinioni, prima persona, emozioni e "imperfezioni" non dell'autore sono esse
+  stesse slop (umanità simulata). La voce si preserva o si ricostruisce da un campione; in assenza
+  d'autore, prosa naturale e asciutta, non finta interiorità.
+- **`README.md` / `ESEMPI.md`** — gli esempi *prima→dopo* che esplicitavano fatti concreti (museo,
+  criticità, benchmark del chip) ora chiariscono che **i fatti sono forniti dall'autore**, non
+  inventati dalla skill: davanti a un vuoto la skill chiede o usa un segnaposto. Allinea gli
+  esempi alla guardia fattuale (SKILL.md), che prima contraddicevano.
+- **`evals/02-prosa-saggistica.md`** — annotato perché l'output di riferimento conserva una
+  negazione (*«il tessuto comune, non il corpo individuale»* = distinzione filosofica cardine,
+  preservazione §9) e un em dash isolato (lineetta editoriale, non la raffica di §21): l'eval non
+  contraddice più le regole senza spiegarlo.
+- **`SKILL.md`** — audit finale e indice rimandano alla Parte J e all'argine sulla voce.
+- **Conteggi e badge** — `README` "57 → 75 pattern"; badge versione di `FAQ.md` ed `ESEMPI.md`
+  allineati (erano fermi a 2.6.0).
+
 ## [2.10.1] — 2026-06-18
 
 **Fix di regressione introdotta in 2.10.0.**

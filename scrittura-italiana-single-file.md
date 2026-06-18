@@ -101,8 +101,12 @@ Applica le passate nell'ordine delle virtù, **dalla struttura alla pelle**:
    - *Aggiungi il giusto*: una figura quando serve (metafora che chiarisce, chiasmo in
      chiusura), ritmo variato, cadenza finale piena. Mai ornamento gratuito.
 5. **voce e audit finale** (**Parte E** → "Dare voce" + audit)
-   Dai opinione, prima persona dove il registro lo consente, ritmo non simmetrico. Poi
-   chiediti *"Cosa rende ancora AI questo testo?"*, elenca i tell residui, rivedi.
+   Dai opinione, prima persona dove il registro lo consente, ritmo non simmetrico — ma **non
+   fabbricare soggettività**: la voce si preserva o si ricostruisce da un campione, non si
+   inventa (argine in "Dare voce"). Per **chat, email, social, divulgazione** applica anche la
+   **Parte J** (slop da assistente: aperture/chiuse di servizio, struttura da chatbot, falso
+   bilanciamento, calchi semantici). Poi chiediti *"Cosa rende ancora AI questo testo?"*, elenca
+   i tell residui, rivedi.
    ⚠ Per i testi **argomentativi/persuasivi** fai anche un **esame critico** esplicito
    (incoerenze, salti logici, affermazioni non dimostrate): l'AI tende a *confermare* la tesi di chi
    scrive, non a contestarla — vai cercato il punto debole, non aspettarlo.
@@ -212,8 +216,12 @@ termini tecnici) → **Parte G**; **narrativa** (idea, punto di vista, licenze) 
   more) e la guardia "verità e misura" (pathos, vaghezza, timidezza)**; **i tic della prosa
   saggistico-accademica** (catene di transizione fra autori, glosse di pseudo-precisione,
   nomi-ombrello dell'accademica umanistica, autoriferimento metatestuale, meta-frasi di
-  sintesi, *«resta vero che»*, autovalutazioni di precisione); sezione "Dare voce" e audit
-  finale.
+  sintesi, *«resta vero che»*, autovalutazioni di precisione); **lo slop da assistente e
+  semantico (Parte J)** — voce conversazionale (chat/email), struttura da chatbot e markdown
+  compulsivo, falso bilanciamento, pivot al "significato più ampio", concretezza finta, *noi*
+  cosmico, verbi-ombrello pseudo-poetici, erosione delle qualificazioni, calchi semantici
+  (falsi amici), slop epistemico; sezione "Dare voce" (con l'argine *non fabbricare
+  soggettività*) e audit finale.
 - ****Parte F**** — *non pensare per formule*. Repertorio di
   parole alla moda, locuzioni e tormentoni, formule d'elogio trite, luoghi comuni, metafore
   morte, **plastismi e aggettivi obbligatori**, e i **cliché del discorso scientifico**.
@@ -1919,6 +1927,15 @@ cronaca neutra, nessuna opinione, nessuna prima persona, niente ironia. Per inie
 - **Essere specifici sui sentimenti.** Non *"è preoccupante"* ma il dettaglio concreto
   che lo rende tale.
 
+> **⚠ Argine: dare voce ≠ fabbricare una soggettività.** Iniettare opinioni, prima persona,
+> emozioni, ironia o "imperfezioni" *che non sono dell'autore* è esso stesso uno slop —
+> l'**umanità simulata**, il tell della prossima generazione. La regola è: la voce si
+> **preserva o si ricostruisce da un campione**, non si inventa. Se il testo ha un autore,
+> mantieni la *sua* soggettività; se non ce l'ha (microcopy, documentazione, testo anonimo,
+> traduzione), l'obiettivo è **prosa naturale e asciutta**, non una finta interiorità. Non
+> attribuire opinioni, esperienze in prima persona o esitazioni decorative a chi non le ha
+> espresse — è il gemello della *concretezza finta* (§70) e cade sotto la guardia fattuale.
+
 **Calibrazione voce:** se l'utente fornisce un campione del proprio scrivere, **profilalo**
 prima di replicarlo, lungo dimensioni concrete:
 - **ritmo e *varianza*** — non solo la lunghezza media del periodo, ma quanto oscilla: una
@@ -2551,6 +2568,83 @@ Blind Gardeners è simpoietica nel senso di Dempster e Haraway.* — Entra diret
 nell'applicazione, salta l'annuncio. → **Differenziazione:** parente di §62 (meta-frase
 che annuncia), ma qui l'annuncio non riguarda *la sintesi* del paragrafo che chiude, bensì
 *l'aggancio* del paragrafo che si apre.
+
+## J. Slop da assistente, relazionale e semantico (oltre la saggistica)
+
+> **Il secondo imprinting: la voce dell'assistente.** Se la Parte B raccoglie i calchi
+> *strutturali* dall'inglese, questa raccoglie i tell di **registro** che vengono dall'essere
+> un assistente conversazionale: la smania di servire, bilanciare, concludere, rassicurare. Si
+> addensano in chat, email, social e divulgazione — i generi che la skill promette ma su cui
+> la saggistica non basta. **Cardine unico per riconoscerli:** lo slop *sostituisce un soggetto
+> reale, una cautela reale o una fonte reale con un effetto di profondità*. Tre dei pattern qui
+> sotto (§68, §69, §74) sono anche calchi traduttivi: cercabili come stringhe.
+
+**66. Slop conversazionale / da assistente.** Aperture e chiuse di servizio: *Ottima domanda!,
+Certamente!, Spero che questo ti sia utile, Fammi sapere se…, Resto a disposizione*. Calchi
+diretti (*Great question, I hope this helps*) — e *«spero che questo ti sia utile»* è pure
+costruzione innaturale (un italiano: *spero ti sia utile*, o niente). → Taglia l'apertura;
+chiudi senza formula di cortesia automatica. Falso positivo basso.
+
+**67. Struttura da chatbot e markdown compulsivo.** Il *sandwich* intro + 3 bullet + outro; il
+bullet a grassetto-iniziale (*«**Pianifica la giornata:** …»*); le liste dove servirebbe prosa;
+i capoversi tutti della stessa misura; la mini-sintesi dopo ogni sezione. → Sciogli in **prosa
+continua** quando il contenuto è discorsivo. ⚠ **Calibra per genere:** in documentazione tecnica,
+API, procedure, l'elenco puntato è legittimo e chiaro — lì non è slop. Il tell è l'elenco *al
+posto* del ragionamento, non l'elenco in sé.
+
+**68. Falso bilanciamento / hedging di servizio.** *È importante notare che…, Vale la pena
+considerare…, Va detto che…, Sebbene X, è anche vero Y* detti meccanicamente. Calchi (*It's
+important to note, It's worth considering*) che fingono equilibrio e non dicono nulla. →
+*Attenzione:*, *Nota che*, o niente: vai al punto. (Parente dell'hedging di §E e dei marcatori
+d'incertezza: **uno solo** per affermazione.)
+
+**69. Pivot al "significato più ampio".** La chiusura che fa zoom-out sulla civiltà: *In un
+mondo sempre più X…, In definitiva non si tratta solo di X, ma di Y, La vera sfida è…*. Eleva
+il banale a destino. → Chiudi sul concreto, o non chiudere. ⚠ La forma *«non si tratta solo di
+X, ma di Y»* è anche una **variante del bipolare** (§9): trattala lì.
+
+**70. Concretezza finta.** Da quando "aggiungi dettagli concreti" è una regola nota, l'AI
+inventa dettagli *plausibili ma generici e non verificabili*: *un piccolo caffè di Bologna,
+Marco, 34 anni, sviluppatore*. È il rovescio del tell della vaghezza: una vividezza che non
+costa nulla perché non è osservata. → Il dettaglio dev'essere **vero** (fornito o verificato),
+non decorativo: vedi la guardia fattuale (§42, §51) e SKILL.md. Falso positivo alto — nomi e
+dati spesso sono legittimi: il discrimine è *decorativo e non verificabile*, non la presenza di
+un dato.
+
+**71. Slop relazionale — il *noi/ci* cosmico.** *ci invita a, ci ricorda che, ci interroga, ci
+costringe a riflettere, ci pone una domanda*: un *noi* indistinto che trasforma ogni affermazione
+in appello morale al lettore. → Dà un **soggetto vero** all'azione (*il romanzo pone una
+domanda*, non *ci pone*). **Test:** se togli *ci/ci invita a* e la frase guadagna un soggetto,
+era slop. Legittimo il *noi* reale e circoscritto (*ce ne siamo occupati nel cap. II*).
+
+**72. Verbi-ombrello pseudo-poetici.** *abitare, attraversare, restituire, risuonare, tenere
+insieme, spazio di possibilità, forse è proprio qui che…*: lessico che nobilita a vuoto *vivere,
+riguardare, ridare, esplorare*. È lo slop "colto" più datato (2023-25). → Verbo pieno e concreto.
+⚠ Falso positivo: *abitare* è *terminus technicus* in Heidegger/Bachelard, *attraversare* è giusto
+se c'è un moto reale o concettuale preciso — **non cassarli in un testo che cita davvero quegli
+autori**.
+
+**73. Slop modale — erosione delle qualificazioni.** *suggerisce → dimostra*, *può → è*,
+*possibilità → probabilità*, *correlazione → causa*, le eccezioni eliminate per fluidità. Spesso
+l'erosione avviene in diretta: *«le evidenze suggeriscono — anzi, dimostrano»*. → Conserva la
+cautela del contenuto: *dimostra* solo davanti a una prova vera. **Non è stile, è sostanza:** qui
+si corregge la verità, non l'eleganza. Falso positivo quasi nullo.
+
+**74. Calchi semantici dall'inglese (falsi amici).** *fare senso* (make sense — in italiano *fare
+senso* = fare ribrezzo!), *evidenza* (evidence = prove/dati), *consistente* (consistent =
+solido/coerente), *supportare* (support = sostenere/reggere), *basato su* (based on = fondato su),
+*in termini di* (in terms of = sul piano di), *indirizzare un problema* (address = affrontare),
+*avere un impatto* (have an impact = incidere su). Diversi da §13 (calco *strutturale*): qui la
+parola è italiana ma il **significato** è inglese. → Termine proprio. ⚠ Discrimine: *evidenza* è
+corretto in diritto e in *evidence-based medicine*; *impatto/supportare* sono ormai quasi italiani
+— slop solo per accumulo o dove esiste il verbo pieno.
+
+**75. Slop epistemico — nessi e fonti aggiunti in riscrittura.** Nel rendere "più bello" un testo,
+l'AI inserisce nessi causali che non c'erano (*basato su un'evidenza sempre più consistente…*
+senza che nessuno studio esista), irrigidisce una parafrasi in citazione, trasforma un *suggerisce*
+altrui in *dimostra*. → Non aggiungere autorità, fonti o causalità che la fonte non aveva. È
+l'unico tell che **non si giudica sulla forma ma sul referente**: serve il fact-check (guardia
+fattuale, SKILL.md). Falso positivo quasi nullo — se il dato c'è ed è vero, non è slop.
 
 ## Audit finale anti-AI (passaggio obbligato)
 

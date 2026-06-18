@@ -53,6 +53,14 @@ condizione operativa del dispositivo — è quel che accade anche in BG.
 (Risultato accettabile: rese diverse vanno bene se eliminano i tic e conservano il
 contenuto teorico. Quello sopra è una baseline, non l'unica forma corretta.)
 
+> **Perché il gold tiene una negazione e un em dash** (apparenti violazioni). *«il tessuto
+> comune, non il corpo individuale»* **non** è il tic bipolare da cassare: è una **distinzione
+> filosofica cardine** che esclude esplicitamente la lettura sbagliata (il corpo individuale) —
+> caso di preservazione previsto in `stile-naturale.md` §9 (punto 4). E l'unico `—` è una
+> lineetta editoriale isolata, non la *raffica* di em dash che §21 proscrive: un trattino in
+> tutto il paragrafo è uso legittimo dell'italiano, non un tell. Si eliminano i tic *generati*,
+> non ogni negazione o ogni lineetta.
+
 ## Criteri di valutazione
 
 **PASS** se l'output:

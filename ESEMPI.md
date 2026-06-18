@@ -1,6 +1,6 @@
 # Esempi (prima → dopo)
 
-![Version](https://img.shields.io/badge/version-2.6.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.11.0-blue.svg)
 
 Cosa fa la skill, su testi reali. Il caso d'uso principale è **umanizzare** un testo che "sa
 di AI" (§1); ma è un humanizer con i superpoteri, perciò sa anche correggere, chiarire e dare
@@ -134,6 +134,12 @@ comune), le frasi fatte, e l'architettura del testo (come si entra e come si chi
   un fatto concreto (cosa sistemare, entro quando); il generico *molteplici* lascia il posto
   all'elenco dei problemi reali.
 
+> **Nota:** *impianto elettrico fuori norma, tetto, uscite bloccate* sono i problemi **che
+> l'autore aveva in mente** dietro il vago *«criticità a 360 gradi»* — l'esempio li esplicita
+> per mostrare la resa. La skill non *indovina* quali siano i problemi: se l'input non li dice,
+> chiede o lascia un segnaposto, non inventa dettagli verosimili (vedi `stile-naturale.md` §70,
+> §75).
+
 ---
 
 ## 6. Coesione: ricucire un testo «a mosaico»
@@ -184,6 +190,12 @@ sparare numeri-totem senza contesto. La skill fa il contrario: contestualizza e 
 - **chiarezza ≠ semplificazione:** *rivoluziona il settore* (slogan vuoto) → cosa cambia davvero,
   **con il suo limite** («dipende dai programmi»). Una qualifica in più, non in meno.
 - **anti-hype:** via *straordinaria* e *rivoluziona* (`stile-naturale.md` §1; `spiegare-con-chiarezza.md`).
+
+> **Nota — il confine da non superare:** il **confronto** (*una giornata di un PC di dieci anni
+> fa*) e il **×10 sul modello precedente** valgono *solo se sono dati veri*, forniti o
+> verificati. La mossa "contestualizza il numero" è giusta; **inventare il termine di paragone**
+> non lo è. Se non hai un confronto reale, rendi leggibile la cifra e fermati lì — non fabbricare
+> un benchmark verosimile (`stile-naturale.md` §73, §75).
 
 ---
 
