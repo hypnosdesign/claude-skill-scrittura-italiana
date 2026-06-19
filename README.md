@@ -1,15 +1,16 @@
-# scrittura-italiana — l'humanizer italiano che sa la lingua
+# scrittura-italiana — l'humanizer italiano che sa davvero l'italiano
 
-> Trasforma la scrittura AI in italiano umano — **davvero**: non scambi di caratteri o sinonimi
-> per ingannare un detector, ma vera competenza di lingua. Toglie i tic dell'AI (perifrasi,
-> gerundite, triadi, trattini lunghi, frasi fatte), scrive *giusto* (punteggiatura, registro,
-> ritmo, retorica) e **conserva fatti, tesi, registro e voce**. Non umanizza l'output a
-> posteriori: fa scrivere il modello in italiano umano dall'inizio.
+> Trasforma la prosa generata in italiano naturale — e a differenza dei *paraphraser* non con
+> scambi di caratteri o sinonimi, ma con **vera competenza di lingua**. Toglie i tic dell'AI
+> (perifrasi, gerundite, triadi, trattini lunghi, frasi fatte), corregge stile, sintassi,
+> punteggiatura e retorica, e **conserva fatti, tesi, registro e voce**. Non un filtro a
+> posteriori: **impone al modello un processo editoriale fondato sull'italiano**, invece di
+> lasciarlo seguire le proprie abitudini generative.
 >
 > *A Claude [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills) — an Italian
-> humanizer that makes the model write genuinely human Italian: real linguistic competence, not
-> detector tricks. Removes AI tells, fixes the language, preserves facts, thesis, register and
-> voice. Content is in Italian.*
+> humanizer that turns AI prose into natural Italian through real linguistic competence, not
+> paraphraser tricks. Fixes style, syntax, punctuation and rhetoric while preserving facts,
+> thesis, register and voice. Content is in Italian.*
 
 <p align="center">
   <img src="assets/demo-umanizza.gif" alt="Demo: incolli un testo che «sa di AI» e la skill digita la versione umana — via perifrasi, gerundite, triadi e chiusure vuote, ma il fatto resta" width="760">
