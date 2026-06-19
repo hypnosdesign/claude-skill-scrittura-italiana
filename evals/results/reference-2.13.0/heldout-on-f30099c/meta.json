@@ -1,16 +1,18 @@
 {
   "schemaVersion": 2,
-  "label": "audit-heldout",
-  "stamp": "2026-06-19T00-47-12-583Z",
+  "label": "heldout",
+  "stamp": "2026-06-19T00-59-12-355Z",
   "argv": [
     "--split",
     "held-out",
     "--label",
-    "audit-heldout"
+    "heldout",
+    "--out",
+    "/tmp/heldout-clean"
   ],
   "git": {
-    "sha": "daac4b0",
-    "dirty": true
+    "sha": "f30099c",
+    "dirty": false
   },
   "skill": {
     "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/scrittura-italiana-single-file.md",

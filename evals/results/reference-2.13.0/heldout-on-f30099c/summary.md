@@ -1,5 +1,5 @@
-# Esecuzione suite — audit-heldout
-skill sha256=e09462d22d9c026aa1f706ad1827082516efa2618b6edcf9c6d062ee06794a17 · git=daac4b0+dirty
+# Esecuzione suite — heldout
+skill sha256=e09462d22d9c026aa1f706ad1827082516efa2618b6edcf9c6d062ee06794a17 · git=f30099c
 editor=sonnet · judge=opus · split=held-out · run/eval=1
 
 **Pass rate complessivo: 4/4 (100%) · invenzioni totali: 0**
