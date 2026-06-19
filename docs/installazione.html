@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Installazione e uso | Scrittura italiana</title>
+  <meta name="description" content="Installa Scrittura italiana in Claude Code, Claude Desktop o in un agente compatibile e scegli il livello di revisione.">
+  <link rel="canonical" href="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/installazione.html">
+  <meta property="og:locale" content="it_IT"><meta property="og:type" content="article"><meta property="og:title" content="Installazione e uso | Scrittura italiana"><meta property="og:description" content="Istruzioni per Claude, agenti compatibili e assistenti senza supporto nativo alle skill."><meta property="og:url" content="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/installazione.html">
+  <meta name="theme-color" content="#2154c9">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&amp;display=swap">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  <header class="site-header"><div class="shell nav-bar">
+    <a class="brand" href="index.html" aria-label="Scrittura italiana, pagina iniziale"><span class="brand-mark" aria-hidden="true">«</span><span>scrittura italiana</span></a>
+    <nav class="primary-nav" aria-label="Navigazione principale"><a href="metodo.html">Metodo</a><a aria-current="page" href="installazione.html">Installazione</a><a href="valutazione.html">Valutazione</a><a href="riferimenti.html">Riferimenti</a><a href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana">GitHub</a></nav>
+    <span class="version-note">v<span data-project-version>2.13.0</span></span>
+    <details class="mobile-nav"><summary>Menu</summary><nav aria-label="Navigazione mobile"><a href="metodo.html">Metodo</a><a aria-current="page" href="installazione.html">Installazione</a><a href="valutazione.html">Valutazione</a><a href="riferimenti.html">Riferimenti</a><a href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana">GitHub</a></nav></details>
+  </div></header>
+
+  <main id="contenuto">
+    <header class="page-hero"><div class="shell"><h1 class="page-title">Installa. Poi indica quanto toccare.</h1><p>Il metodo più semplice usa il formato Agent Skills. Per gli assistenti che non lo supportano esiste una versione completa in un solo file.</p><div class="meta-line"><span>Versione <span data-project-version>2.13.0</span></span><span>Licenza CC BY-SA 4.0</span></div></div></header>
+
+    <div class="doc-shell">
+      <nav class="toc" aria-label="Indice della pagina"><p>In questa pagina</p><ol><li><a href="#npx">Installazione rapida</a></li><li><a href="#claude-code">Claude Code</a></li><li><a href="#desktop">Claude Desktop</a></li><li><a href="#altri">Altri assistenti</a></li><li><a href="#uso">Come usarla</a></li><li><a href="#aggiornare">Aggiornare</a></li></ol></nav>
+
+      <article class="doc-content">
+        <section id="npx">
+          <h2>Installazione rapida</h2>
+          <p>Se hai Node installato, il comando seguente rileva gli agenti compatibili presenti sul computer.</p>
+          <div class="command"><code id="cmd-npx" tabindex="-1">npx skills add hypnosdesign/claude-skill-scrittura-italiana</code><button class="copy-button" type="button" data-copy="cmd-npx">Copia</button></div>
+          <p>Controlla sempre la destinazione proposta dal comando prima di confermare.</p>
+        </section>
+
+        <section id="claude-code">
+          <h2>Claude Code</h2>
+          <h3>Disponibile in tutti i progetti</h3>
+          <div class="command"><code id="cmd-global" tabindex="-1">git clone https://github.com/hypnosdesign/claude-skill-scrittura-italiana ~/.claude/skills/scrittura-italiana</code><button class="copy-button" type="button" data-copy="cmd-global">Copia</button></div>
+          <h3>Disponibile in un solo progetto</h3>
+          <p>Clona la repository in <code>.claude/skills/scrittura-italiana</code> nella radice del progetto. Riapri Claude Code dopo l'installazione.</p>
+          <div class="callout"><h3>Come si attiva</h3><p>La descrizione della skill intercetta richieste di scrittura, correzione, revisione, argomentazione e dubbi sulla lingua italiana. Puoi anche nominarla esplicitamente.</p></div>
+        </section>
+
+        <section id="desktop">
+          <h2>Claude Desktop e claude.ai</h2>
+          <ol>
+            <li>Scarica lo ZIP dalla sezione <a href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases">Releases</a> o dalla voce <em>Code, Download ZIP</em> su GitHub.</li>
+            <li>Apri <em>Impostazioni, Capabilities, Skills</em>.</li>
+            <li>Carica la cartella o il file ZIP.</li>
+          </ol>
+          <p>La disponibilità delle Skill e dell'esecuzione di codice dipende dal client e dal piano. Se la voce non compare, consulta la documentazione aggiornata del servizio.</p>
+        </section>
+
+        <section id="altri">
+          <h2>Altri assistenti</h2>
+          <p>Gli agenti compatibili con Agent Skills possono usare lo stesso comando <code>npx skills add</code>. Per Custom GPT, Gem e assistenti che accettano istruzioni o file di conoscenza, usa il documento completo.</p>
+          <p><a class="button quiet" href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/blob/main/scrittura-italiana-single-file.md">Apri la versione in un solo file</a></p>
+          <div class="callout warning"><h3>Limite della versione singola</h3><p>Il contenuto resta disponibile, ma si perde l'attivazione automatica e il caricamento progressivo dei riferimenti. Il prompt completo è inoltre più pesante.</p></div>
+        </section>
+
+        <section id="uso">
+          <h2>Come usarla</h2>
+          <p>Indica l'obiettivo e, quando conta, il livello d'intervento. Incolla poi il testo completo e specifica eventuali vincoli.</p>
+          <h3>Correzione minima</h3>
+          <blockquote><p>Esegui un proofread. Correggi soltanto errori grammaticali e di punteggiatura. Non modificare lessico o struttura.</p></blockquote>
+          <h3>Revisione della tesi</h3>
+          <blockquote><p>Esegui un line edit conservativo di questo paragrafo. Migliora chiarezza e ritmo, ma conserva tesi, negazioni, grado di certezza e terminologia.</p></blockquote>
+          <h3>Riscrittura profonda</h3>
+          <blockquote><p>Riscrivi il testo in modo più naturale. Non aggiungere dati o esempi. Segnala separatamente le informazioni concrete che mancano.</p></blockquote>
+          <h3>Con un campione di voce</h3>
+          <blockquote><p>Usa il secondo testo come campione del mio stile. Revisiona il primo senza copiarne le frasi e senza aggiungere opinioni.</p></blockquote>
+          <p>Per testi lunghi, lavora per capitoli e conserva un glossario di nomi, concetti e scelte terminologiche.</p>
+        </section>
+
+        <section id="aggiornare">
+          <h2>Aggiornare la skill</h2>
+          <p>Se l'hai clonata con Git, entra nella cartella della skill ed esegui:</p>
+          <div class="command"><code id="cmd-update" tabindex="-1">git pull --ff-only</code><button class="copy-button" type="button" data-copy="cmd-update">Copia</button></div>
+          <p>Prima di aggiornare una copia modificata localmente, controlla <code>git status</code> e conserva le personalizzazioni. Le note di rilascio sono nel <a href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/blob/main/CHANGELOG.md">CHANGELOG</a>.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-grid"><p><strong>Scrittura italiana</strong><br>Versione <span data-project-version>2.13.0</span></p><div><nav class="footer-links" aria-label="Collegamenti finali"><a href="index.html">Home</a><a href="metodo.html">Metodo</a><a href="valutazione.html">Valutazione</a><a href="riferimenti.html">Riferimenti</a><a href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana">Repository</a></nav><p class="license">CC BY-SA 4.0. Verifica requisiti e compatibilità sul client che utilizzi.</p></div></div></footer>
+  <script src="assets/site.js" defer></script>
+</body>
+</html>

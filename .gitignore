@@ -8,3 +8,6 @@
 *~
 .idea/
 .vscode/
+
+# Scratch del design-tool (impeccable): stato rigenerabile, non versionato
+.impeccable/

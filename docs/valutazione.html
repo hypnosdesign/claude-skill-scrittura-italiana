@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Valutazione ed eval | Scrittura italiana</title>
+  <meta name="description" content="Come viene misurata Scrittura italiana: suite dev e held-out, runner fail-closed, artefatti e limiti.">
+  <link rel="canonical" href="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/valutazione.html">
+  <meta property="og:locale" content="it_IT"><meta property="og:type" content="article"><meta property="og:title" content="Valutazione ed eval | Scrittura italiana"><meta property="og:description" content="Prompt, output, verdetti e limiti della misura, conservati come artefatti verificabili."><meta property="og:url" content="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/valutazione.html">
+  <meta name="theme-color" content="#2154c9">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&amp;display=swap">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  <header class="site-header"><div class="shell nav-bar">
+    <a class="brand" href="index.html" aria-label="Scrittura italiana, pagina iniziale"><span class="brand-mark" aria-hidden="true">«</span><span>scrittura italiana</span></a>
+    <nav class="primary-nav" aria-label="Navigazione principale"><a href="metodo.html">Metodo</a><a href="installazione.html">Installazione</a><a aria-current="page" href="valutazione.html">Valutazione</a><a href="riferimenti.html">Riferimenti</a><a href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana">GitHub</a></nav>
+    <span class="version-note">v<span data-project-version>2.13.0</span></span>
+    <details class="mobile-nav"><summary>Menu</summary><nav aria-label="Navigazione mobile"><a href="metodo.html">Metodo</a><a href="installazione.html">Installazione</a><a aria-current="page" href="valutazione.html">Valutazione</a><a href="riferimenti.html">Riferimenti</a><a href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana">GitHub</a></nav></details>
+  </div></header>
+
+  <main id="contenuto">
+    <header class="page-hero"><div class="shell"><h1 class="page-title">Misurare senza raccontarsela.</h1><p>Gli eval servono a trovare regressioni e falsi positivi. Non trasformano un giudizio linguistico in una certezza matematica.</p><div class="meta-line"><span>Schema runner 2</span><span><span data-dev-count>13</span> casi dev</span><span><span data-heldout-count>4</span> casi held-out</span></div></div></header>
+
+    <div class="doc-shell">
+      <nav class="toc" aria-label="Indice della pagina"><p>In questa pagina</p><ol><li><a href="#misuriamo">Che cosa misuriamo</a></li><li><a href="#suite">Struttura della suite</a></li><li><a href="#runner">Runner</a></li><li><a href="#risultato">Riferimento 2.13.0</a></li><li><a href="#lettura">Come leggere i risultati</a></li><li><a href="#riprodurre">Riprodurre un run</a></li></ol></nav>
+
+      <article class="doc-content">
+        <section id="misuriamo">
+          <h2>Che cosa misuriamo</h2>
+          <p>Un buon risultato non coincide con il maggior numero di modifiche. La suite comprende casi da migliorare e testi da lasciare invariati.</p>
+          <ul>
+            <li>assenza di fatti, numeri, citazioni ed entità inventate;</li>
+            <li>conservazione di polarità, modalità, causalità, condizioni ed eccezioni;</li>
+            <li>riduzione dei tic quando sono davvero presenti;</li>
+            <li>correttezza grammaticale e rispetto del registro;</li>
+            <li>assenza di over-editing su prosa già buona e testo funzionale.</li>
+          </ul>
+          <blockquote><p>Un testo può essere più elegante e fallire lo stesso, se trasforma un “potrebbe” in un “è” o aggiunge una causa non presente.</p></blockquote>
+        </section>
+
+        <section id="suite">
+          <h2>Struttura della suite</h2>
+          <table class="data-table">
+            <thead><tr><th>Split</th><th>Casi</th><th>Uso</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Dev</strong></td><td data-dev-count>13</td><td>Casi osservati durante lo sviluppo. Servono a verificare il comportamento noto.</td></tr>
+              <tr><td><strong>Held-out</strong></td><td data-heldout-count>4</td><td>Casi congelati nella 2.13.0. Non vanno usati per tarare la stessa versione.</td></tr>
+            </tbody>
+          </table>
+          <p>Il manifest assegna a ogni caso un genere, un obiettivo e uno split. Gli obiettivi sono <code>preserve</code>, <code>improve</code> e <code>mixed</code>.</p>
+          <p><a href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/blob/main/evals/manifest.json">Apri il manifest</a> e <a href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/blob/main/evals/evals.json">la suite canonica</a>.</p>
+        </section>
+
+        <section id="runner">
+          <h2>Runner fail-closed</h2>
+          <p>Per ogni caso, il runner inietta la skill, salva la risposta dell'editor e chiede a un secondo modello di valutarla contro aspettative esplicite. Poi ricalcola il passaggio dalle singole aspettative.</p>
+          <h3>Ogni esecuzione conserva</h3>
+          <ul>
+            <li>copie della skill, della suite e del manifest usati;</li>
+            <li>SHA-256 dei contenuti, separati dallo stato Git;</li>
+            <li>prompt, output, aspettative e risposta grezza del giudice;</li>
+            <li>modelli, versioni degli strumenti e durata;</li>
+            <li>verdetto ricalcolato e numero di invenzioni rilevate.</li>
+          </ul>
+          <div class="callout"><h3>Che cosa significa fail-closed</h3><p>Un tipo permissivo, una cardinalità errata o un verdetto incompleto non diventano un passaggio. Il runner segnala l'errore. Resta comunque dipendente dalla qualità delle aspettative dichiarate.</p></div>
+        </section>
+
+        <section id="risultato">
+          <h2>Riferimento 2.13.0</h2>
+          <p>La prima esecuzione del set held-out è stata eseguita sul commit candidato pulito, con editor Sonnet e giudice Opus, una sola osservazione per caso.</p>
+          <table class="data-table">
+            <thead><tr><th>Caso</th><th>Obiettivo</th><th>Esito</th></tr></thead>
+            <tbody>
+              <tr><td>Tesi, distinzione informativa</td><td>preserve</td><td>pass</td></tr>
+              <tr><td>Configurazione tecnica</td><td>preserve</td><td>pass</td></tr>
+              <tr><td>Transizioni accademiche</td><td>improve</td><td>pass</td></tr>
+              <tr><td>Cortesia epistolare</td><td>preserve</td><td>pass con disaccordo registrato</td></tr>
+            </tbody>
+          </table>
+          <div class="callout success"><h3>Risultato osservato</h3><p>4 casi su 4 hanno soddisfatto le aspettative esplicite; il conteggio delle invenzioni rilevate è 0. Il campione ha n=1 per cella.</p></div>
+          <p>Nel caso sulla cortesia epistolare, il giudice aveva dichiarato un fallimento per due maiuscole di cortesia; il ricalcolo ha prodotto un passaggio perché tutte le aspettative elencate erano soddisfatte. Il disaccordo è conservato nell'artefatto.</p>
+          <p><a class="button quiet" href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/tree/main/evals/results/reference-2.13.0">Esamina gli artefatti 2.13.0</a></p>
+        </section>
+
+        <section id="lettura">
+          <h2>Come leggere i risultati</h2>
+          <ul>
+            <li><strong>4 su 4 non prova la generalizzazione.</strong> È un primo segnale su quattro casi pubblici.</li>
+            <li><strong>Il giudice è un LLM.</strong> Può essere incoerente, indulgente o troppo severo.</li>
+            <li><strong>Le aspettative definiscono il passaggio.</strong> Un comportamento non previsto può sfuggire al ricalcolo.</li>
+            <li><strong>Gli output non sono deterministici.</strong> Servono più run per stimare la stabilità.</li>
+            <li><strong>La naturalezza richiede persone.</strong> Il confronto cieco umano resta necessario per le qualità fini.</li>
+          </ul>
+          <p>Per questo il progetto parla di risultato osservato e non di accuratezza complessiva della skill.</p>
+        </section>
+
+        <section id="riprodurre">
+          <h2>Riprodurre un run</h2>
+          <p>Servono Node, il CLI <code>claude</code> autenticato e accesso ai modelli configurati.</p>
+          <div class="command"><code id="cmd-validate" tabindex="-1">node evals/run.mjs --validate-only</code><button class="copy-button" type="button" data-copy="cmd-validate">Copia</button></div>
+          <div class="command"><code id="cmd-heldout" tabindex="-1">node evals/run.mjs --split held-out --label nuovo-heldout</code><button class="copy-button" type="button" data-copy="cmd-heldout">Copia</button></div>
+          <p>I run ordinari restano ignorati da Git. Per una release si versionano soltanto gli artefatti scelti, insieme a una nota sui limiti.</p>
+          <p><a href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/blob/main/evals/README.md">Documentazione completa del runner</a>.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-grid"><p><strong>Scrittura italiana</strong><br>Versione <span data-project-version>2.13.0</span></p><div><nav class="footer-links" aria-label="Collegamenti finali"><a href="index.html">Home</a><a href="metodo.html">Metodo</a><a href="installazione.html">Installazione</a><a href="riferimenti.html">Riferimenti</a><a href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana">Repository</a></nav><p class="license">CC BY-SA 4.0. I risultati sono artefatti di sviluppo, non certificazioni indipendenti.</p></div></div></footer>
+  <script src="assets/site.js" defer></script>
+</body>
+</html>

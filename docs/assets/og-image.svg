@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Scrittura italiana</title>
+  <desc id="desc">Revisione fedele, prosa naturale</desc>
+  <rect width="1200" height="630" fill="#2154c9"/>
+  <circle cx="1070" cy="95" r="220" fill="#173477" opacity=".55"/>
+  <text x="72" y="90" fill="#f5f7fc" font-family="Arial, sans-serif" font-size="28" font-weight="700">scrittura italiana · v2.13.0</text>
+  <text x="72" y="238" fill="#f5f7fc" font-family="Arial, sans-serif" font-size="98" font-weight="800" letter-spacing="-5">Scrivi meglio.</text>
+  <text x="72" y="342" fill="#ffa087" font-family="Arial, sans-serif" font-size="98" font-weight="800" letter-spacing="-5">Resta tu.</text>
+  <g transform="translate(720 220) rotate(2)">
+    <rect width="400" height="285" rx="16" fill="#f5f7fc" stroke="#182238" stroke-width="5"/>
+    <text x="32" y="72" fill="#182238" font-family="Arial, sans-serif" font-size="29" font-weight="700">Il progetto</text>
+    <text x="32" y="120" fill="#9c403b" font-family="Arial, sans-serif" font-size="25" text-decoration="line-through">si configura come</text>
+    <rect x="28" y="147" width="68" height="35" rx="4" fill="#d9f0df"/>
+    <text x="36" y="174" fill="#182238" font-family="Arial, sans-serif" font-size="28" font-weight="700">è</text>
+    <text x="104" y="174" fill="#182238" font-family="Arial, sans-serif" font-size="28">una guida chiara.</text>
+    <path d="M31 191h62" stroke="#4d9365" stroke-width="6"/>
+  </g>
+  <text x="72" y="560" fill="#dfe6fb" font-family="Arial, sans-serif" font-size="29">Revisione fedele, prosa naturale.</text>
+</svg>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hypnosdesign.github.io/claude-skill-scrittura-italiana/sitemap.xml
