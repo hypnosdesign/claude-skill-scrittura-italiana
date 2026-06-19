@@ -1,4 +1,6 @@
-# Run rigenerabili: ignorati di default.
-# Per committare un run di riferimento auditabile: git add -f <dir>
+# Run ordinari rigenerabili: ignorati di default.
+# Le directory reference-* sono snapshot storici intenzionalmente versionati.
 */
 !.gitignore
+!reference-*/
+!reference-*/**

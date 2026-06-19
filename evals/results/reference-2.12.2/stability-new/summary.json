@@ -1,0 +1,60 @@
+{
+  "total": 12,
+  "pass": 9,
+  "passRate": 0.75,
+  "invented": 0,
+  "byTarget": {
+    "preserve": {
+      "pass": 3,
+      "fail": 3,
+      "err": 0,
+      "invented": 0
+    },
+    "improve": {
+      "pass": 3,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "mixed": {
+      "pass": 3,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "bySplit": {
+    "dev": {
+      "pass": 9,
+      "fail": 3,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "perEval": {
+    "7": {
+      "name": "documentazione-tecnica",
+      "target": "preserve",
+      "pass": 0,
+      "n": 3
+    },
+    "8": {
+      "name": "scientifico-incertezza",
+      "target": "preserve",
+      "pass": 3,
+      "n": 3
+    },
+    "12": {
+      "name": "citazione-non-verificabile",
+      "target": "improve",
+      "pass": 3,
+      "n": 3
+    },
+    "13": {
+      "name": "bipolare-misto",
+      "target": "mixed",
+      "pass": 3,
+      "n": 3
+    }
+  }
+}

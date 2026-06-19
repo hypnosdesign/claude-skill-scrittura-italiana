@@ -1,9 +1,11 @@
-# Esecuzione di riferimento — A/B 2.12.2 vs 2.11.0
+# Esecuzione storica — A/B 2.12.2 vs 2.11.0
 
-Prima esecuzione misurata della suite (`evals.json`, 13 eval). Prodotta da `evals/run.mjs`.
-I dir dei singoli run sono rigenerabili (gitignored); qui resta la sintesi auditabile.
+Prima esecuzione misurata della suite (`evals.json`, 13 eval). Prodotta dalla versione
+2.12.2 di `evals/run.mjs`. I quattro run disponibili sono congelati in
+`reference-2.12.2/`: permettono di controllare i conteggi, ma non correggono i limiti
+di provenienza del vecchio runner.
 
-- **candidata:** working tree 2.12.2
+- **candidata:** working tree non committata 2.12.2 sopra `72655ae`
 - **baseline:** `e56cd74` (2.11.0), estratta con `git show e56cd74:SKILL.md`
 - **editor + giudice:** `sonnet` · **iniezione:** `SKILL.md` (il nucleo, non il single-file)
 - **data:** 2026-06-19
@@ -44,16 +46,25 @@ vede sui casi borderline (esclusione di categoria), non qui.
 ## Regressione corretta — over-editing su testo funzionale
 
 La misura ha rivelato #7 (doc-tecnica) **0/4**: la nuova rifiniva stilisticamente documentazione
-che andava lasciata stare. Fix: guardia *«default conservativo per il testo funzionale»* in
-`SKILL.md`. Ri-misura post-fix: **#7 → 3/3**, senza danni collaterali (#3, #9, #12 PASS).
+che andava lasciata stare. Fu quindi aggiunta in `SKILL.md` la guardia *«default conservativo
+per il testo funzionale»*. All'epoca fu dichiarata una ri-misura **#7 → 3/3**, senza danni
+collaterali (#3, #9, #12 PASS), ma quel run non venne persistito: il risultato post-fix
+non è verificabile e va trattato come claim storico, non come evidenza.
 
 ## Caveat (onesti)
 
 - Giudice singolo (LLM), fact-checkato su #12 ed era corretto, ma resta una fonte di rumore.
 - Iniettato solo `SKILL.md`; n piccolo (≤4 osservazioni/cella); *preserve = zero modifiche* è un
   criterio severo (alcuni over-edit sono migliorie difendibili). Indicativo, non definitivo.
+- Il campo `sha` dei metadati registra l'HEAD del repository, non l'hash della skill: candidato
+  e baseline riportano entrambi `72655ae+dirty`. Non erano salvati snapshot della skill e
+  della suite né il prompt grezzo del giudice.
 
-## Riprodurre
+## Comandi storici
+
+Questi sono i comandi dichiarati per la prova originale. Con il runner 2.13.0 non
+riproducono la stessa configurazione implicita (ora il default è single-file + giudice
+indipendente) e, per la natura stocastica del modello, non possono riprodurre gli stessi output.
 
 ```bash
 git show e56cd74:SKILL.md > /tmp/skill-2.11.0.md

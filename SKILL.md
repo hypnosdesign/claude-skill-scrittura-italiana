@@ -16,7 +16,7 @@ description: |
 license: CC-BY-SA-4.0
 compatibility: claude-code claude-desktop opencode claude.ai
 metadata:
-  version: "2.12.2"
+  version: "2.13.0"
   language: it
 allowed-tools: Read Write Edit Grep Glob AskUserQuestion
 ---

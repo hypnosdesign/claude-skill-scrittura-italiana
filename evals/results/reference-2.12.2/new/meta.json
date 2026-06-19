@@ -1,0 +1,27 @@
+{
+  "skillFile": "/Users/mattia/Projects/claude-skill-scrittura-italiana/SKILL.md",
+  "label": "new",
+  "sha": "72655ae",
+  "dirty": true,
+  "editorModel": "sonnet",
+  "judgeModel": "sonnet",
+  "runs": 1,
+  "claudeVer": "2.1.181 (Claude Code)",
+  "node": "v24.15.0",
+  "stamp": "2026-06-18T23-20-19-200Z",
+  "ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ]
+}

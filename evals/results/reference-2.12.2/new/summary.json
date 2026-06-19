@@ -1,0 +1,114 @@
+{
+  "total": 13,
+  "pass": 11,
+  "passRate": 0.846,
+  "invented": 0,
+  "byTarget": {
+    "preserve": {
+      "pass": 6,
+      "fail": 2,
+      "err": 0,
+      "invented": 0
+    },
+    "improve": {
+      "pass": 4,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "mixed": {
+      "pass": 1,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "bySplit": {
+    "dev": {
+      "pass": 11,
+      "fail": 2,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "perEval": {
+    "1": {
+      "name": "prosa-buona",
+      "target": "preserve",
+      "pass": 1,
+      "n": 1
+    },
+    "2": {
+      "name": "bipolare-informativo",
+      "target": "preserve",
+      "pass": 1,
+      "n": 1
+    },
+    "3": {
+      "name": "bipolare-ornamentale",
+      "target": "improve",
+      "pass": 1,
+      "n": 1
+    },
+    "4": {
+      "name": "chat-informale",
+      "target": "preserve",
+      "pass": 1,
+      "n": 1
+    },
+    "5": {
+      "name": "grammatica-minima",
+      "target": "improve",
+      "pass": 1,
+      "n": 1
+    },
+    "6": {
+      "name": "copy-senza-dati",
+      "target": "improve",
+      "pass": 1,
+      "n": 1
+    },
+    "7": {
+      "name": "documentazione-tecnica",
+      "target": "preserve",
+      "pass": 0,
+      "n": 1
+    },
+    "8": {
+      "name": "scientifico-incertezza",
+      "target": "preserve",
+      "pass": 0,
+      "n": 1
+    },
+    "9": {
+      "name": "legale-condizioni",
+      "target": "preserve",
+      "pass": 1,
+      "n": 1
+    },
+    "10": {
+      "name": "narrativa-frammenti",
+      "target": "preserve",
+      "pass": 1,
+      "n": 1
+    },
+    "11": {
+      "name": "voce-campione",
+      "target": "preserve",
+      "pass": 1,
+      "n": 1
+    },
+    "12": {
+      "name": "citazione-non-verificabile",
+      "target": "improve",
+      "pass": 1,
+      "n": 1
+    },
+    "13": {
+      "name": "bipolare-misto",
+      "target": "mixed",
+      "pass": 1,
+      "n": 1
+    }
+  }
+}

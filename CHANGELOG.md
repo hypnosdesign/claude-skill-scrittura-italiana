@@ -5,6 +5,57 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.13.0] — 2026-06-19
+
+**Provenienza verificabile e benchmark fail-closed.** Questa versione non aggiunge nuovi pattern
+stilistici e non rivendica un guadagno comportamentale: corregge l'infrastruttura che misura la
+skill, dopo che l'audit della 2.12.2 ha mostrato che i conteggi erano plausibili ma non
+riproducibili da un clone pulito.
+
+### Runner e artefatti
+
+- **Fingerprint dei contenuti:** `evals/run.mjs` calcola SHA-256 separati della skill, della
+  suite e del manifest realmente usati. L'HEAD Git e lo stato dirty restano metadati distinti:
+  una baseline estratta in `/tmp` non può più ereditare falsamente lo SHA della candidata.
+- **Snapshot completo:** ogni run salva copie byte-identiche di `skill.md`, `suite.json` e
+  `manifest.json`; ogni riga conserva prompt, aspettative, output atteso, output dell'editor,
+  prompt e risposta grezza del giudice, verdetto e durata delle due chiamate.
+- **Verdetto fail-closed:** `pass`, `invented` e l'array delle aspettative sono validati per
+  tipo, cardinalità e dominio. `pass` viene ricalcolato da tutte le aspettative vere e da
+  `invented === 0`; stringhe come `"false"`, conteggi negativi o array incompleti diventano
+  errori invece di passare per coercizione.
+- **Copertura estesa della policy:** il default del runner è il single-file completo
+  (nucleo + nove reference), non il solo `SKILL.md`. Questo misura le istruzioni combinate,
+  non il trigger o il caricamento on-demand del formato Agent Skills. Il default separa editor
+  (`sonnet`) e giudice (`opus`); l'uso dello stesso modello resta possibile ma viene segnalato.
+- **Validazione senza costi:** `--validate-only` controlla schema, corrispondenza suite/manifest,
+  selezione e fingerprint senza chiamare modelli. Aggiunti sei test deterministici in
+  `evals/run.test.mjs`.
+
+### Suite e disclosure
+
+- **Split congelato:** i 13 casi già osservati sono marcati `dev`; quattro nuovi casi
+  `held-out` coprono tesi filosofica, configurazione tecnica, transizioni accademiche e cortesia
+  epistolare. Il manifest passa allo schema 2; lo split vive nel file e non può più essere
+  assegnato arbitrariamente da CLI.
+  Il runner usa `dev` per default: l'held-out va richiesto esplicitamente. Il set è pubblico e
+  va inteso come regressione congelata, non come segreto statistico.
+- **Artefatti storici versionati:** i quattro run disponibili della 2.12.2 sono conservati in
+  `evals/results/reference-2.12.2/`. La nota di accompagnamento esplicita SHA impropri,
+  working tree dirty, giudice uguale all'editor e snapshot mancanti.
+- **Claim post-fix declassato:** il risultato «documentazione tecnica 3/3» era stato dichiarato
+  senza persistirne il run. `REFERENCE.md` lo tratta ora come claim storico non verificabile,
+  non come evidenza.
+
+### Limiti
+
+- La candidata 2.13.0 non è ancora stata sottoposta a un A/B comportamentale completo.
+- Il runner registra i tempi ma non i token, che il percorso CLI usato non espone.
+- L'iniezione del single-file non esercita la progressive disclosure del client Agent Skills;
+  per isolare il nucleo si può eseguire esplicitamente `--skill SKILL.md`.
+- Naturalezza e voce restano valutazioni parzialmente soggettive: serve ancora un confronto
+  cieco umano oltre al giudice LLM.
+
 ## [2.12.2] — 2026-06-19
 
 **Chiusura delle incoerenze residue della 2.12.1, più la prima esecuzione misurata della suite.**

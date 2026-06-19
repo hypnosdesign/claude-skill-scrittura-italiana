@@ -1,0 +1,54 @@
+{
+  "total": 4,
+  "pass": 4,
+  "passRate": 1,
+  "invented": 0,
+  "byTarget": {
+    "preserve": {
+      "pass": 3,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "improve": {
+      "pass": 1,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "bySplit": {
+    "held-out": {
+      "pass": 4,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "perEval": {
+    "14": {
+      "name": "tesi-distinzione-informativa",
+      "target": "preserve",
+      "pass": 1,
+      "n": 1
+    },
+    "15": {
+      "name": "configurazione-tecnica",
+      "target": "preserve",
+      "pass": 1,
+      "n": 1
+    },
+    "16": {
+      "name": "transizioni-accademiche",
+      "target": "improve",
+      "pass": 1,
+      "n": 1
+    },
+    "17": {
+      "name": "cortesia-epistolare",
+      "target": "preserve",
+      "pass": 1,
+      "n": 1
+    }
+  }
+}
