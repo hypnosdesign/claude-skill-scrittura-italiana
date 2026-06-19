@@ -9,7 +9,7 @@
 > rhetoric. Not a find-and-replace. Content is in Italian.*
 
 <p align="center">
-  <img src="assets/prima-dopo.gif" alt="Prima → dopo: un testo che «sa di AI» diventa umano — via perifrasi, triadi, gerundite, chiusure vuote" width="760">
+  <img src="assets/demo-umanizza.gif" alt="Demo: incolli un testo che «sa di AI» e la skill digita la versione umana — via perifrasi, gerundite, triadi e chiusure vuote, ma il fatto resta" width="760">
 </p>
 
 [![Sito](https://img.shields.io/badge/sito-scrittura--italiana-9c2a1f.svg)](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)
@@ -51,6 +51,26 @@ Oltre all'umanizzazione, la skill copre l'intero arco della scrittura: **sintass
 **argomentazione** (costruire una tesi, riassumere), **divulgazione** (spiegare cose complesse),
 **narrativa** (idea, punto di vista) e **revisione** (la parola giusta, la lima). Distillata da
 una libreria di manuali italiani — Serianni, Mortara Garavelli, Giunta, Pontiggia, Rigotti e altri.
+
+## Non solo umanizza
+
+L'esempio in alto è il caso più comune. Ma «sa l'italiano» vuol dire anche **sapere quando *non*
+toccare** e **rispondere ai dubbi di lingua**:
+
+<p align="center">
+  <img src="assets/demo-registro.gif" alt="Demo: una chat informale lasciata com'è — e', perché da tastiera e i puntini non sono errori, sono il registro" width="680">
+</p>
+
+**Riconosce il registro** (*aptum*). Davanti a una chat informale non ipercorregge: `e'`,
+`perche` da tastiera e i puntini di sospensione non sono errori, sono il registro — imporre la
+tipografia editoriale a un messaggio è esso stesso un errore.
+
+<p align="center">
+  <img src="assets/demo-lingua.gif" alt="Demo: «qual è o qual'è?» — risposta con regola ed esempio, qual è senza apostrofo perché è un troncamento" width="680">
+</p>
+
+**Risponde ai dubbi di lingua** (*puritas*). *Qual è o qual'è?* Regola + esempio: «qual» è un
+troncamento, non un'elisione → niente apostrofo. È anche un consulente, non solo un editor.
 
 ## Struttura
 
