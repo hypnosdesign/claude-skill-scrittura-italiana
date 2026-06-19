@@ -140,8 +140,9 @@ Riavvia/riapri Claude Code: la skill comparirà tra quelle disponibili.
 
 ### Claude Desktop / claude.ai
 
-1. Scarica lo **zip** della skill: dalla pagina GitHub → *Code → Download ZIP* (oppure usa
-   `scrittura-italiana.zip` allegato alle [Release](../../releases)).
+1. Scarica il pacchetto-skill **`scrittura-italiana-<versione>.zip`** dalle
+   [Release](../../releases) (è l'asset allegato a ogni release — **non** il *Source code*:
+   quello impacchetta l'intero repo e l'uploader lo rifiuta con «exactly one SKILL.md»).
 2. Apri Claude → **Impostazioni → Capabilities (Funzionalità) → Skills**.
 3. **Carica** la cartella `scrittura-italiana` (o il suo `.zip`). I file in `references/`
    viaggiano con la skill: la skill li legge dal proprio sandbox quando servono.
