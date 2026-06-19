@@ -9,5 +9,7 @@
 .idea/
 .vscode/
 
-# Scratch del design-tool (impeccable): stato rigenerabile, non versionato
+# Artefatti del design-tool impeccable (rigenerabili, non versionati)
 .impeccable/
+DESIGN.md
+PRODUCT.md
