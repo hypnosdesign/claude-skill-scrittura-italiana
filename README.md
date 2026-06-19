@@ -1,12 +1,15 @@
-# scrittura-italiana — l'humanizer italiano con i superpoteri
+# scrittura-italiana — l'humanizer italiano che sa la lingua
 
-> Cancella l'odore di AI dai tuoi testi italiani — perifrasi, gerundite, triadi, avverbi in
-> *-mente*, trattini lunghi, frasi fatte. E già che c'è li scrive *giusti*: punteggiatura,
-> tipografia, registro, ritmo, retorica. **Non un trova-e-sostituisci: sa l'italiano.**
+> Trasforma la scrittura AI in italiano umano — **davvero**: non scambi di caratteri o sinonimi
+> per ingannare un detector, ma vera competenza di lingua. Toglie i tic dell'AI (perifrasi,
+> gerundite, triadi, trattini lunghi, frasi fatte), scrive *giusto* (punteggiatura, registro,
+> ritmo, retorica) e **conserva fatti, tesi, registro e voce**. Non umanizza l'output a
+> posteriori: fa scrivere il modello in italiano umano dall'inizio.
 >
-> *A Claude [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills) that humanizes
-> Italian text — and actually knows the language: punctuation, typography, register, rhythm,
-> rhetoric. Not a find-and-replace. Content is in Italian.*
+> *A Claude [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills) — an Italian
+> humanizer that makes the model write genuinely human Italian: real linguistic competence, not
+> detector tricks. Removes AI tells, fixes the language, preserves facts, thesis, register and
+> voice. Content is in Italian.*
 
 <p align="center">
   <img src="assets/demo-umanizza.gif" alt="Demo: incolli un testo che «sa di AI» e la skill digita la versione umana — via perifrasi, gerundite, triadi e chiusure vuote, ma il fatto resta" width="760">
@@ -24,7 +27,7 @@ Il punto di partenza di quasi tutti: **incolli un testo che "sa di AI" e te lo r
 umano** — via perifrasi, gerundite, triadi, avverbi in *-mente*, trattini lunghi, antilingua,
 cliché, chiusure ottimistiche vuote. Fin qui, un humanizer.
 
-I **superpoteri** stanno sotto: a differenza di un trova-e-sostituisci, questa skill conosce
+**Il metodo è la differenza**: a differenza di un trova-e-sostituisci, questa skill conosce
 l'italiano per davvero, perché è costruita sulle **quattro virtù dell'espressione**
 (*virtutes elocutionis*) della retorica classica:
 

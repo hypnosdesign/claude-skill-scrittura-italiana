@@ -3,7 +3,7 @@
 ![Version](https://img.shields.io/badge/version-2.13.0-blue.svg)
 
 Cosa fa la skill, su testi reali. Il caso d'uso principale è **umanizzare** un testo che "sa
-di AI" (§1); ma è un humanizer con i superpoteri, perciò sa anche correggere, chiarire e dare
+di AI" (§1); ma è un humanizer che sa la lingua, perciò sa anche correggere, chiarire e dare
 voce. Tre cose da tenere a mente:
 
 - **Funziona sia su testi AI sia su testi umani.** Su quelli AI rende di più (vedi §1); su
