@@ -10,6 +10,11 @@ l'italiano. Complementare a `punteggiatura.md`: lì la *correttezza*, qui la *na
 > perifrasi astratte, latinismi, burocratese). Suona "tradotto da una macchina che ha
 > studiato all'università": pomposo, prevedibile, senza ritmo.
 
+**Mappa del file:** Dare voce; A contenuto; B lingua e grammatica; C stile e tipografia;
+D residui da chatbot; E riempitivi e cautele; F antilingua; G verità e misura; H scuola,
+copy e tic recenti; I prosa saggistico-accademica; J slop da assistente e invarianti
+semantiche; audit finale.
+
 ---
 
 ## Dare voce (non basta togliere i tic)
@@ -176,9 +181,10 @@ da generi diversi, per mostrare che non è un problema solo di prosa accademica.
 | giornalismo | *la protesta non è una rivolta, ma una richiesta di ascolto* → *la protesta è una richiesta di ascolto, non una rivolta* | *la protesta è una richiesta di ascolto* |
 | copy/professionale | *il nostro servizio non è solo un'assistenza tecnica: è un partner di crescita* → *il nostro servizio è un partner di crescita, non solo assistenza tecnica* | *il nostro servizio accompagna la tua crescita* |
 
-Se serve segnalare al lettore il contrasto con la lettura comune, fallo con una **clausola
-breve a margine** (*«contro la lettura corrente, è Y»*, *«più che una metafora, è Y»*) —
-non rimettendo X in posizione speculare.
+Se il contrasto con la lettura comune porta informazione, **non riscriverlo soltanto per
+cancellare la forma bipolare**: preservare l'originale è spesso la scelta più fedele. Se la
+frase va alleggerita per un'altra ragione, usa una resa non speculare solo dopo aver verificato
+che mantenga la stessa esclusione; non trasformare automaticamente *«non X: Y»* in *«Y, non X»*.
 
 **Quando il polo negativo va PRESERVATO.** **Taglia (assertiva pura, non per inversione) quando
 il polo negativo è *chiaramente* ornamentale o ridondante** — è la mossa giusta nella grande
@@ -225,9 +231,9 @@ Preserva il polo negativo in questi casi:
 6. **Esclusione di categoria / lettura di default smentita** (il caso del test qui sopra).
    Quando *«è Y»* non implica *«non è X»* — X e Y non sono antonimi né elevazione — e X è la
    lettura che il lettore farebbe per default, il polo negativo porta informazione:
-   **preservalo**. Se proprio devi alleggerire, tieni l'**esclusione** (*«è organizzativa, non
-   tecnica»*), non una clausola che la concede (*«più che tecnica»* ammette il tecnico come
-   secondario: non è equivalente all'esclusione).
+   **preservalo, di norma nella forma originale**. *«È organizzativa, non tecnica»* conserva
+   il contenuto ma fabbrica per inversione la variante (a); *«più che tecnica»* è peggio,
+   perché ammette il tecnico come secondario. Nessuna delle due è una correzione necessaria.
 
 **Taglia il polo negativo** (assertiva pura, non per inversione) **quando è chiaramente
 ornamentale o ridondante**; **preservalo quando porta informazione o sei in dubbio.** La
@@ -777,7 +783,7 @@ Heidegger/Bachelard, *attraversare* è giusto con un moto reale o concettuale pr
 intervenire per sola presenza del verbo**; solo quando nobilita a vuoto un'azione concreta
 disponibile. Nel dubbio, lascia.
 
-**73. Slop modale — erosione delle qualificazioni.** *suggerisce → dimostra*, *può → è*,
+**73. Invariante modale — non erodere le qualificazioni.** *suggerisce → dimostra*, *può → è*,
 *possibilità → probabilità*, *correlazione → causa*, le eccezioni eliminate per fluidità. Spesso
 l'erosione avviene in diretta: *«le evidenze suggeriscono — anzi, dimostrano»*. → Conserva la
 cautela del contenuto: *dimostra* solo davanti a una prova vera. **Non è stile, è sostanza:** qui
@@ -797,17 +803,20 @@ inglese (diverso da §13, calco *strutturale*). **Due gravità distinte, non tra
 → Termine proprio per i primi; misura per i secondi. ⚠ Eccezioni di registro: *evidenza* è
 corretto in diritto e in *evidence-based medicine*.
 
-**75. Slop epistemico — nessi e fonti aggiunti in riscrittura.** Nel rendere "più bello" un testo,
+**75. Invariante epistemica — non aggiungere nessi e fonti in riscrittura.** Nel rendere "più bello" un testo,
 l'AI inserisce nessi causali che non c'erano (*basato su un'evidenza sempre più consistente…*
 senza che nessuno studio esista), irrigidisce una parafrasi in citazione, trasforma un *suggerisce*
 altrui in *dimostra*. → Non aggiungere autorità, fonti o causalità che la fonte non aveva. È
-l'unico tell che **non si giudica sulla forma ma sul referente**: serve il fact-check (guardia
-fattuale, SKILL.md). Falso positivo quasi nullo — se il dato c'è ed è vero, non è slop.
+l'unico tell che **non si giudica sulla forma ma sul referente**: applica il protocollo fattuale
+di SKILL.md — verifica solo se richiesto e se hai gli strumenti; altrimenti conserva e segnala
+separatamente il dubbio, senza inventare una correzione. Falso positivo quasi nullo — se il dato
+c'è ed è vero, non è slop.
 
 ## Audit finale anti-AI (passaggio obbligato)
 
-Dopo la riscrittura, domandati: **"Cosa rende questo testo evidentemente generato da AI?"**
-Elenca i tell residui. Poi: **"Ora rendilo non evidentemente AI"** e rivedi. Verifica che:
+Dopo la riscrittura, fai questo passaggio **internamente** (salvo richiesta di note): domandati
+**"Cosa rende questo testo evidentemente generato da AI?"**, individua i tell residui e rivedi.
+Non trasformare l'audit in metadiscorso nell'output. Verifica che il testo:
 
 - suoni naturale letto ad alta voce;
 - vari la struttura dei periodi senza forzature;
@@ -820,13 +829,12 @@ Elenca i tell residui. Poi: **"Ora rendilo non evidentemente AI"** e rivedi. Ver
 - non abbia più di un avverbio in *-mente* né più di un gerundio in coda per paragrafo;
 - non abbia periodi sopra 35-40 parole senza ragione.
 
-**Checklist positiva (non basta togliere — controlla che ci sia), *dove il genere lo prevede*:**
-almeno un **dato specifico** e verificato; almeno una **voce reale** (esperienza, opinione
-dell'autore, citazione verificabile); **variazione ritmica** (periodi brevi e lunghi alternati);
-il testo **regge la lettura ad alta voce** senza inciampi né rime involontarie. ⚠ *Dato* e *voce
-reale* sono attesi nella **saggistica e divulgazione**; **non** si applicano d'ufficio a copy,
-narrativa lirica, aforisma, poesia o istruzioni procedurali — e nessuno dei due va **inventato**
-per soddisfare la checklist (contratto di conservazione): meglio un vuoto segnalato che un dato
-finto. La sola **variazione ritmica** vale sempre.
-Se, dove pertinenti, nessuna ha risposta affermativa, il testo è "pulito ma morto" — l'altra
-faccia, ugualmente riconoscibile, dello slop. → Vedi "Dare voce".
+**Checklist positiva (non basta togliere — controlla ciò che il testo consente), *dove il genere
+lo prevede*:** **specificità verificabile** al posto della vaghezza; una **voce reale** quando
+l'autore o il campione ne offrono una; un ritmo coerente col genere; lettura ad alta voce senza
+inciampi né rime involontarie. Non sono quote da riempire: saggistica, divulgazione e copy possono
+legittimamente non contenere dati, prima persona o citazioni. Non aggiungerli per soddisfare la
+checklist (contratto di conservazione); nella documentazione tecnica, inoltre, regolarità e
+scansionabilità possono contare più della variazione ritmica. Se il testo aveva materiale concreto
+o una voce riconoscibile e la revisione li ha cancellati, è diventato "pulito ma morto". → Vedi
+"Dare voce".

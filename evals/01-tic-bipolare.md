@@ -1,98 +1,91 @@
 # Eval — Tic bipolare (§9 di `stile-naturale.md`)
 
-Test che la skill, davanti a un paragrafo con **più varianti del tic bipolare mescolate**
-e a una **occorrenza legittima da preservare**, riscriva assertiva pura nei casi giusti e
-flagghi la preservazione nel caso giusto. Senza questo eval, la lezione del §9 rischia di
-perdersi al prossimo audit.
+Test che la skill, davanti a più varianti del costrutto bipolare, distingua la ridondanza
+formale dall'esclusione informativa. Il criterio non è la presenza di *non/ma* né una coppia
+di parole apparentemente opposte: è l'implicazione nel contesto.
 
 ---
 
+## Prompt
+
+> Esegui un line edit conservativo del paragrafo. Riduci i costrutti ornamentali, ma non
+> alterare citazioni, polarità o distinzioni informative. Restituisci il testo revisionato e
+> una nota breve solo per le scelte non ovvie.
+
 ## Input
 
-Paragrafo con 4 occorrenze del pattern bipolare, di cui:
-- 2 da riscrivere assertiva pura (poli ridondanti: l'elevazione *semplice… ma*; gli antonimi
-  *modulare/monolitica*)
-- 2 da preservare o compensare (1 citazione diretta; 1 **esclusione di categoria** —
-  *tecnica* vs *organizzativa* non sono antonimi: il test antonimi/categorie di §9 li separa)
+Il paragrafo contiene cinque occorrenze:
+
+1. elevazione ornamentale da riscrivere;
+2. antonimia realmente ridondante da riscrivere;
+3. falso antonimo da preservare;
+4. citazione fornita dall'utente da preservare verbatim;
+5. esclusione di categoria da preservare nella forma originaria.
 
 ```
 La piattaforma non è un semplice strumento di gestione, ma è un sistema di
-orchestrazione dei flussi. La sua architettura è modulare, non monolitica: ogni
-componente lavora in isolamento. Come scriveva Postman, «la tecnologia non è mai
-neutrale, ma porta sempre con sé un'ideologia». Per questo l'adozione non è una
-scelta tecnica: è una scelta organizzativa che coinvolge ruoli, processi e
-responsabilità.
+orchestrazione dei flussi. Il piano di prova è gratuito, non a pagamento: si attiva
+senza carta di credito. L'architettura è modulare, non monolitica: qui *modulare*
+descrive i confini interni, *non monolitica* il modello di distribuzione. Nel documento fornito
+dall'utente si legge: «la tecnologia non è mai neutrale, ma porta sempre con sé
+un'ideologia». Per questo l'adozione non è una scelta tecnica: è una scelta
+organizzativa che coinvolge ruoli, processi e responsabilità.
 ```
 
-Occorrenze attese al censimento:
-1. *non è un semplice strumento di gestione, ma è un sistema…* → variante letterale; polo
-   **ornamentale** (elevazione *semplice… ma*) → taglia
-2. *è modulare, non monolitica* → **antonimi** sullo stesso asse (*modulare* implica già *non
-   monolitica*) → taglia, assertiva pura
-3. *«la tecnologia non è mai neutrale, ma porta…»* → **preserva** (citazione, caso 1)
-4. *non è una scelta tecnica: è una scelta organizzativa* → **categorie distinte** +
-   lettura di default (chi adotta legge "tecnica"): *«è organizzativa»* non recupera
-   l'avvertimento → **preserva o compensa**, non tagliare
+## Diagnosi attesa
+
+1. *non è un semplice strumento… ma è un sistema…* → elevazione ornamentale: taglia il
+   polo negativo.
+2. *gratuito, non a pagamento* → implicazione necessaria nello stesso contesto: *gratuito*
+   contiene già *non a pagamento*.
+3. *modulare, non monolitica* → preserva. Il testo assegna esplicitamente i due termini ad
+   assi distinti (confini interni e distribuzione); il secondo polo porta quindi informazione.
+   Non basta etichettare le parole come antonimi.
+4. Citazione diretta fornita dall'utente → preserva verbatim. Non è richiesto un fact-check;
+   un eventuale dubbio sulla fonte andrebbe in una nota separata, non dentro il testo.
+5. *non è una scelta tecnica: è una scelta organizzativa* → preserva. *Organizzativa* non
+   implica *non tecnica* e il polo escluso corregge una lettura prevedibile.
 
 ## Output atteso
 
-Riscrittura assertiva pura per (1) e (2); preservazione per (3); **esclusione preservata**
-per (4).
-
 ```
-La piattaforma è un sistema di orchestrazione dei flussi. La sua architettura è
-modulare: ogni componente lavora in isolamento. Come scriveva Postman, «la tecnologia
-non è mai neutrale, ma porta sempre con sé un'ideologia». Per questo adottarla è una
-scelta organizzativa, non tecnica: coinvolge ruoli, processi e responsabilità.
+La piattaforma è un sistema di orchestrazione dei flussi. Il piano di prova è gratuito:
+si attiva senza carta di credito. L'architettura è modulare, non monolitica: qui *modulare*
+descrive i confini interni, *non monolitica* il modello di distribuzione. Nel documento fornito
+dall'utente si legge: «la tecnologia non è mai neutrale, ma porta sempre con sé
+un'ideologia». Per questo l'adozione non è una scelta tecnica: è una scelta organizzativa
+che coinvolge ruoli, processi e responsabilità.
 ```
 
-Con note esplicite della skill, per esempio:
-- (1) Riscritta assertiva pura: tagliato il polo «semplice strumento di gestione»,
-  elevazione ornamentale già implicata da «sistema di orchestrazione».
-- (2) Riscritta assertiva pura: tagliato «monolitica». **Nel contesto** (componenti in
-  isolamento) «modulare» implica già «non monolitica», quindi ridondante. ⚠ Fuori
-  contesto i due termini non sono antonimi netti (un *modular monolith* è entrambi): è
-  l'**implicazione nel dominio** a decidere, non la parola.
-- (3) **Preservata** (citazione diretta, caso 1): il polo «neutrale» è dentro caporali di
-  un autore, intoccabile.
-- (4) **Esclusione preservata**: «tecnica» e «organizzativa» NON sono antonimi (categorie
-  distinte) e «tecnica» è la lettura di default — tagliarla perde l'avvertimento. Resa come
-  esclusione *«è organizzativa, non tecnica»* (NON *«più che tecnica»*, che ammetterebbe il
-  tecnico come secondario invece di escluderlo).
+Rese diverse sono ammesse se mantengono gli stessi invarianti. Nei casi (3) e (5), però,
+non serve «correggere» per inversione: se il costrutto è informativo, la forma originale è
+legittima e può restare.
 
 ## Criteri di valutazione
 
 **PASS** se l'output:
-- elimina del tutto il polo negativo in (1) e (2) — non lo inverte;
-- **conserva l'esclusione in (4)** (forma piena o esclusione esplicita *«è organizzativa, non
-  tecnica»*), perché *tecnica* e *organizzativa* non sono antonimi e *tecnica* è la lettura di
-  default: ridurlo a *«è una scelta organizzativa»* secco è **perdita di significato**; *«più
-  che tecnica»* **non** basta (concede il tecnico anziché escluderlo);
-- **non riscrive (3)**, lasciando intatta la citazione;
-- nelle note distingue il trattamento col **test di implicazione nel contesto** (taglia (2):
-  in contesto «modulare» implica «non monolitica»; preserva (4): «organizzativa» non implica
-  «non tecnica») e motiva la preservazione di (3) come citazione.
 
-**FAIL tipici** da intercettare:
-- **(4) ridotta ad assertiva pura secca** *«è una scelta organizzativa»*: cancella il
-  contrasto informativo — è il falso positivo del divieto formale che §9 ora vieta.
-- (1) riscritta per inversione: *«è un sistema di orchestrazione, non un semplice
-  strumento»* — pseudo-correzione vietata dal §9.
-- (3) modificata o "ripulita": violazione del caso 1 di preservazione.
-- Tutte le occorrenze trattate come un unico pattern, senza riconoscere le varianti.
-- Nessuna nota di motivazione sulla preservazione: la skill deve mostrare il *perché*,
-  non solo il *cosa*.
-- **Pattern bipolare annidato nella glossa di una citazione**, scambiato per "parte della
-  citazione" e quindi non riscritto. Test: dopo un virgolettato attribuito a un autore,
-  segue una glossa esplicativa contenente *«X non designa Y, ma A»* (struttura bipolare
-  ternaria o binaria). La skill deve trattare la glossa come prosa propria del testo —
-  riscrivibile assertiva pura — non come materiale citato intoccabile. La nota in coda al
-  §9 lo prescrive: se la skill lascia intatta la glossa adducendo "è citazione", è FAIL.
+- elimina i poli ridondanti in (1) e (2) senza ricrearli per inversione;
+- preserva integralmente (3), perché nel dominio descritto *modulare* e *non monolitica*
+  qualificano assi diversi;
+- lascia verbatim la citazione in (4), senza attribuzioni o fonti aggiunte;
+- conserva la polarità e la forma informativa di (5), senza trasformarla in *«è
+  organizzativa, non tecnica»* o *«più che tecnica»*;
+- motiva le scelte con il test di implicazione nel contesto, non con una lista lessicale di
+  antonimi.
+
+**FAIL tipici**:
+
+- tagliare *non monolitica* perché *modulare* viene trattato meccanicamente come antonimo;
+- invertire (5) in *«è organizzativa, non tecnica»*: preserva il contenuto, ma reintroduce
+  la variante formale che la regola invita a non fabbricare;
+- attenuare (5) in *«più che tecnica»*, che concede ciò che l'originale esclude;
+- modificare o arricchire la citazione in (4);
+- lasciare l'elevazione di (1) sostituendo soltanto *ma* con i due punti.
 
 ## Note
 
-- L'eval è di tipo *spot check* qualitativo, da eseguire a mano davanti alla skill
-  caricata. Non c'è un runner automatico: la skill è prompt-based.
-- Se in futuro si vuole un eval più ricco, aggiungere un secondo test con (b) plurali/
-  tempi e (e) *e non*, e un test di falso positivo (anafora triadica genuina che la
-  skill non deve riscrivere — caso 2 di preservazione).
+- Spot check qualitativo: non costituisce un benchmark finché output e giudizi non vengono
+  persistiti.
+- Il caso (3) è un controllo di falso positivo; il caso (2) offre il contrasto realmente
+  ridondante.

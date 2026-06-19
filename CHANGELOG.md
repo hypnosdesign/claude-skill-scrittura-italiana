@@ -5,6 +5,77 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.12.2] — 2026-06-19
+
+**Chiusura delle incoerenze residue della 2.12.1, più la prima esecuzione misurata della suite.**
+Patch applicata dopo audit statico; in più aggiunge il **runner riproducibile** (`evals/run.mjs`)
+e la **prima esecuzione A/B** con artefatti persistiti — la suite passa da «non eseguita» a
+*eseguita e auditabile*. Da quella misura emerge e viene chiusa una regressione di over-editing
+sulla documentazione tecnica.
+
+### Corretto
+
+- **Bipolare ed eval:** la 2.12.1 aveva spedito due gold incompatibili con §9, perché
+  trasformavano negazioni informative nella variante inversa *Y, non X*. I gold non vengono più
+  «corretti» per inversione. `evals/01`
+  separa un antonimo davvero ridondante (*gratuito / a pagamento*) dal falso antonimo
+  *modulare / monolitico* e preserva la forma originaria delle esclusioni informative;
+  `evals/02` toglie soltanto la glossa vuota e conserva *«non è il corpo individuale, ma il
+  tessuto comune»* senza invertirlo.
+- **Fact-check e output:** senza richiesta di verifica, citazioni e dati restano verbatim;
+  l'eventuale avvertenza va in una nota separata, non come marcatore inserito nel testo. Il
+  livello d'intervento e l'audit dei tell restano interni salvo utilità o richiesta dell'utente.
+  La guida alla coesione chiarisce inoltre che la vicinanza fra fatti non autorizza a inventare
+  causa, scopo o concessione.
+- **Voce e checklist positiva:** rimosso il residuo *«Dai voce: opinione, dettagli concreti»*;
+  specificità, voce e ritmo non sono più quote da riempire e non prevalgono sulle esigenze della
+  documentazione tecnica.
+- **Parte J:** §73 e §75 rinominati come **invarianti** modale ed epistemica, non pattern
+  stilistici; il conteggio pubblico distingue ora 73 pattern + 2 invarianti.
+- **Esempi autosufficienti:** `ESEMPI.md` ora separa esplicitamente input, informazioni fornite
+  dall'autore e output nei casi servizio, sopralluogo e chip. Nel singolo esempio il numero del
+  chip resta invariato fra prima e dopo; rispetto alla 2.12.1, l'ambiguo *200 trilioni* è stato
+  sostituito con *200.000 miliardi*. La lezione sul falso amico inglese *trillion* resta in una
+  nota separata e documentata. Anche l'esempio di coesione dichiara ora le relazioni causali e
+  finali fornite dall'autore: collegare frasi non autorizza a inventare nessi.
+- **D eufonica:** ripristinate le locuzioni cristallizzate oltre *ad esempio* (*ad eccezione,
+  dare ad intendere, fino ad ora*) senza trasformare le altre varianti tradizionali in errori.
+
+### Struttura ed eval
+
+- **Frontmatter portabile:** `version` e `language` spostati sotto `metadata`; `allowed-tools`
+  convertito nella stringa prevista dalla specifica Agent Skills. I tool autorizzati non cambiano.
+- **Suite canonica:** il custom `evals/casi-misura.json` è sostituito da `evals/evals.json` nel
+  formato di `skill-creator`, con 13 prompt completi, output attesi e aspettative verificabili
+  (incluso il falso antonimo *modulare / monolitico*). `evals/manifest.json` conserva nomi
+  semantici, generi e partizione storica *preserve/improve*; l'aspettativa non osservabile
+  sull'«intenzione» del revisore è stata sostituita con condizioni verificabili sull'output.
+  `evals/README.md` congela gli SHA della prova storica (`e56cd74` → `29ed162`) e dichiara la
+  suite 2.12.2 non ancora eseguita.
+- **Progressive disclosure:** aggiunte mappe rapide ai quattro riferimenti sopra le 300 righe.
+
+### Runner e prima esecuzione misurata
+
+- **`evals/run.mjs` — runner riproducibile.** Esegue la suite iniettando una versione della skill
+  come system prompt (`claude -p --append-system-prompt-file`), giudica ogni output contro le sue
+  `expectations` e **persiste gli artefatti** (skill+SHA, modello, input, output, verdetto, pass
+  rate) in `evals/results/`. Supporta A/B vecchia-vs-nuova (`--skill`), run multipli (`--runs`),
+  sottoinsiemi (`--ids`), split held-out e corpora esterni (`--suite`). Documentato in
+  `evals/README.md` con il limite onesto di riproducibilità (LLM non deterministico → artefatti
+  persistiti + run multipli, non output identici; giudice LLM, da affiancare a controllo umano).
+- **Prima A/B (nuova 2.12.2 vs baseline 2.11.0 `e56cd74`, editor+giudice sonnet).** Risultati in
+  `evals/results/REFERENCE.md`. Pareggio 11/13, ma **modi di fallire opposti**: la nuova **non
+  inventa entità (0 su 25 esecuzioni) contro 8 del baseline** ed evita l'inversione del bipolare;
+  il prezzo era un over-editing della documentazione tecnica. Caveat dichiarati: giudice singolo
+  (LLM, fact-checkato), iniezione del solo `SKILL.md`, n piccolo, *preserve = zero modifiche* è
+  un criterio severo.
+- **Corretto — over-editing su testo funzionale (regressione misurata).** `SKILL.md`, sezione
+  *Livello di intervento*: nuova guardia che impone il **default più conservativo** per
+  documentazione tecnica, API, codice, dati strutturati, testo legale, procedure e riferimenti —
+  correggere gli errori e fermarsi, senza rifiniture di stile (niente backtick, niente
+  riformulazioni di frasi corrette). Verificato sulla misura: il caso *documentazione-tecnica*
+  passa da **0/4 a 3/3**, senza danni collaterali sugli *improve*.
+
 ## [2.12.1] — 2026-06-19
 
 **Correzioni da un quarto audit esterno: contraddizioni semantiche e onestà empirica.** Patch che
@@ -23,6 +94,8 @@ risolve difetti reali della 2.12.0, alcuni introdotti da me.
   è entrambi). Taglio riservato ai casi *chiaramente* ornamentali (elevazione, antonimi netti).
 - **`evals/01` — gold dell'esclusione.** *«è organizzativa più che tecnica»* (concede il tecnico)
   → *«è organizzativa, non tecnica»* (preserva l'esclusione). Note e criteri aggiornati.
+  **Nota 2.12.2:** anche questa correzione era incoerente con il divieto d'inversione; la 2.12.2
+  preserva la forma informativa originale.
 - **`SKILL.md` «Dare voce» / livello deep:** «dai opinione, prima persona» → **«fai emergere
   l'opinione e la prima persona già presenti o ricavabili dal campione»**; deep rewrite «dà voce»
   → «preserva o ricostruisce la voce disponibile».
@@ -75,7 +148,8 @@ contenuto, non alterare il significato, non appiattire la voce**.
   le quattro virtù senza sostituirle; si inferisce dal verbo, si chiede solo se cambia
   materialmente l'output.
 - **`evals/03-falsi-positivi.md`** (in 2.11.0) e **`evals/casi-misura.json`** — suite di 12 casi
-  per la misura A/B, con assertion verificabili.
+  per la misura A/B, con assertion verificabili. Il JSON custom sarà poi migrato al formato
+  canonico `evals/evals.json` nella 2.12.2.
 
 ### Modificato
 - **`stile-naturale.md` §9 — bipolare: test antonimi/categorie + 6° caso.** La regola resta a

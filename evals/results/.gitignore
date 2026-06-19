@@ -1,0 +1,4 @@
+# Run rigenerabili: ignorati di default.
+# Per committare un run di riferimento auditabile: git add -f <dir>
+*/
+!.gitignore

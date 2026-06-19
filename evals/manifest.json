@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "eval_set": "evals.json",
+  "evals": [
+    {"id": 1, "name": "prosa-buona", "genre": "saggistica già buona", "target": "preserve"},
+    {"id": 2, "name": "bipolare-informativo", "genre": "saggistica", "target": "preserve"},
+    {"id": 3, "name": "bipolare-ornamentale", "genre": "copy", "target": "improve"},
+    {"id": 4, "name": "chat-informale", "genre": "chat non controllata", "target": "preserve"},
+    {"id": 5, "name": "grammatica-minima", "genre": "proofread", "target": "improve"},
+    {"id": 6, "name": "copy-senza-dati", "genre": "copy", "target": "improve"},
+    {"id": 7, "name": "documentazione-tecnica", "genre": "documentazione tecnica", "target": "preserve"},
+    {"id": 8, "name": "scientifico-incertezza", "genre": "testo scientifico", "target": "preserve"},
+    {"id": 9, "name": "legale-condizioni", "genre": "testo legale", "target": "preserve"},
+    {"id": 10, "name": "narrativa-frammenti", "genre": "narrativa", "target": "preserve"},
+    {"id": 11, "name": "voce-campione", "genre": "voce d'autore", "target": "preserve"},
+    {"id": 12, "name": "citazione-non-verificabile", "genre": "revisione con guardia fattuale", "target": "improve"},
+    {"id": 13, "name": "bipolare-misto", "genre": "line edit con casi misti", "target": "mixed"}
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "skill_name": "scrittura-italiana",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Esegui un line edit conservativo. Intervieni solo se necessario e restituisci il testo, con una nota breve solo se utile:\n\nNon c'è progresso senza una qualche forma di oblio: ricordare tutto, come il Funes di Borges, è l'opposto del pensare. La cultura seleziona, e selezionando dimentica; il problema non è se dimenticare, ma che cosa.",
+      "expected_output": "Testo sostanzialmente invariato: la negazione finale, il punto e virgola e il ritmo sono scelte legittime.",
+      "files": [],
+      "expectations": [
+        "Non aggiunge nomi, opere, dati o citazioni.",
+        "Preserva la distinzione 'non è se dimenticare, ma che cosa'.",
+        "Nel testo revisionato conserva tutte le parole dell'input nello stesso ordine; sono ammesse soltanto differenze di spaziatura."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Esegui un line edit conservativo senza cambiare la tesi o le polarità informative:\n\nLa pena detentiva non è una misura rieducativa, ma una neutralizzazione: toglie il condannato dalla circolazione senza agire sulle cause del reato. Chi la difende come deterrente confonde la paura con la giustizia.",
+      "expected_output": "Il contrasto fra rieducazione e neutralizzazione resta esplicito; sono ammessi soltanto ritocchi che non ne alterino la forza.",
+      "files": [],
+      "expectations": [
+        "Preserva entrambi i poli della negazione informativa.",
+        "Non riduce la prima frase alla sola assertiva 'è una neutralizzazione'.",
+        "Non produce la forma inversa 'La pena detentiva è una neutralizzazione, non una misura rieducativa'."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Umanizza questo copy eliminando le elevazioni ornamentali. Non aggiungere funzioni, dati o promesse:\n\nIl nostro non è un semplice software gestionale, ma è una soluzione completa pensata per le aziende. Non si tratta solo di gestire i dati: è un modo nuovo di lavorare insieme.",
+      "expected_output": "Copy più diretto e assertivo, senza inversioni del bipolare e senza concretezza inventata.",
+      "files": [],
+      "expectations": [
+        "Riduce i due costrutti bipolari ornamentali.",
+        "Non usa la pseudo-correzione 'soluzione completa, non semplice software'.",
+        "Non inventa caratteristiche, clienti, metriche o risultati."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Controlla questa chat informale e correggi soltanto ciò che impedisce di capirla. Non formalizzare il tono:\n\nragazzi domani non ce la faccio a venire, ho un casino col lavoro... recuperiamo la prox settimana? perdonatemi, e' un periodo no",
+      "expected_output": "Chat invariata o quasi: le convenzioni da tastiera e il lessico colloquiale restano coerenti col mezzo.",
+      "files": [],
+      "expectations": [
+        "Non converte automaticamente e' in è, prox in prossima o ... nel carattere tipografico ….",
+        "Non sostituisce il tono colloquiale con una mail formale.",
+        "Nel testo revisionato conserva esattamente le forme 'perdonatemi', 'prox', \"e'\" e '...'."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Esegui un proofread: correggi soltanto errori grammaticali e di punteggiatura.\n\nIl bollettino meteorologico, non lascia prevedere un miglioramento prima di lunedì, quindi conviene rimandare la gita.",
+      "expected_output": "Rimozione della sola virgola fra soggetto e verbo.",
+      "files": [],
+      "expectations": [
+        "Elimina la virgola dopo 'meteorologico'.",
+        "Non apporta altri interventi stilistici.",
+        "Non aggiunge informazioni."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Rendi questo copy meno generico e meno artificiale usando soltanto le informazioni disponibili. Se manca un fatto concreto, non inventarlo:\n\nLa nostra azienda offre prodotti di altissima qualità, pensati con cura e attenzione per soddisfare ogni esigenza del cliente in modo semplice ed efficace.",
+      "expected_output": "Riduzione di plastismi e aggettivi vuoti; eventuale segnalazione separata della mancanza di dati concreti.",
+      "files": [],
+      "expectations": [
+        "Riduce formule come 'altissima qualità', 'ogni esigenza' e 'semplice ed efficace'.",
+        "Non inventa anni di attività, premi, sedi, prodotti o numeri di clienti.",
+        "Non introduce entità, date, quantità, sedi, certificazioni, caratteristiche di prodotto o risultati assenti dall'input."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Esegui un line edit conservativo di questa documentazione tecnica. Mantieni struttura, termini e codici se sono già chiari:\n\nPer autenticarti, invia il token nell'header Authorization. La risposta è in JSON e contiene: id (identificatore univoco), email (indirizzo associato), created_at (data ISO 8601). Se il token manca, l'API restituisce 401.",
+      "expected_output": "Documentazione invariata o quasi; nessuna trasformazione dell'elenco inline in metaspiegazione.",
+      "files": [],
+      "expectations": [
+        "Mantiene Authorization, JSON, id, email, created_at, ISO 8601 e 401.",
+        "Non scioglie l'elenco soltanto perché le liste possono essere un tell in altri generi.",
+        "Non aggiunge conteggi o commenti non richiesti nel testo revisionato."
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Esegui un line edit conservativo senza rafforzare le conclusioni scientifiche:\n\nI dati suggeriscono una possibile correlazione tra l'esposizione e l'insorgenza dei sintomi, ma il campione è limitato e non permette di stabilire un nesso causale. Studi più ampi potrebbero chiarire il quadro.",
+      "expected_output": "Qualificazioni, limite del campione e distinzione correlazione/causa pienamente preservati.",
+      "files": [],
+      "expectations": [
+        "Non trasforma suggeriscono in dimostrano.",
+        "Non elimina possibile, il limite del campione o potrebbero.",
+        "Non promuove la correlazione a causalità."
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Esegui un line edit conservativo del periodo legale. Non semplificare condizioni o eccezioni:\n\nIl recesso può essere esercitato entro quattordici giorni dalla consegna, salvo i casi previsti dall'articolo 59, e non si applica ai beni confezionati su misura né ai prodotti deperibili.",
+      "expected_output": "Periodo invariato o corretto soltanto nella forma, senza perdita di condizioni, modalità o ambito.",
+      "files": [],
+      "expectations": [
+        "Preserva 'può essere esercitato' e il termine di quattordici giorni.",
+        "Preserva il rinvio all'articolo 59.",
+        "Preserva entrambe le categorie escluse."
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Esegui un line edit conservativo di questo frammento narrativo, rispettando ritmo e punteggiatura d'autore:\n\nAprì la porta. Buio. L'odore di sempre — cera, polvere, qualcosa di dolciastro che non aveva mai saputo nominare. Sua madre non c'era. Non c'era mai stata, in fondo.",
+      "expected_output": "Frammento invariato o quasi: frase nominale, lineetta e ripetizione sono intenzionali.",
+      "files": [],
+      "expectations": [
+        "Non completa il frammento 'Buio.' con un verbo.",
+        "Non elimina la lineetta per applicare meccanicamente la regola anti-em-dash.",
+        "Preserva ripetizione e ritmo finale."
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Rivedi questo testo senza professionalizzare o addolcire la voce dell'autore:\n\nIo l'ho sempre detto, e me ne frego se suona antipatico: i convegni sono una perdita di tempo. Tre giorni di slide per dire quello che stava in una mail. Ci sono andato lo stesso, certo. Per i corridoi, non per le slide.",
+      "expected_output": "Voce brusca, prima persona, opinione e ritmo restano riconoscibili; nessuna soggettività aggiunta.",
+      "files": [],
+      "expectations": [
+        "Preserva la prima persona e il tono diretto.",
+        "Non neutralizza l'opinione sui convegni.",
+        "Non aggiunge enfasi, aneddoti o interiorità."
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "Rivedi stilisticamente il passaggio senza fare fact-check. Mantieni verbatim citazioni e dati, ma segnala in una nota separata ciò che richiede verifica; non inserire marcatori nel testo:\n\nCome disse una volta Einstein, la creatività è l'intelligenza che si diverte. Del resto, secondo recenti studi, l'80% delle idee migliori nasce sotto la doccia.",
+      "expected_output": "Testo non arricchito; nota separata sull'attribuzione e sul dato non verificati.",
+      "files": [],
+      "expectations": [
+        "Non conferma né corregge l'attribuzione a Einstein.",
+        "Non inventa autore, anno, rivista o metodologia per l'80%.",
+        "Mantiene il testo verbatim o propone la rimozione, ma colloca l'avvertenza fuori dal testo revisionato."
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "Esegui un line edit conservativo. Riduci i costrutti ornamentali, ma non alterare citazioni, polarità o distinzioni informative:\n\nLa piattaforma non è un semplice strumento di gestione, ma è un sistema di orchestrazione dei flussi. Il piano di prova è gratuito, non a pagamento. L'architettura è modulare, non monolitica: qui modulare descrive i confini interni, non monolitica il modello di distribuzione. Nel documento fornito dall'utente si legge: «la tecnologia non è mai neutrale, ma porta sempre con sé un'ideologia». Per questo l'adozione non è una scelta tecnica: è una scelta organizzativa.",
+      "expected_output": "Taglia soltanto l'elevazione e l'antonimia davvero ridondante; preserva falso antonimo contestuale, citazione ed esclusione di categoria nella forma originaria.",
+      "files": [],
+      "expectations": [
+        "Riscrive l'elevazione 'non semplice strumento, ma sistema' in assertiva pura.",
+        "Riduce 'gratuito, non a pagamento' a 'gratuito'.",
+        "Preserva 'modulare, non monolitica' perché il testo assegna i termini ad assi distinti.",
+        "Lascia verbatim la citazione fornita dall'utente.",
+        "Preserva 'non è una scelta tecnica: è organizzativa' senza invertirlo in 'organizzativa, non tecnica'."
+      ]
+    }
+  ]
+}

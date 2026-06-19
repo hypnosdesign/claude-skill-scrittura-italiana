@@ -4,6 +4,10 @@ Riferimento prescrittivo per **scrivere e correggere** la punteggiatura in itali
 Sintesi azionabile da B. Mortara Garavelli, *Prontuario di punteggiatura* (Laterza,
 2003), Parti I–II. Solo precetti ed esempi: nessuna teoria, nessuna storia.
 
+**Mappa del file:** principî generali; virgola; punto e virgola; due punti; punto fermo;
+interrogativo ed esclamativo; virgolette; lineette e trattini; parentesi; puntini; barra e
+asterisco; spazi, capoversi e paragrafi; maiuscole e minuscole; abbreviazioni e sigle.
+
 ## Principî generali (validi per TUTTI i segni)
 
 - **Gerarchia di forza:** virgola < punto e virgola < punto. Il segno più forte

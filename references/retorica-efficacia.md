@@ -11,6 +11,10 @@ classico; definizioni ed esempi sono originali.
 > (eccesso = slop) né spogliare la prosa (difetto = sciatteria), ma trovare la misura
 > adatta allo scopo.
 
+**Mappa del file:** §1 quattro virtù; §2 stili e scopi; §3 figure; §4 ordine, ritmo e
+suono; §5 *tópoi*; §6 *dispositio*; §7 costruzione della tesi; §8 riassunto; §9 discorso
+riferito.
+
 ---
 
 ## 1. Le quattro virtù dell'espressione (*virtutes elocutionis*)

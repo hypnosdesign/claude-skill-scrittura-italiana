@@ -1,6 +1,6 @@
 # Esempi (prima → dopo)
 
-![Version](https://img.shields.io/badge/version-2.12.1-blue.svg)
+![Version](https://img.shields.io/badge/version-2.12.2-blue.svg)
 
 Cosa fa la skill, su testi reali. Il caso d'uso principale è **umanizzare** un testo che "sa
 di AI" (§1); ma è un humanizer con i superpoteri, perciò sa anche correggere, chiarire e dare
@@ -29,21 +29,24 @@ l'output "sa di AI".
 > un'esperienza utente fluida e intuitiva. In un panorama in continua evoluzione, rappresenta
 > un punto di svolta fondamentale per le aziende che vogliono restare competitive.
 
-**Dopo** (copula, frasi che respirano, niente slop, una voce):
+**Informazioni fornite dall'autore:** il servizio automatizza gli ordini dal carrello alla
+spedizione; è stato provato in beta; nel campione osservato ha ridotto di circa un terzo il tempo
+dedicato agli inserimenti manuali.
 
-> Il nuovo servizio fa una cosa sola, ma la fa bene: automatizza la gestione degli ordini, dal
-> carrello alla spedizione. Le aziende che l'hanno provato in beta hanno tagliato di circa un
-> terzo il tempo speso in inserimenti manuali.
+**Dopo** (verbo diretto, frasi che respirano, niente slop):
+
+> Il nuovo servizio automatizza la gestione degli ordini, dal carrello alla spedizione. Nel
+> test beta, il tempo dedicato agli inserimenti manuali è sceso di circa un terzo.
 
 *Cosa è cambiato*
 - **puritas/ornatus:** via le perifrasi (*si configura come* → il verbo diretto), la triade
   (*efficienza, flessibilità e scalabilità*), la gerundite (*offrendo… garantendo…*), l'em dash.
 - **perspicuitas:** un'idea per frase; un dato concreto al posto delle formule vuote.
-- **voce:** un'affermazione netta ("una cosa sola, ma la fa bene") al posto del tono da brochure.
+- **tono:** un'affermazione verificabile al posto dell'enfasi da brochure.
 
-> Nota: la skill **non ha inventato** il dato sulla beta. Ha segnalato che la versione "prima"
-> non diceva nulla di concreto e ha lasciato a te lo spazio per inserire un fatto vero. I numeri
-> li metti (e li verifichi) tu.
+> Nota: il "dopo" usa soltanto le informazioni del blocco precedente. Se l'autore non le avesse
+> fornite, la skill dovrebbe segnalare il vuoto o lasciare un segnaposto, non inventare una beta o
+> una percentuale plausibile.
 
 ---
 
@@ -104,8 +107,12 @@ In questo registro **sono scelte legittime, non errori**.
 | effettuare un controllo | controllare | verbo pieno, non «verbo vuoto + astratto» |
 | pensavo che ha ragione | pensavo che avesse ragione | *consecutio*: il passato regge il congiuntivo imperfetto |
 | se avrei tempo, verrei | se avessi tempo, verrei | mai il condizionale nella protasi del periodo ipotetico |
-| ed io, ad ogni costo | e io, a ogni costo | *d* eufonica solo davanti alla stessa vocale |
 | ci siamo visti virtualmente | ci siamo visti online | *virtualmente* = «di fatto», non «a distanza» |
+
+⚠ **Preferenza, non errore:** nel registro sorvegliato si preferiscono *e io, a ogni costo*;
+*ed io, ad ogni costo* restano varianti tradizionali e non vanno marcate con ✗. La *d* eufonica
+è raccomandata soprattutto davanti alla stessa vocale e in locuzioni cristallizzate come
+*ad esempio* e *ad eccezione*.
 
 ---
 
@@ -119,6 +126,9 @@ comune), le frasi fatte, e l'architettura del testo (come si entra e come si chi
 > In data odierna il sottoscritto si è recato presso la struttura al fine di effettuare un
 > sopralluogo. Le criticità riscontrate sono molteplici e a 360 gradi. In conclusione, sono
 > certo che, con impegno e determinazione, sapremo trasformare ogni sfida in un'opportunità.
+
+**Problemi indicati dall'autore:** impianto elettrico fuori norma; tetto che perde; due uscite di
+sicurezza bloccate; interventi necessari prima della riapertura.
 
 **Dopo** (parole comuni, verbo pieno, niente frasi fatte, chiusura asciutta):
 
@@ -134,11 +144,9 @@ comune), le frasi fatte, e l'architettura del testo (come si entra e come si chi
   un fatto concreto (cosa sistemare, entro quando); il generico *molteplici* lascia il posto
   all'elenco dei problemi reali.
 
-> **Nota:** *impianto elettrico fuori norma, tetto, uscite bloccate* sono i problemi **che
-> l'autore aveva in mente** dietro il vago *«criticità a 360 gradi»* — l'esempio li esplicita
-> per mostrare la resa. La skill non *indovina* quali siano i problemi: se l'input non li dice,
-> chiede o lascia un segnaposto, non inventa dettagli verosimili (vedi `stile-naturale.md` §70,
-> §75).
+> **Nota:** il "dopo" esplicita i problemi del blocco fornito dall'autore. La skill non li
+> *indovina*: se l'input non li dice, chiede o lascia un segnaposto (vedi `stile-naturale.md`
+> §70, §75).
 
 ---
 
@@ -152,19 +160,24 @@ senza che il senso cambi. Non argomenta: cataloga. Qui la skill rimette il **fil
 > Il borgo conta meno di mille abitanti. La scuola ha chiuso nel 2009. Molti giovani si sono
 > trasferiti in città. Il comune ha avviato un piano di ripopolamento. Le case costano poco.
 
+**Relazioni confermate dall'autore:** gli abitanti diminuiscono ogni anno; la chiusura della
+scuola e il trasferimento dei giovani contribuiscono al calo; il piano mira a invertire la
+tendenza e considera il basso costo delle case una leva per il ripopolamento.
+
 **Dopo** (tema/rema e connettivi giusti: il testo ha una direzione):
 
 > Il borgo conta meno di mille abitanti, e ogni anno sono di meno: la scuola ha chiuso nel 2009 e
 > i giovani si sono trasferiti in città. Per invertire la rotta il comune ha avviato un piano di
-> ripopolamento — e una leva ce l'ha già: qui le case costano pochissimo.
+> ripopolamento — e una leva ce l'ha già: qui le case costano poco.
 
 *Cosa è cambiato*
 - **coesione:** ogni frase si aggancia alla precedente (la fine di una diventa l'inizio della
   successiva); il *test del mosaico* non passa più, l'ordine ora conta.
-- **connettivi giusti:** la causa (i due punti = *perché*), lo scopo (*per invertire la rotta*),
-  la concessione implicita (*e una leva ce l'ha già*) al posto della fila di punti fermi.
-- **niente di inventato:** stessi fatti di prima, solo collegati. (Vedi `coesione-e-connettivi.md`
-  e `stile-naturale.md` §50.)
+- **connettivi giusti:** la causa (i due punti = *perché*) e lo scopo (*per invertire la rotta*)
+  rendono esplicite le relazioni confermate dall'autore, al posto della fila di punti fermi.
+- **nessun nesso inventato:** fatti e relazioni vengono dai due blocchi precedenti. Se l'autore
+  non conferma causa e scopo, il revisore può migliorare i richiami lessicali, ma non deve
+  fabbricare un ragionamento. (Vedi `coesione-e-connettivi.md` e `stile-naturale.md` §50, §75.)
 
 ---
 
@@ -175,8 +188,13 @@ sparare numeri-totem senza contesto. La skill fa il contrario: contestualizza e 
 
 **Prima** (hype + numero senza scala + chiusura vuota):
 
-> Il nuovo chip esegue 200 trilioni di operazioni al secondo: una potenza di calcolo
+> Il nuovo chip esegue 200.000 miliardi di operazioni al secondo: una potenza di calcolo
 > straordinaria che rivoluziona il settore.
+
+**Dati di confronto forniti e verificati dall'autore:** le 200.000 miliardi di operazioni
+equivalgono, per il carico descritto, a circa una giornata di un computer da ufficio di dieci
+anni fa preso come riferimento; il chip dichiara prestazioni teoriche dieci volte superiori al
+modello precedente; il beneficio effettivo dipende dai programmi che sfruttano il chip.
 
 **Dopo** (numero contestualizzato + chiarezza al posto di semplificazione):
 
@@ -185,17 +203,21 @@ sparare numeri-totem senza contesto. La skill fa il contrario: contestualizza e 
 > volte il modello precedente; quanto serva davvero dipende dai programmi che lo sfrutteranno.
 
 *Cosa è cambiato*
-- **numero leggibile:** *200 trilioni* (ambiguo in italiano) → cifra esplicita + un **confronto**
-  tangibile e l'**ordine di grandezza** (×10 sul modello prima).
+- **numero preservato e contestualizzato:** la cifra resta invariata; il **confronto** tangibile e
+  l'ordine di grandezza (×10 sul modello precedente) provengono dai dati forniti.
 - **chiarezza ≠ semplificazione:** *rivoluziona il settore* (slogan vuoto) → cosa cambia davvero,
   **con il suo limite** («dipende dai programmi»). Una qualifica in più, non in meno.
 - **anti-hype:** via *straordinaria* e *rivoluziona* (`stile-naturale.md` §1; `spiegare-con-chiarezza.md`).
 
-> **Nota — il confine da non superare:** il **confronto** (*una giornata di un PC di dieci anni
-> fa*) e il **×10 sul modello precedente** valgono *solo se sono dati veri*, forniti o
-> verificati. La mossa "contestualizza il numero" è giusta; **inventare il termine di paragone**
-> non lo è. Se non hai un confronto reale, rendi leggibile la cifra e fermati lì — non fabbricare
+> **Nota — il confine da non superare:** il confronto e il ×10 provengono dal blocco precedente.
+> Se non hai un termine di paragone reale, rendi leggibile la cifra e fermati lì: non fabbricare
 > un benchmark verosimile (`stile-naturale.md` §73, §75).
+
+> **Nota linguistica separata:** l'inglese *trillion* vale 10¹², mentre l'italiano *trilione*
+> indica 10¹⁸. Se la fonte originale dice *200 trillion operations*, prima di rendere il numero
+> verifica la scala; in italiano *200.000 miliardi* evita il falso amico. Questa conversione è
+> lecita solo quando la fonte inglese e il valore sono noti, non come congettura editoriale
+> ([Treccani](https://www.treccani.it/enciclopedia/trilione_%28Enciclopedia-della-Matematica%29/)).
 
 ---
 

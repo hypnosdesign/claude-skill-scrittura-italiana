@@ -14,7 +14,7 @@
 
 [![Sito](https://img.shields.io/badge/sito-scrittura--italiana-9c2a1f.svg)](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.12.1-blue.svg)
+![Version](https://img.shields.io/badge/version-2.12.2-blue.svg)
 
 🔗 **[Sito del progetto →](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)**
 
@@ -38,8 +38,8 @@ l'italiano per davvero, perché è costruita sulle **quattro virtù dell'espress
 4. **ornatus** — bellezza *regolata*: figure, ritmo, argomentazione, costruzione del testo
    (incipit, sviluppo, chiusura). Il suo eccesso (la *mala affectatio*) è esattamente lo
    **slop dell'AI** — perifrasi, gerundite, triadi, avverbi in *-mente*, aggettivi pomposi,
-   antilingua e affettazione all'italiana — che la skill riconosce e rimuove (75 pattern, più
-   il repertorio di cliché e frasi fatte).
+   antilingua e affettazione all'italiana — che la skill riconosce e rimuove (73 pattern
+   stilistici + 2 invarianti semantiche, 75 controlli numerati, oltre al repertorio di cliché).
 
 Il principio guida è l'**equilibrio**: ogni virtù sta tra due vizi, per difetto (sciatteria,
 oscurità) e per eccesso (slop). La differenza rispetto a un semplice "umanizzatore": qui c'è
@@ -57,19 +57,24 @@ una libreria di manuali italiani — Serianni, Mortara Garavelli, Giunta, Pontig
 ```
 .
 ├── SKILL.md                      # modello (4 virtù), workflow, principî cardine, guardia sui fatti
-└── references/
-    ├── punteggiatura.md          # puritas (segni): 15 schede, regole, errori, esempi
-    ├── dubbi-e-errori.md         # puritas (parole + sintassi): accenti, omofoni, plurali,
-    │                             #   pronomi, congiuntivo/consecutio/ipotetico, participio, digitato
-    ├── retorica-efficacia.md     # aptum/perspicuitas/ornatus: 4 virtù, 3 stili, figure,
-    │                             #   compositio, tópoi, dispositio, tesi, riassunto, discorso riferito
-    ├── coesione-e-connettivi.md  # il filo: coesione vs coerenza, tassonomia dei connettivi
-    ├── stile-naturale.md         # anti-slop: 75 pattern AI + antilingua/affettazione
-    │                             #   + "Dare voce" + audit
-    ├── cliche-e-parole-alla-moda.md  # parole alla moda, tormentoni, luoghi comuni, cliché, plastismi
-    ├── spiegare-con-chiarezza.md # divulgare/documentare: chiarezza, numeri, termine tecnico, anti-hype
-    ├── narrativa.md              # raccontare: idea vs trama, personaggio, dialogo, scena, tensione, revisione
-    └── revisione-e-proprieta.md  # la parola giusta (le mot juste), collaudo metafore, revisione a freddo
+├── references/
+│   ├── punteggiatura.md          # puritas (segni): 15 schede, regole, errori, esempi
+│   ├── dubbi-e-errori.md         # puritas (parole + sintassi): accenti, omofoni, plurali,
+│   │                             #   pronomi, congiuntivo/consecutio/ipotetico, participio, digitato
+│   ├── retorica-efficacia.md     # aptum/perspicuitas/ornatus: 4 virtù, 3 stili, figure,
+│   │                             #   compositio, tópoi, dispositio, tesi, riassunto, discorso riferito
+│   ├── coesione-e-connettivi.md  # il filo: coesione vs coerenza, tassonomia dei connettivi
+│   ├── stile-naturale.md         # anti-slop: 73 pattern + 2 invarianti semantiche
+│   │                             #   + "Dare voce" + audit
+│   ├── cliche-e-parole-alla-moda.md  # parole alla moda, tormentoni, luoghi comuni, cliché, plastismi
+│   ├── spiegare-con-chiarezza.md # divulgare/documentare: chiarezza, numeri, termine tecnico, anti-hype
+│   ├── narrativa.md              # raccontare: idea vs trama, personaggio, dialogo, scena, tensione, revisione
+│   └── revisione-e-proprieta.md  # la parola giusta (le mot juste), collaudo metafore, revisione a freddo
+└── evals/
+    ├── evals.json                # suite canonica: prompt, output attesi, aspettative
+    ├── manifest.json             # nomi, generi e split preserve/improve/mixed
+    ├── README.md                 # provenienza e requisiti del benchmark
+    └── 01-03-*.md               # spot check editoriali commentati
 ```
 
 `SKILL.md` è autosufficiente per i casi frequenti; i file in `references/` vengono consultati
@@ -249,8 +254,8 @@ it's built on the four classical *virtutes elocutionis*:
 4. **ornatus** — *measured* beauty: figures, rhythm, argumentation, text construction
    (opening, development, closing). Its excess (*mala affectatio*) is exactly AI slop —
    periphrasis, trailing gerunds, forced triads, *-mente* adverbs, the Italian "antilingua"
-   affectation — which the skill detects and removes (75 patterns, plus a register of clichés
-   and stock phrases).
+   affectation — which the skill detects and removes (73 stylistic patterns plus 2 semantic
+   invariants: 75 numbered checks, alongside a register of clichés and stock phrases).
 
 The guiding principle is **balance**: each virtue sits between two vices, by deficiency
 (sloppiness, obscurity) and by excess (slop). Unlike a generic "humanizer", this skill carries

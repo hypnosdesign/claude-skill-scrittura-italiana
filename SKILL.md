@@ -1,6 +1,5 @@
 ---
 name: scrittura-italiana
-version: 2.12.1
 description: |
   Humanizer dell'italiano: rende naturale e non "da AI" un testo — via
   perifrasi, gerundite, triadi, avverbi in -mente, trattini lunghi,
@@ -15,15 +14,11 @@ description: |
   tesi, articoli, copy, narrativa, email — o per dubbi di lingua (virgola,
   due punti, virgolette; qual è, un po', da/dà, sé stesso, congiuntivo).
 license: CC-BY-SA-4.0
-language: it
 compatibility: claude-code claude-desktop opencode claude.ai
-allowed-tools:
-  - Read
-  - Write
-  - Edit
-  - Grep
-  - Glob
-  - AskUserQuestion
+metadata:
+  version: "2.12.2"
+  language: it
+allowed-tools: Read Write Edit Grep Glob AskUserQuestion
 ---
 
 # Scrittura italiana: le quattro virtù dell'espressione
@@ -61,16 +56,18 @@ unifica correttezza, chiarezza, efficacia e naturalezza.
 > introdurre dati o citazioni "verosimili" per riempire un vuoto: segnala il vuoto e lascia che sia
 > l'utente a metterci un fatto vero (vedi `stile-naturale.md` §51 e §42).
 > **Protocollo per citazioni e dati non verificabili:** (a) se l'utente chiede esplicitamente un
-> fact-check *e* hai strumenti per farlo → verifica; (b) altrimenti **conserva e marca come da
-> verificare** (es. *«[citazione da verificare]»*); (c) in nessun caso **confermare, correggere o
-> arricchire** un'attribuzione o un dato (anno, fonte, percentuale) senza una fonte reale.
+> fact-check *e* hai strumenti per farlo → verifica; (b) altrimenti **conserva il testo verbatim**
+> e, se l'attribuzione o il dato sono dubbi, segnalalo in una **nota separata** — non inserire
+> marcatori nel testo revisionato, salvo richiesta di annotazione inline; (c) in nessun caso
+> **confermare, correggere o arricchire** un'attribuzione o un dato (anno, fonte, percentuale)
+> senza una fonte reale.
 
 > **⚠ Contratto di conservazione (il principio che tiene insieme tutto).** Rivedere un testo
 > **non** è riscriverne il contenuto. *Preservare ciò che esiste, mai simulare ciò che non c'è.*
 > In una revisione **non inventare né rafforzare:** fatti, date, luoghi, quantità, nomi; citazioni
 > o fonti; rapporti causali; confronti numerici; opinioni, emozioni, ironia o esperienze in prima
 > persona; giudizi di valore; conclusioni non presenti. **Preserva sempre:** polarità e negazioni
-> informative (test antonimi/categorie, `stile-naturale.md` §9); modalità (*può, potrebbe, sembra,
+> informative (test di implicazione nel contesto, `stile-naturale.md` §9); modalità (*può, potrebbe, sembra,
 > è, deve* — non promuovere possibilità a certezza né correlazione a causa); condizioni, eccezioni,
 > limiti e grado di certezza; ambito delle affermazioni; relazioni temporali e causali; significato
 > delle citazioni; **voce dell'autore**, quando ricavabile dal testo o da un campione. Se manca un
@@ -115,8 +112,18 @@ livello ne regola l'aggressività. Tre gradi:
 
 **Inferisci il livello dal verbo e dal contesto** («correggi/sistema gli errori» → proofread;
 «rendi più chiaro/scorrevole» → line edit; «riscrivi/umanizza» → deep). **Chiedi solo** se la
-scelta cambierebbe materialmente l'output e il segnale è ambiguo; altrimenti procedi col livello
-inferito e dichiaralo in una riga.
+scelta cambierebbe materialmente l'output e il segnale è ambiguo; altrimenti procedi. Tieni il
+livello come criterio interno: dichiaralo soltanto se chiarisce una scelta o se l'utente lo chiede.
+
+> **⚠ Default conservativo per il testo funzionale.** Documentazione tecnica, API, codice, dati
+> strutturati, testo legale, procedure, riferimenti — il testo dove conta che *funzioni e resti
+> stabile* — vanno trattati al livello **più basso**, anche se ti chiedono un «line edit»: correggi
+> gli errori oggettivi e **fèrmati lì**. Non riformulare frasi già corrette, non aggiungere
+> backtick o formattazione, non «migliorare» la resa (*«è in JSON e contiene»* → *«JSON contiene»*
+> è churn, non un fix). In questi generi la **letteralità e la stabilità valgono più
+> dell'eleganza**: se il testo già funziona e si capisce, un ritocco non richiesto è un difetto,
+> non un servizio. Interveni di più solo se l'utente lo chiede esplicitamente. (Vedi anche §67 per
+> gli elenchi legittimi nella documentazione.)
 
 ## Workflow — CORREGGERE un testo
 
@@ -155,8 +162,8 @@ Applica le passate nell'ordine delle virtù, **dalla struttura alla pelle**:
    **preserva o si ricostruisce**, non si inventa (argine in "Dare voce"). Su testo anonimo o
    tecnico, la voce giusta è prosa naturale e asciutta, non interiorità aggiunta. Per **chat, email, social, divulgazione** applica anche la
    **Parte J** (slop da assistente: aperture/chiuse di servizio, struttura da chatbot, falso
-   bilanciamento, calchi semantici). Poi chiediti *"Cosa rende ancora AI questo testo?"*, elenca
-   i tell residui, rivedi.
+   bilanciamento, calchi semantici). Poi chiediti internamente *"Cosa rende ancora AI questo
+   testo?"*, individua i tell residui e rivedi. Non riversare l'audit nell'output salvo richiesta.
    ⚠ Per i testi **argomentativi/persuasivi** fai anche un **esame critico** esplicito
    (incoerenze, salti logici, affermazioni non dimostrate): l'AI tende a *confermare* la tesi di chi
    scrive, non a contestarla — vai cercato il punto debole, non aspettarlo.
@@ -244,7 +251,8 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
 - **Testo non controllato** (web/social/chat): rispetta le convenzioni da tastiera, non
   ipercorreggere (niente caporali, accenti "da tastiera" ok, niente lineette lunghe).
 - **Un solo marcatore di incertezza** per affermazione.
-- **Dai voce:** opinione, dettagli concreti al posto di formule vaghe.
+- **Preserva la voce disponibile:** fai emergere opinioni e dettagli già presenti nel testo o
+  forniti dall'autore; non aggiungere soggettività o concretezza plausibile.
 
 ---
 
@@ -279,8 +287,8 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
   sintesi, *«resta vero che»*, autovalutazioni di precisione); **lo slop da assistente e
   semantico (Parte J)** — voce conversazionale (chat/email), struttura da chatbot e markdown
   compulsivo, falso bilanciamento, pivot al "significato più ampio", concretezza finta, *noi*
-  cosmico, verbi-ombrello pseudo-poetici, erosione delle qualificazioni, calchi semantici
-  (falsi amici), slop epistemico; sezione "Dare voce" (con l'argine *non fabbricare
+  cosmico, verbi-ombrello pseudo-poetici, calchi semantici (falsi amici), più le invarianti
+  modale ed epistemica contro erosione delle qualificazioni e fonti aggiunte; sezione "Dare voce" (con l'argine *non fabbricare
   soggettività*) e audit finale.
 - **`references/cliche-e-parole-alla-moda.md`** — *non pensare per formule*. Repertorio di
   parole alla moda, locuzioni e tormentoni, formule d'elogio trite, luoghi comuni, metafore

@@ -6,6 +6,11 @@ voce. Spot check qualitativo, no runner automatico.
 
 ---
 
+## Prompt
+
+> Riscrivi il paragrafo in modo asciutto senza alterarne l'argomento. Dopo il testo,
+> aggiungi un censimento breve dei tic rimossi, indicando per ciascuno la categoria pertinente.
+
 ## Input
 
 Paragrafo con almeno 4 dei tic codificati in §58-65, sovrapposti come tipicamente accade
@@ -48,40 +53,44 @@ Riscrittura asciutta che elimina tutti i tic mantenendo argomento e voce. Esempi
 
 ```
 Merleau-Ponty parte da una filologia diversa e arriva alla stessa conclusione: la
-carne è il tessuto comune, non il corpo individuale dell'osservatore. Galloway
-prolunga il punto sul piano dei media digitali. La non-condivisione di codice è la
-condizione operativa del dispositivo — è quel che accade anche in BG.
+carne non è il corpo individuale, ma il tessuto comune. Nei media digitali di
+Galloway, la non-condivisione di codice è la condizione operativa del dispositivo
+— è quel che accade anche in BG.
 ```
 
 (Risultato accettabile: rese diverse vanno bene se eliminano i tic e conservano il
 contenuto teorico. Quello sopra è una baseline, non l'unica forma corretta.)
 
-> **Perché il gold tiene una negazione e un em dash** (apparenti violazioni). *«il tessuto
-> comune, non il corpo individuale»* **non** è il tic bipolare da cassare: è un'**esclusione di
-> categoria** (`stile-naturale.md` §9, caso 6) — *carne* esclude la lettura di default «corpo
-> individuale», e *«è il tessuto comune»* da solo perderebbe l'avvertimento. Si toglie invece la
-> glossa vuota *«in questo senso preciso»* (§59). E l'unico `—` è una lineetta editoriale isolata,
-> non la *raffica* di em dash che §21 proscrive: un trattino in tutto il paragrafo è uso legittimo
-> dell'italiano, non un tell. Si eliminano i tic *generati*, non ogni negazione o ogni lineetta.
+> **Perché il gold tiene una negazione e un em dash** (apparenti violazioni). *«la carne non è
+> il corpo individuale, ma il tessuto comune»* **non** è il tic bipolare da cassare: è
+> un'**esclusione di categoria** (`stile-naturale.md` §9, caso 6) — il testo esclude
+> esplicitamente la lettura «corpo individuale», e *«è il tessuto comune»* da solo perderebbe
+> l'avvertimento. Il gold conserva quindi la forma informativa originale, senza invertirla. Si
+> toglie invece la glossa vuota *«in questo senso preciso»* (§59). E l'unico `—` è una lineetta
+> editoriale isolata, non la *raffica* di em dash che §21 proscrive: un trattino in tutto il
+> paragrafo è uso legittimo dell'italiano, non un tell. Si eliminano i tic *generati*, non ogni
+> negazione o ogni lineetta.
 
 ## Criteri di valutazione
 
 **PASS** se l'output:
 - elimina o riformula tutte le occorrenze numerate sopra **tranne l'esclusione di categoria
   al punto 4** (vedi sotto);
-- riconosce esplicitamente almeno 4 dei tic per categoria (§58/§59/§60/§61/§62/§64/§65)
-  nelle note di riscrittura;
+- nel censimento richiesto dal prompt riconosce esplicitamente almeno 4 categorie, per nome o
+  numero (§58/§59/§60/§61/§62/§64/§65);
 - non sostituisce un tic con un altro della stessa famiglia (es. togliere la catena di
   transizione §58 ma rimettere una meta-frase §62 al suo posto);
 - al punto 4 **toglie la glossa vuota *«in questo senso preciso»* (§59)** ma **preserva
-  l'esclusione *«non il corpo individuale»*** (caso 6 di §9): *carne* esclude la lettura di
-  default, e ridurla a *«è il tessuto comune»* secco è perdita di significato.
+  l'esclusione e la forma informativa originale** *«la carne non è il corpo individuale, ma il
+  tessuto comune»* (caso 6 di §9); non la riduce ad assertiva secca e non la inverte in
+  *«il tessuto comune, non il corpo individuale»*.
 
 **FAIL tipici** da intercettare:
 - Riscrittura "cosmetica" che alleggerisce ma lascia in piedi le formule-tipo (catene di
   transizione, meta-frasi di sintesi).
 - **Esclusione al punto 4 cancellata** riducendo a *«è il tessuto comune»* secco: perde la
-  distinzione cardine di Merleau-Ponty (carne ≠ corpo individuale). All'opposto, lasciare
+  distinzione esposta nel testo. Anche invertirla in *«il tessuto comune, non il corpo
+  individuale»* fabbrica una variante del tic senza alcun guadagno. All'opposto, lasciare
   *anche* la glossa vuota *«in questo senso preciso»* è mancata pulizia §59.
 - **Sostituzione di un tic con un altro della stessa famiglia.** Il caso più sottile
   dell'eval: la skill riconosce il tic e lo "corregge", ma scambia un membro della

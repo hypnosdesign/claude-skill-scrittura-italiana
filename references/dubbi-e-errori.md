@@ -7,6 +7,14 @@ sintetizzate da M. Trinci, *Le basi proprio della grammatica* (Bompiani, 2019) e
 di riferimento (Serianni; Dardano-Trifone, *La lingua italiana*; Perini, *Grammatica italiana per
 tutti*); definizioni ed esempi originali. `✓` = corretto, `✗` = da evitare.
 
+**Mappa del file:**
+
+- §1–10: accenti, omofoni, apostrofo, ortografia, plurali, pronomi e dubbi frequenti;
+- §11–16: verbo, *consecutio*, periodo ipotetico, participio, modi e tempi;
+- §17–20: stime e superlativi impliciti, proprietà delle parole, aggettivo e articolo partitivo;
+- §21–30: clitici, accordi di cortesia, comparazione, *si*, subordinate e costrutti marcati;
+- §31–37: articoli e nomi propri, genere, concordanze, numerali e indefiniti.
+
 ---
 
 ## 1. Accenti (acuto vs grave)
@@ -176,13 +184,14 @@ tutti*); definizioni ed esempi originali. `✓` = corretto, `✗` = da evitare.
   ✓ tra loro corre cattivo sangue (✗ "cattive acque"; *essere in cattive acque* è altra cosa).
 - **Interiezioni:** sole → punto esclamativo/interrogativo (Boh! Eh?); dentro la frase →
   isolate da virgola (Oh, cavolo!).
-- **D eufonica (*ed, ad*):** la norma moderna la **raccomanda solo davanti alla stessa
-  vocale**: ✓ *ed entrare*, *ad andare*; e ✓ *e io*, *a Ostia*. Unica eccezione davvero
-  cristallizzata: *ad esempio*. *od* è ormai obsoleto. ⚠ Le altre forme con d davanti a vocale
+- **D eufonica (*ed, ad*):** la norma moderna la **raccomanda soprattutto davanti alla stessa
+  vocale**: ✓ *ed entrare*, *ad andare*; e ✓ *e io*, *a Ostia*. Restano comuni alcune
+  **locuzioni cristallizzate** con vocale diversa, fra cui *ad esempio, ad eccezione, dare ad
+  intendere, fino ad ora*. *Od* è ormai obsoleto. ⚠ Le altre forme con d davanti a vocale
   diversa — *ed ora, ad ogni, ad ogni costo, ed io* — **non sono errori**: sono varianti
-  tradizionali, diffuse in autori e stampa, solo **sconsigliate nel registro sorvegliato** (non
-  marcarle con ✗ come una scorrettezza ortografica). Nel dubbio, in un testo controllato,
-  preferisci la d solo davanti alla stessa vocale.
+  tradizionali, diffuse in autori e stampa, ma in genere **sconsigliate nel registro sorvegliato**
+  (non marcarle con ✗ come scorrettezze ortografiche). Nel dubbio, preferisci la d davanti alla
+  stessa vocale o nelle locuzioni stabilizzate.
 - **anche se ≠ se anche:** *anche se* è concessivo (= benché): *esce **anche se** piove*. *se
   anche* è ipotetico-ammissivo (ammesso pure che): ***se anche** piovesse, uscirei*. Non sono
   intercambiabili.

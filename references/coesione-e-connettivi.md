@@ -127,6 +127,11 @@ giustapponendo frasi che dovrebbero stare in rapporto di causa, conseguenza o co
 > Nello scritto argomentativo la relazione logica va **esplicitata**. Se la relazione non c'è,
 > ristruttura — non incollare un connettivo a caso.
 
+> **Guardia per la revisione:** l'esistenza e il tipo del nesso devono risultare dal testo o da
+> informazioni fornite dall'autore. La semplice vicinanza di due fatti non autorizza a trasformarli
+> in causa ed effetto, scopo o concessione. Se il rapporto è ambiguo, conserva la giustapposizione,
+> migliora soltanto i richiami lessicali oppure chiedi conferma (vedi `stile-naturale.md` §75).
+
 ---
 
 ## 4. Il capoverso — unità di costruzione
