@@ -1,0 +1,90 @@
+{
+  "total": 7,
+  "pass": 7,
+  "passRate": 1,
+  "invented": 0,
+  "costUsd": 2.4169,
+  "modelsUsed": [
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-5",
+    "claude-opus-4-8"
+  ],
+  "byTarget": {
+    "minimal": {
+      "pass": 4,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "semantic": {
+      "pass": 1,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "advice": {
+      "pass": 1,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "improve": {
+      "pass": 1,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "bySplit": {
+    "dev": {
+      "pass": 7,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "perEval": {
+    "4": {
+      "name": "chat-informale",
+      "target": "minimal",
+      "pass": 1,
+      "n": 1
+    },
+    "7": {
+      "name": "documentazione-tecnica",
+      "target": "minimal",
+      "pass": 1,
+      "n": 1
+    },
+    "12": {
+      "name": "citazione-non-verificabile",
+      "target": "semantic",
+      "pass": 1,
+      "n": 1
+    },
+    "19": {
+      "name": "domanda-d-eufonica",
+      "target": "advice",
+      "pass": 1,
+      "n": 1
+    },
+    "22": {
+      "name": "coesione-mosaico",
+      "target": "improve",
+      "pass": 1,
+      "n": 1
+    },
+    "26": {
+      "name": "istruzioni-annidate",
+      "target": "minimal",
+      "pass": 1,
+      "n": 1
+    },
+    "28": {
+      "name": "virgolette-curve-uniformi",
+      "target": "minimal",
+      "pass": 1,
+      "n": 1
+    }
+  }
+}
