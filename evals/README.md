@@ -105,6 +105,29 @@ e commettili insieme a una nota sui limiti.
 > (naturalezza, voce) resta consigliato un controllo cieco umano. I pass rate sono indicativi del
 > comportamento, non una metrica assoluta.
 
+## Stabilità su più run (`stability.mjs`)
+
+`--runs 3` produce una riga per caso×run; `stability.mjs` le digerisce senza chiamate LLM:
+
+```bash
+node evals/run.mjs --runs 3 --model claude-sonnet-5 --judge-model claude-opus-4-8 --out r/A
+node evals/run.mjs --no-skill --runs 3 --model claude-sonnet-5 --judge-model claude-opus-4-8 --out r/B
+node evals/stability.mjs r/A r/B
+```
+
+Riporta pass per run **sui soli verdetti validi**, media e intervallo (solo se i run sono
+completi), invenzioni per run, casi unanimi e **flip** (verdetti contraddittori fra run dello
+stesso caso). Un run in **errore non è un verdetto**: non conta né come pass né come flip, e
+i run incompleti disattivano media e intervallo. Il flip misura la varianza dell'intera
+pipeline (editor + giudice insieme), non del solo editor.
+
+> **Operativo — un braccio alla volta.** Le esecuzioni lunghe vanno lanciate **in sequenza**,
+> mai in parallelo: due bracci da 27×3 più un harness concorrenti esauriscono il limite di
+> sessione del piano (`api_error_status: 429, "You've hit your session limit"`) e il runner,
+> correttamente fail-closed, registra decine di errori — righe perse, mai convertite in pass.
+> È successo il 15 lug 2026: il primo tentativo di misura di stabilità è morto a metà per
+> questo; l'artefatto non è stato promosso a riferimento.
+
 ## Attivazione e instradamento nel client reale (`activation.mjs`)
 
 Il runner inietta la skill e quindi **non vede** i due anelli a monte: l'attivazione (la

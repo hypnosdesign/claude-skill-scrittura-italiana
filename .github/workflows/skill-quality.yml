@@ -34,8 +34,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Test deterministici del runner
-        run: node --test evals/run.test.mjs
+      - name: Test deterministici del runner e del digest di stabilità
+        run: node --test evals/run.test.mjs evals/stability.test.mjs
       - name: Validazione suite e manifest (zero LLM)
         run: node evals/run.mjs --validate-only
       - name: Lunghezza della description (limite Desktop/claude.ai)
