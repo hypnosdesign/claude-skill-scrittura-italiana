@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 3,
+  "label": "base-nuda",
+  "stamp": "2026-07-15T11-13-49-628Z",
+  "argv": [
+    "--no-skill",
+    "--label",
+    "base-nuda",
+    "--model",
+    "claude-sonnet-5",
+    "--judge-model",
+    "claude-opus-4-8",
+    "--out",
+    "evals/results/audit-2026-07/base-nuda"
+  ],
+  "git": {
+    "sha": "af735a5",
+    "dirty": false
+  },
+  "skill": {
+    "source": null,
+    "sha256": null,
+    "bytes": 0,
+    "noSkill": true
+  },
+  "suite": {
+    "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/evals.json",
+    "sha256": "58ac40c039076b0bff179859ab554d1310b11db7d615114208e4892a3b2c46f2",
+    "bytes": 28580
+  },
+  "manifest": {
+    "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/manifest.json",
+    "sha256": "6f713b885c8c204f2f23a2f381550dc5867d80074dafa6fb0b340a4052af52f6",
+    "bytes": 4486
+  },
+  "editorModel": "claude-sonnet-5",
+  "judgeModel": "claude-opus-4-8",
+  "sameModel": false,
+  "runs": 1,
+  "splitFilter": "dev",
+  "claudeVer": "2.1.210 (Claude Code)",
+  "node": "v24.15.0",
+  "ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "total": 6,
+  "pass": 5,
+  "passRate": 0.833,
+  "invented": 0,
+  "costUsd": 2.2699,
+  "modelsUsed": [
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-5",
+    "claude-opus-4-8"
+  ],
+  "byTarget": {
+    "minimal": {
+      "pass": 4,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "improve": {
+      "pass": 1,
+      "fail": 1,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "bySplit": {
+    "held-out": {
+      "pass": 5,
+      "fail": 1,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "perEval": {
+    "14": {
+      "name": "tesi-distinzione-informativa",
+      "target": "minimal",
+      "pass": 1,
+      "n": 1
+    },
+    "15": {
+      "name": "configurazione-tecnica",
+      "target": "minimal",
+      "pass": 1,
+      "n": 1
+    },
+    "16": {
+      "name": "transizioni-accademiche",
+      "target": "improve",
+      "pass": 0,
+      "n": 1
+    },
+    "31": {
+      "name": "email-congiuntivo",
+      "target": "minimal",
+      "pass": 1,
+      "n": 1
+    },
+    "32": {
+      "name": "divulgazione-hype",
+      "target": "improve",
+      "pass": 1,
+      "n": 1
+    },
+    "33": {
+      "name": "chat-emoji",
+      "target": "minimal",
+      "pass": 1,
+      "n": 1
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 3,
+  "label": "candidata-2.14.0",
+  "stamp": "2026-07-15T11-23-16-495Z",
+  "argv": [
+    "--skill",
+    "/private/tmp/claude-501/-Users-mattia-Projects-claude-skill-scrittura-italiana/e3d36f7d-38f3-42a4-8d2b-562fd54abe50/scratchpad/candidato-2.14.0/single-file.md",
+    "--label",
+    "candidata-2.14.0",
+    "--model",
+    "claude-sonnet-5",
+    "--judge-model",
+    "claude-opus-4-8",
+    "--out",
+    "evals/results/audit-2026-07/candidata-2.14.0"
+  ],
+  "git": {
+    "sha": "af735a5",
+    "dirty": true
+  },
+  "skill": {
+    "source": "/private/tmp/claude-501/-Users-mattia-Projects-claude-skill-scrittura-italiana/e3d36f7d-38f3-42a4-8d2b-562fd54abe50/scratchpad/candidato-2.14.0/single-file.md",
+    "sha256": "9b86af2e51306ebba8979a385bebd9d622ebb39610bf5e19674cbd3bc6ba4884",
+    "bytes": 229913
+  },
+  "suite": {
+    "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/evals.json",
+    "sha256": "58ac40c039076b0bff179859ab554d1310b11db7d615114208e4892a3b2c46f2",
+    "bytes": 28580
+  },
+  "manifest": {
+    "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/manifest.json",
+    "sha256": "6f713b885c8c204f2f23a2f381550dc5867d80074dafa6fb0b340a4052af52f6",
+    "bytes": 4486
+  },
+  "editorModel": "claude-sonnet-5",
+  "judgeModel": "claude-opus-4-8",
+  "sameModel": false,
+  "runs": 1,
+  "splitFilter": "dev",
+  "claudeVer": "2.1.210 (Claude Code)",
+  "node": "v24.15.0",
+  "ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ]
+}

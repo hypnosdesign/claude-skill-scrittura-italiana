@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 3,
+  "label": "heldout-2.15.0",
+  "stamp": "2026-07-15T12-57-26-711Z",
+  "argv": [
+    "--split",
+    "held-out",
+    "--label",
+    "heldout-2.15.0",
+    "--model",
+    "claude-sonnet-5",
+    "--judge-model",
+    "claude-opus-4-8",
+    "--out",
+    "evals/results/audit-2026-07/heldout-2.15.0"
+  ],
+  "git": {
+    "sha": "71f44da",
+    "dirty": true
+  },
+  "skill": {
+    "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/scrittura-italiana-single-file.md",
+    "sha256": "2f70e5705603aee639517ca2319246d1c3b3f8bdc0c1f497197dca166bdb3c78",
+    "bytes": 237732
+  },
+  "suite": {
+    "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/evals.json",
+    "sha256": "60ca21b24cf009c3a2bf3f7d6b7d595736153d460ac1c8d32e375db7d1a3f187",
+    "bytes": 28668
+  },
+  "manifest": {
+    "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/manifest.json",
+    "sha256": "c0ffbbe4a35b818fc7f36d7078827dd5722a10c72ec34ae68df32a904a7753ca",
+    "bytes": 4487
+  },
+  "editorModel": "claude-sonnet-5",
+  "judgeModel": "claude-opus-4-8",
+  "sameModel": false,
+  "runs": 1,
+  "splitFilter": "held-out",
+  "claudeVer": "2.1.210 (Claude Code)",
+  "node": "v24.15.0",
+  "ids": [
+    14,
+    15,
+    16,
+    31,
+    32,
+    33
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "total": 36,
+  "errors": 2,
+  "costUsd": 5.7212,
+  "positive": {
+    "n": 18,
+    "fired": 16
+  },
+  "negative": {
+    "n": 10,
+    "fired": 0
+  },
+  "routing": {
+    "n": 6,
+    "fired": 5,
+    "expectedReadHit": 3,
+    "perCase": [
+      {
+        "id": 31,
+        "fired": true,
+        "reads": [
+          "stile-naturale"
+        ],
+        "expected": [
+          "stile-naturale"
+        ],
+        "hit": true
+      },
+      {
+        "id": 32,
+        "fired": true,
+        "reads": [],
+        "expected": [
+          "dubbi-e-errori"
+        ],
+        "hit": false
+      },
+      {
+        "id": 33,
+        "fired": true,
+        "reads": [
+          "punteggiatura"
+        ],
+        "expected": [
+          "punteggiatura"
+        ],
+        "hit": true
+      },
+      {
+        "id": 34,
+        "fired": true,
+        "reads": [],
+        "expected": [
+          "retorica-efficacia",
+          "stile-naturale"
+        ],
+        "hit": false
+      },
+      {
+        "id": 35,
+        "fired": false,
+        "reads": [],
+        "expected": [
+          "spiegare-con-chiarezza"
+        ],
+        "hit": false
+      },
+      {
+        "id": 36,
+        "fired": true,
+        "reads": [
+          "narrativa"
+        ],
+        "expected": [
+          "narrativa"
+        ],
+        "hit": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "total": 3,
+  "errors": 0,
+  "costUsd": 0.651,
+  "positive": {
+    "n": 0,
+    "fired": 0
+  },
+  "negative": {
+    "n": 0,
+    "fired": 0
+  },
+  "routing": {
+    "n": 3,
+    "fired": 3,
+    "expectedReadHit": 1,
+    "perCase": [
+      {
+        "id": 32,
+        "fired": true,
+        "reads": [
+          "dubbi-e-errori",
+          "cliche-e-parole-alla-moda"
+        ],
+        "expected": [
+          "dubbi-e-errori"
+        ],
+        "hit": true
+      },
+      {
+        "id": 34,
+        "fired": true,
+        "reads": [],
+        "expected": [
+          "retorica-efficacia",
+          "stile-naturale"
+        ],
+        "hit": false
+      },
+      {
+        "id": 35,
+        "fired": true,
+        "reads": [],
+        "expected": [
+          "spiegare-con-chiarezza"
+        ],
+        "hit": false
+      }
+    ]
+  }
+}
