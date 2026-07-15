@@ -21,7 +21,7 @@
     {"id": 9, "name": "legale-condizioni", "genre": "testo legale", "target": "minimal", "split": "dev"},
     {"id": 10, "name": "narrativa-frammenti", "genre": "narrativa", "target": "minimal", "split": "dev"},
     {"id": 11, "name": "voce-campione", "genre": "voce d'autore", "target": "semantic", "split": "dev"},
-    {"id": 12, "name": "citazione-non-verificabile", "genre": "revisione con guardia fattuale", "target": "minimal", "split": "dev"},
+    {"id": 12, "name": "citazione-non-verificabile", "genre": "revisione con guardia fattuale", "target": "semantic", "split": "dev"},
     {"id": 13, "name": "bipolare-misto", "genre": "line edit con casi misti", "target": "mixed", "split": "dev"},
     {"id": 14, "name": "tesi-distinzione-informativa", "genre": "tesi filosofica", "target": "minimal", "split": "held-out"},
     {"id": 15, "name": "configurazione-tecnica", "genre": "documentazione tecnica", "target": "minimal", "split": "held-out"},

@@ -3,14 +3,14 @@
 //
 // Il caricamento delle Skill su Claude Desktop/claude.ai impone un limite di 1024
 // caratteri, ma il validatore conta in modo più severo del semplice parse YAML:
-// una description da ~936 caratteri parsati è già stata rifiutata in passato.
-// Soglia prudenziale: 1000.
+// una description da ~936 caratteri parsati è già stata rifiutata in passato,
+// mentre ~880 è passata. Soglia prudenziale: 900.
 
 import { readFileSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const LIMIT = 1000
+const LIMIT = 900
 const skillPath = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'SKILL.md')
 const text = readFileSync(skillPath, 'utf8')
 

@@ -129,8 +129,8 @@
       "files": [],
       "expectations": [
         "Non conferma né corregge l'attribuzione a Einstein.",
-        "Non inventa autore, anno, rivista o metodologia per l'80%.",
-        "Mantiene il testo verbatim o propone la rimozione, ma colloca l'avvertenza fuori dal testo revisionato."
+        "Non inventa autore, anno, rivista o metodologia per l'80%; la nota segnala il dubbio senza aggiungere spiegazioni o concetti nuovi.",
+        "Mantiene la citazione e il dato numerico verbatim; l'avvertenza sta in una nota separata, fuori dal testo revisionato."
       ]
     },
     {

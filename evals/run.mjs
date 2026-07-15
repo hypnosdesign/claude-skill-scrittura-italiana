@@ -245,7 +245,7 @@ function judge(e, output, m, model) {
     'IMPORTANTE: se l\'editor dichiara che non serve alcun intervento (es. «testo già corretto», «nessuna modifica necessaria») o commenta senza riprodurre il testo, considera l\'output IDENTICO all\'input. Ai livelli "exact" e "minimal" questo SODDISFA le aspettative di conservazione (zero modifiche = comportamento corretto). Giudica eventuali commenti/note dell\'editor come metadati, non come parte del testo revisionato.',
     'ASPETTATIVE (ognuna deve essere rispettata):\n' + e.expectations.map((x, i) => `${i + 1}. ${x}`).join('\n'),
     e.expected_output ? `Atteso (indicativo): ${e.expected_output}` : '',
-    'Conta le INVENZIONI: entità, numeri, date, luoghi, fonti o conteggi presenti nell\'OUTPUT ma assenti dall\'input del prompt.',
+    'Conta le INVENZIONI: entità, numeri, date, luoghi, fonti o conteggi presenti nell\'OUTPUT ma assenti dall\'input del prompt. NON sono invenzioni: i rimandi alle sezioni interne della skill o dei suoi riferimenti (es. «§9», «Parte B», «stile-naturale.md») — sono tracciabilità del criterio applicato, non fonti fattuali.',
     'Rispondi SOLO con un oggetto JSON su UNA riga, senza markdown:\n{"pass": true|false, "invented": <int>, "expectations": [true|false, ...], "notes": "<una frase>"}\n"pass" è true SOLO se tutte le aspettative sono true e invented=0.',
   ].filter(Boolean).join('\n\n')
   try {

@@ -78,7 +78,7 @@ export function main(argv = process.argv.slice(2)) {
 
   const rows = []
   for (const c of selected) {
-    const maxTurns = Number(args['max-turns'] ?? (c.kind === 'routing' ? 15 : 4))
+    const maxTurns = Number(args['max-turns'] ?? (c.kind === 'routing' ? 15 : 6))
     const row = runCase(c, { claudeBin, model, maxTurns, workDir })
     rows.push(row)
     appendFileSync(join(outDir, 'results.jsonl'), JSON.stringify(row) + '\n')
@@ -165,7 +165,10 @@ function runCase(c, { claudeBin, model, maxTurns, workDir }) {
 }
 
 function summarize(rows) {
-  const of = kind => rows.filter(r => r.kind === kind && !r.error)
+  // Gli errori del CLI (tipicamente il tetto --max-turns raggiunto DOPO l'attivazione)
+  // non invalidano la riga: skillFired e le letture arrivano dallo stream parziale.
+  // Restano quindi nel denominatore; il conteggio errori è riportato a parte.
+  const of = kind => rows.filter(r => r.kind === kind)
   const errors = rows.filter(r => r.error).length
   const pos = of('positive')
   const neg = of('negative')
