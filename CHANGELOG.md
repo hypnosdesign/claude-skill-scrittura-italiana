@@ -5,6 +5,54 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.15.1] — 2026-07-15
+
+**Chiusura del backlog di giugno: il nucleo si allinea alle schede, l'instradamento impara a
+spiegare.** Ricognizione delle sei «voci d'autore» differite dagli audit di giugno: quattro
+risultano già coperte dalle serie 2.12–2.15 — registro one-shot (2.14.0), contratto di lettura
+(2.14.0), red-team (2.15.0), livelli d'intervento (2.12.0) — e il frontmatter è già conforme
+allo standard Agent Skills (`skills-ref validate`: *Valid skill*; `allowed-tools` stringa,
+`version`/`language` sotto `metadata`). Le schede delle norme oscillanti erano già tarate
+(*sé stesso* dalla 2.1.0, cognomi e maiuscole dalla 2.5.0, d eufonica 2.4.0→2.12.x,
+*piuttosto che* e virgolette nella 2.15.0): il residuo vero stava nel **nucleo**, più i due
+casi di instradamento rimasti aperti (#34, #35). Single-file misurato = committato
+(sha256 `c9d3ef4a…`).
+
+### Corretto (nucleo)
+
+- **«Errori di parola ad alta frequenza»:** `sé stesso` ora è qualificato — consigliato, ma
+  *se stesso* resta legittimo (norma oscillante, scheda §4). L'elenco non può più far passare
+  per errore una variante accettata, senza aprire la scheda.
+- **Precetto virgolette:** distinta la **produzione** («quando normalizzi tu»: caporali nel
+  controllato, dritte nel web/social) dal **rispetto dello stile esistente** (uno stile già
+  uniforme, anche alte curve, si rispetta — `stile-naturale.md` §26). Il «mai curve» assoluto
+  contraddiceva la taratura della 2.15.0 e teneva mezzo vivo, nel nucleo, il conflitto del
+  caso #28.
+
+### Modificato (instradamento)
+
+- **Riga nuova «spiegare / divulgare (anche breve)»**: `spiegare-con-chiarezza.md`
+  obbligatorio, preset di registro §2a se pertinente. Il compito «spiega X a un pubblico non
+  tecnico» non passava da nessuna riga della tabella: compariva solo come parentetica dentro
+  «deep rewrite / scrivere da zero» (residuo #35).
+- **Clausola di brevità** nel contratto di lettura: la lettura minima vale **anche quando
+  l'output è breve** (un discorso d'occasione, una spiegazione divulgativa, un'email di
+  sostanza). Nei casi residui #34/#35 la skill si attivava e rispondeva in 3 turni senza
+  aprire nulla: la razionalizzazione da chiudere era «è corto, non serve leggere». Nota di
+  metodo: la clausola nasce da quei due casi ma è scritta per **categorie**, non ricalcata
+  sui prompt di misura.
+
+### Misurato (editor `claude-sonnet-5`, giudice `claude-opus-4-8`, n=1 per cella)
+
+- **Instradamento nel client reale: 6/6** aperture attese — dal 3/6 della baseline 2.13.1 e
+  dal 4/6 della 2.15.0: #34 ora apre `retorica-efficacia`, #35 apre `spiegare-con-chiarezza`;
+  31–33 e 36 senza regressioni; sanity positivi 2/2 (#8, #15).
+- **Conferme 7/7, 0 invenzioni** (#12, #19, #22, #28 + canarini #4, #7, #26): il precetto
+  virgolette riformulato non riapre il caso #28.
+- **Held-out (gate, non tuning): 6/6, 0 invenzioni** — primo giro pieno del set rinnovato.
+  #16, fallito a n=1 nella 2.15.0, qui passa: oscillazione da campione singolo; resta
+  osservato, mai ritoccato.
+
 ## [2.15.0] — 2026-07-15
 
 **Profondità di contenuto: red-team, preset di registro, tipografia mancante.** Terza ondata

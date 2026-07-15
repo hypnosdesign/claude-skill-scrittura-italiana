@@ -85,8 +85,10 @@ unifica correttezza, chiarezza, efficacia e naturalezza.
 ## Instradamento — il contratto di lettura minima
 
 Questo SKILL.md contiene il modello e i precetti ad alta frequenza; **il mestiere fine vive
-nei riferimenti**, e va letto *prima* di produrre l'output, non dopo. Aperture minime per
-compito (le voci «obbligatorio» non sono facoltative):
+nei riferimenti**, e va letto *prima* di produrre l'output, non dopo — **anche quando l'output
+è breve** (un discorso d'occasione, una spiegazione divulgativa, un'email di sostanza): la
+brevità non esonera dalla lettura minima. Aperture minime per compito (le voci «obbligatorio»
+non sono facoltative):
 
 | Compito | Apri (obbligatorio) | Apri se pertinente |
 |---|---|---|
@@ -96,6 +98,7 @@ compito (le voci «obbligatorio» non sono facoltative):
 | → se chat/email/social/divulgazione | in particolare §66-75 (slop da assistente) | **Parte G** (divulgazione) |
 | **deep rewrite / scrivere da zero** | **Parte C** (§1-2, §6) **+** il file del genere: **Parte G** (divulgare/documentare), **Parte H** (raccontare) | **Parte I** per la lima |
 | **argomentare / costruire una tesi** | **Parte C** §5-7 | **Parte D** |
+| **spiegare / divulgare** (anche breve) | **Parte G** | **Parte C** §2a (preset divulgazione) |
 | **domanda di lingua** | la scheda pertinente se il nucleo non basta; **sempre** per le norme oscillanti (d eufonica, *sé stesso*, *piuttosto che*, maiuscole, cognomi, virgolette): lì la taratura vive nella scheda, non nella memoria del modello | — |
 | **testo lungo (>~1.500 parole)** | come sopra per il livello; poi procedi per capitoli, a censimenti in batch (**Parte E** §9) | — |
 
@@ -234,13 +237,15 @@ termini tecnici) → **Parte G**; **narrativa** (idea, punto di vista, licenze) 
 - **Relativa restrittiva → niente virgola** (`i libri che servono`); **esplicativa → virgola**.
 - **Gerarchia:** virgola < punto e virgola < punto. `;` per serie lunghe o cambi di soggetto.
 - **Due punti:** niente maiuscola dopo (tranne il discorso diretto citato).
-- **Virgolette:** caporali « » solo nel **testo controllato** (editoria); nel web/social
-  dritte " " o assenti — uniformi, **mai curve né miste**.
+- **Virgolette (quando normalizzi tu):** caporali « » nel **testo controllato** (editoria);
+  nel web/social dritte " " o assenti. Uniformi, **mai miste**; uno stile già uniforme del
+  testo (anche alte curve) si rispetta (**Parte E** §26).
 - **Trattino `-`** unisce senza spazi; **lineetta `–`** separa con spazi e in italiano si usa
   **poco**. **Titoli in sentence case.** **Puntini sempre tre.** **Sigle senza punti** (`ISTAT`).
 - **Errori di parola ad alta frequenza:** `qual è` (mai `qual'è`), `un po'` (mai `pò`),
-  `da/dà/da'`, `né` (acuto), `sé stesso`, `perché`/`è`, `ho/o`; `stessi` (non «stassi»);
-  `tu hai` (non «te hai»); niente doppione di `ne` («da questo consegue», non «ne consegue»).
+  `da/dà/da'`, `né` (acuto), `sé stesso` (consigliato; *se stesso* resta legittimo —
+  oscillante, scheda §4), `perché`/`è`, `ho/o`; `stessi` (non «stassi»); `tu hai` (non «te
+  hai»); niente doppione di `ne` («da questo consegue», non «ne consegue»).
 
 **perspicuitas — chiarezza**
 - **Spezza i periodi** sopra 35-40 parole o con più di due *che*.
