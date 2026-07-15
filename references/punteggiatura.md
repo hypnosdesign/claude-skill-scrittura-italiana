@@ -6,7 +6,8 @@ Sintesi azionabile da B. Mortara Garavelli, *Prontuario di punteggiatura* (Later
 
 **Mappa del file:** principî generali; virgola; punto e virgola; due punti; punto fermo;
 interrogativo ed esclamativo; virgolette; lineette e trattini; parentesi; puntini; barra e
-asterisco; spazi, capoversi e paragrafi; maiuscole e minuscole; abbreviazioni e sigle.
+asterisco; apostrofo tipografico; numeri, date e percentuali; corsivo; spazi, capoversi e
+paragrafi; maiuscole e minuscole; abbreviazioni e sigle.
 
 ## Principî generali (validi per TUTTI i segni)
 
@@ -296,6 +297,54 @@ autori in bibliografia) oppure oppositiva (`vero/falso`, alternativa `indo-europ
 **Asterisco `*`** (uso specialistico — ⚠️ non "correggerlo"):
 omissione volontaria di un nome; in linguistica storica forma ricostruita (`*adripare`);
 in linguistica descrittiva costrutto **agrammaticale** (`*un bello libro`).
+
+---
+
+## APOSTROFO TIPOGRAFICO
+
+- **Due forme:** dritto `'` (da tastiera) e tipografico `’`. Decide il **livello di
+  controllo**, come per le virgolette: nel testo controllato l'apostrofo tipografico `’` è
+  la norma editoriale; nel digitato il dritto va benissimo.
+- **Coerenza:** mai mescolare le due forme nello stesso testo — il mix è il tell tipico del
+  copia-incolla (e dei testi assemblati da AI).
+- ⚠ **Mai l'apostrofo al posto dell'accento** nel testo controllato: ✗ `E' tardi`,
+  `perche'` → ✓ `È tardi`, `perché` (vedi `dubbi-e-errori.md` §1; nel digitato la forma da
+  tastiera è tollerata).
+
+---
+
+## NUMERI, DATE, PERCENTUALI
+
+- **Cifre o lettere:** in prosa corrente i numeri brevi e d'uso comune in lettere (*tre
+  giorni, cento pagine*); cifre per dati, misure, date, elenchi tecnici. Scegli un criterio
+  e tienilo per tutto il testo.
+- **Migliaia col punto:** `200.000` (✗ `200,000` all'inglese). In italiano la **virgola** è
+  il separatore dei **decimali**: `3,14`.
+- **Percentuali:** in prosa la forma corrente è `%` attaccato alla cifra (`82%`); la forma
+  spaziata (`82 %`) è una convenzione tecnico-scientifica. Scegli e mantieni. Con
+  l'articolo: *l'82%* (elisione normale).
+- **Date e decenni:** `15 luglio 2026` (mese minuscolo). Decenni: *gli anni Trenta* è la
+  forma della prosa sorvegliata; *gli anni '30* è corrente ma meno formale (coerenza,
+  comunque). Secoli sostantivati con la maiuscola: *il Novecento*.
+- **Intervalli:** trattino breve senza spazi: `pp. 15-18`, `2019-2024` (vedi «Lineette e
+  trattini»).
+- **Falsa precisione:** non riportare più decimali di quanti la misura regga (vedi
+  `spiegare-con-chiarezza.md` §4).
+
+---
+
+## CORSIVO
+
+- **Titoli di opere** (libri, film, quadri, album; testate citate come opere): in
+  **corsivo**, non tra virgolette: *Il nome della rosa*, *La dolce vita*. Le *parti* di
+  un'opera (articoli, capitoli, singoli brani) tra virgolette.
+- **Forestierismi non adattati** o citati come termini: corsivo alla prima occorrenza
+  (*background*, *plot*); i prestiti acclimatati (computer, sport, film, mail) in tondo.
+- **Menzione:** la parola citata *come parola* va in corsivo (vedi «Virgolette», uso
+  metalinguistico). **Enfasi:** col contagocce — se tutto è enfatico, niente lo è.
+- ⚠ Dove il corsivo non esiste (chat, testo semplice) le alternative sono le virgolette o
+  niente: nel testo controllato non surrogarlo con MAIUSCOLE (grido) né con gli asterischi
+  del markdown.
 
 ---
 

@@ -31,6 +31,13 @@ Per dare voce **a un testo che ne ha una** (o di cui hai un campione):
 - **Far emergere le opinioni** già presenti, non inventarne.
 - **Variare il ritmo.** Periodi brevi e secchi. Poi periodi lunghi, che si prendono il
   loro tempo. Alternare. *(Questa vale sempre: è prosodia, non soggettività.)*
+- **Distribuire l'attenzione in modo asimmetrico.** La prosa umana spende in modo
+  diseguale: si ferma dove la cosa è viva e sbriga l'ovvio in una riga; l'AI sviluppa ogni
+  punto con lo stesso zelo (capoversi tutti della stessa misura, ogni voce con la sua brava
+  spiegazione: vedi §67). In revisione profonda: individua il punto più vivo *già presente*
+  e dagli spazio; comprimi il resto. L'asimmetria si applica al materiale esistente — non è
+  una licenza per aggiungere approfondimenti (contratto di conservazione). *(Anche questa è
+  struttura, non soggettività: vale pure sul testo anonimo.)*
 - **Rendere la complessità** che il testo esprime: i sentimenti misti dell'autore, non i tuoi.
   *"Mi colpisce, ma c'è qualcosa che mi mette a disagio"* batte *"È interessante"* — se è ciò
   che l'autore intende.

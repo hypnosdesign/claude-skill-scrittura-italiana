@@ -11,9 +11,9 @@ classico; definizioni ed esempi sono originali.
 > (eccesso = slop) né spogliare la prosa (difetto = sciatteria), ma trovare la misura
 > adatta allo scopo.
 
-**Mappa del file:** §1 quattro virtù; §2 stili e scopi; §3 figure; §4 ordine, ritmo e
-suono; §5 *tópoi*; §6 *dispositio*; §7 costruzione della tesi; §8 riassunto; §9 discorso
-riferito.
+**Mappa del file:** §1 quattro virtù; §2 stili e scopi (§2a preset di registro per genere);
+§3 figure; §4 ordine, ritmo e suono; §5 *tópoi*; §6 *dispositio*; §7 costruzione della tesi
+(§7a esame critico red-team); §8 riassunto; §9 discorso riferito.
 
 ---
 
@@ -118,6 +118,38 @@ L'*aptum* impone di scegliere lo stile in base allo **scopo**. Tre scopi, tre st
   preziosismi vuoti (*vanitas*).
 - **Coerenza:** non saltare di stile dentro lo stesso testo senza una ragione. Un manuale che
   vira improvvisamente al sublime suona falso.
+
+### 2a. Preset di registro per genere (punti di partenza, non gabbie)
+
+Il registro è un fascio di scelte che si muovono **insieme** (vedi `stile-naturale.md` →
+«Calibrazione voce»). Le schede fissano il punto di partenza per genere; **il campione
+dell'autore, quando c'è, vince sempre sul preset.** Le prime due derivano da un corpus
+misurato (v2.9.0); le altre sono tarature editoriali dichiarate, non misurate.
+
+- **Divulgazione viva** *(misurata: Ferrari, Vallortigara; conferma Floridi)* — periodi medi
+  ~18-20 parole con molte frasi brevi; prima persona; domande-motore frequenti (~25/10k
+  parole); glossa lampo dei termini (~1 ogni 700 parole); esclamativi quasi zero — l'enfasi
+  sta nel ritmo. Trappole del genere: hype della scoperta, metafore non chiuse.
+- **Trattato / saggio ad alta astrazione** *(contrasto misurato: Simondon)* — periodi lunghi
+  (~30+ parole), pochissime frasi brevi; impersonale; niente domande; punto e virgola fitto
+  a reggere le subordinate. Trappole: astratti in catena, citazioni in fila senza discorso.
+- **Giornalismo / articolo** — l'attacco dà il fatto (chi/cosa/quando) nelle prime due
+  righe; periodi 15-25 parole; una citazione *funzionale* per snodo; «disse» invisibile.
+  Trappole: plastismi e cliché giornalistici (`cliche-e-parole-alla-moda.md` §5-6),
+  condizionale di dissociazione a raffica.
+- **Copy / social** — seconda persona o impersonale caldo; frasi brevi ma non a corsa
+  uniforme; un dato concreto batte tre aggettivi; chiusura su un fatto o un'azione, mai
+  edificante. Trappole: elevazione bipolare, parole vuote «da chiunque» (§49).
+- **Email professionale** — il punto della mail entro le prime due righe; cortesia
+  epistolare vera (Gentile…, Cordiali saluti), non formule da chatbot; un argomento per
+  capoverso; chiusura operativa (chi fa cosa entro quando). Trappole: burocratese, scuse
+  preventive.
+- **Tesi / accademico** — impersonale o *noi* di lavoro, coerente; subordinazione esplicita
+  e controllata; termini tecnici definiti alla prima occorrenza; metadiscorso con misura
+  (§6b). Trappole: i tic della Parte I di `stile-naturale.md` (§58-65), pseudo-precisione.
+- **Narrativa breve** — la voce del narratore comanda su ogni norma (vedi `narrativa.md`);
+  ritmo variato per scena; dettaglio carico, non catalogo; dialogo con sottotesto.
+  Trappole: aggettivo valutativo anteposto, correre a spiegare.
 
 ---
 
@@ -359,6 +391,31 @@ materiale per convincere.
   sostenuta da un'autorità, non è per ciò vera. L'autorevolezza non sostituisce la prova.
 - **Falsa modestia / metadiscorso superfluo:** *«nella mia umile opinione», «per così dire»* — di'
   la cosa (vedi `cliche-e-parole-alla-moda.md` §2 e `stile-naturale.md` §43).
+
+### 7a. L'esame critico di una tesi (red-team)
+
+Quando revisioni un testo argomentativo, l'esame critico è parte del lavoro: l'AI tende ad
+**assecondare** la tesi di chi scrive, quindi il punto debole va cercato con un procedimento,
+non aspettato. Cinque mosse, in ordine:
+
+1. **Estrai lo scheletro.** La tesi in una riga; poi ogni ragione che la sostiene, una riga
+   ciascuna (premessa → conclusione). Se lo scheletro non si lascia estrarre, il problema è
+   già questo: il testo afferma, non argomenta.
+2. **Interroga ogni anello.** La prova c'è, ed è del tipo giusto (dato, esempio, autorità
+   pertinente)? La conclusione *segue*, o viene solo affermata dopo? Trappole più frequenti:
+   correlazione spacciata per causa; caso particolare generalizzato; autorità fuori campo;
+   *«nessuno ha dimostrato il contrario»* (onere della prova rovesciato); attacco a chi
+   dissente al posto dell'argomento.
+3. **Cerca il controesempio.** Per la tesi e per ogni generalizzazione: esiste un caso che
+   la smentirebbe? Non serve che sia vero: basta che sia *possibile e non escluso* perché
+   l'affermazione vada qualificata.
+4. **Costruisci l'obiezione migliore (steelman).** La posizione avversaria nella sua
+   versione più forte, non in quella comoda. Il testo la regge? Se sì, merita di entrare
+   come concessiva (§6b); se no, l'anello va rinforzato o lasciato cadere.
+5. **Verdetto utile.** Nomina **l'anello più debole** e una via per rinforzarlo (un dato da
+   procurare, una qualificazione, una concessiva). Le obiezioni restano **logiche**: non
+   inventare studi o numeri contrari (guardia sui fatti in SKILL.md); e la tesi resta
+   dell'autore — il red-team la mette alla prova, non la sostituisce.
 
 ## 8. Riassumere — condensare senza tradire
 

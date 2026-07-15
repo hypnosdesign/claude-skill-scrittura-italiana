@@ -10,13 +10,14 @@ description: |
   Quattro virtù dell'espressione: NATURALEZZA (segni dell'AI, voce),
   CORRETTEZZA (punteggiatura, accenti, omofoni, plurali, pronomi),
   CHIAREZZA ed EFFICACIA (retorica, figure, ritmo, argomentazione). Per
-  umanizzare, scrivere, revisionare o editare testi italiani — saggistica,
-  tesi, articoli, copy, narrativa, email — o per dubbi di lingua (virgola,
-  due punti, virgolette; qual è, un po', da/dà, sé stesso, congiuntivo).
+  umanizzare, scrivere, riassumere, revisionare o editare testi italiani —
+  saggistica, tesi, articoli, copy, narrativa, divulgazione, email, appunti
+  da stendere — o per dubbi di lingua (virgola, due punti, virgolette;
+  qual è, un po', da/dà, sé stesso, congiuntivo).
 license: CC-BY-SA-4.0
 compatibility: claude-code claude-desktop opencode claude.ai
 metadata:
-  version: "2.14.0"
+  version: "2.15.0"
   language: it
 allowed-tools: Read Write Edit Grep Glob AskUserQuestion
 ---
@@ -42,13 +43,14 @@ unifica correttezza, chiarezza, efficacia e naturalezza.
 > **⚠ Guardia di registro (aptum) — leggila prima di correggere.** Le norme tipografiche
 > dipendono dal **livello di controllo** del testo:
 > - **Testo controllato** (editoria, documenti, saggistica, pubblicazioni): tutte le norme —
->   caporali « », accenti corretti (*perché*), lineette spaziate, sentence case.
+>   accenti corretti (*perché*), lineette spaziate, sentence case; virgolette: caporali « »
+>   *quando sei tu a normalizzare*, ma uno stile già **uniforme** del testo (es. alte curve
+>   “ ”) è una scelta editoriale da rispettare, non da convertire (`stile-naturale.md` §26).
 > - **Testo non controllato** (web, social, chat, commenti, email veloci): valgono le
 >   convenzioni da tastiera — virgolette **dritte o assenti**, accenti "da tastiera" tollerati
 >   (`perche`, `e'`), niente em dash. **Non sono errori: non correggerli** se il registro è
 >   quello. Imporre la tipografia editoriale a un commento social è esso stesso un errore di *aptum*.
->
-> - **Poesia e prosa sperimentale:** tutto può essere licenza (metrica, punteggiatura, grafia):
+> - **Poesia e prosa sperimentale:** tutto può essere licenza — metrica, punteggiatura, grafia:
 >   intervieni **solo** su richiesta esplicita e dichiarata.
 >
 > **Decidere il registro, in ordine:** (1) l'indicazione esplicita dell'utente vince; (2) il
@@ -98,11 +100,11 @@ compito (le voci «obbligatorio» non sono facoltative):
 |---|---|---|
 | **proofread** | — (il nucleo basta) | la scheda del dubbio in `references/punteggiatura.md` / `references/dubbi-e-errori.md` |
 | **line edit / umanizza** | `references/stile-naturale.md`, prima della passata 4 | `references/cliche-e-parole-alla-moda.md` (copy, giornalismo) |
-| → se saggistica/tesi/accademico | in particolare §9 e Parte I (§58-65) | `references/coesione-e-connettivi.md` se il filo non tiene |
-| → se chat/email/social/divulgazione | in particolare Parte J (§66-75) | `references/spiegare-con-chiarezza.md` (divulgazione) |
+| → se saggistica/tesi/accademico | in particolare §9 e §58-65 (tic saggistico-accademici) | `references/coesione-e-connettivi.md` se il filo non tiene |
+| → se chat/email/social/divulgazione | in particolare §66-75 (slop da assistente) | `references/spiegare-con-chiarezza.md` (divulgazione) |
 | **deep rewrite / scrivere da zero** | `references/retorica-efficacia.md` (§1-2, §6) **+** il file del genere: `references/spiegare-con-chiarezza.md` (divulgare/documentare), `references/narrativa.md` (raccontare) | `references/revisione-e-proprieta.md` per la lima |
 | **argomentare / costruire una tesi** | `references/retorica-efficacia.md` §5-7 | `references/coesione-e-connettivi.md` |
-| **domanda di lingua** | la scheda pertinente, se il nucleo non contiene la regola esatta | — |
+| **domanda di lingua** | la scheda pertinente se il nucleo non basta; **sempre** per le norme oscillanti (d eufonica, *sé stesso*, *piuttosto che*, maiuscole, cognomi, virgolette): lì la taratura vive nella scheda, non nella memoria del modello | — |
 | **testo lungo (>~1.500 parole)** | come sopra per il livello; poi procedi per capitoli, a censimenti in batch (`references/stile-naturale.md` §9) | — |
 
 > **Tracciabilità onesta.** Nelle note, cita la sezione applicata (es. «§9, caso 6») **solo
@@ -201,14 +203,18 @@ Applica le passate nell'ordine delle virtù, **dalla struttura alla pelle**:
    l'audit nell'output salvo richiesta.
    ⚠ Per i testi **argomentativi/persuasivi** fai anche un **esame critico** esplicito
    (incoerenze, salti logici, affermazioni non dimostrate): l'AI tende a *confermare* la tesi di chi
-   scrive, non a contestarla — va cercato il punto debole, non aspettato.
+   scrive, non a contestarla — va cercato il punto debole, non aspettato (procedura red-team in
+   `references/retorica-efficacia.md` §7a).
 
 Mantieni sempre **significato e registro**. Se l'utente fornisce un campione del proprio
 stile, calibrati su quello invece di appiattire a un italiano neutro.
 
 ## Workflow — SCRIVERE da zero
 
-Fissa prima **aptum** (scopo → stile: *docere*=tenue, *delectare*=medio, *movere*=alto;
+**Apri i riferimenti previsti dall'instradamento** (`references/retorica-efficacia.md` + il
+file del genere) **prima di stendere**, non dopo: il preset di registro e la *dispositio*
+guidano la stesura, non la correggono. Poi:
+fissa prima **aptum** (scopo → stile: *docere*=tenue, *delectare*=medio, *movere*=alto;
 vedi `retorica-efficacia.md` §2). Imposta la **dispositio** (come entri, come articoli, come
 chiudi: `retorica-efficacia.md` §6) e tieni il **filo** (`coesione-e-connettivi.md`). Poi scrivi
 già rispettando le virtù: non produrre prosa da ripulire dopo. Chiudi con l'**audit anti-AI** e la
@@ -295,8 +301,9 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
 
 - **`references/punteggiatura.md`** — *puritas: i segni*. Scheda per ogni segno (virgola,
   punto e virgola, due punti, punto, interrogativo, esclamativo, virgolette, lineette/trattini,
-  parentesi, puntini, barra/asterisco, abbreviazioni e sigle, a capo, maiuscole/minuscole), con
-  regole, errori comuni ed esempi.
+  parentesi, puntini, barra/asterisco, **apostrofo tipografico, numeri/date/percentuali,
+  corsivo**, abbreviazioni e sigle, a capo, maiuscole/minuscole), con regole, errori comuni ed
+  esempi.
 - **`references/dubbi-e-errori.md`** — *puritas: le parole e la sintassi*. Repertorio di dubbi ed
   errori comuni: accenti, omofoni, apostrofo/elisione/troncamento, *sé stesso*, ortografia
   insidiosa, plurali difficili e doppi, pronomi (tu/te, gli/le, ne), avverbi, preposizioni, «che»
@@ -308,11 +315,12 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
   dell'aggettivo; concordanza del verbo e dell'aggettivo; numerali; indefiniti; genere che cambia
   significato); e il **digitato** (punto, punto e virgola, emoji, maiuscole espressive in chat e social).
 - **`references/retorica-efficacia.md`** — *scrivere bene*. Le 4 virtù dell'espressione, i 3
-  stili (tenue/medio/sublime ↔ docere/delectare/movere), repertorio essenziale di figure
-  (tropi, figure di parola e di pensiero), *compositio* (ordine/ritmo/eufonia), argomentazione
-  per *tópoi* e **costruzione del testo (*dispositio*: iniziare/andare avanti/chiudere, voce ed
-  *ethos*, buona vs cattiva retorica)**; **costruire la tesi** (selezionare, gerarchizzare,
-  errori argomentativi), **riassumere** e il **discorso riferito**.
+  stili (tenue/medio/sublime ↔ docere/delectare/movere) con i **preset di registro per genere**
+  (§2a), repertorio essenziale di figure (tropi, figure di parola e di pensiero), *compositio*
+  (ordine/ritmo/eufonia), argomentazione per *tópoi* e **costruzione del testo (*dispositio*:
+  iniziare/andare avanti/chiudere, voce ed *ethos*, buona vs cattiva retorica)**; **costruire la
+  tesi** (selezionare, gerarchizzare, errori argomentativi) con l'**esame critico red-team**
+  (§7a), **riassumere** e il **discorso riferito**.
 - **`references/stile-naturale.md`** — *togliere lo slop*. Pattern dell'italiano AI (contenuto,
   grammatica, stile, comunicazione, riempitivi) con parole-spia e prima→dopo; **l'antilingua e
   l'affettazione all'italiana (sostituzione colta, verbo+astratto, parole di plastica, less is

@@ -35,13 +35,14 @@ unifica correttezza, chiarezza, efficacia e naturalezza.
 > **⚠ Guardia di registro (aptum) — leggila prima di correggere.** Le norme tipografiche
 > dipendono dal **livello di controllo** del testo:
 > - **Testo controllato** (editoria, documenti, saggistica, pubblicazioni): tutte le norme —
->   caporali « », accenti corretti (*perché*), lineette spaziate, sentence case.
+>   accenti corretti (*perché*), lineette spaziate, sentence case; virgolette: caporali « »
+>   *quando sei tu a normalizzare*, ma uno stile già **uniforme** del testo (es. alte curve
+>   “ ”) è una scelta editoriale da rispettare, non da convertire (**Parte E** §26).
 > - **Testo non controllato** (web, social, chat, commenti, email veloci): valgono le
 >   convenzioni da tastiera — virgolette **dritte o assenti**, accenti "da tastiera" tollerati
 >   (`perche`, `e'`), niente em dash. **Non sono errori: non correggerli** se il registro è
 >   quello. Imporre la tipografia editoriale a un commento social è esso stesso un errore di *aptum*.
->
-> - **Poesia e prosa sperimentale:** tutto può essere licenza (metrica, punteggiatura, grafia):
+> - **Poesia e prosa sperimentale:** tutto può essere licenza — metrica, punteggiatura, grafia:
 >   intervieni **solo** su richiesta esplicita e dichiarata.
 >
 > **Decidere il registro, in ordine:** (1) l'indicazione esplicita dell'utente vince; (2) il
@@ -91,11 +92,11 @@ compito (le voci «obbligatorio» non sono facoltative):
 |---|---|---|
 | **proofread** | — (il nucleo basta) | la scheda del dubbio in **Parte A** / **Parte B** |
 | **line edit / umanizza** | **Parte E**, prima della passata 4 | **Parte F** (copy, giornalismo) |
-| → se saggistica/tesi/accademico | in particolare §9 e Parte I (§58-65) | **Parte D** se il filo non tiene |
-| → se chat/email/social/divulgazione | in particolare Parte J (§66-75) | **Parte G** (divulgazione) |
+| → se saggistica/tesi/accademico | in particolare §9 e §58-65 (tic saggistico-accademici) | **Parte D** se il filo non tiene |
+| → se chat/email/social/divulgazione | in particolare §66-75 (slop da assistente) | **Parte G** (divulgazione) |
 | **deep rewrite / scrivere da zero** | **Parte C** (§1-2, §6) **+** il file del genere: **Parte G** (divulgare/documentare), **Parte H** (raccontare) | **Parte I** per la lima |
 | **argomentare / costruire una tesi** | **Parte C** §5-7 | **Parte D** |
-| **domanda di lingua** | la scheda pertinente, se il nucleo non contiene la regola esatta | — |
+| **domanda di lingua** | la scheda pertinente se il nucleo non basta; **sempre** per le norme oscillanti (d eufonica, *sé stesso*, *piuttosto che*, maiuscole, cognomi, virgolette): lì la taratura vive nella scheda, non nella memoria del modello | — |
 | **testo lungo (>~1.500 parole)** | come sopra per il livello; poi procedi per capitoli, a censimenti in batch (**Parte E** §9) | — |
 
 > **Tracciabilità onesta.** Nelle note, cita la sezione applicata (es. «§9, caso 6») **solo
@@ -194,14 +195,18 @@ Applica le passate nell'ordine delle virtù, **dalla struttura alla pelle**:
    l'audit nell'output salvo richiesta.
    ⚠ Per i testi **argomentativi/persuasivi** fai anche un **esame critico** esplicito
    (incoerenze, salti logici, affermazioni non dimostrate): l'AI tende a *confermare* la tesi di chi
-   scrive, non a contestarla — va cercato il punto debole, non aspettato.
+   scrive, non a contestarla — va cercato il punto debole, non aspettato (procedura red-team in
+   **Parte C** §7a).
 
 Mantieni sempre **significato e registro**. Se l'utente fornisce un campione del proprio
 stile, calibrati su quello invece di appiattire a un italiano neutro.
 
 ## Workflow — SCRIVERE da zero
 
-Fissa prima **aptum** (scopo → stile: *docere*=tenue, *delectare*=medio, *movere*=alto;
+**Apri i riferimenti previsti dall'instradamento** (**Parte C** + il
+file del genere) **prima di stendere**, non dopo: il preset di registro e la *dispositio*
+guidano la stesura, non la correggono. Poi:
+fissa prima **aptum** (scopo → stile: *docere*=tenue, *delectare*=medio, *movere*=alto;
 vedi **Parte C** §2). Imposta la **dispositio** (come entri, come articoli, come
 chiudi: **Parte C** §6) e tieni il **filo** (**Parte D**). Poi scrivi
 già rispettando le virtù: non produrre prosa da ripulire dopo. Chiudi con l'**audit anti-AI** e la
@@ -288,8 +293,9 @@ termini tecnici) → **Parte G**; **narrativa** (idea, punto di vista, licenze) 
 
 - ****Parte A**** — *puritas: i segni*. Scheda per ogni segno (virgola,
   punto e virgola, due punti, punto, interrogativo, esclamativo, virgolette, lineette/trattini,
-  parentesi, puntini, barra/asterisco, abbreviazioni e sigle, a capo, maiuscole/minuscole), con
-  regole, errori comuni ed esempi.
+  parentesi, puntini, barra/asterisco, **apostrofo tipografico, numeri/date/percentuali,
+  corsivo**, abbreviazioni e sigle, a capo, maiuscole/minuscole), con regole, errori comuni ed
+  esempi.
 - ****Parte B**** — *puritas: le parole e la sintassi*. Repertorio di dubbi ed
   errori comuni: accenti, omofoni, apostrofo/elisione/troncamento, *sé stesso*, ortografia
   insidiosa, plurali difficili e doppi, pronomi (tu/te, gli/le, ne), avverbi, preposizioni, «che»
@@ -301,11 +307,12 @@ termini tecnici) → **Parte G**; **narrativa** (idea, punto di vista, licenze) 
   dell'aggettivo; concordanza del verbo e dell'aggettivo; numerali; indefiniti; genere che cambia
   significato); e il **digitato** (punto, punto e virgola, emoji, maiuscole espressive in chat e social).
 - ****Parte C**** — *scrivere bene*. Le 4 virtù dell'espressione, i 3
-  stili (tenue/medio/sublime ↔ docere/delectare/movere), repertorio essenziale di figure
-  (tropi, figure di parola e di pensiero), *compositio* (ordine/ritmo/eufonia), argomentazione
-  per *tópoi* e **costruzione del testo (*dispositio*: iniziare/andare avanti/chiudere, voce ed
-  *ethos*, buona vs cattiva retorica)**; **costruire la tesi** (selezionare, gerarchizzare,
-  errori argomentativi), **riassumere** e il **discorso riferito**.
+  stili (tenue/medio/sublime ↔ docere/delectare/movere) con i **preset di registro per genere**
+  (§2a), repertorio essenziale di figure (tropi, figure di parola e di pensiero), *compositio*
+  (ordine/ritmo/eufonia), argomentazione per *tópoi* e **costruzione del testo (*dispositio*:
+  iniziare/andare avanti/chiudere, voce ed *ethos*, buona vs cattiva retorica)**; **costruire la
+  tesi** (selezionare, gerarchizzare, errori argomentativi) con l'**esame critico red-team**
+  (§7a), **riassumere** e il **discorso riferito**.
 - ****Parte E**** — *togliere lo slop*. Pattern dell'italiano AI (contenuto,
   grammatica, stile, comunicazione, riempitivi) con parole-spia e prima→dopo; **l'antilingua e
   l'affettazione all'italiana (sostituzione colta, verbo+astratto, parole di plastica, less is
@@ -402,7 +409,8 @@ Sintesi azionabile da B. Mortara Garavelli, *Prontuario di punteggiatura* (Later
 
 **Mappa del file:** principî generali; virgola; punto e virgola; due punti; punto fermo;
 interrogativo ed esclamativo; virgolette; lineette e trattini; parentesi; puntini; barra e
-asterisco; spazi, capoversi e paragrafi; maiuscole e minuscole; abbreviazioni e sigle.
+asterisco; apostrofo tipografico; numeri, date e percentuali; corsivo; spazi, capoversi e
+paragrafi; maiuscole e minuscole; abbreviazioni e sigle.
 
 ## Principî generali (validi per TUTTI i segni)
 
@@ -695,6 +703,54 @@ in linguistica descrittiva costrutto **agrammaticale** (`*un bello libro`).
 
 ---
 
+## APOSTROFO TIPOGRAFICO
+
+- **Due forme:** dritto `'` (da tastiera) e tipografico `’`. Decide il **livello di
+  controllo**, come per le virgolette: nel testo controllato l'apostrofo tipografico `’` è
+  la norma editoriale; nel digitato il dritto va benissimo.
+- **Coerenza:** mai mescolare le due forme nello stesso testo — il mix è il tell tipico del
+  copia-incolla (e dei testi assemblati da AI).
+- ⚠ **Mai l'apostrofo al posto dell'accento** nel testo controllato: ✗ `E' tardi`,
+  `perche'` → ✓ `È tardi`, `perché` (vedi **Parte B** §1; nel digitato la forma da
+  tastiera è tollerata).
+
+---
+
+## NUMERI, DATE, PERCENTUALI
+
+- **Cifre o lettere:** in prosa corrente i numeri brevi e d'uso comune in lettere (*tre
+  giorni, cento pagine*); cifre per dati, misure, date, elenchi tecnici. Scegli un criterio
+  e tienilo per tutto il testo.
+- **Migliaia col punto:** `200.000` (✗ `200,000` all'inglese). In italiano la **virgola** è
+  il separatore dei **decimali**: `3,14`.
+- **Percentuali:** in prosa la forma corrente è `%` attaccato alla cifra (`82%`); la forma
+  spaziata (`82 %`) è una convenzione tecnico-scientifica. Scegli e mantieni. Con
+  l'articolo: *l'82%* (elisione normale).
+- **Date e decenni:** `15 luglio 2026` (mese minuscolo). Decenni: *gli anni Trenta* è la
+  forma della prosa sorvegliata; *gli anni '30* è corrente ma meno formale (coerenza,
+  comunque). Secoli sostantivati con la maiuscola: *il Novecento*.
+- **Intervalli:** trattino breve senza spazi: `pp. 15-18`, `2019-2024` (vedi «Lineette e
+  trattini»).
+- **Falsa precisione:** non riportare più decimali di quanti la misura regga (vedi
+  **Parte G** §4).
+
+---
+
+## CORSIVO
+
+- **Titoli di opere** (libri, film, quadri, album; testate citate come opere): in
+  **corsivo**, non tra virgolette: *Il nome della rosa*, *La dolce vita*. Le *parti* di
+  un'opera (articoli, capitoli, singoli brani) tra virgolette.
+- **Forestierismi non adattati** o citati come termini: corsivo alla prima occorrenza
+  (*background*, *plot*); i prestiti acclimatati (computer, sport, film, mail) in tondo.
+- **Menzione:** la parola citata *come parola* va in corsivo (vedi «Virgolette», uso
+  metalinguistico). **Enfasi:** col contagocce — se tutto è enfatico, niente lo è.
+- ⚠ Dove il corsivo non esiste (chat, testo semplice) le alternative sono le virgolette o
+  niente: nel testo controllato non surrogarlo con MAIUSCOLE (grido) né con gli asterischi
+  del markdown.
+
+---
+
 ## SPAZI BIANCHI, A CAPO, CAPOVERSI, PARAGRAFI
 
 - **A capo:** separa blocchi di informazione; segnala cambio di argomento. Usalo per
@@ -949,7 +1005,8 @@ tutti*); definizioni ed esempi originali. `✓` = corretto, `✗` = da evitare.
 - **piuttosto che ≠ o / oppure.** *Piuttosto che* è avversativo (= anziché, al posto di), non
   alternativo. ✗ *Sabato andiamo al mare piuttosto che al lago* (sembra «al mare, non al lago») →
   ✓ *…al mare o al lago* (se sono alternative); ✓ *Cammino **piuttosto che** prendere l'auto*
-  (= anziché). Errore diffuso al Nord e in TV: nello scritto va sempre corretto.
+  (= anziché). Errore diffuso al Nord e in TV: nello scritto va corretto, perché
+  l'ambiguità è reale (chi legge non sa se le alternative sono due o una).
 - **neanche / neppure / nemmeno** si comportano come *mai, niente, nessuno*: **dopo** il verbo
   vogliono *non*, **prima** lo sostituiscono. ✓ *Non l'ho **neanche** salutato*; ✓ ***Neanche**
   l'avrei salutato* (✗ *l'ho neanche salutato*; ✗ *non neanche…*).
@@ -1460,9 +1517,9 @@ classico; definizioni ed esempi sono originali.
 > (eccesso = slop) né spogliare la prosa (difetto = sciatteria), ma trovare la misura
 > adatta allo scopo.
 
-**Mappa del file:** §1 quattro virtù; §2 stili e scopi; §3 figure; §4 ordine, ritmo e
-suono; §5 *tópoi*; §6 *dispositio*; §7 costruzione della tesi; §8 riassunto; §9 discorso
-riferito.
+**Mappa del file:** §1 quattro virtù; §2 stili e scopi (§2a preset di registro per genere);
+§3 figure; §4 ordine, ritmo e suono; §5 *tópoi*; §6 *dispositio*; §7 costruzione della tesi
+(§7a esame critico red-team); §8 riassunto; §9 discorso riferito.
 
 ---
 
@@ -1567,6 +1624,38 @@ L'*aptum* impone di scegliere lo stile in base allo **scopo**. Tre scopi, tre st
   preziosismi vuoti (*vanitas*).
 - **Coerenza:** non saltare di stile dentro lo stesso testo senza una ragione. Un manuale che
   vira improvvisamente al sublime suona falso.
+
+### 2a. Preset di registro per genere (punti di partenza, non gabbie)
+
+Il registro è un fascio di scelte che si muovono **insieme** (vedi **Parte E** →
+«Calibrazione voce»). Le schede fissano il punto di partenza per genere; **il campione
+dell'autore, quando c'è, vince sempre sul preset.** Le prime due derivano da un corpus
+misurato (v2.9.0); le altre sono tarature editoriali dichiarate, non misurate.
+
+- **Divulgazione viva** *(misurata: Ferrari, Vallortigara; conferma Floridi)* — periodi medi
+  ~18-20 parole con molte frasi brevi; prima persona; domande-motore frequenti (~25/10k
+  parole); glossa lampo dei termini (~1 ogni 700 parole); esclamativi quasi zero — l'enfasi
+  sta nel ritmo. Trappole del genere: hype della scoperta, metafore non chiuse.
+- **Trattato / saggio ad alta astrazione** *(contrasto misurato: Simondon)* — periodi lunghi
+  (~30+ parole), pochissime frasi brevi; impersonale; niente domande; punto e virgola fitto
+  a reggere le subordinate. Trappole: astratti in catena, citazioni in fila senza discorso.
+- **Giornalismo / articolo** — l'attacco dà il fatto (chi/cosa/quando) nelle prime due
+  righe; periodi 15-25 parole; una citazione *funzionale* per snodo; «disse» invisibile.
+  Trappole: plastismi e cliché giornalistici (**Parte F** §5-6),
+  condizionale di dissociazione a raffica.
+- **Copy / social** — seconda persona o impersonale caldo; frasi brevi ma non a corsa
+  uniforme; un dato concreto batte tre aggettivi; chiusura su un fatto o un'azione, mai
+  edificante. Trappole: elevazione bipolare, parole vuote «da chiunque» (§49).
+- **Email professionale** — il punto della mail entro le prime due righe; cortesia
+  epistolare vera (Gentile…, Cordiali saluti), non formule da chatbot; un argomento per
+  capoverso; chiusura operativa (chi fa cosa entro quando). Trappole: burocratese, scuse
+  preventive.
+- **Tesi / accademico** — impersonale o *noi* di lavoro, coerente; subordinazione esplicita
+  e controllata; termini tecnici definiti alla prima occorrenza; metadiscorso con misura
+  (§6b). Trappole: i tic della Parte I di **Parte E** (§58-65), pseudo-precisione.
+- **Narrativa breve** — la voce del narratore comanda su ogni norma (vedi **Parte H**);
+  ritmo variato per scena; dettaglio carico, non catalogo; dialogo con sottotesto.
+  Trappole: aggettivo valutativo anteposto, correre a spiegare.
 
 ---
 
@@ -1808,6 +1897,31 @@ materiale per convincere.
   sostenuta da un'autorità, non è per ciò vera. L'autorevolezza non sostituisce la prova.
 - **Falsa modestia / metadiscorso superfluo:** *«nella mia umile opinione», «per così dire»* — di'
   la cosa (vedi **Parte F** §2 e **Parte E** §43).
+
+### 7a. L'esame critico di una tesi (red-team)
+
+Quando revisioni un testo argomentativo, l'esame critico è parte del lavoro: l'AI tende ad
+**assecondare** la tesi di chi scrive, quindi il punto debole va cercato con un procedimento,
+non aspettato. Cinque mosse, in ordine:
+
+1. **Estrai lo scheletro.** La tesi in una riga; poi ogni ragione che la sostiene, una riga
+   ciascuna (premessa → conclusione). Se lo scheletro non si lascia estrarre, il problema è
+   già questo: il testo afferma, non argomenta.
+2. **Interroga ogni anello.** La prova c'è, ed è del tipo giusto (dato, esempio, autorità
+   pertinente)? La conclusione *segue*, o viene solo affermata dopo? Trappole più frequenti:
+   correlazione spacciata per causa; caso particolare generalizzato; autorità fuori campo;
+   *«nessuno ha dimostrato il contrario»* (onere della prova rovesciato); attacco a chi
+   dissente al posto dell'argomento.
+3. **Cerca il controesempio.** Per la tesi e per ogni generalizzazione: esiste un caso che
+   la smentirebbe? Non serve che sia vero: basta che sia *possibile e non escluso* perché
+   l'affermazione vada qualificata.
+4. **Costruisci l'obiezione migliore (steelman).** La posizione avversaria nella sua
+   versione più forte, non in quella comoda. Il testo la regge? Se sì, merita di entrare
+   come concessiva (§6b); se no, l'anello va rinforzato o lasciato cadere.
+5. **Verdetto utile.** Nomina **l'anello più debole** e una via per rinforzarlo (un dato da
+   procurare, una qualificazione, una concessiva). Le obiezioni restano **logiche**: non
+   inventare studi o numeri contrari (guardia sui fatti in SKILL.md); e la tesi resta
+   dell'autore — il red-team la mette alla prova, non la sostituisce.
 
 ## 8. Riassumere — condensare senza tradire
 
@@ -2075,6 +2189,13 @@ Per dare voce **a un testo che ne ha una** (o di cui hai un campione):
 - **Far emergere le opinioni** già presenti, non inventarne.
 - **Variare il ritmo.** Periodi brevi e secchi. Poi periodi lunghi, che si prendono il
   loro tempo. Alternare. *(Questa vale sempre: è prosodia, non soggettività.)*
+- **Distribuire l'attenzione in modo asimmetrico.** La prosa umana spende in modo
+  diseguale: si ferma dove la cosa è viva e sbriga l'ovvio in una riga; l'AI sviluppa ogni
+  punto con lo stesso zelo (capoversi tutti della stessa misura, ogni voce con la sua brava
+  spiegazione: vedi §67). In revisione profonda: individua il punto più vivo *già presente*
+  e dagli spazio; comprimi il resto. L'asimmetria si applica al materiale esistente — non è
+  una licenza per aggiungere approfondimenti (contratto di conservazione). *(Anche questa è
+  struttura, non soggettività: vale pure sul testo anonimo.)*
 - **Rendere la complessità** che il testo esprime: i sentimenti misti dell'autore, non i tuoi.
   *"Mi colpisce, ma c'è qualcosa che mi mette a disagio"* batte *"È interessante"* — se è ciò
   che l'autore intende.

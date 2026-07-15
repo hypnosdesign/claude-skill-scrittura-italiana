@@ -18,7 +18,7 @@
 
 [![Sito](https://img.shields.io/badge/sito-scrittura--italiana-9c2a1f.svg)](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.14.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.15.0-blue.svg)
 
 🔗 **[Sito del progetto →](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)**
 
@@ -95,10 +95,11 @@ troncamento, non un'elisione → niente apostrofo. È anche un consulente, non s
 │   ├── narrativa.md              # raccontare: idea vs trama, personaggio, dialogo, scena, tensione, revisione
 │   └── revisione-e-proprieta.md  # la parola giusta (le mot juste), collaudo metafore, revisione a freddo
 └── evals/
-    ├── evals.json                # 13 casi dev + 4 held-out congelati
-    ├── manifest.json             # nomi, generi, target e split dev/held-out
-    ├── run.mjs                   # runner content-addressed con verdetti fail-closed
+    ├── evals.json                # 27 casi dev + 6 held-out congelati
+    ├── manifest.json             # nomi, generi, livelli (exact/minimal/semantic/…) e split
+    ├── run.mjs                   # runner content-addressed, verdetti fail-closed, braccio --no-skill
     ├── run.test.mjs              # test deterministici del runner
+    ├── activation.mjs            # attivazione e instradamento misurati nel client reale
     ├── results/                  # run ordinari ignorati; reference-* versionati
     ├── README.md                 # provenienza e requisiti del benchmark
     └── 01-03-*.md               # spot check editoriali commentati

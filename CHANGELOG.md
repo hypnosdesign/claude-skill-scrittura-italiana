@@ -5,6 +5,55 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.15.0] — 2026-07-15
+
+**Profondità di contenuto: red-team, preset di registro, tipografia mancante.** Terza ondata
+dell'audit `AUDIT-2026-07`: aggiunte nei riferimenti, nucleo quasi invariato, più le
+rifiniture emerse dalla misura della 2.14.0.
+
+### Aggiunto
+
+- **`retorica-efficacia.md` §7a — l'esame critico di una tesi (red-team).** La promessa del
+  workflow (v2.4.1: «va cercato il punto debole») diventa procedura in cinque mosse:
+  scheletro della tesi, interrogazione degli anelli (correlazione/causa, generalizzazioni,
+  onere della prova rovesciato, attacco a chi dissente), controesempio, steelman
+  dell'obiezione, verdetto utile. Obiezioni logiche, mai fatti inventati; la tesi resta
+  dell'autore. (Il caso di misura #30 già passa con la sola esortazione: la procedura fissa
+  il comportamento e lo rende insegnabile.)
+- **`retorica-efficacia.md` §2a — preset di registro per genere.** Sette schede-leva
+  (divulgazione viva, trattato, giornalismo, copy/social, email professionale, tesi,
+  narrativa breve): punti di partenza, non gabbie — il campione dell'autore vince sempre.
+  Le prime due derivano dal corpus misurato (v2.9.0, numeri nel changelog); le altre sono
+  tarature editoriali dichiarate come non misurate.
+- **`punteggiatura.md` — tre schede tipografiche mancanti:** **apostrofo tipografico**
+  (dritto vs `'`: decide il livello di controllo, il mix è il tell), **numeri, date e
+  percentuali** (migliaia col punto, virgola per i decimali, decenni, intervalli, falsa
+  precisione), **corsivo** (titoli di opere, forestierismi, menzione, enfasi col
+  contagocce). Mappa del file aggiornata.
+- **`stile-naturale.md` → «Dare voce» — l'asimmetria dell'attenzione.** La prosa umana
+  spende in modo diseguale: si ferma dove la cosa è viva e sbriga l'ovvio; l'AI sviluppa
+  ogni punto con lo stesso zelo. In revisione profonda: spazio al punto vivo già presente,
+  compressione del resto — sul materiale esistente, mai aggiungendo (contratto di
+  conservazione).
+
+### Modificato
+
+- **`description` (attivazione):** aggiunte «riassumere», «divulgazione» e «appunti da
+  stendere» — i tre inneschi mancati nella misura sul client reale (#8, #15, #35). Da
+  rimisurare; il totale resta a 885 caratteri, sotto la soglia prudenziale di 900.
+- **Guardia di registro:** le virgolette del testo controllato ora distinguono «quando sei
+  tu a normalizzare» (caporali) dallo **stile uniforme già scelto dal testo** (es. alte
+  curve), che si rispetta — risolve il conflitto interno emerso dal caso #28, dove la
+  guardia vinceva sulla taratura di §26.
+- **`dubbi-e-errori.md` §9 — «piuttosto che» disgiuntivo:** motivata la correzione
+  (l'ambiguità è reale) senza l'assoluto «sempre».
+- **Rifiniture alla 2.14.0:** punto «poesia» riattaccato all'elenco della guardia di
+  registro; nella tabella di instradamento i rimandi interni per lettera (Parte I/J di
+  `stile-naturale.md`) sostituiti dai § numerici, che nel single-file non collidono con le
+  etichette delle Parti A-I.
+- Mappa di `retorica-efficacia.md` e albero in `README.md` aggiornati (suite 27+6, harness
+  di attivazione).
+
 ## [2.14.0] — 2026-07-15
 
 **L'instradamento governato, e la prima misura del valore assoluto.** Seconda ondata

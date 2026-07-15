@@ -204,7 +204,8 @@ tutti*); definizioni ed esempi originali. `✓` = corretto, `✗` = da evitare.
 - **piuttosto che ≠ o / oppure.** *Piuttosto che* è avversativo (= anziché, al posto di), non
   alternativo. ✗ *Sabato andiamo al mare piuttosto che al lago* (sembra «al mare, non al lago») →
   ✓ *…al mare o al lago* (se sono alternative); ✓ *Cammino **piuttosto che** prendere l'auto*
-  (= anziché). Errore diffuso al Nord e in TV: nello scritto va sempre corretto.
+  (= anziché). Errore diffuso al Nord e in TV: nello scritto va corretto, perché
+  l'ambiguità è reale (chi legge non sa se le alternative sono due o una).
 - **neanche / neppure / nemmeno** si comportano come *mai, niente, nessuno*: **dopo** il verbo
   vogliono *non*, **prima** lo sostituiscono. ✓ *Non l'ho **neanche** salutato*; ✓ ***Neanche**
   l'avrei salutato* (✗ *l'ho neanche salutato*; ✗ *non neanche…*).
