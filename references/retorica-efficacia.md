@@ -51,7 +51,11 @@ L'*aptum* governa anche **quali norme tipografiche si applicano**. Distingui due
 > (es. correggere i caporali in un commento Reddit) è esso stesso un errore di *aptum*: si
 > impone un registro sbagliato. In quei testi le scelte da tastiera sono volute e umane —
 > lasciale. Correggi la tipografia editoriale **solo** se il testo è controllato o se l'utente
-> chiede esplicitamente quel livello di rifinitura. Nel dubbio, chiedi.
+> chiede esplicitamente quel livello di rifinitura. Nel dubbio, segui la **procedura di
+> decisione del registro** in SKILL.md (segnali espliciti → convenzioni del testo → genere;
+> chiedi solo in contesto interattivo, quando la scelta cambia materialmente l'output; in
+> contesto non interattivo assumi il controllato senza normalizzazione tipografica invasiva,
+> dichiarando l'assunzione).
 
 **Tre varietà, non due (parlato / scritto / digitato).** Il "non controllato" è in realtà una
 varietà a sé — il **digitato** (*e-taliano*: chat, social, messaggistica) — con norme proprie, non

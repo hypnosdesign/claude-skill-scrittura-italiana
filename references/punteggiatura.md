@@ -203,6 +203,8 @@ maiuscola dopo di sé.
   (editoria, saggistica) per citazioni e discorso diretto.
 - **Alte / doppie / "inglesi" `" "`:** comuni nel web, giornali, testi digitali — e la
   scelta giusta nel **testo non controllato** (non essendo i caporali sulla tastiera).
+  Nella forma curva `“ ”` sono anche uno stile d'editoria diffuso: se il testo le usa
+  **uniformi**, è una scelta di collana, non un errore da convertire.
 - **Apici / semplici `' '`:** per citazioni dentro citazioni o per i significati.
 
 > ⚠ Nel web/social/chat non pretendere i caporali: le virgolette dritte (o l'assenza di

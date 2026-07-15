@@ -1,6 +1,6 @@
 # FAQ
 
-![Version](https://img.shields.io/badge/version-2.13.1-blue.svg)
+![Version](https://img.shields.io/badge/version-2.14.0-blue.svg)
 
 Domande ricorrenti su *scrittura-italiana*. Per esempi concreti vedi **[ESEMPI.md](ESEMPI.md)**.
 

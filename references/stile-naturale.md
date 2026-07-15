@@ -49,6 +49,10 @@ Per dare voce **a un testo che ne ha una** (o di cui hai un campione):
 > traduzione), l'obiettivo è **prosa naturale e asciutta**, non una finta interiorità. Non
 > attribuire opinioni, esperienze in prima persona o esitazioni decorative a chi non le ha
 > espresse — è il gemello della *concretezza finta* (§70) e cade sotto la guardia fattuale.
+> Per la stessa ragione, **mai aggiungere refusi, sgrammaticature o esitazioni deliberate**
+> per «sembrare più umani» o aggirare presunti detector: l'imperfezione simulata è slop. Se
+> l'utente lo chiede, declina e spiega: la naturalezza si ottiene con voce, ritmo e misura,
+> non con errori finti.
 
 **Calibrazione voce:** se l'utente fornisce un campione del proprio scrivere, **profilalo**
 prima di replicarlo, lungo dimensioni concrete:
@@ -242,14 +246,22 @@ priorità è la fedeltà semantica, non il numero di tic rimossi.
 **Workflow di audit per testi lunghi** (saggi, tesi, libri). Procedi a **3 giri minimi + 1
 di pulizia**, in quest'ordine:
 
-1. **Giro 1 — letterale:** *«non è X, ma è Y»* (`non è … ma è`). La forma "da manuale".
-2. **Giro 2 — inversione:** *«X, non Y»* (`, non `). Pattern (a). È quello che sfugge
-   perché *sembra* già una correzione.
-3. **Giro 3 — due punti:** *«non è X: è Y»* (`non è … :`). Pattern (d). La variante più
-   frequente nei testi accademici accurati.
-4. **Giro 4 (pulizia) — plurali, tempi, *e non*:** *non sono*, *non viene*, *non hanno*,
-   *non era*, *non saranno*, *non si tratta di*; e *«è X, e non Y»* (`, e non`). Pattern
-   (b) ed (e).
+> **Finder, non verdetti.** I pattern qui sotto sono espressioni regolari da usare come
+> *cercatori di candidati* (`grep -E`, ricerca nel file): per costruzione trovano anche
+> falsi positivi, e ogni hit va giudicato col test di implicazione — **mai** sostituire in
+> automatico. Attenzione al falso «pulito»: una ricerca *letterale* della forma «non è … ma
+> è» (coi puntini!) trova zero occorrenze; non dichiarare pulito un testo sulla base di una
+> ricerca sbagliata.
+
+1. **Giro 1 — letterale:** `non è [^.;:!?]{0,60}, ma` — la forma "da manuale", *«non è X,
+   ma (è) Y»*.
+2. **Giro 2 — inversione:** `, (e )?non [^.;:!?]{3,45}[.;:]` — pattern (a), *«X, non Y»*.
+   È quello che sfugge perché *sembra* già una correzione (molti falsi positivi: giudicare
+   ogni hit).
+3. **Giro 3 — due punti:** `non è [^.;:!?]{0,60}: è` — pattern (d), *«non è X: è Y»*. La
+   variante più frequente nei testi accademici accurati.
+4. **Giro 4 (pulizia) — plurali, tempi, *e non*:** `non (sono|viene|vengono|ha|hanno|era|erano|sarà|saranno|si tratta)`
+   e `, e non ` — pattern (b) ed (e).
 
 **Copertura attesa:** i tre giri minimi catturano la grande maggioranza delle occorrenze
 in un testo accademico medio; il quarto giro chiude la coda (plurali, tempi diversi, *e
@@ -359,8 +371,12 @@ molti nessi impliciti; evita i connettori troppo formali fuori registro.
 
 **21. Trattino lungo (em dash) — tell DOPPIO in italiano.** La tipografia italiana usa
 poco la lineetta lunga: si appoggia su virgole, due punti, parentesi, punto e virgola.
-Tanti `—` (o un mix incoerente di `-`, `–`, `—`) = tradotto o AI. → **Regola:** di default
-sostituisci ogni em dash con virgola, due punti, parentesi o punto.
+Tanti `—` (o un mix incoerente di `-`, `–`, `—`) = tradotto o AI. → **Regola: il tell è la
+raffica e il mix, non il segno in sé.** Una lineetta spaziata isolata, o una coppia a
+inciso, è italiano legittimo nel testo controllato (vedi `punteggiatura.md` → Lineette):
+non cassarla d'ufficio. Sostituisci con virgola, due punti, parentesi o punto quando le
+lineette *punteggiano* il testo — più d'una a paragrafo, o miste ai trattini. Nel testo non
+controllato le lineette non si introducono comunque.
 
 **22. Grassetto a tappeto.** Evidenziazioni meccaniche di definizioni e sigle. → Togli.
 
@@ -377,9 +393,13 @@ prima parola e nomi propri). ✗ `Negoziazioni Strategiche E Partenariati` →
 
 **25. Emoji** decorative su titoli/bullet → fuori posto in italiano formale/saggistico.
 
-**26. Virgolette curve all'inglese.** L'AI infila `" "` e `' '` curve, spesso miste a
-dritte. → Editoria/saggistica: **caporali « »**. Web/divulgazione: **virgolette dritte " "**
-uniformi. Mai mescolare. (Vedi `punteggiatura.md` → Virgolette.)
+**26. Virgolette: il tell è il mix, non lo stile.** L'AI mescola curve `" "`, dritte e
+caporali nello stesso testo, o infila le curve "da word processor" in un testo altrimenti
+da tastiera. → **Uniformità prima di tutto.** Nel testo controllato i caporali « » sono la
+scelta d'elezione *quando sei tu a normalizzare*; ma le alte curve **uniformi** sono uno
+stile editoriale legittimo (molte collane le usano): non "correggerle" d'ufficio — segui lo
+stile della testata o dell'autore. Nel web/da tastiera: dritte " " uniformi. **Mai
+mescolare.** (Vedi `punteggiatura.md` → Virgolette.)
 
 ---
 
@@ -828,6 +848,12 @@ Non trasformare l'audit in metadiscorso nell'output. Verifica che il testo:
 - rispetti le convenzioni tipografiche (vedi `punteggiatura.md`);
 - non abbia più di un avverbio in *-mente* né più di un gerundio in coda per paragrafo;
 - non abbia periodi sopra 35-40 parole senza ragione.
+
+**Verifica di conservazione (la domanda gemella).** Prima di consegnare, confronta
+internamente output e input su cinque voci: **entità e numeri** (nomi, date, quantità, fonti);
+**negazioni informative** (polarità, §9); **modalità** (*può/sembra/è*, §73); **condizioni ed
+eccezioni** (limiti, ambiti); **citazioni** (verbatim). Se una voce è in dubbio, **ripristina
+l'originale**: la fedeltà vince sulla pulizia (contratto di conservazione, SKILL.md).
 
 **Checklist positiva (non basta togliere — controlla ciò che il testo consente), *dove il genere
 lo prevede*:** **specificità verificabile** al posto della vaghezza; una **voce reale** quando
