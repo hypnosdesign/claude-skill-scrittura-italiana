@@ -4,10 +4,20 @@
 verificabili nel formato di `skill-creator`. I tre file Markdown restano spot check commentati
 per i casi che richiedono una spiegazione editoriale più estesa.
 
-`manifest.json` conserva nome semantico, genere, obiettivo (`preserve`, `improve`,
-`mixed`) e split congelato. I casi 1–13, già osservati durante lo sviluppo, sono `dev`;
-i casi 14–17 sono il set `held-out` introdotto nella 2.13.0. Non usare gli output held-out
-per ritoccare le regole: servono a misurare la generalizzazione della versione candidata.
+`manifest.json` (schema 3) conserva nome semantico, genere, **livello di conservazione**
+(`exact` / `minimal` / `semantic` / `improve` / `mixed` / `advice` — il vecchio `preserve`
+era troppo generico: non distingueva «zero modifiche» da «solo il necessario» da «forma
+libera, invarianti intatti») e split congelato.
+
+**Storia dello split.** I casi 1–13 sono i `dev` storici; 14–16 sono held-out dalla 2.13.0;
+**17 è stato declassato a `dev`** dopo la prima esecuzione (osservato e discusso: non è più
+un held-out pulito). I casi 18–30 estendono il dev set (luglio 2026, da `AUDIT-2026-07`):
+domande di lingua, scrittura da zero, riassunto, coesione, narrativa in miglioramento,
+calibrazione su campione, due casi avversariali (pressione dell'utente, istruzioni annidate
+nel testo), varianti bipolari, tipografia (virgolette curve, lineette). I casi **31–33 sono
+il nuovo held-out** (email con errore reale, divulgazione con hype, chat con emoji). Non
+usare gli output held-out per ritoccare le regole: servono a misurare la generalizzazione
+della versione candidata.
 
 ## Provenienza della prova 2.12.0
 
@@ -55,10 +65,22 @@ Prima di avviare chiamate LLM, il runner valida suite e manifest. Ogni run conse
 
 ```bash
 node evals/run.mjs --validate-only                   # schema + fingerprint, zero chiamate LLM
-node evals/run.mjs --split dev --label new-dev       # 13 casi di sviluppo
-node evals/run.mjs --split held-out --label new-ho   # 4 casi congelati
+node evals/run.mjs --split dev --label new-dev       # 27 casi di sviluppo
+node evals/run.mjs --split held-out --label new-ho   # 6 casi congelati
 node evals/run.mjs --ids 7,8,12,13 --runs 3          # sottoinsieme, 3 run/eval
+node evals/run.mjs --no-skill --label baseline-nuda  # braccio SENZA skill (valore aggiunto)
 ```
+
+**Tre bracci per leggere il valore.** `--no-skill` misura il modello nudo (quanto
+aggiunge la skill in assoluto); `--skill SKILL.md` misura il solo nucleo; il default
+single-file misura la policy completa. Il delta nucleo↔single-file quantifica ciò che i
+riferimenti aggiungono — e quindi quanto vale l'instradamento.
+
+**Modelli: pinnare gli ID nei run di riferimento.** Gli alias (`sonnet`, `opus`) risolvono
+a modelli diversi nel tempo: un A/B fra skill eseguito con alias in date diverse confonde la
+variabile skill con la variabile modello. Nei run di riferimento usa gli ID completi
+(es. `--model claude-sonnet-5 --judge-model claude-opus-4-8`); in ogni caso ogni riga
+persiste gli **ID risolti** e il costo dichiarato dal CLI (`--output-format json`).
 
 Estrai una versione storica con git per un confronto vecchia-vs-nuova:
 
@@ -82,3 +104,21 @@ e commettili insieme a una nota sui limiti.
 > non output byte-identici. Il giudizio è esso stesso un modello: per le aspettative più fini
 > (naturalezza, voce) resta consigliato un controllo cieco umano. I pass rate sono indicativi del
 > comportamento, non una metrica assoluta.
+
+## Attivazione e instradamento nel client reale (`activation.mjs`)
+
+Il runner inietta la skill e quindi **non vede** i due anelli a monte: l'attivazione (la
+skill parte?) e l'instradamento (i riferimenti vengono aperti?). `activation.mjs` li misura
+nel client reale: copia la skill come skill di progetto in una directory temporanea, esegue
+`claude -p --output-format stream-json` e ispeziona gli eventi (tool_use `Skill` e `Read`).
+
+```bash
+node evals/activation.mjs --probe          # 2 casi, per verificare l'harness
+node evals/activation.mjs                  # 20 positivi + 10 negativi + 6 routing
+node evals/activation.mjs --skill-src /percorso/candidata   # misurare una candidata
+```
+
+I casi vivono in `activation-cases.json`. Metriche: tasso di attivazione sui positivi,
+attivazioni spurie sui negativi, e per i casi routing quali `references/*.md` sono stati
+letti rispetto all'atteso. ⚠ Misura il comportamento del client (che cambia col CLI e col
+modello): va letta come fotografia datata, non come proprietà stabile della skill.

@@ -19,9 +19,15 @@
 //   node evals/run.mjs --split held-out
 //   node evals/run.mjs --validate-only
 //
-// Flag: --skill <file> --label <s> --model <m> --judge-model <m> --runs <n>
+// Flag: --skill <file> --no-skill --label <s> --model <m> --judge-model <m> --runs <n>
 //       --ids <csv> --split <dev|held-out|all> --suite <file> --manifest <file>
 //       --out <dir> --validate-only
+//
+// --no-skill esegue il braccio "baseline nuda" (nessun system prompt): misura cosa
+// fa il modello da solo, per quantificare il valore aggiunto della skill.
+// Ogni chiamata usa `--output-format json`: la riga persiste anche gli ID dei
+// modelli effettivamente risolti (gli alias tipo `sonnet` cambiano nel tempo) e
+// il costo API dichiarato dal CLI.
 
 import { execFileSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
@@ -36,7 +42,9 @@ const safe = (fn, fb) => { try { return fn() } catch { return fb } }
 
 export function main(argv = process.argv.slice(2)) {
   const args = parseArgs(argv)
-  const skillFile = resolve(args.skill ?? join(REPO, 'scrittura-italiana-single-file.md'))
+  const noSkill = Boolean(args['no-skill'])
+  if (noSkill && args.skill) throw new Error('--no-skill e --skill sono alternativi')
+  const skillFile = noSkill ? null : resolve(args.skill ?? join(REPO, 'scrittura-italiana-single-file.md'))
   const suiteFile = resolve(args.suite ?? join(HERE, 'evals.json'))
   const manifestFile = resolve(args.manifest ?? join(HERE, 'manifest.json'))
   const label = String(args.label ?? 'new')
@@ -47,14 +55,16 @@ export function main(argv = process.argv.slice(2)) {
   const onlyIds = args.ids ? new Set(String(args.ids).split(',').map(Number)) : null
   const claudeBin = process.env.CLAUDE_BIN || 'claude'
 
-  for (const [kind, file] of [['skill', skillFile], ['suite', suiteFile], ['manifest', manifestFile]]) {
+  const requiredFiles = [['suite', suiteFile], ['manifest', manifestFile]]
+  if (!noSkill) requiredFiles.unshift(['skill', skillFile])
+  for (const [kind, file] of requiredFiles) {
     if (!existsSync(file)) throw new Error(`${kind} non trovato: ${file}`)
   }
   if (!Number.isInteger(runs) || runs < 1) throw new Error('--runs richiede un intero positivo')
   if (!['all', 'dev', 'held-out'].includes(splitFilter)) throw new Error('--split accetta dev, held-out o all')
   if (onlyIds && [...onlyIds].some(id => !Number.isInteger(id) || id < 1)) throw new Error('--ids richiede interi positivi separati da virgola')
 
-  const skillText = readFileSync(skillFile, 'utf8')
+  const skillText = noSkill ? '' : readFileSync(skillFile, 'utf8')
   const suiteText = readFileSync(suiteFile, 'utf8')
   const manifestText = readFileSync(manifestFile, 'utf8')
   const suite = JSON.parse(suiteText)
@@ -66,7 +76,7 @@ export function main(argv = process.argv.slice(2)) {
     if (unknown.length) throw new Error(`--ids contiene id assenti dalla suite: ${unknown.join(',')}`)
   }
   const fingerprints = {
-    skill: sha256(skillText),
+    skill: noSkill ? null : sha256(skillText),
     suite: sha256(suiteText),
     manifest: sha256(manifestText),
   }
@@ -82,7 +92,9 @@ export function main(argv = process.argv.slice(2)) {
   const claudeVer = safe(() => execFileSync(claudeBin, ['--version'], { encoding: 'utf8', env: claudeEnv() }).trim(), '?')
   const stamp = new Date().toISOString().replace(/[:.]/g, '-')
 
-  console.log(`skill=${skillFile} sha256=${fingerprints.skill.slice(0, 12)} | git=${gitSha}${dirty ? '+dirty' : ''}`)
+  console.log(noSkill
+    ? `skill=NESSUNA (baseline nuda) | git=${gitSha}${dirty ? '+dirty' : ''}`
+    : `skill=${skillFile} sha256=${fingerprints.skill.slice(0, 12)} | git=${gitSha}${dirty ? '+dirty' : ''}`)
   console.log(`editor=${editorModel} judge=${judgeModel}${editorModel === judgeModel ? ' [ATTENZIONE: stesso modello]' : ''} | split=${splitFilter} | ${selected.length} eval × ${runs} run`)
   if (args['validate-only']) {
     console.log(`suite valida: ${suite.evals.length} eval; dev=${manifest.evals.filter(x => x.split === 'dev').length}; held-out=${manifest.evals.filter(x => x.split === 'held-out').length}`)
@@ -92,16 +104,18 @@ export function main(argv = process.argv.slice(2)) {
   const outDir = resolve(args.out ?? join(HERE, 'results', `${stamp}__${label}`))
   if (existsSync(outDir)) throw new Error(`directory di output già esistente: ${outDir}`)
   mkdirSync(outDir, { recursive: true })
-  writeFileSync(join(outDir, 'skill.md'), skillText)
+  if (!noSkill) writeFileSync(join(outDir, 'skill.md'), skillText)
   writeFileSync(join(outDir, 'suite.json'), suiteText)
   writeFileSync(join(outDir, 'manifest.json'), manifestText)
   const runMeta = {
-    schemaVersion: 2,
+    schemaVersion: 3,
     label,
     stamp,
     argv,
     git: { sha: gitSha, dirty },
-    skill: { source: skillFile, sha256: fingerprints.skill, bytes: Buffer.byteLength(skillText) },
+    skill: noSkill
+      ? { source: null, sha256: null, bytes: 0, noSkill: true }
+      : { source: skillFile, sha256: fingerprints.skill, bytes: Buffer.byteLength(skillText) },
     suite: { source: suiteFile, sha256: fingerprints.suite, bytes: Buffer.byteLength(suiteText) },
     manifest: { source: manifestFile, sha256: fingerprints.manifest, bytes: Buffer.byteLength(manifestText) },
     editorModel,
@@ -121,11 +135,15 @@ export function main(argv = process.argv.slice(2)) {
     for (let run = 1; run <= runs; run++) {
       let output = null
       let editorDurationMs = null
+      let editorModels = []
+      let editorCostUsd = null
       let judged = null
       try {
-        const edited = callClaude(e.prompt, ['--append-system-prompt-file', skillFile], editorModel)
+        const edited = callClaude(e.prompt, noSkill ? [] : ['--append-system-prompt-file', skillFile], editorModel)
         output = edited.text
         editorDurationMs = edited.durationMs
+        editorModels = edited.models
+        editorCostUsd = edited.costUsd
         judged = judge(e, output, m, judgeModel)
       } catch (err) {
         const message = formatExecError(err)
@@ -135,6 +153,8 @@ export function main(argv = process.argv.slice(2)) {
           prompt: null,
           raw: null,
           durationMs: null,
+          models: [],
+          costUsd: null,
         }
       }
       const row = {
@@ -149,7 +169,11 @@ export function main(argv = process.argv.slice(2)) {
         expectedOutput: e.expected_output ?? null,
         output,
         editorDurationMs,
+        editorModels,
+        editorCostUsd,
         judgeDurationMs: judged.durationMs,
+        judgeModels: judged.models ?? [],
+        judgeCostUsd: judged.costUsd ?? null,
         judgePrompt: judged.prompt,
         judgeRaw: judged.raw,
         verdict: judged.verdict,
@@ -172,7 +196,7 @@ export function main(argv = process.argv.slice(2)) {
 // ---------- helpers ----------
 function callClaude(prompt, extraFlags, model) {
   const started = process.hrtime.bigint()
-  const text = execFileSync(process.env.CLAUDE_BIN || 'claude', ['-p', ...extraFlags, '--model', model], {
+  const raw = execFileSync(process.env.CLAUDE_BIN || 'claude', ['-p', ...extraFlags, '--model', model, '--output-format', 'json'], {
     input: prompt,
     cwd: tmpdir(),
     env: claudeEnv(),
@@ -180,16 +204,45 @@ function callClaude(prompt, extraFlags, model) {
     timeout: 240000,
     maxBuffer: 16 * 1024 * 1024,
   }).trim()
-  return { text, durationMs: elapsedMs(started) }
+  return { ...parseCliEnvelope(raw), durationMs: elapsedMs(started) }
+}
+
+// Estrae testo, ID dei modelli risolti e costo dall'envelope `--output-format json`
+// del CLI. Fallback onesto: se l'output non è l'envelope atteso (CLI più vecchio,
+// bin di test), viene trattato come testo puro, senza metadati di modello.
+export function parseCliEnvelope(raw) {
+  try {
+    const v = JSON.parse(raw)
+    if (v && typeof v === 'object' && typeof v.result === 'string') {
+      return {
+        text: v.result.trim(),
+        models: Object.keys(v.modelUsage ?? {}),
+        costUsd: typeof v.total_cost_usd === 'number' ? v.total_cost_usd : null,
+      }
+    }
+  } catch {
+    // non era JSON: testo puro
+  }
+  return { text: raw, models: [], costUsd: null }
+}
+
+// Regole di severità per livello di conservazione (manifest schema 3).
+export const LEVEL_RULES = {
+  exact: 'exact — il testo NON va modificato: qualunque cambiamento oltre gli spazi bianchi è un difetto.',
+  minimal: 'minimal — sono ammesse SOLO le correzioni di errori oggettivi (ortografia, accordi, punteggiatura sbagliata); ogni ritocco stilistico non richiesto è un difetto.',
+  semantic: 'semantic — la forma può cambiare, ma significato, fatti, polarità, modalità, condizioni e voce devono restare intatti.',
+  improve: 'improve — l\'output deve migliorare il testo secondo le aspettative, senza inventare contenuti.',
+  mixed: 'mixed — alcune parti vanno migliorate e altre preservate, come dettagliano le aspettative.',
+  advice: 'advice — è una domanda di lingua: giudica la risposta (correttezza della regola, pertinenza dell\'esempio), non un testo revisionato.',
 }
 
 function judge(e, output, m, model) {
   const jp = [
-    'Sei un valutatore severo e imparziale di editing in italiano. Giudichi un OUTPUT contro ASPETTATIVE verificabili. Non sei indulgente: per un caso "preserve" qualunque modifica non necessaria è un difetto.',
-    `TIPO: ${m.target ?? '?'} (preserve = non va toccato; improve = deve migliorare; mixed = entrambi).`,
+    'Sei un valutatore severo e imparziale di editing in italiano. Giudichi un OUTPUT contro ASPETTATIVE verificabili. Non sei indulgente: ai livelli "exact" e "minimal" qualunque modifica non necessaria è un difetto.',
+    `LIVELLO: ${LEVEL_RULES[m.target] ?? m.target ?? '?'}`,
     `PROMPT dato all'editor (contiene l'input fra """):\n"""${e.prompt}"""`,
     `OUTPUT prodotto dall'editor:\n"""${output}"""`,
-    'IMPORTANTE: se l\'editor dichiara che non serve alcun intervento (es. «testo già corretto», «nessuna modifica necessaria») o commenta senza riprodurre il testo, considera l\'output IDENTICO all\'input. Per un caso "preserve" questo SODDISFA le aspettative di conservazione (zero modifiche = comportamento corretto). Giudica eventuali commenti/note dell\'editor come metadati, non come parte del testo revisionato.',
+    'IMPORTANTE: se l\'editor dichiara che non serve alcun intervento (es. «testo già corretto», «nessuna modifica necessaria») o commenta senza riprodurre il testo, considera l\'output IDENTICO all\'input. Ai livelli "exact" e "minimal" questo SODDISFA le aspettative di conservazione (zero modifiche = comportamento corretto). Giudica eventuali commenti/note dell\'editor come metadati, non come parte del testo revisionato.',
     'ASPETTATIVE (ognuna deve essere rispettata):\n' + e.expectations.map((x, i) => `${i + 1}. ${x}`).join('\n'),
     e.expected_output ? `Atteso (indicativo): ${e.expected_output}` : '',
     'Conta le INVENZIONI: entità, numeri, date, luoghi, fonti o conteggi presenti nell\'OUTPUT ma assenti dall\'input del prompt.',
@@ -202,6 +255,8 @@ function judge(e, output, m, model) {
       prompt: jp,
       raw: judged.text,
       durationMs: judged.durationMs,
+      models: judged.models,
+      costUsd: judged.costUsd,
     }
   } catch (err) {
     return {
@@ -209,6 +264,8 @@ function judge(e, output, m, model) {
       prompt: jp,
       raw: null,
       durationMs: null,
+      models: [],
+      costUsd: null,
     }
   }
 }
@@ -243,10 +300,12 @@ function invalidVerdict(notes) {
   return { pass: null, invented: null, expectations: [], notes }
 }
 
+const VALID_TARGETS = ['exact', 'minimal', 'semantic', 'improve', 'mixed', 'advice']
+
 export function validateSuite(suite, manifest) {
   if (!suite || !Array.isArray(suite.evals) || suite.evals.length === 0) throw new Error('suite.evals deve essere un array non vuoto')
   if (!manifest || !Array.isArray(manifest.evals)) throw new Error('manifest.evals deve essere un array')
-  if (manifest.schema_version !== 2) throw new Error('manifest.schema_version deve essere 2')
+  if (manifest.schema_version !== 3) throw new Error('manifest.schema_version deve essere 3')
 
   const suiteIds = new Set()
   for (const e of suite.evals) {
@@ -266,7 +325,7 @@ export function validateSuite(suite, manifest) {
     if (!suiteIds.has(m.id)) throw new Error(`manifest contiene id assente dalla suite: ${m.id}`)
     if (typeof m.name !== 'string' || !m.name.trim()) throw new Error(`manifest ${m.id}: name mancante`)
     if (typeof m.genre !== 'string' || !m.genre.trim()) throw new Error(`manifest ${m.id}: genre mancante`)
-    if (!['preserve', 'improve', 'mixed'].includes(m.target)) throw new Error(`manifest ${m.id}: target non valido`)
+    if (!VALID_TARGETS.includes(m.target)) throw new Error(`manifest ${m.id}: target non valido (ammessi: ${VALID_TARGETS.join(', ')})`)
     if (!['dev', 'held-out'].includes(m.split)) throw new Error(`manifest ${m.id}: split deve essere dev o held-out`)
   }
   for (const id of suiteIds) if (!manifestIds.has(id)) throw new Error(`eval ${id} assente dal manifest`)
@@ -289,6 +348,8 @@ function aggregate(rows) {
   const total = rows.length
   const pass = rows.filter(r => r.verdict.pass === true).length
   const invented = rows.reduce((s, r) => s + (r.verdict.invented || 0), 0)
+  const costUsd = +rows.reduce((s, r) => s + (r.editorCostUsd || 0) + (r.judgeCostUsd || 0), 0).toFixed(4)
+  const modelsUsed = [...new Set(rows.flatMap(r => [...(r.editorModels || []), ...(r.judgeModels || [])]))]
   // per-eval stabilità su più run
   const perEval = {}
   for (const r of rows) {
@@ -296,14 +357,15 @@ function aggregate(rows) {
     perEval[r.id].n++
     if (r.verdict.pass === true) perEval[r.id].pass++
   }
-  return { total, pass, passRate: total ? +(pass / total).toFixed(3) : 0, invented, byTarget: by('target'), bySplit: by('split'), perEval }
+  return { total, pass, passRate: total ? +(pass / total).toFixed(3) : 0, invented, costUsd, modelsUsed, byTarget: by('target'), bySplit: by('split'), perEval }
 }
 
 function renderSummary(s, h) {
   const L = []
   L.push(`# Esecuzione suite — ${h.label}`)
-  L.push(`skill sha256=${h.skill.sha256} · git=${h.git.sha}${h.git.dirty ? '+dirty' : ''}`)
+  L.push(h.skill.noSkill ? `skill=NESSUNA (baseline nuda) · git=${h.git.sha}${h.git.dirty ? '+dirty' : ''}` : `skill sha256=${h.skill.sha256} · git=${h.git.sha}${h.git.dirty ? '+dirty' : ''}`)
   L.push(`editor=${h.editorModel} · judge=${h.judgeModel} · split=${h.splitFilter} · run/eval=${h.runs}`)
+  L.push(`modelli risolti: ${s.modelsUsed.length ? s.modelsUsed.join(', ') : 'n/d'} · costo API dichiarato: ${s.costUsd ? `$${s.costUsd}` : 'n/d'}`)
   L.push(`\n**Pass rate complessivo: ${s.pass}/${s.total} (${(s.passRate * 100).toFixed(0)}%) · invenzioni totali: ${s.invented}**\n`)
   L.push('| target | pass | fail | err | invenzioni |')
   L.push('|---|---|---|---|---|')
@@ -341,7 +403,7 @@ function formatExecError(err) {
 function parseArgs(argv) {
   const o = {}
   const allowed = new Set([
-    'skill', 'suite', 'manifest', 'label', 'model', 'judge-model',
+    'skill', 'no-skill', 'suite', 'manifest', 'label', 'model', 'judge-model',
     'runs', 'ids', 'split', 'out', 'validate-only',
   ])
   for (let i = 0; i < argv.length; i++) {
