@@ -18,7 +18,7 @@
 
 [![Sito](https://img.shields.io/badge/sito-scrittura--italiana-9c2a1f.svg)](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.13.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.13.1-blue.svg)
 
 🔗 **[Sito del progetto →](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)**
 
@@ -245,12 +245,13 @@ Questa skill è un'opera derivata e cita le sue fonti:
 - **Grammatica, sintassi, coesione, argomentazione, divulgazione, narrativa e revisione**
   (dalla v2.4.0) — distillati da una libreria di manuali italiani: L. Serianni (*Italiano*, 1997;
   *L'italiano: parlare scrivere digitare*, 2019; *Leggere, scrivere, argomentare*, 2015),
-  M. Dardano e P. Trifone (*La lingua italiana*, 1995), A. Perini (*Grammatica italiana per tutti*,
-  2018), E. Rigotti (*Il filo del pensiero*, 2020), G. Barattelli (*Scrivere bene*, 2015), G. Pontiggia
-  (*Per scrivere bene imparate a nuotare*, 2020), C. Birattari (2011), D. Gouthier (*Scrivere di
-  scienza*, 2019), F. Massai (*L'idea narrativa*, 2015), Gotham Writers' Workshop (*Lezioni di
+  M. Dardano e P. Trifone (*Grammatica italiana. Con nozioni di linguistica*, 1995), E. Perini
+  (*Grammatica italiana per tutti*, 2016), F. Rigotti (*Il filo del pensiero*, 2002), B. Barattelli
+  (*Scrivere bene*, 2015), G. Pontiggia
+  (*Per scrivere bene imparate a nuotare*, 2020), M. Birattari (2011), D. Gouthier (*Scrivere di
+  scienza*, 2019), M. Massai (*L'idea narrativa*, 2015), Gotham Writers' Workshop (*Lezioni di
   scrittura creativa*, 2014), R. Carver (*Il mestiere di scrivere*), Martino–Alfieri (*Scrivere
-  ganzo*, 2015), A. Julita (*Scrivere con l'AI*, 2025).
+  ganzo*, 2015), F. Julita (*Scrivere con l'AI*, 2025).
 - **Mosse del divulgatore e calibrazione di registro** (dalla v2.9.0) — distillati non da
   manuali ma da un *corpus di prosa italiana nativa*: M. Ferrari (*Le piante non sono animali
   verdi*), G. Vallortigara (*Pensieri della mosca con la testa storta*), L. Floridi (*Pensare
@@ -323,7 +324,7 @@ common-mistakes layer rewrites rules from M. Trinci, *Le basi proprio della gram
 C. Giunta, *Come non scrivere* (UTET, 2018) and the classics it points to (Calvino, Orwell,
 Savinio). Since v2.4.0 the grammar, syntax, cohesion, argumentation, explanatory-writing,
 narrative and revision layers are distilled from a library of Italian writing manuals (Serianni,
-Rigotti, Barattelli, Pontiggia, Birattari, Gouthier, Massai, Martino–Alfieri, and A. Julita's
+Rigotti, Barattelli, Pontiggia, Birattari, Gouthier, Massai, Martino–Alfieri, and F. Julita's
 *Scrivere con l'AI*, 2025). These are facts of usage and classical-rhetoric concepts, not
 copyrightable; the skill's wording and examples are original, not a reproduction. The style layer
 adapts

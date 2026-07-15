@@ -4,7 +4,7 @@ Riferimento per chi scrive o revisiona **testi narrativi** (racconto, romanzo, s
 un trattato di narratologia: raccoglie i nodi più utili a *valutare un'idea prima di scriverla*
 e a non spegnerla in revisione. Complementa `retorica-efficacia.md` (*dispositio*, che è
 architettura del discorso, non della storia) e `stile-naturale.md` (concretezza, voce).
-Distillato da F. Massai, *L'idea narrativa* (2015); esempi originali.
+Distillato da M. Massai, *L'idea narrativa* (2015); esempi originali.
 
 > Per il resto la narrativa segue le stesse virtù del resto della skill: concretezza
 > (`stile-naturale.md` §42, *individuazione*), voce, ritmo variato, *less is more*. Qui ci sono

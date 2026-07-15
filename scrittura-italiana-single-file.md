@@ -108,11 +108,11 @@ livello come criterio interno: dichiaralo soltanto se chiarisce una scelta o se 
 > **⚠ Default conservativo per il testo funzionale.** Documentazione tecnica, API, codice, dati
 > strutturati, testo legale, procedure, riferimenti — il testo dove conta che *funzioni e resti
 > stabile* — vanno trattati al livello **più basso**, anche se ti chiedono un «line edit»: correggi
-> gli errori oggettivi e **fèrmati lì**. Non riformulare frasi già corrette, non aggiungere
+> gli errori oggettivi e **fermati lì**. Non riformulare frasi già corrette, non aggiungere
 > backtick o formattazione, non «migliorare» la resa (*«è in JSON e contiene»* → *«JSON contiene»*
 > è churn, non un fix). In questi generi la **letteralità e la stabilità valgono più
 > dell'eleganza**: se il testo già funziona e si capisce, un ritocco non richiesto è un difetto,
-> non un servizio. Interveni di più solo se l'utente lo chiede esplicitamente. (Vedi anche §67 per
+> non un servizio. Intervieni di più solo se l'utente lo chiede esplicitamente. (Vedi anche §67 per
 > gli elenchi legittimi nella documentazione.)
 
 ## Workflow — CORREGGERE un testo
@@ -156,7 +156,7 @@ Applica le passate nell'ordine delle virtù, **dalla struttura alla pelle**:
    testo?"*, individua i tell residui e rivedi. Non riversare l'audit nell'output salvo richiesta.
    ⚠ Per i testi **argomentativi/persuasivi** fai anche un **esame critico** esplicito
    (incoerenze, salti logici, affermazioni non dimostrate): l'AI tende a *confermare* la tesi di chi
-   scrive, non a contestarla — vai cercato il punto debole, non aspettarlo.
+   scrive, non a contestarla — va cercato il punto debole, non aspettato.
 
 Mantieni sempre **significato e registro**. Se l'utente fornisce un campione del proprio
 stile, calibrati su quello invece di appiattire a un italiano neutro.
@@ -323,15 +323,16 @@ corretto** (e, se istruttivo, l'errore da evitare), citando la scheda pertinente
   *Politics and the English Language* (1946); A. Savinio, *Nuova enciclopedia*.
 - Grammatica, sintassi e proprietà di lingua: L. Serianni, *Italiano* (Garzanti, 1997) e
   *L'italiano: parlare, scrivere, digitare* (con G. Antonelli, Treccani, 2019); M. Dardano e P.
-  Trifone, *La lingua italiana* (Zanichelli, 1995); A. Perini, *Grammatica italiana per tutti*
-  (2018). Argomentazione,
-  coesione e riassunto: L. Serianni, *Leggere, scrivere, argomentare* (Laterza, 2015); E. Rigotti,
-  *Il filo del pensiero* (2020); G. Barattelli, *Scrivere bene* (2015). Chiarezza, stile e
-  revisione: G. Pontiggia, *Per scrivere bene imparate a nuotare* (2020); C. Birattari, *È più
+  Trifone, *Grammatica italiana. Con nozioni di linguistica* (Zanichelli, 1995); E. Perini,
+  *Grammatica italiana per tutti* (Giunti, 2016). Argomentazione,
+  coesione e riassunto: L. Serianni, *Leggere, scrivere, argomentare* (Laterza, 2015); F. Rigotti,
+  *Il filo del pensiero* (il Mulino, 2002; Orthotes, 2021); B. Barattelli, *Scrivere bene*
+  (il Mulino, 2015). Chiarezza, stile e
+  revisione: G. Pontiggia, *Per scrivere bene imparate a nuotare* (2020); M. Birattari, *È più
   facile scrivere bene che scrivere male* (2011). Divulgazione: D. Gouthier, *Scrivere di scienza*
-  (Codice, 2019). Narrativa: F. Massai, *L'idea narrativa* (2015); Gotham Writers' Workshop,
-  *Lezioni di scrittura creativa* (2014); R. Carver, *Il mestiere di scrivere* (Einaudi). Copy/web: F. Martino e A.
-  Alfieri, *Scrivere ganzo* (2015). Scrivere con l'AI e umanizzazione: A. Julita, *Scrivere con
+  (Codice, 2019). Narrativa: M. Massai, *L'idea narrativa* (2015); Gotham Writers' Workshop,
+  *Lezioni di scrittura creativa* (2014); R. Carver, *Il mestiere di scrivere* (Einaudi). Copy/web: M. Martino e M.
+  Alfieri, *Scrivere ganzo* (2015). Scrivere con l'AI e umanizzazione: F. Julita, *Scrivere con
   l'AI* (Hoepli, 2025).
 - Concetti e regole sono patrimonio comune; testi ed esempi della skill sono rielaborazioni
   originali.
@@ -691,7 +692,7 @@ Riferimento di **correttezza a livello di parola** (virtù *puritas*): accenti, 
 apostrofo, ortografia, plurali, pronomi, preposizioni, **morfosintassi** (verbo, articolo,
 comparativi, costrutti marcati). Complementa **Parte A** (che copre i segni). Regole
 sintetizzate da M. Trinci, *Le basi proprio della grammatica* (Bompiani, 2019) e dalle grammatiche
-di riferimento (Serianni; Dardano-Trifone, *La lingua italiana*; Perini, *Grammatica italiana per
+di riferimento (Serianni; Dardano-Trifone, *Grammatica italiana*; Perini, *Grammatica italiana per
 tutti*); definizioni ed esempi originali. `✓` = corretto, `✗` = da evitare.
 
 **Mappa del file:**
@@ -1797,8 +1798,8 @@ successiva (**coesione**), come tutto il testo resta una cosa sola (**coerenza**
 si scelgono i **connettivi**. Complementa **Parte C** (che cura figure,
 *dispositio* e argomentazione) e **Parte E** §20 (che mette in guardia dai
 connettori *sovrabbondanti*): qui la guida è positiva — usarli **bene**, non solo di meno.
-Distillato da G. Barattelli, *Scrivere bene*; L. Serianni, *Leggere, scrivere, argomentare*;
-E. Rigotti, *Il filo del pensiero*. Esempi originali.
+Distillato da B. Barattelli, *Scrivere bene*; L. Serianni, *Leggere, scrivere, argomentare*;
+F. Rigotti, *Il filo del pensiero*. Esempi originali.
 
 > *Discorso* viene dal latino *sermo*, da *sero* = intrecciare. Un testo non è un mucchio
 > di frasi giuste accostate: è un **tessuto**. Chi non intreccia non discorre — elenca.
@@ -2180,7 +2181,7 @@ negativo porta **informazione non ricostruibile dal positivo**.
 > - **Sì, lo implica → taglia** (ridondante). Archetipi:
 >   - **Antonimi netti** sullo stesso asse: *«è gratuito, non a pagamento»* → *«gratuito»* dice
 >     già *«non a pagamento»*.
->   - **Elevazione del copy *«non è un semplice X, ma Y»»*** → *«soluzione completa»* implica già
+>   - **Elevazione del copy *«non è un semplice X, ma Y»*** → *«soluzione completa»* implica già
 >     *«non semplice»*. **Taglia in assertiva pura** (*«è una soluzione gestionale completa»*) —
 >     non sostituire solo *ma* coi due punti, che lascia in piedi l'elevazione.
 >   - ⚠ **Falsi antonimi:** *modulare/monolitica* sembrano opposti, ma un *modular monolith* è
@@ -3185,7 +3186,7 @@ Riferimento per chi scrive o revisiona **testi narrativi** (racconto, romanzo, s
 un trattato di narratologia: raccoglie i nodi più utili a *valutare un'idea prima di scriverla*
 e a non spegnerla in revisione. Complementa **Parte C** (*dispositio*, che è
 architettura del discorso, non della storia) e **Parte E** (concretezza, voce).
-Distillato da F. Massai, *L'idea narrativa* (2015); esempi originali.
+Distillato da M. Massai, *L'idea narrativa* (2015); esempi originali.
 
 > Per il resto la narrativa segue le stesse virtù del resto della skill: concretezza
 > (**Parte E** §42, *individuazione*), voce, ritmo variato, *less is more*. Qui ci sono
@@ -3449,7 +3450,7 @@ annoia il lettore.
 Riferimento sul **mestiere micro**: scegliere la parola necessaria (*proprietas*, *le mot
 juste*) e rivedere il testo a freddo. Dove **Parte E** insegna a *togliere* lo slop,
 qui si impara a *trovare* la precisione e a *limare*. Distillato da G. Pontiggia, *Per scrivere
-bene imparate a nuotare*, e C. Birattari, *È più facile scrivere bene che scrivere male*;
+bene imparate a nuotare*, e M. Birattari, *È più facile scrivere bene che scrivere male*;
 citazioni brevi e attribuite, esempi originali.
 
 > «Non ci sono sinonimi. Ci sono solo parole necessarie, e il buon scrittore le conosce.»

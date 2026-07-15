@@ -3,7 +3,7 @@
 Riferimento sul **mestiere micro**: scegliere la parola necessaria (*proprietas*, *le mot
 juste*) e rivedere il testo a freddo. Dove `stile-naturale.md` insegna a *togliere* lo slop,
 qui si impara a *trovare* la precisione e a *limare*. Distillato da G. Pontiggia, *Per scrivere
-bene imparate a nuotare*, e C. Birattari, *È più facile scrivere bene che scrivere male*;
+bene imparate a nuotare*, e M. Birattari, *È più facile scrivere bene che scrivere male*;
 citazioni brevi e attribuite, esempi originali.
 
 > «Non ci sono sinonimi. Ci sono solo parole necessarie, e il buon scrittore le conosce.»

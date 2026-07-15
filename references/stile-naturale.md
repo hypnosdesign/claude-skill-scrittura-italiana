@@ -198,7 +198,7 @@ negativo porta **informazione non ricostruibile dal positivo**.
 > - **Sì, lo implica → taglia** (ridondante). Archetipi:
 >   - **Antonimi netti** sullo stesso asse: *«è gratuito, non a pagamento»* → *«gratuito»* dice
 >     già *«non a pagamento»*.
->   - **Elevazione del copy *«non è un semplice X, ma Y»»*** → *«soluzione completa»* implica già
+>   - **Elevazione del copy *«non è un semplice X, ma Y»*** → *«soluzione completa»* implica già
 >     *«non semplice»*. **Taglia in assertiva pura** (*«è una soluzione gestionale completa»*) —
 >     non sostituire solo *ma* coi due punti, che lascia in piedi l'elevazione.
 >   - ⚠ **Falsi antonimi:** *modulare/monolitica* sembrano opposti, ma un *modular monolith* è

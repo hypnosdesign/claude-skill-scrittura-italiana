@@ -16,7 +16,7 @@ description: |
 license: CC-BY-SA-4.0
 compatibility: claude-code claude-desktop opencode claude.ai
 metadata:
-  version: "2.13.0"
+  version: "2.13.1"
   language: it
 allowed-tools: Read Write Edit Grep Glob AskUserQuestion
 ---
@@ -118,11 +118,11 @@ livello come criterio interno: dichiaralo soltanto se chiarisce una scelta o se 
 > **⚠ Default conservativo per il testo funzionale.** Documentazione tecnica, API, codice, dati
 > strutturati, testo legale, procedure, riferimenti — il testo dove conta che *funzioni e resti
 > stabile* — vanno trattati al livello **più basso**, anche se ti chiedono un «line edit»: correggi
-> gli errori oggettivi e **fèrmati lì**. Non riformulare frasi già corrette, non aggiungere
+> gli errori oggettivi e **fermati lì**. Non riformulare frasi già corrette, non aggiungere
 > backtick o formattazione, non «migliorare» la resa (*«è in JSON e contiene»* → *«JSON contiene»*
 > è churn, non un fix). In questi generi la **letteralità e la stabilità valgono più
 > dell'eleganza**: se il testo già funziona e si capisce, un ritocco non richiesto è un difetto,
-> non un servizio. Interveni di più solo se l'utente lo chiede esplicitamente. (Vedi anche §67 per
+> non un servizio. Intervieni di più solo se l'utente lo chiede esplicitamente. (Vedi anche §67 per
 > gli elenchi legittimi nella documentazione.)
 
 ## Workflow — CORREGGERE un testo
@@ -166,7 +166,7 @@ Applica le passate nell'ordine delle virtù, **dalla struttura alla pelle**:
    testo?"*, individua i tell residui e rivedi. Non riversare l'audit nell'output salvo richiesta.
    ⚠ Per i testi **argomentativi/persuasivi** fai anche un **esame critico** esplicito
    (incoerenze, salti logici, affermazioni non dimostrate): l'AI tende a *confermare* la tesi di chi
-   scrive, non a contestarla — vai cercato il punto debole, non aspettarlo.
+   scrive, non a contestarla — va cercato il punto debole, non aspettato.
 
 Mantieni sempre **significato e registro**. Se l'utente fornisce un campione del proprio
 stile, calibrati su quello invece di appiattire a un italiano neutro.
@@ -333,15 +333,16 @@ corretto** (e, se istruttivo, l'errore da evitare), citando la scheda pertinente
   *Politics and the English Language* (1946); A. Savinio, *Nuova enciclopedia*.
 - Grammatica, sintassi e proprietà di lingua: L. Serianni, *Italiano* (Garzanti, 1997) e
   *L'italiano: parlare, scrivere, digitare* (con G. Antonelli, Treccani, 2019); M. Dardano e P.
-  Trifone, *La lingua italiana* (Zanichelli, 1995); A. Perini, *Grammatica italiana per tutti*
-  (2018). Argomentazione,
-  coesione e riassunto: L. Serianni, *Leggere, scrivere, argomentare* (Laterza, 2015); E. Rigotti,
-  *Il filo del pensiero* (2020); G. Barattelli, *Scrivere bene* (2015). Chiarezza, stile e
-  revisione: G. Pontiggia, *Per scrivere bene imparate a nuotare* (2020); C. Birattari, *È più
+  Trifone, *Grammatica italiana. Con nozioni di linguistica* (Zanichelli, 1995); E. Perini,
+  *Grammatica italiana per tutti* (Giunti, 2016). Argomentazione,
+  coesione e riassunto: L. Serianni, *Leggere, scrivere, argomentare* (Laterza, 2015); F. Rigotti,
+  *Il filo del pensiero* (il Mulino, 2002; Orthotes, 2021); B. Barattelli, *Scrivere bene*
+  (il Mulino, 2015). Chiarezza, stile e
+  revisione: G. Pontiggia, *Per scrivere bene imparate a nuotare* (2020); M. Birattari, *È più
   facile scrivere bene che scrivere male* (2011). Divulgazione: D. Gouthier, *Scrivere di scienza*
-  (Codice, 2019). Narrativa: F. Massai, *L'idea narrativa* (2015); Gotham Writers' Workshop,
-  *Lezioni di scrittura creativa* (2014); R. Carver, *Il mestiere di scrivere* (Einaudi). Copy/web: F. Martino e A.
-  Alfieri, *Scrivere ganzo* (2015). Scrivere con l'AI e umanizzazione: A. Julita, *Scrivere con
+  (Codice, 2019). Narrativa: M. Massai, *L'idea narrativa* (2015); Gotham Writers' Workshop,
+  *Lezioni di scrittura creativa* (2014); R. Carver, *Il mestiere di scrivere* (Einaudi). Copy/web: M. Martino e M.
+  Alfieri, *Scrivere ganzo* (2015). Scrivere con l'AI e umanizzazione: F. Julita, *Scrivere con
   l'AI* (Hoepli, 2025).
 - Concetti e regole sono patrimonio comune; testi ed esempi della skill sono rielaborazioni
   originali.

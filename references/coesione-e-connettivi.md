@@ -5,8 +5,8 @@ successiva (**coesione**), come tutto il testo resta una cosa sola (**coerenza**
 si scelgono i **connettivi**. Complementa `retorica-efficacia.md` (che cura figure,
 *dispositio* e argomentazione) e `stile-naturale.md` §20 (che mette in guardia dai
 connettori *sovrabbondanti*): qui la guida è positiva — usarli **bene**, non solo di meno.
-Distillato da G. Barattelli, *Scrivere bene*; L. Serianni, *Leggere, scrivere, argomentare*;
-E. Rigotti, *Il filo del pensiero*. Esempi originali.
+Distillato da B. Barattelli, *Scrivere bene*; L. Serianni, *Leggere, scrivere, argomentare*;
+F. Rigotti, *Il filo del pensiero*. Esempi originali.
 
 > *Discorso* viene dal latino *sermo*, da *sero* = intrecciare. Un testo non è un mucchio
 > di frasi giuste accostate: è un **tessuto**. Chi non intreccia non discorre — elenca.

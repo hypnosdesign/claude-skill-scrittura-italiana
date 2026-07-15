@@ -4,7 +4,7 @@ Riferimento di **correttezza a livello di parola** (virtù *puritas*): accenti, 
 apostrofo, ortografia, plurali, pronomi, preposizioni, **morfosintassi** (verbo, articolo,
 comparativi, costrutti marcati). Complementa `punteggiatura.md` (che copre i segni). Regole
 sintetizzate da M. Trinci, *Le basi proprio della grammatica* (Bompiani, 2019) e dalle grammatiche
-di riferimento (Serianni; Dardano-Trifone, *La lingua italiana*; Perini, *Grammatica italiana per
+di riferimento (Serianni; Dardano-Trifone, *Grammatica italiana*; Perini, *Grammatica italiana per
 tutti*); definizioni ed esempi originali. `✓` = corretto, `✗` = da evitare.
 
 **Mappa del file:**

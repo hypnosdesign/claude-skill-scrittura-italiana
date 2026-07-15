@@ -22,7 +22,7 @@ Questa skill ha una linea precisa. Per restare coerenti:
 2. **Esempi brevi e originali.** Frasi minime che illustrano la regola. **Non** copiare passi
    estesi da libri o altre fonti protette: la skill è una rielaborazione, non un'antologia.
 3. **Italiano, non inglese tradotto.** Gli esempi devono suonare come italiano vero.
-4. **Niente regole inventate.** Per la punteggiatura, allìneati a fonti autorevoli (Mortara
+4. **Niente regole inventate.** Per la punteggiatura, allineati a fonti autorevoli (Mortara
    Garavelli, Serianni, Treccani, Accademia della Crusca) o all'uso attestato, e **cita la
    fonte** nella PR. Per i pattern AI, porta almeno un esempio concreto reale.
 5. **Coerenza interna.** Se aggiungi un pattern in `stile-naturale.md`, controlla che la

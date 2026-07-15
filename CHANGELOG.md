@@ -5,6 +5,37 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.13.1] — 2026-07-15
+
+**Puritas su sé stessa: refusi nel corpo della skill e fonti citate male.** Patch emersa da un
+audit interno completo (efficacia + struttura, `AUDIT-2026-07`): nessuna regola cambia; si
+correggono errori materiali del testo e attribuzioni bibliografiche, tutte verificate sulle
+edizioni effettivamente usate per la distillazione (colophon) o su fonti editoriali.
+
+### Corretto
+
+- **Refusi nel corpo di SKILL.md** (il testo sempre caricato): «vai cercato il punto debole» →
+  «va cercato»; «Interveni» → «Intervieni»; «fèrmati» → «fermati» (accento tonico interno, grafia
+  non standard in prosa; così «allìneati» → «allineati» in `CONTRIBUTING.md`). In
+  `stile-naturale.md` §9, caporale doppio *«…ma Y»»* → *«…ma Y»*.
+- **Fonti — otto iniziali d'autore sbagliate, un titolo e due anni imprecisi:** **M.** (non C.)
+  Birattari; **B.** (non G.) Barattelli (il Mulino, 2015); **E.** (non A.) Perini (Giunti,
+  **2016**, non 2018); **F.** (non E.) Rigotti, *Il filo del pensiero* (il Mulino **2002**,
+  ed. Orthotes 2021 — non 2020); **M.** (non F.) Massai; **M. Martino e M. Alfieri** (non
+  «F. Martino e A. Alfieri»); **F.** (non A.) Julita. E il titolo Dardano-Trifone: il manuale
+  distillato è ***Grammatica italiana. Con nozioni di linguistica*** (Zanichelli, 1995), non
+  *La lingua italiana*. Aggiornati `SKILL.md`, `README.md` e i cappelli dei riferimenti; le
+  voci storiche di questo changelog restano come furono scritte (sono un registro). La lezione
+  è quella della guardia sui fatti: le attribuzioni si verificano sulla fonte, anche le proprie.
+
+### Aggiunto
+
+- **CI deterministica della skill** (`.github/workflows/skill-quality.yml`): a ogni PR e push
+  girano i test del runner, la validazione della suite (`--validate-only`), il controllo di
+  freschezza del single-file (ricostruzione + diff) e la guardia sulla lunghezza della
+  `description` (`scripts/check-description.mjs`, soglia prudenziale 1000 su limite 1024).
+  Zero chiamate LLM: costo nullo, nessun risultato instabile.
+
 ## [2.13.0] — 2026-06-19
 
 **Provenienza verificabile e benchmark fail-closed.** Questa versione non aggiunge nuovi pattern
