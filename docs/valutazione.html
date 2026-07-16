@@ -71,18 +71,17 @@
 
         <section id="risultato">
           <h2>Riferimenti 2.14.0 e 2.15.x</h2>
-          <p>La misura principale confronta quattro bracci sugli stessi 27 casi di sviluppo: nessuna skill, solo il nucleo, la skill completa e la candidata. Editor Sonnet, giudice Opus, una sola osservazione per caso.</p>
+          <p>La misura di riferimento (luglio 2026) osserva ogni caso <strong>tre volte per braccio</strong>, con la stessa suite e lo stesso giudice: modello senza skill contro skill 2.15.1. Editor Sonnet, giudice Opus.</p>
           <table class="data-table">
-            <thead><tr><th>Braccio</th><th>Passaggi</th><th>Invenzioni</th></tr></thead>
+            <thead><tr><th>Su 3 run per caso</th><th>Senza skill</th><th>Con skill 2.15.1</th></tr></thead>
             <tbody>
-              <tr><td>Senza skill (baseline nuda)</td><td>17 su 27</td><td>6</td></tr>
-              <tr><td>Solo nucleo (SKILL.md)</td><td>25 su 27</td><td>1</td></tr>
-              <tr><td>Skill completa 2.13.1</td><td>24 su 27</td><td>1</td></tr>
-              <tr><td>Candidata 2.14.0</td><td>24 su 27</td><td>1</td></tr>
+              <tr><td>Passaggi per run (verdetti validi)</td><td>16–20 su 27</td><td><strong>26–27 su 27</strong></td></tr>
+              <tr><td>Invenzioni totali</td><td>9</td><td><strong>1</strong></td></tr>
+              <tr><td>Casi dall'esito instabile</td><td>8 su 27</td><td><strong>1 su 27</strong></td></tr>
             </tbody>
           </table>
-          <div class="callout success"><h3>Risultato osservato</h3><p>Senza skill il modello ipercorregge la chat informale, inventa dati sotto pressione e aggiunge fonti non richieste: 6 invenzioni contro 1. Il dato robusto è il delta con la baseline nuda; 24 contro 25 è entro il rumore di una singola osservazione.</p></div>
-          <p>Il set held-out rinnovato (sei casi congelati, mai usati per tarare) ha prodotto 5 su 6 al primo giro (2.15.0) e 6 su 6 al giro di gate (2.15.1), sempre con zero invenzioni. L'instradamento nel client reale è passato da 3 su 6 aperture attese della baseline a 6 su 6.</p>
+          <div class="callout success"><h3>Risultato osservato</h3><p>La skill non alza soltanto la media (18,0 contro 26,7): stabilizza il comportamento. Senza skill il modello oscilla su 8 casi e inventa sotto pressione; con la skill il verdetto è quasi deterministico. Le righe perse per limiti di sessione o giudice malformato restano errori dichiarati, mai promossi a passaggi.</p></div>
+          <p>La misura storica a quattro bracci (nucleo, skill completa, candidata; una osservazione per caso, prima delle ricalibrazioni del giudice) resta negli artefatti 2.14.0. Il set held-out rinnovato (sei casi congelati, mai usati per tarare) ha prodotto 5 su 6 al primo giro e 6 su 6 al giro di gate. Nell'instradamento su tre giri, a skill attiva il riferimento atteso viene aperto in 14 righe valide su 14; a oscillare è l'attivazione dei due prompt di confine (2 su 3 e 1 su 3).</p>
           <p><a class="button quiet" href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/tree/main/evals/results">Esamina gli artefatti di riferimento</a></p>
         </section>
 
