@@ -1,0 +1,60 @@
+{
+  "total": 9,
+  "pass": 1,
+  "passRate": 0.111,
+  "invented": 3,
+  "costUsd": 2.1647,
+  "modelsUsed": [
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-5",
+    "claude-opus-4-8"
+  ],
+  "byTarget": {
+    "minimal": {
+      "pass": 0,
+      "fail": 2,
+      "err": 1,
+      "invented": 0
+    },
+    "mixed": {
+      "pass": 0,
+      "fail": 2,
+      "err": 1,
+      "invented": 0
+    },
+    "improve": {
+      "pass": 1,
+      "fail": 2,
+      "err": 0,
+      "invented": 3
+    }
+  },
+  "bySplit": {
+    "dev": {
+      "pass": 1,
+      "fail": 6,
+      "err": 2,
+      "invented": 3
+    }
+  },
+  "perEval": {
+    "7": {
+      "name": "documentazione-tecnica",
+      "target": "minimal",
+      "pass": 0,
+      "n": 3
+    },
+    "29": {
+      "name": "lineetta-legittima-vs-raffica",
+      "target": "mixed",
+      "pass": 0,
+      "n": 3
+    },
+    "30": {
+      "name": "argomentativo-salto",
+      "target": "improve",
+      "pass": 1,
+      "n": 3
+    }
+  }
+}

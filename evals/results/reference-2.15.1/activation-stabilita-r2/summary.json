@@ -1,0 +1,85 @@
+{
+  "total": 6,
+  "errors": 0,
+  "costUsd": 1.6501,
+  "positive": {
+    "n": 0,
+    "fired": 0
+  },
+  "negative": {
+    "n": 0,
+    "fired": 0
+  },
+  "routing": {
+    "n": 6,
+    "fired": 4,
+    "expectedReadHit": 4,
+    "perCase": [
+      {
+        "id": 31,
+        "fired": true,
+        "reads": [
+          "stile-naturale"
+        ],
+        "expected": [
+          "stile-naturale"
+        ],
+        "hit": true
+      },
+      {
+        "id": 32,
+        "fired": true,
+        "reads": [
+          "dubbi-e-errori",
+          "cliche-e-parole-alla-moda"
+        ],
+        "expected": [
+          "dubbi-e-errori"
+        ],
+        "hit": true
+      },
+      {
+        "id": 33,
+        "fired": true,
+        "reads": [
+          "punteggiatura"
+        ],
+        "expected": [
+          "punteggiatura"
+        ],
+        "hit": true
+      },
+      {
+        "id": 34,
+        "fired": false,
+        "reads": [],
+        "expected": [
+          "retorica-efficacia",
+          "stile-naturale"
+        ],
+        "hit": false
+      },
+      {
+        "id": 35,
+        "fired": false,
+        "reads": [],
+        "expected": [
+          "spiegare-con-chiarezza"
+        ],
+        "hit": false
+      },
+      {
+        "id": 36,
+        "fired": true,
+        "reads": [
+          "narrativa",
+          "retorica-efficacia"
+        ],
+        "expected": [
+          "narrativa"
+        ],
+        "hit": true
+      }
+    ]
+  }
+}

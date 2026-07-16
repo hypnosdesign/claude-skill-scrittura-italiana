@@ -5,6 +5,38 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [Non rilasciato]
+
+**La stabilità della misura, finalmente stimata (primo punto di metodo di giugno).** Nessuna
+modifica alla skill: strumenti di misura e artefatti. Le fotografie a n=1 diventano stime con
+intervallo.
+
+### Aggiunto (misura)
+
+- **`evals/stability.mjs` + test** — digest deterministico per run multipli
+  (`run.mjs --runs N`): pass per run sui **soli verdetti validi**, media e intervallo solo a
+  run completi, **flip** = verdetti contraddittori (un errore non è un verdetto), guardia sul
+  confronto fra bracci con casi diversi. In CI accanto ai test del runner.
+- **Prima stima di stabilità, n=3 per cella** (editor `claude-sonnet-5`, giudice
+  `claude-opus-4-8`, suite ricalibrata; artefatti in `reference-2.15.1/stabilita-*`):
+  - **con skill 2.15.1: 26/27 · 27/27 · 27/27 (media 26,7)** — 1 invenzione, **1 caso
+    instabile su 27**, zero errori;
+  - **senza skill: 16–20/27 sui run validi (media 18,0)** — **9 invenzioni, 8 casi
+    instabili su 27**; gli ultimi casi del braccio, persi per il limite di sessione, sono
+    stati rimisurati in un blocco supplementare dichiarato, mai fusi in un finto run unico;
+  - **il finding nuovo: la skill non alza solo la media (+8,7) — stabilizza il
+    comportamento** (flip 1/27 contro 8/27) e riporta le invenzioni da 9 a 1.
+- **Instradamento su tre giri** (`activation-stabilita-r2/r3`): **14/14 letture della scheda
+  giusta quando la skill è attiva**; oscilla l'**attivazione** dei due prompt di confine —
+  #34 «discorso» 2/3 («discorsi» manca dai generi della `description`: candidata 2.15.2) e
+  #35 «spiega…» 1/3 (sta deliberatamente al confine coi negativi, spurie 0/10: spingerlo ha
+  un prezzo da misurare). Il «6/6» della 2.15.1 era il pescaggio fortunato di una
+  distribuzione oscillante: lettura risolta, attivazione di confine no.
+- **Nota operativa** in `evals/README.md`: un braccio alla volta — bracci concorrenti
+  esauriscono il limite di sessione del piano (429) e il runner fail-closed, correttamente,
+  scarta le righe in errore invece di promuoverle (è successo al primo tentativo, non
+  promosso a riferimento).
+
 ## [2.15.1] — 2026-07-15
 
 **Chiusura del backlog di giugno: il nucleo si allinea alle schede, l'instradamento impara a

@@ -1,0 +1,222 @@
+{
+  "total": 81,
+  "pass": 80,
+  "passRate": 0.988,
+  "invented": 1,
+  "costUsd": 22.8528,
+  "modelsUsed": [
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-5",
+    "claude-opus-4-8"
+  ],
+  "byTarget": {
+    "exact": {
+      "pass": 3,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "minimal": {
+      "pass": 29,
+      "fail": 1,
+      "err": 0,
+      "invented": 1
+    },
+    "improve": {
+      "pass": 24,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "semantic": {
+      "pass": 9,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "mixed": {
+      "pass": 9,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "advice": {
+      "pass": 6,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "bySplit": {
+    "dev": {
+      "pass": 80,
+      "fail": 1,
+      "err": 0,
+      "invented": 1
+    }
+  },
+  "perEval": {
+    "1": {
+      "name": "prosa-buona",
+      "target": "exact",
+      "pass": 3,
+      "n": 3
+    },
+    "2": {
+      "name": "bipolare-informativo",
+      "target": "minimal",
+      "pass": 2,
+      "n": 3
+    },
+    "3": {
+      "name": "bipolare-ornamentale",
+      "target": "improve",
+      "pass": 3,
+      "n": 3
+    },
+    "4": {
+      "name": "chat-informale",
+      "target": "minimal",
+      "pass": 3,
+      "n": 3
+    },
+    "5": {
+      "name": "grammatica-minima",
+      "target": "minimal",
+      "pass": 3,
+      "n": 3
+    },
+    "6": {
+      "name": "copy-senza-dati",
+      "target": "improve",
+      "pass": 3,
+      "n": 3
+    },
+    "7": {
+      "name": "documentazione-tecnica",
+      "target": "minimal",
+      "pass": 3,
+      "n": 3
+    },
+    "8": {
+      "name": "scientifico-incertezza",
+      "target": "minimal",
+      "pass": 3,
+      "n": 3
+    },
+    "9": {
+      "name": "legale-condizioni",
+      "target": "minimal",
+      "pass": 3,
+      "n": 3
+    },
+    "10": {
+      "name": "narrativa-frammenti",
+      "target": "minimal",
+      "pass": 3,
+      "n": 3
+    },
+    "11": {
+      "name": "voce-campione",
+      "target": "semantic",
+      "pass": 3,
+      "n": 3
+    },
+    "12": {
+      "name": "citazione-non-verificabile",
+      "target": "semantic",
+      "pass": 3,
+      "n": 3
+    },
+    "13": {
+      "name": "bipolare-misto",
+      "target": "mixed",
+      "pass": 3,
+      "n": 3
+    },
+    "17": {
+      "name": "cortesia-epistolare",
+      "target": "minimal",
+      "pass": 3,
+      "n": 3
+    },
+    "18": {
+      "name": "domanda-qual-e",
+      "target": "advice",
+      "pass": 3,
+      "n": 3
+    },
+    "19": {
+      "name": "domanda-d-eufonica",
+      "target": "advice",
+      "pass": 3,
+      "n": 3
+    },
+    "20": {
+      "name": "scrittura-da-zero",
+      "target": "improve",
+      "pass": 3,
+      "n": 3
+    },
+    "21": {
+      "name": "riassunto-fedele",
+      "target": "improve",
+      "pass": 3,
+      "n": 3
+    },
+    "22": {
+      "name": "coesione-mosaico",
+      "target": "improve",
+      "pass": 3,
+      "n": 3
+    },
+    "23": {
+      "name": "narrativa-improve",
+      "target": "improve",
+      "pass": 3,
+      "n": 3
+    },
+    "24": {
+      "name": "voce-campione-calibrazione",
+      "target": "semantic",
+      "pass": 3,
+      "n": 3
+    },
+    "25": {
+      "name": "pressione-utente",
+      "target": "improve",
+      "pass": 3,
+      "n": 3
+    },
+    "26": {
+      "name": "istruzioni-annidate",
+      "target": "minimal",
+      "pass": 3,
+      "n": 3
+    },
+    "27": {
+      "name": "bipolare-varianti",
+      "target": "mixed",
+      "pass": 3,
+      "n": 3
+    },
+    "28": {
+      "name": "virgolette-curve-uniformi",
+      "target": "minimal",
+      "pass": 3,
+      "n": 3
+    },
+    "29": {
+      "name": "lineetta-legittima-vs-raffica",
+      "target": "mixed",
+      "pass": 3,
+      "n": 3
+    },
+    "30": {
+      "name": "argomentativo-salto",
+      "target": "improve",
+      "pass": 3,
+      "n": 3
+    }
+  }
+}
