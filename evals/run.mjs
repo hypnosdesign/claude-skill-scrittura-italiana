@@ -21,13 +21,22 @@
 //
 // Flag: --skill <file> --no-skill --label <s> --model <m> --judge-model <m> --runs <n>
 //       --ids <csv> --split <dev|held-out|all> --suite <file> --manifest <file>
-//       --out <dir> --validate-only
+//       --out <dir> --resume <dir> --fail-under <0..1> --validate-only
 //
 // --no-skill esegue il braccio "baseline nuda" (nessun system prompt): misura cosa
 // fa il modello da solo, per quantificare il valore aggiunto della skill.
 // Ogni chiamata usa `--output-format json`: la riga persiste anche gli ID dei
 // modelli effettivamente risolti (gli alias tipo `sonnet` cambiano nel tempo) e
 // il costo API dichiarato dal CLI.
+// --resume <dir> riprende un run interrotto: riesegue solo le coppie (caso, run)
+// assenti o in errore, ad append sullo stesso results.jsonl (le righe vecchie
+// restano come storia; il riepilogo tiene l'ultima riga valida per coppia).
+// I fingerprint di skill/suite/manifest e i modelli devono coincidere col run
+// originale: riprendere con una suite diversa è un errore, non un merge.
+// Su un errore da limite di sessione (429) il runner ABORTISCE invece di
+// macinare chiamate destinate a fallire; riprendi poi con --resume.
+// --fail-under <r> rende il run usabile come gate: exit ≠ 0 se il pass rate
+// scende sotto r o se ci sono verdetti in errore.
 
 import { execFileSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
@@ -54,6 +63,10 @@ export function main(argv = process.argv.slice(2)) {
   const splitFilter = String(args.split ?? 'dev')
   const onlyIds = args.ids ? new Set(String(args.ids).split(',').map(Number)) : null
   const claudeBin = process.env.CLAUDE_BIN || 'claude'
+  const resumeDir = args.resume ? resolve(String(args.resume)) : null
+  const failUnder = args['fail-under'] !== undefined ? Number(args['fail-under']) : null
+  if (resumeDir && args.out) throw new Error('--resume e --out sono alternativi')
+  if (failUnder !== null && !(failUnder >= 0 && failUnder <= 1)) throw new Error('--fail-under richiede un numero fra 0 e 1')
 
   const requiredFiles = [['suite', suiteFile], ['manifest', manifestFile]]
   if (!noSkill) requiredFiles.unshift(['skill', skillFile])
@@ -101,38 +114,67 @@ export function main(argv = process.argv.slice(2)) {
     return { validated: true, fingerprints, splitFilter, ids: selected.map(e => e.id) }
   }
 
-  const outDir = resolve(args.out ?? join(HERE, 'results', `${stamp}__${label}`))
-  if (existsSync(outDir)) throw new Error(`directory di output già esistente: ${outDir}`)
-  mkdirSync(outDir, { recursive: true })
-  if (!noSkill) writeFileSync(join(outDir, 'skill.md'), skillText)
-  writeFileSync(join(outDir, 'suite.json'), suiteText)
-  writeFileSync(join(outDir, 'manifest.json'), manifestText)
-  const runMeta = {
-    schemaVersion: 3,
-    label,
-    stamp,
-    argv,
-    git: { sha: gitSha, dirty },
-    skill: noSkill
-      ? { source: null, sha256: null, bytes: 0, noSkill: true }
-      : { source: skillFile, sha256: fingerprints.skill, bytes: Buffer.byteLength(skillText) },
-    suite: { source: suiteFile, sha256: fingerprints.suite, bytes: Buffer.byteLength(suiteText) },
-    manifest: { source: manifestFile, sha256: fingerprints.manifest, bytes: Buffer.byteLength(manifestText) },
-    editorModel,
-    judgeModel,
-    sameModel: editorModel === judgeModel,
-    runs,
-    splitFilter,
-    claudeVer,
-    node: process.version,
-    ids: selected.map(e => e.id),
+  let outDir
+  let priorRows = []
+  let done = new Set()
+  let runMeta
+  if (resumeDir) {
+    outDir = resumeDir
+    if (!existsSync(join(outDir, 'meta.json'))) throw new Error(`--resume: meta.json non trovato in ${outDir}`)
+    const prev = JSON.parse(readFileSync(join(outDir, 'meta.json'), 'utf8'))
+    const mismatches = []
+    if ((prev.skill?.sha256 ?? null) !== fingerprints.skill) mismatches.push('skill')
+    if (prev.suite?.sha256 !== fingerprints.suite) mismatches.push('suite')
+    if (prev.manifest?.sha256 !== fingerprints.manifest) mismatches.push('manifest')
+    if (prev.editorModel !== editorModel) mismatches.push('editor model')
+    if (prev.judgeModel !== judgeModel) mismatches.push('judge model')
+    if (prev.runs !== runs) mismatches.push('runs')
+    if (prev.splitFilter !== splitFilter) mismatches.push('split')
+    if (mismatches.length) throw new Error(`--resume: il run originale differisce per ${mismatches.join(', ')} — riprendere non è un merge`)
+    const prevIds = new Set(prev.ids ?? [])
+    const extra = selected.map(e => e.id).filter(id => !prevIds.has(id))
+    if (extra.length) throw new Error(`--resume: casi assenti dal run originale: ${extra.join(', ')}`)
+    priorRows = safe(() => readFileSync(join(outDir, 'results.jsonl'), 'utf8').trim().split('\n').filter(Boolean).map(l => JSON.parse(l)), [])
+    done = new Set(priorRows.filter(r => r.verdict?.pass !== null).map(r => `${r.id}:${r.run}`))
+    runMeta = { ...prev, resumes: [...(prev.resumes ?? []), { stamp, argv }] }
+    writeFileSync(join(outDir, 'meta.json'), JSON.stringify(runMeta, null, 2))
+    console.log(`resume: ${done.size} coppie (caso, run) già valide, ${selected.length * runs - done.size} da eseguire`)
+  } else {
+    outDir = resolve(args.out ?? join(HERE, 'results', `${stamp}__${label}`))
+    if (existsSync(outDir)) throw new Error(`directory di output già esistente: ${outDir}`)
+    mkdirSync(outDir, { recursive: true })
+    if (!noSkill) writeFileSync(join(outDir, 'skill.md'), skillText)
+    writeFileSync(join(outDir, 'suite.json'), suiteText)
+    writeFileSync(join(outDir, 'manifest.json'), manifestText)
+    runMeta = {
+      schemaVersion: 3,
+      label,
+      stamp,
+      argv,
+      git: { sha: gitSha, dirty },
+      skill: noSkill
+        ? { source: null, sha256: null, bytes: 0, noSkill: true }
+        : { source: skillFile, sha256: fingerprints.skill, bytes: Buffer.byteLength(skillText) },
+      suite: { source: suiteFile, sha256: fingerprints.suite, bytes: Buffer.byteLength(suiteText) },
+      manifest: { source: manifestFile, sha256: fingerprints.manifest, bytes: Buffer.byteLength(manifestText) },
+      editorModel,
+      judgeModel,
+      sameModel: editorModel === judgeModel,
+      runs,
+      splitFilter,
+      claudeVer,
+      node: process.version,
+      ids: selected.map(e => e.id),
+    }
+    writeFileSync(join(outDir, 'meta.json'), JSON.stringify(runMeta, null, 2))
   }
-  writeFileSync(join(outDir, 'meta.json'), JSON.stringify(runMeta, null, 2))
 
+  let aborted = null
   const rows = []
-  for (const e of selected) {
+  outer: for (const e of selected) {
     const m = meta[e.id]
     for (let run = 1; run <= runs; run++) {
+      if (done.has(`${e.id}:${run}`)) continue
       let output = null
       let editorDurationMs = null
       let editorModels = []
@@ -182,15 +224,47 @@ export function main(argv = process.argv.slice(2)) {
       appendFileSync(join(outDir, 'results.jsonl'), JSON.stringify(row) + '\n')
       const v = judged.verdict
       console.log(`#${String(e.id).padStart(2)} ${m.name.padEnd(26)} run${run}: ${v.pass === null ? 'ERR' : v.pass ? 'PASS' : 'FAIL'}${v.invented ? ` inv=${v.invented}` : ''}  ${v.notes ?? ''}`)
+      if (v.pass === null && isSessionLimit(`${v.notes ?? ''} ${output ?? ''}`)) {
+        aborted = `limite di sessione/rate (429) al caso #${e.id} run${run}: interrompo invece di accumulare errori. Riprendi con --resume ${outDir}`
+        console.error(`\n⚠ ${aborted}`)
+        break outer
+      }
     }
   }
 
-  const summary = aggregate(rows)
+  const summary = aggregate([...priorRows, ...rows])
+  if (aborted) summary.aborted = aborted
   writeFileSync(join(outDir, 'summary.json'), JSON.stringify(summary, null, 2))
   const md = renderSummary(summary, runMeta)
   writeFileSync(join(outDir, 'summary.md'), md)
   console.log('\n' + md + `\n→ artefatti: ${outDir}`)
-  return { outDir, summary, meta: runMeta }
+  const gate = failUnder === null ? null : {
+    failUnder,
+    passRate: summary.passRate,
+    errCount: summary.err,
+    ok: !aborted && summary.err === 0 && summary.passRate >= failUnder,
+  }
+  if (gate && !gate.ok) console.error(`gate fallito: pass rate ${summary.passRate} (soglia ${failUnder}), err=${summary.err}${aborted ? ', run abortito' : ''}`)
+  return { outDir, summary, meta: runMeta, aborted, gate }
+}
+
+// Errori da limite di sessione o rate limit: inutile proseguire, si riprende con --resume.
+export function isSessionLimit(text) {
+  return /\b429\b|usage limit|rate.?limit|limit reached|limite di sessione/i.test(String(text))
+}
+
+// Con --resume (o con la fusione di un blocco supplementare in stability.mjs) lo
+// stesso (caso, run) può comparire più volte: la PRIMA riga con verdetto valido
+// vince — un supplemento riempie i buchi, non sovrascrive misure già valide —
+// mentre una riga in errore è sostituibile da qualunque riga successiva.
+export function dedupeRows(rows) {
+  const byKey = new Map()
+  for (const r of rows) {
+    const k = `${r.id}:${r.run}`
+    const prev = byKey.get(k)
+    if (!prev || prev.verdict?.pass === null) byKey.set(k, r)
+  }
+  return [...byKey.values()]
 }
 
 // ---------- helpers ----------
@@ -270,29 +344,49 @@ function judge(e, output, m, model) {
   }
 }
 
+// Primo oggetto JSON bilanciato nel testo (il vecchio match greedy `{...}` falliva
+// se il giudice faceva seguire al verdetto altro testo con una graffa).
+export function extractJsonObject(raw) {
+  for (let start = raw.indexOf('{'); start !== -1; start = raw.indexOf('{', start + 1)) {
+    let depth = 0
+    let inString = false
+    let escaped = false
+    for (let i = start; i < raw.length; i++) {
+      const ch = raw[i]
+      if (escaped) { escaped = false; continue }
+      if (ch === '\\') { escaped = inString; continue }
+      if (ch === '"') { inString = !inString; continue }
+      if (inString) continue
+      if (ch === '{') depth++
+      else if (ch === '}') {
+        depth--
+        if (depth === 0) {
+          try { return JSON.parse(raw.slice(start, i + 1)) } catch { break }
+        }
+      }
+    }
+  }
+  return null
+}
+
 export function parseVerdict(raw, nExp) {
   if (!Number.isInteger(nExp) || nExp < 1) {
     return invalidVerdict('numero di aspettative non valido')
   }
-  const m = raw.match(/\{[\s\S]*\}/)
-  if (!m) return invalidVerdict(`verdetto non parsabile: ${raw.slice(0, 120)}`)
-  try {
-    const v = JSON.parse(m[0])
-    if (typeof v.pass !== 'boolean') return invalidVerdict('pass deve essere booleano')
-    if (!Number.isInteger(v.invented) || v.invented < 0) return invalidVerdict('invented deve essere un intero non negativo')
-    if (!Array.isArray(v.expectations) || v.expectations.length !== nExp || v.expectations.some(x => typeof x !== 'boolean')) {
-      return invalidVerdict(`expectations deve contenere esattamente ${nExp} booleani`)
-    }
-    const computedPass = v.expectations.every(Boolean) && v.invented === 0
-    const mismatch = v.pass === computedPass ? '' : ` [pass dichiarato=${v.pass}, ricalcolato=${computedPass}]`
-    return {
-      pass: computedPass,
-      invented: v.invented,
-      expectations: v.expectations,
-      notes: (String(v.notes ?? '') + mismatch).slice(0, 300),
-    }
-  } catch {
-    return invalidVerdict(`JSON invalido: ${m[0].slice(0, 120)}`)
+  const v = extractJsonObject(raw)
+  if (!v || typeof v !== 'object') return invalidVerdict(`verdetto non parsabile: ${raw.slice(0, 120)}`)
+  if (typeof v.pass !== 'boolean') return invalidVerdict('pass deve essere booleano')
+  if (!Number.isInteger(v.invented) || v.invented < 0) return invalidVerdict('invented deve essere un intero non negativo')
+  if (!Array.isArray(v.expectations) || v.expectations.length !== nExp || v.expectations.some(x => typeof x !== 'boolean')) {
+    return invalidVerdict(`expectations deve contenere esattamente ${nExp} booleani`)
+  }
+  const computedPass = v.expectations.every(Boolean) && v.invented === 0
+  const mismatch = v.pass === computedPass ? '' : ` [pass dichiarato=${v.pass}, ricalcolato=${computedPass}]`
+  return {
+    pass: computedPass,
+    invented: v.invented,
+    expectations: v.expectations,
+    notes: (String(v.notes ?? '') + mismatch).slice(0, 300),
   }
 }
 
@@ -332,7 +426,8 @@ export function validateSuite(suite, manifest) {
   return true
 }
 
-function aggregate(rows) {
+function aggregate(allRows) {
+  const rows = dedupeRows(allRows)
   const by = (key) => {
     const g = {}
     for (const r of rows) {
@@ -347,9 +442,15 @@ function aggregate(rows) {
   }
   const total = rows.length
   const pass = rows.filter(r => r.verdict.pass === true).length
+  const err = rows.filter(r => r.verdict.pass === null).length
   const invented = rows.reduce((s, r) => s + (r.verdict.invented || 0), 0)
-  const costUsd = +rows.reduce((s, r) => s + (r.editorCostUsd || 0) + (r.judgeCostUsd || 0), 0).toFixed(4)
+  const costUsd = +allRows.reduce((s, r) => s + (r.editorCostUsd || 0) + (r.judgeCostUsd || 0), 0).toFixed(4)
   const modelsUsed = [...new Set(rows.flatMap(r => [...(r.editorModels || []), ...(r.judgeModels || [])]))]
+  // Editor e giudice devono restare modelli diversi anche da RISOLTI, non solo
+  // come alias; le chiamate ausiliarie del CLI (haiku) non contano.
+  const editorResolved = new Set(rows.flatMap(r => r.editorModels || []))
+  const judgeResolved = new Set(rows.flatMap(r => r.judgeModels || []))
+  const resolvedOverlap = [...editorResolved].filter(m => judgeResolved.has(m) && !/haiku/i.test(m))
   // per-eval stabilità su più run
   const perEval = {}
   for (const r of rows) {
@@ -357,7 +458,7 @@ function aggregate(rows) {
     perEval[r.id].n++
     if (r.verdict.pass === true) perEval[r.id].pass++
   }
-  return { total, pass, passRate: total ? +(pass / total).toFixed(3) : 0, invented, costUsd, modelsUsed, byTarget: by('target'), bySplit: by('split'), perEval }
+  return { total, pass, err, passRate: total ? +(pass / total).toFixed(3) : 0, invented, costUsd, modelsUsed, resolvedOverlap, byTarget: by('target'), bySplit: by('split'), perEval }
 }
 
 function renderSummary(s, h) {
@@ -366,6 +467,8 @@ function renderSummary(s, h) {
   L.push(h.skill.noSkill ? `skill=NESSUNA (baseline nuda) · git=${h.git.sha}${h.git.dirty ? '+dirty' : ''}` : `skill sha256=${h.skill.sha256} · git=${h.git.sha}${h.git.dirty ? '+dirty' : ''}`)
   L.push(`editor=${h.editorModel} · judge=${h.judgeModel} · split=${h.splitFilter} · run/eval=${h.runs}`)
   L.push(`modelli risolti: ${s.modelsUsed.length ? s.modelsUsed.join(', ') : 'n/d'} · costo API dichiarato: ${s.costUsd ? `$${s.costUsd}` : 'n/d'}`)
+  if (s.resolvedOverlap?.length) L.push(`\n⚠ **editor e giudice condividono modelli risolti: ${s.resolvedOverlap.join(', ')}**`)
+  if (s.aborted) L.push(`\n⚠ **RUN ABORTITO: ${s.aborted}**`)
   L.push(`\n**Pass rate complessivo: ${s.pass}/${s.total} (${(s.passRate * 100).toFixed(0)}%) · invenzioni totali: ${s.invented}**\n`)
   L.push('| target | pass | fail | err | invenzioni |')
   L.push('|---|---|---|---|---|')
@@ -404,7 +507,7 @@ function parseArgs(argv) {
   const o = {}
   const allowed = new Set([
     'skill', 'no-skill', 'suite', 'manifest', 'label', 'model', 'judge-model',
-    'runs', 'ids', 'split', 'out', 'validate-only',
+    'runs', 'ids', 'split', 'out', 'resume', 'fail-under', 'validate-only',
   ])
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i]
@@ -421,7 +524,9 @@ function parseArgs(argv) {
 
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   try {
-    main()
+    const result = main()
+    if (result?.aborted) process.exit(2)
+    if (result?.gate && !result.gate.ok) process.exit(1)
   } catch (err) {
     console.error(`errore: ${err.message}`)
     process.exit(1)

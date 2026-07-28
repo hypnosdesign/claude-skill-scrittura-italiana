@@ -11,6 +11,32 @@ il [Versionamento Semantico](https://semver.org/lang/it/).
 modifica alla skill: strumenti di misura e artefatti. Le fotografie a n=1 diventano stime con
 intervallo.
 
+### Aggiunto (harness, dal quinto audit — 28 luglio)
+
+- **Il runner impara a fermarsi e a riprendere.** Su un errore da limite di sessione
+  (429) `run.mjs` ora **abortisce** invece di macinare chiamate destinate a fallire
+  (il 15 luglio erano stati 5 errori consecutivi a vuoto); si riparte con
+  `--resume <dir>`, che riesegue solo le coppie (caso, run) assenti o in errore, ad
+  append, con fingerprint e modelli verificati contro il run originale. Con
+  `--fail-under <0..1>` il run diventa un gate (exit ≠ 0 sotto soglia o con errori).
+- **Verdetti del giudice più robusti:** il parse del JSON non usa più la regex greedy
+  `{...}` — due verdetti reali della misura di stabilità erano andati persi perché il
+  giudice aveva fatto seguire testo con graffe. Ora si estrae il primo oggetto
+  bilanciato; il fail-closed resta.
+- **`stability.mjs` fonde i bracci spezzati:** directory separate da virgola, override
+  **per caso intero** (il supplemento rimpiazza i casi persi: mai run dello stesso caso
+  spliced fra sessioni diverse), meta omogenei obbligatori, righe attese vs presenti
+  conteggiate, fingerprint della suite confrontati fra bracci. La tabella di stabilità
+  pubblicata (16/26 · 18/27 · 20/26, flip 8/27) ora **si riproduce con un comando**,
+  senza combinazioni manuali.
+- **`activation.mjs` distingue le copie della skill:** `skillFired` e il routing contano
+  solo la copia di progetto nella workdir; le letture di una copia personale in
+  `~/.claude/skills` sono conteggiate a parte come contaminazione (prima inquinavano la
+  misura in silenzio). Workdir temporanea rimossa a fine run (`--keep-workdir` per
+  conservarla); `--hermetic` opzionale isola anche HOME/XDG. Abort su 429 anche qui.
+- Nel riepilogo del runner: conteggio `err` esplicito e avviso se editor e giudice
+  condividono **modelli risolti** (non solo alias); 7 test nuovi (17 totali).
+
 ### Corretto (igiene, da un quinto audit — 28 luglio)
 
 - **`dubbi-e-errori.md` §9:** la voce *imparare/insegnare* invertiva il pattern «✗ errore →

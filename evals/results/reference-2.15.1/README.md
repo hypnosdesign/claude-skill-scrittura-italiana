@@ -117,3 +117,13 @@ node evals/activation.mjs --kind routing   # ×3 giri
 
 ⚠ Un braccio alla volta: il primo tentativo (bracci concorrenti) è morto a metà per il
 limite di sessione e **non è stato promosso** a riferimento (nota in `evals/README.md`).
+
+**Il digest della tabella qui sopra esce da un comando solo** (dal 28 lug 2026
+`stability.mjs` fonde un braccio spezzato: directory separate da virgola, override per
+caso intero — il supplemento rimpiazza i casi persi, mai spliced fra sessioni):
+
+```bash
+R=evals/results/reference-2.15.1
+node evals/stability.mjs $R/stabilita-completa $R/stabilita-base-nuda,$R/stabilita-base-nuda-suppl
+# → 16/26 · 18/27 · 20/26 (media 18,0) · flip 8/27 · invenzioni 9 · err 2 — identico ai numeri pubblicati
+```

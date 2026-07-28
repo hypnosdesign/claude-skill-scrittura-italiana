@@ -16,6 +16,15 @@
 //
 // Limiti onesti: è una misura del comportamento del client (che può cambiare col
 // CLI), n piccolo, un solo modello per run. Indicativa, non un benchmark.
+// L'ambiente NON è ermetico per default: HOME resta quello reale, quindi skill
+// personali (inclusa un'eventuale copia di scrittura-italiana in ~/.claude/skills)
+// e memoria globale possono entrare nella misura. Per questo l'harness CLASSIFICA
+// le letture: `skillFired` e il routing contano SOLO la copia di progetto nella
+// workdir; le letture della copia personale sono conteggiate a parte come
+// contaminazione (`personalCopyReads`). Con --hermetic HOME e XDG_* puntano a una
+// home usa-e-getta nella workdir: isola davvero, ma su macchine dove le
+// credenziali del CLI vivono in ~/.claude (non nel keychain) può rompere l'auth —
+// per questo è opt-in.
 //
 // Uso:
 //   node evals/activation.mjs --probe                 # 1 positivo + 1 routing, per verificare l'harness
@@ -25,14 +34,16 @@
 //   node evals/activation.mjs --skill-src /percorso/skill-candidata
 //
 // Flag: --model <m> --kind <positive|negative|routing|all> --ids <csv>
-//       --max-turns <n> --out <dir> --skill-src <dir> --probe
+//       --max-turns <n> --out <dir> --skill-src <dir> --probe --hermetic
+//       --keep-workdir
 
 import { execFileSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
-import { appendFileSync, cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs'
+import { appendFileSync, cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve, dirname } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
+import { isSessionLimit } from './run.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const REPO = resolve(HERE, '..')
@@ -61,6 +72,12 @@ export function main(argv = process.argv.slice(2)) {
   cpSync(join(skillSrc, 'SKILL.md'), join(skillDir, 'SKILL.md'))
   cpSync(join(skillSrc, 'references'), join(skillDir, 'references'), { recursive: true })
   const skillSha = sha256(readFileSync(join(skillDir, 'SKILL.md'), 'utf8'))
+  const hermetic = Boolean(args.hermetic)
+  let fakeHome = null
+  if (hermetic) {
+    fakeHome = join(workDir, 'home')
+    for (const sub of ['', '.config', '.cache', '.local/share']) mkdirSync(join(fakeHome, sub), { recursive: true })
+  }
 
   const outDir = resolve(args.out ?? join(HERE, 'results', `${stamp}__activation`))
   if (existsSync(outDir)) throw new Error(`directory di output già esistente: ${outDir}`)
@@ -69,33 +86,43 @@ export function main(argv = process.argv.slice(2)) {
   const claudeVer = safe(() => execFileSync(claudeBin, ['--version'], { encoding: 'utf8', env: claudeEnv() }).trim(), '?')
   const gitSha = safe(() => execFileSync('git', ['rev-parse', '--short', 'HEAD'], { cwd: REPO, encoding: 'utf8' }).trim(), 'nogit')
   writeFileSync(join(outDir, 'meta.json'), JSON.stringify({
-    schemaVersion: 1, stamp, argv, model, kindFilter, git: gitSha,
+    schemaVersion: 2, stamp, argv, model, kindFilter, git: gitSha, hermetic,
     skillSrc, skillSha, workDir, claudeVer, node: process.version,
     ids: selected.map(c => c.id),
   }, null, 2))
 
   console.log(`skill di progetto: ${skillSrc} (SKILL.md sha256=${skillSha.slice(0, 12)}) · model=${model} · ${selected.length} casi`)
 
+  let aborted = null
   const rows = []
   for (const c of selected) {
     const maxTurns = Number(args['max-turns'] ?? (c.kind === 'routing' ? 15 : 6))
-    const row = runCase(c, { claudeBin, model, maxTurns, workDir })
+    const row = runCase(c, { claudeBin, model, maxTurns, workDir, fakeHome })
     rows.push(row)
     appendFileSync(join(outDir, 'results.jsonl'), JSON.stringify(row) + '\n')
     const mark = row.error ? 'ERR' : row.skillFired ? 'FIRE' : 'no'
     const reads = row.referenceReads.length ? ` reads=[${row.referenceReads.join(', ')}]` : ''
-    console.log(`#${String(c.id).padStart(2)} ${c.kind.padEnd(8)} skill=${mark}${reads}${row.error ? ` (${row.error.slice(0, 80)})` : ''}`)
+    const leak = row.personalCopyReads?.length ? ' ⚠copia-personale' : ''
+    console.log(`#${String(c.id).padStart(2)} ${c.kind.padEnd(8)} skill=${mark}${reads}${leak}${row.error ? ` (${row.error.slice(0, 80)})` : ''}`)
+    if (row.error && isSessionLimit(row.error)) {
+      aborted = `limite di sessione/rate (429) al caso #${c.id}: interrompo. I casi restanti non sono stati eseguiti.`
+      console.error(`\n⚠ ${aborted}`)
+      break
+    }
   }
 
   const summary = summarize(rows)
+  if (aborted) summary.aborted = aborted
   writeFileSync(join(outDir, 'summary.json'), JSON.stringify(summary, null, 2))
   const md = renderSummary(summary, { model, claudeVer, skillSha, gitSha })
   writeFileSync(join(outDir, 'summary.md'), md)
   console.log('\n' + md + `\n→ artefatti: ${outDir}`)
-  return { outDir, summary, rows }
+  if (args['keep-workdir']) console.log(`workdir conservata: ${workDir}`)
+  else safe(() => rmSync(workDir, { recursive: true, force: true }), null)
+  return { outDir, summary, rows, aborted }
 }
 
-function runCase(c, { claudeBin, model, maxTurns, workDir }) {
+function runCase(c, { claudeBin, model, maxTurns, workDir, fakeHome }) {
   const started = process.hrtime.bigint()
   let raw = ''
   let error = null
@@ -107,7 +134,7 @@ function runCase(c, { claudeBin, model, maxTurns, workDir }) {
     ], {
       input: c.prompt,
       cwd: workDir,
-      env: claudeEnv(),
+      env: claudeEnv(fakeHome),
       encoding: 'utf8',
       timeout: 360000,
       maxBuffer: 32 * 1024 * 1024,
@@ -118,9 +145,14 @@ function runCase(c, { claudeBin, model, maxTurns, workDir }) {
   }
 
   const events = raw.split('\n').filter(Boolean).map(l => safe(() => JSON.parse(l), null)).filter(Boolean)
+  // La copia di progetto vive nella workdir; qualunque altro path che contenga
+  // `scrittura-italiana` (tipicamente ~/.claude/skills) è la copia personale:
+  // va conteggiata come contaminazione, non come attivazione della candidata.
+  const isProjectPath = p => p.startsWith(workDir)
   let skillFired = false
   let firedVia = null
   const readPaths = []
+  const personalCopyReads = []
   for (const ev of events) {
     const blocks = ev?.message?.content
     if (!Array.isArray(blocks)) continue
@@ -131,17 +163,22 @@ function runCase(c, { claudeBin, model, maxTurns, workDir }) {
         firedVia = firedVia ?? 'Skill-tool'
       }
       if (b.name === 'Read' && typeof b.input?.file_path === 'string') {
-        readPaths.push(b.input.file_path)
-        if (b.input.file_path.includes('scrittura-italiana')) {
-          skillFired = true
-          firedVia = firedVia ?? 'Read-skill-file'
+        const p = b.input.file_path
+        readPaths.push(p)
+        if (p.includes('scrittura-italiana')) {
+          if (isProjectPath(p)) {
+            skillFired = true
+            firedVia = firedVia ?? 'Read-skill-file'
+          } else {
+            personalCopyReads.push(p)
+          }
         }
       }
     }
   }
   const result = events.find(ev => ev?.type === 'result')
   const referenceReads = [...new Set(readPaths
-    .filter(p => p.includes('references/'))
+    .filter(p => isProjectPath(p) && p.includes('references/'))
     .map(p => p.split('/').pop().replace(/\.md$/, '')))]
   const expected = c.expectReads ?? null
   const routingHit = expected ? referenceReads.some(r => expected.some(e => r.includes(e))) : null
@@ -154,6 +191,7 @@ function runCase(c, { claudeBin, model, maxTurns, workDir }) {
     firedVia,
     readPaths,
     referenceReads,
+    personalCopyReads,
     expectReads: expected,
     routingHit,
     numTurns: result?.num_turns ?? null,
@@ -176,6 +214,7 @@ function summarize(rows) {
   return {
     total: rows.length,
     errors,
+    personalCopyReads: rows.reduce((s, r) => s + (r.personalCopyReads?.length || 0), 0),
     costUsd: +rows.reduce((s, r) => s + (r.costUsd || 0), 0).toFixed(4),
     positive: { n: pos.length, fired: pos.filter(r => r.skillFired).length },
     negative: { n: neg.length, fired: neg.filter(r => r.skillFired).length },
@@ -198,6 +237,8 @@ function renderSummary(s, h) {
   L.push(`- **Attivazioni spurie (negativi):** ${pct(s.negative.fired, s.negative.n)}`)
   L.push(`- **Routing — skill attiva:** ${pct(s.routing.fired, s.routing.n)} · **riferimento atteso aperto:** ${pct(s.routing.expectedReadHit, s.routing.n)}`)
   L.push(`- errori harness: ${s.errors} · costo API dichiarato: $${s.costUsd}`)
+  if (s.personalCopyReads) L.push(`- ⚠ letture della copia PERSONALE della skill (contaminazione, escluse dai conteggi): ${s.personalCopyReads}`)
+  if (s.aborted) L.push(`- ⚠ **RUN ABORTITO: ${s.aborted}**`)
   if (s.routing.perCase.length) {
     L.push('\n| caso | skill | riferimenti letti | atteso | hit |')
     L.push('|---|---|---|---|---|')
@@ -212,15 +253,21 @@ function sha256(text) {
   return createHash('sha256').update(text, 'utf8').digest('hex')
 }
 
-function claudeEnv() {
+function claudeEnv(fakeHome = null) {
   const env = { ...process.env }
   delete env.CLAUDECODE
+  if (fakeHome) {
+    env.HOME = fakeHome
+    env.XDG_CONFIG_HOME = join(fakeHome, '.config')
+    env.XDG_CACHE_HOME = join(fakeHome, '.cache')
+    env.XDG_DATA_HOME = join(fakeHome, '.local', 'share')
+  }
   return env
 }
 
 function parseArgs(argv) {
   const o = {}
-  const allowed = new Set(['model', 'kind', 'ids', 'max-turns', 'out', 'skill-src', 'probe'])
+  const allowed = new Set(['model', 'kind', 'ids', 'max-turns', 'out', 'skill-src', 'probe', 'hermetic', 'keep-workdir'])
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i]
     if (a.startsWith('--')) {

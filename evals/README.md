@@ -121,12 +121,23 @@ stesso caso). Un run in **errore non è un verdetto**: non conta né come pass n
 i run incompleti disattivano media e intervallo. Il flip misura la varianza dell'intera
 pipeline (editor + giudice insieme), non del solo editor.
 
+Un braccio può essere la **fusione dichiarata** di più directory, separate da virgola
+(`node evals/stability.mjs r/A r/B1,r/B2`): serve per i run spezzati dal limite di sessione
+e completati con `--resume` o con un blocco supplementare. La fusione pretende meta omogenei
+(stessi modelli, stessa skill, stessa suite), deduplica per (caso, run) preferendo i verdetti
+validi, e se i meta dichiarano i casi attesi segnala le **righe assenti** (media marcata come
+non affidabile). Il confronto fra bracci verifica anche il fingerprint della suite.
+
 > **Operativo — un braccio alla volta.** Le esecuzioni lunghe vanno lanciate **in sequenza**,
 > mai in parallelo: due bracci da 27×3 più un harness concorrenti esauriscono il limite di
 > sessione del piano (`api_error_status: 429, "You've hit your session limit"`) e il runner,
 > correttamente fail-closed, registra decine di errori — righe perse, mai convertite in pass.
 > È successo il 15 lug 2026: il primo tentativo di misura di stabilità è morto a metà per
-> questo; l'artefatto non è stato promosso a riferimento.
+> questo; l'artefatto non è stato promosso a riferimento. Da allora il runner **abortisce**
+> al primo errore da limite di sessione invece di macinare chiamate a vuoto, e riparte con
+> `--resume <dir>`: riesegue solo le coppie (caso, run) assenti o in errore, ad append sullo
+> stesso `results.jsonl` (fingerprint e modelli devono coincidere col run originale). Con
+> `--fail-under <0..1>` il run diventa un gate: exit ≠ 0 sotto soglia o con errori.
 
 ## Attivazione e instradamento nel client reale (`activation.mjs`)
 
@@ -145,3 +156,12 @@ I casi vivono in `activation-cases.json`. Metriche: tasso di attivazione sui pos
 attivazioni spurie sui negativi, e per i casi routing quali `references/*.md` sono stati
 letti rispetto all'atteso. ⚠ Misura il comportamento del client (che cambia col CLI e col
 modello): va letta come fotografia datata, non come proprietà stabile della skill.
+
+⚠ **L'ambiente non è ermetico per default:** HOME resta quello reale, quindi una copia
+personale della skill in `~/.claude/skills` può rispondere al posto della candidata.
+L'harness classifica i percorsi: `skillFired` e il routing contano **solo la copia di
+progetto** nella workdir; le letture della copia personale finiscono in
+`personalCopyReads` (contaminazione, riportata nel summary). Con `--hermetic` HOME e
+`XDG_*` puntano a una home usa-e-getta — isolamento vero, ma opt-in perché su macchine
+dove le credenziali del CLI vivono su disco (non nel keychain) può rompere l'auth. La
+workdir temporanea viene rimossa a fine run, salvo `--keep-workdir`.
