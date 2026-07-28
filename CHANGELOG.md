@@ -11,6 +11,26 @@ il [Versionamento Semantico](https://semver.org/lang/it/).
 modifica alla skill: strumenti di misura e artefatti. Le fotografie a n=1 diventano stime con
 intervallo.
 
+### Corretto (misura — decontaminazione della suite, dal quinto audit)
+
+- **Tre casi erano ricalcati su esempi contenuti nella skill stessa** — non dichiarato
+  finora, ed è il rilievo più serio del quinto audit: l'eval #5 usava *verbatim* l'esempio
+  ✗ di `punteggiatura.md` (virgola fra soggetto e verbo del «bollettino meteorologico»);
+  l'eval #13 conteneva due esempi canonici di `stile-naturale.md` §9 («gratuito, non a
+  pagamento»; «non è una scelta tecnica: è organizzativa»); il caso di routing #31 era
+  ricalcato sulle frasi ✗ dei §58-60. Nei bracci con skill, su quei casi si misurava il
+  **recall dell'esempio**, non la generalizzazione della regola. Riscritti con **struttura
+  e discriminanti identici ma lessico nuovo**, verificato assente da SKILL.md, riferimenti
+  e single-file (le parole-famiglia dei pattern — *in senso stretto*, *asse* — restano:
+  sono il pattern, non l'esempio). I numeri di riferimento della 2.15.1 restano validi
+  come storia; la rimisura mirata dei casi decontaminati è documentata nel README del
+  riferimento.
+- **Negativi di attivazione: cinque casi di confine nuovi (#37-41)** — estrazione di dati
+  da testo italiano, scrittura in inglese, traduzione IT→EN, riassunto EN→EN, conteggio
+  parole. I dieci esistenti erano tutti «facili» (Python, ricette, TCP/UDP); i nuovi
+  stanno al confine vero del perimetro. Da rieseguire a ogni modifica di description o
+  contratto di lettura: il claim «spurie 0/10» era fermo alla 2.13.1.
+
 ### Aggiunto (harness, dal quinto audit — 28 luglio)
 
 - **Il runner impara a fermarsi e a riprendere.** Su un errore da limite di sessione
