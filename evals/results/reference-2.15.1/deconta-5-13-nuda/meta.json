@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 3,
+  "label": "deconta-nuda",
+  "stamp": "2026-07-28T21-48-35-518Z",
+  "argv": [
+    "--ids",
+    "5,13",
+    "--runs",
+    "3",
+    "--no-skill",
+    "--model",
+    "claude-sonnet-5",
+    "--judge-model",
+    "claude-opus-4-8",
+    "--label",
+    "deconta-nuda",
+    "--out",
+    "evals/results/reference-2.15.1/deconta-5-13-nuda"
+  ],
+  "git": {
+    "sha": "edfc7f4",
+    "dirty": true
+  },
+  "skill": {
+    "source": null,
+    "sha256": null,
+    "bytes": 0,
+    "noSkill": true
+  },
+  "suite": {
+    "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/evals.json",
+    "sha256": "e74357b70bb93dbb5c29c4104d3acee8c4efc4dfa30479579e9ffcda7c3fb789",
+    "bytes": 27478
+  },
+  "manifest": {
+    "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/manifest.json",
+    "sha256": "c0ffbbe4a35b818fc7f36d7078827dd5722a10c72ec34ae68df32a904a7753ca",
+    "bytes": 4487
+  },
+  "editorModel": "claude-sonnet-5",
+  "judgeModel": "claude-opus-4-8",
+  "sameModel": false,
+  "runs": 3,
+  "splitFilter": "dev",
+  "claudeVer": "2.1.220 (Claude Code)",
+  "node": "v24.15.0",
+  "ids": [
+    5,
+    13
+  ]
+}

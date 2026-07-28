@@ -1,0 +1,50 @@
+{
+  "total": 6,
+  "pass": 3,
+  "err": 0,
+  "passRate": 0.5,
+  "invented": 0,
+  "costUsd": 1.1986,
+  "modelsUsed": [
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-5",
+    "claude-opus-4-8"
+  ],
+  "resolvedOverlap": [],
+  "byTarget": {
+    "minimal": {
+      "pass": 2,
+      "fail": 1,
+      "err": 0,
+      "invented": 0
+    },
+    "mixed": {
+      "pass": 1,
+      "fail": 2,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "bySplit": {
+    "dev": {
+      "pass": 3,
+      "fail": 3,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "perEval": {
+    "5": {
+      "name": "grammatica-minima",
+      "target": "minimal",
+      "pass": 2,
+      "n": 3
+    },
+    "13": {
+      "name": "bipolare-misto",
+      "target": "mixed",
+      "pass": 1,
+      "n": 3
+    }
+  }
+}

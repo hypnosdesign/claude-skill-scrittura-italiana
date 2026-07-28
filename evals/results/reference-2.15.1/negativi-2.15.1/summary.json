@@ -1,0 +1,20 @@
+{
+  "total": 15,
+  "errors": 0,
+  "personalCopyReads": 0,
+  "costUsd": 0.8558,
+  "positive": {
+    "n": 0,
+    "fired": 0
+  },
+  "negative": {
+    "n": 15,
+    "fired": 0
+  },
+  "routing": {
+    "n": 0,
+    "fired": 0,
+    "expectedReadHit": 0,
+    "perCase": []
+  }
+}

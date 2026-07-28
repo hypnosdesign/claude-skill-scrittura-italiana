@@ -127,3 +127,35 @@ R=evals/results/reference-2.15.1
 node evals/stability.mjs $R/stabilita-completa $R/stabilita-base-nuda,$R/stabilita-base-nuda-suppl
 # → 16/26 · 18/27 · 20/26 (media 18,0) · flip 8/27 · invenzioni 9 · err 2 — identico ai numeri pubblicati
 ```
+
+## Addendum 29 luglio 2026 — decontaminazione e negativi rimisurati (quinto audit)
+
+Il quinto audit ha trovato tre casi ricalcati su esempi **contenuti nella skill**
+(#5 = esempio ✗ di `punteggiatura.md`; #13 con due esempi canonici di §9; routing #31
+ricalcato sui §58-60): su quei casi il braccio con skill misurava il recall dell'esempio,
+non la regola. Riscritti con struttura identica e lessico nuovo (assente da SKILL.md,
+riferimenti e single-file), poi rimisurati in modo mirato — stessa coppia
+`claude-sonnet-5` / `claude-opus-4-8` dei riferimenti:
+
+- **`deconta-5-13-completa/` — con skill: 6/6 (3/3 + 3/3), 0 invenzioni.** La
+  generalizzazione regge: il 99% della stabilità non era memorizzazione, almeno su
+  questi due casi.
+- **`deconta-5-13-nuda/` — senza skill: 3/6** (#5 2/3, #13 1/3). Il delta sui casi
+  decontaminati conferma quello storico.
+- **`deconta-routing-31-r1..r3/` — instradamento: 3/3 aperture di
+  `stile-naturale.md`** sul prompt riscritto. ⚠ **Provenienza dichiarata:** le letture
+  sono avvenute sulla copia PERSONALE installata in `~/.claude/skills` (il client la
+  preferisce alla copia di progetto della workdir), **byte-identica** alla 2.15.1 del
+  repo (sha SKILL.md `b1abb957…` uguale, `stile-naturale.md` identico): il
+  comportamento misurato è quindi della stessa skill, ma l'harness non stava misurando
+  la copia che credeva. Dal 28 luglio `activation.mjs` classifica le due copie e conta
+  il routing solo sulla copia di progetto (per questo la colonna `hit` di questi run
+  è ✘ con la lettura riportata fra le `personalCopyReads`). Il flag `--hermetic` su
+  questa macchina **rompe l'auth del CLI** (run in errore, $0, artefatto non
+  promosso): per misurare una **candidata** diversa dall'installata serve spostare
+  temporaneamente la copia personale.
+- **`negativi-2.15.1/` — attivazioni spurie: 0/15**, con i dieci negativi storici più
+  cinque **casi di confine nuovi** (#37-41: estrazione dati da testo italiano,
+  scrittura in inglese, traduzione IT→EN, riassunto EN→EN, conteggio parole). Il
+  claim «spurie 0/10», fermo alla 2.13.1, è ora rimisurato sul perimetro allargato
+  della 2.15.x.
