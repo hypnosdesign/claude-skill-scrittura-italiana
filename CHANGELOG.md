@@ -23,13 +23,19 @@ intervallo.
   e discriminanti identici ma lessico nuovo**, verificato assente da SKILL.md, riferimenti
   e single-file (le parole-famiglia dei pattern — *in senso stretto*, *asse* — restano:
   sono il pattern, non l'esempio). I numeri di riferimento della 2.15.1 restano validi
-  come storia; la rimisura mirata dei casi decontaminati è documentata nel README del
-  riferimento.
+  come storia; la rimisura mirata (n=3, `claude-sonnet-5`/`claude-opus-4-8`) dice che la
+  generalizzazione regge: **con skill 6/6 e 0 invenzioni sui casi riscritti, senza skill
+  3/6**; routing #31 riscritto: **3/3 aperture della scheda attesa** — avvenute però
+  sulla copia personale installata (byte-identica alla 2.15.1: provenienza dichiarata
+  nell'addendum del riferimento; `--hermetic` su questa macchina rompe l'auth del CLI,
+  run in errore non promosso).
 - **Negativi di attivazione: cinque casi di confine nuovi (#37-41)** — estrazione di dati
   da testo italiano, scrittura in inglese, traduzione IT→EN, riassunto EN→EN, conteggio
   parole. I dieci esistenti erano tutti «facili» (Python, ricette, TCP/UDP); i nuovi
-  stanno al confine vero del perimetro. Da rieseguire a ogni modifica di description o
-  contratto di lettura: il claim «spurie 0/10» era fermo alla 2.13.1.
+  stanno al confine vero del perimetro. Il claim «spurie 0/10» era fermo alla 2.13.1:
+  rimisurato sul perimetro allargato della 2.15.x — **spurie 0/15**
+  (`reference-2.15.1/negativi-2.15.1`). Da rieseguire a ogni modifica di description o
+  contratto di lettura.
 
 ### Aggiunto (harness, dal quinto audit — 28 luglio)
 
