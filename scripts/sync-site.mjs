@@ -72,6 +72,17 @@ for (const name of htmlFiles) {
   if (/[—]/.test(html)) invalid.push(`${name}: contiene un em dash`);
   if (/(?:Fraunces|Newsreader|JetBrains Mono)/.test(html)) invalid.push(`${name}: contiene una famiglia tipografica dismessa`);
 
+  const ogImage = html.match(/property="og:image"\s+content="([^"]+)"/)?.[1];
+  if (ogImage) {
+    if (/\.svg(?:[?#]|$)/i.test(ogImage)) invalid.push(`${name}: og:image punta a un SVG (i crawler social non lo renderizzano)`);
+    const ogFile = ogImage.split("/").pop().split(/[?#]/, 1)[0];
+    try {
+      await stat(join(docs, "assets", ogFile));
+    } catch {
+      broken.push(`${name}: og:image non trovato in docs/assets (${ogFile})`);
+    }
+  }
+
   for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
     const target = match[1];
     if (/^(?:https?:|mailto:)/.test(target)) continue;

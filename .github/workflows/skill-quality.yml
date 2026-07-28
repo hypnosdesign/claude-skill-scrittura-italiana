@@ -11,6 +11,11 @@ on:
       - "build-single-file.py"
       - "scrittura-italiana-single-file.md"
       - "scripts/check-description.mjs"
+      - "scripts/check-versions.mjs"
+      - "README.md"
+      - "FAQ.md"
+      - "ESEMPI.md"
+      - "CHANGELOG.md"
       - ".github/workflows/skill-quality.yml"
   push:
     branches: [main]
@@ -21,6 +26,11 @@ on:
       - "build-single-file.py"
       - "scrittura-italiana-single-file.md"
       - "scripts/check-description.mjs"
+      - "scripts/check-versions.mjs"
+      - "README.md"
+      - "FAQ.md"
+      - "ESEMPI.md"
+      - "CHANGELOG.md"
       - ".github/workflows/skill-quality.yml"
 
 permissions:
@@ -40,6 +50,8 @@ jobs:
         run: node evals/run.mjs --validate-only
       - name: Lunghezza della description (limite Desktop/claude.ai)
         run: node scripts/check-description.mjs
+      - name: Coerenza della versione (frontmatter, badge, CHANGELOG)
+        run: node scripts/check-versions.mjs
       - name: Freschezza del single-file (ricostruzione + diff)
         run: |
           python3 build-single-file.py

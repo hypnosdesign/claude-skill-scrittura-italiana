@@ -11,6 +11,23 @@ il [Versionamento Semantico](https://semver.org/lang/it/).
 modifica alla skill: strumenti di misura e artefatti. Le fotografie a n=1 diventano stime con
 intervallo.
 
+### Corretto (igiene, da un quinto audit — 28 luglio)
+
+- **`dubbi-e-errori.md` §9:** la voce *imparare/insegnare* invertiva il pattern «✗ errore →
+  ✓ corretto» del repertorio (l'✗ cadeva visivamente su *insegnare*). Riformulata; propagata
+  al single-file.
+- **`og:image` in PNG:** i crawler social non renderizzano gli SVG — l'anteprima di
+  condivisione era assente nonostante `twitter:card` dichiarata. Ora `og-image.png` 1200×630
+  generata dall'SVG sorgente (che perde la versione «v2.13.0» fossilizzata nel testo:
+  l'immagine non dichiara più una versione che invecchia). Guardia in `sync-site.mjs`:
+  og:image mai SVG, file presente in `docs/assets`.
+- **Guardia di coerenza della versione (`scripts/check-versions.mjs`):** frontmatter, badge
+  di README/FAQ/ESEMPI e prima release del CHANGELOG confrontati in CI; i tre md entrano nei
+  path-filter di `skill-quality.yml`. Finora l'allineamento era disciplina manuale.
+- **README:** l'albero del repo elenca anche `stability.mjs`, `stability.test.mjs` e
+  `activation-cases.json` (nati con la misura di stabilità). Postilla di chiusura ai due
+  TODO storici di `AUDIT-2026-07.md` (sito allineato in `0c39c59`).
+
 ### Aggiunto (misura)
 
 - **`evals/stability.mjs` + test** — digest deterministico per run multipli

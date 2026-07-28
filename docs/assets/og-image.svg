@@ -3,7 +3,7 @@
   <desc id="desc">Revisione fedele, prosa naturale</desc>
   <rect width="1200" height="630" fill="#2154c9"/>
   <circle cx="1070" cy="95" r="220" fill="#173477" opacity=".55"/>
-  <text x="72" y="90" fill="#f5f7fc" font-family="Arial, sans-serif" font-size="28" font-weight="700">scrittura italiana · v2.13.0</text>
+  <text x="72" y="90" fill="#f5f7fc" font-family="Arial, sans-serif" font-size="28" font-weight="700">scrittura italiana</text>
   <text x="72" y="238" fill="#f5f7fc" font-family="Arial, sans-serif" font-size="98" font-weight="800" letter-spacing="-5">Scrivi meglio.</text>
   <text x="72" y="342" fill="#ffa087" font-family="Arial, sans-serif" font-size="98" font-weight="800" letter-spacing="-5">Resta tu.</text>
   <g transform="translate(720 220) rotate(2)">

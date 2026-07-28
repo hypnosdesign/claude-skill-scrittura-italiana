@@ -164,7 +164,7 @@ tutti*); definizioni ed esempi originali. `✓` = corretto, `✗` = da evitare.
   ✗ a lavoro → ✓ al lavoro; ✗ settimana prossima → ✓ la settimana prossima.
 - **Preposizioni, errori frequenti:** ✗ contro lui → ✓ contro di lui; ✗ riguardo qualcosa →
   ✓ riguardo a qualcosa; ✗ a gratis → ✓ gratis; ✗ poco a poco → ✓ a poco a poco;
-  ✗ insegnare → imparare a qualcuno (✓ insegnare a qualcuno); ✗ immune a → ✓ immune da;
+  ✗ imparare qualcosa a qualcuno (nel senso di insegnare) → ✓ insegnare qualcosa a qualcuno; ✗ immune a → ✓ immune da;
   ✗ dentro me → ✓ dentro di me; ✗ davanti la palestra → ✓ davanti alla palestra; ✗ tifo alla
   Fiorentina → ✓ tifo per…; ✗ vicino casa → ✓ vicino a casa.
 - **Reggenze da verificare (sul dizionario, alla voce del verbo/nome):** ✗ confondere qualcuno
