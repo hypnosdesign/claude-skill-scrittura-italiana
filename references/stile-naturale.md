@@ -10,10 +10,10 @@ l'italiano. Complementare a `punteggiatura.md`: lì la *correttezza*, qui la *na
 > perifrasi astratte, latinismi, burocratese). Suona "tradotto da una macchina che ha
 > studiato all'università": pomposo, prevedibile, senza ritmo.
 
-**Mappa del file:** Dare voce; A contenuto; B lingua e grammatica; C stile e tipografia;
-D residui da chatbot; E riempitivi e cautele; F antilingua; G verità e misura; H scuola,
-copy e tic recenti; I prosa saggistico-accademica; J slop da assistente e invarianti
-semantiche; audit finale.
+**Mappa del file:** Dare voce; A contenuto; B lingua e grammatica (con la nota «Quando il
+compito è tradurre»); C stile e tipografia; D residui da chatbot; E riempitivi e cautele;
+F antilingua; G verità e misura; H scuola, copy e tic recenti; I prosa saggistico-accademica;
+J slop da assistente e invarianti semantiche; audit finale.
 
 ---
 
@@ -139,6 +139,22 @@ Sostituisci con un fatto concreto.
 > La spia comune:
 > una costruzione *grammaticalmente possibile* in italiano ma che un nativo non sceglierebbe,
 > perché suona "tradotta".
+
+> **Quando il compito è tradurre (verso l'italiano).** La traduzione è il luogo dove questi
+> calchi *nascono*: questa sezione è la checklist principale — in particolare §13 (pronome
+> soggetto, passivo), §14 (*-ing* → gerundite), §15 (aggettivo valutativo anteposto), §19
+> (paratassi a corsa), §24 (*title case*) e §74 (falsi amici: *make sense, consistent,
+> realize, evidence*). Tre regole in più, proprie del tradurre:
+> - **il contratto di conservazione vale verso la fonte:** modalità, polarità, condizioni,
+>   registro e ironia dell'originale si trasferiscono, non si "migliorano" — l'eleganza non
+>   autorizza omissioni né aggiunte, e i difetti *di contenuto* della fonte restano suoi
+>   (segnalali a parte, non correggerli in silenzio);
+> - **traduci il registro, non solo le parole** (aptum): un'email informale inglese diventa
+>   un'email informale italiana, non una lettera formale; i tecnicismi seguono l'uso del
+>   dominio di arrivo (`spiegare-con-chiarezza.md` §5);
+> - **sciogli la sintassi, non ricalcarla:** l'ordine naturale dell'italiano (soggetto
+>   implicito, aggettivo dopo il nome, subordinate esplicite dove l'inglese giustappone)
+>   viene prima della corrispondenza riga-per-riga.
 
 **7. Vocabolario AI ad alta frequenza.** *cruciale, fondamentale, imprescindibile;
 evidenziare, sottolineare, mettere in luce; valorizzare, esaltare; intricato, articolato,

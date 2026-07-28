@@ -99,6 +99,9 @@ non sono facoltative):
 | **deep rewrite / scrivere da zero** | **Parte C** (§1-2, §6) **+** il file del genere: **Parte G** (divulgare/documentare), **Parte H** (raccontare) | **Parte I** per la lima |
 | **argomentare / costruire una tesi** | **Parte C** §5-7 | **Parte D** |
 | **spiegare / divulgare** (anche breve) | **Parte G** | **Parte C** §2a (preset divulgazione) |
+| **riassumere** | **Parte C** §8 (gerarchizzare, **mai aggiungere**) | **Parte D** se il riassunto deve reggersi da solo |
+| **tradurre (verso l'italiano)** | **Parte E** → nota «Quando il compito è tradurre» + Parte B | la scheda del dubbio in **Parte B** |
+| **discorso / testo per l'ascolto** | **Parte C** §4 (blocco ascolto) e §2a (preset discorso) | **Parte C** §6 (*dispositio*) |
 | **domanda di lingua** | la scheda pertinente se il nucleo non basta; **sempre** per le norme oscillanti (d eufonica, *sé stesso*, *piuttosto che*, maiuscole, cognomi, virgolette): lì la taratura vive nella scheda, non nella memoria del modello | — |
 | **testo lungo (>~1.500 parole)** | come sopra per il livello; poi procedi per capitoli, a censimenti in batch (**Parte E** §9) | — |
 
@@ -117,6 +120,9 @@ non sono facoltative):
 - L'utente chiede aiuto a **argomentare** (costruire una tesi, ordinare le ragioni), a **far
   scorrere** un testo (coesione, connettivi, "non si capisce il filo"), a **riassumere**, o a
   **spiegare** qualcosa di complesso con chiarezza.
+- L'utente chiede di **tradurre verso l'italiano**: l'output è prosa italiana e valgono le
+  stesse virtù — con i calchi dall'inglese come rischio principale (vedi instradamento).
+  (Tradurre *dall'*italiano verso un'altra lingua resta fuori perimetro.)
 - L'utente fa una **domanda di lingua**: punteggiatura/tipografia ("ci va la virgola?",
   "caporali o virgolette?"), grammatica/sintassi ("congiuntivo o indicativo?", "che tempo qui?"),
   oppure di stile/retorica ("come rendo più efficace questo passaggio?", "che registro uso?").
@@ -208,17 +214,23 @@ stile, calibrati su quello invece di appiattire a un italiano neutro.
 
 **Apri i riferimenti previsti dall'instradamento** (**Parte C** + il
 file del genere) **prima di stendere**, non dopo: il preset di registro e la *dispositio*
-guidano la stesura, non la correggono. Poi:
-fissa prima **aptum** (scopo → stile: *docere*=tenue, *delectare*=medio, *movere*=alto;
-vedi **Parte C** §2). Imposta la **dispositio** (come entri, come articoli, come
-chiudi: **Parte C** §6) e tieni il **filo** (**Parte D**). Poi scrivi
-già rispettando le virtù: non produrre prosa da ripulire dopo. Chiudi con l'**audit anti-AI** e la
-**checklist tipografica**.
+guidano la stesura, non la correggono. Poi quattro passi:
+
+1. **Brief (aptum).** Scopo → stile (*docere*=tenue, *delectare*=medio, *movere*=alto:
+   **Parte C** §2), destinatario, registro; e la tesi o il filo **in una riga**
+   (*rem tene*, **Parte I** §5): se non si lascia dire, l'idea non è pronta.
+2. **Materia.** Lavora coi fatti forniti o verificabili; ogni vuoto diventa un segnaposto
+   (*[dato da verificare]*), mai un riempitivo plausibile (contratto di conservazione).
+3. **Dispositio.** Come entri, come articoli, come chiudi (**Parte C** §6);
+   il filo fra frasi e capoversi (**Parte D**).
+4. **Stesura e audit.** Scrivi già rispettando le virtù — non produrre prosa da ripulire
+   dopo — e chiudi con l'**audit anti-AI** e la **checklist tipografica**.
 
 A seconda del genere, apri il riferimento dedicato: **argomentare/persuadere** →
 **Parte C** §5, §7-8; **divulgare/documentare** (spiegare cose complesse, numeri,
 termini tecnici) → **Parte G**; **narrativa** (idea, punto di vista, licenze) →
-**Parte H**; **scegliere la parola giusta e rivedere** → **Parte I**.
+**Parte H**; **discorso / testo per l'ascolto** → **Parte C** §4 e §2a;
+**scegliere la parola giusta e rivedere** → **Parte I**.
 
 ---
 
@@ -296,57 +308,39 @@ termini tecnici) → **Parte G**; **narrativa** (idea, punto di vista, licenze) 
 
 ## Indice dei riferimenti
 
-- ****Parte A**** — *puritas: i segni*. Scheda per ogni segno (virgola,
-  punto e virgola, due punti, punto, interrogativo, esclamativo, virgolette, lineette/trattini,
-  parentesi, puntini, barra/asterisco, **apostrofo tipografico, numeri/date/percentuali,
-  corsivo**, abbreviazioni e sigle, a capo, maiuscole/minuscole), con regole, errori comuni ed
-  esempi.
-- ****Parte B**** — *puritas: le parole e la sintassi*. Repertorio di dubbi ed
-  errori comuni: accenti, omofoni, apostrofo/elisione/troncamento, *sé stesso*, ortografia
-  insidiosa, plurali difficili e doppi, pronomi (tu/te, gli/le, ne), avverbi, preposizioni, «che»
-  polivalente, ausiliari; **sintassi del verbo** (congiuntivo vs indicativo, *consecutio temporum*,
-  periodo ipotetico, accordo del participio, modi espressivi, soggetto delle implicite);
-  **morfosintassi** (forme dell'articolo *il/lo/gli, un/uno*; pronomi combinati *glielo/gliene* e
-  risalita clitica; *si* passivante vs impersonale; comparativi/superlativi organici; concessive e
-  temporali; dislocazioni e frase scissa; articolo partitivo e con possessivi/cognomi; posizione
-  dell'aggettivo; concordanza del verbo e dell'aggettivo; numerali; indefiniti; genere che cambia
-  significato); e il **digitato** (punto, punto e virgola, emoji, maiuscole espressive in chat e social).
-- ****Parte C**** — *scrivere bene*. Le 4 virtù dell'espressione, i 3
-  stili (tenue/medio/sublime ↔ docere/delectare/movere) con i **preset di registro per genere**
-  (§2a), repertorio essenziale di figure (tropi, figure di parola e di pensiero), *compositio*
-  (ordine/ritmo/eufonia), argomentazione per *tópoi* e **costruzione del testo (*dispositio*:
-  iniziare/andare avanti/chiudere, voce ed *ethos*, buona vs cattiva retorica)**; **costruire la
-  tesi** (selezionare, gerarchizzare, errori argomentativi) con l'**esame critico red-team**
-  (§7a), **riassumere** e il **discorso riferito**.
-- ****Parte E**** — *togliere lo slop*. Pattern dell'italiano AI (contenuto,
-  grammatica, stile, comunicazione, riempitivi) con parole-spia e prima→dopo; **l'antilingua e
-  l'affettazione all'italiana (sostituzione colta, verbo+astratto, parole di plastica, less is
-  more) e la guardia "verità e misura" (pathos, vaghezza, timidezza)**; **i tic della prosa
-  saggistico-accademica** (catene di transizione fra autori, glosse di pseudo-precisione,
-  nomi-ombrello dell'accademica umanistica, autoriferimento metatestuale, meta-frasi di
-  sintesi, *«resta vero che»*, autovalutazioni di precisione); **lo slop da assistente e
-  semantico (Parte J)** — voce conversazionale (chat/email), struttura da chatbot e markdown
-  compulsivo, falso bilanciamento, pivot al "significato più ampio", concretezza finta, *noi*
-  cosmico, verbi-ombrello pseudo-poetici, calchi semantici (falsi amici), più le invarianti
-  modale ed epistemica contro erosione delle qualificazioni e fonti aggiunte; sezione "Dare voce" (con l'argine *non fabbricare
-  soggettività*) e audit finale.
-- ****Parte F**** — *non pensare per formule*. Repertorio di
-  parole alla moda, locuzioni e tormentoni, formule d'elogio trite, luoghi comuni, metafore
-  morte, **plastismi e aggettivi obbligatori**, e i **cliché del discorso scientifico**.
-- ****Parte D**** — *il filo del discorso*. Coesione (tema/rema,
-  ganci, capoverso) vs coerenza (il "filo rosso"); **tassonomia dei connettivi** (le quattro
-  famiglie + quelli di bilanciamento) e i loro errori. Per testi che "non si capiscono" o "non
-  scorrono".
-- ****Parte G**** — *divulgare e documentare*. Spiegare cose complesse:
-  chiarezza ≠ semplificazione, astratto→concreto (esempi), numeri contestualizzati, gestione del
-  termine tecnico, metafore esplicative, anti-hype. Per divulgazione, documentazione, testi tecnici.
-- ****Parte H**** — *raccontare*. La *scelta dell'idea* (il "dinosauro" vs la trama,
-  le forme dell'idea, il punto di vista, la licenza) e il *mestiere*: personaggio (desiderio,
-  azione), trama e conflitto, mostrare/raccontare, dialogo e sottotesto, descrizione, tensione e non
-  detto, voce narrativa, tema, revisione. Per racconto e romanzo.
+- ****Parte A**** — *puritas: i segni*. Una scheda per segno (virgola, punto
+  e virgola, due punti, punto, `? !`, virgolette, lineette/trattini e dialogo narrativo,
+  parentesi, puntini, barra/asterisco), più apostrofo tipografico, numeri/date, corsivo,
+  **elenchi puntati, richiami di nota**, maiuscole, abbreviazioni e sigle.
+- ****Parte B**** — *puritas: le parole e la sintassi*. Accenti, omofoni,
+  apostrofo, ortografia insidiosa, plurali, pronomi, preposizioni, «che» polivalente, ausiliari;
+  congiuntivo e *consecutio*, periodo ipotetico, participio, soggetto delle implicite;
+  morfosintassi (articoli, clitici e risalita, *si*, comparativi, concessive, dislocazioni,
+  concordanze, numerali, indefiniti); e il **digitato** (chat e social).
+- ****Parte C**** — *scrivere bene*. Le 4 virtù e il livello di
+  controllo; i 3 stili con i **preset di registro per genere** (§2a); le figure; *compositio*
+  e **testi per l'ascolto** (§4); i *tópoi* (§5); la *dispositio* (§6); **costruire la tesi**
+  con l'esame critico red-team (§7-7a); **riassumere** (§8); il discorso riferito (§9).
+- ****Parte E**** — *togliere lo slop*. I pattern dell'italiano AI con
+  parole-spia e prima→dopo: contenuto, calchi strutturali dall'inglese, tipografia, residui da
+  chatbot, riempitivi, antilingua, verità e misura, tic scolastici e del copy (§1-57); i tic
+  della prosa **saggistico-accademica** (§58-65); lo **slop da assistente e semantico** con le
+  invarianti modale ed epistemica (Parte J, §66-75); la nota **«Quando il compito è
+  tradurre»**; «Dare voce» (con l'argine *non fabbricare soggettività*) e l'audit finale.
+- ****Parte F**** — *non pensare per formule*. Parole alla moda,
+  tormentoni, elogi triti, luoghi comuni, metafore morte, plastismi, cliché scientifici.
+- ****Parte D**** — *il filo del discorso*. Coesione vs coerenza,
+  tema/rema e ganci, tassonomia dei connettivi coi loro errori, capoverso, filo rosso. Per
+  testi che "non si capiscono" o "non scorrono".
+- ****Parte G**** — *divulgare e documentare*. Chiarezza ≠
+  semplificazione, astratto→concreto, numeri contestualizzati, termine tecnico, metafore
+  chiuse, anti-hype, mosse del divulgatore.
+- ****Parte H**** — *raccontare*. L'idea (il "dinosauro") e il punto di vista;
+  il mestiere: personaggio, trama, mostrare/raccontare, dialogo, descrizione, tensione, voce,
+  tema, revisione.
 - ****Parte I**** — *la parola giusta e la lima*. La proprietà
-  (*le mot juste*, "non esistono sinonimi"), il collaudo letterale delle metafore, gli
-  intensificatori, la revisione a freddo (cavare dal pieno, lettore-cavia).
+  (*le mot juste*), gli intensificatori, il collaudo letterale delle metafore, la revisione a
+  freddo, riscrivere per scoprire.
 
 ---
 
@@ -355,16 +349,25 @@ termini tecnici) → **Parte G**; **narrativa** (idea, punto di vista, licenze) 
 Quando **correggi**, fornisci: (1) il **testo corretto**; (2) *se utile*, una nota breve su
 **cosa lo rendeva scorretto / AI / inefficace** e le scelte fatte (puoi inquadrarle per virtù).
 
+Quando l'utente chiede **solo la diagnosi** («dimmi cosa non va», «non riscrivere»), consegna
+il **referto senza testo corretto**: i problemi veri, per virtù, ciascuno ancorato a un punto
+preciso del testo — la riscrittura arriva solo se poi la chiede.
+
 Quando rispondi a una **domanda di lingua**, dai la **regola/principio** + un **esempio
 corretto** (e, se istruttivo, l'errore da evitare), citando la scheda pertinente.
 
-## Lavorare su file (agenti)
+## Lavorare su file e in sessione
 
 Quando il testo sta in un file e hai strumenti (Claude Code e simili):
 
 - **Leggi il file per intero prima di giudicare.** Per i testi lunghi dichiara il piano
   (passate, riferimenti, batch per capitoli) e procedi a censimenti per sezione
   (**Parte E** §9), non a riscritture monolitiche.
+- **Scheda di norme redazionali (testi lunghi).** Alla prima passata, fissa le scelte sulle
+  norme oscillanti che il testo pone (tipo di virgolette, *sé stesso/se stesso*, d eufonica,
+  cifre o lettere, *anni Trenta/anni '30*, maiuscole di cortesia) e applicale **uniformi** in
+  tutti i batch successivi: la coerenza fra il capitolo 1 e il capitolo 7 non può dipendere
+  dal caso. Dichiara la scheda all'utente alla prima consegna; se una scelta è sua, vince.
 - **A livello proofread/line edit preferisci modifiche mirate** (edit puntuali): il resto del
   file resta intatto — la stabilità che il testo funzionale richiede. La riscrittura integrale
   è da livello deep, e va annunciata.
@@ -374,6 +377,19 @@ Quando il testo sta in un file e hai strumenti (Claude Code e simili):
 - **I finder automatici trovano candidati, non verdetti:** ogni occorrenza trovata da un
   pattern (es. le varianti del bipolare) passa dal giudizio nel contesto, mai dalla
   sostituzione automatica.
+
+E quando la revisione prosegue su più turni (chat o file, vale lo stesso):
+
+- **Il veto dell'utente è un dato, non un errore da ricacciare.** Ciò che l'utente ha
+  ripristinato, riscritto a modo suo o esplicitamente rifiutato **non si ricorregge** nei
+  turni successivi, e non si commenta come difetto: al più, una volta sola, si segnala un
+  rischio oggettivo (un errore di *puritas*), poi la scelta è sua.
+- **Le scelte negoziate valgono per tutta la sessione.** Registro, tipo di virgolette,
+  *sé stesso*, livello d'intervento concordati nei primi turni si tengono coerenti fino
+  alla fine, senza rimetterli in discussione a ogni messaggio.
+- **Zero churn sul già approvato:** nei giri successivi tocca solo ciò che l'utente chiede
+  o ciò che un suo nuovo intervento ha reso scorretto — non riformulare passaggi già
+  passati al vaglio solo perché «si può fare meglio».
 
 ---
 
@@ -413,9 +429,10 @@ Sintesi azionabile da B. Mortara Garavelli, *Prontuario di punteggiatura* (Later
 2003), Parti I–II. Solo precetti ed esempi: nessuna teoria, nessuna storia.
 
 **Mappa del file:** principî generali; virgola; punto e virgola; due punti; punto fermo;
-interrogativo ed esclamativo; virgolette; lineette e trattini; parentesi; puntini; barra e
-asterisco; apostrofo tipografico; numeri, date e percentuali; corsivo; spazi, capoversi e
-paragrafi; maiuscole e minuscole; abbreviazioni e sigle.
+interrogativo ed esclamativo; virgolette (col punto di chiusura); lineette, trattini e
+dialogo narrativo; parentesi; puntini; barra e asterisco; apostrofo tipografico; numeri,
+date e percentuali; corsivo; spazi, capoversi e paragrafi; elenchi puntati e numerati;
+richiami di nota; maiuscole e minuscole; abbreviazioni e sigle.
 
 ## Principî generali (validi per TUTTI i segni)
 
@@ -631,6 +648,12 @@ maiuscola dopo di sé.
 - **Distanziamento / ironia:** le virgolette equivalgono a *cosiddetto / sedicente /
   si fa per dire*.
 - **Mai virgolette curve "all'inglese" miste a dritte:** scegli uno stile uniforme.
+- **Punto fermo e chiusura:** di norma il punto va **dopo** le virgolette di chiusura, anche
+  se la citazione è una frase compiuta: `Disse che era «una decisione presa in fretta».` Nel
+  discorso diretto autonomo introdotto dai due punti l'uso oscilla fra le case editrici
+  (punto interno o esterno): scegli — o segui lo stile della collana — e mantieni. **Mai due
+  punti fermi** (uno dentro e uno fuori); se la battuta chiude con `? !`, questi restano
+  dentro e il punto non si aggiunge (vedi «Posizione di `? ! …`»).
 - **⚠ Non abusare delle virgolette di distanziamento.** Mettile solo per ironia *vera* o per
   segnalare che la parola non è tua (citazione, gergo, neologismo dubbio). ✗ *ieri ho visto le
   "amiche del cuore"*, ✗ *ha fatto una "bella figura"* — espressioni comuni che non chiedono
@@ -655,6 +678,19 @@ maiuscola dopo di sé.
   parentesi. A fine frase la lineetta finale è neutralizzata dal punto.
 - **Discorso diretto/dialoghi:** lineetta di apertura per ogni turno; la lineetta di
   chiusura si omette, salvo quando segue l'enunciato citante. A capo a fine turno.
+
+**Punteggiare il dialogo narrativo (col citante).** Le due convenzioni maggioritarie:
+
+- **Caporali (o alte):** la virgola del citante sta **fuori** dalla chiusura — `«Vieni»,
+  disse.` Se la battuta chiude con `? !`, restano dentro e la virgola non si aggiunge:
+  `«Vieni?» chiese.` Citante in inciso: `«Vieni», disse, «è tardi».`
+- **Lineette:** lineetta d'apertura, citante fra lineette, la battuta riprende senza segno
+  d'apertura — `— Vieni, — disse — è tardi.` (Le collane variano sulla virgola prima o dopo
+  la lineetta del citante: conta scegliere **una** convenzione per tutto il libro.)
+
+⚠ Il verbo del citante resta **minuscolo** anche dopo `? !`: `«Vieni?» chiese` (non *Chiese*).
+In revisione non convertire un sistema nell'altro se il testo ne usa già uno coerente (è una
+scelta editoriale: vedi «livello di controllo»); si uniforma solo il misto.
 
 > ⚠️ **In italiano la lineetta lunga è rara.** La tipografia italiana si appoggia su
 > virgole, due punti, parentesi tonde, punto e virgola. Un testo con molte `—` è quasi
@@ -763,6 +799,36 @@ in linguistica descrittiva costrutto **agrammaticale** (`*un bello libro`).
 - **Capoverso:** porzione che inizia andando a capo (con rientro), compresa tra due "a capo".
 - **Paragrafo:** unità di contenuto autonoma (può contenere più capoversi). Simbolo `§`.
   ⚠️ Non confondere *paragrafo* e *capoverso* (calco errato dall'inglese *paragraph*).
+
+---
+
+## ELENCHI PUNTATI E NUMERATI
+
+Due convenzioni coerenti; decide la **natura delle voci**:
+
+- **Voci brevi** (sintagmi, non frasi): iniziale **minuscola**; a fine voce `;` (stile
+  tradizionale) oppure nessun segno (stile moderno) — mai mescolare i due; **punto fermo
+  all'ultima voce** (nello stile col `;`). La frase introduttiva chiude coi due punti.
+- **Voci-frase** (una o più frasi compiute): iniziale **maiuscola** e **punto** a fine di
+  ogni voce.
+
+Regole comuni: struttura **parallela** fra le voci (tutte sintagmi o tutte frasi, tutte
+rette dallo stesso attacco: non mescolare); numeri solo se ordine o conteggio contano,
+altrimenti punti elenco; la coerenza vale per l'intero documento, non per il singolo
+elenco. ⚠ Per l'elenco come *scelta di scrittura* (quando è legittimo, quando è slop da
+chatbot) vedi **Parte E** §67.
+
+---
+
+## RICHIAMI DI NOTA (esponenti)
+
+- **Rispetto alla punteggiatura:** l'uso tradizionale italiano colloca il richiamo **prima**
+  del segno (`…come nota Serianni¹.`); quello anglosassone **dopo** (`….¹`). In editoria
+  convivono per scelta di collana: **scegli e mantieni** per tutto il testo.
+- Con le **virgolette**, il richiamo va **fuori** dalla chiusura (`«…»¹`), attaccato senza
+  spazio.
+- Il richiamo si lega a **ciò che annota**: a fine frase se annota la frase, subito dopo la
+  parola (o il virgolettato) se annota quella.
 
 ---
 
@@ -1661,6 +1727,13 @@ misurato (v2.9.0); le altre sono tarature editoriali dichiarate, non misurate.
 - **Narrativa breve** — la voce del narratore comanda su ogni norma (vedi **Parte H**);
   ritmo variato per scena; dettaglio carico, non catalogo; dialogo con sottotesto.
   Trappole: aggettivo valutativo anteposto, correre a spiegare.
+- **Discorso / testo per l'ascolto** *(non misurato; da Gadda, norme radiofoniche — vedi §4)* —
+  chi ascolta non può tornare indietro: periodi brevi, paratassi più che ipotassi, niente
+  incisi lunghi, connettivi espliciti a ogni svolta, lessico concreto; la **ripetizione è
+  una risorsa** (l'anafora regge il discorso dove sulla pagina stancherebbe); chiusura
+  preparata, che si senta arrivare (§6c). Scrivi per la voce: prova a leggerlo ad alta voce,
+  dove manca il fiato manca un punto. Trappole: il testo "da pagina" che muore letto (subordinate
+  incassate, incisi), l'attacco cerimoniale vuoto (*«è per me un onore…»* senza un pieno).
 
 ---
 
@@ -2173,10 +2246,10 @@ l'italiano. Complementare a **Parte A**: lì la *correttezza*, qui la *naturalez
 > perifrasi astratte, latinismi, burocratese). Suona "tradotto da una macchina che ha
 > studiato all'università": pomposo, prevedibile, senza ritmo.
 
-**Mappa del file:** Dare voce; A contenuto; B lingua e grammatica; C stile e tipografia;
-D residui da chatbot; E riempitivi e cautele; F antilingua; G verità e misura; H scuola,
-copy e tic recenti; I prosa saggistico-accademica; J slop da assistente e invarianti
-semantiche; audit finale.
+**Mappa del file:** Dare voce; A contenuto; B lingua e grammatica (con la nota «Quando il
+compito è tradurre»); C stile e tipografia; D residui da chatbot; E riempitivi e cautele;
+F antilingua; G verità e misura; H scuola, copy e tic recenti; I prosa saggistico-accademica;
+J slop da assistente e invarianti semantiche; audit finale.
 
 ---
 
@@ -2302,6 +2375,22 @@ Sostituisci con un fatto concreto.
 > La spia comune:
 > una costruzione *grammaticalmente possibile* in italiano ma che un nativo non sceglierebbe,
 > perché suona "tradotta".
+
+> **Quando il compito è tradurre (verso l'italiano).** La traduzione è il luogo dove questi
+> calchi *nascono*: questa sezione è la checklist principale — in particolare §13 (pronome
+> soggetto, passivo), §14 (*-ing* → gerundite), §15 (aggettivo valutativo anteposto), §19
+> (paratassi a corsa), §24 (*title case*) e §74 (falsi amici: *make sense, consistent,
+> realize, evidence*). Tre regole in più, proprie del tradurre:
+> - **il contratto di conservazione vale verso la fonte:** modalità, polarità, condizioni,
+>   registro e ironia dell'originale si trasferiscono, non si "migliorano" — l'eleganza non
+>   autorizza omissioni né aggiunte, e i difetti *di contenuto* della fonte restano suoi
+>   (segnalali a parte, non correggerli in silenzio);
+> - **traduci il registro, non solo le parole** (aptum): un'email informale inglese diventa
+>   un'email informale italiana, non una lettera formale; i tecnicismi seguono l'uso del
+>   dominio di arrivo (**Parte G** §5);
+> - **sciogli la sintassi, non ricalcarla:** l'ordine naturale dell'italiano (soggetto
+>   implicito, aggettivo dopo il nome, subordinate esplicite dove l'inglese giustappone)
+>   viene prima della corrispondenza riga-per-riga.
 
 **7. Vocabolario AI ad alta frequenza.** *cruciale, fondamentale, imprescindibile;
 evidenziare, sottolineare, mettere in luce; valorizzare, esaltare; intricato, articolato,

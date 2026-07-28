@@ -10,10 +10,10 @@ description: |
   Quattro virtù dell'espressione: NATURALEZZA (segni dell'AI, voce),
   CORRETTEZZA (punteggiatura, accenti, omofoni, plurali, pronomi),
   CHIAREZZA ed EFFICACIA (retorica, figure, ritmo, argomentazione). Per
-  umanizzare, scrivere, riassumere, revisionare o editare testi italiani —
-  saggistica, tesi, articoli, copy, narrativa, divulgazione, email, appunti
-  da stendere — o per dubbi di lingua (virgola, due punti, virgolette;
-  qual è, un po', da/dà, sé stesso, congiuntivo).
+  umanizzare, scrivere, tradurre, riassumere, revisionare o editare testi
+  italiani — saggistica, tesi, articoli, copy, narrativa, divulgazione,
+  email, discorsi, appunti — o per dubbi di lingua (virgola, due punti,
+  virgolette; qual è, un po', da/dà, sé stesso, congiuntivo).
 license: CC-BY-SA-4.0
 compatibility: claude-code claude-desktop opencode claude.ai
 metadata:
@@ -107,6 +107,9 @@ non sono facoltative):
 | **deep rewrite / scrivere da zero** | `references/retorica-efficacia.md` (§1-2, §6) **+** il file del genere: `references/spiegare-con-chiarezza.md` (divulgare/documentare), `references/narrativa.md` (raccontare) | `references/revisione-e-proprieta.md` per la lima |
 | **argomentare / costruire una tesi** | `references/retorica-efficacia.md` §5-7 | `references/coesione-e-connettivi.md` |
 | **spiegare / divulgare** (anche breve) | `references/spiegare-con-chiarezza.md` | `references/retorica-efficacia.md` §2a (preset divulgazione) |
+| **riassumere** | `references/retorica-efficacia.md` §8 (gerarchizzare, **mai aggiungere**) | `references/coesione-e-connettivi.md` se il riassunto deve reggersi da solo |
+| **tradurre (verso l'italiano)** | `references/stile-naturale.md` → nota «Quando il compito è tradurre» + Parte B | la scheda del dubbio in `references/dubbi-e-errori.md` |
+| **discorso / testo per l'ascolto** | `references/retorica-efficacia.md` §4 (blocco ascolto) e §2a (preset discorso) | `references/retorica-efficacia.md` §6 (*dispositio*) |
 | **domanda di lingua** | la scheda pertinente se il nucleo non basta; **sempre** per le norme oscillanti (d eufonica, *sé stesso*, *piuttosto che*, maiuscole, cognomi, virgolette): lì la taratura vive nella scheda, non nella memoria del modello | — |
 | **testo lungo (>~1.500 parole)** | come sopra per il livello; poi procedi per capitoli, a censimenti in batch (`references/stile-naturale.md` §9) | — |
 
@@ -125,6 +128,9 @@ non sono facoltative):
 - L'utente chiede aiuto a **argomentare** (costruire una tesi, ordinare le ragioni), a **far
   scorrere** un testo (coesione, connettivi, "non si capisce il filo"), a **riassumere**, o a
   **spiegare** qualcosa di complesso con chiarezza.
+- L'utente chiede di **tradurre verso l'italiano**: l'output è prosa italiana e valgono le
+  stesse virtù — con i calchi dall'inglese come rischio principale (vedi instradamento).
+  (Tradurre *dall'*italiano verso un'altra lingua resta fuori perimetro.)
 - L'utente fa una **domanda di lingua**: punteggiatura/tipografia ("ci va la virgola?",
   "caporali o virgolette?"), grammatica/sintassi ("congiuntivo o indicativo?", "che tempo qui?"),
   oppure di stile/retorica ("come rendo più efficace questo passaggio?", "che registro uso?").
@@ -216,17 +222,23 @@ stile, calibrati su quello invece di appiattire a un italiano neutro.
 
 **Apri i riferimenti previsti dall'instradamento** (`references/retorica-efficacia.md` + il
 file del genere) **prima di stendere**, non dopo: il preset di registro e la *dispositio*
-guidano la stesura, non la correggono. Poi:
-fissa prima **aptum** (scopo → stile: *docere*=tenue, *delectare*=medio, *movere*=alto;
-vedi `retorica-efficacia.md` §2). Imposta la **dispositio** (come entri, come articoli, come
-chiudi: `retorica-efficacia.md` §6) e tieni il **filo** (`coesione-e-connettivi.md`). Poi scrivi
-già rispettando le virtù: non produrre prosa da ripulire dopo. Chiudi con l'**audit anti-AI** e la
-**checklist tipografica**.
+guidano la stesura, non la correggono. Poi quattro passi:
+
+1. **Brief (aptum).** Scopo → stile (*docere*=tenue, *delectare*=medio, *movere*=alto:
+   `retorica-efficacia.md` §2), destinatario, registro; e la tesi o il filo **in una riga**
+   (*rem tene*, `revisione-e-proprieta.md` §5): se non si lascia dire, l'idea non è pronta.
+2. **Materia.** Lavora coi fatti forniti o verificabili; ogni vuoto diventa un segnaposto
+   (*[dato da verificare]*), mai un riempitivo plausibile (contratto di conservazione).
+3. **Dispositio.** Come entri, come articoli, come chiudi (`retorica-efficacia.md` §6);
+   il filo fra frasi e capoversi (`coesione-e-connettivi.md`).
+4. **Stesura e audit.** Scrivi già rispettando le virtù — non produrre prosa da ripulire
+   dopo — e chiudi con l'**audit anti-AI** e la **checklist tipografica**.
 
 A seconda del genere, apri il riferimento dedicato: **argomentare/persuadere** →
 `retorica-efficacia.md` §5, §7-8; **divulgare/documentare** (spiegare cose complesse, numeri,
 termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di vista, licenze) →
-`narrativa.md`; **scegliere la parola giusta e rivedere** → `revisione-e-proprieta.md`.
+`narrativa.md`; **discorso / testo per l'ascolto** → `retorica-efficacia.md` §4 e §2a;
+**scegliere la parola giusta e rivedere** → `revisione-e-proprieta.md`.
 
 ---
 
@@ -304,57 +316,39 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
 
 ## Indice dei riferimenti
 
-- **`references/punteggiatura.md`** — *puritas: i segni*. Scheda per ogni segno (virgola,
-  punto e virgola, due punti, punto, interrogativo, esclamativo, virgolette, lineette/trattini,
-  parentesi, puntini, barra/asterisco, **apostrofo tipografico, numeri/date/percentuali,
-  corsivo**, abbreviazioni e sigle, a capo, maiuscole/minuscole), con regole, errori comuni ed
-  esempi.
-- **`references/dubbi-e-errori.md`** — *puritas: le parole e la sintassi*. Repertorio di dubbi ed
-  errori comuni: accenti, omofoni, apostrofo/elisione/troncamento, *sé stesso*, ortografia
-  insidiosa, plurali difficili e doppi, pronomi (tu/te, gli/le, ne), avverbi, preposizioni, «che»
-  polivalente, ausiliari; **sintassi del verbo** (congiuntivo vs indicativo, *consecutio temporum*,
-  periodo ipotetico, accordo del participio, modi espressivi, soggetto delle implicite);
-  **morfosintassi** (forme dell'articolo *il/lo/gli, un/uno*; pronomi combinati *glielo/gliene* e
-  risalita clitica; *si* passivante vs impersonale; comparativi/superlativi organici; concessive e
-  temporali; dislocazioni e frase scissa; articolo partitivo e con possessivi/cognomi; posizione
-  dell'aggettivo; concordanza del verbo e dell'aggettivo; numerali; indefiniti; genere che cambia
-  significato); e il **digitato** (punto, punto e virgola, emoji, maiuscole espressive in chat e social).
-- **`references/retorica-efficacia.md`** — *scrivere bene*. Le 4 virtù dell'espressione, i 3
-  stili (tenue/medio/sublime ↔ docere/delectare/movere) con i **preset di registro per genere**
-  (§2a), repertorio essenziale di figure (tropi, figure di parola e di pensiero), *compositio*
-  (ordine/ritmo/eufonia), argomentazione per *tópoi* e **costruzione del testo (*dispositio*:
-  iniziare/andare avanti/chiudere, voce ed *ethos*, buona vs cattiva retorica)**; **costruire la
-  tesi** (selezionare, gerarchizzare, errori argomentativi) con l'**esame critico red-team**
-  (§7a), **riassumere** e il **discorso riferito**.
-- **`references/stile-naturale.md`** — *togliere lo slop*. Pattern dell'italiano AI (contenuto,
-  grammatica, stile, comunicazione, riempitivi) con parole-spia e prima→dopo; **l'antilingua e
-  l'affettazione all'italiana (sostituzione colta, verbo+astratto, parole di plastica, less is
-  more) e la guardia "verità e misura" (pathos, vaghezza, timidezza)**; **i tic della prosa
-  saggistico-accademica** (catene di transizione fra autori, glosse di pseudo-precisione,
-  nomi-ombrello dell'accademica umanistica, autoriferimento metatestuale, meta-frasi di
-  sintesi, *«resta vero che»*, autovalutazioni di precisione); **lo slop da assistente e
-  semantico (Parte J)** — voce conversazionale (chat/email), struttura da chatbot e markdown
-  compulsivo, falso bilanciamento, pivot al "significato più ampio", concretezza finta, *noi*
-  cosmico, verbi-ombrello pseudo-poetici, calchi semantici (falsi amici), più le invarianti
-  modale ed epistemica contro erosione delle qualificazioni e fonti aggiunte; sezione "Dare voce" (con l'argine *non fabbricare
-  soggettività*) e audit finale.
-- **`references/cliche-e-parole-alla-moda.md`** — *non pensare per formule*. Repertorio di
-  parole alla moda, locuzioni e tormentoni, formule d'elogio trite, luoghi comuni, metafore
-  morte, **plastismi e aggettivi obbligatori**, e i **cliché del discorso scientifico**.
-- **`references/coesione-e-connettivi.md`** — *il filo del discorso*. Coesione (tema/rema,
-  ganci, capoverso) vs coerenza (il "filo rosso"); **tassonomia dei connettivi** (le quattro
-  famiglie + quelli di bilanciamento) e i loro errori. Per testi che "non si capiscono" o "non
-  scorrono".
-- **`references/spiegare-con-chiarezza.md`** — *divulgare e documentare*. Spiegare cose complesse:
-  chiarezza ≠ semplificazione, astratto→concreto (esempi), numeri contestualizzati, gestione del
-  termine tecnico, metafore esplicative, anti-hype. Per divulgazione, documentazione, testi tecnici.
-- **`references/narrativa.md`** — *raccontare*. La *scelta dell'idea* (il "dinosauro" vs la trama,
-  le forme dell'idea, il punto di vista, la licenza) e il *mestiere*: personaggio (desiderio,
-  azione), trama e conflitto, mostrare/raccontare, dialogo e sottotesto, descrizione, tensione e non
-  detto, voce narrativa, tema, revisione. Per racconto e romanzo.
+- **`references/punteggiatura.md`** — *puritas: i segni*. Una scheda per segno (virgola, punto
+  e virgola, due punti, punto, `? !`, virgolette, lineette/trattini e dialogo narrativo,
+  parentesi, puntini, barra/asterisco), più apostrofo tipografico, numeri/date, corsivo,
+  **elenchi puntati, richiami di nota**, maiuscole, abbreviazioni e sigle.
+- **`references/dubbi-e-errori.md`** — *puritas: le parole e la sintassi*. Accenti, omofoni,
+  apostrofo, ortografia insidiosa, plurali, pronomi, preposizioni, «che» polivalente, ausiliari;
+  congiuntivo e *consecutio*, periodo ipotetico, participio, soggetto delle implicite;
+  morfosintassi (articoli, clitici e risalita, *si*, comparativi, concessive, dislocazioni,
+  concordanze, numerali, indefiniti); e il **digitato** (chat e social).
+- **`references/retorica-efficacia.md`** — *scrivere bene*. Le 4 virtù e il livello di
+  controllo; i 3 stili con i **preset di registro per genere** (§2a); le figure; *compositio*
+  e **testi per l'ascolto** (§4); i *tópoi* (§5); la *dispositio* (§6); **costruire la tesi**
+  con l'esame critico red-team (§7-7a); **riassumere** (§8); il discorso riferito (§9).
+- **`references/stile-naturale.md`** — *togliere lo slop*. I pattern dell'italiano AI con
+  parole-spia e prima→dopo: contenuto, calchi strutturali dall'inglese, tipografia, residui da
+  chatbot, riempitivi, antilingua, verità e misura, tic scolastici e del copy (§1-57); i tic
+  della prosa **saggistico-accademica** (§58-65); lo **slop da assistente e semantico** con le
+  invarianti modale ed epistemica (Parte J, §66-75); la nota **«Quando il compito è
+  tradurre»**; «Dare voce» (con l'argine *non fabbricare soggettività*) e l'audit finale.
+- **`references/cliche-e-parole-alla-moda.md`** — *non pensare per formule*. Parole alla moda,
+  tormentoni, elogi triti, luoghi comuni, metafore morte, plastismi, cliché scientifici.
+- **`references/coesione-e-connettivi.md`** — *il filo del discorso*. Coesione vs coerenza,
+  tema/rema e ganci, tassonomia dei connettivi coi loro errori, capoverso, filo rosso. Per
+  testi che "non si capiscono" o "non scorrono".
+- **`references/spiegare-con-chiarezza.md`** — *divulgare e documentare*. Chiarezza ≠
+  semplificazione, astratto→concreto, numeri contestualizzati, termine tecnico, metafore
+  chiuse, anti-hype, mosse del divulgatore.
+- **`references/narrativa.md`** — *raccontare*. L'idea (il "dinosauro") e il punto di vista;
+  il mestiere: personaggio, trama, mostrare/raccontare, dialogo, descrizione, tensione, voce,
+  tema, revisione.
 - **`references/revisione-e-proprieta.md`** — *la parola giusta e la lima*. La proprietà
-  (*le mot juste*, "non esistono sinonimi"), il collaudo letterale delle metafore, gli
-  intensificatori, la revisione a freddo (cavare dal pieno, lettore-cavia).
+  (*le mot juste*), gli intensificatori, il collaudo letterale delle metafore, la revisione a
+  freddo, riscrivere per scoprire.
 
 ---
 
@@ -363,16 +357,25 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
 Quando **correggi**, fornisci: (1) il **testo corretto**; (2) *se utile*, una nota breve su
 **cosa lo rendeva scorretto / AI / inefficace** e le scelte fatte (puoi inquadrarle per virtù).
 
+Quando l'utente chiede **solo la diagnosi** («dimmi cosa non va», «non riscrivere»), consegna
+il **referto senza testo corretto**: i problemi veri, per virtù, ciascuno ancorato a un punto
+preciso del testo — la riscrittura arriva solo se poi la chiede.
+
 Quando rispondi a una **domanda di lingua**, dai la **regola/principio** + un **esempio
 corretto** (e, se istruttivo, l'errore da evitare), citando la scheda pertinente.
 
-## Lavorare su file (agenti)
+## Lavorare su file e in sessione
 
 Quando il testo sta in un file e hai strumenti (Claude Code e simili):
 
 - **Leggi il file per intero prima di giudicare.** Per i testi lunghi dichiara il piano
   (passate, riferimenti, batch per capitoli) e procedi a censimenti per sezione
   (`references/stile-naturale.md` §9), non a riscritture monolitiche.
+- **Scheda di norme redazionali (testi lunghi).** Alla prima passata, fissa le scelte sulle
+  norme oscillanti che il testo pone (tipo di virgolette, *sé stesso/se stesso*, d eufonica,
+  cifre o lettere, *anni Trenta/anni '30*, maiuscole di cortesia) e applicale **uniformi** in
+  tutti i batch successivi: la coerenza fra il capitolo 1 e il capitolo 7 non può dipendere
+  dal caso. Dichiara la scheda all'utente alla prima consegna; se una scelta è sua, vince.
 - **A livello proofread/line edit preferisci modifiche mirate** (edit puntuali): il resto del
   file resta intatto — la stabilità che il testo funzionale richiede. La riscrittura integrale
   è da livello deep, e va annunciata.
@@ -382,6 +385,19 @@ Quando il testo sta in un file e hai strumenti (Claude Code e simili):
 - **I finder automatici trovano candidati, non verdetti:** ogni occorrenza trovata da un
   pattern (es. le varianti del bipolare) passa dal giudizio nel contesto, mai dalla
   sostituzione automatica.
+
+E quando la revisione prosegue su più turni (chat o file, vale lo stesso):
+
+- **Il veto dell'utente è un dato, non un errore da ricacciare.** Ciò che l'utente ha
+  ripristinato, riscritto a modo suo o esplicitamente rifiutato **non si ricorregge** nei
+  turni successivi, e non si commenta come difetto: al più, una volta sola, si segnala un
+  rischio oggettivo (un errore di *puritas*), poi la scelta è sua.
+- **Le scelte negoziate valgono per tutta la sessione.** Registro, tipo di virgolette,
+  *sé stesso*, livello d'intervento concordati nei primi turni si tengono coerenti fino
+  alla fine, senza rimetterli in discussione a ogni messaggio.
+- **Zero churn sul già approvato:** nei giri successivi tocca solo ciò che l'utente chiede
+  o ciò che un suo nuovo intervento ha reso scorretto — non riformulare passaggi già
+  passati al vaglio solo perché «si può fare meglio».
 
 ---
 

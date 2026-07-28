@@ -5,9 +5,10 @@ Sintesi azionabile da B. Mortara Garavelli, *Prontuario di punteggiatura* (Later
 2003), Parti I–II. Solo precetti ed esempi: nessuna teoria, nessuna storia.
 
 **Mappa del file:** principî generali; virgola; punto e virgola; due punti; punto fermo;
-interrogativo ed esclamativo; virgolette; lineette e trattini; parentesi; puntini; barra e
-asterisco; apostrofo tipografico; numeri, date e percentuali; corsivo; spazi, capoversi e
-paragrafi; maiuscole e minuscole; abbreviazioni e sigle.
+interrogativo ed esclamativo; virgolette (col punto di chiusura); lineette, trattini e
+dialogo narrativo; parentesi; puntini; barra e asterisco; apostrofo tipografico; numeri,
+date e percentuali; corsivo; spazi, capoversi e paragrafi; elenchi puntati e numerati;
+richiami di nota; maiuscole e minuscole; abbreviazioni e sigle.
 
 ## Principî generali (validi per TUTTI i segni)
 
@@ -223,6 +224,12 @@ maiuscola dopo di sé.
 - **Distanziamento / ironia:** le virgolette equivalgono a *cosiddetto / sedicente /
   si fa per dire*.
 - **Mai virgolette curve "all'inglese" miste a dritte:** scegli uno stile uniforme.
+- **Punto fermo e chiusura:** di norma il punto va **dopo** le virgolette di chiusura, anche
+  se la citazione è una frase compiuta: `Disse che era «una decisione presa in fretta».` Nel
+  discorso diretto autonomo introdotto dai due punti l'uso oscilla fra le case editrici
+  (punto interno o esterno): scegli — o segui lo stile della collana — e mantieni. **Mai due
+  punti fermi** (uno dentro e uno fuori); se la battuta chiude con `? !`, questi restano
+  dentro e il punto non si aggiunge (vedi «Posizione di `? ! …`»).
 - **⚠ Non abusare delle virgolette di distanziamento.** Mettile solo per ironia *vera* o per
   segnalare che la parola non è tua (citazione, gergo, neologismo dubbio). ✗ *ieri ho visto le
   "amiche del cuore"*, ✗ *ha fatto una "bella figura"* — espressioni comuni che non chiedono
@@ -247,6 +254,19 @@ maiuscola dopo di sé.
   parentesi. A fine frase la lineetta finale è neutralizzata dal punto.
 - **Discorso diretto/dialoghi:** lineetta di apertura per ogni turno; la lineetta di
   chiusura si omette, salvo quando segue l'enunciato citante. A capo a fine turno.
+
+**Punteggiare il dialogo narrativo (col citante).** Le due convenzioni maggioritarie:
+
+- **Caporali (o alte):** la virgola del citante sta **fuori** dalla chiusura — `«Vieni»,
+  disse.` Se la battuta chiude con `? !`, restano dentro e la virgola non si aggiunge:
+  `«Vieni?» chiese.` Citante in inciso: `«Vieni», disse, «è tardi».`
+- **Lineette:** lineetta d'apertura, citante fra lineette, la battuta riprende senza segno
+  d'apertura — `— Vieni, — disse — è tardi.` (Le collane variano sulla virgola prima o dopo
+  la lineetta del citante: conta scegliere **una** convenzione per tutto il libro.)
+
+⚠ Il verbo del citante resta **minuscolo** anche dopo `? !`: `«Vieni?» chiese` (non *Chiese*).
+In revisione non convertire un sistema nell'altro se il testo ne usa già uno coerente (è una
+scelta editoriale: vedi «livello di controllo»); si uniforma solo il misto.
 
 > ⚠️ **In italiano la lineetta lunga è rara.** La tipografia italiana si appoggia su
 > virgole, due punti, parentesi tonde, punto e virgola. Un testo con molte `—` è quasi
@@ -355,6 +375,36 @@ in linguistica descrittiva costrutto **agrammaticale** (`*un bello libro`).
 - **Capoverso:** porzione che inizia andando a capo (con rientro), compresa tra due "a capo".
 - **Paragrafo:** unità di contenuto autonoma (può contenere più capoversi). Simbolo `§`.
   ⚠️ Non confondere *paragrafo* e *capoverso* (calco errato dall'inglese *paragraph*).
+
+---
+
+## ELENCHI PUNTATI E NUMERATI
+
+Due convenzioni coerenti; decide la **natura delle voci**:
+
+- **Voci brevi** (sintagmi, non frasi): iniziale **minuscola**; a fine voce `;` (stile
+  tradizionale) oppure nessun segno (stile moderno) — mai mescolare i due; **punto fermo
+  all'ultima voce** (nello stile col `;`). La frase introduttiva chiude coi due punti.
+- **Voci-frase** (una o più frasi compiute): iniziale **maiuscola** e **punto** a fine di
+  ogni voce.
+
+Regole comuni: struttura **parallela** fra le voci (tutte sintagmi o tutte frasi, tutte
+rette dallo stesso attacco: non mescolare); numeri solo se ordine o conteggio contano,
+altrimenti punti elenco; la coerenza vale per l'intero documento, non per il singolo
+elenco. ⚠ Per l'elenco come *scelta di scrittura* (quando è legittimo, quando è slop da
+chatbot) vedi `stile-naturale.md` §67.
+
+---
+
+## RICHIAMI DI NOTA (esponenti)
+
+- **Rispetto alla punteggiatura:** l'uso tradizionale italiano colloca il richiamo **prima**
+  del segno (`…come nota Serianni¹.`); quello anglosassone **dopo** (`….¹`). In editoria
+  convivono per scelta di collana: **scegli e mantieni** per tutto il testo.
+- Con le **virgolette**, il richiamo va **fuori** dalla chiusura (`«…»¹`), attaccato senza
+  spazio.
+- Il richiamo si lega a **ciò che annota**: a fine frase se annota la frase, subito dopo la
+  parola (o il virgolettato) se annota quella.
 
 ---
 

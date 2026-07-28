@@ -150,6 +150,13 @@ misurato (v2.9.0); le altre sono tarature editoriali dichiarate, non misurate.
 - **Narrativa breve** — la voce del narratore comanda su ogni norma (vedi `narrativa.md`);
   ritmo variato per scena; dettaglio carico, non catalogo; dialogo con sottotesto.
   Trappole: aggettivo valutativo anteposto, correre a spiegare.
+- **Discorso / testo per l'ascolto** *(non misurato; da Gadda, norme radiofoniche — vedi §4)* —
+  chi ascolta non può tornare indietro: periodi brevi, paratassi più che ipotassi, niente
+  incisi lunghi, connettivi espliciti a ogni svolta, lessico concreto; la **ripetizione è
+  una risorsa** (l'anafora regge il discorso dove sulla pagina stancherebbe); chiusura
+  preparata, che si senta arrivare (§6c). Scrivi per la voce: prova a leggerlo ad alta voce,
+  dove manca il fiato manca un punto. Trappole: il testo "da pagina" che muore letto (subordinate
+  incassate, incisi), l'attacco cerimoniale vuoto (*«è per me un onore…»* senza un pieno).
 
 ---
 
