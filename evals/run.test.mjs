@@ -109,7 +109,7 @@ process.stdin.on('end', () => {
   if (process.argv.includes('--version')) {
     process.stdout.write('fake-claude 1.0')
   } else if (process.argv.includes('fake-editor')) {
-    process.stdout.write('Il bollettino meteorologico non lascia prevedere un miglioramento prima di lunedì, quindi conviene rimandare la gita.')
+    process.stdout.write("Il verbale dell'ultima assemblea non riporta la decisione sul bilancio, perciò conviene rinviare l'approvazione.")
   } else if (process.argv.includes('fake-judge-fail')) {
     process.stdout.write(JSON.stringify({ pass: false, invented: 0, expectations: [true, true, false], notes: 'no' }))
   } else {
@@ -135,7 +135,7 @@ process.stdin.on('end', () => {
     assert.equal(meta.sameModel, false)
     const row = JSON.parse(readFileSync(join(out, 'results.jsonl'), 'utf8').trim())
     assert.equal(row.verdict.pass, true)
-    assert.equal(row.prompt.includes('bollettino meteorologico'), true)
+    assert.equal(row.prompt.includes("verbale dell'ultima assemblea"), true)
     assert.equal(row.expectations.length, 3)
     assert.equal(row.judgePrompt.includes('ASPETTATIVE'), true)
     assert.equal(typeof row.editorDurationMs, 'number')
@@ -200,10 +200,13 @@ test('main usa dev per default e rifiuta flag o id sconosciuti', () => {
   try {
     const checked = main(['--validate-only'])
     assert.equal(checked.splitFilter, 'dev')
-    // dev = 1–13 (storici) + 17 (declassato da held-out: osservato) + 18–30 (estensione 2026-07)
+    // dev = 1–13 (storici) + 17 (declassato da held-out: osservato) + 18–30 (estensione
+    // 2026-07) + 34–39 (superficie 2.16.0: diagnosi, traduzione, sessione, scheda, schede
+    // di punteggiatura)
     assert.deepEqual(checked.ids, [
       ...Array.from({ length: 13 }, (_, i) => i + 1),
       ...Array.from({ length: 14 }, (_, i) => i + 17),
+      ...Array.from({ length: 6 }, (_, i) => i + 34),
     ])
     const heldOut = main(['--validate-only', '--split', 'held-out'])
     assert.deepEqual(heldOut.ids, [14, 15, 16, 31, 32, 33])

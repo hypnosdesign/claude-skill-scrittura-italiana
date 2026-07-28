@@ -5,10 +5,74 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
-## [Non rilasciato]
+## [2.16.0] — 2026-07-29
 
-**La stabilità della misura, finalmente stimata (primo punto di metodo di giugno).** Nessuna
-modifica alla skill: strumenti di misura e artefatti. Le fotografie a n=1 diventano stime con
+**La superficie che mancava, sopra una misura ripulita (quinto audit).** Tre compiti reali
+entrano nel perimetro — **tradurre verso l'italiano, riassumere, il discorso per l'ascolto** —
+insieme al lavoro **in sessione** (veti dell'utente, scelte negoziate, scheda di norme
+redazionali per i testi lunghi), alla **diagnosi senza riscrittura** e a quattro schede di
+punteggiatura ad alta domanda. Sotto, il quinto audit ha ripulito la misura: tre casi della
+suite erano ricalcati su esempi contenuti nella skill stessa (decontaminati e rimisurati),
+l'harness ha imparato a fermarsi, riprendere e distinguere le copie della skill, e la
+stabilità n=3 di metà luglio resta il riferimento. Suite estesa a **33 dev + 6 held-out**.
+
+### Aggiunto (superficie del prodotto)
+
+- **Tradurre verso l'italiano** è un compito della skill: trigger in «Quando si attiva»
+  (la direzione opposta resta fuori perimetro), riga di instradamento obbligatoria verso la
+  nota nuova **«Quando il compito è tradurre»** in `stile-naturale.md` (Parte B come
+  checklist dei calchi; conservazione verso la fonte; tradurre il registro, non solo le
+  parole; sciogliere la sintassi senza ricalcarla) e «tradurre» nella `description`.
+- **Riassumere ha la sua riga di instradamento** (era promesso in description e attivazione,
+  con la scheda §8 pronta, ma nessuna riga lo portava alla guardia «mai aggiungere»).
+- **Discorso / testo per l'ascolto**: «discorsi» nella `description` (chiude la candidata
+  2.15.2: attivazione #34 da 2/3 a **3/3**), riga di instradamento verso il blocco ascolto
+  (§4) e **preset di registro nuovo** in `retorica-efficacia.md` §2a (paratassi, niente
+  incisi, la ripetizione come risorsa, chiusura che si sente arrivare; non misurato,
+  dichiarato).
+- **Lavorare in sessione** (SKILL.md): il **veto dell'utente è un dato** — ciò che ha
+  ripristinato non si ricorregge né si commenta come errore; le scelte negoziate valgono
+  per tutta la sessione; zero churn sul già approvato. E per i testi lunghi la **scheda di
+  norme redazionali**: le scelte sulle norme oscillanti si fissano alla prima passata e si
+  applicano uniformi a tutti i batch.
+- **Diagnosi senza riscrittura** nel Formato di output: «dimmi cosa non va» produce un
+  referto ancorato al testo, non una versione riscritta non richiesta.
+- **`punteggiatura.md`, quattro schede nuove:** punto fermo e virgolette di chiusura (la
+  domanda più frequente sulle virgolette); **elenchi puntati e numerati** (minuscola/`;` per
+  voci brevi, maiuscola/punto per voci-frase, coerenza); **richiami di nota** (prima del
+  segno all'italiana, dopo all'anglosassone: scegli e mantieni); **punteggiare il dialogo
+  narrativo** col citante (caporali e lineette, minuscola dopo `? !`).
+- **Workflow SCRIVERE in quattro passi** (brief con *rem tene*, materia coi segnaposto,
+  *dispositio*, stesura+audit): il contenuto c'era, mancava la procedura.
+- Indice dei riferimenti compresso (54 → 31 righe): il corpo resta a 400 righe esatte,
+  al tetto del budget dichiarato nell'audit di luglio.
+
+### Misurato (2.16.0 — editor `claude-sonnet-5`, giudice `claude-opus-4-8`)
+
+- **Sei casi dev nuovi (#34-39): 6/6, 0 invenzioni** — diagnosi-only, traduzione coi calchi
+  (§74 esercitato davvero: *make sense, consistent, realize, evidence*), sessione iterativa
+  simulata, scheda redazionale fra capitoli, punto+virgolette, elenchi. Onestà: #36 era
+  0/1 al primo giro (l'editor non scioglieva *procedendo alla implementazione*; aspettativa
+  spacchettata in due e ripassato 1/1 — resta severo e osservato); #37 aveva un verdetto
+  del giudice troncato (err fail-closed), pulito alla ripetizione.
+- **Canarini di conservazione #4, #7, #13, #26: 4/4, 0 invenzioni** — il contenuto nuovo
+  non riapre l'over-editing.
+- **Instradamento della candidata, misurato ISOLANDO la copia personale** (spostata fuori e
+  ripristinata; senza isolamento risponde la 2.15.1 installata — scoperto e documentato):
+  #42 riassumere ✔ apre `retorica-efficacia`; #43 tradurre **1/3 poi 3/3** dopo l'ingresso
+  della «traduzione di poche righe» nelle categorie della clausola di brevità (stesso
+  rimedio, per categorie, che chiuse #34/#35); #34 discorso **3/3**; #35 resta il confine
+  noto e dichiarato.
+- **Attivazioni spurie con la description nuova: 0/15** — nemmeno «Traduci in inglese…»
+  (IT→EN, fuori perimetro) fa scattare la skill.
+- **Held-out (gate, non tuning): 5/6, 0 invenzioni**; #16 oscilla com'è sua storia
+  (1/3 nelle osservazioni di oggi; ✘ in 2.15.0, ✔ in 2.15.1): resta osservato, mai
+  ritoccato.
+
+---
+
+**La stabilità della misura, finalmente stimata (primo punto di metodo di giugno).**
+Strumenti di misura e artefatti (16-29 luglio); le fotografie a n=1 diventano stime con
 intervallo.
 
 ### Corretto (misura — decontaminazione della suite, dal quinto audit)

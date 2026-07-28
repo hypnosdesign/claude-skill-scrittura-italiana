@@ -1,0 +1,44 @@
+{
+  "total": 2,
+  "pass": 2,
+  "err": 0,
+  "passRate": 1,
+  "invented": 0,
+  "costUsd": 0.5573,
+  "modelsUsed": [
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-5",
+    "claude-opus-4-8"
+  ],
+  "resolvedOverlap": [],
+  "byTarget": {
+    "mixed": {
+      "pass": 2,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "bySplit": {
+    "dev": {
+      "pass": 2,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "perEval": {
+    "36": {
+      "name": "sessione-iterativa",
+      "target": "mixed",
+      "pass": 1,
+      "n": 1
+    },
+    "37": {
+      "name": "scheda-redazionale",
+      "target": "mixed",
+      "pass": 1,
+      "n": 1
+    }
+  }
+}

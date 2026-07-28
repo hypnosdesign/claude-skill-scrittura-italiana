@@ -1,0 +1,30 @@
+{
+  "total": 1,
+  "errors": 0,
+  "personalCopyReads": 0,
+  "costUsd": 0.0868,
+  "positive": {
+    "n": 0,
+    "fired": 0
+  },
+  "negative": {
+    "n": 0,
+    "fired": 0
+  },
+  "routing": {
+    "n": 1,
+    "fired": 0,
+    "expectedReadHit": 0,
+    "perCase": [
+      {
+        "id": 35,
+        "fired": false,
+        "reads": [],
+        "expected": [
+          "spiegare-con-chiarezza"
+        ],
+        "hit": false
+      }
+    ]
+  }
+}

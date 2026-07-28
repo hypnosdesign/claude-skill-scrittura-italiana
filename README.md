@@ -18,7 +18,7 @@
 
 [![Sito](https://img.shields.io/badge/sito-scrittura--italiana-9c2a1f.svg)](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.15.1-blue.svg)
+![Version](https://img.shields.io/badge/version-2.16.0-blue.svg)
 
 🔗 **[Sito del progetto →](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)**
 
@@ -95,12 +95,12 @@ troncamento, non un'elisione → niente apostrofo. È anche un consulente, non s
 │   ├── narrativa.md              # raccontare: idea vs trama, personaggio, dialogo, scena, tensione, revisione
 │   └── revisione-e-proprieta.md  # la parola giusta (le mot juste), collaudo metafore, revisione a freddo
 └── evals/
-    ├── evals.json                # 27 casi dev + 6 held-out congelati
+    ├── evals.json                # 33 casi dev + 6 held-out congelati
     ├── manifest.json             # nomi, generi, livelli (exact/minimal/semantic/…) e split
     ├── run.mjs                   # runner content-addressed, verdetti fail-closed, braccio --no-skill
     ├── run.test.mjs              # test deterministici del runner
     ├── activation.mjs            # attivazione e instradamento misurati nel client reale
-    ├── activation-cases.json     # 20 positivi, 10 negativi, 6 casi di routing
+    ├── activation-cases.json     # 20 positivi, 15 negativi, 8 casi di routing
     ├── stability.mjs             # digest deterministico per run multipli (media, flip, delta)
     ├── stability.test.mjs        # test del digest di stabilità
     ├── results/                  # run ordinari ignorati; reference-* versionati

@@ -39,7 +39,7 @@
 
 import { execFileSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
-import { appendFileSync, cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
+import { appendFileSync, cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve, dirname } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
@@ -148,7 +148,10 @@ function runCase(c, { claudeBin, model, maxTurns, workDir, fakeHome }) {
   // La copia di progetto vive nella workdir; qualunque altro path che contenga
   // `scrittura-italiana` (tipicamente ~/.claude/skills) è la copia personale:
   // va conteggiata come contaminazione, non come attivazione della candidata.
-  const isProjectPath = p => p.startsWith(workDir)
+  // ⚠ macOS: la workdir nasce come /var/folders/… ma il client riporta i path
+  // risolti /private/var/folders/… — si confronta sulla forma canonica.
+  const realWorkDir = safe(() => realpathSync(workDir), workDir)
+  const isProjectPath = p => p.startsWith(workDir) || p.startsWith(realWorkDir)
   let skillFired = false
   let firedVia = null
   const readPaths = []

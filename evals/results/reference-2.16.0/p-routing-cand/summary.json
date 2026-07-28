@@ -1,0 +1,41 @@
+{
+  "total": 2,
+  "errors": 0,
+  "personalCopyReads": 0,
+  "costUsd": 0.518,
+  "positive": {
+    "n": 0,
+    "fired": 0
+  },
+  "negative": {
+    "n": 0,
+    "fired": 0
+  },
+  "routing": {
+    "n": 2,
+    "fired": 2,
+    "expectedReadHit": 1,
+    "perCase": [
+      {
+        "id": 42,
+        "fired": true,
+        "reads": [
+          "retorica-efficacia"
+        ],
+        "expected": [
+          "retorica-efficacia"
+        ],
+        "hit": true
+      },
+      {
+        "id": 43,
+        "fired": true,
+        "reads": [],
+        "expected": [
+          "stile-naturale"
+        ],
+        "hit": false
+      }
+    ]
+  }
+}

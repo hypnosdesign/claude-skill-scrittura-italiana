@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 2,
+  "stamp": "2026-07-28T22-54-22-810Z",
+  "argv": [
+    "--ids",
+    "43",
+    "--out",
+    "evals/results/audit-2026-07b/p-tradurre-cand-r4"
+  ],
+  "model": "claude-sonnet-5",
+  "kindFilter": "all",
+  "git": "12ed588",
+  "hermetic": false,
+  "skillSrc": "/Users/mattia/Projects/claude-skill-scrittura-italiana",
+  "skillSha": "7544dbbfa74f91e9eca63958d7c4c84e90aae5251a5e1c6c19eebd41495b8817",
+  "workDir": "/var/folders/l3/fhgj9_7n1mn70dmnx4x9lpn00000gn/T/scrittura-activation-Sp95nG",
+  "claudeVer": "2.1.220 (Claude Code)",
+  "node": "v24.15.0",
+  "ids": [
+    43
+  ]
+}

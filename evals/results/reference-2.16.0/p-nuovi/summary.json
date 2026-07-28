@@ -1,0 +1,80 @@
+{
+  "total": 6,
+  "pass": 4,
+  "err": 1,
+  "passRate": 0.667,
+  "invented": 0,
+  "costUsd": 2.4063,
+  "modelsUsed": [
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-5",
+    "claude-opus-4-8"
+  ],
+  "resolvedOverlap": [],
+  "byTarget": {
+    "advice": {
+      "pass": 3,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "semantic": {
+      "pass": 1,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "mixed": {
+      "pass": 0,
+      "fail": 1,
+      "err": 1,
+      "invented": 0
+    }
+  },
+  "bySplit": {
+    "dev": {
+      "pass": 4,
+      "fail": 1,
+      "err": 1,
+      "invented": 0
+    }
+  },
+  "perEval": {
+    "34": {
+      "name": "diagnosi-senza-riscrittura",
+      "target": "advice",
+      "pass": 1,
+      "n": 1
+    },
+    "35": {
+      "name": "traduzione-calchi",
+      "target": "semantic",
+      "pass": 1,
+      "n": 1
+    },
+    "36": {
+      "name": "sessione-iterativa",
+      "target": "mixed",
+      "pass": 0,
+      "n": 1
+    },
+    "37": {
+      "name": "scheda-redazionale",
+      "target": "mixed",
+      "pass": 0,
+      "n": 1
+    },
+    "38": {
+      "name": "domanda-punto-virgolette",
+      "target": "advice",
+      "pass": 1,
+      "n": 1
+    },
+    "39": {
+      "name": "domanda-elenchi",
+      "target": "advice",
+      "pass": 1,
+      "n": 1
+    }
+  }
+}

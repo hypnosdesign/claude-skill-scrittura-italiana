@@ -1,0 +1,38 @@
+{
+  "total": 2,
+  "pass": 1,
+  "err": 0,
+  "passRate": 0.5,
+  "invented": 0,
+  "costUsd": 0.5303,
+  "modelsUsed": [
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-5",
+    "claude-opus-4-8"
+  ],
+  "resolvedOverlap": [],
+  "byTarget": {
+    "improve": {
+      "pass": 1,
+      "fail": 1,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "bySplit": {
+    "held-out": {
+      "pass": 1,
+      "fail": 1,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "perEval": {
+    "16": {
+      "name": "transizioni-accademiche",
+      "target": "improve",
+      "pass": 1,
+      "n": 2
+    }
+  }
+}

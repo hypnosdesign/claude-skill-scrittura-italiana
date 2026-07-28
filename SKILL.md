@@ -17,7 +17,7 @@ description: |
 license: CC-BY-SA-4.0
 compatibility: claude-code claude-desktop opencode claude.ai
 metadata:
-  version: "2.15.1"
+  version: "2.16.0"
   language: it
 allowed-tools: Read Write Edit Grep Glob AskUserQuestion
 ---
@@ -94,9 +94,9 @@ unifica correttezza, chiarezza, efficacia e naturalezza.
 
 Questo SKILL.md contiene il modello e i precetti ad alta frequenza; **il mestiere fine vive
 nei riferimenti**, e va letto *prima* di produrre l'output, non dopo — **anche quando l'output
-è breve** (un discorso d'occasione, una spiegazione divulgativa, un'email di sostanza): la
-brevità non esonera dalla lettura minima. Aperture minime per compito (le voci «obbligatorio»
-non sono facoltative):
+è breve** (un discorso d'occasione, una spiegazione divulgativa, un'email di sostanza, una
+traduzione di poche righe): la brevità non esonera dalla lettura minima. Aperture minime per
+compito (le voci «obbligatorio» non sono facoltative):
 
 | Compito | Apri (obbligatorio) | Apri se pertinente |
 |---|---|---|

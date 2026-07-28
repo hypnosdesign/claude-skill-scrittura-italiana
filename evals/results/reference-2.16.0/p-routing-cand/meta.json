@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 2,
+  "stamp": "2026-07-28T22-48-10-153Z",
+  "argv": [
+    "--ids",
+    "42,43",
+    "--out",
+    "evals/results/audit-2026-07b/p-routing-cand"
+  ],
+  "model": "claude-sonnet-5",
+  "kindFilter": "all",
+  "git": "12ed588",
+  "hermetic": false,
+  "skillSrc": "/Users/mattia/Projects/claude-skill-scrittura-italiana",
+  "skillSha": "65b735a8bcc421e440084a27ace810f556795fb24466ffc99f20aed8b5ca3296",
+  "workDir": "/var/folders/l3/fhgj9_7n1mn70dmnx4x9lpn00000gn/T/scrittura-activation-bo4YkP",
+  "claudeVer": "2.1.220 (Claude Code)",
+  "node": "v24.15.0",
+  "ids": [
+    42,
+    43
+  ]
+}
