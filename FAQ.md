@@ -1,17 +1,26 @@
 # FAQ
 
-![Version](https://img.shields.io/badge/version-2.17.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.18.0-blue.svg)
 
 Domande ricorrenti su *scrittura-italiana*. Per esempi concreti vedi **[ESEMPI.md](ESEMPI.md)**.
 
+### Che cosa fa Scrittura italiana?
+
+È una **skill editoriale per l'italiano**: corregge, chiarisce, riscrive e rende naturale un
+testo **senza cambiarne il significato** — fatti, intenzione e registro restano dell'autore.
+Sei azioni riconoscibili: scrivi, correggi, chiarisci, riscrivi, umanizza, risolvi un dubbio
+di lingua. Sotto c'è un metodo editoriale (regole, registro e struttura dell'italiano), non
+una blacklist di parole che "sembrano AI".
+
 ### È un humanizer? Fa sembrare umano un testo scritto dall'AI?
 
-Sì, è il suo gancio principale: incolli un testo che "sa di AI" e te lo restituisce naturale —
-via perifrasi, gerundite, triadi, avverbi in *-mente*, trattini lunghi, antilingua, cliché,
-chiusure ottimistiche vuote. La differenza con un humanizer qualsiasi: non fa
-trova-e-sostituisci, **conosce l'italiano**, perciò te lo rende anche corretto (punteggiatura,
-tipografia), chiaro ed efficace. Funziona anche su **testi tuoi**: lì fa da revisore che
-*spiega* la regola, soprattutto quando parti da appunti o da una "brutta" stesa da un modello.
+Puoi usarla anche così, ed è il caso d'uso più cercato: incolli un testo che "sa di AI" e te
+lo restituisce naturale — via perifrasi, gerundite, triadi, avverbi in *-mente*, trattini
+lunghi, antilingua, cliché, chiusure ottimistiche vuote — **senza trucchi per aggirare i
+detector**. La differenza con un humanizer qualsiasi: non fa trova-e-sostituisci, conosce
+l'italiano, perciò te lo rende anche corretto (punteggiatura, tipografia), chiaro ed
+efficace. Funziona anche su **testi tuoi**: lì fa da revisore che *spiega* la regola,
+soprattutto quando parti da appunti o da una "brutta" stesa da un modello.
 
 ### Non è solo un correttore come quello di Word?
 

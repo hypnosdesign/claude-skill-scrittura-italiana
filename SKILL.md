@@ -1,23 +1,23 @@
 ---
 name: scrittura-italiana
 description: |
-  Humanizer dell'italiano: rende naturale e non "da AI" un testo — via
-  perifrasi, gerundite, triadi, avverbi in -mente, trattini lunghi,
-  definizioni bipolari «non è X ma Y», tic della prosa saggistica (catene
-  di transizione fra autori, glosse di pseudo-precisione, nomi-ombrello),
-  antilingua, frasi fatte — e, a differenza di un trova-e-sostituisci, lo
-  scrive anche corretto, chiaro ed efficace perché conosce l'italiano.
-  Quattro virtù dell'espressione: NATURALEZZA (segni dell'AI, voce),
-  CORRETTEZZA (punteggiatura, accenti, omofoni, plurali, pronomi),
-  CHIAREZZA ed EFFICACIA (retorica, figure, ritmo, argomentazione). Per
-  umanizzare, scrivere, tradurre, riassumere, revisionare o editare testi
-  italiani — saggistica, tesi, articoli, copy, narrativa, divulgazione,
-  email, discorsi, appunti — o per dubbi di lingua (virgola, due punti,
-  virgolette; qual è, un po', da/dà, sé stesso, congiuntivo).
+  Skill editoriale per l'italiano: corregge, chiarisce, riscrive e rende
+  naturale un testo senza cambiarne il significato — anche da humanizer,
+  perché toglie i tic della prosa generata (perifrasi, gerundite, triadi,
+  avverbi in -mente, trattini lunghi, definizioni bipolari «non è X ma Y»,
+  tic saggistici, antilingua, frasi fatte) conoscendo l'italiano, non per
+  trova-e-sostituisci. Quattro virtù dell'espressione: NATURALEZZA (segni
+  dell'AI, voce), CORRETTEZZA (punteggiatura, accenti, omofoni, plurali,
+  pronomi), CHIAREZZA ed EFFICACIA (retorica, figure, ritmo,
+  argomentazione). Per umanizzare, scrivere, tradurre, riassumere,
+  revisionare o editare testi italiani — saggistica, tesi, articoli, copy,
+  narrativa, divulgazione, email, discorsi, appunti — o per dubbi di
+  lingua (virgola, due punti, virgolette; qual è, un po', da/dà, sé
+  stesso, congiuntivo).
 license: CC-BY-SA-4.0
 compatibility: claude-code claude-desktop opencode claude.ai
 metadata:
-  version: "2.17.0"
+  version: "2.18.0"
   language: it
 allowed-tools: Read Write Edit Grep Glob AskUserQuestion
 ---

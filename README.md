@@ -1,16 +1,16 @@
-# scrittura-italiana — l'humanizer italiano che sa davvero l'italiano
+# scrittura-italiana — la skill editoriale per l'italiano
 
-> Trasforma la prosa generata in italiano naturale — e a differenza dei *paraphraser* non con
-> scambi di caratteri o sinonimi, ma con **vera competenza di lingua**. Toglie i tic dell'AI
-> (perifrasi, gerundite, triadi, trattini lunghi, frasi fatte), corregge stile, sintassi,
-> punteggiatura e retorica, e **conserva fatti, tesi, registro e voce**. Non un filtro a
-> posteriori: **impone al modello un processo editoriale fondato sull'italiano**, invece di
-> lasciarlo seguire le proprie abitudini generative.
+> **Corregge, chiarisce, riscrive e rende naturale un testo senza cambiarne il significato:**
+> fatti, intenzione e registro restano dell'autore. Lavora con un metodo editoriale — regole,
+> registro e struttura dell'italiano — non con una blacklist di parole che «sembrano AI».
+> Puoi usarla anche come **humanizer**: riconosce e corregge i tic ricorrenti della prosa
+> generata (perifrasi, gerundite, triadi, trattini lunghi, frasi fatte), senza trucchi per
+> aggirare i detector.
 >
-> *A Claude [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills) — an Italian
-> humanizer that turns AI prose into natural Italian through real linguistic competence, not
-> paraphraser tricks. Fixes style, syntax, punctuation and rhetoric while preserving facts,
-> thesis, register and voice. Content is in Italian.*
+> *A Claude [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills) — the editorial
+> skill for Italian: corrects, clarifies and rewrites without changing meaning, working from
+> real knowledge of Italian rules, register and structure. Also works as an Italian humanizer
+> for the tics of generated prose. Content is in Italian.*
 
 <p align="center">
   <img src="assets/demo-umanizza.gif" alt="Demo: incolli un testo che «sa di AI» e la skill digita la versione umana — via perifrasi, gerundite, triadi e chiusure vuote, ma il fatto resta" width="760">
@@ -18,18 +18,25 @@
 
 [![Sito](https://img.shields.io/badge/sito-scrittura--italiana-9c2a1f.svg)](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.17.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.18.0-blue.svg)
 
 🔗 **[Sito del progetto →](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)**
 
 ## Cos'è
 
-Il punto di partenza di quasi tutti: **incolli un testo che "sa di AI" e te lo restituisce
-umano** — via perifrasi, gerundite, triadi, avverbi in *-mente*, trattini lunghi, antilingua,
-cliché, chiusure ottimistiche vuote. Fin qui, un humanizer.
+Una **skill editoriale**: la installi e il tuo assistente lavora sul testo come un editor —
+con sei azioni riconoscibili. **Scrivi** (da un brief o da appunti), **correggi** (refusi,
+accenti, punteggiatura), **chiarisci** (periodi e filo del discorso), **riscrivi** (struttura
+e ritmo nuovi, contenuto identico), **umanizza**, **risolvi un dubbio di lingua** (regola,
+esempio e fonte).
+
+Il caso d'uso più cercato è l'ultimo rimasto senza nome proprio: incolli un testo che «sa di
+AI» e te lo restituisce naturale — via perifrasi, gerundite, triadi, avverbi in *-mente*,
+trattini lunghi, antilingua, cliché, chiusure ottimistiche vuote. È l'uso da humanizer; il
+motore sotto è lo stesso delle altre cinque azioni.
 
 **Il metodo è la differenza**: a differenza di un trova-e-sostituisci, questa skill conosce
-l'italiano per davvero, perché è costruita sulle **quattro virtù dell'espressione**
+l'italiano, perché è costruita sulle **quattro virtù dell'espressione**
 (*virtutes elocutionis*) della retorica classica:
 
 1. **aptum** — appropriatezza a scopo, destinatario, registro e **livello di controllo** del
@@ -50,13 +57,14 @@ oscurità) e per eccesso (slop). La differenza rispetto a un semplice "umanizzat
 sia il livello prescrittivo (punteggiatura) sia quello costruttivo (retorica applicata), con
 un **workflow ordinato** che va dalla struttura alla pelle.
 
-Oltre all'umanizzazione, la skill copre l'intero arco della scrittura: **sintassi** (congiuntivo,
-*consecutio*, periodo ipotetico), **coesione** (il filo tra frasi e capoversi, i connettivi),
-**argomentazione** (costruire una tesi, riassumere), **divulgazione** (spiegare cose complesse),
-**narrativa** (idea, punto di vista) e **revisione** (la parola giusta, la lima). Distillata da
-una libreria di manuali italiani — Serianni, Mortara Garavelli, Giunta, Pontiggia, Rigotti e altri.
+Le sei azioni poggiano su guide dedicate: **sintassi** (congiuntivo, *consecutio*, periodo
+ipotetico), **coesione** (il filo tra frasi e capoversi, i connettivi), **argomentazione**
+(costruire una tesi, riassumere), **divulgazione** (spiegare cose complesse), **narrativa**
+(idea, punto di vista), **traduzione verso l'italiano** e **revisione** (la parola giusta, la
+lima). Distillate da una libreria di manuali italiani — Serianni, Mortara Garavelli, Giunta,
+Pontiggia, Rigotti e altri.
 
-## Non solo umanizza
+## Due prove di mestiere
 
 L'esempio in alto è il caso più comune. Ma «sa l'italiano» vuol dire anche **sapere quando *non*
 toccare** e **rispondere ai dubbi di lingua**:
@@ -275,12 +283,14 @@ Questa skill è un'opera derivata e cita le sue fonti:
 that gives Claude the full framework for **writing and editing Italian**. The skill's
 content is in Italian (it has to be), but here's what it does and how to use it.
 
-### What it does — a humanizer that knows Italian
+### What it does — an editorial skill for Italian
 
-Paste AI-sounding text and get it back human — no periphrasis, trailing gerunds, forced
-triads, *-mente* adverbs, em dashes, "antilingua" affectation or clichés. That much is a
-humanizer. The **superpower**: unlike a find-and-replace, it actually knows Italian, because
-it's built on the four classical *virtutes elocutionis*:
+It corrects, clarifies and rewrites Italian text **without changing its meaning**: facts,
+intent and register stay the author's. You can also use it as a **humanizer**: paste
+AI-sounding text and get it back natural — no periphrasis, trailing gerunds, forced triads,
+*-mente* adverbs, em dashes, "antilingua" affectation or clichés, and no tricks to fool
+detectors. Unlike a find-and-replace, it works from the four classical *virtutes
+elocutionis*:
 
 1. **aptum** — appropriateness to purpose, audience, register.
 2. **puritas** — grammatical and typographical correctness: comma, semicolon, colon,

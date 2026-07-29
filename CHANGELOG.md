@@ -5,11 +5,48 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
-## [Non rilasciato]
+## [2.18.0] — 2026-07-29
 
-**I tre punti di metodo rimasti, affrontati (29 luglio, pomeriggio); poi il sesto audit
-(Codex) corregge la misura appena fatta.** Una sola modifica alla skill (contratto di
-conservazione: glosse); il resto è strumenti e misure.
+**Il riposizionamento: la categoria è «skill editoriale per l'italiano», l'humanizer è il
+caso d'uso più cercato.** Dal settimo audit (Codex, comunicazione), ratificato: il prodotto
+si presentava insieme come humanizer, editor, correttore, consulente e tutor — descrizioni
+tutte parzialmente vere che obbligavano il lettore a ricostruire da solo che cosa stava
+installando. La gerarchia nuova, identica su tutti i canali: che cos'è (una skill
+editoriale per l'italiano), che cosa fa (corregge, chiarisce, riscrive, rende naturale),
+che cosa protegge (significato, fatti, intenzione, registro), che cosa la distingue (un
+metodo editoriale, non una blacklist anti-AI), come lo dimostra (prima/dopo, fonti, eval).
+«Humanizer» resta per la ricerca e come caso d'uso dichiarato, senza guidare il brand.
+
+### Modificato (comunicazione)
+
+- **`description` categoria-first** («Skill editoriale per l'italiano: corregge, chiarisce,
+  riscrive…», humanizer subordinato; 853 caratteri) — **rimisurata isolando la copia
+  personale: attivazione positivi 20/20, spurie 0/15**, zero ambiguità (13 attribuzioni
+  `project-isolated` provate dall'harness + 7 letture dirette della copia di progetto).
+- **Sito:** hero nuova (kicker «La skill editoriale per l'italiano.», H1 «Correggi.
+  Chiarisci. Riscrivi.», CTA verso il prima/dopo), homepage riordinata — prima/dopo su tre
+  testi (generato, d'autore, chat da non toccare), la sezione **«Che cosa vuoi fare?»** coi
+  sei verbi, livelli, contratto, numeri e prove in coda; le quattro virtù passano alla
+  pagina Metodo (un rimando nel contratto). Il claim di frontiera in pagina usa la
+  formulazione prescritta dall'handover: confronto appaiato pulito 9/10 vs 4/10, n=1.
+  `og-image` rigenerata con la hero nuova. **Fix installazione:** niente più «Code,
+  Download ZIP» (quel pacchetto viene rifiutato dal caricamento): si scarica lo zip dagli
+  asset della release.
+- **README** categoria-first (titolo «la skill editoriale per l'italiano», sei azioni in
+  apertura, humanizer come caso d'uso con la clausola anti-detector, sezione inglese
+  allineata — rimosso anche un «superpower» residuo contro la policy di luglio); **FAQ**
+  con «Che cosa fa Scrittura italiana?» come prima domanda e l'humanizer come seconda.
+- **Attribuzione dell'attivazione, terzo canale provato:** se al momento del run non esiste
+  un'omonima in `~/.claude/skills` (verificato dall'harness, non dichiarato), le
+  invocazioni del tool Skill senza path sono attribuite alla candidata come
+  `project-isolated`; una lettura personale osservata vince comunque sulla prova di
+  assenza. Test dedicati (35 totali).
+
+---
+
+**Nella stessa release confluisce il lavoro del pomeriggio: i tre punti di metodo rimasti,
+poi il sesto audit (Codex) che corregge la misura appena fatta.** Una sola modifica alla
+skill (contratto di conservazione: glosse); il resto è strumenti e misure.
 
 ### Corretto (dal sesto audit — Codex, 29 luglio sera)
 

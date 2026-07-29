@@ -46,3 +46,19 @@ test('il confronto di path rispetta i confini di directory', () => {
   assert.equal(row.skillFired, false)
   assert.equal(row.personalCopyReads.length, 1)
 })
+
+test('omonima personale assente e verificata: invocazione senza path attribuita alla candidata', () => {
+  const row = analyzeEvents([toolEvent(skill)], { workDir: '/tmp/work', personalCopyAbsent: true })
+  assert.equal(row.skillFired, true)
+  assert.equal(row.activationAttribution, 'project-isolated')
+  // senza la prova di assenza, la stessa invocazione resta ambigua
+  const ambiguo = analyzeEvents([toolEvent(skill)], { workDir: '/tmp/work' })
+  assert.equal(ambiguo.skillFired, false)
+  assert.equal(ambiguo.activationAttribution, 'ambiguous')
+  // una lettura personale osservata vince sulla prova di assenza (evidenza > assunzione)
+  const smentita = analyzeEvents([
+    toolEvent(skill, read('/Users/me/.claude/skills/scrittura-italiana/SKILL.md')),
+  ], { workDir: '/tmp/work', personalCopyAbsent: true })
+  assert.equal(smentita.skillFired, false)
+  assert.equal(smentita.activationAttribution, 'personal-read')
+})

@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Scrittura italiana | L'humanizer italiano che sa davvero l'italiano</title>
-  <meta name="description" content="L'humanizer italiano che sa davvero l'italiano: rende naturale la prosa generata, e la corregge, senza inventare fatti né alterare il significato.">
+  <title>Scrittura italiana | La skill editoriale per l'italiano</title>
+  <meta name="description" content="La skill editoriale per l'italiano: corregge, chiarisce e riscrive il testo senza cambiarne il significato. Puoi usarla anche come humanizer per i tic della prosa generata.">
   <link rel="canonical" href="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/">
   <meta property="og:locale" content="it_IT">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Scrittura italiana | L'humanizer italiano che sa davvero l'italiano">
-  <meta property="og:description" content="Corregge, chiarisce e rende naturale un testo italiano. Fatti, polarità e voce restano dell'autore.">
+  <meta property="og:title" content="Scrittura italiana | La skill editoriale per l'italiano">
+  <meta property="og:description" content="Corregge, chiarisce e riscrive: la lingua migliora; fatti, intenzione e registro restano dell'autore.">
   <meta property="og:url" content="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/">
   <meta property="og:image" content="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/assets/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,8 +26,8 @@
     "name": "Scrittura italiana",
     "applicationCategory": "WritingApplication",
     "operatingSystem": "Claude Code, Claude Desktop, agenti compatibili con Agent Skills",
-    "softwareVersion": "2.17.0",
-    "description": "Skill editoriale per correggere e rendere naturale la prosa italiana conservandone il significato.",
+    "softwareVersion": "2.18.0",
+    "description": "La skill editoriale per l'italiano: corregge, chiarisce e riscrive conservando significato, intenzione e registro.",
     "license": "https://creativecommons.org/licenses/by-sa/4.0/",
     "codeRepository": "https://github.com/hypnosdesign/claude-skill-scrittura-italiana"
   }
@@ -49,7 +49,7 @@
         <a href="riferimenti.html">Riferimenti</a>
         <a href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana">GitHub</a>
       </nav>
-      <span class="version-note">v<span data-project-version>2.17.0</span></span>
+      <span class="version-note">v<span data-project-version>2.18.0</span></span>
       <details class="mobile-nav">
         <summary>Menu</summary>
         <nav aria-label="Navigazione mobile">
@@ -67,12 +67,12 @@
     <section class="hero" aria-labelledby="titolo">
       <div class="shell hero-grid">
         <div>
-          <p class="hero-kicker">Una skill editoriale per autori, studenti e ricercatori.</p>
-          <h1 id="titolo">Scrivi meglio. <span class="correction">Resta tu.</span></h1>
-          <p class="hero-lede">Corregge, chiarisce e rende naturale la prosa italiana. Non aggiunge fatti, non rafforza le tue conclusioni e non fabbrica una voce che non c'è.</p>
+          <p class="hero-kicker">La skill editoriale per l'italiano.</p>
+          <h1 id="titolo">Correggi. Chiarisci. <span class="correction">Riscrivi.</span></h1>
+          <p class="hero-lede">Migliora la lingua, la struttura e il ritmo del testo. Toglie i tic della prosa generata e conserva fatti, intenzione e registro.</p>
           <div class="button-row">
             <a class="button" href="installazione.html">Installa la skill <span aria-hidden="true">↗</span></a>
-            <a class="button secondary" href="metodo.html">Leggi il metodo</a>
+            <a class="button secondary" href="#prima-e-dopo">Guarda un prima e dopo</a>
           </div>
         </div>
 
@@ -86,29 +86,46 @@
       </div>
     </section>
 
-    <div class="fact-strip" aria-label="Dati del progetto">
-      <ul class="shell facts">
-        <li><strong data-pattern-count>78</strong><span>pattern stilistici descritti</span></li>
-        <li><strong data-invariant-count>2</strong><span>invarianti semantiche</span></li>
-        <li><strong data-reference-count>9</strong><span>guide di riferimento</span></li>
-        <li><strong>3</strong><span>livelli d'intervento</span></li>
-      </ul>
-    </div>
-
-    <section class="section" aria-labelledby="fedelta">
-      <div class="shell contract">
-        <h2 class="contract-quote" id="fedelta">La forma può cambiare. <mark>Il significato no.</mark></h2>
-        <div>
-          <p>Prima di correggere lo stile, la skill costruisce un inventario di ciò che deve restare intatto.</p>
-          <ul class="invariant-list">
-            <li>fatti, nomi, date e quantità</li>
-            <li>negazioni e polarità</li>
-            <li>possibilità, certezza e obbligo</li>
-            <li>cause, condizioni ed eccezioni</li>
-            <li>voce ricavabile dal testo</li>
-          </ul>
-          <p><a href="metodo.html#conservazione">Il contratto di conservazione</a></p>
+    <section class="section" aria-labelledby="prima-e-dopo">
+      <div class="shell">
+        <div class="section-heading">
+          <h2 id="prima-e-dopo">Prima e dopo, su tre testi diversi.</h2>
+          <p>Un testo generato, un testo d'autore, una chat: la revisione giusta non è la stessa. Sapere quando <em>non</em> intervenire fa parte del mestiere.</p>
         </div>
+        <div class="proof-grid">
+          <div class="proof-sheet">
+            <h3>Testo generato</h3>
+            <p>Il progetto <del>non è un semplice archivio, ma si configura come un vero e proprio ecosistema di</del> <ins>raccoglie e ordina i</ins> materiali didattici<del>, garantendo un'esperienza formativa completa</del>.</p>
+            <div class="proof-legend"><span>tic rimossi; il fatto resta identico</span></div>
+          </div>
+          <div class="proof-sheet">
+            <h3>Testo d'autore</h3>
+            <p>Secondo me la mostra<del>, merita</del><ins> merita</ins> una seconda visita: l'allestimento è discutibile, le opere no.</p>
+            <div class="proof-legend"><span>una virgola di troppo; opinione e voce restano dell'autore</span></div>
+          </div>
+          <div class="proof-sheet">
+            <h3>Chat informale</h3>
+            <p>ok perfetto ci vediamo domani alle 9.30, ti porto anche gli appunti 😊</p>
+            <div class="proof-legend"><span>nessuna correzione: le convenzioni da tastiera non sono errori</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cobalt" aria-labelledby="cosa-vuoi-fare">
+      <div class="shell">
+        <div class="section-heading">
+          <h2 id="cosa-vuoi-fare">Che cosa vuoi fare?</h2>
+          <p>Sei azioni riconoscibili, un solo metodo editoriale sotto.</p>
+        </div>
+        <ul class="virtue-lines">
+          <li><strong>Scrivi</strong><span>Da un brief o da appunti: scopo, registro e struttura prima della prosa.</span></li>
+          <li><strong>Correggi</strong><span>Refusi, accenti, accordi e punteggiatura. Solo errori, zero stile.</span></li>
+          <li><strong>Chiarisci</strong><span>Periodi sciolti e filo del discorso: il lettore capisce alla prima.</span></li>
+          <li><strong>Riscrivi</strong><span>Struttura e ritmo nuovi, contenuto identico: i vuoti diventano segnaposto.</span></li>
+          <li><strong>Umanizza</strong><span>Riconosce e toglie i tic della prosa generata, senza trucchi anti-detector.</span></li>
+          <li><strong>Risolvi un dubbio</strong><span>Virgola, congiuntivo, qual è, sé stesso: regola, esempio e fonte.</span></li>
+        </ul>
       </div>
     </section>
 
@@ -135,26 +152,37 @@
       </div>
     </section>
 
-    <section class="section cobalt" aria-labelledby="quattro-virtu">
-      <div class="shell">
-        <div class="section-heading">
-          <h2 id="quattro-virtu">Quattro domande, prima di ogni regola.</h2>
-          <p>La retorica classica fornisce una cornice più stabile di una blacklist. Ogni scelta dipende dal testo, dal destinatario e dalla funzione.</p>
+    <section class="section" aria-labelledby="fedelta">
+      <div class="shell contract">
+        <h2 class="contract-quote" id="fedelta">La forma può cambiare. <mark>Il significato no.</mark></h2>
+        <div>
+          <p>Prima di correggere lo stile, la skill costruisce un inventario di ciò che deve restare intatto.</p>
+          <ul class="invariant-list">
+            <li>fatti, nomi, date e quantità</li>
+            <li>negazioni e polarità</li>
+            <li>possibilità, certezza e obbligo</li>
+            <li>cause, condizioni ed eccezioni</li>
+            <li>voce ricavabile dal testo</li>
+          </ul>
+          <p>Il metodo sotto è quello dell'editoria: le quattro virtù dell'espressione, non una blacklist di parole. <a href="metodo.html">Come lavora</a> e <a href="metodo.html#conservazione">il contratto di conservazione</a>.</p>
         </div>
-        <ul class="virtue-lines">
-          <li><strong>Aptum</strong><span>È adatto allo scopo, al genere e al registro?</span></li>
-          <li><strong>Puritas</strong><span>È corretto nella lingua, nella sintassi e nella tipografia?</span></li>
-          <li><strong>Perspicuitas</strong><span>Il lettore capisce alla prima e segue il filo?</span></li>
-          <li><strong>Ornatus</strong><span>Il ritmo e le figure servono il testo oppure lo coprono?</span></li>
-        </ul>
       </div>
     </section>
+
+    <div class="fact-strip" aria-label="Dati del progetto">
+      <ul class="shell facts">
+        <li><strong data-pattern-count>78</strong><span>pattern stilistici descritti</span></li>
+        <li><strong data-invariant-count>2</strong><span>invarianti semantiche</span></li>
+        <li><strong data-reference-count>9</strong><span>guide di riferimento</span></li>
+        <li><strong>3</strong><span>livelli d'intervento</span></li>
+      </ul>
+    </div>
 
     <section class="section dark" aria-labelledby="prove">
       <div class="shell evidence-layout">
         <h2 class="evidence-statement" id="prove"><span class="verified">Artefatti, non promesse.</span> La suite conserva prompt, output, giudizi e fingerprint.</h2>
         <div class="evidence-note">
-          <p>La versione <span data-project-version>2.17.0</span> include <span data-dev-count>40</span> casi di sviluppo e <span data-heldout-count>6</span> casi held-out. Su tre osservazioni per caso: senza skill il modello passa 16–20 casi su 27, con 9 invenzioni e 8 casi dall'esito instabile; con la skill 26–27 su 27, con una invenzione e un solo caso instabile. L'ultimo giro held-out: 6 su 6, zero invenzioni.</p>
+          <p>La versione <span data-project-version>2.18.0</span> include <span data-dev-count>40</span> casi di sviluppo e <span data-heldout-count>6</span> casi held-out. Su tre osservazioni per caso: senza skill il modello passa 16–20 casi su 27, con 9 invenzioni e 8 casi dall'esito instabile; con la skill 26–27 su 27, con una invenzione e un solo caso instabile. E su un editor di frontiera, nel confronto appaiato pulito (una osservazione per caso), la skill passa 9 casi su 10 contro i 4 del modello nudo, che fallisce proprio su conservazione e governo del testo.</p>
           <p>È un segnale utile, non un benchmark definitivo. Il giudice è un modello e il comportamento non è deterministico.</p>
           <p><a class="button secondary" href="valutazione.html">Come leggiamo gli eval</a></p>
         </div>
@@ -179,7 +207,7 @@
 
   <footer class="site-footer">
     <div class="shell footer-grid">
-      <p><strong>Scrittura italiana</strong><br>Versione <span data-project-version>2.17.0</span></p>
+      <p><strong>Scrittura italiana</strong><br>Versione <span data-project-version>2.18.0</span></p>
       <div>
         <nav class="footer-links" aria-label="Collegamenti finali">
           <a href="metodo.html">Metodo</a>

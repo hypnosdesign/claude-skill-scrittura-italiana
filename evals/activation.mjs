@@ -40,7 +40,7 @@
 import { execFileSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
 import { appendFileSync, cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from 'node:fs'
-import { tmpdir } from 'node:os'
+import { homedir, tmpdir } from 'node:os'
 import { join, resolve, dirname } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { isSessionLimit } from './run.mjs'
@@ -78,6 +78,11 @@ export function main(argv = process.argv.slice(2)) {
     fakeHome = join(workDir, 'home')
     for (const sub of ['', '.config', '.cache', '.local/share']) mkdirSync(join(fakeHome, sub), { recursive: true })
   }
+  // Terzo canale di prova, verificato e non dichiarato: se in ~/.claude/skills NON esiste
+  // un'omonima al momento del run (l'operatore l'ha spostata via), un'invocazione del tool
+  // Skill senza path può essere solo la copia di progetto — attribuzione `project-isolated`.
+  const personalHomonym = join(homedir(), '.claude', 'skills', 'scrittura-italiana')
+  const personalCopyAbsent = !hermetic && !existsSync(personalHomonym)
 
   const outDir = resolve(args.out ?? join(HERE, 'results', `${stamp}__activation`))
   if (existsSync(outDir)) throw new Error(`directory di output già esistente: ${outDir}`)
@@ -87,6 +92,7 @@ export function main(argv = process.argv.slice(2)) {
   const gitSha = safe(() => execFileSync('git', ['rev-parse', '--short', 'HEAD'], { cwd: REPO, encoding: 'utf8' }).trim(), 'nogit')
   writeFileSync(join(outDir, 'meta.json'), JSON.stringify({
     schemaVersion: 2, stamp, argv, model, kindFilter, git: gitSha, hermetic,
+    personalCopyAbsent, personalHomonym,
     skillSrc, skillSha, workDir, claudeVer, node: process.version,
     ids: selected.map(c => c.id),
   }, null, 2))
@@ -97,7 +103,7 @@ export function main(argv = process.argv.slice(2)) {
   const rows = []
   for (const c of selected) {
     const maxTurns = Number(args['max-turns'] ?? (c.kind === 'routing' ? 15 : 6))
-    const row = runCase(c, { claudeBin, model, maxTurns, workDir, fakeHome })
+    const row = runCase(c, { claudeBin, model, maxTurns, workDir, fakeHome, personalCopyAbsent })
     rows.push(row)
     appendFileSync(join(outDir, 'results.jsonl'), JSON.stringify(row) + '\n')
     const mark = row.error ? 'ERR' : row.skillFired ? 'FIRE' : row.activationAttribution === 'ambiguous' ? '?' : 'no'
@@ -122,7 +128,7 @@ export function main(argv = process.argv.slice(2)) {
   return { outDir, summary, rows, aborted }
 }
 
-function runCase(c, { claudeBin, model, maxTurns, workDir, fakeHome }) {
+function runCase(c, { claudeBin, model, maxTurns, workDir, fakeHome, personalCopyAbsent = false }) {
   const started = process.hrtime.bigint()
   let raw = ''
   let error = null
@@ -151,7 +157,7 @@ function runCase(c, { claudeBin, model, maxTurns, workDir, fakeHome }) {
   // ⚠ macOS: la workdir nasce come /var/folders/… ma il client riporta i path
   // risolti /private/var/folders/… — si confronta sulla forma canonica.
   const realWorkDir = safe(() => realpathSync(workDir), workDir)
-  const observed = analyzeEvents(events, { workDir, realWorkDir, hermetic: Boolean(fakeHome) })
+  const observed = analyzeEvents(events, { workDir, realWorkDir, hermetic: Boolean(fakeHome), personalCopyAbsent })
   const result = events.find(ev => ev?.type === 'result')
   const expected = c.expectReads ?? null
   const routingHit = expected ? observed.referenceReads.some(r => expected.some(e => r.includes(e))) : null
@@ -173,7 +179,7 @@ function runCase(c, { claudeBin, model, maxTurns, workDir, fakeHome }) {
 
 // Classificatore puro: testabile senza chiamare il client. `skillFired` significa
 // "copia candidata attribuita", non semplicemente "tool Skill invocato".
-export function analyzeEvents(events, { workDir, realWorkDir = workDir, hermetic = false }) {
+export function analyzeEvents(events, { workDir, realWorkDir = workDir, hermetic = false, personalCopyAbsent = false }) {
   const inside = (p, root) => p === root || p.startsWith(`${root}/`)
   const isProjectPath = p => inside(p, workDir) || inside(p, realWorkDir)
   let skillInvoked = false
@@ -205,16 +211,20 @@ export function analyzeEvents(events, { workDir, realWorkDir = workDir, hermetic
     .filter(p => isProjectPath(p) && p.includes('references/'))
     .map(p => p.split('/').pop().replace(/\.md$/, '')))]
   const projectObserved = projectCopyReads.length > 0
-  const skillFired = projectObserved || (hermetic && skillInvoked)
+  const skillFired = projectObserved
+    || (hermetic && skillInvoked)
+    || (personalCopyAbsent && skillInvoked && !personalCopyReads.length)
   const activationAttribution = projectObserved
     ? 'project-read'
     : hermetic && skillInvoked
       ? 'project-hermetic'
-      : personalCopyReads.length
-        ? 'personal-read'
-        : skillInvoked
-          ? 'ambiguous'
-          : 'none'
+      : personalCopyAbsent && skillInvoked && !personalCopyReads.length
+        ? 'project-isolated'
+        : personalCopyReads.length
+          ? 'personal-read'
+          : skillInvoked
+            ? 'ambiguous'
+            : 'none'
   return {
     skillInvoked,
     skillFired,
@@ -241,6 +251,7 @@ function summarize(rows) {
     errors,
     skillInvocations: rows.filter(r => r.skillInvoked).length,
     ambiguousInvocations: rows.filter(r => r.activationAttribution === 'ambiguous').length,
+    isolatedAttributions: rows.filter(r => r.activationAttribution === 'project-isolated').length,
     personalCopyReads: rows.reduce((s, r) => s + (r.personalCopyReads?.length || 0), 0),
     costUsd: +rows.reduce((s, r) => s + (r.costUsd || 0), 0).toFixed(4),
     positive: { n: pos.length, fired: pos.filter(r => r.skillFired).length },
@@ -265,7 +276,8 @@ function renderSummary(s, h) {
   L.push(`- **Routing — skill attiva:** ${pct(s.routing.fired, s.routing.n)} · **riferimento atteso aperto:** ${pct(s.routing.expectedReadHit, s.routing.n)}`)
   L.push(`- invocazioni del tool Skill osservate: ${s.skillInvocations} · attribuzione ambigua: ${s.ambiguousInvocations}`)
   L.push(`- errori harness: ${s.errors} · costo API dichiarato: $${s.costUsd}`)
-  if (s.ambiguousInvocations) L.push('- ⚠ Le invocazioni ambigue non entrano nei tassi di attivazione: ripetere con `--hermetic` per attribuirle alla candidata.')
+  if (s.ambiguousInvocations) L.push('- ⚠ Le invocazioni ambigue non entrano nei tassi di attivazione: ripetere con `--hermetic`, o spostare la copia personale fuori da `~/.claude/skills` (l\'harness verifica l\'assenza e attribuisce come `project-isolated`).')
+  if (s.isolatedAttributions) L.push(`- attribuzioni \`project-isolated\`: ${s.isolatedAttributions} — omonima personale assente al momento del run, verificata dall'harness.`)
   if (s.personalCopyReads) L.push(`- ⚠ letture della copia PERSONALE della skill (contaminazione, escluse dai conteggi): ${s.personalCopyReads}`)
   if (s.aborted) L.push(`- ⚠ **RUN ABORTITO: ${s.aborted}**`)
   if (s.routing.perCase.length) {

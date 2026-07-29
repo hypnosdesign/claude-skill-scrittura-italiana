@@ -964,3 +964,8 @@ select {
   .doc-shell { display: block; width: 100%; padding: 0; }
   a { color: inherit; text-decoration: underline; }
 }
+
+/* Prima e dopo: tre schede affiancate (riposizionamento lug 2026) */
+.proof-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 2rem; }
+.proof-grid .proof-sheet { transform: none; }
+.proof-grid .proof-sheet h3 { margin: 0 0 .75rem; font-size: 1rem; }

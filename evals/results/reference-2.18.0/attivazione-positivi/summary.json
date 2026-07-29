@@ -1,0 +1,23 @@
+{
+  "total": 20,
+  "errors": 0,
+  "skillInvocations": 20,
+  "ambiguousInvocations": 0,
+  "isolatedAttributions": 13,
+  "personalCopyReads": 0,
+  "costUsd": 4.851,
+  "positive": {
+    "n": 20,
+    "fired": 20
+  },
+  "negative": {
+    "n": 0,
+    "fired": 0
+  },
+  "routing": {
+    "n": 0,
+    "fired": 0,
+    "expectedReadHit": 0,
+    "perCase": []
+  }
+}
