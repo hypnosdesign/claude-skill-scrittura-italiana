@@ -1,0 +1,16 @@
+{
+  "rows": 13,
+  "valid": 12,
+  "agree": 11,
+  "agreementRate": 0.917,
+  "divergent": [
+    {
+      "id": 16,
+      "run": 1,
+      "before": true,
+      "after": false
+    }
+  ],
+  "judgeErrors": 1,
+  "costUsd": 1.5452
+}

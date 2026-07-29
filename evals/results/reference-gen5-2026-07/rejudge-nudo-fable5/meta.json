@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 3,
+  "kind": "rejudge",
+  "label": "rj-nudo-fable",
+  "stamp": "2026-07-29T09-50-52-839Z",
+  "argv": [
+    "--rejudge",
+    "evals/results/audit-gen5/fable5-nudo",
+    "--judge-model",
+    "claude-fable-5",
+    "--label",
+    "rj-nudo-fable",
+    "--out",
+    "evals/results/audit-gen5/rejudge-nudo-fable5"
+  ],
+  "source": {
+    "dir": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/results/audit-gen5/fable5-nudo",
+    "editorModel": "claude-fable-5",
+    "judgeModel": "claude-opus-4-8",
+    "skill": {
+      "source": null,
+      "sha256": null,
+      "bytes": 0,
+      "noSkill": true
+    },
+    "suite": {
+      "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/evals.json",
+      "sha256": "0f5c2387a8202adff6f2e68ffeed6c20d362845c32c83fd5fa39fa6f2c570464",
+      "bytes": 43072
+    }
+  },
+  "judgeModel": "claude-fable-5",
+  "rows": 13,
+  "node": "v24.15.0"
+}

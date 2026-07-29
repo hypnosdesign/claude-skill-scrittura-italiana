@@ -165,3 +165,29 @@ progetto** nella workdir; le letture della copia personale finiscono in
 `XDG_*` puntano a una home usa-e-getta — isolamento vero, ma opt-in perché su macchine
 dove le credenziali del CLI vivono su disco (non nel keychain) può rompere l'auth. La
 workdir temporanea viene rimossa a fine run, salvo `--keep-workdir`.
+
+## Rigiudicare senza rieseguire (`run.mjs --rejudge`)
+
+`--rejudge <dir>` rigiudica gli output già persistiti di un run con un giudice (anche)
+diverso, senza chiamate all'editor: isola la varianza del giudice, e permette un **secondo
+giudice** sugli stessi testi. Ogni riga conserva il verdetto originale in `originalVerdict`;
+il riepilogo riporta accordo e divergenze. Prima applicazione: `reference-gen5-2026-07`
+(accordo 92-100% fra `claude-opus-4-8` e `claude-fable-5`; il delta con/senza skill regge).
+⚠ Un giudice davvero **fuori famiglia** (GPT/Gemini) richiede credenziali esterne: gli
+output persistiti sono già nel formato giusto per sottoporglieli.
+
+## Confronto cieco umano (`blind-kit.mjs`)
+
+Il giudice LLM non basta per «naturalezza e voce» (limite dichiarato da sempre): il kit
+genera coppie con/senza skill sugli stessi prompt — **solo testo finale**, niente note
+editoriali che smaschererebbero il braccio — in ordine randomizzato con seed, e produce
+foglio del lettore, template risposte, chiave (che resta nel kit) e scoring:
+
+```bash
+node evals/blind-kit.mjs --build --seed 42          # genera il kit (10 coppie di default)
+node evals/blind-kit.mjs --score <dir> risposte-*.csv
+```
+
+Protocollo: ≥3 lettori, in autonomia, senza sapere quale braccio è quale; bersaglio
+dichiarato (AUDIT-2026-07 §8): **preferenza ≥ 70%** per la skill sulle coppie decise. Il
+kit generato NON va committato prima della compilazione: contiene la chiave.

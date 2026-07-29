@@ -5,6 +5,36 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [Non rilasciato]
+
+**I tre punti di metodo rimasti, affrontati (29 luglio, pomeriggio).** Nessuna modifica alla
+skill: strumenti e misure.
+
+### Aggiunto (misura)
+
+- **`run.mjs --rejudge <dir>`** — rigiudica gli output già persistiti con un giudice anche
+  diverso, senza chiamate all'editor: isola la varianza del giudice e abilita il secondo
+  giudice sugli stessi testi (`originalVerdict` conservato, riepilogo con accordo e
+  divergenze). Test 17/17.
+- **Prima misura su editor di frontiera** (`reference-gen5-2026-07`): con editor
+  `claude-fable-5`, 13 casi mirati — **con skill 13/13 e 0 invenzioni, nudo 9/13 e 1
+  invenzione**. Il finding: il modello di frontiera passa da solo tutti gli improve (lo
+  slop di base se lo toglie), e i quattro fallimenti nudi sono TUTTI di conservazione e
+  governo (#7 doc tecnica, #13 bipolare, #15 testo operativo, #26 istruzioni annidate).
+  Sul modello forte il differenziale della skill è «sa quando non toccare, cosa preservare
+  e da chi prendere ordini», non «scrive meglio».
+- **Secondo giudice sui bracci gen-5** (`--rejudge` con `claude-fable-5`): accordo 12/12
+  sul braccio con skill, 11/12 sul nudo — i quattro fallimenti nudi tutti confermati,
+  unica divergenza il solito #16 (graduato). Dichiarato: stessa famiglia, modello diverso —
+  mitiga il bias di modello, non quello di famiglia; per GPT/Gemini servono credenziali,
+  gli output sono già pronti.
+- **`blind-kit.mjs`** — kit per il confronto cieco umano: coppie con/senza skill sugli
+  stessi prompt (solo testo finale: niente note editoriali che smaschererebbero il
+  braccio), randomizzazione con seed, foglio del lettore, template risposte, chiave
+  separata e scoring col bersaglio dichiarato (≥70% di preferenza). Primo kit generato
+  (10 coppie, seed 42, $1.46): resta locale finché i lettori non l'hanno compilato —
+  contiene la chiave.
+
 ## [2.17.0] — 2026-07-29
 
 **I tell del 2026, con l'antidoto ai falsi positivi misurato.** La Parte K porta i pattern

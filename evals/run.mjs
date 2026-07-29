@@ -37,6 +37,10 @@
 // macinare chiamate destinate a fallire; riprendi poi con --resume.
 // --fail-under <r> rende il run usabile come gate: exit ≠ 0 se il pass rate
 // scende sotto r o se ci sono verdetti in errore.
+// --rejudge <dir> rigiudica gli output GIÀ persistiti di un run (nessuna chiamata
+// all'editor): isola la varianza del giudice da quella dell'editor e permette un
+// secondo giudice (--judge-model) sugli stessi testi. Ogni riga nuova conserva il
+// verdetto originale in `originalVerdict`; il riepilogo conta accordi e divergenze.
 
 import { execFileSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
@@ -51,6 +55,7 @@ const safe = (fn, fb) => { try { return fn() } catch { return fb } }
 
 export function main(argv = process.argv.slice(2)) {
   const args = parseArgs(argv)
+  if (args.rejudge) return rejudgeMain(args, argv)
   const noSkill = Boolean(args['no-skill'])
   if (noSkill && args.skill) throw new Error('--no-skill e --skill sono alternativi')
   const skillFile = noSkill ? null : resolve(args.skill ?? join(REPO, 'scrittura-italiana-single-file.md'))
@@ -268,6 +273,72 @@ export function dedupeRows(rows) {
     if (!prev || prev.verdict?.pass === null) byKey.set(k, r)
   }
   return [...byKey.values()]
+}
+
+// Rigiudica gli output persistiti di un run: stesse righe, giudice (eventualmente)
+// diverso, zero chiamate all'editor. Le righe in errore editor vengono saltate.
+function rejudgeMain(args, argv) {
+  const srcDir = resolve(String(args.rejudge))
+  const judgeModel = String(args['judge-model'] ?? 'opus')
+  const label = String(args.label ?? 'rejudge')
+  const onlyIds = args.ids ? new Set(String(args.ids).split(',').map(Number)) : null
+  for (const flag of ['skill', 'no-skill', 'model', 'runs', 'split', 'resume']) {
+    if (args[flag] !== undefined) throw new Error(`--rejudge non accetta --${flag}: usa gli output così come sono`)
+  }
+  if (!existsSync(join(srcDir, 'results.jsonl'))) throw new Error(`--rejudge: results.jsonl non trovato in ${srcDir}`)
+  const srcMeta = safe(() => JSON.parse(readFileSync(join(srcDir, 'meta.json'), 'utf8')), {})
+  const srcRows = dedupeRows(readFileSync(join(srcDir, 'results.jsonl'), 'utf8').trim().split('\n').filter(Boolean).map(l => JSON.parse(l)))
+    .filter(r => r.verdict?.pass !== null && typeof r.output === 'string' && !r.output.startsWith('[ERRORE EDITOR'))
+    .filter(r => !onlyIds || onlyIds.has(r.id))
+  if (srcRows.length === 0) throw new Error('--rejudge: nessuna riga rigiudicabile (verdetti validi con output)')
+
+  const stamp = new Date().toISOString().replace(/[:.]/g, '-')
+  const outDir = resolve(args.out ?? join(HERE, 'results', `${stamp}__${label}`))
+  if (existsSync(outDir)) throw new Error(`directory di output già esistente: ${outDir}`)
+  mkdirSync(outDir, { recursive: true })
+  writeFileSync(join(outDir, 'meta.json'), JSON.stringify({
+    schemaVersion: 3, kind: 'rejudge', label, stamp, argv,
+    source: { dir: srcDir, editorModel: srcMeta.editorModel ?? null, judgeModel: srcMeta.judgeModel ?? null, skill: srcMeta.skill ?? null, suite: srcMeta.suite ?? null },
+    judgeModel, rows: srcRows.length, node: process.version,
+  }, null, 2))
+
+  console.log(`rejudge: ${srcRows.length} righe da ${srcDir} · giudice originale=${srcMeta.judgeModel ?? '?'} · nuovo=${judgeModel}`)
+  const rows = []
+  const divergent = []
+  for (const r of srcRows) {
+    const judged = judge({ prompt: r.prompt, expectations: r.expectations, expected_output: r.expectedOutput }, r.output, { target: r.target }, judgeModel)
+    const row = { ...r, originalVerdict: r.verdict, verdict: judged.verdict, judgePrompt: judged.prompt, judgeRaw: judged.raw, judgeDurationMs: judged.durationMs, judgeModels: judged.models ?? [], judgeCostUsd: judged.costUsd ?? null }
+    rows.push(row)
+    appendFileSync(join(outDir, 'results.jsonl'), JSON.stringify(row) + '\n')
+    const before = r.verdict.pass
+    const after = judged.verdict.pass
+    const mark = after === null ? 'ERR' : after === before ? '=' : '≠'
+    if (after !== null && after !== before) divergent.push({ id: r.id, run: r.run, before, after })
+    console.log(`#${String(r.id).padStart(2)} ${String(r.name ?? '').padEnd(26)} run${r.run}: ${before ? 'PASS' : 'FAIL'} → ${after === null ? 'ERR' : after ? 'PASS' : 'FAIL'} ${mark}`)
+    if (after === null && isSessionLimit(String(judged.verdict.notes ?? ''))) {
+      console.error('⚠ limite di sessione: interrompo il rejudge')
+      break
+    }
+  }
+  const valid = rows.filter(r => r.verdict.pass !== null)
+  const agree = valid.filter(r => r.verdict.pass === r.originalVerdict.pass).length
+  const summary = {
+    rows: rows.length, valid: valid.length, agree,
+    agreementRate: valid.length ? +(agree / valid.length).toFixed(3) : null,
+    divergent,
+    judgeErrors: rows.length - valid.length,
+    costUsd: +rows.reduce((s, r) => s + (r.judgeCostUsd || 0), 0).toFixed(4),
+  }
+  writeFileSync(join(outDir, 'summary.json'), JSON.stringify(summary, null, 2))
+  const md = [
+    `# Rejudge — ${label}`,
+    `origine: ${srcDir} (editor ${srcMeta.editorModel ?? '?'}, giudice ${srcMeta.judgeModel ?? '?'}) · nuovo giudice: ${judgeModel}`,
+    `\n**Accordo fra i giudici: ${agree}/${valid.length}${valid.length ? ` (${Math.round((agree / valid.length) * 100)}%)` : ''}** · errori giudice: ${summary.judgeErrors} · costo: $${summary.costUsd}`,
+    divergent.length ? `\nDivergenze: ${divergent.map(d => `#${d.id} run${d.run} ${d.before ? 'PASS' : 'FAIL'}→${d.after ? 'PASS' : 'FAIL'}`).join(' · ')}` : '\nNessuna divergenza.',
+  ].join('\n')
+  writeFileSync(join(outDir, 'summary.md'), md)
+  console.log('\n' + md + `\n→ artefatti: ${outDir}`)
+  return { outDir, summary }
 }
 
 // ---------- helpers ----------
@@ -528,7 +599,7 @@ function parseArgs(argv) {
   const o = {}
   const allowed = new Set([
     'skill', 'no-skill', 'suite', 'manifest', 'label', 'model', 'judge-model',
-    'runs', 'ids', 'split', 'out', 'resume', 'fail-under', 'validate-only',
+    'runs', 'ids', 'split', 'out', 'resume', 'fail-under', 'validate-only', 'rejudge',
   ])
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i]

@@ -183,6 +183,18 @@ process.stdin.on('end', () => {
       /alternativi/,
     )
 
+    // --rejudge: rigiudica output persistiti senza chiamare l'editor
+    const rjAgree = main(['--rejudge', out, '--judge-model', 'fake-judge', '--out', join(root, 'rj-agree')])
+    assert.equal(rjAgree.summary.agree, 1)
+    assert.equal(rjAgree.summary.agreementRate, 1)
+    const rjRow = JSON.parse(readFileSync(join(root, 'rj-agree', 'results.jsonl'), 'utf8').trim())
+    assert.equal(rjRow.originalVerdict.pass, true)
+    assert.equal(rjRow.verdict.pass, true)
+    const rjSplit = main(['--rejudge', out, '--judge-model', 'fake-judge-fail', '--out', join(root, 'rj-split')])
+    assert.equal(rjSplit.summary.agree, 0)
+    assert.deepEqual(rjSplit.summary.divergent, [{ id: 5, run: 1, before: true, after: false }])
+    assert.throws(() => main(['--rejudge', out, '--model', 'x', '--out', join(root, 'rj-x')]), /non accetta --model/)
+
     // exit ≠ 0 del CLI con envelope valido: la risposta si salva, dichiarata
     const salvaged = main(['--ids', '5', '--out', join(root, 'salvage'), '--model', 'fake-editor-exit1', '--judge-model', 'fake-judge'])
     assert.equal(salvaged.summary.pass, 1)
