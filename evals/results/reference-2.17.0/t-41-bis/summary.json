@@ -1,0 +1,38 @@
+{
+  "total": 1,
+  "pass": 1,
+  "err": 0,
+  "passRate": 1,
+  "invented": 0,
+  "costUsd": 0.3981,
+  "modelsUsed": [
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-5",
+    "claude-opus-4-8"
+  ],
+  "resolvedOverlap": [],
+  "byTarget": {
+    "improve": {
+      "pass": 1,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "bySplit": {
+    "dev": {
+      "pass": 1,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "perEval": {
+    "41": {
+      "name": "landing-staccato",
+      "target": "improve",
+      "pass": 1,
+      "n": 1
+    }
+  }
+}

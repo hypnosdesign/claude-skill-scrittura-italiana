@@ -18,7 +18,7 @@
 
 [![Sito](https://img.shields.io/badge/sito-scrittura--italiana-9c2a1f.svg)](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.16.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.17.0-blue.svg)
 
 🔗 **[Sito del progetto →](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)**
 
@@ -42,8 +42,8 @@ l'italiano per davvero, perché è costruita sulle **quattro virtù dell'espress
 4. **ornatus** — bellezza *regolata*: figure, ritmo, argomentazione, costruzione del testo
    (incipit, sviluppo, chiusura). Il suo eccesso (la *mala affectatio*) è esattamente lo
    **slop dell'AI** — perifrasi, gerundite, triadi, avverbi in *-mente*, aggettivi pomposi,
-   antilingua e affettazione all'italiana — che la skill riconosce e rimuove (73 pattern
-   stilistici + 2 invarianti semantiche, 75 controlli numerati, oltre al repertorio di cliché).
+   antilingua e affettazione all'italiana — che la skill riconosce e rimuove (78 pattern
+   stilistici + 2 invarianti semantiche, 80 controlli numerati, oltre al repertorio di cliché).
 
 Il principio guida è l'**equilibrio**: ogni virtù sta tra due vizi, per difetto (sciatteria,
 oscurità) e per eccesso (slop). La differenza rispetto a un semplice "umanizzatore": qui c'è
@@ -88,14 +88,14 @@ troncamento, non un'elisione → niente apostrofo. È anche un consulente, non s
 │   ├── retorica-efficacia.md     # aptum/perspicuitas/ornatus: 4 virtù, 3 stili, figure,
 │   │                             #   compositio, tópoi, dispositio, tesi, riassunto, discorso riferito
 │   ├── coesione-e-connettivi.md  # il filo: coesione vs coerenza, tassonomia dei connettivi
-│   ├── stile-naturale.md         # anti-slop: 73 pattern + 2 invarianti semantiche
+│   ├── stile-naturale.md         # anti-slop: 78 pattern + 2 invarianti semantiche
 │   │                             #   + "Dare voce" + audit
 │   ├── cliche-e-parole-alla-moda.md  # parole alla moda, tormentoni, luoghi comuni, cliché, plastismi
 │   ├── spiegare-con-chiarezza.md # divulgare/documentare: chiarezza, numeri, termine tecnico, anti-hype
 │   ├── narrativa.md              # raccontare: idea vs trama, personaggio, dialogo, scena, tensione, revisione
 │   └── revisione-e-proprieta.md  # la parola giusta (le mot juste), collaudo metafore, revisione a freddo
 └── evals/
-    ├── evals.json                # 33 casi dev + 6 held-out congelati
+    ├── evals.json                # 39 casi dev + 6 held-out congelati
     ├── manifest.json             # nomi, generi, livelli (exact/minimal/semantic/…) e split
     ├── run.mjs                   # runner content-addressed, verdetti fail-closed, braccio --no-skill
     ├── run.test.mjs              # test deterministici del runner
@@ -287,8 +287,8 @@ it's built on the four classical *virtutes elocutionis*:
 4. **ornatus** — *measured* beauty: figures, rhythm, argumentation, text construction
    (opening, development, closing). Its excess (*mala affectatio*) is exactly AI slop —
    periphrasis, trailing gerunds, forced triads, *-mente* adverbs, the Italian "antilingua"
-   affectation — which the skill detects and removes (73 stylistic patterns plus 2 semantic
-   invariants: 75 numbered checks, alongside a register of clichés and stock phrases).
+   affectation — which the skill detects and removes (78 stylistic patterns plus 2 semantic
+   invariants: 80 numbered checks, alongside a register of clichés and stock phrases).
 
 The guiding principle is **balance**: each virtue sits between two vices, by deficiency
 (sloppiness, obscurity) and by excess (slop). Unlike a generic "humanizer", this skill carries

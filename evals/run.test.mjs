@@ -110,6 +110,9 @@ process.stdin.on('end', () => {
     process.stdout.write('fake-claude 1.0')
   } else if (process.argv.includes('fake-editor')) {
     process.stdout.write("Il verbale dell'ultima assemblea non riporta la decisione sul bilancio, perciò conviene rinviare l'approvazione.")
+  } else if (process.argv.includes('fake-editor-exit1')) {
+    process.stdout.write(JSON.stringify({ result: 'Testo corretto.', modelUsage: { 'fake-model': { inputTokens: 1 } } }))
+    process.exit(1)
   } else if (process.argv.includes('fake-judge-fail')) {
     process.stdout.write(JSON.stringify({ pass: false, invented: 0, expectations: [true, true, false], notes: 'no' }))
   } else {
@@ -180,6 +183,13 @@ process.stdin.on('end', () => {
       /alternativi/,
     )
 
+    // exit ≠ 0 del CLI con envelope valido: la risposta si salva, dichiarata
+    const salvaged = main(['--ids', '5', '--out', join(root, 'salvage'), '--model', 'fake-editor-exit1', '--judge-model', 'fake-judge'])
+    assert.equal(salvaged.summary.pass, 1)
+    const salvagedRow = JSON.parse(readFileSync(join(root, 'salvage', 'results.jsonl'), 'utf8').trim())
+    assert.equal(salvagedRow.editorCliExitError, true)
+    assert.equal(salvagedRow.output, 'Testo corretto.')
+
     // --fail-under: gate esplicito nel risultato
     const gateOk = main(['--ids', '5', '--out', join(root, 'gate-ok'), '--model', 'fake-editor', '--judge-model', 'fake-judge', '--fail-under', '1'])
     assert.equal(gateOk.gate.ok, true)
@@ -201,12 +211,12 @@ test('main usa dev per default e rifiuta flag o id sconosciuti', () => {
     const checked = main(['--validate-only'])
     assert.equal(checked.splitFilter, 'dev')
     // dev = 1–13 (storici) + 17 (declassato da held-out: osservato) + 18–30 (estensione
-    // 2026-07) + 34–39 (superficie 2.16.0: diagnosi, traduzione, sessione, scheda, schede
-    // di punteggiatura)
+    // 2026-07) + 34–39 (superficie 2.16.0) + 40–45 (tell 2026: casi lunghi, conflitti
+    // utente-vs-policy, controllo falsi positivi)
     assert.deepEqual(checked.ids, [
       ...Array.from({ length: 13 }, (_, i) => i + 1),
       ...Array.from({ length: 14 }, (_, i) => i + 17),
-      ...Array.from({ length: 6 }, (_, i) => i + 34),
+      ...Array.from({ length: 12 }, (_, i) => i + 34),
     ])
     const heldOut = main(['--validate-only', '--split', 'held-out'])
     assert.deepEqual(heldOut.ids, [14, 15, 16, 31, 32, 33])

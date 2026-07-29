@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 3,
+  "label": "t-canarini",
+  "stamp": "2026-07-28T23-28-00-969Z",
+  "argv": [
+    "--ids",
+    "4,7,13,26",
+    "--model",
+    "claude-sonnet-5",
+    "--judge-model",
+    "claude-opus-4-8",
+    "--label",
+    "t-canarini",
+    "--out",
+    "evals/results/audit-2026-07t/t-canarini"
+  ],
+  "git": {
+    "sha": "60d0135",
+    "dirty": true
+  },
+  "skill": {
+    "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/scrittura-italiana-single-file.md",
+    "sha256": "53dc6474badf8cec5ef02c19476ff0d64e685c331044cb5b1291f0a05cf8770c",
+    "bytes": 250599
+  },
+  "suite": {
+    "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/evals.json",
+    "sha256": "0f5c2387a8202adff6f2e68ffeed6c20d362845c32c83fd5fa39fa6f2c570464",
+    "bytes": 43072
+  },
+  "manifest": {
+    "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/manifest.json",
+    "sha256": "69a2a6029efc0a1cdfd6fe0366d817778c7412126c4e39d0b9eff7cb67ab40f4",
+    "bytes": 6645
+  },
+  "editorModel": "claude-sonnet-5",
+  "judgeModel": "claude-opus-4-8",
+  "sameModel": false,
+  "runs": 1,
+  "splitFilter": "dev",
+  "claudeVer": "2.1.220 (Claude Code)",
+  "node": "v24.15.0",
+  "ids": [
+    4,
+    7,
+    13,
+    26
+  ]
+}

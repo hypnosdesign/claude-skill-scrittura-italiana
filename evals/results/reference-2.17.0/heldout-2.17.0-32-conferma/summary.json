@@ -1,0 +1,38 @@
+{
+  "total": 2,
+  "pass": 2,
+  "err": 0,
+  "passRate": 1,
+  "invented": 0,
+  "costUsd": 0.1865,
+  "modelsUsed": [
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-5",
+    "claude-opus-4-8"
+  ],
+  "resolvedOverlap": [],
+  "byTarget": {
+    "improve": {
+      "pass": 2,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "bySplit": {
+    "held-out": {
+      "pass": 2,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "perEval": {
+    "32": {
+      "name": "divulgazione-hype",
+      "target": "improve",
+      "pass": 2,
+      "n": 2
+    }
+  }
+}

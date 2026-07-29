@@ -82,6 +82,10 @@ Un dato senza contesto non informa: intimorisce o viene ignorato. Tre tecniche:
 ⚠ **Falsa precisione:** non riportare più cifre significative di quante ne abbia la misura.
 Sette decimali su un sondaggio sono finta autorevolezza.
 
+⚠ **Falsa enfasi:** *ben* 300 persone, *addirittura*, *la bellezza di* 2 milioni — l'enfasi
+davanti al numero lo sgonfia invece di gonfiarlo: se il numero è notevole, il **confronto**
+lo mostra (punto 1); se non lo è, l'avverbio non lo salva.
+
 ✗ *L'acceleratore raggiunge 13 TeV con luminosità di 10³⁴ cm⁻² s⁻¹.*
 ✓ *L'acceleratore spinge i protoni a energie diecimila volte la loro massa a riposo — per ogni
 particella, quanto un moscerino in volo; solo che ne fa scontrare miliardi al secondo.*

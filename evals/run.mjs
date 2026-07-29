@@ -179,6 +179,7 @@ export function main(argv = process.argv.slice(2)) {
       let editorDurationMs = null
       let editorModels = []
       let editorCostUsd = null
+      let editorCliExitError = false
       let judged = null
       try {
         const edited = callClaude(e.prompt, noSkill ? [] : ['--append-system-prompt-file', skillFile], editorModel)
@@ -186,6 +187,7 @@ export function main(argv = process.argv.slice(2)) {
         editorDurationMs = edited.durationMs
         editorModels = edited.models
         editorCostUsd = edited.costUsd
+        editorCliExitError = Boolean(edited.cliExitError)
         judged = judge(e, output, m, judgeModel)
       } catch (err) {
         const message = formatExecError(err)
@@ -213,6 +215,7 @@ export function main(argv = process.argv.slice(2)) {
         editorDurationMs,
         editorModels,
         editorCostUsd,
+        editorCliExitError,
         judgeDurationMs: judged.durationMs,
         judgeModels: judged.models ?? [],
         judgeCostUsd: judged.costUsd ?? null,
@@ -268,17 +271,35 @@ export function dedupeRows(rows) {
 }
 
 // ---------- helpers ----------
+// `--disallowedTools "*"` toglie gli strumenti del CLI: il benchmark è
+// testo-dentro/testo-fuori. Senza questo vincolo l'editor può «andare agentico» — è
+// successo: sul caso #15 ha cercato config.json nel tmpdir e risposto in inglese col
+// percorso della sandbox, contato (giustamente) come invenzione. Un flake di harness,
+// non un dato sull'editing. (La variante `--tools ''` lascia i tool nel prompt e i
+// tentativi negati fanno uscire il CLI in errore: scartata dopo prova.)
 function callClaude(prompt, extraFlags, model) {
   const started = process.hrtime.bigint()
-  const raw = execFileSync(process.env.CLAUDE_BIN || 'claude', ['-p', ...extraFlags, '--model', model, '--output-format', 'json'], {
-    input: prompt,
-    cwd: tmpdir(),
-    env: claudeEnv(),
-    encoding: 'utf8',
-    timeout: 240000,
-    maxBuffer: 16 * 1024 * 1024,
-  }).trim()
-  return { ...parseCliEnvelope(raw), durationMs: elapsedMs(started) }
+  try {
+    const raw = execFileSync(process.env.CLAUDE_BIN || 'claude', ['-p', ...extraFlags, '--model', model, '--output-format', 'json', '--disallowedTools', '*'], {
+      input: prompt,
+      cwd: tmpdir(),
+      env: claudeEnv(),
+      encoding: 'utf8',
+      timeout: 240000,
+      maxBuffer: 16 * 1024 * 1024,
+    }).trim()
+    return { ...parseCliEnvelope(raw), durationMs: elapsedMs(started) }
+  } catch (err) {
+    // Il CLI 2.1.x ogni tanto esce con codice ≠ 0 stampando comunque un envelope
+    // completo di `result` (visto ~4 volte su ~60 chiamate il 29-07-2026). Se il
+    // result c'è, la risposta è valida: salvarla — dichiarandolo — è più onesto
+    // che buttare una misura pagata. Senza result, l'errore resta un errore.
+    const salvage = parseCliEnvelope(String(err?.stdout ?? '').trim())
+    if (salvage.text && salvage.models.length) {
+      return { ...salvage, durationMs: elapsedMs(started), cliExitError: true }
+    }
+    throw err
+  }
 }
 
 // Estrae testo, ID dei modelli risolti e costo dall'envelope `--output-format json`

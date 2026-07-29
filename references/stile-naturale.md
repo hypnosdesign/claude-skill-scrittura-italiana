@@ -13,7 +13,8 @@ l'italiano. Complementare a `punteggiatura.md`: lì la *correttezza*, qui la *na
 **Mappa del file:** Dare voce; A contenuto; B lingua e grammatica (con la nota «Quando il
 compito è tradurre»); C stile e tipografia; D residui da chatbot; E riempitivi e cautele;
 F antilingua; G verità e misura; H scuola, copy e tic recenti; I prosa saggistico-accademica;
-J slop da assistente e invarianti semantiche; audit finale.
+J slop da assistente e invarianti semantiche; K tic di terza generazione (2025-26); audit
+finale.
 
 ---
 
@@ -164,8 +165,10 @@ dinamico; pregevole, prezioso, inestimabile; abbracciare, racchiudere, incarnare
 dialogo; delicato equilibrio, sapiente miscela.* → Il problema è la **densità**: diradare.
 
 **8. Perifrasi al posto di "è/sono".** *si configura come, si pone come, si presenta come,
-si rivela, si erge a, assurge a, costituisce, rappresenta, risulta essere, appare come.*
-→ Usa **è / sono / ha**.
+si rivela, si erge a, assurge a, costituisce, rappresenta, risulta essere, appare come;
+si tratta di* (in apertura assoluta: *«Si tratta di un fenomeno complesso»* → *«È un
+fenomeno complesso»*; legittimo quando riprende un referente già posto: *«non si sa di che
+cosa si tratti»*). → Usa **è / sono / ha**.
 
 **9. Parallelismi negativi — la famiglia del tic bipolare.** *"Non solo… ma anche", "Non
 si tratta tanto di X quanto di Y"*; code tipo *"nessuna ambiguità", "niente sprechi"*. →
@@ -367,8 +370,12 @@ normali in contesto tecnico (*ad hoc, ex post*); diventano tell quando si accumu
 sono fuori registro.
 
 **18. Burocratese.** *provvedere a, porre in essere, addivenire a, al fine di / allo scopo
-di, in ottemperanza a, nell'ambito di, in seno a, in virtù di, in ragione di, in ordine a,
-con riferimento a, sulla base di quanto previsto.* → Linguaggio diretto.
+di, in ottemperanza a, nell'ambito di, all'interno di (per un semplice* in*), in seno a, in
+virtù di, in ragione di, in ordine a, con riferimento a, sulla base di quanto previsto.* →
+Linguaggio diretto. **Sottotipo AI — *attraverso* strumentale a raffica:** *attraverso
+l'uso di, attraverso un processo di, attraverso l'analisi* per ogni complemento di mezzo →
+*con, mediante, usando, analizzando* (e spesso il verbo pieno assorbe tutto: *«ottimizza
+attraverso l'automazione dei flussi»* → *«automatizza i flussi»*).
 
 **19. Periodi a subordinate annidate.** Tre-quattro subordinate incassate con *che*
 polifunzionali ambigui. → **Regola:** se un periodo supera 35-40 parole o ha più di due
@@ -443,8 +450,9 @@ sulla base delle informazioni disponibili, sebbene i dettagli siano limitati.* �
 
 **30. Frasi riempitive.** *"Al fine di raggiungere questo obiettivo"* → *"Per raggiungerlo"*;
 *"In ragione del fatto che"* → *"Perché"*; *"In questo preciso momento storico"* → *"Oggi"*;
-*"possiede la capacità di elaborare"* → *"può elaborare"*; *"È importante notare come i dati
-mostrino"* → *"I dati mostrano"*.
+*"possiede la capacità di elaborare"* / *"è in grado di elaborare"* → *"può elaborare"*;
+*"l'obiettivo è quello di ridurre"* → *"l'obiettivo è ridurre"*; *"È importante notare come
+i dati mostrino"* → *"I dati mostrano"*.
 
 **31. Hedging eccessivo.** *"Si potrebbe potenzialmente forse argomentare che…"* →
 **Regola:** un solo marcatore di incertezza per affermazione (*potrebbe*, *forse*, *sembra*).
@@ -502,7 +510,7 @@ default; non è una Legge, ma una direzione):
 porta il senso, al posto del verbo pieno. → *effettuare un controllo* → **controllare**; *fare
 un incontro* → **incontrare**; *procedere alla verifica* → **verificare**; *dare comunicazione*
 → **comunicare**; *portare a compimento* → **concludere**; *sottoporre a esame* → **esaminare**;
-*porre attenzione* → **fare attenzione**. **Regola:** se "verbo + nome astratto" si dice con un
+*porre attenzione* → **fare attenzione**; *dare vita a* → **creare, avviare, fondare**. **Regola:** se "verbo + nome astratto" si dice con un
 solo verbo, usalo. **Nominalizzazione (sottotipo AI):** l'AI preferisce il sostantivo d'azione al
 verbo — *l'acquisizione delle competenze è utile al miglioramento delle capacità* → *acquisire
 competenze è utile a migliorare le capacità*. È lo **stile nominale** (il nome che schiaccia il
@@ -786,8 +794,9 @@ API, procedure, l'elenco puntato è legittimo e chiaro — lì non è slop. Il t
 posto* del ragionamento, non l'elenco in sé.
 
 **68. Falso bilanciamento / hedging di servizio.** *È importante notare che…, Vale la pena
-considerare…, Va detto che…, Sebbene X, è anche vero Y* detti meccanicamente. Calchi (*It's
-important to note, It's worth considering*) che fingono equilibrio e non dicono nulla. →
+considerare…, Va detto che…, Detto questo,… (calco di* That said*), Sebbene X, è anche vero
+Y* detti meccanicamente. Calchi (*It's important to note, It's worth considering*) che
+fingono equilibrio e non dicono nulla. →
 *Attenzione:*, *Nota che*, o niente: vai al punto. (Parente dell'hedging di §E e dei marcatori
 d'incertezza: **uno solo** per affermazione.) ⚠ Falso positivo medio: *è importante notare che*
 può introdurre davvero un rilievo non ovvio; il tell è l'uso **meccanico e ripetuto** (a ogni
@@ -854,6 +863,61 @@ l'unico tell che **non si giudica sulla forma ma sul referente**: applica il pro
 di SKILL.md — verifica solo se richiesto e se hai gli strumenti; altrimenti conserva e segnala
 separatamente il dubbio, senza inventare una correzione. Falso positivo quasi nullo — se il dato
 c'è ed è vero, non è slop.
+
+## K. Tic di terza generazione (2025-26)
+
+> Famiglie emerse — o esplose — con l'ultima generazione di modelli: meno parole-spia, più
+> **ritmi e mosse**. Come lo slop «colto» di §72, sono datate: quando smetteranno di
+> discriminare andranno declassate, non accumulate.
+
+**76. Il valzer concessivo.** Ogni capoverso apre concedendo e chiude ribaltando: *«Certo,
+… Ma…»*, *«È vero che… Tuttavia…»*, *«Sì, … Eppure…»* — in serie. La concessiva **vera** è
+una forza del ragionamento (`retorica-efficacia.md` §6b: ammette il punto avversario *e poi
+lo supera*); il tic è la sua **serializzazione**: ammissioni vuote che non cedono mai
+niente, il bilanciamento come metro ritmico. → Rileggi i soli attacchi dei capoversi (come
+§47): se in maggioranza concedono-e-ribaltano, sciogli — afferma diretto dove non c'è vera
+obiezione, tieni la concessiva dove l'obiezione esiste ed è nominata.
+✗ *Certo, i dati sono pochi. Ma la tendenza c'è. È vero che il campione è piccolo. Tuttavia
+i risultati convergono.* ✓ *I dati sono pochi ma convergenti: la tendenza c'è, e un campione
+più ampio potrà smentirla o confermarla.* → **Differenziazione:** non è §68 (formula di
+bilanciamento nella singola frase): qui il tic è la **struttura ripetuta** dei capoversi.
+
+**77. Lo staccato pubblicitario a frammenti.** Frammenti nominali in raffica col punto:
+*«Semplice. Veloce. Sicuro.»*, *«Un'idea. Un metodo. Una promessa.»* Il frammento isolato
+per enfasi è legittimo (la frase corta colpisce: `retorica-efficacia.md` §4, e
+`punteggiatura.md` → Punto); il tic è la **raffica ritmica**, spesso in triade (§10), che
+simula incisività senza predicare nulla. → Ricomponi con un verbo, o tieni **un** solo
+frammento — quello che si guadagna l'enfasi.
+✗ *Zero configurazione. Massima resa. Nessun pensiero.* ✓ *Si installa senza configurazione
+e rende da subito.*
+
+**78. Pseudo-significatività: *non a caso*.** *Non a caso, non è un caso che, guarda caso*:
+dichiarano significativo un accostamento senza argomentarlo — il nesso sembra dimostrato
+perché annunciato. → Se il nesso c'è, mostralo (la causa, il dato, l'esempio) e la formula
+diventa superflua; se non c'è, togli la formula e lascia i fatti uno accanto all'altro,
+senza promettere ciò che il testo non mantiene. **Preserva** quando il testo argomenta
+davvero il nesso subito dopo: lì è un annuncio, non un trucco. → **Differenziazione:** non
+è §34 (autorità sul lettore: *la vera domanda è*) né §59 (pseudo-precisione): qui si
+rivendica la **significatività di una coincidenza**.
+✗ *Non a caso, l'azienda è nata a Torino.* (e non se ne riparla) ✓ *L'azienda è nata a
+Torino, dove i due fondatori già lavoravano in un centro ricerche.*
+
+**79. Il titolo bipartito seriale.** *«X: come Y sta cambiando Z»*, *«X: perché Y (e cosa
+significa per Z)»* su **ogni** titolo e sottotitolo. Il titolo coi due punti è legittimo e
+consolidato (saggistica, accademia); il tell è la **serializzazione** della formula — ogni
+sezione col suo bipartito, spesso con *come/perché* + gerundio. → Varia: titoli pieni e
+asciutti per default, il bipartito solo dove i due punti lavorano davvero (tema: tesi).
+(Per la grafia: sentence case, `punteggiatura.md` → Maiuscole.)
+
+**80. *Immagina…* come cornice vuota.** L'apertura ipotetico-immersiva di default:
+*«Immagina un mondo in cui…»*, *«Immagina di poter…»*. L'imperativo esemplificativo è uno
+strumento **legittimo** della divulgazione (`spiegare-con-chiarezza.md` §3: *«Pensa ai modi
+di girare un triangolo…»* introduce un esempio guidato che lavora per il concetto); il tic
+è la cornice **vuota** — l'invito a immaginare ciò che si poteva dire direttamente, il
+«mondo in cui» generico che il testo poi abbandona. → Se l'esempio guida, tienilo; se è un
+sipario, entra nel soggetto (parenti: §45 incipit di cornice, §46 domanda-amo).
+✗ *Immagina un mondo in cui i tuoi dati lavorano per te. NuvolaPro è…* ✓ *NuvolaPro
+incrocia i dati di vendita con il meteo: ordini scorte quando servono.*
 
 ## Audit finale anti-AI (passaggio obbligato)
 

@@ -477,12 +477,12 @@
   },
   {
    "id": 41,
-   "prompt": "Rendi naturale questa pagina di presentazione; i dati (prezzi, giorni, condizioni) devono restare esatti.\n\nImmagina un mondo in cui la spesa si fa da sola, e ogni ortaggio racconta la sua storia. TerraViva è questo, e molto di più.\n\nFresca. Locale. Giusta. La cassetta TerraViva arriva ogni martedì e venerdì, con verdura raccolta al mattino da un vero e proprio ecosistema di dodici aziende agricole entro trenta chilometri.\n\nLa qualità: come selezioniamo i produttori. A livello di filiera, ogni azienda viene visitata due volte l'anno. Non lavoriamo con intermediari, ma con persone.\n\nIl prezzo: perché 19,90 € sono una scelta trasparente. La cassetta media pesa sei chili. Ordini in un minuto. Consegna al piano. Zero plastica. Puoi sospendere o disdire quando vuoi, senza penali.\n\nUnisciti a noi: ogni cassetta è un piccolo gesto che può cambiare il mondo, un ortaggio alla volta.",
-   "expected_output": "Cornice «Immagina» tolta; lo staccato in prosa ricomposto (il claim isolato può restare), «vero e proprio»/«ecosistema»/«a livello di» eliminati, titoletti variati, chiusura su un fatto; dati esatti conservati.",
+   "prompt": "Rendi naturale questa pagina di presentazione; i dati (prezzi, giorni, condizioni) devono restare esatti.\n\nImmagina un mondo in cui la spesa si fa da sola, e ogni ortaggio racconta la sua storia. TerraViva è questo, e molto di più.\n\nFresca. Locale. Giusta. La cassetta TerraViva arriva ogni martedì e venerdì, con verdura raccolta al mattino da un vero e proprio ecosistema di dodici aziende agricole entro trenta chilometri.\n\nLa qualità: come selezioniamo i produttori. A livello di filiera, ogni azienda viene visitata due volte l'anno. Non lavoriamo con intermediari, ma con persone.\n\nIl prezzo: perché 19,90 € sono una scelta trasparente. La cassetta media pesa sei chili. Puoi sospendere o disdire quando vuoi, senza penali.\n\nUnisciti a noi: ogni cassetta è un piccolo gesto che può cambiare il mondo, un ortaggio alla volta.",
+   "expected_output": "Cornice «Immagina» e staccato ricomposti, «vero e proprio»/«ecosistema»/«a livello di» tolti, titoletti bipartiti variati, chiusura su un fatto; dati esatti conservati.",
    "files": [],
    "expectations": [
     "Toglie la cornice 'Immagina un mondo in cui' ed entra sul concreto.",
-    "Ricompone lo staccato dentro la prosa ('Ordini in un minuto. Consegna al piano. Zero plastica.'); può conservare al più il claim d'apertura 'Fresca. Locale. Giusta.' come slogan isolato.",
+    "Ricompone lo staccato 'Fresca. Locale. Giusta.' (al più un solo frammento enfatico).",
     "Elimina 'vero e proprio', l'uso figurato di 'ecosistema' e 'a livello di'.",
     "Varia i due titoletti bipartiti seriali ('La qualità: come…', 'Il prezzo: perché…').",
     "Conserva l'informazione che non ci sono intermediari e tutti i dati esatti (martedì e venerdì, dodici aziende, trenta chilometri, due volte l'anno, 19,90 €, sei chili, senza penali).",

@@ -350,8 +350,9 @@ termini tecnici) → **Parte G**; **narrativa** (idea, punto di vista, licenze) 
 Quando **correggi**, fornisci: (1) il **testo corretto**; (2) *se utile*, una nota breve su
 **cosa lo rendeva scorretto / AI / inefficace** e le scelte fatte (puoi inquadrarle per virtù).
 
-Quando l'utente chiede **solo la diagnosi** («dimmi cosa non va», «non riscrivere»): referto
-senza testo corretto — problemi veri, per virtù, ancorati a punti precisi; riscrivi solo se poi lo chiede.
+Quando l'utente chiede **solo la diagnosi** («dimmi cosa non va», «non riscrivere»), consegna
+il **referto senza testo corretto**: i problemi veri, per virtù, ciascuno ancorato a un punto
+preciso del testo — la riscrittura arriva solo se poi la chiede.
 
 Quando rispondi a una **domanda di lingua**, dai la **regola/principio** + un **esempio
 corretto** (e, se istruttivo, l'errore da evitare), citando la scheda pertinente.

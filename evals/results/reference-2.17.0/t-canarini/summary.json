@@ -1,0 +1,62 @@
+{
+  "total": 4,
+  "pass": 4,
+  "err": 0,
+  "passRate": 1,
+  "invented": 0,
+  "costUsd": 0.9652,
+  "modelsUsed": [
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-5",
+    "claude-opus-4-8"
+  ],
+  "resolvedOverlap": [],
+  "byTarget": {
+    "minimal": {
+      "pass": 3,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "mixed": {
+      "pass": 1,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "bySplit": {
+    "dev": {
+      "pass": 4,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "perEval": {
+    "4": {
+      "name": "chat-informale",
+      "target": "minimal",
+      "pass": 1,
+      "n": 1
+    },
+    "7": {
+      "name": "documentazione-tecnica",
+      "target": "minimal",
+      "pass": 1,
+      "n": 1
+    },
+    "13": {
+      "name": "bipolare-misto",
+      "target": "mixed",
+      "pass": 1,
+      "n": 1
+    },
+    "26": {
+      "name": "istruzioni-annidate",
+      "target": "minimal",
+      "pass": 1,
+      "n": 1
+    }
+  }
+}

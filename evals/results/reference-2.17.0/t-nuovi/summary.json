@@ -1,0 +1,80 @@
+{
+  "total": 6,
+  "pass": 5,
+  "err": 0,
+  "passRate": 0.833,
+  "invented": 0,
+  "costUsd": 2.7408,
+  "modelsUsed": [
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-5",
+    "claude-opus-4-8"
+  ],
+  "resolvedOverlap": [],
+  "byTarget": {
+    "improve": {
+      "pass": 2,
+      "fail": 1,
+      "err": 0,
+      "invented": 0
+    },
+    "minimal": {
+      "pass": 2,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "mixed": {
+      "pass": 1,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "bySplit": {
+    "dev": {
+      "pass": 5,
+      "fail": 1,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "perEval": {
+    "40": {
+      "name": "saggio-lungo-valzer",
+      "target": "improve",
+      "pass": 1,
+      "n": 1
+    },
+    "41": {
+      "name": "landing-staccato",
+      "target": "improve",
+      "pass": 0,
+      "n": 1
+    },
+    "42": {
+      "name": "divulgazione-lunga-attraverso",
+      "target": "improve",
+      "pass": 1,
+      "n": 1
+    },
+    "43": {
+      "name": "conflitto-lineette-utente",
+      "target": "minimal",
+      "pass": 1,
+      "n": 1
+    },
+    "44": {
+      "name": "conflitto-statistiche-inventate",
+      "target": "mixed",
+      "pass": 1,
+      "n": 1
+    },
+    "45": {
+      "name": "falsi-positivi-parte-k",
+      "target": "minimal",
+      "pass": 1,
+      "n": 1
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "total": 3,
+  "pass": 2,
+  "err": 0,
+  "passRate": 0.667,
+  "invented": 1,
+  "costUsd": 0.311,
+  "modelsUsed": [
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-5",
+    "claude-opus-4-8"
+  ],
+  "resolvedOverlap": [],
+  "byTarget": {
+    "minimal": {
+      "pass": 2,
+      "fail": 1,
+      "err": 0,
+      "invented": 1
+    }
+  },
+  "bySplit": {
+    "held-out": {
+      "pass": 2,
+      "fail": 1,
+      "err": 0,
+      "invented": 1
+    }
+  },
+  "perEval": {
+    "15": {
+      "name": "configurazione-tecnica",
+      "target": "minimal",
+      "pass": 2,
+      "n": 3
+    }
+  }
+}

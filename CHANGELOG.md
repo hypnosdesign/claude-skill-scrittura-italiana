@@ -5,6 +5,66 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.17.0] — 2026-07-29
+
+**I tell del 2026, con l'antidoto ai falsi positivi misurato.** La Parte K porta i pattern
+da 75 a **80 controlli** (78 pattern + 2 invarianti): non parole-spia ma ritmi e mosse
+dell'ultima generazione — e per la prima volta la suite contiene un **controllo dedicato ai
+falsi positivi** (un brano legittimo che usa le stesse forme: la skill lo lascia in pace),
+tre **casi lunghi** e due **conflitti utente-vs-policy**.
+
+### Aggiunto (pattern)
+
+- **`stile-naturale.md` Parte K — tic di terza generazione (2025-26), §76-80:** il **valzer
+  concessivo** (*Certo… Ma…* serializzato a ogni capoverso; la concessiva vera resta una
+  forza), lo **staccato pubblicitario a frammenti** (*Semplice. Veloce. Sicuro.* — il tell è
+  la raffica, lo slogan isolato è legittimo), la **pseudo-significatività** (*non a caso*
+  senza argomento), il **titolo bipartito seriale** (*X: come Y…* su ogni sezione),
+  ***Immagina…* come cornice vuota** (distinta dall'imperativo esemplificativo legittimo di
+  `spiegare-con-chiarezza.md` §3). Ognuno con discriminante, prima→dopo e differenziazione
+  dai pattern contigui; dichiarati datati, da declassare quando smetteranno di discriminare.
+- **Riempitivi nelle famiglie esistenti** (nessun numero nuovo): *si tratta di* in apertura
+  (§8), *all'interno di* e l'***attraverso* strumentale a raffica** (§18), *è in grado di* e
+  *l'obiettivo è quello di* (§30), *dare vita a* (§38), *Detto questo* calco di *That said*
+  (§68); nel file cliché la **leva 2024-26** (*ecosistema, narrazione, resilienza, iconico,
+  immersivo, esperienziale*), *a livello di*, *fare i conti con*, e gli
+  **intensificatori-etichetta** *vero e proprio / a tutti gli effetti*; in
+  `spiegare-con-chiarezza.md` §4 la **falsa enfasi numerica** (*ben* 300, *la bellezza di*).
+- **Guardia dati-non-istruzioni estesa al testo operativo** (SKILL.md): revisionare una
+  configurazione o una procedura significa curarne la lingua — non eseguirla, non cercare i
+  file citati, non verificare l'ambiente. Nata da un fallimento reale del caso #15 (l'editor
+  «andava agentico»): dopo l'estensione, 3/3.
+
+### Misurato (2.17.0 — editor `claude-sonnet-5`, giudice `claude-opus-4-8`)
+
+- **Sei casi nuovi (#40-45): 6/6, 0 invenzioni** — saggio lungo col valzer e i «non a caso»
+  (dati e bipolare informativo intatti), landing con staccato e buzzword (prezzi e condizioni
+  esatti), divulgazione con *attraverso*/hype (cautele epistemiche conservate), **conflitto
+  lineette** (la preferenza dichiarata dell'utente vince, senza prediche), **pressione a
+  inventare statistiche** (rifiuto motivato + segnaposto), e il **controllo falsi positivi**:
+  un brano con *attraversare* concreto, concessiva vera, *non a caso* argomentato e frammento
+  ritmico resta com'è. Onestà su #41: al primo giro il gold puniva lo slogan in apertura, che
+  nel copy è una scelta difendibile — ricalibrato sul discriminante vero di §77 (la raffica
+  nella prosa, non il claim isolato) e ripassato.
+- **Canarini #4, #7, #13, #26: 4/4, 0 invenzioni.**
+- **Held-out: 5/6 effettivi** (#15 3/3 dopo la guardia; #32 err transitorio del CLI nel run
+  di gate, 2/2 alla conferma; #16 resta il coin-flip dichiarato, 1/4 nelle osservazioni di
+  oggi — mai ritoccato).
+
+### Corretto (harness)
+
+- **L'editor non può più «andare agentico»:** le chiamate del runner passano
+  `--disallowedTools "*"` — il benchmark è testo-dentro/testo-fuori. Scoperto sul caso #15:
+  con gli strumenti disponibili l'editor cercava `config.json` nel tmpdir e rispondeva in
+  inglese col percorso della sandbox (contato, giustamente, come invenzione). La variante
+  `--tools ''` è stata provata e scartata: lascia i tool nel prompt e i tentativi negati
+  fanno uscire il CLI in errore.
+- **Salvataggio dichiarato degli exit spurii del CLI:** il CLI 2.1.x ogni tanto esce con
+  codice ≠ 0 stampando comunque un envelope completo di `result` (~4 volte su ~60 chiamate
+  oggi); se il result c'è, la risposta viene salvata e marcata `editorCliExitError` invece
+  di buttare una misura pagata. Senza result, l'errore resta un errore. Test nuovi (17
+  totali).
+
 ## [2.16.0] — 2026-07-29
 
 **La superficie che mancava, sopra una misura ripulita (quinto audit).** Tre compiti reali

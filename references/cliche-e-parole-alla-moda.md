@@ -41,6 +41,12 @@ darsi un tono:
   dire. *interessante* «si dice di solito da chi è disposto a provarne pochissimo, per quasi
   tutto» (Pontiggia). Quando li usi *di default* per un giudizio, è segno che non corrispondono a
   ciò che provi davvero: di' *cosa* ti colpisce, e in che senso.
+- **La leva 2024-26** (le parole alla moda invecchiano a ondate; queste sono l'ondata corrente,
+  e andranno declassate quando sarà passata): **ecosistema** (figurato: *«l'ecosistema
+  dell'innovazione»*) → di' il sistema concreto (aziende, enti, persone); **narrazione /
+  narrativa** (figurato: *«cambiare la narrazione»*) → racconto, versione, discorso;
+  **resilienza / resiliente** (fuori dai contesti tecnici) → capacità di reggere, di
+  adattarsi; **iconico, immersivo, esperienziale** → di' che cosa fa, non che aura ha.
 
 ## 2. Locuzioni e tormentoni
 
@@ -57,6 +63,8 @@ darsi un tono:
 - **il tema è… / il discorso…** (aziendalese: *«il tema è un approccio sinergico», «per quanto
   riguarda il discorso infiltrazioni»*) → la questione è, il problema è.
 - **combinato disposto, in termini di** → gergo migrato fuori sede; semplifica.
+- **a livello di** (*«a livello di comunicazione»*) → sul piano di, quanto a — o riformula
+  col soggetto vero (*«la comunicazione…»*).
 - **anglismi spocchiosi** (≠ anglismi tecnici necessari come *computer, mouse*): usati per darsi un
   tono al posto di parole italiane diffuse. *player* → protagonista/operatore; *brand* → marchio;
   *competitor* → concorrente; *device* → dispositivo; *shift* → svolta/spostamento; *asset* →
@@ -99,8 +107,9 @@ verificarle. Suonano come il gesso che stride sulla lavagna:
 Immagini ripetute fino a non far più immagine:
 
 - **un bollettino di guerra** (per gli incidenti), **la madre di tutte le X**, **un fiume di
-  parole/persone**, **un boato dentro l'anima**, **fare la differenza**, **il deus ex machina**,
-  **l'altra faccia della medaglia**, **la punta dell'iceberg**, **tirare le fila**.
+  parole/persone**, **un boato dentro l'anima**, **fare la differenza**, **fare i conti con**
+  (per «affrontare»), **il deus ex machina**, **l'altra faccia della medaglia**, **la punta
+  dell'iceberg**, **tirare le fila**.
 - → Una metafora vale se è *viva* e aggiunge senso (vedi `retorica-efficacia.md` §3a). Quella
   morta non è ornamento: è zavorra. Se non te ne viene una tua, di' la cosa alla lettera.
 - ⚠ **Comicità involontaria:** due metafore morte accostate riattivano il senso letterale e
@@ -121,6 +130,11 @@ Immagini ripetute fino a non far più immagine:
   stesso nome, scritto in automatico: *stragrande maggioranza, polemica strumentale, dibattito
   ampio e articolato, delitto efferato, stretto riserbo, intervento deciso e tempestivo.* → Se
   scrivi l'aggettivo senza pensarci, fermati: aggiunge informazione? Se no, toglilo.
+- **Intensificatori-etichetta:** ***un vero e proprio* X**, ***a tutti gli effetti*** —
+  promettono letteralità e consegnano enfasi: quasi sempre si tolgono senza perdita (*«un
+  vero e proprio ecosistema»* → *«un sistema»*; se X è davvero X, dillo e basta). Legittimi
+  quando il punto è proprio la soglia (*«è a tutti gli effetti un contratto»*, in un testo
+  giuridico che lo argomenta).
 
 ## 7. Cliché del discorso scientifico
 
