@@ -12,6 +12,7 @@ on:
       - "scrittura-italiana-single-file.md"
       - "scripts/check-description.mjs"
       - "scripts/check-versions.mjs"
+      - "scripts/package-skill.mjs"
       - "README.md"
       - "FAQ.md"
       - "ESEMPI.md"
@@ -27,6 +28,7 @@ on:
       - "scrittura-italiana-single-file.md"
       - "scripts/check-description.mjs"
       - "scripts/check-versions.mjs"
+      - "scripts/package-skill.mjs"
       - "README.md"
       - "FAQ.md"
       - "ESEMPI.md"
@@ -44,8 +46,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Test deterministici (runner, stabilità, kit cieco)
-        run: node --test evals/run.test.mjs evals/stability.test.mjs evals/blind-kit.test.mjs
+      - name: Test deterministici (runner, stabilità, kit cieco, attivazione)
+        run: node --test evals/run.test.mjs evals/stability.test.mjs evals/blind-kit.test.mjs evals/activation.test.mjs
       - name: Validazione suite e manifest (zero LLM)
         run: node evals/run.mjs --validate-only
       - name: Lunghezza della description (limite Desktop/claude.ai)
@@ -56,3 +58,5 @@ jobs:
         run: |
           python3 build-single-file.py
           git diff --exit-code scrittura-italiana-single-file.md
+      - name: Pacchetto installabile (un solo SKILL.md)
+        run: node scripts/package-skill.mjs

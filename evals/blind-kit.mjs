@@ -18,11 +18,11 @@
 // Bersaglio dichiarato (AUDIT-2026-07 §8): preferenza per il braccio con skill ≥ 70%.
 
 import { execFileSync } from 'node:child_process'
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
+import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve, dirname } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
-import { parseCliEnvelope } from './run.mjs'
+import { parseCliEnvelope, requestedModelMismatch, resolvedPrimaryModels } from './run.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const REPO = resolve(HERE, '..')
@@ -37,6 +37,23 @@ export function rng(seed) {
     t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296
   }
+}
+
+function sameArray(a, b) {
+  return a.length === b.length && a.every((x, i) => x === b[i])
+}
+
+// Un confronto cieco resta valido solo se i due output provengono dallo stesso
+// modello principale realmente risolto. Conservare i due bracci separati evita
+// che l'unione dei modelUsage nasconda un fallback asimmetrico.
+export function validatePairModels(requested, skillModels, bareModels, label = 'coppia') {
+  const skillPrimary = resolvedPrimaryModels(skillModels, requested)
+  const barePrimary = resolvedPrimaryModels(bareModels, requested)
+  if (!skillPrimary.length || !barePrimary.length) throw new Error(`${label}: modello risolto assente in almeno un braccio`)
+  if (requestedModelMismatch(requested, skillModels)) throw new Error(`${label}: braccio skill risolto da ${skillPrimary.join('+')} invece di ${requested}`)
+  if (requestedModelMismatch(requested, bareModels)) throw new Error(`${label}: braccio nudo risolto da ${barePrimary.join('+')} invece di ${requested}`)
+  if (!sameArray(skillPrimary, barePrimary)) throw new Error(`${label}: modelli risolti diversi fra i bracci (${skillPrimary.join('+')} vs ${barePrimary.join('+')})`)
+  return { skillPrimary, barePrimary }
 }
 
 export function main(argv = process.argv.slice(2)) {
@@ -59,56 +76,65 @@ function build(args, argv) {
   for (const id of ids) if (!byId[id]) throw new Error(`id assente dalla suite: ${id}`)
 
   mkdirSync(outDir, { recursive: true })
-  const rand = rng(seed)
-  const pairs = []
-  console.log(`kit cieco: ${ids.length} coppie · editor ${model} · skill ${skillFile}`)
-  for (const [i, id] of ids.entries()) {
-    const e = byId[id]
-    const prompt = `${e.prompt}\n\n(Rispondi con il SOLO testo finale, senza note, spiegazioni o titoli aggiunti.)`
-    const withSkill = callClaude(prompt, ['--append-system-prompt-file', skillFile], model)
-    const bare = callClaude(prompt, [], model)
-    const skillFirst = rand() < 0.5
-    pairs.push({
-      n: i + 1, id, name: nameOf(e.prompt),
-      consegna: e.prompt,
-      v1: skillFirst ? withSkill.text : bare.text,
-      v2: skillFirst ? bare.text : withSkill.text,
-      skillIs: skillFirst ? 1 : 2,
-      costUsd: +((withSkill.costUsd || 0) + (bare.costUsd || 0)).toFixed(4),
-      models: [...new Set([...withSkill.models, ...bare.models])],
-    })
-    console.log(`coppia ${i + 1}/${ids.length} (caso #${id}) pronta`)
-  }
+  try {
+    const rand = rng(seed)
+    const pairs = []
+    console.log(`kit cieco: ${ids.length} coppie · editor ${model} · skill ${skillFile}`)
+    for (const [i, id] of ids.entries()) {
+      const e = byId[id]
+      const prompt = `${e.prompt}\n\n(Rispondi con il SOLO testo finale, senza note, spiegazioni o titoli aggiunti.)`
+      const withSkill = callClaude(prompt, ['--append-system-prompt-file', skillFile], model)
+      const bare = callClaude(prompt, [], model)
+      validatePairModels(model, withSkill.models, bare.models, `coppia ${i + 1} (#${id})`)
+      const skillFirst = rand() < 0.5
+      pairs.push({
+        n: i + 1, id, name: nameOf(e.prompt),
+        consegna: e.prompt,
+        v1: skillFirst ? withSkill.text : bare.text,
+        v2: skillFirst ? bare.text : withSkill.text,
+        skillIs: skillFirst ? 1 : 2,
+        costUsd: +((withSkill.costUsd || 0) + (bare.costUsd || 0)).toFixed(4),
+        skillModels: withSkill.models,
+        bareModels: bare.models,
+      })
+      console.log(`coppia ${i + 1}/${ids.length} (caso #${id}) pronta`)
+    }
 
-  // chiave e dati completi: restano QUI, non vanno ai lettori
-  writeFileSync(join(outDir, 'coppie.json'), JSON.stringify({ seed, model, skillFile, stamp: new Date().toISOString(), pairs }, null, 2))
+    // chiave e dati completi: restano QUI, non vanno ai lettori
+    writeFileSync(join(outDir, 'coppie.json'), JSON.stringify({ seed, model, skillFile, stamp: new Date().toISOString(), pairs }, null, 2))
 
-  const sheet = []
-  sheet.push('# Confronto alla cieca — foglio del lettore\n')
-  sheet.push('Due versioni dello stesso testo, rivedute da due sistemi diversi. Per ogni coppia rispondi a due domande, **senza confrontarti con gli altri lettori**:\n')
-  sheet.push('1. **Migliore:** quale versione è scritta in un italiano più naturale ed efficace? (`1`, `2`, o `pari`)')
-  sheet.push('2. **Umana:** quale delle due ti sembra rivista da un editor umano esperto? (`1`, `2`, o `nonso`)\n')
-  sheet.push('Compila `risposte.csv` (una copia a testa, col tuo nome nel file) e riconsegnala. Non esiste risposta giusta: conta la tua impressione di lettore.\n')
-  for (const p of pairs) {
-    sheet.push(`\n---\n\n## Coppia ${p.n}\n`)
-    sheet.push(`**La consegna data ai due sistemi:**\n\n> ${p.consegna.replaceAll('\n', '\n> ')}\n`)
-    sheet.push(`### Versione 1\n\n${p.v1}\n`)
-    sheet.push(`### Versione 2\n\n${p.v2}\n`)
+    const sheet = []
+    sheet.push('# Confronto alla cieca — foglio del lettore\n')
+    sheet.push('Due versioni dello stesso testo, rivedute da due sistemi diversi. Per ogni coppia rispondi a due domande, **senza confrontarti con gli altri lettori**:\n')
+    sheet.push('1. **Migliore:** quale versione è scritta in un italiano più naturale ed efficace? (`1`, `2`, o `pari`)')
+    sheet.push('2. **Umana:** quale delle due ti sembra rivista da un editor umano esperto? (`1`, `2`, o `nonso`)\n')
+    sheet.push('Compila `risposte.csv` (una copia a testa, col tuo nome nel file) e riconsegnala. Non esiste risposta giusta: conta la tua impressione di lettore.\n')
+    for (const p of pairs) {
+      sheet.push(`\n---\n\n## Coppia ${p.n}\n`)
+      sheet.push(`**La consegna data ai due sistemi:**\n\n> ${p.consegna.replaceAll('\n', '\n> ')}\n`)
+      sheet.push(`### Versione 1\n\n${p.v1}\n`)
+      sheet.push(`### Versione 2\n\n${p.v2}\n`)
+    }
+    writeFileSync(join(outDir, 'foglio-lettore.md'), sheet.join('\n'))
+    writeFileSync(join(outDir, 'risposte.csv'), 'lettore,coppia,migliore,umana\n' + pairs.map(p => `NOME,${p.n},,`).join('\n') + '\n')
+    writeFileSync(join(outDir, 'ISTRUZIONI.md'), [
+      '# Come condurre il confronto cieco\n',
+      '1. Servono **almeno 3 lettori** che leggono bene l\'italiano e non sanno quale sistema ha prodotto quale versione (nemmeno tu glielo dici).',
+      '2. Dai a ciascuno `foglio-lettore.md` e una copia di `risposte.csv` (rinominata, es. `risposte-anna.csv`); si compila in autonomia, senza discuterne.',
+      '3. **Non aprire `coppie.json`** davanti ai lettori: contiene la chiave.',
+      '4. Raccolte le risposte:\n\n   ```bash\n   node evals/blind-kit.mjs --score <dir-del-kit> risposte-*.csv\n   ```\n',
+      `5. Bersaglio dichiarato (audit di luglio): preferenza per il braccio con skill **≥ 70%** sulle coppie decise (i «pari» non contano nel rapporto, ma vanno riportati).`,
+    ].join('\n'))
+    console.log(`\n→ kit in ${outDir}\n  foglio-lettore.md (per i lettori) · risposte.csv (template) · ISTRUZIONI.md · coppie.json (CHIAVE: non mostrarla)`)
+    const cost = +pairs.reduce((s, p) => s + p.costUsd, 0).toFixed(4)
+    console.log(`  costo API dichiarato: $${cost}`)
+    return { outDir, pairs: pairs.length, cost }
+  } catch (err) {
+    // La directory è stata creata da questa invocazione e non conteneva nulla prima:
+    // un kit parziale non deve restare disponibile per errore.
+    rmSync(outDir, { recursive: true, force: true })
+    throw err
   }
-  writeFileSync(join(outDir, 'foglio-lettore.md'), sheet.join('\n'))
-  writeFileSync(join(outDir, 'risposte.csv'), 'lettore,coppia,migliore,umana\n' + pairs.map(p => `NOME,${p.n},,`).join('\n') + '\n')
-  writeFileSync(join(outDir, 'ISTRUZIONI.md'), [
-    '# Come condurre il confronto cieco\n',
-    '1. Servono **almeno 3 lettori** che leggono bene l\'italiano e non sanno quale sistema ha prodotto quale versione (nemmeno tu glielo dici).',
-    '2. Dai a ciascuno `foglio-lettore.md` e una copia di `risposte.csv` (rinominata, es. `risposte-anna.csv`); si compila in autonomia, senza discuterne.',
-    '3. **Non aprire `coppie.json`** davanti ai lettori: contiene la chiave.',
-    '4. Raccolte le risposte:\n\n   ```bash\n   node evals/blind-kit.mjs --score <dir-del-kit> risposte-*.csv\n   ```\n',
-    `5. Bersaglio dichiarato (audit di luglio): preferenza per il braccio con skill **≥ 70%** sulle coppie decise (i «pari» non contano nel rapporto, ma vanno riportati).`,
-  ].join('\n'))
-  console.log(`\n→ kit in ${outDir}\n  foglio-lettore.md (per i lettori) · risposte.csv (template) · ISTRUZIONI.md · coppie.json (CHIAVE: non mostrarla)`)
-  const cost = +pairs.reduce((s, p) => s + p.costUsd, 0).toFixed(4)
-  console.log(`  costo API dichiarato: $${cost}`)
-  return { outDir, pairs: pairs.length, cost }
 }
 
 // Lettura FAIL-CLOSED delle risposte: intestazione esatta, valori ammessi, un solo
@@ -120,7 +146,7 @@ export function parseAnswers(text, key, fileName) {
   const rows = []
   const seen = new Set()
   for (const [i, line] of lines.slice(1).entries()) {
-    const parts = line.split(',').map(s => s.trim())
+    const parts = parseCsvLine(line).map(s => s.trim())
     if (parts.length !== 4) throw new Error(`${fileName} riga ${i + 2}: attese 4 colonne, trovate ${parts.length}`)
     const [reader, nRaw, migliore, umana] = parts
     if (!reader || reader === 'NOME') throw new Error(`${fileName} riga ${i + 2}: sostituisci "NOME" col nome del lettore`)
@@ -139,19 +165,49 @@ export function parseAnswers(text, key, fileName) {
   return { reader: [...readers][0], rows }
 }
 
+// CSV minimale ma corretto per il formato del kit: supporta campi fra virgolette,
+// virgole nei nomi e doppi apici escapati come "".
+export function parseCsvLine(line) {
+  const fields = []
+  let field = ''
+  let quoted = false
+  for (let i = 0; i < line.length; i++) {
+    const ch = line[i]
+    if (ch === '"') {
+      if (quoted && line[i + 1] === '"') { field += '"'; i++; continue }
+      quoted = !quoted
+    } else if (ch === ',' && !quoted) {
+      fields.push(field)
+      field = ''
+    } else {
+      field += ch
+    }
+  }
+  if (quoted) throw new Error('campo CSV con virgolette non chiuse')
+  fields.push(field)
+  return fields
+}
+
 function score(args, argv) {
   const kitDir = resolve(String(args.score))
   const files = argv.filter(a => !a.startsWith('--') && a !== String(args.score))
   if (!files.length) throw new Error('--score richiede almeno un file di risposte CSV')
   const { pairs } = JSON.parse(readFileSync(join(kitDir, 'coppie.json'), 'utf8'))
-  const key = Object.fromEntries(pairs.map(p => [p.n, p.skillIs]))
+  if (!Array.isArray(pairs) || !pairs.length) throw new Error('coppie.json non contiene coppie')
+  const key = {}
+  for (const p of pairs) {
+    if (!Number.isInteger(p.n) || key[p.n]) throw new Error(`coppie.json: numero coppia non valido o duplicato (${p.n})`)
+    if (![1, 2].includes(p.skillIs)) throw new Error(`coppie.json: skillIs non valido per la coppia ${p.n}`)
+    key[p.n] = p.skillIs
+  }
   const perReader = []
   const votes = {}   // coppia → {skill, bare, pari}
   const readerNames = new Set()
   for (const f of files) {
     const { reader, rows } = parseAnswers(readFileSync(resolve(f), 'utf8'), key, f)
-    if (readerNames.has(reader)) throw new Error(`lettore "${reader}" presente in più file: ogni lettore risponde una volta sola`)
-    readerNames.add(reader)
+    const readerKey = reader.toLocaleLowerCase('it')
+    if (readerNames.has(readerKey)) throw new Error(`lettore "${reader}" presente in più file: ogni lettore risponde una volta sola`)
+    readerNames.add(readerKey)
     let skill = 0, bare = 0, pari = 0, humanSkill = 0, humanAnswered = 0
     for (const { n, migliore, umana } of rows) {
       const k = key[n]
@@ -164,6 +220,7 @@ function score(args, argv) {
     const decided = skill + bare
     perReader.push({ file: f, reader, skill, bare, pari, rate: decided ? +(skill / decided).toFixed(3) : null, humanSkill, humanAnswered })
   }
+  if (perReader.length < 3) throw new Error(`il protocollo richiede almeno 3 lettori unici (ricevuti ${perReader.length})`)
   const tot = perReader.reduce((a, r) => ({ skill: a.skill + r.skill, bare: a.bare + r.bare, pari: a.pari + r.pari, humanSkill: a.humanSkill + r.humanSkill, humanAnswered: a.humanAnswered + r.humanAnswered }), { skill: 0, bare: 0, pari: 0, humanSkill: 0, humanAnswered: 0 })
   const decided = tot.skill + tot.bare
   const L = []

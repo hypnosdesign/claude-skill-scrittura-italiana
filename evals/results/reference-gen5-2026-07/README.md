@@ -17,12 +17,14 @@ mirati (canarini di conservazione, held-out completo, i tre lunghi), n=1 per bra
 
 | | senza skill | con skill 2.17.0 |
 |---|---|---|
-| tutti i 13 casi | 6/13 | **11/13** |
+| tutti i 13 casi (conteggi descrittivi; bracci non interamente appaiati) | 6/13 | **11/13** |
 | solo le 10 coppie omogenee fable/fable | 4/10 | **9/10** |
 
 Fallback del CLI (dichiarati): braccio skill #14, #32, #42 risolti da `claude-opus-5`;
 braccio nudo #14. Quindi **#14 è appaiato su opus-5**, mentre **#32 e #42 non sono
-appaiati** (modelli diversi nei due bracci) e restano fuori dal confronto pulito.
+appaiati** (modelli diversi nei due bracci) e restano fuori dal confronto pulito. Per
+questo `stability.mjs` rifiuta correttamente il delta sui 13 casi completi; il confronto
+pubblicabile è la riga delle 10 coppie omogenee.
 
 - **Fallimenti del braccio con skill:** #42 — l'editor aggiunge la glossa «actigrafo, il
   sensore di movimento con cui…»: corretta nel mondo, **assente dall'input** — è il falso

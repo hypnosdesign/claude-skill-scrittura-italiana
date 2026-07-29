@@ -26,7 +26,15 @@
       "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/evals.json",
       "sha256": "0f5c2387a8202adff6f2e68ffeed6c20d362845c32c83fd5fa39fa6f2c570464",
       "bytes": 43072
-    }
+    },
+    "manifest": {
+      "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/manifest.json",
+      "sha256": "69a2a6029efc0a1cdfd6fe0366d817778c7412126c4e39d0b9eff7cb67ab40f4",
+      "bytes": 6645
+    },
+    "runs": 1,
+    "splitFilter": "all",
+    "ids": [4, 7, 13, 14, 15, 16, 26, 31, 32, 33, 40, 41, 42]
   },
   "judgeModel": "claude-opus-4-8",
   "rows": 13,

@@ -61,7 +61,7 @@ Prima di avviare chiamate LLM, il runner valida suite e manifest. Ogni run conse
 
 - copia byte-identica di skill, suite e manifest;
 - SHA-256 dei tre contenuti, separati dall'HEAD e dallo stato dirty del repository;
-- prompt, aspettative, output atteso, output dell'editor, prompt e risposta grezza del giudice;
+- prompt, aspettative, output atteso, output dell'editor, policy di sistema, prompt e risposta grezza del giudice;
 - modello, versione CLI/Node e durata di editor e giudice;
 - verdetto validato in modalità fail-closed: tipi, cardinalità e conteggi non validi diventano
   errori; `pass` viene ricalcolato dalle singole aspettative e da `invented === 0`.
@@ -127,9 +127,10 @@ pipeline (editor + giudice insieme), non del solo editor.
 Un braccio può essere la **fusione dichiarata** di più directory, separate da virgola
 (`node evals/stability.mjs r/A r/B1,r/B2`): serve per i run spezzati dal limite di sessione
 e completati con `--resume` o con un blocco supplementare. La fusione pretende meta omogenei
-(stessi modelli, stessa skill, stessa suite), deduplica per (caso, run) preferendo i verdetti
+  (stessi modelli, stessa skill, stessa suite e stesso manifest), deduplica per (caso, run) preferendo i verdetti
 validi, e se i meta dichiarano i casi attesi segnala le **righe assenti** (media marcata come
-non affidabile). Il confronto fra bracci verifica anche il fingerprint della suite.
+  non affidabile). Il confronto fra bracci è fail-closed: niente delta se casi×run, target,
+  split, fingerprint, completezza o modelli principali realmente risolti non coincidono.
 
 > **Operativo — un braccio alla volta.** Le esecuzioni lunghe vanno lanciate **in sequenza**,
 > mai in parallelo: due bracci da 27×3 più un harness concorrenti esauriscono il limite di
@@ -140,7 +141,8 @@ non affidabile). Il confronto fra bracci verifica anche il fingerprint della sui
 > al primo errore da limite di sessione invece di macinare chiamate a vuoto, e riparte con
 > `--resume <dir>`: riesegue solo le coppie (caso, run) assenti o in errore, ad append sullo
 > stesso `results.jsonl` (fingerprint e modelli devono coincidere col run originale). Con
-> `--fail-under <0..1>` il run diventa un gate: exit ≠ 0 sotto soglia o con errori.
+> `--fail-under <0..1>` il run diventa un gate: exit ≠ 0 sotto soglia, con errori o con
+> fallback di un modello pinnato (editor o giudice).
 
 ## Attivazione e instradamento nel client reale (`activation.mjs`)
 
@@ -151,20 +153,23 @@ nel client reale: copia la skill come skill di progetto in una directory tempora
 
 ```bash
 node evals/activation.mjs --probe          # 2 casi, per verificare l'harness
-node evals/activation.mjs                  # 20 positivi + 10 negativi + 6 routing
+node evals/activation.mjs                  # 20 positivi + 15 negativi + 8 routing
 node evals/activation.mjs --skill-src /percorso/candidata   # misurare una candidata
 ```
 
-I casi vivono in `activation-cases.json`. Metriche: tasso di attivazione sui positivi,
-attivazioni spurie sui negativi, e per i casi routing quali `references/*.md` sono stati
-letti rispetto all'atteso. ⚠ Misura il comportamento del client (che cambia col CLI e col
-modello): va letta come fotografia datata, non come proprietà stabile della skill.
+I casi vivono in `activation-cases.json`. Metriche: invocazioni osservate del tool `Skill`,
+tasso di attivazione **attribuibile alla candidata** sui positivi, attivazioni spurie sui
+negativi, e per i casi routing quali `references/*.md` sono stati letti rispetto all'atteso.
+⚠ Misura il comportamento del client (che cambia col CLI e col modello): va letta come
+fotografia datata, non come proprietà stabile della skill.
 
 ⚠ **L'ambiente non è ermetico per default:** HOME resta quello reale, quindi una copia
 personale della skill in `~/.claude/skills` può rispondere al posto della candidata.
 L'harness classifica i percorsi: `skillFired` e il routing contano **solo la copia di
 progetto** nella workdir; le letture della copia personale finiscono in
-`personalCopyReads` (contaminazione, riportata nel summary). Con `--hermetic` HOME e
+`personalCopyReads` (contaminazione, riportata nel summary). Il solo evento `Skill` non
+espone il path risolto: fuori dalla modalità ermetica viene riportato come invocazione
+**ambigua** e non entra nei tassi attribuiti alla candidata. Con `--hermetic` HOME e
 `XDG_*` puntano a una home usa-e-getta — isolamento vero, ma opt-in perché su macchine
 dove le credenziali del CLI vivono su disco (non nel keychain) può rompere l'auth. La
 workdir temporanea viene rimossa a fine run, salvo `--keep-workdir`.
@@ -175,7 +180,9 @@ workdir temporanea viene rimossa a fine run, salvo `--keep-workdir`.
 diverso, senza chiamate all'editor: isola la varianza del giudice, e permette un **secondo
 giudice** sugli stessi testi. Ogni riga conserva il verdetto originale in `originalVerdict`;
 il riepilogo riporta accordo e divergenze. Prima applicazione: `reference-gen5-2026-07`
-(accordo 92-100% fra `claude-opus-4-8` e `claude-fable-5`; il delta con/senza skill regge).
+(accordo 92-100% fra `claude-opus-4-8` e `claude-fable-5`; differenza descrittiva
+con/senza skill confermata, ma il confronto completo non è appaiato per modello e quindi
+non produce un delta pubblicabile).
 ⚠ Un giudice davvero **fuori famiglia** (GPT/Gemini) richiede credenziali esterne: gli
 output persistiti sono già nel formato giusto per sottoporglieli.
 
@@ -187,10 +194,12 @@ editoriali che smaschererebbero il braccio — in ordine randomizzato con seed, 
 foglio del lettore, template risposte, chiave (che resta nel kit) e scoring:
 
 ```bash
-node evals/blind-kit.mjs --build --seed 42          # genera il kit (10 coppie di default)
+node evals/blind-kit.mjs --build --seed "$SEED_CIECO_PRIVATO"  # intero nuovo, non condiviso
 node evals/blind-kit.mjs --score <dir> risposte-*.csv
 ```
 
-Protocollo: ≥3 lettori, in autonomia, senza sapere quale braccio è quale; bersaglio
-dichiarato (AUDIT-2026-07 §8): **preferenza ≥ 70%** per la skill sulle coppie decise. Il
-kit generato NON va committato prima della compilazione: contiene la chiave.
+Protocollo: ≥3 lettori unici (lo scorer rifiuta meno di tre), in autonomia, senza sapere
+quale braccio è quale; bersaglio dichiarato (AUDIT-2026-07 §8): **preferenza ≥ 70%** per la
+skill sulle coppie decise. In build ogni coppia conserva separatamente i modelli risolti dei
+due bracci e fallisce se non coincidono. Il kit generato NON va committato prima della
+compilazione: contiene la chiave.

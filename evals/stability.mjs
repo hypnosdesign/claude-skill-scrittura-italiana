@@ -4,8 +4,8 @@
 // Legge una o due directory di risultati (results.jsonl con una riga per caso×run) e produce
 // un riepilogo: totali per run, media e intervallo, flip-rate per caso (verdetti non unanimi),
 // invenzioni per run. Con due directory stampa anche il confronto (delta fra le medie); se i
-// bracci non coprono gli stessi casi, o provengono da suite diverse, il delta viene marcato
-// come non valido.
+// bracci non sono omogenei per casi, fingerprint, run e modelli RISOLTI, il delta
+// viene marcato come non valido e non viene stampato alcun numero di confronto.
 //
 // Un braccio può essere la FUSIONE dichiarata di più directory (separate da virgola): serve
 // per i run spezzati dal limite di sessione e completati in un blocco supplementare (es.
@@ -27,11 +27,29 @@
 import { readFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
-import { dedupeRows } from './run.mjs'
+import { dedupeRows, requestedModelMismatch, resolvedPrimaryModels } from './run.mjs'
+
+// I rejudge persistono i metadati dell'editor sotto `source`: normalizzarli evita
+// etichette `undefined`, baseline scambiate per skill e confronti senza fingerprint.
+export function normalizeMeta(raw) {
+  const source = raw?.kind === 'rejudge' ? (raw.source ?? {}) : (raw ?? {})
+  return {
+    ...raw,
+    editorModel: source.editorModel ?? null,
+    judgeModel: raw?.kind === 'rejudge' ? (raw.judgeModel ?? null) : (source.judgeModel ?? null),
+    skill: source.skill ?? null,
+    suite: source.suite ?? null,
+    manifest: source.manifest ?? null,
+    runs: source.runs ?? raw?.runs ?? null,
+    splitFilter: source.splitFilter ?? raw?.splitFilter ?? null,
+    ids: source.ids ?? raw?.ids ?? null,
+  }
+}
 
 export function loadArm(dirOrDirs) {
   const dirs = Array.isArray(dirOrDirs) ? dirOrDirs : String(dirOrDirs).split(',').filter(Boolean)
-  const metas = dirs.map(d => JSON.parse(readFileSync(join(d, 'meta.json'), 'utf8')))
+  const rawMetas = dirs.map(d => JSON.parse(readFileSync(join(d, 'meta.json'), 'utf8')))
+  const metas = rawMetas.map(normalizeMeta)
   const meta = metas[0]
   if (metas.length > 1) {
     for (const [i, m] of metas.entries()) {
@@ -40,6 +58,9 @@ export function loadArm(dirOrDirs) {
       if (m.judgeModel !== meta.judgeModel) diffs.push('judge model')
       if ((m.skill?.sha256 ?? null) !== (meta.skill?.sha256 ?? null)) diffs.push('skill')
       if (m.suite?.sha256 && meta.suite?.sha256 && m.suite.sha256 !== meta.suite.sha256) diffs.push('suite')
+      if (m.manifest?.sha256 && meta.manifest?.sha256 && m.manifest.sha256 !== meta.manifest.sha256) diffs.push('manifest')
+      if (m.runs !== meta.runs) diffs.push('runs')
+      if (m.splitFilter !== meta.splitFilter) diffs.push('split')
       if (diffs.length) throw new Error(`fusione non omogenea (${dirs[i]}): differisce per ${diffs.join(', ')}`)
     }
   }
@@ -54,6 +75,7 @@ export function loadArm(dirOrDirs) {
     }
   }
   const rows = [...mergedByCase.values()].flat()
+  if (!rows.length) throw new Error(`nessuna riga in ${dirs.join(',')}`)
   // Righe attese ma assenti (run interrotti): dichiarate, mai inventate.
   const expected = new Set(metas.flatMap(m =>
     Array.isArray(m.ids) && Number.isInteger(m.runs)
@@ -87,7 +109,70 @@ export function loadArm(dirOrDirs) {
   // flip = verdetti contraddittori (pass e fail veri); gli errori non sono verdetti
   const flips = cases.filter(([, c]) => c.pass > 0 && c.fail > 0)
   const errored = cases.filter(([, c]) => c.err > 0)
-  return { dir: dirs.join(','), dirs, meta, metas, missing, runs, totals, passTotals, mean, cases, unanimousPass, unanimousFail, flips, errored }
+  return { dir: dirs.join(','), dirs, meta, metas, rawMetas, rows, missing, runs, totals, passTotals, mean, cases, unanimousPass, unanimousFail, flips, errored }
+}
+
+function sameArray(a, b) {
+  return a.length === b.length && a.every((x, i) => x === b[i])
+}
+
+// Un delta è pubblicabile solo se ogni unità sperimentale è davvero appaiata.
+// Restituisce tutte le cause, deduplicate, così il report spiega senza produrre
+// una cifra che possa essere citata fuori contesto.
+export function comparisonReasons(A, B) {
+  const reasons = new Set()
+  const add = x => reasons.add(x)
+  const idsA = new Set(A.cases.map(([id]) => id))
+  const idsB = new Set(B.cases.map(([id]) => id))
+  if (idsA.size !== idsB.size || [...idsA].some(id => !idsB.has(id))) add('i due bracci non coprono gli stessi casi')
+
+  for (const [label, a, b] of [
+    ['editor richiesto', A.meta.editorModel, B.meta.editorModel],
+    ['giudice richiesto', A.meta.judgeModel, B.meta.judgeModel],
+    ['numero di run', A.meta.runs, B.meta.runs],
+    ['split', A.meta.splitFilter, B.meta.splitFilter],
+  ]) {
+    if (a !== b) add(`${label} diverso fra i bracci`)
+  }
+  for (const [label, a, b] of [
+    ['suite', A.meta.suite?.sha256, B.meta.suite?.sha256],
+    ['manifest', A.meta.manifest?.sha256, B.meta.manifest?.sha256],
+  ]) {
+    if (!a || !b) add(`fingerprint ${label} assente`)
+    else if (a !== b) add(`fingerprint ${label} diverso`)
+  }
+  if (A.missing.length || B.missing.length) add('almeno un braccio ha righe attese ma assenti')
+  if (A.errored.length || B.errored.length) add('almeno un braccio contiene verdetti in errore')
+
+  const rowsA = new Map(A.rows.map(r => [`${r.id}:${r.run}`, r]))
+  const rowsB = new Map(B.rows.map(r => [`${r.id}:${r.run}`, r]))
+  if (rowsA.size !== rowsB.size || [...rowsA.keys()].some(k => !rowsB.has(k))) add('le coppie caso×run non coincidono')
+
+  for (const [key, a] of rowsA) {
+    const b = rowsB.get(key)
+    if (!b) continue
+    if (a.target !== b.target || a.split !== b.split) add(`target o split diverso su ${key}`)
+
+    const editorA = resolvedPrimaryModels(a.editorModels, A.meta.editorModel)
+    const editorB = resolvedPrimaryModels(b.editorModels, B.meta.editorModel)
+    const judgeA = resolvedPrimaryModels(a.judgeModels, A.meta.judgeModel)
+    const judgeB = resolvedPrimaryModels(b.judgeModels, B.meta.judgeModel)
+    if (a.editorModelMismatch || b.editorModelMismatch ||
+        requestedModelMismatch(A.meta.editorModel, a.editorModels) ||
+        requestedModelMismatch(B.meta.editorModel, b.editorModels)) {
+      add(`modello editor richiesto ≠ risolto su ${key}`)
+    }
+    if (a.judgeModelMismatch || b.judgeModelMismatch ||
+        requestedModelMismatch(A.meta.judgeModel, a.judgeModels) ||
+        requestedModelMismatch(B.meta.judgeModel, b.judgeModels)) {
+      add(`modello giudice richiesto ≠ risolto su ${key}`)
+    }
+    if (!editorA.length || !editorB.length) add(`modello editor risolto assente su ${key}`)
+    else if (!sameArray(editorA, editorB)) add(`modello editor risolto diverso su ${key}`)
+    if (!judgeA.length || !judgeB.length) add(`modello giudice risolto assente su ${key}`)
+    else if (!sameArray(judgeA, judgeB)) add(`modello giudice risolto diverso su ${key}`)
+  }
+  return [...reasons]
 }
 
 function fmtArm(a, label) {
@@ -129,18 +214,7 @@ export function main(argv = process.argv.slice(2)) {
     L.push('## Delta (A − B)')
     L.push('')
     // Un confronto invalido non produce numeri: solo la diagnosi del perché.
-    const idsA = new Set(A.cases.map(([id]) => id))
-    const idsB = new Set(B.cases.map(([id]) => id))
-    const invalidReasons = []
-    if (idsA.size !== idsB.size || [...idsA].some(id => !idsB.has(id))) {
-      invalidReasons.push('i due bracci non coprono gli stessi casi')
-    }
-    if (A.meta.suite?.sha256 && B.meta.suite?.sha256 && A.meta.suite.sha256 !== B.meta.suite.sha256) {
-      invalidReasons.push('i due bracci provengono da suite con fingerprint diversi')
-    }
-    if (A.meta.manifest?.sha256 && B.meta.manifest?.sha256 && A.meta.manifest.sha256 !== B.meta.manifest.sha256) {
-      invalidReasons.push('i due bracci provengono da manifest con fingerprint diversi')
-    }
+    const invalidReasons = comparisonReasons(A, B)
     if (invalidReasons.length) {
       L.push(`⚠ **confronto NON valido — nessun delta calcolato:** ${invalidReasons.join('; ')}.`)
     } else {

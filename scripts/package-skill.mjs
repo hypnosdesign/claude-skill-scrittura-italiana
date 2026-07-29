@@ -33,21 +33,25 @@ if (!version) fail("versione non trovata nel frontmatter di SKILL.md (metadata.v
 
 // — staging: solo il payload, alla radice —
 const stage = mkdtempSync(join(tmpdir(), "skill-pkg-"));
-cpSync(skill, join(stage, "SKILL.md"));
-cpSync(refs, join(stage, "references"), { recursive: true });
-
 const dist = join(repo, "dist");
 mkdirSync(dist, { recursive: true });
 const out = join(dist, `scrittura-italiana-${version}.zip`);
 rmSync(out, { force: true });
 
-// `zip` è standard su macOS/Linux; -X niente metadati extra, escludi i .DS_Store.
-// execFileSync con argomenti separati: niente interpolazione di percorsi nella shell.
-execFileSync("zip", ["-rX", out, "SKILL.md", "references", "-x", "*.DS_Store"], { cwd: stage, stdio: "pipe" });
-rmSync(stage, { recursive: true, force: true });
+let listing;
+try {
+  cpSync(skill, join(stage, "SKILL.md"));
+  cpSync(refs, join(stage, "references"), { recursive: true });
 
-// — verifica: esattamente un SKILL.md (case-insensitive) —
-const listing = execFileSync("unzip", ["-l", out], { encoding: "utf8" });
+  // `zip` è standard su macOS/Linux; -X niente metadati extra, escludi i .DS_Store.
+  // execFileSync con argomenti separati: niente interpolazione di percorsi nella shell.
+  execFileSync("zip", ["-rX", out, "SKILL.md", "references", "-x", "*.DS_Store"], { cwd: stage, stdio: "pipe" });
+  // — verifica: esattamente un SKILL.md (case-insensitive) —
+  listing = execFileSync("unzip", ["-l", out], { encoding: "utf8" });
+} finally {
+  rmSync(stage, { recursive: true, force: true });
+}
+
 const skillCount = (listing.match(/^\s*\d+.*\bskill\.md\b/gim) ?? []).length;
 if (skillCount !== 1) fail(`lo zip contiene ${skillCount} SKILL.md (atteso 1)`);
 

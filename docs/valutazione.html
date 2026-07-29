@@ -48,7 +48,7 @@
             <thead><tr><th>Split</th><th>Casi</th><th>Uso</th></tr></thead>
             <tbody>
               <tr><td><strong>Dev</strong></td><td data-dev-count>40</td><td>Casi osservati durante lo sviluppo. Servono a verificare il comportamento noto.</td></tr>
-              <tr><td><strong>Held-out</strong></td><td data-heldout-count>6</td><td>Casi congelati (set rinnovato con la 2.15.0). Mai usati per tarare: chi fallisce viene osservato, non ritoccato.</td></tr>
+              <tr><td><strong>Held-out</strong></td><td data-heldout-count>6</td><td>Set corrente: #14, #16, #31, #32, #33 e #46. Il #46 ha sostituito il #15 il 29 luglio 2026, dopo che il #15 era stato usato per tarare la guardia sul testo operativo.</td></tr>
             </tbody>
           </table>
           <p>Il manifest assegna a ogni caso un genere, uno split e un livello di conservazione: <code>exact</code>, <code>minimal</code>, <code>semantic</code>, <code>improve</code>, <code>mixed</code> o <code>advice</code>.</p>
@@ -81,7 +81,7 @@
             </tbody>
           </table>
           <div class="callout success"><h3>Risultato osservato</h3><p>La skill non alza soltanto la media (18,0 contro 26,7): stabilizza il comportamento. Senza skill il modello oscilla su 8 casi e inventa sotto pressione; con la skill il verdetto è quasi deterministico. Le righe perse per limiti di sessione o giudice malformato restano errori dichiarati, mai promossi a passaggi.</p></div>
-          <p>La misura storica a quattro bracci (nucleo, skill completa, candidata; una osservazione per caso, prima delle ricalibrazioni del giudice) resta negli artefatti 2.14.0. Il set held-out rinnovato (sei casi congelati, mai usati per tarare) ha prodotto 5 su 6 al primo giro e 6 su 6 al giro di gate. Nell'instradamento su tre giri, a skill attiva il riferimento atteso viene aperto in 14 righe valide su 14; a oscillare è l'attivazione dei due prompt di confine (2 su 3 e 1 su 3).</p>
+          <p>La misura storica a quattro bracci (nucleo, skill completa, candidata; una osservazione per caso, prima delle ricalibrazioni del giudice) resta negli artefatti 2.14.0. Il vecchio set held-out produsse 5 su 6 al primo giro e 6 su 6 al gate, ma includeva il #15: quel caso motivò una modifica della guardia e da allora vale come regressione, non come prova di generalizzazione. Sui cinque casi storici non contaminati l'esito del gate fu 5 su 5; il nuovo #46 non è ancora stato misurato. Nell'instradamento su tre giri, a skill attiva il riferimento atteso viene aperto in 14 righe valide su 14; a oscillare è l'attivazione dei due prompt di confine (2 su 3 e 1 su 3).</p>
           <p><a class="button quiet" href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/tree/main/evals/results">Esamina gli artefatti di riferimento</a></p>
         </section>
 

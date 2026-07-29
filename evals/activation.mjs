@@ -10,18 +10,18 @@
 // Come funziona: copia SKILL.md + references/ in una directory di lavoro temporanea
 // come skill DI PROGETTO (`.claude/skills/scrittura-italiana`), poi esegue
 // `claude -p --output-format stream-json` con cwd in quella directory e ispeziona
-// gli eventi: tool_use `Skill` → attivazione; tool_use `Read` su references/ →
-// instradamento. I percorsi letti rivelano anche QUALE copia della skill ha
-// risposto (progetto vs installazione personale in ~/.claude/skills).
+// gli eventi: tool_use `Skill` → invocazione; tool_use `Read` nella copia di
+// progetto → attribuzione alla candidata; tool_use `Read` su references/ →
+// instradamento. Il solo evento `Skill` non espone il path risolto: fuori dalla
+// modalità ermetica resta quindi ambiguo se esiste una copia personale omonima.
 //
 // Limiti onesti: è una misura del comportamento del client (che può cambiare col
 // CLI), n piccolo, un solo modello per run. Indicativa, non un benchmark.
 // L'ambiente NON è ermetico per default: HOME resta quello reale, quindi skill
 // personali (inclusa un'eventuale copia di scrittura-italiana in ~/.claude/skills)
 // e memoria globale possono entrare nella misura. Per questo l'harness CLASSIFICA
-// le letture: `skillFired` e il routing contano SOLO la copia di progetto nella
-// workdir; le letture della copia personale sono conteggiate a parte come
-// contaminazione (`personalCopyReads`). Con --hermetic HOME e XDG_* puntano a una
+// separatamente invocazione, attribuzione provata alla copia di progetto e letture
+// della copia personale. Con --hermetic HOME e XDG_* puntano a una
 // home usa-e-getta nella workdir: isola davvero, ma su macchine dove le
 // credenziali del CLI vivono in ~/.claude (non nel keychain) può rompere l'auth —
 // per questo è opt-in.
@@ -100,7 +100,7 @@ export function main(argv = process.argv.slice(2)) {
     const row = runCase(c, { claudeBin, model, maxTurns, workDir, fakeHome })
     rows.push(row)
     appendFileSync(join(outDir, 'results.jsonl'), JSON.stringify(row) + '\n')
-    const mark = row.error ? 'ERR' : row.skillFired ? 'FIRE' : 'no'
+    const mark = row.error ? 'ERR' : row.skillFired ? 'FIRE' : row.activationAttribution === 'ambiguous' ? '?' : 'no'
     const reads = row.referenceReads.length ? ` reads=[${row.referenceReads.join(', ')}]` : ''
     const leak = row.personalCopyReads?.length ? ' ⚠copia-personale' : ''
     console.log(`#${String(c.id).padStart(2)} ${c.kind.padEnd(8)} skill=${mark}${reads}${leak}${row.error ? ` (${row.error.slice(0, 80)})` : ''}`)
@@ -151,50 +151,16 @@ function runCase(c, { claudeBin, model, maxTurns, workDir, fakeHome }) {
   // ⚠ macOS: la workdir nasce come /var/folders/… ma il client riporta i path
   // risolti /private/var/folders/… — si confronta sulla forma canonica.
   const realWorkDir = safe(() => realpathSync(workDir), workDir)
-  const isProjectPath = p => p.startsWith(workDir) || p.startsWith(realWorkDir)
-  let skillFired = false
-  let firedVia = null
-  const readPaths = []
-  const personalCopyReads = []
-  for (const ev of events) {
-    const blocks = ev?.message?.content
-    if (!Array.isArray(blocks)) continue
-    for (const b of blocks) {
-      if (b?.type !== 'tool_use') continue
-      if (b.name === 'Skill' && JSON.stringify(b.input ?? {}).includes('scrittura-italiana')) {
-        skillFired = true
-        firedVia = firedVia ?? 'Skill-tool'
-      }
-      if (b.name === 'Read' && typeof b.input?.file_path === 'string') {
-        const p = b.input.file_path
-        readPaths.push(p)
-        if (p.includes('scrittura-italiana')) {
-          if (isProjectPath(p)) {
-            skillFired = true
-            firedVia = firedVia ?? 'Read-skill-file'
-          } else {
-            personalCopyReads.push(p)
-          }
-        }
-      }
-    }
-  }
+  const observed = analyzeEvents(events, { workDir, realWorkDir, hermetic: Boolean(fakeHome) })
   const result = events.find(ev => ev?.type === 'result')
-  const referenceReads = [...new Set(readPaths
-    .filter(p => isProjectPath(p) && p.includes('references/'))
-    .map(p => p.split('/').pop().replace(/\.md$/, '')))]
   const expected = c.expectReads ?? null
-  const routingHit = expected ? referenceReads.some(r => expected.some(e => r.includes(e))) : null
+  const routingHit = expected ? observed.referenceReads.some(r => expected.some(e => r.includes(e))) : null
 
   return {
     id: c.id,
     kind: c.kind,
     prompt: c.prompt,
-    skillFired,
-    firedVia,
-    readPaths,
-    referenceReads,
-    personalCopyReads,
+    ...observed,
     expectReads: expected,
     routingHit,
     numTurns: result?.num_turns ?? null,
@@ -202,6 +168,62 @@ function runCase(c, { claudeBin, model, maxTurns, workDir, fakeHome }) {
     models: Object.keys(result?.modelUsage ?? {}),
     durationMs: Number((process.hrtime.bigint() - started) / 1_000_000n),
     error,
+  }
+}
+
+// Classificatore puro: testabile senza chiamare il client. `skillFired` significa
+// "copia candidata attribuita", non semplicemente "tool Skill invocato".
+export function analyzeEvents(events, { workDir, realWorkDir = workDir, hermetic = false }) {
+  const inside = (p, root) => p === root || p.startsWith(`${root}/`)
+  const isProjectPath = p => inside(p, workDir) || inside(p, realWorkDir)
+  let skillInvoked = false
+  const readPaths = []
+  const projectCopyReads = []
+  const personalCopyReads = []
+  for (const ev of events) {
+    const blocks = ev?.message?.content
+    if (!Array.isArray(blocks)) continue
+    for (const b of blocks) {
+      if (b?.type !== 'tool_use') continue
+      if (b.name === 'Skill' && JSON.stringify(b.input ?? {}).includes('scrittura-italiana')) {
+        skillInvoked = true
+      }
+      if (b.name === 'Read' && typeof b.input?.file_path === 'string') {
+        const p = b.input.file_path
+        readPaths.push(p)
+        if (p.includes('scrittura-italiana')) {
+          if (isProjectPath(p)) {
+            projectCopyReads.push(p)
+          } else {
+            personalCopyReads.push(p)
+          }
+        }
+      }
+    }
+  }
+  const referenceReads = [...new Set(readPaths
+    .filter(p => isProjectPath(p) && p.includes('references/'))
+    .map(p => p.split('/').pop().replace(/\.md$/, '')))]
+  const projectObserved = projectCopyReads.length > 0
+  const skillFired = projectObserved || (hermetic && skillInvoked)
+  const activationAttribution = projectObserved
+    ? 'project-read'
+    : hermetic && skillInvoked
+      ? 'project-hermetic'
+      : personalCopyReads.length
+        ? 'personal-read'
+        : skillInvoked
+          ? 'ambiguous'
+          : 'none'
+  return {
+    skillInvoked,
+    skillFired,
+    firedVia: skillFired ? activationAttribution : null,
+    activationAttribution,
+    readPaths,
+    referenceReads,
+    projectCopyReads,
+    personalCopyReads,
   }
 }
 
@@ -217,6 +239,8 @@ function summarize(rows) {
   return {
     total: rows.length,
     errors,
+    skillInvocations: rows.filter(r => r.skillInvoked).length,
+    ambiguousInvocations: rows.filter(r => r.activationAttribution === 'ambiguous').length,
     personalCopyReads: rows.reduce((s, r) => s + (r.personalCopyReads?.length || 0), 0),
     costUsd: +rows.reduce((s, r) => s + (r.costUsd || 0), 0).toFixed(4),
     positive: { n: pos.length, fired: pos.filter(r => r.skillFired).length },
@@ -239,7 +263,9 @@ function renderSummary(s, h) {
   L.push(`- **Attivazione (positivi):** ${pct(s.positive.fired, s.positive.n)}`)
   L.push(`- **Attivazioni spurie (negativi):** ${pct(s.negative.fired, s.negative.n)}`)
   L.push(`- **Routing — skill attiva:** ${pct(s.routing.fired, s.routing.n)} · **riferimento atteso aperto:** ${pct(s.routing.expectedReadHit, s.routing.n)}`)
+  L.push(`- invocazioni del tool Skill osservate: ${s.skillInvocations} · attribuzione ambigua: ${s.ambiguousInvocations}`)
   L.push(`- errori harness: ${s.errors} · costo API dichiarato: $${s.costUsd}`)
+  if (s.ambiguousInvocations) L.push('- ⚠ Le invocazioni ambigue non entrano nei tassi di attivazione: ripetere con `--hermetic` per attribuirle alla candidata.')
   if (s.personalCopyReads) L.push(`- ⚠ letture della copia PERSONALE della skill (contaminazione, escluse dai conteggi): ${s.personalCopyReads}`)
   if (s.aborted) L.push(`- ⚠ **RUN ABORTITO: ${s.aborted}**`)
   if (s.routing.perCase.length) {

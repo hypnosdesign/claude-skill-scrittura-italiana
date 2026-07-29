@@ -100,7 +100,10 @@ troncamento, non un'elisione → niente apostrofo. È anche un consulente, non s
     ├── run.mjs                   # runner content-addressed, verdetti fail-closed, braccio --no-skill
     ├── run.test.mjs              # test deterministici del runner
     ├── activation.mjs            # attivazione e instradamento misurati nel client reale
+    ├── activation.test.mjs       # attribuzione candidata/personale/ambigua, zero LLM
     ├── activation-cases.json     # 20 positivi, 15 negativi, 8 casi di routing
+    ├── blind-kit.mjs             # confronto umano cieco, build e scoring fail-closed
+    ├── blind-kit.test.mjs        # parser CSV, parità modelli e minimo tre lettori
     ├── stability.mjs             # digest deterministico per run multipli (media, flip, delta)
     ├── stability.test.mjs        # test del digest di stabilità
     ├── results/                  # run ordinari ignorati; reference-* versionati

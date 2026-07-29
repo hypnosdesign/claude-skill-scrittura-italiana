@@ -4,25 +4,56 @@ import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 
-import { loadArm, main } from './stability.mjs'
+import { loadArm, main, normalizeMeta } from './stability.mjs'
 
-function writeArm(root, name, { noSkill = false, rows, ids, runs, suiteSha }) {
+function writeArm(root, name, {
+  noSkill = false,
+  rows,
+  ids = [...new Set(rows.map(r => r.id))],
+  runs = Math.max(...rows.map(r => r.run)),
+  suiteSha = 's1',
+  manifestSha = 'm1',
+  editorModel = 'fake-editor',
+  judgeModel = 'fake-judge',
+}) {
   const dir = join(root, name)
   mkdirSync(dir, { recursive: true })
   writeFileSync(join(dir, 'meta.json'), JSON.stringify({
-    editorModel: 'fake-editor', judgeModel: 'fake-judge',
+    editorModel, judgeModel, splitFilter: 'all',
     skill: noSkill ? { noSkill: true } : { sha256: 'a'.repeat(64) },
-    ...(ids ? { ids } : {}),
-    ...(runs ? { runs } : {}),
-    ...(suiteSha ? { suite: { sha256: suiteSha } } : {}),
+    ids, runs,
+    suite: { sha256: suiteSha },
+    manifest: { sha256: manifestSha },
   }))
   writeFileSync(join(dir, 'results.jsonl'), rows.map(r => JSON.stringify(r)).join('\n') + '\n')
   return dir
 }
 
-function row(id, run, pass, { invented = 0, name = `caso-${id}` } = {}) {
-  return { id, name, target: 'minimal', split: 'dev', run, verdict: { pass, invented } }
+function row(id, run, pass, {
+  invented = 0,
+  name = `caso-${id}`,
+  editorModels = ['fake-editor-resolved'],
+  judgeModels = ['fake-judge-resolved'],
+  editorModelMismatch = false,
+  judgeModelMismatch = false,
+} = {}) {
+  return { id, name, target: 'minimal', split: 'dev', run, editorModels, judgeModels, editorModelMismatch, judgeModelMismatch, verdict: { pass, invented } }
 }
+
+test('normalizeMeta legge correttamente un rejudge', () => {
+  const meta = normalizeMeta({
+    kind: 'rejudge', judgeModel: 'judge-2',
+    source: {
+      editorModel: 'editor-1', skill: { noSkill: true }, suite: { sha256: 's' },
+      manifest: { sha256: 'm' }, runs: 3, splitFilter: 'all', ids: [1],
+    },
+  })
+  assert.equal(meta.editorModel, 'editor-1')
+  assert.equal(meta.judgeModel, 'judge-2')
+  assert.equal(meta.skill.noSkill, true)
+  assert.equal(meta.manifest.sha256, 'm')
+  assert.equal(meta.runs, 3)
+})
 
 test('loadArm: totali per run, flip e unanimi', () => {
   const root = mkdtempSync(join(tmpdir(), 'stab-'))
@@ -65,7 +96,7 @@ test('main: delta fra bracci con gli stessi casi, e divergenze unanimi', () => {
     assert.match(out, /medie: 2\.0 − 1\.0 = \*\*1\.0\*\*/)
     assert.match(out, /invenzioni totali: 0 vs 3/)
     assert.match(out, /esito unanime opposto nei due bracci: 1 \(#1\)/)
-    assert.doesNotMatch(out, /non è un confronto valido/)
+    assert.doesNotMatch(out, /confronto NON valido/)
   } finally {
     rmSync(root, { recursive: true, force: true })
   }
@@ -148,9 +179,67 @@ test('suite con fingerprint diversi fra i bracci → delta non valido; terzo arg
     const A = writeArm(root, 'A', { ids: [1], runs: 1, suiteSha: 's1', rows: [row(1, 1, true)] })
     const B = writeArm(root, 'B', { ids: [1], runs: 1, suiteSha: 's2', rows: [row(1, 1, true)], noSkill: true })
     const out = main([A, B])
-    assert.match(out, /confronto NON valido.*fingerprint diversi/)
+    assert.match(out, /confronto NON valido.*fingerprint suite diverso/)
     assert.doesNotMatch(out, /medie:/)
     assert.throws(() => main([A, B, A]), /troppi argomenti/)
+  } finally {
+    rmSync(root, { recursive: true, force: true })
+  }
+})
+
+test('modelli risolti diversi o fallback del modello pinnato → nessun delta', () => {
+  const root = mkdtempSync(join(tmpdir(), 'stab-'))
+  try {
+    const A = writeArm(root, 'A', {
+      editorModel: 'claude-fable-5',
+      rows: [row(1, 1, true, { editorModels: ['claude-fable-5'] })],
+    })
+    const B = writeArm(root, 'B', {
+      noSkill: true,
+      editorModel: 'claude-fable-5',
+      rows: [row(1, 1, true, { editorModels: ['claude-opus-5'] })],
+    })
+    const out = main([A, B])
+    assert.match(out, /confronto NON valido/)
+    assert.match(out, /modello editor richiesto ≠ risolto|modello editor risolto diverso/)
+    assert.doesNotMatch(out, /medie:/)
+  } finally {
+    rmSync(root, { recursive: true, force: true })
+  }
+})
+
+test('fallback identico del giudice pinnato → nessun delta comunque', () => {
+  const root = mkdtempSync(join(tmpdir(), 'stab-'))
+  try {
+    const opts = {
+      judgeModel: 'claude-opus-4-8',
+      rows: [row(1, 1, true, { judgeModels: ['claude-opus-5'] })],
+    }
+    const A = writeArm(root, 'A', opts)
+    const B = writeArm(root, 'B', { ...opts, noSkill: true })
+    const out = main([A, B])
+    assert.match(out, /modello giudice richiesto ≠ risolto/)
+    assert.doesNotMatch(out, /medie:/)
+  } finally {
+    rmSync(root, { recursive: true, force: true })
+  }
+})
+
+test('run incompleto o in errore → nessun delta', () => {
+  const root = mkdtempSync(join(tmpdir(), 'stab-'))
+  try {
+    const A = writeArm(root, 'A', {
+      ids: [1, 2], runs: 1,
+      rows: [row(1, 1, true)],
+    })
+    const B = writeArm(root, 'B', {
+      noSkill: true, ids: [1, 2], runs: 1,
+      rows: [row(1, 1, true), row(2, 1, null)],
+    })
+    const out = main([A, B])
+    assert.match(out, /confronto NON valido/)
+    assert.match(out, /righe attese ma assenti|verdetti in errore/)
+    assert.doesNotMatch(out, /medie:/)
   } finally {
     rmSync(root, { recursive: true, force: true })
   }

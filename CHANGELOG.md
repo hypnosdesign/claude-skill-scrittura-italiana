@@ -17,38 +17,48 @@ conservazione: glosse); il resto è strumenti e misure.
   solo entità/numeri/date/fonti: un output che *dichiarava* di aver aggiunto la definizione
   di «actigrafo» passava con `invented: 0` (falso positivo dimostrato da Codex sul caso
   #42). Definizione estesa ad affermazioni nuove, **definizioni e glosse** (anche
-  corrette), rapporti causali, condizioni, conclusioni, modalità promosse. Nel **contratto
+  corrette), rapporti causali e temporali, condizioni, conclusioni, soggettività, ambito e
+  qualunque alterazione della modalità. La policy del giudice vive ora nel system prompt;
+  prompt e output dell'editor sono dati JSON non fidati, mai istruzioni. Nel **contratto
   della skill** entra la riga esplicita: glosse e definizioni aggiunte sono contenuto
   nuovo — si propongono a parte, non si inseriscono in silenzio. **Bracci gen-5
-  rigiudicati col metro allineato: skill 13/13→11/13, nudo 9/13→6/13 — il divario si
-  ALLARGA (+5), e sulle sole coppie omogenee fa 9/10 vs 4/10.** Il riferimento
+  rigiudicati col metro allineato: conteggi descrittivi skill 13/13→11/13, nudo
+  9/13→6/13; il confronto controllato sulle sole coppie omogenee è 9/10 vs 4/10.** Il riferimento
   `reference-gen5-2026-07` è riscritto con i verdetti corretti e quelli storici dichiarati.
 - **[P1] L'held-out #15 era stato usato per tarare** la guardia sul testo operativo (il suo
   fallimento ha motivato l'estensione: è un test di regressione, non un held-out).
   **Declassato a `dev`** come già #17; al suo posto l'held-out **#46** (procedura
-  operativa, mai osservata). Suite a 40 dev + 6 held-out; la dichiarazione «mai usati per
-  tarare» del sito torna vera.
+  operativa, mai osservata). Suite a 40 dev + 6 held-out; la documentazione distingue ora
+  il vecchio 6/6 contaminato dal gate pulito 5/5 e dal nuovo #46 ancora non misurato.
 - **[P1] Il benchmark «Fable 5» non usava sempre Fable 5:** il CLI era ripiegato in
   silenzio su `claude-opus-5` in 3 chiamate su 26 (#14 appaiato, #32 e #42 no). Il runner
   ora **marca `editorModelMismatch`** riga per riga (ID richiesto ≠ risolto, alias esclusi)
-  e il riepilogo dichiara le righe non comparabili; il riferimento espone il confronto
-  pulito sulle sole coppie omogenee.
+  e il gate fallisce sui mismatch di editor o giudice. `stability.mjs` confronta modelli risolti riga per riga,
+  completezza, run, target, split e fingerprint: un braccio contaminato non produce delta.
+  I meta dei rejudge sono normalizzati; il riferimento espone il confronto pulito sulle
+  sole coppie omogenee.
 - **[P1] Chiave del kit cieco:** il kit NON era tracciato da git (la whitelist reggeva —
   qui il rilievo era impreciso), ma la chiave del seed 42 era circolata nei transcript di
   lavoro: **seed bruciato, kit rigenerato** con seed nuovo e chiave mai stampata.
 - **[P2] Scoring cieco fail-closed:** parsing delle risposte con validazione severa
-  (intestazione, valori ammessi, un lettore per file, esattamente una risposta per coppia,
-  nessun lettore duplicato fra file) — un CSV malformato è un errore, non un dato che entra
-  zitto nell'aggregato. Test dedicati (`blind-kit.test.mjs`, in CI).
-- **[P2] `stability.mjs` non stampa più numeri su confronti invalidi:** casi o fingerprint
-  (suite E manifest) incompatibili → diagnosi senza delta.
+  (CSV quotato, intestazione, valori ammessi, un lettore per file, esattamente una risposta
+  per coppia, almeno tre lettori unici, nessun duplicato fra file) — un CSV malformato è un
+  errore, non un dato che entra zitto nell'aggregato. Anche i modelli risolti dei due bracci
+  sono conservati separatamente e devono coincidere. Test dedicati (`blind-kit.test.mjs`).
+- **[P2] `stability.mjs` non stampa più numeri su confronti invalidi:** casi×run, fingerprint
+  (suite E manifest), completezza, target/split o modelli incompatibili → diagnosi senza delta.
 - **[P2] `--rejudge` recupera gli errori del primo giudice:** ora rigiudica ogni riga con
   output editoriale valido (prima scartava proprio i candidati ideali); i «recuperati»
   sono contati a parte e l'accordo si calcola solo dove esiste un verdetto originale.
+- **[P2] Attivazione attribuita senza scorciatoie:** il solo evento `Skill` non rivela
+  quale copia omonima sia stata risolta. L'harness separa ora invocazione, lettura della
+  candidata e contaminazione personale; fuori da `--hermetic` un'invocazione senza path è
+  dichiarata ambigua e non entra nei tassi. Cinque test coprono anche i confini dei path.
 - **[P3] `package-skill.mjs` senza interpolazioni di shell** (`execFileSync` con argomenti
   separati); **`build-single-file.py` con guardia sull'elenco dei riferimenti** (PARTS ≠
   contenuto di `references/` → build fallita, un riferimento nuovo non può più essere
   omesso in silenzio); indice di SKILL.md aggiornato alla **Parte K** (si fermava alla J).
+  Packaging e il classificatore dell'harness di attivazione sono ora verificati in CI.
 - **Decisioni confermate e dichiarate** (rilievi respinti con motivo): `allowed-tools` con
   `Write/Edit` resta — il lavoro su file in Claude Code è un requisito del prodotto
   («Lavorare su file e in sessione»), mentre la rete resta fuori; i riferimenti NON si
@@ -56,15 +66,17 @@ conservazione: glosse); il resto è strumenti e misure.
   dei rimandi per un risparmio incerto — il costo di contesto del single-file riguarda i
   client non-Agent-Skills, dov'è il prezzo dichiarato della portabilità).
 
-### Aggiunto (misura)
+### Aggiunto (misura originaria, poi corretta dal sesto audit)
 
 - **`run.mjs --rejudge <dir>`** — rigiudica gli output già persistiti con un giudice anche
   diverso, senza chiamate all'editor: isola la varianza del giudice e abilita il secondo
   giudice sugli stessi testi (`originalVerdict` conservato, riepilogo con accordo e
-  divergenze). Test 17/17.
-- **Prima misura su editor di frontiera** (`reference-gen5-2026-07`): con editor
-  `claude-fable-5`, 13 casi mirati — **con skill 13/13 e 0 invenzioni, nudo 9/13 e 1
-  invenzione**. Il finding: il modello di frontiera passa da solo tutti gli improve (lo
+  divergenze). La suite deterministica corrente conta 34 test.
+- **Prima lettura, oggi superata, della misura su editor di frontiera**
+  (`reference-gen5-2026-07`): riportava **con skill 13/13 e 0 invenzioni, nudo 9/13 e 1
+  invenzione**. Il giudice incompleto e tre fallback del modello la rendevano non
+  pubblicabile come confronto controllato; i numeri corretti sono nella sezione sopra.
+  Il finding qualitativo era: il modello di frontiera passa da solo molti improve (lo
   slop di base se lo toglie), e i quattro fallimenti nudi sono TUTTI di conservazione e
   governo (#7 doc tecnica, #13 bipolare, #15 testo operativo, #26 istruzioni annidate).
   Sul modello forte il differenziale della skill è «sa quando non toccare, cosa preservare
@@ -77,9 +89,9 @@ conservazione: glosse); il resto è strumenti e misure.
 - **`blind-kit.mjs`** — kit per il confronto cieco umano: coppie con/senza skill sugli
   stessi prompt (solo testo finale: niente note editoriali che smaschererebbero il
   braccio), randomizzazione con seed, foglio del lettore, template risposte, chiave
-  separata e scoring col bersaglio dichiarato (≥70% di preferenza). Primo kit generato
-  (10 coppie, seed 42, $1.46): resta locale finché i lettori non l'hanno compilato —
-  contiene la chiave.
+  separata e scoring col bersaglio dichiarato (≥70% di preferenza). Il primo seed 42 è
+  bruciato perché la chiave è comparsa nei transcript; il nuovo kit resta locale fino alla
+  compilazione e richiede almeno tre lettori.
 
 ## [2.17.0] — 2026-07-29
 
@@ -350,9 +362,11 @@ casi di instradamento rimasti aperti (#34, #35). Single-file misurato = committa
   31–33 e 36 senza regressioni; sanity positivi 2/2 (#8, #15).
 - **Conferme 7/7, 0 invenzioni** (#12, #19, #22, #28 + canarini #4, #7, #26): il precetto
   virgolette riformulato non riapre il caso #28.
-- **Held-out (gate, non tuning): 6/6, 0 invenzioni** — primo giro pieno del set rinnovato.
-  #16, fallito a n=1 nella 2.15.0, qui passa: oscillazione da campione singolo; resta
-  osservato, mai ritoccato.
+- **Held-out (valutazione storica, poi riclassificata): 6/6, 0 invenzioni** — primo giro
+  pieno del set allora considerato rinnovato. Il sesto audit ha poi accertato che il #15
+  era stato usato per tarare la guardia: il dato pulito residuo è 5/5 e il nuovo #46 non è
+  ancora misurato. Il #16, fallito a n=1 nella 2.15.0, qui passa: oscillazione da campione
+  singolo; resta osservato, mai ritoccato.
 
 ## [2.15.0] — 2026-07-15
 
