@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 3,
+  "kind": "rejudge",
+  "label": "rj-skill-giudice2",
+  "stamp": "2026-07-29T10-56-14-578Z",
+  "argv": [
+    "--rejudge",
+    "evals/results/reference-gen5-2026-07/fable5-skill",
+    "--judge-model",
+    "claude-opus-4-8",
+    "--label",
+    "rj-skill-giudice2",
+    "--out",
+    "evals/results/reference-gen5-2026-07/rejudge-skill-giudice-corretto"
+  ],
+  "source": {
+    "dir": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/results/reference-gen5-2026-07/fable5-skill",
+    "editorModel": "claude-fable-5",
+    "judgeModel": "claude-opus-4-8",
+    "skill": {
+      "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/scrittura-italiana-single-file.md",
+      "sha256": "72ef4b88ab17ca61d0f3bc03c6bb0d04798df7d50b96057df1e561bfa403ca55",
+      "bytes": 250661
+    },
+    "suite": {
+      "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/evals.json",
+      "sha256": "0f5c2387a8202adff6f2e68ffeed6c20d362845c32c83fd5fa39fa6f2c570464",
+      "bytes": 43072
+    }
+  },
+  "judgeModel": "claude-opus-4-8",
+  "rows": 13,
+  "node": "v24.15.0"
+}

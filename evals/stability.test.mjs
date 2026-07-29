@@ -77,7 +77,8 @@ test('main: casi diversi fra i bracci → delta marcato non valido', () => {
     const A = writeArm(root, 'A', { rows: [row(1, 1, true)] })
     const B = writeArm(root, 'B', { rows: [row(9, 1, true)] })
     const out = main([A, B])
-    assert.match(out, /non è un confronto valido/)
+    assert.match(out, /confronto NON valido/)
+    assert.doesNotMatch(out, /medie:/, 'un confronto invalido non produce numeri')
   } finally {
     rmSync(root, { recursive: true, force: true })
   }
@@ -147,7 +148,8 @@ test('suite con fingerprint diversi fra i bracci → delta non valido; terzo arg
     const A = writeArm(root, 'A', { ids: [1], runs: 1, suiteSha: 's1', rows: [row(1, 1, true)] })
     const B = writeArm(root, 'B', { ids: [1], runs: 1, suiteSha: 's2', rows: [row(1, 1, true)], noSkill: true })
     const out = main([A, B])
-    assert.match(out, /fingerprint diversi.*non è un confronto valido/)
+    assert.match(out, /confronto NON valido.*fingerprint diversi/)
+    assert.doesNotMatch(out, /medie:/)
     assert.throws(() => main([A, B, A]), /troppi argomenti/)
   } finally {
     rmSync(root, { recursive: true, force: true })

@@ -128,29 +128,36 @@ export function main(argv = process.argv.slice(2)) {
     L.push('')
     L.push('## Delta (A − B)')
     L.push('')
+    // Un confronto invalido non produce numeri: solo la diagnosi del perché.
     const idsA = new Set(A.cases.map(([id]) => id))
     const idsB = new Set(B.cases.map(([id]) => id))
+    const invalidReasons = []
     if (idsA.size !== idsB.size || [...idsA].some(id => !idsB.has(id))) {
-      L.push('⚠ **i due bracci non coprono gli stessi casi: il delta non è un confronto valido**')
-      L.push('')
+      invalidReasons.push('i due bracci non coprono gli stessi casi')
     }
     if (A.meta.suite?.sha256 && B.meta.suite?.sha256 && A.meta.suite.sha256 !== B.meta.suite.sha256) {
-      L.push('⚠ **i due bracci provengono da suite con fingerprint diversi: il delta non è un confronto valido**')
-      L.push('')
+      invalidReasons.push('i due bracci provengono da suite con fingerprint diversi')
     }
-    L.push(`- medie: ${A.mean.toFixed(1)} − ${B.mean.toFixed(1)} = **${(A.mean - B.mean).toFixed(1)}**`)
-    const deltas = A.passTotals.flatMap(a => B.passTotals.map(b => a - b))
-    L.push(`- intervallo su tutte le coppie di run (${deltas.length}): ${Math.min(...deltas)}–${Math.max(...deltas)}`)
-    const invA = A.totals.reduce((s, g) => s + g.invented, 0)
-    const invB = B.totals.reduce((s, g) => s + g.invented, 0)
-    L.push(`- invenzioni totali: ${invA} vs ${invB}`)
-    const divergent = A.cases.filter(([id, c]) => {
-      const found = B.cases.find(([id2]) => id2 === id)
-      if (!found) return false
-      const [, cb] = found
-      return (c.pass === c.n && cb.pass === 0) || (c.pass === 0 && cb.pass === cb.n)
-    })
-    L.push(`- casi con esito unanime opposto nei due bracci: ${divergent.length}${divergent.length ? ` (${divergent.map(([id]) => '#' + id).join(', ')})` : ''}`)
+    if (A.meta.manifest?.sha256 && B.meta.manifest?.sha256 && A.meta.manifest.sha256 !== B.meta.manifest.sha256) {
+      invalidReasons.push('i due bracci provengono da manifest con fingerprint diversi')
+    }
+    if (invalidReasons.length) {
+      L.push(`⚠ **confronto NON valido — nessun delta calcolato:** ${invalidReasons.join('; ')}.`)
+    } else {
+      L.push(`- medie: ${A.mean.toFixed(1)} − ${B.mean.toFixed(1)} = **${(A.mean - B.mean).toFixed(1)}**`)
+      const deltas = A.passTotals.flatMap(a => B.passTotals.map(b => a - b))
+      L.push(`- intervallo su tutte le coppie di run (${deltas.length}): ${Math.min(...deltas)}–${Math.max(...deltas)}`)
+      const invA = A.totals.reduce((s, g) => s + g.invented, 0)
+      const invB = B.totals.reduce((s, g) => s + g.invented, 0)
+      L.push(`- invenzioni totali: ${invA} vs ${invB}`)
+      const divergent = A.cases.filter(([id, c]) => {
+        const found = B.cases.find(([id2]) => id2 === id)
+        if (!found) return false
+        const [, cb] = found
+        return (c.pass === c.n && cb.pass === 0) || (c.pass === 0 && cb.pass === cb.n)
+      })
+      L.push(`- casi con esito unanime opposto nei due bracci: ${divergent.length}${divergent.length ? ` (${divergent.map(([id]) => '#' + id).join(', ')})` : ''}`)
+    }
   }
   return L.join('\n')
 }

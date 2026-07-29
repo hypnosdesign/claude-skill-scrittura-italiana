@@ -7,8 +7,54 @@ il [Versionamento Semantico](https://semver.org/lang/it/).
 
 ## [Non rilasciato]
 
-**I tre punti di metodo rimasti, affrontati (29 luglio, pomeriggio).** Nessuna modifica alla
-skill: strumenti e misure.
+**I tre punti di metodo rimasti, affrontati (29 luglio, pomeriggio); poi il sesto audit
+(Codex) corregge la misura appena fatta.** Una sola modifica alla skill (contratto di
+conservazione: glosse); il resto è strumenti e misure.
+
+### Corretto (dal sesto audit — Codex, 29 luglio sera)
+
+- **[P1] Il giudice non copriva il contratto di conservazione.** Contava come invenzione
+  solo entità/numeri/date/fonti: un output che *dichiarava* di aver aggiunto la definizione
+  di «actigrafo» passava con `invented: 0` (falso positivo dimostrato da Codex sul caso
+  #42). Definizione estesa ad affermazioni nuove, **definizioni e glosse** (anche
+  corrette), rapporti causali, condizioni, conclusioni, modalità promosse. Nel **contratto
+  della skill** entra la riga esplicita: glosse e definizioni aggiunte sono contenuto
+  nuovo — si propongono a parte, non si inseriscono in silenzio. **Bracci gen-5
+  rigiudicati col metro allineato: skill 13/13→11/13, nudo 9/13→6/13 — il divario si
+  ALLARGA (+5), e sulle sole coppie omogenee fa 9/10 vs 4/10.** Il riferimento
+  `reference-gen5-2026-07` è riscritto con i verdetti corretti e quelli storici dichiarati.
+- **[P1] L'held-out #15 era stato usato per tarare** la guardia sul testo operativo (il suo
+  fallimento ha motivato l'estensione: è un test di regressione, non un held-out).
+  **Declassato a `dev`** come già #17; al suo posto l'held-out **#46** (procedura
+  operativa, mai osservata). Suite a 40 dev + 6 held-out; la dichiarazione «mai usati per
+  tarare» del sito torna vera.
+- **[P1] Il benchmark «Fable 5» non usava sempre Fable 5:** il CLI era ripiegato in
+  silenzio su `claude-opus-5` in 3 chiamate su 26 (#14 appaiato, #32 e #42 no). Il runner
+  ora **marca `editorModelMismatch`** riga per riga (ID richiesto ≠ risolto, alias esclusi)
+  e il riepilogo dichiara le righe non comparabili; il riferimento espone il confronto
+  pulito sulle sole coppie omogenee.
+- **[P1] Chiave del kit cieco:** il kit NON era tracciato da git (la whitelist reggeva —
+  qui il rilievo era impreciso), ma la chiave del seed 42 era circolata nei transcript di
+  lavoro: **seed bruciato, kit rigenerato** con seed nuovo e chiave mai stampata.
+- **[P2] Scoring cieco fail-closed:** parsing delle risposte con validazione severa
+  (intestazione, valori ammessi, un lettore per file, esattamente una risposta per coppia,
+  nessun lettore duplicato fra file) — un CSV malformato è un errore, non un dato che entra
+  zitto nell'aggregato. Test dedicati (`blind-kit.test.mjs`, in CI).
+- **[P2] `stability.mjs` non stampa più numeri su confronti invalidi:** casi o fingerprint
+  (suite E manifest) incompatibili → diagnosi senza delta.
+- **[P2] `--rejudge` recupera gli errori del primo giudice:** ora rigiudica ogni riga con
+  output editoriale valido (prima scartava proprio i candidati ideali); i «recuperati»
+  sono contati a parte e l'accordo si calcola solo dove esiste un verdetto originale.
+- **[P3] `package-skill.mjs` senza interpolazioni di shell** (`execFileSync` con argomenti
+  separati); **`build-single-file.py` con guardia sull'elenco dei riferimenti** (PARTS ≠
+  contenuto di `references/` → build fallita, un riferimento nuovo non può più essere
+  omesso in silenzio); indice di SKILL.md aggiornato alla **Parte K** (si fermava alla J).
+- **Decisioni confermate e dichiarate** (rilievi respinti con motivo): `allowed-tools` con
+  `Write/Edit` resta — il lavoro su file in Claude Code è un requisito del prodotto
+  («Lavorare su file e in sessione»), mentre la rete resta fuori; i riferimenti NON si
+  frammentano in micro-file (anti-obiettivo del quinto audit: più round-trip e manutenzione
+  dei rimandi per un risparmio incerto — il costo di contesto del single-file riguarda i
+  client non-Agent-Skills, dov'è il prezzo dichiarato della portabilità).
 
 ### Aggiunto (misura)
 

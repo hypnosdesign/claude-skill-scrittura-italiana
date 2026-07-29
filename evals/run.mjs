@@ -185,6 +185,7 @@ export function main(argv = process.argv.slice(2)) {
       let editorModels = []
       let editorCostUsd = null
       let editorCliExitError = false
+      let editorModelMismatch = false
       let judged = null
       try {
         const edited = callClaude(e.prompt, noSkill ? [] : ['--append-system-prompt-file', skillFile], editorModel)
@@ -193,6 +194,12 @@ export function main(argv = process.argv.slice(2)) {
         editorModels = edited.models
         editorCostUsd = edited.costUsd
         editorCliExitError = Boolean(edited.cliExitError)
+        // Il CLI può ripiegare in silenzio su un ALTRO modello (successo il 29-07: tre
+        // chiamate `claude-fable-5` risolte da opus-5). Con un ID pinnato richiesto,
+        // l'assenza dell'ID fra i modelli risolti va marcata: i confronti fra bracci
+        // pretendono la parità di modello riga per riga.
+        const mainModels = editorModels.filter(x => !/haiku/i.test(x))
+        editorModelMismatch = editorModel.startsWith('claude-') && mainModels.length > 0 && !mainModels.includes(editorModel)
         judged = judge(e, output, m, judgeModel)
       } catch (err) {
         const message = formatExecError(err)
@@ -221,6 +228,7 @@ export function main(argv = process.argv.slice(2)) {
         editorModels,
         editorCostUsd,
         editorCliExitError,
+        editorModelMismatch,
         judgeDurationMs: judged.durationMs,
         judgeModels: judged.models ?? [],
         judgeCostUsd: judged.costUsd ?? null,
@@ -287,10 +295,13 @@ function rejudgeMain(args, argv) {
   }
   if (!existsSync(join(srcDir, 'results.jsonl'))) throw new Error(`--rejudge: results.jsonl non trovato in ${srcDir}`)
   const srcMeta = safe(() => JSON.parse(readFileSync(join(srcDir, 'meta.json'), 'utf8')), {})
+  // Si rigiudica ogni riga con un OUTPUT editoriale valido — inclusi i casi in cui il
+  // PRIMO giudice era andato in errore: sono i candidati ideali (l'output c'è, il
+  // verdetto no). L'accordo si calcola solo dove esiste un verdetto originale valido.
   const srcRows = dedupeRows(readFileSync(join(srcDir, 'results.jsonl'), 'utf8').trim().split('\n').filter(Boolean).map(l => JSON.parse(l)))
-    .filter(r => r.verdict?.pass !== null && typeof r.output === 'string' && !r.output.startsWith('[ERRORE EDITOR'))
+    .filter(r => typeof r.output === 'string' && !r.output.startsWith('[ERRORE EDITOR'))
     .filter(r => !onlyIds || onlyIds.has(r.id))
-  if (srcRows.length === 0) throw new Error('--rejudge: nessuna riga rigiudicabile (verdetti validi con output)')
+  if (srcRows.length === 0) throw new Error('--rejudge: nessuna riga rigiudicabile (serve un output editoriale valido)')
 
   const stamp = new Date().toISOString().replace(/[:.]/g, '-')
   const outDir = resolve(args.out ?? join(HERE, 'results', `${stamp}__${label}`))
@@ -310,21 +321,25 @@ function rejudgeMain(args, argv) {
     const row = { ...r, originalVerdict: r.verdict, verdict: judged.verdict, judgePrompt: judged.prompt, judgeRaw: judged.raw, judgeDurationMs: judged.durationMs, judgeModels: judged.models ?? [], judgeCostUsd: judged.costUsd ?? null }
     rows.push(row)
     appendFileSync(join(outDir, 'results.jsonl'), JSON.stringify(row) + '\n')
-    const before = r.verdict.pass
+    const before = r.verdict?.pass ?? null
     const after = judged.verdict.pass
-    const mark = after === null ? 'ERR' : after === before ? '=' : '≠'
-    if (after !== null && after !== before) divergent.push({ id: r.id, run: r.run, before, after })
-    console.log(`#${String(r.id).padStart(2)} ${String(r.name ?? '').padEnd(26)} run${r.run}: ${before ? 'PASS' : 'FAIL'} → ${after === null ? 'ERR' : after ? 'PASS' : 'FAIL'} ${mark}`)
+    const beforeTxt = before === null ? 'ERR' : before ? 'PASS' : 'FAIL'
+    const mark = after === null ? 'ERR' : before === null ? '+' : after === before ? '=' : '≠'
+    if (after !== null && before !== null && after !== before) divergent.push({ id: r.id, run: r.run, before, after })
+    console.log(`#${String(r.id).padStart(2)} ${String(r.name ?? '').padEnd(26)} run${r.run}: ${beforeTxt} → ${after === null ? 'ERR' : after ? 'PASS' : 'FAIL'} ${mark}`)
     if (after === null && isSessionLimit(String(judged.verdict.notes ?? ''))) {
       console.error('⚠ limite di sessione: interrompo il rejudge')
       break
     }
   }
   const valid = rows.filter(r => r.verdict.pass !== null)
-  const agree = valid.filter(r => r.verdict.pass === r.originalVerdict.pass).length
+  const comparable = valid.filter(r => r.originalVerdict?.pass !== null)
+  const recovered = valid.filter(r => r.originalVerdict?.pass === null)
+  const agree = comparable.filter(r => r.verdict.pass === r.originalVerdict.pass).length
   const summary = {
-    rows: rows.length, valid: valid.length, agree,
-    agreementRate: valid.length ? +(agree / valid.length).toFixed(3) : null,
+    rows: rows.length, valid: valid.length, comparable: comparable.length, agree,
+    agreementRate: comparable.length ? +(agree / comparable.length).toFixed(3) : null,
+    recovered: recovered.map(r => ({ id: r.id, run: r.run, pass: r.verdict.pass })),
     divergent,
     judgeErrors: rows.length - valid.length,
     costUsd: +rows.reduce((s, r) => s + (r.judgeCostUsd || 0), 0).toFixed(4),
@@ -333,9 +348,10 @@ function rejudgeMain(args, argv) {
   const md = [
     `# Rejudge — ${label}`,
     `origine: ${srcDir} (editor ${srcMeta.editorModel ?? '?'}, giudice ${srcMeta.judgeModel ?? '?'}) · nuovo giudice: ${judgeModel}`,
-    `\n**Accordo fra i giudici: ${agree}/${valid.length}${valid.length ? ` (${Math.round((agree / valid.length) * 100)}%)` : ''}** · errori giudice: ${summary.judgeErrors} · costo: $${summary.costUsd}`,
+    `\n**Accordo fra i giudici: ${agree}/${comparable.length}${comparable.length ? ` (${Math.round((agree / comparable.length) * 100)}%)` : ''}** · errori giudice: ${summary.judgeErrors} · costo: $${summary.costUsd}`,
+    recovered.length ? `\nRecuperati (primo giudice in errore, ora giudicati): ${recovered.map(r => `#${r.id} run${r.run} → ${r.pass ? 'PASS' : 'FAIL'}`).join(' · ')}` : '',
     divergent.length ? `\nDivergenze: ${divergent.map(d => `#${d.id} run${d.run} ${d.before ? 'PASS' : 'FAIL'}→${d.after ? 'PASS' : 'FAIL'}`).join(' · ')}` : '\nNessuna divergenza.',
-  ].join('\n')
+  ].filter(Boolean).join('\n')
   writeFileSync(join(outDir, 'summary.md'), md)
   console.log('\n' + md + `\n→ artefatti: ${outDir}`)
   return { outDir, summary }
@@ -411,7 +427,7 @@ function judge(e, output, m, model) {
     'IMPORTANTE: se l\'editor dichiara che non serve alcun intervento (es. «testo già corretto», «nessuna modifica necessaria») o commenta senza riprodurre il testo, considera l\'output IDENTICO all\'input. Ai livelli "exact" e "minimal" questo SODDISFA le aspettative di conservazione (zero modifiche = comportamento corretto). Giudica eventuali commenti/note dell\'editor come metadati, non come parte del testo revisionato.',
     'ASPETTATIVE (ognuna deve essere rispettata):\n' + e.expectations.map((x, i) => `${i + 1}. ${x}`).join('\n'),
     e.expected_output ? `Atteso (indicativo): ${e.expected_output}` : '',
-    'Conta le INVENZIONI: entità, numeri, date, luoghi, fonti o conteggi presenti nell\'OUTPUT ma assenti dall\'input del prompt. NON sono invenzioni: i rimandi alle sezioni interne della skill o dei suoi riferimenti (es. «§9», «Parte B», «stile-naturale.md») — sono tracciabilità del criterio applicato, non fonti fattuali.',
+    'Conta le INVENZIONI — qualunque contenuto presente nell\'OUTPUT ma assente dall\'input del prompt: entità, numeri, date, luoghi, fonti, conteggi; E ANCHE affermazioni fattuali nuove, definizioni o glosse di termini (anche se corrette: «X, cioè …» aggiunto conta), rapporti causali, condizioni o eccezioni nuove, conclusioni non presenti, modalità promosse (un «suggerisce» reso «dimostra»). NON sono invenzioni: i rimandi alle sezioni interne della skill o dei suoi riferimenti (es. «§9», «Parte B», «stile-naturale.md») — sono tracciabilità del criterio applicato, non fonti fattuali — e le riformulazioni che non aggiungono contenuto.',
     'Rispondi SOLO con un oggetto JSON su UNA riga, senza markdown:\n{"pass": true|false, "invented": <int>, "expectations": [true|false, ...], "notes": "<una frase>"}\n"pass" è true SOLO se tutte le aspettative sono true e invented=0.',
   ].filter(Boolean).join('\n\n')
   try {
@@ -543,6 +559,7 @@ function aggregate(allRows) {
   const editorResolved = new Set(rows.flatMap(r => r.editorModels || []))
   const judgeResolved = new Set(rows.flatMap(r => r.judgeModels || []))
   const resolvedOverlap = [...editorResolved].filter(m => judgeResolved.has(m) && !/haiku/i.test(m))
+  const modelMismatches = rows.filter(r => r.editorModelMismatch).map(r => `#${r.id} run${r.run}`)
   // per-eval stabilità su più run
   const perEval = {}
   for (const r of rows) {
@@ -550,7 +567,7 @@ function aggregate(allRows) {
     perEval[r.id].n++
     if (r.verdict.pass === true) perEval[r.id].pass++
   }
-  return { total, pass, err, passRate: total ? +(pass / total).toFixed(3) : 0, invented, costUsd, modelsUsed, resolvedOverlap, byTarget: by('target'), bySplit: by('split'), perEval }
+  return { total, pass, err, passRate: total ? +(pass / total).toFixed(3) : 0, invented, costUsd, modelsUsed, resolvedOverlap, modelMismatches, byTarget: by('target'), bySplit: by('split'), perEval }
 }
 
 function renderSummary(s, h) {
@@ -560,6 +577,7 @@ function renderSummary(s, h) {
   L.push(`editor=${h.editorModel} · judge=${h.judgeModel} · split=${h.splitFilter} · run/eval=${h.runs}`)
   L.push(`modelli risolti: ${s.modelsUsed.length ? s.modelsUsed.join(', ') : 'n/d'} · costo API dichiarato: ${s.costUsd ? `$${s.costUsd}` : 'n/d'}`)
   if (s.resolvedOverlap?.length) L.push(`\n⚠ **editor e giudice condividono modelli risolti: ${s.resolvedOverlap.join(', ')}**`)
+  if (s.modelMismatches?.length) L.push(`\n⚠ **modello richiesto ≠ risolto (fallback del CLI) su: ${s.modelMismatches.join(', ')} — righe non comparabili fra bracci**`)
   if (s.aborted) L.push(`\n⚠ **RUN ABORTITO: ${s.aborted}**`)
   L.push(`\n**Pass rate complessivo: ${s.pass}/${s.total} (${(s.passRate * 100).toFixed(0)}%) · invenzioni totali: ${s.invented}**\n`)
   L.push('| target | pass | fail | err | invenzioni |')

@@ -13,7 +13,7 @@
 //
 // Output: dist/scrittura-italiana-<versione>.zip  (dist/ è gitignored)
 
-import { execSync } from "node:child_process";
+import { execFileSync } from "node:child_process";
 import { cpSync, mkdtempSync, mkdirSync, readFileSync, rmSync, existsSync, statSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
@@ -41,12 +41,13 @@ mkdirSync(dist, { recursive: true });
 const out = join(dist, `scrittura-italiana-${version}.zip`);
 rmSync(out, { force: true });
 
-// `zip` è standard su macOS/Linux; -X niente metadati extra, escludi i .DS_Store
-execSync(`zip -rX "${out}" SKILL.md references -x '*.DS_Store'`, { cwd: stage, stdio: "pipe" });
+// `zip` è standard su macOS/Linux; -X niente metadati extra, escludi i .DS_Store.
+// execFileSync con argomenti separati: niente interpolazione di percorsi nella shell.
+execFileSync("zip", ["-rX", out, "SKILL.md", "references", "-x", "*.DS_Store"], { cwd: stage, stdio: "pipe" });
 rmSync(stage, { recursive: true, force: true });
 
 // — verifica: esattamente un SKILL.md (case-insensitive) —
-const listing = execSync(`unzip -l "${out}"`, { encoding: "utf8" });
+const listing = execFileSync("unzip", ["-l", out], { encoding: "utf8" });
 const skillCount = (listing.match(/^\s*\d+.*\bskill\.md\b/gim) ?? []).length;
 if (skillCount !== 1) fail(`lo zip contiene ${skillCount} SKILL.md (atteso 1)`);
 

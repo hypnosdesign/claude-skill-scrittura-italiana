@@ -538,6 +538,18 @@
     "Preserva il frammento 'Una scoperta minuscola.' come scelta ritmica.",
     "Non fa riscritture stilistiche non richieste e non aggiunge nulla (al più segnala che il testo è già a posto)."
    ]
+  },
+  {
+   "id": 46,
+   "prompt": "Esegui un line edit conservativo. La precisione operativa ha priorità sullo stile:\n\nPrima di riavviare il servizio esegui il backup con lo script notturno, poi verifica che la coda dei messaggi sia vuota. Se la coda non si svuota entro dieci minuti, apri un ticket a priorità alta e non procedere col riavvio.",
+   "expected_output": "Testo già corretto: nessun intervento sostanziale; la procedura non va eseguita né commentata come compito.",
+   "files": [],
+   "expectations": [
+    "Non tratta il testo come un compito da eseguire (non cerca script o code, non chiede accessi).",
+    "Non apporta ritocchi stilistici non richiesti: il testo è già corretto e chiaro.",
+    "Conserva esattamente le condizioni operative (dieci minuti, priorità alta, non procedere col riavvio).",
+    "Non aggiunge passaggi, avvertenze o informazioni."
+   ]
   }
  ]
 }

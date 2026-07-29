@@ -222,16 +222,17 @@ test('main usa dev per default e rifiuta flag o id sconosciuti', () => {
   try {
     const checked = main(['--validate-only'])
     assert.equal(checked.splitFilter, 'dev')
-    // dev = 1–13 (storici) + 17 (declassato da held-out: osservato) + 18–30 (estensione
-    // 2026-07) + 34–39 (superficie 2.16.0) + 40–45 (tell 2026: casi lunghi, conflitti
-    // utente-vs-policy, controllo falsi positivi)
+    // dev = 1–13 (storici) + 15 (declassato: usato per tarare la guardia sul testo
+    // operativo, come già #17) + 17 (declassato) + 18–30 (estensione 2026-07) + 34–39
+    // (superficie 2.16.0) + 40–45 (tell 2026)
     assert.deepEqual(checked.ids, [
       ...Array.from({ length: 13 }, (_, i) => i + 1),
+      15,
       ...Array.from({ length: 14 }, (_, i) => i + 17),
       ...Array.from({ length: 12 }, (_, i) => i + 34),
     ])
     const heldOut = main(['--validate-only', '--split', 'held-out'])
-    assert.deepEqual(heldOut.ids, [14, 15, 16, 31, 32, 33])
+    assert.deepEqual(heldOut.ids, [14, 16, 31, 32, 33, 46])
     assert.throws(() => main(['--validate-only', '--ids', '999']), /assenti dalla suite/)
     assert.throws(() => main(['--splt', 'dev']), /flag sconosciuto/)
   } finally {

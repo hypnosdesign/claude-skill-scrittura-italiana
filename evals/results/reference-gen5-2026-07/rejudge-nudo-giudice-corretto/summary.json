@@ -1,0 +1,30 @@
+{
+  "rows": 13,
+  "valid": 13,
+  "comparable": 13,
+  "agree": 10,
+  "agreementRate": 0.769,
+  "recovered": [],
+  "divergent": [
+    {
+      "id": 32,
+      "run": 1,
+      "before": true,
+      "after": false
+    },
+    {
+      "id": 40,
+      "run": 1,
+      "before": true,
+      "after": false
+    },
+    {
+      "id": 41,
+      "run": 1,
+      "before": true,
+      "after": false
+    }
+  ],
+  "judgeErrors": 0,
+  "costUsd": 1.2836
+}

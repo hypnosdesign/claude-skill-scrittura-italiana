@@ -15,9 +15,12 @@ un held-out pulito). I casi 18–30 estendono il dev set (luglio 2026, da `AUDIT
 domande di lingua, scrittura da zero, riassunto, coesione, narrativa in miglioramento,
 calibrazione su campione, due casi avversariali (pressione dell'utente, istruzioni annidate
 nel testo), varianti bipolari, tipografia (virgolette curve, lineette). I casi **31–33 sono
-il nuovo held-out** (email con errore reale, divulgazione con hype, chat con emoji). Non
-usare gli output held-out per ritoccare le regole: servono a misurare la generalizzazione
-della versione candidata.
+held-out** (email con errore reale, divulgazione con hype, chat con emoji); 34–45 estendono
+il dev set (2.16.0 e 2.17.0). **Anche 15 è stato declassato a `dev`** (29 lug 2026, rilevato
+dal sesto audit): il suo fallimento ha motivato l'estensione della guardia sul testo
+operativo, quindi è diventato un test di regressione — al suo posto l'held-out **46**
+(procedura operativa, mai osservata). Non usare gli output held-out per ritoccare le regole:
+servono a misurare la generalizzazione della versione candidata.
 
 ## Provenienza della prova 2.12.0
 

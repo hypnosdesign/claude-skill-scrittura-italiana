@@ -113,7 +113,7 @@
    "name": "configurazione-tecnica",
    "genre": "documentazione tecnica",
    "target": "minimal",
-   "split": "held-out"
+   "split": "dev"
   },
   {
    "id": 16,
@@ -324,6 +324,13 @@
    "genre": "controllo falsi positivi",
    "target": "minimal",
    "split": "dev"
+  },
+  {
+   "id": 46,
+   "name": "procedura-riavvio",
+   "genre": "testo operativo",
+   "target": "minimal",
+   "split": "held-out"
   }
  ]
 }

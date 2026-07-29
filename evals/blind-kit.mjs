@@ -111,6 +111,34 @@ function build(args, argv) {
   return { outDir, pairs: pairs.length, cost }
 }
 
+// Lettura FAIL-CLOSED delle risposte: intestazione esatta, valori ammessi, un solo
+// lettore per file, esattamente una risposta per coppia, nessun lettore duplicato fra
+// i file. Un CSV malformato è un errore, mai un dato che entra zitto nell'aggregato.
+export function parseAnswers(text, key, fileName) {
+  const lines = text.trim().split('\n').map(l => l.trim()).filter(Boolean)
+  if (lines[0] !== 'lettore,coppia,migliore,umana') throw new Error(`${fileName}: intestazione attesa "lettore,coppia,migliore,umana", trovata "${lines[0]}"`)
+  const rows = []
+  const seen = new Set()
+  for (const [i, line] of lines.slice(1).entries()) {
+    const parts = line.split(',').map(s => s.trim())
+    if (parts.length !== 4) throw new Error(`${fileName} riga ${i + 2}: attese 4 colonne, trovate ${parts.length}`)
+    const [reader, nRaw, migliore, umana] = parts
+    if (!reader || reader === 'NOME') throw new Error(`${fileName} riga ${i + 2}: sostituisci "NOME" col nome del lettore`)
+    const n = Number(nRaw)
+    if (!key[n]) throw new Error(`${fileName} riga ${i + 2}: coppia ${nRaw} sconosciuta al kit`)
+    if (seen.has(n)) throw new Error(`${fileName} riga ${i + 2}: coppia ${n} risposta due volte`)
+    seen.add(n)
+    if (!['1', '2', 'pari'].includes(migliore)) throw new Error(`${fileName} riga ${i + 2}: "migliore" deve essere 1, 2 o pari (trovato "${migliore}")`)
+    if (!['1', '2', 'nonso', ''].includes(umana)) throw new Error(`${fileName} riga ${i + 2}: "umana" deve essere 1, 2, nonso o vuota (trovato "${umana}")`)
+    rows.push({ reader, n, migliore, umana })
+  }
+  const readers = new Set(rows.map(r => r.reader))
+  if (readers.size !== 1) throw new Error(`${fileName}: un file per lettore — trovati ${[...readers].join(', ')}`)
+  const missing = Object.keys(key).map(Number).filter(n => !seen.has(n))
+  if (missing.length) throw new Error(`${fileName}: coppie senza risposta: ${missing.join(', ')}`)
+  return { reader: [...readers][0], rows }
+}
+
 function score(args, argv) {
   const kitDir = resolve(String(args.score))
   const files = argv.filter(a => !a.startsWith('--') && a !== String(args.score))
@@ -119,20 +147,22 @@ function score(args, argv) {
   const key = Object.fromEntries(pairs.map(p => [p.n, p.skillIs]))
   const perReader = []
   const votes = {}   // coppia → {skill, bare, pari}
+  const readerNames = new Set()
   for (const f of files) {
-    const rows = readFileSync(resolve(f), 'utf8').trim().split('\n').slice(1).map(l => l.split(',').map(s => s.trim()))
+    const { reader, rows } = parseAnswers(readFileSync(resolve(f), 'utf8'), key, f)
+    if (readerNames.has(reader)) throw new Error(`lettore "${reader}" presente in più file: ogni lettore risponde una volta sola`)
+    readerNames.add(reader)
     let skill = 0, bare = 0, pari = 0, humanSkill = 0, humanAnswered = 0
-    for (const [reader, n, migliore, umana] of rows) {
-      const k = key[Number(n)]
-      if (!k) continue
+    for (const { n, migliore, umana } of rows) {
+      const k = key[n]
       votes[n] ??= { skill: 0, bare: 0, pari: 0 }
       if (migliore === 'pari') { pari++; votes[n].pari++ }
       else if (Number(migliore) === k) { skill++; votes[n].skill++ }
-      else if (migliore === '1' || migliore === '2') { bare++; votes[n].bare++ }
+      else { bare++; votes[n].bare++ }
       if (umana === '1' || umana === '2') { humanAnswered++; if (Number(umana) === k) humanSkill++ }
     }
     const decided = skill + bare
-    perReader.push({ file: f, skill, bare, pari, rate: decided ? +(skill / decided).toFixed(3) : null, humanSkill, humanAnswered })
+    perReader.push({ file: f, reader, skill, bare, pari, rate: decided ? +(skill / decided).toFixed(3) : null, humanSkill, humanAnswered })
   }
   const tot = perReader.reduce((a, r) => ({ skill: a.skill + r.skill, bare: a.bare + r.bare, pari: a.pari + r.pari, humanSkill: a.humanSkill + r.humanSkill, humanAnswered: a.humanAnswered + r.humanAnswered }), { skill: 0, bare: 0, pari: 0, humanSkill: 0, humanAnswered: 0 })
   const decided = tot.skill + tot.bare

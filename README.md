@@ -95,7 +95,7 @@ troncamento, non un'elisione → niente apostrofo. È anche un consulente, non s
 │   ├── narrativa.md              # raccontare: idea vs trama, personaggio, dialogo, scena, tensione, revisione
 │   └── revisione-e-proprieta.md  # la parola giusta (le mot juste), collaudo metafore, revisione a freddo
 └── evals/
-    ├── evals.json                # 39 casi dev + 6 held-out congelati
+    ├── evals.json                # 40 casi dev + 6 held-out congelati
     ├── manifest.json             # nomi, generi, livelli (exact/minimal/semantic/…) e split
     ├── run.mjs                   # runner content-addressed, verdetti fail-closed, braccio --no-skill
     ├── run.test.mjs              # test deterministici del runner

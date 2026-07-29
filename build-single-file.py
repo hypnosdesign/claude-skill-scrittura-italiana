@@ -50,6 +50,17 @@ INTRO = """# scrittura-italiana — versione in un solo file
 
 
 def build() -> str:
+    # Guardia: PARTS deve coprire ESATTAMENTE i file di references/ — un riferimento
+    # nuovo non elencato verrebbe omesso dal single-file senza far fallire nulla.
+    on_disk = sorted(p.name for p in (BASE / "references").glob("*.md"))
+    listed = sorted(fname for fname, _, _ in PARTS)
+    if on_disk != listed:
+        missing = set(on_disk) - set(listed)
+        extra = set(listed) - set(on_disk)
+        raise SystemExit(
+            f"PARTS non allineato a references/: mancanti {sorted(missing)}, in più {sorted(extra)}"
+        )
+
     # SKILL.md senza frontmatter YAML e senza la nota "apri il file di riferimento"
     skill = (BASE / "SKILL.md").read_text(encoding="utf-8")
     skill_body = re.sub(r"^---\n.*?\n---\n", "", skill, count=1, flags=re.DOTALL).strip()
