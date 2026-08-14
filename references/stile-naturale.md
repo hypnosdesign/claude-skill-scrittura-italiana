@@ -389,6 +389,13 @@ polifunzionali ambigui. → **Regola:** se un periodo supera 35-40 parole o ha p
 > connettivi, dove causa, conseguenza e tempo restano impliciti per default. → Dove la
 > relazione logica lo chiede, **subordina** e collega; varia la lunghezza (vedi "Dare voce"
 > in apertura: la voce viva alterna frasi brevissime e periodi lunghi).
+>
+> **Prima:** *«Ho fame. Decido di mangiare un panino. Non è molto buono. C'è troppo salame.»*
+> **Dopo:** *«Ho fame, quindi decido di mangiare un panino; ma non è molto buono, perché c'è
+> troppo salame.»* Le quattro frasette non erano quattro pensieri: erano un pensiero solo,
+> con dentro una conseguenza, un'opposizione e una causa — tutte lasciate al lettore. Per i
+> segni con cui si ricuce, `punteggiatura.md` («Test prima di lasciare un punto», «Punto e
+> virgola»).
 
 **20. Connettori sovrabbondanti.** *altresì, peraltro, d'altro canto, ciò nonostante,
 cionondimeno, nondimeno, pertanto, perciò, dunque, di conseguenza, ovvero, vale a dire,

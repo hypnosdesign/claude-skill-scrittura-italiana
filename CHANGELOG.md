@@ -5,6 +5,122 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.19.0] — 2026-08-13
+
+**La punteggiatura passa dal catalogo alla decisione.** `punteggiatura.md` era già una
+sintesi fedele di Mortara Garavelli: precetti corretti, ordinati per segno. Mancava però la
+parte che serve davvero a chi corregge — *come si sceglie* il segno, e che cosa fare quando
+si toglie quello sbagliato. Da due lezioni di Yasmina Pani (*Come usare la punteggiatura*,
+*Perché non si può scrivere bene senza il punto e virgola*) entrano test decisionali, casi
+negativi mancanti e due regolette scolastiche da smontare. Nessuna regola del Prontuario è
+stata cambiata: sono aggiunte, e dove le due fonti divergono resta Garavelli.
+
+### Aggiunto (`references/punteggiatura.md`)
+
+- **L'asimmetria pausa↔segno, in un senso solo.** Dove c'è un segno, nel parlato ci sarebbe
+  una pausa; non vale il contrario. Il divieto di punteggiare a orecchio resta, ma smette di
+  vietare anche l'unico test acustico legittimo: davanti a un periodo lunghissimo rimasto
+  senza segni, la rilettura ad alta voce serve — purché i segni finiscano sugli **snodi del
+  ragionamento**, non dove finisce il fiato.
+- **Che cosa fare dell'enfasi, dopo aver tolto la virgola.** La virgola tra soggetto e verbo
+  quasi sempre trascrive una pausa enfatica del parlato (*Noi, non abbiamo partecipato*):
+  l'enfasi è legittima, il segno no. Va al corsivo o all'ordine delle parole. In revisione si
+  **ripara**, non si cancella e basta.
+- **La virgola splice**, che non era nominata da nessuna parte: due frasi indipendenti
+  giustapposte separate da una virgola, tanto più se cambia il soggetto. → `;` o la
+  congiunzione che dichiara il nesso. Distinta esplicitamente dalla **coordinazione** con
+  cambio di soggetto, dove la virgola è corretta e non va tolta.
+- **Due test operativi.** Al punto: «quello che segue è ancora legato? si potevano legare con
+  una congiunzione? serviva il `;`?», col contrappeso della lunghezza già scritta. Al punto e
+  virgola: «metteresti il punto, se non avessi altro da dire **sullo stesso tema**?».
+- **La stessa frase con tre segni** (`.` / `;` / `:`), che è il modo più rapido per scegliere:
+  informazioni separate, collegate con nesso implicito, causa ed effetto.
+- **⚠ Il `;` non è automaticamente la scelta colta**: rispetto ai due punti *lascia implicita*
+  la relazione. Se il rapporto è di causa o conseguenza, si dichiara.
+- **Il `;` seriale**, la tassonomia dei connettivi forti che lo chiamano (conclusivi,
+  esplicativi, avversativi, *invece*), il cambio di prospettiva a soggetto fermo, e la scelta
+  virgola/`;` fatta **per tono** e non solo per sintassi.
+- **Due regolette scolastiche smontate**, perché arrivano dagli utenti e non vanno applicate
+  in revisione: «mai la virgola prima di una congiunzione» e «non si comincia un periodo con
+  *e* o *ma*». Nessuna delle due esiste.
+
+### Modificato
+
+- **`stile-naturale.md` §19** — alla nota sulla paratassi si aggiunge il prima→dopo che
+  mancava: quattro frasette col punto diventano un periodo solo, con la conseguenza,
+  l'opposizione e la causa rese esplicite. La nota descriveva il vizio senza mostrare la
+  riparazione.
+- Rimandi incrociati nuovi fra «frantumazione eccessiva» (`punteggiatura.md`) e §19.
+
+### Misurato — A/B appaiato, **nessun guadagno misurabile**
+
+Dodici casi scelti (sei di rischio-regressione, cinque dove la patch dovrebbe agire, uno di
+routing), due run per braccio, `claude-sonnet-5` con giudice `claude-opus-4-8`, bracci in
+sequenza. Braccio A = 2.18.0, braccio B = questa versione.
+
+| | pass | media | flip | invenzioni |
+|---|---|---|---|---|
+| A — 2.18.0 | 13/24 | 6,5 (5–8) | 5/12 | 18 (14 + 4 per run) |
+| B — 2.19.0 | 13/24 | 6,5 (6–7) | 7/12 | 25 (13 + 12 per run) |
+
+**Delta 0,0. Nessun caso con esito unanime opposto.** Le invenzioni sembrano peggiorare, ma
+i due run di A fanno 14 e 4: a questa numerosità il conteggio non è separabile dal rumore, e
+lo stesso vale per i flip. Si muovono, in direzioni opposte e sempre su una sola osservazione
+di scarto: **#41 `landing-staccato`** (il caso di paratassi, cioè il bersaglio della patch)
+da 1/2 a 2/2, **#43** da 1/2 a 2/2, **#4** e **#45** da 0/2 a 1/2; in calo **#1** e **#7** e
+**#22** da 2/2 a 1/2, **#28** da 1/2 a 0/2 (ma vedi sotto: è rumore).
+
+**Che cosa fallisce, quando fallisce.** Non le regole: il testo consegnato è quasi sempre
+corretto. Falliscono le **note**, che il contratto di conservazione conta come contenuto
+aggiunto — «periodi ben calibrati, punteggiatura corretta, nessun tic» su un testo lasciato
+intatto (#1), una norma sui due punti davanti all'oggetto diretto citata a margine (#7). È il
+comportamento già noto dalla 2.18.0, non un effetto nuovo; la verifica che il **lessico**
+introdotto qui («virgola splice», «`;` seriale») finisse nelle note è stata fatta ed è
+negativa: due occorrenze in ventiquattro uscite.
+
+**#28 `virgolette-curve-uniformi`: falla aperta, non regressione.** Sembrava l'unico
+peggioramento vero (da 1/2 a 2/2 run che convertono le curve uniformi in caporali). Rimisurato
+da solo a tre run per braccio: **0/3 in entrambi** — la baseline 2.18.0 fallisce quanto la
+candidata, e l'1/2 di prima era fortuna. La regola contraria esiste dalla 2.14.0 («se il testo
+le usa uniformi, è una scelta di collana, non un errore da convertire») ma perde contro
+«scelta d'elezione nel testo controllato» quando l'input dice *destinato a una rivista*.
+**Contromisura tentata e fallita:** il vincolo è stato spostato dentro il punto sui caporali,
+dove il modello lo incontra per primo; misurato, resta 0/3. La correzione è tenuta perché il
+testo è comunque più preciso, ma **non conta come fix**: la falla resta aperta e non ha
+ancora una contromisura che regga alla misura.
+
+**Conclusione onesta: la patch non è dimostrata migliore, è dimostrata non peggiore sul pass
+rate.** Entra per la qualità del contenuto — precetti corretti, con fonte — non per un
+guadagno misurato. La misura che deciderebbe (nota vincolata + più run sui casi `minimal`)
+non è stata fatta.
+
+### Misurato — l'ipotesi del canarino sul `;`, **non confermata**
+
+Ipotesi: l'italiano generato non usa il punto e virgola, quindi zero `;` in prosa
+argomentativa lunga sarebbe una firma contabile della paratassi. Misura sul kit cieco
+(seed 92532, `claude-sonnet-5`, solo testo finale, stessi prompt nei due bracci) e sulla
+prosa corrente del repo come controllo umano:
+
+| gruppo | parole | `;` /1000 | testi con `;` | periodo medio | cv | ≤8 parole |
+|---|---|---|---|---|---|---|
+| umano — prosa del repo (**1 solo autore**) | 10.142 | 20,11 | 4/4 | 17,4 | 0,76 | 28% |
+| input da umanizzare | 686 | 0,00 | 0/9 | 15,5 | 0,55 | 25% |
+| AI nuda | 930 | 1,08 | 1/10 | 21,6 | 0,55 | 12% |
+| AI + skill | 704 | 1,42 | 1/10 | 18,5 | 0,68 | 26% |
+
+**Verdetto: il canarino non si può dichiarare.** Il divario umano/AI sul `;` è ventuplo, ma
+è confuso con il **genere**: il controllo umano è prosa argomentativa, i testi del kit sono
+copy breve, dove il `;` è raro anche in mano umana. Sul confronto appaiato per genere
+(input, nuda, skill: tutti copy) il segnale è 0/1/1 occorrenze — cioè niente. Il controllo
+umano è inoltre di **un solo autore**, per giunta di parte. Il numero non entra nel prodotto.
+
+Quello che invece si muove, sugli stessi dieci testi appaiati, è il **ritmo**: varianza della
+lunghezza del periodo da 0,55 a 0,68 (umano 0,76) e frasi brevi dal 12% al 26% (umano 28%).
+È la direzione attesa, ma dieci testi brevi sono un indizio, non una misura. Per decidere
+servirebbe un kit sui casi argomentativi lunghi (40-42), che è la prova ancora da fare.
+
+---
+
 ## [2.18.0] — 2026-07-29
 
 **Il riposizionamento: la categoria è «skill editoriale per l'italiano», l'humanizer è il

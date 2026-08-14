@@ -2,7 +2,10 @@
 
 Riferimento prescrittivo per **scrivere e correggere** la punteggiatura in italiano.
 Sintesi azionabile da B. Mortara Garavelli, *Prontuario di punteggiatura* (Laterza,
-2003), Parti I–II. Solo precetti ed esempi: nessuna teoria, nessuna storia.
+2003), Parti I–II. I test decisionali e i casi negativi (virgola splice, enfasi mal
+trascritta, test del punto e del `;`) seguono l'uso insegnato da Yasmina Pani, *Come usare
+la punteggiatura* e *Perché non si può scrivere bene senza il punto e virgola*.
+Solo precetti ed esempi: nessuna teoria, nessuna storia.
 
 **Mappa del file:** principî generali; virgola; punto e virgola; due punti; punto fermo;
 interrogativo ed esclamativo; virgolette (col punto di chiusura); lineette, trattini e
@@ -19,7 +22,13 @@ richiami di nota; maiuscole e minuscole; abbreviazioni e sigle.
   punto fermo finale (`…libri, giornali ecc.`, non `ecc..`). Se due virgole di
   funzione diversa cadono nello stesso punto, se ne scrive una sola.
 - **La punteggiatura è demarcazione sintattico-testuale, non "respiro/pausa".**
-  Non punteggiare a orecchio sulle pause della lettura.
+  L'implicazione vale in un senso solo: dove c'è un segno, nel parlato ci sarebbe una pausa;
+  ma **non** ogni pausa del parlato chiede un segno. Nel parlato si respira, si enfatizza,
+  si dà tempo a chi ascolta — nello scritto il tempo se lo prende il lettore. Quindi non
+  punteggiare a orecchio.
+  **Unico test acustico ammesso:** davanti a un periodo lunghissimo rimasto senza segni,
+  rileggilo ad alta voce. I segni però vanno dove cadono gli **snodi del ragionamento**,
+  non dove finisce il fiato.
 - **Coerenza interna:** ogni convenzione facoltativa (tipo di virgolette, trattino
   sì/no…) si sceglie una volta e si mantiene in tutto il testo.
 - **⚠ Registro (aptum):** queste norme valgono per il **testo controllato** (editoria,
@@ -51,6 +60,9 @@ più ricco di funzioni; può cambiare il senso della frase.
 - **Davanti a `e`:** NIENTE virgola se coordina una serie continua. METTILA per:
   disambiguare (`Giorgio, Ada, Ugo, e Anna` = quattro), distaccare un membro lungo,
   valore avversativo (`Chiamava, chiamava, e nessuno rispondeva`), chiudere un inciso.
+  ⚠ La regoletta scolastica «prima di una congiunzione la virgola non si mette **mai**» non
+  esiste in nessuna grammatica: dipende dal caso, come sopra. In revisione non applicarla,
+  cioè non togliere virgole legittime, e se l'utente la invoca correggi la premessa.
 - **`ma`:** virgola prima se coordina due frasi; facoltativa tra sintagmi brevi
   (`Poveri ma belli`). La posizione sposta il fuoco: `Guarda ma non vede` vs
   `Guarda, ma non vede`.
@@ -65,6 +77,17 @@ più ricco di funzioni; può cambiare il senso della frase.
   ✗ `Il bollettino meteorologico, non lascia prevedere…` ✗ `…non lascia prevedere, un
   miglioramento`. Lecito solo se interponi un segmento chiuso da DUE virgole:
   `Il bollettino, da troppi giorni, non lascia prevedere, purtroppo, …`.
+  > **Da dove nasce, e come si ripara.** Quasi sempre è la trascrizione di una pausa
+  > **enfatica** del parlato: chi scrive `Noi, non abbiamo partecipato` sta marcando il
+  > soggetto. L'enfasi è legittima, il segno no — nello scritto passa al **corsivo**
+  > (`*Noi* non abbiamo partecipato`) o all'ordine delle parole. In revisione **ripara**,
+  > non limitarti a cancellare: la virgola tolta e basta perde ciò che l'autore voleva dire.
+- **MAI la virgola tra due frasi indipendenti giustapposte** («virgola splice»), tanto più
+  se cambia il soggetto: ✗ `C'erano moltissime persone, nessuno si è degnato di intervenire`.
+  → punto e virgola (`…persone; nessuno…`) oppure la congiunzione che esplicita il nesso
+  (`…persone, ma nessuno…`), che qui è la scelta migliore perché il rapporto è avversativo e
+  va detto. ⚠ Diverso dalla **coordinazione** con cambio di soggetto (sopra), che la virgola
+  regge benissimo: lì la congiunzione c'è già.
 - **MAI una virgola spaiata** che apre un inciso senza chiuderlo.
 - **Non separare la relativa restrittiva** dal suo antecedente (vedi sotto).
 - Non usare la virgola dove serve il punto e virgola (gerarchie, cambi di soggetto).
@@ -91,19 +114,55 @@ più ricco di funzioni; può cambiare il senso della frase.
 **Funzione.** Demarcazione intermedia: separa più nettamente della virgola senza
 chiudere come il punto; segnala gerarchie e connessioni a distanza.
 
+**Il test.** *Metteresti il punto, qui, se non avessi altro da dire sullo stesso tema?* Se
+sì, il segno è il punto e virgola: la frase è sintatticamente compiuta, ma la porzione di
+ragionamento non è finita, e ciò che segue è un'aggiunta, un commento, un altro aspetto
+della stessa cosa. `Oggi ho mangiato una mela; era ottima.`
+
 **Quando preferirlo**
 
 - **Serie di membri lunghi/complessi**, o che contengono già virgole al loro interno:
   qui è insostituibile.
-- **Serie di frasi** (non di semplici sintagmi), specie in testi formali/giuridici.
-- **Cambio di soggetto o di tema** tra frasi giustapposte o coordinate.
-- **Davanti a un connettivo forte** per rango argomentativo (`…; a meno che…`; `…; ma…`).
+- **Serie di frasi** (non di semplici sintagmi), specie in testi formali/giuridici. Caso
+  tipico, il **`;` seriale:** un elenco i cui membri sono frasi intere, con soggetti
+  *diversi*, tenute insieme da un'unica scena. `Mio padre lavava i piatti canticchiando;
+  mia madre stendeva i panni; a me toccava il cane.` (La virgola non è sbagliata, ma
+  appiattisce l'elenco su una serie di sintagmi.)
+- **Cambio di soggetto o di tema** tra frasi giustapposte o coordinate, restando dentro lo
+  stesso discorso: `L'appartamento era moderno e funzionale; i mobili, però, erano antichi.`
+  Uso classico della narrativa italiana: dentro una scena sola, il `;` sposta l'inquadratura
+  da un personaggio all'altro dove il punto la interromperebbe.
+- **Stesso soggetto, cambio di fase o di prospettiva** dentro una sequenza lunga: quando si
+  elencano azioni o aspetti di uno stesso referente e la virgola non regge più il carico.
+- **Davanti a un connettivo forte**, che porta il peso argomentativo: conclusivi (*dunque,
+  quindi, perciò*), esplicativi (*infatti*), avversativi (*ma, tuttavia, nondimeno*),
+  restrittivi (`…; a meno che…`), e l'avverbio *invece*. `Ci aspettavamo che si gettasse
+  nella mischia; invece si diede alla fuga.`
 
 **Sostituibilità**
 
 - Con il **punto:** quasi sempre possibile tra due frasi indipendenti.
 - Con la **virgola:** spesso in serie brevi; il `;` dà più risalto e netta gerarchia.
 - **NON** può racchiudere incisi (lo fanno virgola, parentesi, lineette).
+
+**⚠ Il `;` non è automaticamente la scelta colta.** Rispetto ai due punti *lascia implicita*
+la relazione: dice «queste due cose stanno insieme», non dice *come*. Se il rapporto è di
+causa, spiegazione o conseguenza, dichiaralo con i due punti (o con la congiunzione); il `;`
+al loro posto è più vago, non più raffinato.
+
+**La stessa frase, tre segni** (il modo più rapido per scegliere):
+
+- `È juventino. È una persona di cui non fidarsi.` → informazioni **separate**: hanno in
+  comune solo il referente.
+- `È juventino; è una persona di cui non fidarsi.` → **collegate**, ma il nesso non è
+  dichiarato: resta al lettore capire se e quale sia.
+- `È juventino: è una persona di cui non fidarsi.` → **causa ed effetto**: il primo fatto
+  motiva il secondo (= *perciò*, oppure *infatti*).
+
+**Non solo sintassi: anche tono.** Tra virgola e `;` può decidere il ritmo che vuoi.
+`Mi hai già irritato abbastanza, perciò smettila`: la virgola mima la concitazione, buona in
+un dialogo. `…abbastanza; perciò smettila`: distanzia e pesa, buona nella narrazione e nella
+prosa argomentativa. Vedi `narrativa.md` (ritmo) e `retorica-efficacia.md` §1 (registro).
 
 **Esempio**
 `Il razzismo non può che produrre mali: l'equivoco della razza pura; la volontà di
@@ -154,11 +213,27 @@ maiuscola dopo di sé.
   (`Il mondo finì in una discarica. Abusiva.`).
 - Si fonde col punto di abbreviazione finale (`…ecc.`).
 
+**Test prima di lasciare un punto**
+
+Quando ne hai messo uno e stai per cominciare la frase dopo, chiediti in quest'ordine:
+
+1. quello che segue è ancora **strettamente legato** a ciò che ho appena chiuso?
+2. avrei potuto legarli con una **congiunzione** (*quindi, ma, perché*)?
+3. se sì, non serviva piuttosto il **punto e virgola**?
+
+Tre sì, e quel punto sta scaricando sul lettore un nesso che toccava a te esplicitare.
+**Contrappeso:** conta anche quanto hai già scritto — se il periodo è arrivato a quattro o
+cinque righe, chiudi e riparti *con* la congiunzione (`Ma…`, `E infatti…`). ⚠ Cominciare un
+periodo con *e* o con *ma* **non è un errore**: è la seconda regoletta scolastica senza
+fondamento (l'altra è la virgola davanti alle congiunzioni, vedi «Virgola»).
+
 **Uso sconsigliato**
 
 - **Frantumazione eccessiva** ("invadenza del punto"): spezzare in frammenti ciò che è
   sintatticamente coeso maschera la subordinazione e ostacola la lettura. Dove serve
-  chiarezza, esplicita l'ipotassi con virgola / punto e virgola / due punti.
+  chiarezza, esplicita l'ipotassi con virgola / punto e virgola / due punti. Il vizio
+  sistemico che ne nasce — la corsa di frasi brevi giustapposte — sta in
+  `stile-naturale.md` §19.
 
 ---
 
@@ -202,7 +277,10 @@ maiuscola dopo di sé.
 **Forme (tipografia italiana)**
 
 - **Caporali / basse / "francesi" `« »`:** scelta d'elezione nel **testo controllato**
-  (editoria, saggistica) per citazioni e discorso diretto.
+  (editoria, saggistica) per citazioni e discorso diretto. ⚠ Vale quando le virgolette le
+  **scegli tu**, scrivendo da zero: non è un mandato a convertire. Se il testo che stai
+  correggendo ne usa già un'altra forma in modo **uniforme**, non si tocca — nemmeno quando
+  è destinato alla stampa (vedi il punto seguente).
 - **Alte / doppie / "inglesi" `" "`:** comuni nel web, giornali, testi digitali — e la
   scelta giusta nel **testo non controllato** (non essendo i caporali sulla tastiera).
   Nella forma curva `“ ”` sono anche uno stile d'editoria diffuso: se il testo le usa
