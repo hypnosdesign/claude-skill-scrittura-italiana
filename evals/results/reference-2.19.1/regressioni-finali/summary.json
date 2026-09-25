@@ -1,0 +1,126 @@
+{
+  "total": 20,
+  "pass": 20,
+  "err": 0,
+  "passRate": 1,
+  "invented": 0,
+  "textFailures": 0,
+  "responseFailures": 0,
+  "costUsd": 2.1586,
+  "modelsUsed": [
+    "claude-sonnet-5",
+    "claude-opus-5"
+  ],
+  "resolvedOverlap": [],
+  "editorModelMismatches": [],
+  "judgeModelMismatches": [],
+  "modelMismatches": [],
+  "byTarget": {
+    "exact": {
+      "pass": 2,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "improve": {
+      "pass": 6,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "mixed": {
+      "pass": 2,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "minimal": {
+      "pass": 2,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "advice": {
+      "pass": 2,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "semantic": {
+      "pass": 6,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "bySplit": {
+    "dev": {
+      "pass": 20,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "perEval": {
+    "47": {
+      "name": "asindeto-legittimo",
+      "target": "exact",
+      "pass": 2,
+      "n": 2
+    },
+    "48": {
+      "name": "asindeto-elenchi-confusi",
+      "target": "improve",
+      "pass": 2,
+      "n": 2
+    },
+    "49": {
+      "name": "negazioni-esempi-audit",
+      "target": "mixed",
+      "pass": 2,
+      "n": 2
+    },
+    "50": {
+      "name": "copy-prestazioni-limiti",
+      "target": "improve",
+      "pass": 2,
+      "n": 2
+    },
+    "51": {
+      "name": "correzione-nota-richiesta",
+      "target": "minimal",
+      "pass": 2,
+      "n": 2
+    },
+    "52": {
+      "name": "domanda-asindeto",
+      "target": "advice",
+      "pass": 2,
+      "n": 2
+    },
+    "53": {
+      "name": "modalita-attribuzione",
+      "target": "semantic",
+      "pass": 2,
+      "n": 2
+    },
+    "54": {
+      "name": "copy-concretezza-fornita",
+      "target": "improve",
+      "pass": 2,
+      "n": 2
+    },
+    "55": {
+      "name": "ruolo-canale-proprieta",
+      "target": "semantic",
+      "pass": 2,
+      "n": 2
+    },
+    "56": {
+      "name": "nota-provenienza-da-confermare",
+      "target": "semantic",
+      "pass": 2,
+      "n": 2
+    }
+  }
+}

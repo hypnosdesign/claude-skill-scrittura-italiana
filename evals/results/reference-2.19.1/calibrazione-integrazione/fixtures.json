@@ -1,0 +1,36 @@
+{
+  "cases": [
+    {
+      "id": "troncamento-operazione-descritta-male",
+      "target": "advice",
+      "prompt": "Si scrive qual è o qual'è? Spiega brevemente.",
+      "output": "Si scrive qual è senza apostrofo. In qual è non cade una vocale ma una sillaba: quale diventa qual per troncamento. Per esempio: Qual è il problema?",
+      "expectations": ["Indica qual è senza apostrofo e offre un esempio corretto."],
+      "expected": {"pass": false, "textOk": true, "responseOk": false}
+    },
+    {
+      "id": "troncamento-operazione-descritta-bene",
+      "target": "advice",
+      "prompt": "Si scrive qual è o qual'è? Spiega brevemente.",
+      "output": "Si scrive qual è senza apostrofo: da quale cade la sola e finale, anche davanti a consonante (qual buon vento). È un troncamento vocalico, non un'elisione. Per esempio: Qual è il problema?",
+      "expectations": ["Indica qual è senza apostrofo e offre un esempio corretto."],
+      "expected": {"pass": true, "textOk": true, "responseOk": true, "invented": 0}
+    },
+    {
+      "id": "diagnosi-struttura-inventata",
+      "target": "advice",
+      "prompt": "Dimmi solo se le due frasi hanno la stessa struttura e se contengono gerundi: Anna apre la finestra. Entrando in cucina, Luca saluta.",
+      "output": "Entrambe le frasi iniziano con un gerundio e hanno una struttura identica.",
+      "expectations": ["Descrive la struttura delle due frasi senza riscriverle."],
+      "expected": {"pass": false, "textOk": true, "responseOk": false}
+    },
+    {
+      "id": "diagnosi-struttura-osservata",
+      "target": "advice",
+      "prompt": "Dimmi solo se le due frasi hanno la stessa struttura e se contengono gerundi: Anna apre la finestra. Entrando in cucina, Luca saluta.",
+      "output": "Non hanno la stessa struttura: la prima è una frase semplice senza gerundi; la seconda apre con una subordinata al gerundio (Entrando in cucina), seguita dalla principale Luca saluta.",
+      "expectations": ["Descrive la struttura delle due frasi senza riscriverle."],
+      "expected": {"pass": true, "textOk": true, "responseOk": true, "invented": 0}
+    }
+  ]
+}

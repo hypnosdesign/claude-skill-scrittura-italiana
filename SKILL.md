@@ -17,7 +17,7 @@ description: |
 license: CC-BY-SA-4.0
 compatibility: claude-code claude-desktop opencode claude.ai
 metadata:
-  version: "2.19.0"
+  version: "2.19.1"
   language: it
 allowed-tools: Read Write Edit Grep Glob AskUserQuestion
 ---
@@ -256,7 +256,9 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
 - **Mai virgola tra soggetto e verbo** né tra verbo e suoi argomenti, se contigui.
 - **Inciso = due virgole** (apri e chiudi); mai una sola.
 - **Relativa restrittiva → niente virgola** (`i libri che servono`); **esplicativa → virgola**.
-- **Gerarchia:** virgola < punto e virgola < punto. `;` per serie lunghe o cambi di soggetto.
+- **Gerarchia:** virgola < punto e virgola < punto. Il `;` aiuta nelle serie complesse;
+  l'asindeto con virgole è legittimo, anche con soggetti diversi: scegli secondo chiarezza
+  e registro, senza correggere automaticamente le alternative valide.
 - **Due punti:** niente maiuscola dopo (tranne il discorso diretto citato).
 - **Virgolette (quando normalizzi tu):** caporali « » nel **testo controllato** (editoria);
   nel web/social dritte " " o assenti. Uniformi, **mai miste**; uno stile già uniforme del
@@ -284,14 +286,12 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
 - **Un solo gerundio in coda per paragrafo**; **togli gli avverbi in *-mente*** se la frase regge.
 - **Niente triadi forzate** né *"non solo… ma anche"* a ripetizione.
 - **Definizione bipolare** *«non è X, ma è Y»* (e varianti: inversione *«X, non Y»*; plurali/
-  tempi; senza secondo *è*; due punti *«non è X: è Y»*; *e non*): **taglia in assertiva pura**
-  (*«è Y»*, non per inversione) **quando è chiaramente ornamentale** — antonimi netti
-  (*«gratuito, non a pagamento»*) ed **elevazione** del copy (*«non un semplice X, ma Y»* → *«è
-  una soluzione completa»*, non *«ma»* coi due punti). **Preserva quando porta informazione o sei
-  in dubbio** (fedeltà > pulizia): **esclusione di categoria** con X = lettura di default (*«non è
-  una scelta tecnica: è organizzativa»*), citazioni, anafore triadiche, frasi-tesi, distinzioni
-  filosofiche, glossari. Il test è di **implicazione nel contesto** (*«è Y» implica già «non
-  X»?*), non lessicale. *Vedi `stile-naturale.md` §9 (test + 6 casi).*
+  tempi; senza secondo *è*; due punti *«non è X: è Y»*; *e non*): **prima verifica il
+  significato**. Se *«è Y»* non implica *«non X»* nel contesto, o sei in dubbio, preserva
+  l'esclusione. Solo una negazione ridondante può cadere (*«gratuito, non a pagamento»*),
+  se il livello di revisione lo consente e non perdi enfasi o voce. Nel copy, *«non solo X,
+  ma anche Y»* può affermare due prestazioni: conserva entrambe. Né il genere né la densità
+  autorizzano tagli automatici. *Vedi `stile-naturale.md` §9 (test + 6 casi).*
 - **La ripetizione non è il male:** non inventare perifrasi o antonomasie pur di non ripetere
   un nome (*Federer* non *il tennista svizzero*).
 - **Una figura solo se aggiunge** senso o forza; altrimenti è *mala affectatio*.
@@ -357,9 +357,29 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
 
 Quando **correggi**, fornisci: (1) il **testo corretto**; (2) *se utile*, una nota breve su
 **cosa lo rendeva scorretto / AI / inefficace** e le scelte fatte (puoi inquadrarle per virtù).
+Tieni le note distinguibili dal testo: spiega solo interventi realmente fatti e problemi
+osservabili. Una spiegazione linguistica corretta non è un'aggiunta al contenuto revisionato;
+non usarla però per introdurre fatti, fonti o intenzioni dell'autore non disponibili.
+Le eventuali varianti proposte nelle note rispettano lo stesso brief del testo consegnato:
+non suggerire di ripristinare una formula che l'utente ha chiesto esplicitamente di eliminare.
+Spiega la regola necessaria al caso, senza estenderla con *solo*, *sempre* o *mai* se ha
+eccezioni: *qual è* non ha apostrofo, ma da questo non segue che tutti i troncamenti ne
+siano privi (*po'*, *fa'*). Anche le note vanno rilette per correttezza e chiarezza.
+Una fonte non identificata non è per questo inesistente; descrivi il limite del materiale,
+non trasformarlo in una smentita dei fatti.
+Se proponi di aggiungere un dato o di precisare una fonte, subordinane l'inserimento alla
+conferma: non suggerire una provenienza come *«informazione di seconda mano»* senza sapere
+che sia vera. La condizione deve riguardare proprio quel dato: non conoscere i nomi non
+prova che l'informazione sia di seconda mano. Se l'utente chiede soltanto il testo, ometti
+le note. Se non serve intervenire, restituisci il testo invariato o dillo brevemente,
+secondo il formato richiesto.
 
 Quando l'utente chiede **solo la diagnosi** («dimmi cosa non va», «non riscrivere»): referto
 senza testo corretto — problemi veri, per virtù, ancorati a punti precisi; riscrivi solo se poi lo chiede.
+Prima di attribuire una frequenza o una struttura al brano, controlla le occorrenze:
+una somiglianza di lunghezza non prova una sintassi identica e un gerundio in un periodo
+non va attribuito anche all'altro. La diagnosi descrive ciò che il testo mostra, non una
+lista di tic da applicare per forza.
 
 Quando rispondi a una **domanda di lingua**, dai la **regola/principio** + un **esempio
 corretto** (e, se istruttivo, l'errore da evitare), citando la scheda pertinente.

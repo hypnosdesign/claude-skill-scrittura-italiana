@@ -5,6 +5,8 @@ on:
     paths:
       - "docs/**"
       - "scripts/sync-site.mjs"
+      - "scripts/sync-site.test.mjs"
+      - ".github/workflows/site-quality.yml"
       - "SKILL.md"
       - "references/**"
       - "evals/manifest.json"
@@ -13,6 +15,8 @@ on:
     paths:
       - "docs/**"
       - "scripts/sync-site.mjs"
+      - "scripts/sync-site.test.mjs"
+      - ".github/workflows/site-quality.yml"
       - "SKILL.md"
       - "references/**"
       - "evals/manifest.json"
@@ -28,6 +32,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Test site synchronization gate
+        run: node --test scripts/sync-site.test.mjs
       - name: Check site data and local links
         run: node scripts/sync-site.mjs
       - name: Check progressive-enhancement JavaScript

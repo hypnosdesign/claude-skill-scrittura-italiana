@@ -56,6 +56,7 @@ export function loadArm(dirOrDirs) {
       const diffs = []
       if (m.editorModel !== meta.editorModel) diffs.push('editor model')
       if (m.judgeModel !== meta.judgeModel) diffs.push('judge model')
+      if (!m.judgePolicy?.sha256 || !meta.judgePolicy?.sha256 || m.judgePolicy.sha256 !== meta.judgePolicy.sha256) diffs.push('judge policy diversa o assente')
       if ((m.skill?.sha256 ?? null) !== (meta.skill?.sha256 ?? null)) diffs.push('skill')
       if (m.suite?.sha256 && meta.suite?.sha256 && m.suite.sha256 !== meta.suite.sha256) diffs.push('suite')
       if (m.manifest?.sha256 && meta.manifest?.sha256 && m.manifest.sha256 !== meta.manifest.sha256) diffs.push('manifest')
@@ -67,9 +68,12 @@ export function loadArm(dirOrDirs) {
   // Dentro ogni directory: dedup per (caso, run) — gestisce i --resume in place.
   // Fra directory: override per CASO — il blocco supplementare rimpiazza il caso intero.
   const mergedByCase = new Map()
-  for (const d of dirs) {
+  for (const [index, d] of dirs.entries()) {
     const dirRows = dedupeRows(
       readFileSync(join(d, 'results.jsonl'), 'utf8').trim().split('\n').filter(Boolean).map(l => JSON.parse(l)))
+    if (dirs.length > 1 && dirRows.some(r => r.judgePolicy?.sha256 !== metas[index].judgePolicy?.sha256)) {
+      throw new Error(`fusione non omogenea (${d}): judge policy delle righe diversa dai metadati o assente`)
+    }
     for (const id of new Set(dirRows.map(r => r.id))) {
       mergedByCase.set(id, dirRows.filter(r => r.id === id))
     }
@@ -137,12 +141,18 @@ export function comparisonReasons(A, B) {
   for (const [label, a, b] of [
     ['suite', A.meta.suite?.sha256, B.meta.suite?.sha256],
     ['manifest', A.meta.manifest?.sha256, B.meta.manifest?.sha256],
+    ['judge policy', A.meta.judgePolicy?.sha256, B.meta.judgePolicy?.sha256],
   ]) {
     if (!a || !b) add(`fingerprint ${label} assente`)
     else if (a !== b) add(`fingerprint ${label} diverso`)
   }
   if (A.missing.length || B.missing.length) add('almeno un braccio ha righe attese ma assenti')
   if (A.errored.length || B.errored.length) add('almeno un braccio contiene verdetti in errore')
+  for (const arm of [A, B]) {
+    if (arm.rows.some(r => !r.judgePolicy?.sha256 || r.judgePolicy.sha256 !== arm.meta.judgePolicy?.sha256)) {
+      add('judge policy delle righe diversa dai metadati o assente')
+    }
+  }
 
   const rowsA = new Map(A.rows.map(r => [`${r.id}:${r.run}`, r]))
   const rowsB = new Map(B.rows.map(r => [`${r.id}:${r.run}`, r]))

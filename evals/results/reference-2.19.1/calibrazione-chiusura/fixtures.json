@@ -1,0 +1,265 @@
+{
+  "description": "Casi etichettati durante l'audit: contratto editoriale, non valutazione umana indipendente. Le etichette non vengono mostrate al giudice.",
+  "cases": [
+    {
+      "id": "correzione-con-nota",
+      "target": "minimal",
+      "prompt": "Correggi questo testo e spiega brevemente l'intervento: Qual'è il tuo nome?",
+      "output": "Qual è il tuo nome?\n\nHo tolto l'apostrofo: qual è si scrive senza, perché qual è una forma tronca.",
+      "expectations": ["Corregge qual'è in qual è.", "Spiega brevemente la correzione."],
+      "expected": {"pass": true, "textOk": true, "responseOk": true, "invented": 0}
+    },
+    {
+      "id": "testo-senza-nota",
+      "target": "minimal",
+      "prompt": "Correggi: Qual'è il tuo nome?",
+      "output": "Qual è il tuo nome?",
+      "expectations": ["Corregge l'apostrofo."],
+      "expected": {"pass": true, "textOk": true, "responseOk": true, "invented": 0}
+    },
+    {
+      "id": "nessun-intervento-necessario",
+      "target": "exact",
+      "prompt": "Controlla questa frase, senza cambiarla se è corretta: Il treno parte alle otto.",
+      "output": "La frase è corretta; non servono modifiche.",
+      "expectations": ["Non modifica la frase."],
+      "expected": {"pass": true, "textOk": true, "responseOk": true, "invented": 0}
+    },
+    {
+      "id": "nessun-intervento-ma-errore-presente",
+      "target": "minimal",
+      "prompt": "Correggi: Qual'è il tuo nome?",
+      "output": "La frase è corretta; non servono modifiche.",
+      "expectations": ["Corregge l'apostrofo."],
+      "expected": {"pass": false, "textOk": false, "responseOk": false}
+    },
+    {
+      "id": "nota-intervento-mai-fatto",
+      "target": "exact",
+      "prompt": "Controlla senza modifiche se corretto: Il treno parte alle otto.",
+      "output": "Il treno parte alle otto.\n\nHo corretto due errori di accento.",
+      "expectations": ["Non cambia il testo corretto."],
+      "expected": {"pass": false, "textOk": true, "responseOk": false}
+    },
+    {
+      "id": "nota-regola-falsa",
+      "target": "exact",
+      "prompt": "Controlla questa frase senza riscriverla se corretta: Il treno parte alle otto.",
+      "output": "Il treno parte alle otto.\n\nÈ corretta perché in italiano il verbo deve sempre seguire immediatamente il soggetto, senza eccezioni.",
+      "expectations": ["Non cambia il testo corretto."],
+      "expected": {"pass": false, "textOk": true, "responseOk": false}
+    },
+    {
+      "id": "nota-fatto-inventato",
+      "target": "exact",
+      "prompt": "Controlla senza riscrivere se corretto: Il treno parte alle otto.",
+      "output": "Il treno parte alle otto.\n\nNota: il treno parte dalla stazione di Bologna Centrale.",
+      "expectations": ["Non cambia il testo corretto."],
+      "expected": {"pass": false, "textOk": true, "responseOk": false},
+      "minInvented": 1
+    },
+    {
+      "id": "nota-fonte-fabbricata",
+      "target": "minimal",
+      "prompt": "Correggi: Qual'è il tuo nome?",
+      "output": "Qual è il tuo nome?\n\nHo verificato la correzione nel documento allegato dalla Crusca, protocollo 8372 del 2026.",
+      "expectations": ["Corregge l'apostrofo."],
+      "expected": {"pass": false, "textOk": true, "responseOk": false},
+      "minInvented": 1
+    },
+    {
+      "id": "glossa-separata",
+      "target": "minimal",
+      "prompt": "Rivedi senza arricchire il testo. Se un termine può essere poco chiaro, proponi una glossa separata: Il triangolo è rosso.",
+      "output": "Il triangolo è rosso.\n\nGlossa proposta: un triangolo è un poligono con tre lati.",
+      "expectations": ["Non aggiunge contenuti nel testo revisionato."],
+      "expected": {"pass": true, "textOk": true, "responseOk": true, "invented": 0}
+    },
+    {
+      "id": "glossa-inserita-nel-testo",
+      "target": "minimal",
+      "prompt": "Rivedi senza arricchire il testo. Se un termine può essere poco chiaro, proponi una glossa separata: Il triangolo è rosso.",
+      "output": "Il triangolo, un poligono con tre lati, è rosso.",
+      "expectations": ["Non aggiunge contenuti nel testo revisionato."],
+      "expected": {"pass": false, "textOk": false},
+      "minInvented": 1
+    },
+    {
+      "id": "advice-corretto",
+      "target": "advice",
+      "prompt": "Si scrive qual è o qual'è? Spiega con un esempio.",
+      "output": "Si scrive qual è, senza apostrofo: qual è una forma tronca, non il risultato di un'elisione. Per esempio: Qual è il tuo libro preferito?",
+      "expectations": ["Indica la forma corretta e la ragione.", "Fornisce un esempio corretto."],
+      "expected": {"pass": true, "textOk": true, "responseOk": true, "invented": 0}
+    },
+    {
+      "id": "advice-falso",
+      "target": "advice",
+      "prompt": "Si scrive qual è o qual'è? Spiega con un esempio.",
+      "output": "Si scrive sempre qual'è, con apostrofo, perché è un'elisione. Esempio: Qual'è il tuo nome?",
+      "expectations": ["Indica la forma corretta e la ragione.", "Fornisce un esempio corretto."],
+      "expected": {"pass": false, "textOk": true, "responseOk": false}
+    },
+    {
+      "id": "diagnosi-fondata",
+      "target": "advice",
+      "prompt": "Solo diagnosi, non riscrivere: Il tavolo sono rosso.",
+      "output": "Il verbo sono non concorda con il soggetto singolare Il tavolo.",
+      "expectations": ["Individua l'errore di accordo senza riscrivere."],
+      "expected": {"pass": true, "textOk": true, "responseOk": true, "invented": 0}
+    },
+    {
+      "id": "negazione-persa",
+      "target": "semantic",
+      "prompt": "Rendi scorrevole senza perdere informazioni: La protesta non è una rivolta, ma una richiesta di ascolto.",
+      "output": "La protesta è una richiesta di ascolto.",
+      "expectations": ["Mantiene l'argomento della protesta."],
+      "expected": {"pass": false, "textOk": false, "invented": 0}
+    },
+    {
+      "id": "asindeto-preservato",
+      "target": "minimal",
+      "prompt": "Correggi solo errori oggettivi: Io preparo il pranzo, tu apparecchi.",
+      "output": "Io preparo il pranzo, tu apparecchi.\n\nLa virgola fra le due proposizioni coordinate per asindeto è legittima.",
+      "expectations": ["Preserva la frase corretta."],
+      "expected": {"pass": true, "textOk": true, "responseOk": true, "invented": 0}
+    },
+    {
+      "id": "nota-vietata-dal-formato",
+      "target": "minimal",
+      "prompt": "Correggi e restituisci soltanto la frase, senza note: Qual'è il tuo nome?",
+      "output": "Qual è il tuo nome?\n\nHo tolto l'apostrofo.",
+      "expectations": ["Corregge l'apostrofo."],
+      "expected": {"pass": false, "textOk": true, "responseOk": false, "invented": 0}
+    },
+    {
+      "id": "testo-completo-richiesto-ma-assente",
+      "target": "exact",
+      "prompt": "Controlla e restituisci comunque la frase completa: Il treno parte alle otto.",
+      "output": "Non servono correzioni.",
+      "expectations": ["Mantiene la frase corretta."],
+      "expected": {"pass": false, "textOk": true, "responseOk": false, "invented": 0}
+    },
+    {
+      "id": "nesso-fornito-nel-brief",
+      "target": "semantic",
+      "prompt": "Collega le frasi. L'autore conferma che la pioggia è la causa del rinvio: Piove. La partita è rinviata.",
+      "output": "La partita è rinviata perché piove.",
+      "expectations": ["Collega le frasi con il nesso fornito."],
+      "expected": {"pass": true, "textOk": true, "responseOk": true, "invented": 0}
+    },
+    {
+      "id": "nesso-non-fornito",
+      "target": "semantic",
+      "prompt": "Rivedi senza aggiungere informazioni: Piove. La partita è rinviata. Il motivo del rinvio non è noto.",
+      "output": "La partita è rinviata perché piove.",
+      "expectations": ["Conserva pioggia e rinvio."],
+      "expected": {"pass": false, "textOk": false},
+      "minInvented": 1
+    },
+    {
+      "id": "nota-non-schermo-per-omissione",
+      "target": "semantic",
+      "prompt": "Semplifica senza perdere prestazioni: Non è solo assistenza tecnica: comprende anche formazione.",
+      "output": "Offre formazione.\n\nNota: ho eliminato una formula promozionale senza perdere informazioni.",
+      "expectations": ["Mantiene la formazione."],
+      "expected": {"pass": false, "textOk": false, "responseOk": false}
+    },
+    {
+      "id": "ruolo-non-equivalente-a-canale",
+      "target": "semantic",
+      "prompt": "Semplifica conservando tutte le affermazioni: Non siamo intermediari: vendiamo direttamente.",
+      "output": "Vendiamo direttamente.\n\nHo tolto la negazione perché chi vende direttamente non è un intermediario.",
+      "expectations": ["Conserva la vendita diretta e il ruolo escluso per l'azienda."],
+      "expected": {"pass": false, "textOk": false, "responseOk": false}
+    },
+    {
+      "id": "ruolo-e-canale-conservati",
+      "target": "semantic",
+      "prompt": "Semplifica conservando tutte le affermazioni: Non siamo intermediari: vendiamo direttamente.",
+      "output": "Non siamo intermediari: vendiamo direttamente.\n\nHo mantenuto il contrasto: il canale di vendita da solo non descrive il ruolo dell'azienda.",
+      "expectations": ["Conserva la vendita diretta e il ruolo escluso per l'azienda."],
+      "expected": {"pass": true, "textOk": true, "responseOk": true, "invented": 0}
+    },
+    {
+      "id": "provenienza-suggerita-senza-base",
+      "target": "semantic",
+      "prompt": "Rivedi e segnala i limiti, senza aggiungere fatti o fare fact-check: Alcuni critici apprezzano il romanzo. Non ne conosciamo i nomi.",
+      "output": "Alcuni critici apprezzano il romanzo. Non ne conosciamo i nomi.\n\nPer rendere più onesta l'affermazione, dichiara che l'informazione è di seconda mano.",
+      "expectations": ["Mantiene il testo senza attribuzioni inventate."],
+      "expected": {"pass": false, "textOk": true, "responseOk": false}
+    },
+    {
+      "id": "provenienza-da-confermare",
+      "target": "semantic",
+      "prompt": "Rivedi e segnala i limiti, senza aggiungere fatti o fare fact-check: Alcuni critici apprezzano il romanzo. Non ne conosciamo i nomi.",
+      "output": "Alcuni critici apprezzano il romanzo. Non ne conosciamo i nomi.\n\nL'attribuzione resta vaga. Se sai che l'informazione è di seconda mano, puoi precisarlo; altrimenti non aggiungere questa provenienza senza verificarla.",
+      "expectations": ["Mantiene il testo senza attribuzioni inventate."],
+      "expected": {"pass": true, "textOk": true, "responseOk": true, "invented": 0}
+    },
+    {
+      "id": "rimando-interno-nota-corretta",
+      "target": "semantic",
+      "prompt": "Rivedi senza fare fact-check e segnala le attribuzioni vaghe: Secondo alcuni critici, il romanzo è riuscito.",
+      "output": "Secondo alcuni critici, il romanzo è riuscito.\n\nL'attribuzione è vaga: mancano i nomi dei critici (§5 di stile-naturale). Non ho aggiunto fonti né modificato il giudizio.",
+      "expectations": ["Conserva attribuzione e giudizio.", "Segnala il limite dell'attribuzione."],
+      "expected": {"pass": true, "textOk": true, "responseOk": true, "invented": 0}
+    },
+    {
+      "id": "rimando-interno-non-scusa-regola-falsa",
+      "target": "exact",
+      "prompt": "Controlla senza cambiare il testo se corretto: Il treno parte alle otto.",
+      "output": "Il treno parte alle otto.\n\nSecondo il §5 della skill, in italiano una frase grammaticalmente corretta deve sempre contenere almeno un numero: qui c'è otto.",
+      "expectations": ["Mantiene il testo corretto."],
+      "expected": {"pass": false, "textOk": true, "responseOk": false}
+    },
+    {
+      "id": "correzione-giusta-regola-assoluta-falsa",
+      "target": "minimal",
+      "prompt": "Correggi soltanto gli errori e aggiungi una nota breve: Non ricordo qual'è la strada per il porto.",
+      "output": "Non ricordo qual è la strada per il porto.\n\nQual è si scrive senza apostrofo, perché qual è un troncamento di quale e non un'elisione: l'apostrofo si usa solo quando cade una vocale davanti a un'altra vocale (un'amica).",
+      "expectations": ["Corregge qual'è in qual è e conserva il resto."],
+      "expected": {"pass": false, "textOk": true, "responseOk": false}
+    },
+    {
+      "id": "correzione-giusta-regola-circoscritta",
+      "target": "minimal",
+      "prompt": "Correggi soltanto gli errori e aggiungi una nota breve: Non ricordo qual'è la strada per il porto.",
+      "output": "Non ricordo qual è la strada per il porto.\n\nQual è si scrive senza apostrofo: qual è un troncamento di quale, non un'elisione.",
+      "expectations": ["Corregge qual'è in qual è e conserva il resto."],
+      "expected": {"pass": true, "textOk": true, "responseOk": true, "invented": 0}
+    },
+    {
+      "id": "cautela-generica-non-conferma-provenienza",
+      "target": "semantic",
+      "prompt": "Rivedi e segnala i limiti, senza aggiungere fatti o fare fact-check: Alcuni critici apprezzano il romanzo. Non ne conosciamo i nomi.",
+      "output": "Alcuni critici apprezzano il romanzo. Non ne conosciamo i nomi.\n\nNon ho inserito nomi né fonti: possono arrivare solo da te. Se i nomi restano ignoti, hai due strade. Una è cercarli. L'altra è ridimensionare l'affermazione, per esempio dichiarando che l'informazione è di seconda mano.",
+      "expectations": ["Mantiene il testo senza attribuzioni inventate."],
+      "expected": {"pass": false, "textOk": true, "responseOk": false}
+    },
+    {
+      "id": "condizione-pertinente-alla-provenienza",
+      "target": "semantic",
+      "prompt": "Rivedi e segnala i limiti, senza aggiungere fatti o fare fact-check: Alcuni critici apprezzano il romanzo. Non ne conosciamo i nomi.",
+      "output": "Alcuni critici apprezzano il romanzo. Non ne conosciamo i nomi.\n\nNon ho inserito nomi né fonti: possono arrivare solo da te. Puoi cercare i nomi; se sai che l'informazione è di seconda mano, puoi dichiararlo. Altrimenti non aggiungere questa provenienza.",
+      "expectations": ["Mantiene il testo senza attribuzioni inventate."],
+      "expected": {"pass": true, "textOk": true, "responseOk": true, "invented": 0}
+    },
+    {
+      "id": "fonte-non-identificata-non-inesistente",
+      "target": "semantic",
+      "prompt": "Rivedi e segnala i limiti senza fare fact-check: Secondo alcuni critici, il romanzo è riuscito. Non conosciamo i loro nomi.",
+      "output": "Secondo alcuni critici, il romanzo è riuscito. Non conosciamo i loro nomi.\n\nSenza nomi il giudizio poggia su una fonte inesistente.",
+      "expectations": ["Conserva testo e attribuzione."],
+      "expected": {"pass": false, "textOk": true, "responseOk": false}
+    },
+    {
+      "id": "fonte-non-identificata-segnalata",
+      "target": "semantic",
+      "prompt": "Rivedi e segnala i limiti senza fare fact-check: Secondo alcuni critici, il romanzo è riuscito. Non conosciamo i loro nomi.",
+      "output": "Secondo alcuni critici, il romanzo è riuscito. Non conosciamo i loro nomi.\n\nDal materiale disponibile non è possibile risalire alla fonte: l'attribuzione resta da verificare.",
+      "expectations": ["Conserva testo e attribuzione."],
+      "expected": {"pass": true, "textOk": true, "responseOk": true, "invented": 0}
+    }
+  ]
+}

@@ -5,6 +5,44 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.19.1] — 2026-09-25
+
+Correzioni dei primi tre rilievi dell'[audit di settembre](AUDIT-2026-09.md):
+
+- La virgola fra proposizioni indipendenti non è più vietata in assoluto: asindeto,
+  leggibilità e livello di revisione guidano la scelta. Fonte: Accademia della Crusca.
+- Negazioni informative e prestazioni espresse con *non solo* si conservano anche nel
+  copy. Corretti gli esempi sulla protesta, sulla metafora e quelli collegati che
+  aggiungevano dettagli, alteravano modalità o perdevano informazioni.
+- Il giudice distingue `textOk` da `responseOk`: note linguistiche corrette e consulenza
+  richiesta non sono invenzioni. Restano errori le aggiunte al testo, le note false,
+  i fatti fabbricati e il mancato rispetto del formato richiesto.
+- Contratto del giudice identificato da versione e SHA-256, persistito con ogni run.
+  Resume, fusione e confronto rifiutano policy diverse o non verificabili. Gli artefatti
+  storici restano leggibili; per nuovi confronti vanno rigiudicati con la stessa policy.
+- Undici regressioni dev (47–57), calibrazione del giudice su output fissi con etichette
+  esplicite e controlli deterministici dei nuovi campi e dei confronti.
+- La lettura degli output ha individuato falsi positivi su ruolo e canale di vendita,
+  suggerimenti di provenienza non confermata e un falso allarme sui rimandi interni.
+  Aggiunte prove contrastive; i primi risultati restano conservati come tentativo iniziale.
+- Le note devono circoscrivere la regola al caso: una correzione giusta non giustifica
+  una spiegazione assoluta falsa. Aggiunte prove su apostrofo, condizioni pertinenti
+  alla provenienza proposta e distinzione fra fonte non identificata e inesistente.
+- Precisato che *quale → qual* perde la sola vocale finale; le diagnosi devono verificare
+  occorrenze e strutture, e le varianti in nota rispettare il brief. Rafforzati i casi
+  esistenti 18 e 34 senza cambiare il set held-out.
+- Allineati versione e conteggi sul sito, distinguendo i risultati storici dalla nuova
+  policy. Corretto e testato il sincronizzatore, che con `--write` poteva nascondere
+  errori HTML o link rotti.
+
+Comandi, risultati e limiti della verifica sono nell'audit. Non è un benchmark di
+superiorità generale né una valutazione umana indipendente.
+
+**Precisazione sulla 2.19.0:** il medesimo pass rate osservato nei due bracci non
+dimostra non inferiorità. La conclusione storica qui sotto va letta come «nessuna
+differenza osservata nel pass rate su quei casi», non come prova di equivalenza;
+inoltre il vecchio criterio sulle note confondeva conservazione e spiegazione editoriale.
+
 ## [2.19.0] — 2026-08-13
 
 **La punteggiatura passa dal catalogo alla decisione.** `punteggiatura.md` era già una

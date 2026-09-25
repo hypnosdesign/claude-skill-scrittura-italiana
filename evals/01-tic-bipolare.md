@@ -16,15 +16,15 @@ di parole apparentemente opposte: è l'implicazione nel contesto.
 
 Il paragrafo contiene cinque occorrenze:
 
-1. elevazione ornamentale da riscrivere;
+1. formula additiva da semplificare mantenendo entrambe le funzioni;
 2. antonimia realmente ridondante da riscrivere;
 3. falso antonimo da preservare;
 4. citazione fornita dall'utente da preservare verbatim;
 5. esclusione di categoria da preservare nella forma originaria.
 
 ```
-La piattaforma non è un semplice strumento di gestione, ma è un sistema di
-orchestrazione dei flussi. Il piano di prova è gratuito, non a pagamento: si attiva
+La piattaforma non gestisce solo le pratiche: coordina anche i flussi.
+Il piano di prova è gratuito, non a pagamento: si attiva
 senza carta di credito. L'architettura è modulare, non monolitica: qui *modulare*
 descrive i confini interni, *non monolitica* il modello di distribuzione. Nel documento fornito
 dall'utente si legge: «la tecnologia non è mai neutrale, ma porta sempre con sé
@@ -34,8 +34,8 @@ organizzativa che coinvolge ruoli, processi e responsabilità.
 
 ## Diagnosi attesa
 
-1. *non è un semplice strumento… ma è un sistema…* → elevazione ornamentale: taglia il
-   polo negativo.
+1. *non gestisce solo le pratiche: coordina anche i flussi* → conserva gestione delle
+   pratiche e coordinamento dei flussi; puoi esprimerli senza la cornice *non solo*.
 2. *gratuito, non a pagamento* → implicazione necessaria nello stesso contesto: *gratuito*
    contiene già *non a pagamento*.
 3. *modulare, non monolitica* → preserva. Il testo assegna esplicitamente i due termini ad
@@ -49,7 +49,7 @@ organizzativa che coinvolge ruoli, processi e responsabilità.
 ## Output atteso
 
 ```
-La piattaforma è un sistema di orchestrazione dei flussi. Il piano di prova è gratuito:
+La piattaforma gestisce le pratiche e coordina i flussi. Il piano di prova è gratuito:
 si attiva senza carta di credito. L'architettura è modulare, non monolitica: qui *modulare*
 descrive i confini interni, *non monolitica* il modello di distribuzione. Nel documento fornito
 dall'utente si legge: «la tecnologia non è mai neutrale, ma porta sempre con sé
@@ -65,7 +65,7 @@ legittima e può restare.
 
 **PASS** se l'output:
 
-- elimina i poli ridondanti in (1) e (2) senza ricrearli per inversione;
+- semplifica (1) mantenendo entrambe le funzioni e riduce la ridondanza in (2);
 - preserva integralmente (3), perché nel dominio descritto *modulare* e *non monolitica*
   qualificano assi diversi;
 - lascia verbatim la citazione in (4), senza attribuzioni o fonti aggiunte;
@@ -81,7 +81,7 @@ legittima e può restare.
   la variante formale che la regola invita a non fabbricare;
 - attenuare (5) in *«più che tecnica»*, che concede ciò che l'originale esclude;
 - modificare o arricchire la citazione in (4);
-- lasciare l'elevazione di (1) sostituendo soltanto *ma* con i due punti.
+- eliminare la gestione delle pratiche in (1), lasciando soltanto il coordinamento.
 
 ## Note
 

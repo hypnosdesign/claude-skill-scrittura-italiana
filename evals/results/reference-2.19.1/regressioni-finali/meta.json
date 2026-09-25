@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 4,
+  "judgePolicy": {
+    "version": 2,
+    "sha256": "8cc0ce55c91d5ace82da34d7997f3c21eae2a9462e27a82e09fb641336440ae5"
+  },
+  "label": "audit-2.19.1-finale",
+  "stamp": "2026-09-25T12-15-14-513Z",
+  "argv": [
+    "--ids",
+    "47,48,49,50,51,52,53,54,55,56",
+    "--runs",
+    "2",
+    "--model",
+    "claude-sonnet-5",
+    "--judge-model",
+    "claude-opus-5",
+    "--fail-under",
+    "1",
+    "--label",
+    "audit-2.19.1-finale",
+    "--out",
+    "evals/results/reference-2.19.1/regressioni-finali"
+  ],
+  "git": {
+    "sha": "345a9c4",
+    "dirty": true
+  },
+  "skill": {
+    "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/scrittura-italiana-single-file.md",
+    "sha256": "81182306704a88a65fd8dad9b5040513520da7065d7a0ca60ebfac45008bc3f6",
+    "bytes": 259563
+  },
+  "suite": {
+    "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/evals.json",
+    "sha256": "8bdbf598adbf4c0d36236c14e23312ee7cb01fe71581a895de5cebc6511b19b4",
+    "bytes": 50947
+  },
+  "manifest": {
+    "source": "/Users/mattia/Projects/claude-skill-scrittura-italiana/evals/manifest.json",
+    "sha256": "7c188bdaf2471e7a23c6a07623fbc6e8763318442468a0e3427cf63154514a57",
+    "bytes": 7917
+  },
+  "editorModel": "claude-sonnet-5",
+  "judgeModel": "claude-opus-5",
+  "sameModel": false,
+  "runs": 2,
+  "splitFilter": "dev",
+  "claudeVer": "2.1.278 (Claude Code)",
+  "node": "v24.19.0",
+  "ids": [
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56
+  ]
+}

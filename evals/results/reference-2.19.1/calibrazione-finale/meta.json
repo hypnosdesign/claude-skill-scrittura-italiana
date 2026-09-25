@@ -1,0 +1,12 @@
+{
+  "kind": "judge-calibration",
+  "stamp": "2026-09-25T11-58-31-936Z",
+  "model": "claude-opus-5",
+  "runs": 2,
+  "judgePolicy": {
+    "version": 2,
+    "sha256": "8cc0ce55c91d5ace82da34d7997f3c21eae2a9462e27a82e09fb641336440ae5"
+  },
+  "fixturesSha256": "050b3a78d96536756eed31a274e92012ceba3b195eafe8fe3371bed7a55945d8",
+  "node": "v24.19.0"
+}

@@ -67,6 +67,9 @@ tutti*); definizioni ed esempi originali. `✓` = corretto, `✗` = da evitare.
   ✗ pò / ✗ po), mo' (=modo), be' (=bene), to' (=tieni).
 - **qual è — sempre senza apostrofo** (è troncamento): ✓ Qual è il problema? / ✗ Qual'è.
   Così qual era, qual buon vento, la qual cosa; analogo *tal* (gente di tal fatta).
+  In *quale → qual* cade la sola vocale finale *e*, non la sillaba *le*: è un'apocope
+  vocalica. Il troncamento può eliminare una vocale oppure una sillaba; non definirlo
+  come caduta obbligatoria di una sillaba. [Crusca, «L'esatta grafia di qual è»](https://accademiadellacrusca.it/it/consulenza/l-esatta-grafia-di-emqual-em/6).
 
 ## 4. *sé stesso* / *se stesso* — *proprio*
 

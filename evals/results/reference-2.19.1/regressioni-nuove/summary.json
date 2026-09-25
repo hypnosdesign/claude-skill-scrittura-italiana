@@ -1,0 +1,114 @@
+{
+  "total": 16,
+  "pass": 15,
+  "err": 0,
+  "passRate": 0.938,
+  "invented": 1,
+  "textFailures": 0,
+  "responseFailures": 1,
+  "costUsd": 1.7157,
+  "modelsUsed": [
+    "claude-sonnet-5",
+    "claude-opus-5"
+  ],
+  "resolvedOverlap": [],
+  "editorModelMismatches": [],
+  "judgeModelMismatches": [],
+  "modelMismatches": [],
+  "byTarget": {
+    "exact": {
+      "pass": 2,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "improve": {
+      "pass": 6,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "mixed": {
+      "pass": 2,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "minimal": {
+      "pass": 2,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "advice": {
+      "pass": 2,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "semantic": {
+      "pass": 1,
+      "fail": 1,
+      "err": 0,
+      "invented": 1
+    }
+  },
+  "bySplit": {
+    "dev": {
+      "pass": 15,
+      "fail": 1,
+      "err": 0,
+      "invented": 1
+    }
+  },
+  "perEval": {
+    "47": {
+      "name": "asindeto-legittimo",
+      "target": "exact",
+      "pass": 2,
+      "n": 2
+    },
+    "48": {
+      "name": "asindeto-elenchi-confusi",
+      "target": "improve",
+      "pass": 2,
+      "n": 2
+    },
+    "49": {
+      "name": "negazioni-esempi-audit",
+      "target": "mixed",
+      "pass": 2,
+      "n": 2
+    },
+    "50": {
+      "name": "copy-prestazioni-limiti",
+      "target": "improve",
+      "pass": 2,
+      "n": 2
+    },
+    "51": {
+      "name": "correzione-nota-richiesta",
+      "target": "minimal",
+      "pass": 2,
+      "n": 2
+    },
+    "52": {
+      "name": "domanda-asindeto",
+      "target": "advice",
+      "pass": 2,
+      "n": 2
+    },
+    "53": {
+      "name": "modalita-attribuzione",
+      "target": "semantic",
+      "pass": 1,
+      "n": 2
+    },
+    "54": {
+      "name": "copy-concretezza-fornita",
+      "target": "improve",
+      "pass": 2,
+      "n": 2
+    }
+  }
+}

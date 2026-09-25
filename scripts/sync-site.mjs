@@ -116,7 +116,7 @@ const result = {
   htmlFiles: htmlFiles.length
 };
 
-if (write && stale.length === 0) {
+if (write && stale.length === 0 && broken.length === 0 && invalid.length === 0) {
   console.log(JSON.stringify({ ...result, updated: true }, null, 2));
 } else if (stale.length || broken.length || invalid.length) {
   if (stale.length) console.error(`Dati obsoleti in: ${stale.join(", ")}. Esegui node scripts/sync-site.mjs --write`);

@@ -1,0 +1,18 @@
+{
+  "expected": 8,
+  "completed": 8,
+  "failed": [
+    {
+      "id": "troncamento-operazione-descritta-male",
+      "run": 1,
+      "mismatches": [
+        "pass: atteso false, ottenuto true",
+        "responseOk: atteso false, ottenuto true"
+      ],
+      "modelMismatch": false
+    }
+  ],
+  "costUsd": 0.2701,
+  "aborted": false,
+  "ok": false
+}

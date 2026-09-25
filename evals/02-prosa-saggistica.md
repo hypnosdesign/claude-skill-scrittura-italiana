@@ -52,30 +52,30 @@ Occorrenze attese al censimento:
 Riscrittura asciutta che elimina tutti i tic mantenendo argomento e voce. Esempio:
 
 ```
-Merleau-Ponty parte da una filologia diversa e arriva alla stessa conclusione: la
-carne non è il corpo individuale, ma il tessuto comune. Nei media digitali di
-Galloway, la non-condivisione di codice è la condizione operativa del dispositivo
-— è quel che accade anche in BG.
+Queste figure sono strutturali per il nostro caso. Merleau-Ponty parte da una filologia
+diversa ma argomenta nello stesso modo, sul piano della percezione: la carne non è il
+corpo individuale, ma il tessuto comune. Galloway completa il ragionamento sui media
+digitali. Le tre voci concordano: la non-condivisione di codice è la condizione operativa
+del dispositivo. La somiglianza con il caso BG è precisa.
 ```
 
 (Risultato accettabile: rese diverse vanno bene se eliminano i tic e conservano il
 contenuto teorico. Quello sopra è una baseline, non l'unica forma corretta.)
 
-> **Perché il gold tiene una negazione e un em dash** (apparenti violazioni). *«la carne non è
+> **Perché il gold conserva alcune formulazioni.** *«la carne non è
 > il corpo individuale, ma il tessuto comune»* **non** è il tic bipolare da cassare: è
 > un'**esclusione di categoria** (`stile-naturale.md` §9, caso 6) — il testo esclude
 > esplicitamente la lettura «corpo individuale», e *«è il tessuto comune»* da solo perderebbe
 > l'avvertimento. Il gold conserva quindi la forma informativa originale, senza invertirla. Si
-> toglie invece la glossa vuota *«in questo senso preciso»* (§59). E l'unico `—` è una lineetta
-> editoriale isolata, non la *raffica* di em dash che §21 proscrive: un trattino in tutto il
-> paragrafo è uso legittimo dell'italiano, non un tell. Si eliminano i tic *generati*, non ogni
-> negazione o ogni lineetta.
+> toglie invece la glossa vuota *«in questo senso preciso»* (§59). Restano il numero delle
+> voci e la loro convergenza. La somiglianza con BG non è spiegata: va segnalata nel
+> censimento, non riempita con una tesi inventata né eliminata in silenzio.
 
 ## Criteri di valutazione
 
 **PASS** se l'output:
-- elimina o riformula tutte le occorrenze numerate sopra **tranne l'esclusione di categoria
-  al punto 4** (vedi sotto);
+- riduce le formule ridondanti; preserva l'esclusione al punto 4 e segnala le affermazioni
+  che non si possono precisare senza informazioni ulteriori;
 - nel censimento richiesto dal prompt riconosce esplicitamente almeno 4 categorie, per nome o
   numero (§58/§59/§60/§61/§62/§64/§65);
 - non sostituisce un tic con un altro della stessa famiglia (es. togliere la catena di
@@ -97,9 +97,8 @@ contenuto teorico. Quello sopra è una baseline, non l'unica forma corretta.)
   famiglia con un altro membro della stessa famiglia. Triade esplicita:
   - *input:* «la posta concettuale del paragrafo è la non-condivisione di codice»
   - *output errato:* «la cifra del paragrafo è la non-condivisione di codice»
-  - *output corretto:* «il paragrafo dice che la non-condivisione di codice è la
-    condizione operativa del dispositivo» (oppure: «qui il punto è la non-condivisione
-    di codice»)
+  - *output corretto:* «Il paragrafo riguarda la non-condivisione di codice».
+    Non aggiungere «condizione operativa del dispositivo» se questa tesi manca nell'input.
 
   *Posta concettuale* e *cifra* sono entrambi membri di §60 (nomi-ombrello accademici):
   il revisore frettoloso vede il problema, fa la sostituzione laterale e si convince di

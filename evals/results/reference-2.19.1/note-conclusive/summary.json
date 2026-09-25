@@ -1,0 +1,90 @@
+{
+  "total": 12,
+  "pass": 12,
+  "err": 0,
+  "passRate": 1,
+  "invented": 0,
+  "textFailures": 0,
+  "responseFailures": 0,
+  "costUsd": 1.7315,
+  "modelsUsed": [
+    "claude-sonnet-5",
+    "claude-opus-5"
+  ],
+  "resolvedOverlap": [],
+  "editorModelMismatches": [],
+  "judgeModelMismatches": [],
+  "modelMismatches": [],
+  "byTarget": {
+    "improve": {
+      "pass": 2,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "advice": {
+      "pass": 4,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "minimal": {
+      "pass": 4,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    },
+    "semantic": {
+      "pass": 2,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "bySplit": {
+    "dev": {
+      "pass": 12,
+      "fail": 0,
+      "err": 0,
+      "invented": 0
+    }
+  },
+  "perEval": {
+    "3": {
+      "name": "bipolare-ornamentale",
+      "target": "improve",
+      "pass": 2,
+      "n": 2
+    },
+    "18": {
+      "name": "domanda-qual-e",
+      "target": "advice",
+      "pass": 2,
+      "n": 2
+    },
+    "34": {
+      "name": "diagnosi-senza-riscrittura",
+      "target": "advice",
+      "pass": 2,
+      "n": 2
+    },
+    "51": {
+      "name": "correzione-nota-richiesta",
+      "target": "minimal",
+      "pass": 2,
+      "n": 2
+    },
+    "53": {
+      "name": "modalita-attribuzione",
+      "target": "semantic",
+      "pass": 2,
+      "n": 2
+    },
+    "57": {
+      "name": "apostrofo-nota-circoscritta",
+      "target": "minimal",
+      "pass": 2,
+      "n": 2
+    }
+  }
+}

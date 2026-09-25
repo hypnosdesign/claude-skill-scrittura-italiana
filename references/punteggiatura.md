@@ -2,9 +2,10 @@
 
 Riferimento prescrittivo per **scrivere e correggere** la punteggiatura in italiano.
 Sintesi azionabile da B. Mortara Garavelli, *Prontuario di punteggiatura* (Laterza,
-2003), Parti I–II. I test decisionali e i casi negativi (virgola splice, enfasi mal
-trascritta, test del punto e del `;`) seguono l'uso insegnato da Yasmina Pani, *Come usare
-la punteggiatura* e *Perché non si può scrivere bene senza il punto e virgola*.
+2003), Parti I–II. I test decisionali sul punto e sul `;` riprendono anche gli spunti di
+Yasmina Pani, *Come usare la punteggiatura* e *Perché non si può scrivere bene senza il
+punto e virgola*, come criteri di scelta, non come divieti delle alternative legittime.
+Per la coordinazione per asindeto: [Accademia della Crusca, «La punteggiatura»](https://accademiadellacrusca.it/it/consulenza/la-punteggiatura/143).
 Solo precetti ed esempi: nessuna teoria, nessuna storia.
 
 **Mappa del file:** principî generali; virgola; punto e virgola; due punti; punto fermo;
@@ -53,7 +54,10 @@ più ricco di funzioni; può cambiare il senso della frase.
 - **Apposizioni e gruppi attributivi** a inizio o fine enunciato: separali con virgola.
 - **Incisi e segnali discorsivi** (`ecco`, `dicevo`, `insomma`, avverbi frasali come
   `probabilmente`): tra virgole.
-- **Coordinazione con cambio di soggetto:** marca con virgola (o punto e virgola).
+- **Coordinazione, anche senza congiunzione (asindeto):** la virgola può separare
+  proposizioni indipendenti: `Entrò, posò la borsa, si sedette`; anche con soggetti diversi:
+  `Io preparo il pranzo, tu apparecchi`. Il cambio di soggetto non impone da solo il punto
+  e virgola. Valuta chiarezza, lunghezza e articolazione del periodo.
 - **Complementi di tempo/luogo/causa a inizio frase:** se lunghi, separali dalla
   reggente. In coda la virgola spesso cade (`chiedi informazioni per trovare la strada`).
 - **Elenchi:** virgole tra i membri; davanti all'ultima `e` di norma niente virgola.
@@ -82,15 +86,19 @@ più ricco di funzioni; può cambiare il senso della frase.
   > soggetto. L'enfasi è legittima, il segno no — nello scritto passa al **corsivo**
   > (`*Noi* non abbiamo partecipato`) o all'ordine delle parole. In revisione **ripara**,
   > non limitarti a cancellare: la virgola tolta e basta perde ciò che l'autore voleva dire.
-- **MAI la virgola tra due frasi indipendenti giustapposte** («virgola splice»), tanto più
-  se cambia il soggetto: ✗ `C'erano moltissime persone, nessuno si è degnato di intervenire`.
-  → punto e virgola (`…persone; nessuno…`) oppure la congiunzione che esplicita il nesso
-  (`…persone, ma nessuno…`), che qui è la scelta migliore perché il rapporto è avversativo e
-  va detto. ⚠ Diverso dalla **coordinazione** con cambio di soggetto (sopra), che la virgola
-  regge benissimo: lì la congiunzione c'è già.
+- **Non confondere asindeto e accumulo poco leggibile.** Una virgola fra indipendenti
+  non è di per sé un errore in italiano: non applicare un divieto generale di «comma
+  splice». `C'erano moltissime persone, nessuno interveniva` può restare; `…persone;
+  nessuno interveniva` dà più risalto allo stacco. Se una sequenza contiene già incisi
+  o elenchi e i confini si confondono, valuta `;` o punto: `Anna prepara pane, frutta,
+  acqua, Luca controlla le mappe, le chiavi, i documenti` → `Anna prepara pane, frutta,
+  acqua; Luca controlla le mappe, le chiavi, i documenti`. È un intervento di chiarezza,
+  non la riparazione di ogni asindeto. Aggiungi una congiunzione soltanto se il nesso è
+  ricavabile dal contesto; non inventare cause o contrasti per giustificare il segno.
 - **MAI una virgola spaiata** che apre un inciso senza chiuderlo.
 - **Non separare la relativa restrittiva** dal suo antecedente (vedi sotto).
-- Non usare la virgola dove serve il punto e virgola (gerarchie, cambi di soggetto).
+- Non appiattire con sole virgole una gerarchia che il lettore fatica a ricostruire.
+  In una correzione di soli errori, conserva invece le alternative già chiare e legittime.
 
 **Relative restrittive vs esplicative (regola chiave)**
 
@@ -114,10 +122,11 @@ più ricco di funzioni; può cambiare il senso della frase.
 **Funzione.** Demarcazione intermedia: separa più nettamente della virgola senza
 chiudere come il punto; segnala gerarchie e connessioni a distanza.
 
-**Il test.** *Metteresti il punto, qui, se non avessi altro da dire sullo stesso tema?* Se
-sì, il segno è il punto e virgola: la frase è sintatticamente compiuta, ma la porzione di
-ragionamento non è finita, e ciò che segue è un'aggiunta, un commento, un altro aspetto
-della stessa cosa. `Oggi ho mangiato una mela; era ottima.`
+**Il test.** *Le due frasi sono sintatticamente compiute, ma vuoi tenerle nello stesso
+passaggio del ragionamento?* Il punto e virgola è una possibilità, non un obbligo:
+`Oggi ho mangiato una mela; era ottima`. Punto e virgola, punto e, nei contesti adatti,
+virgola danno articolazioni diverse. Non sostituire un segno legittimo solo per applicare
+il test.
 
 **Quando preferirlo**
 

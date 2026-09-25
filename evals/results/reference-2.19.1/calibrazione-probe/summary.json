@@ -1,0 +1,20 @@
+{
+  "expected": 20,
+  "completed": 20,
+  "failed": [
+    {
+      "id": "glossa-separata",
+      "run": 1,
+      "mismatches": [
+        "pass: atteso true, ottenuto null",
+        "textOk: atteso true, ottenuto null",
+        "responseOk: atteso true, ottenuto null",
+        "invented: atteso 0, ottenuto null"
+      ],
+      "modelMismatch": false
+    }
+  ],
+  "costUsd": 0.7484,
+  "aborted": false,
+  "ok": false
+}

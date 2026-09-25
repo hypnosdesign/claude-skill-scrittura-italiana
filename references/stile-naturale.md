@@ -4,6 +4,11 @@ Riferimento per far suonare un testo italiano **naturale, umano, con una voce**.
 Adattato dalla guida "Signs of AI writing" (WikiProject AI Cleanup), riscritta per
 l'italiano. Complementare a `punteggiatura.md`: lì la *correttezza*, qui la *naturalezza*.
 
+**In revisione, ogni esempio è subordinato alla conservazione.** Puoi rendere espliciti
+solo dettagli e relazioni disponibili nel testo o nel brief. Le indicazioni di taglio
+non autorizzano a eliminare fatti, cautele, attribuzioni o giudizi dell'autore: quando
+una formulazione dubbia porta contenuto, conserva e segnala il problema separatamente.
+
 > L'italiano AI-generato è spesso peggiore dell'inglese: eredita strutture inglesi
 > tradotte male (gerundi, trattini lunghi, capitalizzazione dei titoli, virgolette curve)
 > e ci aggiunge i tic dell'italiano accademico-giornalistico (avverbi in *-mente*,
@@ -120,8 +125,9 @@ incastonato/adagiato, nel cuore di, all'incrocio tra, rinomato, mozzafiato, sugg
 incantevole, pittoresco, gioiello, perla, scrigno.* → Vedi §33.
 
 **5. Attribuzioni vaghe.** *osservatori del settore, secondo molti studiosi, gli esperti
-ritengono, fonti autorevoli, si dice/si ritiene* (senza soggetto). → Cita la fonte o togli
-l'affermazione.
+ritengono, fonti autorevoli, si dice/si ritiene* (senza soggetto). → Segnala l'attribuzione
+da precisare. In revisione non inventare la fonte e non eliminare l'affermazione senza
+autorizzazione; applica la guardia fattuale di SKILL.md.
 
 **6. Sezioni "Sfide e prospettive future".** *Nonostante alcune sfide… Nonostante le
 difficoltà… il futuro appare…* → Chiusura formulaica con apertura ottimistica vuota.
@@ -168,16 +174,16 @@ dialogo; delicato equilibrio, sapiente miscela.* → Il problema è la **densit�
 si rivela, si erge a, assurge a, costituisce, rappresenta, risulta essere, appare come;
 si tratta di* (in apertura assoluta: *«Si tratta di un fenomeno complesso»* → *«È un
 fenomeno complesso»*; legittimo quando riprende un referente già posto: *«non si sa di che
-cosa si tratti»*). → Usa **è / sono / ha**.
+cosa si tratti»*). → Usa **è / sono / ha** solo a parità di significato. *Appare*,
+*si rivela* e *rappresenta* possono esprimere apparenza, scoperta o rappresentazione reali:
+non trasformarli automaticamente in un'asserzione certa.
 
-**9. Parallelismi negativi — la famiglia del tic bipolare.** *"Non solo… ma anche", "Non
-si tratta tanto di X quanto di Y"*; code tipo *"nessuna ambiguità", "niente sprechi"*. →
-Afferma in positivo. Caso a parte, **il più diffuso e il più sfuggente**, è la **definizione
-bipolare** *«non è X, ma è Y»*: l'AI definisce una cosa dicendo prima cosa *non* è, poi
-cosa è. Sembra precisione, è un tic. Su un saggio di 40.000 parole se ne contano facilmente
-50-70: una grep ingenua sulla forma letterale ne trova zero, perché il pattern vive in
-**almeno cinque varianti morfosintattiche** che vanno tutte censite prima di dichiarare
-"pulito" un testo.
+**9. Parallelismi negativi — distinguere il tic dal contrasto informativo.** *«Non solo…
+ma anche», «non si tratta tanto di X quanto di Y», «non è X, ma è Y»* possono essere
+formule ripetitive oppure distinzioni necessarie. **La forma non basta per decidere.**
+Prima verifica che cosa andrebbe perso eliminando la negazione; solo dopo valuta ritmo
+e densità. Anche *«nessuna ambiguità»* e *«niente sprechi»* possono esprimere impegni
+precisi: non cancellarli per la sola forma negativa.
 
 **Le cinque varianti del bipolare** (da cercare tutte, non solo la prima):
 
@@ -189,8 +195,7 @@ cosa è. Sembra precisione, è un tic. Su un saggio di 40.000 parole se ne conta
   esterne»*.
 - (c) **Senza secondo "è" dopo "ma":** *«non è X ma Y»* dove Y non comincia con *è*. Es.
   *«non è il caso controllato dall'autore, ma un organismo vivente»*.
-- (d) **Bipolare con i due punti — statisticamente il più frequente nei testi accademici
-  accurati:** *«non è X: è Y»*. Es. *«non è un guasto da riparare: è la forma ordinaria
+- (d) **Bipolare con i due punti:** *«non è X: è Y»*. Es. *«non è un guasto da riparare: è la forma ordinaria
   del linguaggio»*; *«non è metafora: è la condizione strutturale del nostro abitare le
   parole»*. È la variante meno intuitiva da riconoscere — la grep su *"non è… ma"* non
   la prende — ed è quella che sopravvive a tutte le passate.
@@ -198,44 +203,40 @@ cosa è. Sembra precisione, è un tic. Su un saggio di 40.000 parole se ne conta
   Merleau-Ponty 1964 è la simpoiesi di Haraway 2016 in un altro lessico, e non è la
   fenomenologia umanistica»*.
 
-**Riscrittura: assertiva pura, non per inversione.** L'errore tipico è "correggere"
-*«non è X, ma è Y»* in *«è Y, non X»*: non è una correzione, è la **variante (a)** della
-stessa famiglia — la bipolarità resta, solo più compatta. La riscrittura corretta
-**elimina del tutto il polo negativo**. Il tic attraversa i generi: ecco quattro esempi
-da generi diversi, per mostrare che non è un problema solo di prosa accademica.
-
-| genere | ✗ pseudo-correzione (inversione) | ✓ assertiva pura |
-|---|---|---|
-| saggistica filosofica | *non è metafora, ma è la condizione strutturale* → *è la condizione strutturale, non una metafora* | *è la condizione strutturale del nostro abitare le parole* |
-| accademico (forma con due punti) | *non è X: è Y* → *è Y, non X* | *è Y* (e basta) |
-| giornalismo | *la protesta non è una rivolta, ma una richiesta di ascolto* → *la protesta è una richiesta di ascolto, non una rivolta* | *la protesta è una richiesta di ascolto* |
-| copy/professionale | *il nostro servizio non è solo un'assistenza tecnica: è un partner di crescita* → *il nostro servizio è un partner di crescita, non solo assistenza tecnica* | *il nostro servizio accompagna la tua crescita* |
-
-Se il contrasto con la lettura comune porta informazione, **non riscriverlo soltanto per
-cancellare la forma bipolare**: preservare l'originale è spesso la scelta più fedele. Se la
-frase va alleggerita per un'altra ragione, usa una resa non speculare solo dopo aver verificato
-che mantenga la stessa esclusione; non trasformare automaticamente *«non X: Y»* in *«Y, non X»*.
-
-**Quando il polo negativo va PRESERVATO.** **Taglia (assertiva pura, non per inversione) quando
-il polo negativo è *chiaramente* ornamentale o ridondante** — è la mossa giusta nella grande
-maggioranza dei casi, copy in testa. **Ma nel dubbio, preserva:** la fedeltà al significato viene
-prima del numero di tic rimossi (è il contratto di conservazione). Preserva quando il polo
-negativo porta **informazione non ricostruibile dal positivo**.
+**Decidi sul significato, poi sulla forma.** Preserva il polo negativo se porta
+informazione non ricostruibile dal positivo o se resta un dubbio. Se è davvero
+ridondante e il livello di revisione ammette ritocchi stilistici, puoi eliminarlo.
+Invertire *«non X, ma Y»* in *«Y, non X»* non elimina la costruzione: fallo solo se
+migliora davvero la frase e ne conserva significato e rilievo, non per simulare pulizia.
 
 > **Il test (caso 6): la negazione esclude una categoria informativa?** Non è lessicale ma
 > **di implicazione nel contesto**: *nel dominio del testo, «è Y» implica già logicamente
 > «non è X»?*
-> - **Sì, lo implica → taglia** (ridondante). Archetipi:
+> - **Sì, lo implica → puoi tagliare** se non perdi enfasi voluta o una funzione didattica:
 >   - **Antonimi netti** sullo stesso asse: *«è gratuito, non a pagamento»* → *«gratuito»* dice
 >     già *«non a pagamento»*.
->   - **Elevazione del copy *«non è un semplice X, ma Y»*** → *«soluzione completa»* implica già
->     *«non semplice»*. **Taglia in assertiva pura** (*«è una soluzione gestionale completa»*) —
->     non sostituire solo *ma* coi due punti, che lascia in piedi l'elevazione.
+>   - **Copy *«non è un semplice X, ma Y»***: non è automaticamente ridondante. Una
+>     *soluzione completa* può anche essere semplice; Y non autorizza a cancellare X,
+>     funzioni o impegni. Togli la cornice promozionale solo conservando quanto afferma:
+>     *«Non è solo assistenza tecnica: comprende anche formazione»* → *«Comprende
+>     assistenza tecnica e formazione»*, non soltanto *«offre formazione»*.
 >   - ⚠ **Falsi antonimi:** *modulare/monolitica* sembrano opposti, ma un *modular monolith* è
 >     insieme modulare e monolitico: l'implicazione dipende dal dominio. Se è incerta, preserva.
+>   - **Non confondere piani diversi.** Ruolo e modalità non sono intercambiabili:
+>     *«non siamo intermediari: vendiamo direttamente»* afferma anche che cosa l'azienda
+>     non è. Conserva quel ruolo escluso, non ridurlo al canale di vendita o all'assenza
+>     di altri intermediari. Un nesso plausibile nel linguaggio commerciale non basta
+>     a provare l'implicazione. Lo stesso vale per *«non siamo rivenditori; vendiamo online»*.
 > - **No, o sei incerto → preserva.** Categorie distinte, X = lettura di default del lettore
 >   (*«non è una scelta tecnica: è organizzativa»* — chi adotta legge *tecnica*, e *«è
 >   organizzativa»* non recupera l'avvertimento), o dubbio genuino: **conserva l'esclusione**.
+
+| Testo | Decisione fedele | Motivo |
+|---|---|---|
+| *La protesta non è una rivolta, ma una richiesta di ascolto.* | Preserva entrambi i poli. | Una richiesta di ascolto non esclude una rivolta. |
+| *Non è una metafora: è una condizione strutturale.* | Preserva l'esclusione della metafora. | Il secondo polo non recupera il primo. |
+| *Il piano è gratuito, non a pagamento.* | *Il piano è gratuito.* | Sullo stesso piano tariffario il secondo polo ripete il primo, salvo enfasi richiesta. |
+| *Non è solo assistenza tecnica: comprende anche formazione.* | *Comprende assistenza tecnica e formazione.* | Si semplifica la forma mantenendo entrambe le prestazioni. |
 
 Preserva il polo negativo in questi casi:
 
@@ -259,8 +260,8 @@ Preserva il polo negativo in questi casi:
    segno né la cecità reciproca della triade, ma la marginalità del vegetale nello
    sguardo umano»*.
 6. **Esclusione di categoria / lettura di default smentita** (il caso del test qui sopra).
-   Quando *«è Y»* non implica *«non è X»* — X e Y non sono antonimi né elevazione — e X è la
-   lettura che il lettore farebbe per default, il polo negativo porta informazione:
+   Quando *«è Y»* non implica *«non è X»*, anche fuori dalla lettura di default del lettore,
+   il polo negativo porta informazione:
    **preservalo, di norma nella forma originale**. *«È organizzativa, non tecnica»* conserva
    il contenuto ma fabbrica per inversione la variante (a); *«più che tecnica»* è peggio,
    perché ammette il tecnico come secondario. Nessuna delle due è una correzione necessaria.
@@ -297,13 +298,15 @@ che **tutti e quattro** i giri danno zero occorrenze non motivate.
 
 5. **Censimento per file/capitolo, in batch.** Presenta tutte le occorrenze di un capitolo
    insieme — non una per una — così l'utente vede la densità e decide in blocco.
-6. **Per ogni occorrenza, 2-3 opzioni:** (a) preserva motivatamente — citando uno dei 6
-   casi di preservazione; (b) riscrivi assertiva pura; (c) compromesso (clausola a
-   margine). **Decide l'utente**; tu applichi.
+6. **Consegna secondo la richiesta.** Se è richiesta una diagnosi, motiva i casi dubbi;
+   se è autorizzata la revisione, applica le modifiche fedeli senza chiedere conferma
+   per ogni occorrenza. Proponi alternative solo quando cambia una scelta sostanziale.
+   Non offrire come alternativa una versione che perde un'esclusione informativa.
 
 **Spia di densità (euristica indicativa, da tarare sul tipo di testo):** se in un capitolo
 di 3.000-5.000 parole ne conti più di 4-5, il tic sta colonizzando la voce, non
-punteggiandola — interviene anche se ogni singola occorrenza è motivabile in astratto. Non
+punteggiandola — verifica nel contesto, senza sacrificare negazioni informative per
+abbassare il conteggio. Non
 è una misura empirica: è una soglia di lavoro che si alza per la saggistica filosofica e
 si abbassa per il copy.
 
@@ -462,7 +465,8 @@ sulla base delle informazioni disponibili, sebbene i dettagli siano limitati.* �
 i dati mostrino"* → *"I dati mostrano"*.
 
 **31. Hedging eccessivo.** *"Si potrebbe potenzialmente forse argomentare che…"* →
-**Regola:** un solo marcatore di incertezza per affermazione (*potrebbe*, *forse*, *sembra*).
+**Regola:** riduci i marcatori ridondanti, non il grado di incertezza. *Potrebbe*, *forse*
+e *sembra* non sono sempre intercambiabili; quantità ed effetto vanno valutati nel contesto.
 
 **32. Conclusioni generiche positive.** *il futuro si prospetta brillante, tempi
 entusiasmanti ci attendono, una nuova era, un orizzonte di possibilità, un viaggio ricco
@@ -531,7 +535,8 @@ Appesantiscono e non aggiungono nulla. Linguaggio diretto. (Repertorio in
 
 **40. Less is more — togli i parassiti.** Regola di Orwell: *se puoi togliere una parola,
 toglila*.
-- **aggettivi/avverbi inutili:** *un seno armonioso e prominente* → *un bel seno*; *via i
+- **aggettivi/avverbi inutili:** *una risposta del tutto completamente inutile* → *una
+  risposta inutile* (se non perdi enfasi voluta); *via i
   "beastly adjectives"* (Dahl). Scuoti il testo e fa' cadere gli avverbi superflui (Simenon).
 - **sostantivo-parassita generico:** *descrizioni di carattere realistico* → *descrizioni
   realistiche*; *perfetto in termini di clima* → *ha un clima perfetto*; *il processo di
@@ -550,20 +555,21 @@ l'anima», «la bellezza distrutta», «cosa vedono quegli occhi?»*. Più la ma
 commenti emotivi indebiti nel testo oggettivo (*purtroppo, per fortuna*). → Vedi anche
 `retorica-efficacia.md` §6 (buona vs cattiva retorica).
 
-**42. Individuazione — concreto batte generico.** Non *animali* ma *pinguini*; non *una
-staccionata* ma *una staccionata color avio*. Dai un nome alle cose, soprattutto se un nome ce
-l'hanno. Bandisci le **informazioni vuote**: *«ha influenzato Camus e altri autori del
-Novecento»* (chi? quali?) → di' *chi/cosa/quando*, o non dire niente. (Collega §2, §5.) Il dettaglio
+**42. Individuazione — concreto batte generico, se il dettaglio è disponibile.** Puoi scrivere
+*pinguini* al posto di *animali* o precisare il colore di una staccionata solo se il testo
+o il brief lo consentono. *«Ha influenzato Camus e altri autori del Novecento»* lascia una
+domanda (quali altri?): segnalala, senza inventare nomi né cancellare l'influenza sugli
+altri autori. (Collega §2, §5.) Il dettaglio
 concreto nasce dall'**interesse vero**, non dalla regola: «a volte lo scrittore deve restare a bocca
 aperta davanti a qualcosa — un tramonto o una scarpa vecchia» (Carver). Un dettaglio che non ha
 sorpreso te, raramente sorprenderà il lettore: se è concreto ma neutro, l'hai inserito, non visto.
 
-**43. Non sussurrare (falsa modestia citazionale).** Togli le perifrasi che attenuano il
-giudizio o lo scaricano su "autorità" vaghe: *Dante può essere considerato il più grande poeta
-italiano* → *Dante è il più grande poeta italiano*; *è ritenuto da più parti uno dei maggiori* →
-*è stato uno dei maggiori*. Se è il tuo giudizio (e l'hanno chiesto a te), prenditelo. Diverso
-dall'hedging §31: lì togli l'incertezza accumulata, qui la timidezza che si nasconde dietro gli
-altri.
+**43. Giudizio esplicito e attribuzione.** Quando l'utente chiede un tuo giudizio,
+formulalo senza attribuirlo ad autorità vaghe. In revisione, invece, *«Dante può essere
+considerato il più grande poeta italiano»* non equivale a *«Dante è il più grande poeta
+italiano»*: il secondo enunciato è più forte. Analogamente, *«è ritenuto uno dei maggiori»*
+riferisce un giudizio altrui, non lo afferma direttamente. Preserva modalità e attribuzione;
+se sono vaghe, segnala il problema in nota invece di decidere al posto dell'autore.
 
 ---
 
@@ -581,12 +587,12 @@ moderno **ripeti il nome**. → Completa la sezione F (antilingua).
 geografica/settoriale/temporale: *Nel mondo della gastronomia… / Nell'era digitale… / Nel
 panorama attuale…*. Parole-spia in **prima** posizione: *nel mondo di, nell'industria, nel
 panorama, nell'era di, in questo contesto*. → Entra subito nel soggetto. ✗ *Nel mondo degli
-accessori tech, gli ombrelli smart rivoluzionano il mercato.* ✓ *L'ombrello di BrellaCiao ha un
-GPS: lo perdi di rado.*
+accessori tech, l'ombrello BrellaCiao ha un GPS.* ✓ *L'ombrello BrellaCiao ha un GPS.*
 
 **46. Domanda retorica / "Se… allora" d'apertura.** Incipit pubblicitari abusati: *Stanchi della
 solita pizza? / Se ami la buona cucina, non perderti…*. → Entra con un fatto o un dato. ✗
-*Stanchi della solita pizza?* ✓ *Da Bella Napoli l'impasto lievita 72 ore.*
+*Stanchi della solita pizza? Da Bella Napoli l'impasto lievita 72 ore.* ✓ *Da Bella Napoli
+l'impasto lievita 72 ore.* Il dato viene dall'input, non dalla necessità di essere concreti.
 
 **47. Capoversi con attacco omogeneo.** Tutti i paragrafi iniziano con la stessa struttura (tutti
 *Il/La…* + sintagma, o tutti con un avverbio). Letto ad alta voce è un metro meccanico. → Varia
@@ -594,27 +600,34 @@ gli attacchi: soggetto, complemento anteposto, frase breve nominale, subordinata
 
 **48. Sinestesie decorative (copy gastro-lifestyle).** *sinfonia di sapori, danza sul palato,
 tripudio di gusti, opera d'arte commestibile, racconto di ingredienti.* → Descrivi in modo diretto,
-o usa **una** metafora, non tre. ✗ *un cucchiaio che racconta una sinfonia di sapori* ✓ *un gusto
-per cucchiaio: pistacchio, fragola, cioccolato amaro.*
+o usa **una** metafora, non tre. ✗ *una sinfonia di pistacchio, fragola e cioccolato amaro*
+✓ *pistacchio, fragola e cioccolato amaro.* Non inventare ingredienti per sostituire una
+metafora generica.
 
 **49. Parole vuote del copy professionale** ("potrebbe dirlo chiunque?"). *prodotti di qualità,
 materie prime d'eccellenza, leader del settore, soluzioni innovative, al servizio del cliente.*
 Test: la frase starebbe sul sito di cento concorrenti senza cambiare? Allora è vuota. → Un numero,
-un dato, una caratteristica non condivisa. ✗ *Capi di alta qualità con materie prime d'eccellenza.*
-✓ *Maglioni in cashmere di alpaca: non infeltriscono, spediti in 5 giorni.* (Collega §33, §42.)
+un dato, una caratteristica disponibile nel brief. ✗ *Capi di alta qualità con materie prime
+d'eccellenza: maglioni in lana, spediti in 5 giorni.* ✓ *Maglioni in lana, spediti in 5 giorni.*
+Se il dettaglio manca, chiedilo o proponi un segnaposto; non inventare materiali o prestazioni.
+(Collega §33, §42.)
 
 **50. Testo "a mosaico".** Frasi corrette ma slegate: ognuna vera, nessuna connessa per
 causa/conseguenza/concessione. Sintomo: puoi riordinarle senza che il senso cambi. ✗ *La
 situazione è complessa. I dati mostrano un calo. Le aspettative erano alte. Bisogna riflettere.*
-✓ *I dati calano nonostante le aspettative alte: la situazione è più complessa del previsto. Vale
-la pena capire perché.* → Ogni frase risponda a «perché viene *qui*, dopo la precedente?». (Guida
+✓ *Le aspettative erano alte, ma i dati mostrano un calo. La situazione è complessa: bisogna
+riflettere.* Il contrasto è già leggibile nell'input; non aggiungere *«più complessa del
+previsto»*, che presupporrebbe una previsione assente. → Ogni frase risponda a «perché viene
+*qui*, dopo la precedente?». (Guida
 positiva in `coesione-e-connettivi.md`.)
 
 **51. Virgolettati e citazioni inventati.** L'AI produce virgolettati verosimili attribuiti a
 persone reali, o a personaggi generici spacciati per veri: *«Come dice Piero, uno degli ultimi
 pescatori…»* (Piero non esiste); *«Come disse Einstein, "…"»* (citazione mai pronunciata). →
-Verifica ogni virgolettato attribuito a una persona reale; se è fittizio, dichiaralo. Mai spacciare
-citazioni AI per documentazione. (Collega §5 e la guardia sui fatti in SKILL.md.)
+Non aggiungere virgolettati non verificati attribuiti a persone reali. Per quelli già
+presenti nel testo, verifica solo se richiesto e se hai gli strumenti; altrimenti conserva
+e segnala il dubbio in nota. Mai spacciare citazioni AI per documentazione. (Collega §5 e
+la guardia sui fatti in SKILL.md.)
 
 **52. Metafore miste.** Due immagini incompatibili nella stessa frase → effetto comico
 involontario. ✗ *la morsa del freddo incombeva sulla città* (la morsa stringe, non incombe); ✗
@@ -644,7 +657,7 @@ registro e persona all'inizio e tienili; in rilettura cerca *tu/ti/tuo* e *voi/v
   frequentante il corso* → *…che frequenta il corso*.
 - **ablativo assoluto / participio "sciolto"** (con soggetto diverso dalla reggente): *Tenuto conto
   della situazione, si procederà* → *Poiché la situazione…, si procederà*; *Esaminati i documenti, la
-  pratica è respinta* → *Dopo aver esaminato i documenti…*.
+  pratica è respinta* → *Dopo che i documenti sono stati esaminati, la pratica è respinta*.
 → Fuori dal linguaggio giuridico stretto, riscrivi con una subordinata esplicita (relativa, causale,
 temporale).
 
@@ -674,8 +687,8 @@ genere: *«X + verbo-ponte + da Y direzione/angolatura/piano»*. Verbi-ponte ric
 *arriva, porta, aggiunge, conferma, lavora, opera, si muove, riprende, prolunga*.
 
 ✗ *Merleau-Ponty arriva in soccorso da una direzione filologicamente diversa ma
-argomentativamente identica.* ✓ *Merleau-Ponty parte da una filologia diversa e arriva alla
-stessa conclusione.* Oppure: sopprimere del tutto la transizione, se il paragrafo nuovo
+argomentativamente identica.* ✓ *Merleau-Ponty argomenta nello stesso modo, partendo da
+una filologia diversa.* Oppure: sopprimere del tutto la transizione, se il paragrafo nuovo
 parla da sé. → **Differenziazione:** non è §35 (segnaletica al lettore, *«vediamo
 insieme»*); non è §11 (variazione elegante, sinonimi per lo stesso oggetto): qui la
 formula-tipo si ripete per *oggetti diversi*, gli autori.
@@ -688,8 +701,9 @@ manca.
 
 ✗ *Il fenotipo nuovo è, in questo senso preciso, un condividuo temporale.* ✓ *Il fenotipo
 nuovo è un condividuo temporale.* — La glossa va tolta. Se la precisazione serve davvero,
-sostituiscila con la specificazione concreta che la glossa promette ma non dà: *«in senso
-tecnico»* → *«in senso biologico»* / *«secondo Lenski»*. → **Differenziazione:** non è §31
+sostituiscila con una specificazione già disponibile nel contesto; se manca, chiedila.
+Non trasformare *«in senso tecnico»* in *«secondo Lenski»* senza un'attribuzione fornita
+o verificata. → **Differenziazione:** non è §31
 (hedging, *«si potrebbe forse argomentare che»*), che attenua: qui la mossa è
 *finto-rafforzativa*. Non è §34 (*«la vera domanda è»*), che rivendica autorità sul
 lettore: qui si rivendica precisione filologica.
@@ -701,10 +715,9 @@ postura, taglio, registro*. Singolarmente sono parole legittime, e la saggistica
 le usa. Il tic AI è la **densità**: in una pagina compaiono cinque o sei di questi
 nomi-ombrello, uno per concetto.
 
-✗ *La mossa wildiana, la cifra del progetto, la posta concettuale del paragrafo, l'asse
-identitario del posizionamento.* ✓ *La distinzione wildiana fra real world e world of art;
-ciò che distingue The Blind Gardeners; il punto del paragrafo; come il progetto si
-colloca.* — Nomina il referente concreto. **Spia di densità:** se in un capoverso di 200
+✗ *La posta concettuale del paragrafo è la distinzione fra percezione e memoria.*
+✓ *Il paragrafo distingue percezione e memoria.* — Nomina il referente concreto già
+presente, non inventare una tesi per riempire un nome-ombrello. **Spia di densità:** se in un capoverso di 200
 parole ci sono 3+ nomi-ombrello di questa famiglia, sta lavorando il tic. →
 **Differenziazione:** non è §16 (astratti generici amministrativi, *processo, dimensione,
 prospettiva*); non è §39 (aziendalese, *criticità, attenzionare*): qui il registro è
@@ -716,8 +729,8 @@ accademica tradizionale (latino *praesens*, *infra*, *supra*); in piccola dose �
 legittimo, ma l'AI ne abusa.
 
 ✗ *Il Merleau-Ponty di* Il visibile e l'invisibile, *quello che il presente paragrafo
-adotta, è già un altro autore.* ✓ *Il Merleau-Ponty di* Il visibile e l'invisibile, *che
-adottiamo qui, è già un altro autore.* — Nella maggioranza dei casi si toglie senza
+adotta, è già un altro autore.* ✓ *Il Merleau-Ponty di* Il visibile e l'invisibile, *adottato
+qui, è già un altro autore.* — Nella maggioranza dei casi si toglie senza
 perdita. Quando l'autoriferimento è davvero strutturale (annuncio dell'organizzazione del
 libro), riformula in voce attiva: *«nel paragrafo successivo articoliamo»*. →
 **Differenziazione:** non è §35 (segnaletica al lettore, *«approfondiamo»*): qui il testo
@@ -731,8 +744,9 @@ sintesi che il lettore vedrà comunque: ridondanza strutturale.
 
 ✗ *Le quattro voci convergono in un'unica conclusione, che il Liber pone alla porta della
 propria sintesi: la non-condivisione di codice è la condizione operativa del dispositivo.*
-✓ *La non-condivisione di codice è la condizione operativa del dispositivo.* — Togli
-l'annuncio, lascia la sintesi sola. Se serve davvero un'apertura, un connettivo asciutto
+✓ *Le quattro voci concordano: la non-condivisione di codice è la condizione operativa
+del dispositivo.* — Togli l'annuncio, conserva la convergenza e il numero se sono
+informativi. Se serve davvero un'apertura, un connettivo asciutto
 (*«In sintesi:», «Insomma:», «Detto altrimenti:»*), non un auto-annuncio gonfiato. →
 **Differenziazione:** non è §35 (segnaletica al lettore in imperativo, *«vediamo
 insieme»*): qui è *constatativa-dichiarativa*, in terza persona. Non è §36 (header
@@ -753,7 +767,8 @@ distinzione invece di lasciar parlare l'analogia: *«L'implicazione è esatta; L
 è precisa; La conseguenza è duplice; La distinzione è netta; Il parallelo è puntuale»*.
 
 ✗ *La somiglianza con il dispositivo BG è precisa: entrambi mettono in scena
-l'inaccessibilità del segno.* ✓ *Entrambi mettono in scena l'inaccessibilità del segno.* —
+l'inaccessibilità del segno.* ✓ *Il punto comune con il dispositivo BG è l'inaccessibilità
+del segno, che entrambi mettono in scena.* —
 Se l'analogia è davvero precisa, parla da sé; se non lo è, dichiararlo non la rende tale.
 → **Differenziazione:** non è §7 (vocabolario AI generico, *cruciale, fondamentale*): qui
 gli aggettivi sono in posizione *metalinguistica-autovalutativa*, non descrittiva.
@@ -764,9 +779,10 @@ Varianti: *«Per Y l'implicazione è…», «Per il nostro caso la conseguenza �
 a Y, il concetto rende…»*.
 
 ✗ *La pertinenza di queste figure per The Blind Gardeners è strutturale. La triade di
-emergenza è simpoietica nel senso di Dempster e Haraway.* ✓ *La triade di emergenza di The
-Blind Gardeners è simpoietica nel senso di Dempster e Haraway.* — Entra direttamente
-nell'applicazione, salta l'annuncio. → **Differenziazione:** parente di §62 (meta-frase
+emergenza è simpoietica nel senso di Dempster e Haraway.* ✓ *Queste figure sono strutturali
+per The Blind Gardeners: la triade di emergenza è simpoietica nel senso di Dempster e
+Haraway.* — Riduci la cornice senza cancellare il giudizio di rilevanza strutturale.
+→ **Differenziazione:** parente di §62 (meta-frase
 che annuncia), ma qui l'annuncio non riguarda *la sintesi* del paragrafo che chiude, bensì
 *l'aggancio* del paragrafo che si apre.
 
@@ -885,8 +901,8 @@ niente, il bilanciamento come metro ritmico. → Rileggi i soli attacchi dei cap
 §47): se in maggioranza concedono-e-ribaltano, sciogli — afferma diretto dove non c'è vera
 obiezione, tieni la concessiva dove l'obiezione esiste ed è nominata.
 ✗ *Certo, i dati sono pochi. Ma la tendenza c'è. È vero che il campione è piccolo. Tuttavia
-i risultati convergono.* ✓ *I dati sono pochi ma convergenti: la tendenza c'è, e un campione
-più ampio potrà smentirla o confermarla.* → **Differenziazione:** non è §68 (formula di
+i risultati convergono.* ✓ *I dati sono pochi e il campione è piccolo, ma i risultati
+convergono: la tendenza c'è.* → **Differenziazione:** non è §68 (formula di
 bilanciamento nella singola frase): qui il tic è la **struttura ripetuta** dei capoversi.
 
 **77. Lo staccato pubblicitario a frammenti.** Frammenti nominali in raffica col punto:
@@ -895,8 +911,9 @@ per enfasi è legittimo (la frase corta colpisce: `retorica-efficacia.md` §4, e
 `punteggiatura.md` → Punto); il tic è la **raffica ritmica**, spesso in triade (§10), che
 simula incisività senza predicare nulla. → Ricomponi con un verbo, o tieni **un** solo
 frammento — quello che si guadagna l'enfasi.
-✗ *Zero configurazione. Massima resa. Nessun pensiero.* ✓ *Si installa senza configurazione
-e rende da subito.*
+✗ *Consegna al piano. Zero plastica. Disdetta senza penali.* ✓ *Consegna al piano senza
+plastica, con disdetta senza penali.* Non trasformare uno slogan in prestazioni o tempi
+non dichiarati: *«massima resa»* non significa *«rende da subito»*.
 
 **78. Pseudo-significatività: *non a caso*.** *Non a caso, non è un caso che, guarda caso*:
 dichiarano significativo un accostamento senza argomentarlo — il nesso sembra dimostrato
@@ -906,8 +923,9 @@ senza promettere ciò che il testo non mantiene. **Preserva** quando il testo ar
 davvero il nesso subito dopo: lì è un annuncio, non un trucco. → **Differenziazione:** non
 è §34 (autorità sul lettore: *la vera domanda è*) né §59 (pseudo-precisione): qui si
 rivendica la **significatività di una coincidenza**.
-✗ *Non a caso, l'azienda è nata a Torino.* (e non se ne riparla) ✓ *L'azienda è nata a
-Torino, dove i due fondatori già lavoravano in un centro ricerche.*
+✗ *Non a caso, l'azienda è nata a Torino.* (e non se ne riparla) → Segnala il nesso non
+spiegato. Se è autorizzata la rimozione dell'enfasi non sostenuta: *L'azienda è nata a
+Torino.* Non aggiungere fondatori, impieghi o centri di ricerca per giustificare il nesso.
 
 **79. Il titolo bipartito seriale.** *«X: come Y sta cambiando Z»*, *«X: perché Y (e cosa
 significa per Z)»* su **ogni** titolo e sottotitolo. Il titolo coi due punti è legittimo e
@@ -923,8 +941,9 @@ di girare un triangolo…»* introduce un esempio guidato che lavora per il conc
 è la cornice **vuota** — l'invito a immaginare ciò che si poteva dire direttamente, il
 «mondo in cui» generico che il testo poi abbandona. → Se l'esempio guida, tienilo; se è un
 sipario, entra nel soggetto (parenti: §45 incipit di cornice, §46 domanda-amo).
-✗ *Immagina un mondo in cui i tuoi dati lavorano per te. NuvolaPro è…* ✓ *NuvolaPro
-incrocia i dati di vendita con il meteo: ordini scorte quando servono.*
+✗ *Immagina un mondo in cui i tuoi dati lavorano per te. NuvolaPro incrocia vendite e
+meteo per pianificare le scorte.* ✓ *NuvolaPro incrocia vendite e meteo per pianificare
+le scorte.* La funzione era già dichiarata, non è una promessa aggiunta dal revisore.
 
 ## Audit finale anti-AI (passaggio obbligato)
 
@@ -940,7 +959,8 @@ Non trasformare l'audit in metadiscorso nell'output. Verifica che il testo:
   *casa* non *abitazione*) e usi il verbo pieno al posto di "verbo vuoto + astratto";
 - non tenga un tono più alto del necessario (niente pathos, niente paroloni: un'ottava sotto);
 - rispetti le convenzioni tipografiche (vedi `punteggiatura.md`);
-- non abbia più di un avverbio in *-mente* né più di un gerundio in coda per paragrafo;
+- non accumuli avverbi o gerundi senza funzione; conserva quelli che portano informazione,
+  cautela o voce, senza applicare un limite numerico automatico;
 - non abbia periodi sopra 35-40 parole senza ragione.
 
 **Verifica di conservazione (la domanda gemella).** Prima di consegnare, confronta

@@ -5,6 +5,7 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 
 import { loadArm, main, normalizeMeta } from './stability.mjs'
+import { JUDGE_POLICY } from './run.mjs'
 
 function writeArm(root, name, {
   noSkill = false,
@@ -15,11 +16,12 @@ function writeArm(root, name, {
   manifestSha = 'm1',
   editorModel = 'fake-editor',
   judgeModel = 'fake-judge',
+  judgePolicy = JUDGE_POLICY,
 }) {
   const dir = join(root, name)
   mkdirSync(dir, { recursive: true })
   writeFileSync(join(dir, 'meta.json'), JSON.stringify({
-    editorModel, judgeModel, splitFilter: 'all',
+    editorModel, judgeModel, judgePolicy, splitFilter: 'all',
     skill: noSkill ? { noSkill: true } : { sha256: 'a'.repeat(64) },
     ids, runs,
     suite: { sha256: suiteSha },
@@ -37,8 +39,26 @@ function row(id, run, pass, {
   editorModelMismatch = false,
   judgeModelMismatch = false,
 } = {}) {
-  return { id, name, target: 'minimal', split: 'dev', run, editorModels, judgeModels, editorModelMismatch, judgeModelMismatch, verdict: { pass, invented } }
+  return { id, name, target: 'minimal', split: 'dev', run, editorModels, judgeModels, judgePolicy: JUDGE_POLICY, editorModelMismatch, judgeModelMismatch, verdict: { pass, invented } }
 }
+
+test('policy diverse, ignote o incoerenti nelle righe impediscono confronti e fusioni', () => {
+  const root = mkdtempSync(join(tmpdir(), 'scrittura-policy-test-'))
+  try {
+    const A = writeArm(root, 'A', { rows: [row(1, 1, true)] })
+    for (const [name, judgePolicy] of [['old', { sha256: 'old' }], ['unknown', null]]) {
+      const B = writeArm(root, name, { rows: [row(1, 1, true)], judgePolicy })
+      assert.match(main([A, B]), /confronto NON valido.*judge policy/)
+      assert.throws(() => loadArm([A, B]), /judge policy/)
+    }
+    const badRow = { ...row(1, 1, true), judgePolicy: { sha256: 'other' } }
+    const C = writeArm(root, 'row-mismatch', { rows: [badRow] })
+    assert.match(main([A, C]), /judge policy delle righe/)
+    assert.throws(() => loadArm([A, C]), /judge policy delle righe/)
+  } finally {
+    rmSync(root, { recursive: true, force: true })
+  }
+})
 
 test('normalizeMeta legge correttamente un rejudge', () => {
   const meta = normalizeMeta({

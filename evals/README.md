@@ -22,6 +22,11 @@ operativo, quindi è diventato un test di regressione — al suo posto l'held-ou
 (procedura operativa, mai osservata). Non usare gli output held-out per ritoccare le regole:
 servono a misurare la generalizzazione della versione candidata.
 
+I casi **47–57** sono regressioni dev dell'audit di settembre: asindeto, negazioni,
+prestazioni del copy, note editoriali, modalità, ruoli, apostrofo e dettagli non disponibili. Lo split
+held-out resta invariato. I criteri dei casi 13 e 40 conservano anche le funzioni
+espresse nel primo polo del copy: ridurre una cornice promozionale non autorizza omissioni.
+
 ## Provenienza della prova 2.12.0
 
 La prova di sviluppo descritta nel changelog confrontava:
@@ -64,11 +69,40 @@ Prima di avviare chiamate LLM, il runner valida suite e manifest. Ogni run conse
 - prompt, aspettative, output atteso, output dell'editor, policy di sistema, prompt e risposta grezza del giudice;
 - modello, versione CLI/Node e durata di editor e giudice;
 - verdetto validato in modalità fail-closed: tipi, cardinalità e conteggi non validi diventano
-  errori; `pass` viene ricalcolato dalle singole aspettative e da `invented === 0`.
+  errori; `pass` viene ricalcolato da `textOk`, `responseOk`, aspettative e `invented === 0`;
+- snapshot `judge-policy.json` e impronta SHA-256 del contratto, riportata anche in ogni riga.
+
+### Contratto del giudice (v2, dalla 2.19.1)
+
+`textOk` misura fedeltà e livello di intervento sul testo revisionato; `responseOk`
+misura correttezza delle note, consulenza e formato richiesto. Per una domanda di lingua
+o una diagnosi (`advice`), `textOk` è vero per convenzione: il lavoro è valutato in
+`responseOk` e nelle aspettative. Una nota corretta non è contenuto aggiunto al testo;
+una nota falsa o un fatto inventato continuano a far fallire la risposta. Il confronto
+considera anche fatti e relazioni forniti nel brief, non soltanto il brano da revisionare.
+
+La policy precedente contava ogni nuova affermazione nelle note come invenzione:
+i vecchi pass rate **non sono confrontabili** con quelli del nuovo contratto. `--resume`
+rifiuta run con policy diversa o assente; `stability.mjs` non calcola delta fra policy
+diverse, ignote o incoerenti fra metadati e righe. Rigiudica entrambi i bracci con la
+stessa policy per confrontare gli output storici. Non modificare gli artefatti originali.
+
+`calibrate-judge.mjs` giudica output già fissati in `judge-calibration.json`, senza
+chiamate all'editor e senza mostrare al giudice le etichette attese:
+
+```bash
+node evals/calibrate-judge.mjs --model claude-opus-5 --runs 2 --out /tmp/calibrazione-nuova
+```
+
+Il comando fallisce per discrepanze, errori o modello pinnato diverso da quello risolto.
+Conserva fixture, policy, prompt, risposte grezze, tempi e costi. I casi comprendono note
+corrette e false, glosse separate e inline, consulenza, omissioni, formato e asindeto.
+Le etichette sono state preparate durante l'audit: non sostituiscono la calibrazione
+con valutatori umani indipendenti. Non ritoccare le etichette per ottenere un esito verde.
 
 ```bash
 node evals/run.mjs --validate-only                   # schema + fingerprint, zero chiamate LLM
-node evals/run.mjs --split dev --label new-dev       # 27 casi di sviluppo
+node evals/run.mjs --split dev --label new-dev       # 51 casi di sviluppo
 node evals/run.mjs --split held-out --label new-ho   # 6 casi congelati
 node evals/run.mjs --ids 7,8,12,13 --runs 3          # sottoinsieme, 3 run/eval
 node evals/run.mjs --no-skill --label baseline-nuda  # braccio SENZA skill (valore aggiunto)
