@@ -18,7 +18,7 @@
 
 [![Sito](https://img.shields.io/badge/sito-scrittura--italiana-9c2a1f.svg)](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.19.1-blue.svg)
+![Version](https://img.shields.io/badge/version-2.19.2-blue.svg)
 
 🔗 **[Sito del progetto →](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)**
 
@@ -102,13 +102,19 @@ troncamento, non un'elisione → niente apostrofo. È anche un consulente, non s
 │   ├── narrativa.md              # raccontare: idea vs trama, personaggio, dialogo, scena, tensione, revisione
 │   └── revisione-e-proprieta.md  # la parola giusta (le mot juste), collaudo metafore, revisione a freddo
 └── evals/
-    ├── evals.json                # 40 casi dev + 6 held-out congelati
+    ├── evals.json                # 60 casi dev + 6 held-out congelati
     ├── manifest.json             # nomi, generi, livelli (exact/minimal/semantic/…) e split
     ├── run.mjs                   # runner content-addressed, verdetti fail-closed, braccio --no-skill
     ├── run.test.mjs              # test deterministici del runner
     ├── activation.mjs            # attivazione e instradamento misurati nel client reale
     ├── activation.test.mjs       # attribuzione candidata/personale/ambigua, zero LLM
     ├── activation-cases.json     # 20 positivi, 15 negativi, 8 casi di routing
+    ├── codex-client.mjs          # client GPT: modello confermato e letture controllate
+    ├── gpt-study.mjs             # calibrazione, regressioni e confronto dei nuclei con GPT
+    ├── gpt-study.test.mjs        # restrizioni del client, snapshot e split
+    ├── context-study.mjs         # preparazione e confronto dei nuclei con il client Claude
+    ├── context-study.test.mjs    # integrità, parità delle condizioni e ripresa delle prove
+    ├── experiments/              # protocolli e candidata compatta non adottata
     ├── blind-kit.mjs             # confronto umano cieco, build e scoring fail-closed
     ├── blind-kit.test.mjs        # parser CSV, parità modelli e minimo tre lettori
     ├── stability.mjs             # digest deterministico per run multipli (media, flip, delta)
@@ -133,6 +139,32 @@ condizioni, ma non isolano la lingua delle istruzioni in un confronto italiano/i
 in `references/` vengono letti quando servono. Questo README spiega il progetto a chi lo
 visita e non entra automaticamente nel contesto della skill. La sua prosa è stata rivista
 con gli stessi criteri editoriali, rispettando comandi, nomi di file, esempi e dati.
+
+## Stato e verifiche
+
+La **2.19.2** raccoglie le correzioni dell'audit di settembre e le modifiche delle
+versioni 2.19.0 e 2.19.1, finora presenti su `main` ma senza una release GitHub.
+Il pacchetto contiene il nucleo completo e i nove riferimenti: la variante compatta
+sperimentale **non è stata adottata**, perché nelle prove perdeva informazioni.
+Le [note della release](docs/releases/v2.19.2.md) riepilogano cosa cambia.
+
+La suite comprende **66 casi: 60 di sviluppo e 6 held-out**. I sei held-out restano
+fuori dalle prove usate per correggere la skill. I **48 test deterministici** verificano gli
+strumenti di valutazione e la sincronizzazione del sito; non misurano la qualità
+editoriale delle risposte.
+
+Le prove di settembre usano **GPT Terra 5.6, Sol 6 e Luna 6**, con ruoli e risultati
+distinti. Nel controllo finale mirato, Sol ottiene **18 risposte conformi su 22**
+secondo il giudice automatico. La rilettura dell'assistente conferma quattro output
+non conformi: formule generiche nel copy, strutture retoriche non sciolte nel saggio
+e un'affermazione attenuata da «limita» a «può limitare».
+
+L'audit resta aperto. Non c'è una valutazione umana indipendente e queste selezioni
+di casi di sviluppo non dimostrano superiorità generale, equivalenza fra varianti
+o preferenza dei lettori. L'uso dei riferimenti è stato misurato, non l'attivazione
+automatica della skill nei client GPT. Protocollo, output e limiti sono nel
+[resoconto GPT](evals/results/reference-2026-09-seguito/GPT.md); la coda dei rilievi è
+nel [seguito dell'audit](AUDIT-2026-09-SEGUITO.md).
 
 ## Documentazione
 
@@ -168,7 +200,8 @@ Riavvia/riapri Claude Code: la skill comparirà tra quelle disponibili.
 ### Claude Desktop / claude.ai
 
 1. Scarica il pacchetto-skill **`scrittura-italiana-<versione>.zip`** dalle
-   [Release](../../releases) (è l'asset allegato a ogni release — **non** il *Source code*:
+   [Release](https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/latest)
+   (è l'asset allegato alla release — **non** il *Source code*:
    quello impacchetta l'intero repo e l'uploader lo rifiuta con «exactly one SKILL.md»).
 2. Apri Claude → **Impostazioni → Capabilities (Funzionalità) → Skills**.
 3. **Carica** la cartella `scrittura-italiana` (o il suo `.zip`). I file in `references/`
@@ -250,9 +283,15 @@ La virgola cambia il significato della frase.
 
 ### 4. Tipografia: virgolette e trattino
 
-> ✗ `Ha detto "sì" subito - senza pensarci.`
-> ✓ `Ha detto «sì» subito, senza pensarci.` (caporali in editoria; la lineetta all'inglese
-> diventa una virgola)
+Le virgolette coerenti si conservano, anche in un testo destinato alla stampa:
+`Ha detto "sì" subito.` non richiede di passare ai caporali. Se chiedi esplicitamente
+di adottarli, diventa `Ha detto «sì» subito.`
+
+Un trattino usato per separare una frase può invece essere sostituito durante una
+revisione di stile, senza cambiare le virgolette:
+
+> Prima: `Ha detto "sì" subito - senza pensarci.`
+> Dopo: `Ha detto "sì" subito, senza pensarci.`
 
 ## Fonti e attribuzione
 
@@ -348,6 +387,21 @@ The skill instructions and examples are in Italian because they deal with Italia
 The README is documentation for readers; it is not automatically loaded when the skill
 activates. Our [evaluations](evals/README.md) do not isolate instruction language, so they
 do not establish that Italian instructions alone improve model output.
+
+### Release status and limits
+
+Version **2.19.2** includes the September audit fixes and the previously unreleased
+2.19.0 and 2.19.1 changes. The experimental compact variant is not included: it lost
+information in the comparison. Download the installable ZIP from the
+[latest release](https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/latest).
+
+The suite has **60 development cases and 6 held-out cases**. Its 48 deterministic
+tests check the evaluation tools and site synchronization, not writing quality.
+The final targeted Sol check returned 18/22 automatic passes; four outputs remain
+non-compliant after the assistant's review. Tests also used Terra and Luna in
+separate roles. There were no independent human readers, and the results do not
+establish general superiority or reader preference. The audit remains open; see
+the [GPT report](evals/results/reference-2026-09-seguito/GPT.md).
 
 ### Sources & license
 

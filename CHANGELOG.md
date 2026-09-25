@@ -5,7 +5,10 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
-## In lavorazione — seguito dell'audit di settembre
+## [2.19.2] — 2026-09-25
+
+Seguito dell'audit di settembre. Questa release GitHub include anche le modifiche
+delle versioni 2.19.0 e 2.19.1, finora disponibili soltanto su `main`.
 
 - Revisione della documentazione: applicare alla prosa il livello richiesto, proteggendo
   codice, dati, vincoli e ordine operativo. Nessun markup aggiunto nei controlli minimi.
@@ -23,11 +26,18 @@ il [Versionamento Semantico](https://semver.org/lang/it/).
   esperienze; precisata la nota di consegna per le uniformazioni editoriali fra estratti.
 - Precisata la provenienza incompleta della prova A/B 2.19.0: la parità osservata non prova
   equivalenza o non inferiorità e i conteggi storici non sono un benchmark verificabile.
+- README allineato ai 60 casi dev e 6 held-out, agli strumenti GPT e ai limiti delle
+  prove. Corretto l'esempio che suggeriva di convertire virgolette già coerenti.
+- Versione allineata in skill, badge e sito; pacchetto installabile con il nucleo completo
+  e i nove riferimenti. Le istruzioni sono quelle del commit `13eb1ea`: cambia soltanto
+  il numero di versione nel frontmatter, senza nuovi interventi editoriali sulla skill.
 
 Stato e verifiche nel [seguito dell'audit](AUDIT-2026-09-SEGUITO.md). I controlli locali
 sono superati; le prove GPT sono terminate, con rilievi comportamentali ancora aperti.
 La candidata compatta testata non viene adottata: il risparmio di token include letture
 omesse e non compensa le perdite semantiche osservate. Non è dichiarata equivalente.
+Il controllo finale mirato Sol conserva quattro output non conformi su 22; manca una
+valutazione umana indipendente. La pubblicazione non dichiara chiuso l'audit.
 
 ## [2.19.1] — 2026-09-25
 
