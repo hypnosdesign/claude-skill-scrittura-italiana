@@ -1,0 +1,73 @@
+{
+  "fingerprint": "eccd0c35dd48bbf2b52bbe9d3a279f6e87c7d13e677025324f21311fd7ee10a7",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":true,\"invented\":0,\"expectations\":[false,true,true,true,false,true],\"notes\":\"La revisione conserva la sequenza concessiva «Si può obiettare… Eppure» e la chiusura astratta «In un mondo sempre più digitale, la sfida è», invece di sostituirla con una chiusura concreta. Dati e distinzioni sono conservati; non ci sono note da valutare.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 24072,
+      "inputTokens": 23485,
+      "cachedInputTokens": 14848,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 587,
+      "reasoningOutputTokens": 434
+    },
+    "last": {
+      "totalTokens": 12299,
+      "inputTokens": 11804,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 495,
+      "reasoningOutputTokens": 385
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 17865,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "8603eca13a562e99ad62b3ceb8ec247e3664c9b8a6d1bb710f07aa90d0722df6",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

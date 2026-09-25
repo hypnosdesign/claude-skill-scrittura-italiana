@@ -1,0 +1,73 @@
+{
+  "fingerprint": "1e09751d856f35792124f12bcd6547467f8db572690d790458a6f488c23b4ded",
+  "output": "Imposta `retry_limit` a `3`. Se ricevi `403`, non ripetere la richiesta. Il comando è `curl https://api.example.test/v1/items`.",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 89322,
+      "inputTokens": 89261,
+      "cachedInputTokens": 89088,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 61,
+      "reasoningOutputTokens": 18
+    },
+    "last": {
+      "totalTokens": 89322,
+      "inputTokens": 89261,
+      "cachedInputTokens": 89088,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 61,
+      "reasoningOutputTokens": 18
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 4678,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "2f9dde656bc4dd819fd7fd482f68255834a2aaf3af8fae55cd759991f08aee1f",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

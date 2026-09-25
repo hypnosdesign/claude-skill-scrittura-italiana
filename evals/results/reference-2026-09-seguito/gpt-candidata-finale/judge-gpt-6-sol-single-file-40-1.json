@@ -1,0 +1,73 @@
+{
+  "fingerprint": "3d62a0fe985f34ba7a87edf353bcf39d0d64605ffe6a122771969298dad196e8",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":true,\"invented\":0,\"expectations\":[false,true,true,true,false,true],\"notes\":\"Il testo conserva intatta la coppia concessiva «Si può obiettare… Eppure» e sostituisce la chiusura richiesta con un’altra formula-pivot («Anche in un mondo sempre più digitale, la sfida è»). Dati e distinzioni restano intatti; la nota descrive correttamente gli interventi effettuati.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 36079,
+      "inputTokens": 35424,
+      "cachedInputTokens": 30592,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 655,
+      "reasoningOutputTokens": 460
+    },
+    "last": {
+      "totalTokens": 12420,
+      "inputTokens": 11900,
+      "cachedInputTokens": 11648,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 520,
+      "reasoningOutputTokens": 405
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 45001,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "0ea0ad6c3d883db384e0fc1ceae4fc77476756e40a8581c5ce2dde649a17965a",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

@@ -1,0 +1,73 @@
+{
+  "fingerprint": "743b69734640e0ae7b5d28fa615ba0496b073b721ffec626f81015a3e9db6e6c",
+  "output": "Il direttore ha definito la mostra “un esperimento riuscito a metà”. Il catalogo, però, segnala un po’ di ritardo nella produzione: la data d’uscita resta incerta.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 12400,
+      "inputTokens": 12296,
+      "cachedInputTokens": 12032,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 104,
+      "reasoningOutputTokens": 54
+    },
+    "last": {
+      "totalTokens": 12400,
+      "inputTokens": 12296,
+      "cachedInputTokens": 12032,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 104,
+      "reasoningOutputTokens": 54
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 4773,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "3863ee11f4e19d24c4ee0edeb976d7ee12522294d377d4f4dc10106aa67c30e6",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

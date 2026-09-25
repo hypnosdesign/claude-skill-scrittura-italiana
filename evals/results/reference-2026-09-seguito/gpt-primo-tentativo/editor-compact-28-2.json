@@ -1,0 +1,79 @@
+{
+  "fingerprint": "40456b0f11cbfe66227d3160f586574056e230be3f3e86cf2fe137d079fe152c",
+  "output": "Il direttore ha definito la mostra “un esperimento riuscito a metà”. Il catalogo, però, segnala un po’ di ritardo nella produzione: la data d'uscita resta incerta.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 33262,
+      "inputTokens": 33161,
+      "cachedInputTokens": 22016,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 101,
+      "reasoningOutputTokens": 20
+    },
+    "last": {
+      "totalTokens": 21055,
+      "inputTokens": 21007,
+      "cachedInputTokens": 12032,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 48,
+      "reasoningOutputTokens": 0
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [
+    {
+      "path": "references/punteggiatura.md",
+      "sha256": "d5f9ba4e52d4b7da8ed026cf979e3bca9a2ddc136afb49210cf4ba02126bd6a4",
+      "bytes": 29049
+    }
+  ],
+  "durationMs": 5744,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "5387b91efa66b0a1597b6dcfeddd0f2e332832863a41fab72fc195dcd72299ae",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

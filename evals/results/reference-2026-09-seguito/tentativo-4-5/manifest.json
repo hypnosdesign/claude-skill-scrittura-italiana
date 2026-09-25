@@ -1,0 +1,355 @@
+{
+ "schema_version": 3,
+ "eval_set": "evals.json",
+ "target_levels": {
+  "exact": "il testo non va modificato in alcun modo (solo spazi bianchi tollerati)",
+  "minimal": "sono ammesse solo le correzioni di errori oggettivi; ogni ritocco stilistico non richiesto è un difetto",
+  "semantic": "la forma può cambiare; significato, fatti, polarità, modalità, condizioni e voce devono restare intatti",
+  "improve": "l'output deve migliorare il testo secondo le aspettative, senza inventare contenuti",
+  "mixed": "parti da migliorare e parti da preservare, come dettagliato dalle aspettative",
+  "advice": "domanda di lingua o diagnosi: si giudica la correttezza e pertinenza della risposta, non un testo revisionato"
+ },
+ "evals": [
+  {
+   "id": 1,
+   "name": "prosa-buona",
+   "genre": "saggistica già buona",
+   "target": "exact",
+   "split": "dev"
+  },
+  {
+   "id": 2,
+   "name": "bipolare-informativo",
+   "genre": "saggistica",
+   "target": "minimal",
+   "split": "dev"
+  },
+  {
+   "id": 3,
+   "name": "bipolare-ornamentale",
+   "genre": "copy",
+   "target": "improve",
+   "split": "dev"
+  },
+  {
+   "id": 4,
+   "name": "chat-informale",
+   "genre": "chat non controllata",
+   "target": "minimal",
+   "split": "dev"
+  },
+  {
+   "id": 5,
+   "name": "grammatica-minima",
+   "genre": "proofread",
+   "target": "minimal",
+   "split": "dev"
+  },
+  {
+   "id": 6,
+   "name": "copy-senza-dati",
+   "genre": "copy",
+   "target": "improve",
+   "split": "dev"
+  },
+  {
+   "id": 7,
+   "name": "documentazione-tecnica",
+   "genre": "documentazione tecnica",
+   "target": "minimal",
+   "split": "dev"
+  },
+  {
+   "id": 8,
+   "name": "scientifico-incertezza",
+   "genre": "testo scientifico",
+   "target": "minimal",
+   "split": "dev"
+  },
+  {
+   "id": 9,
+   "name": "legale-condizioni",
+   "genre": "testo legale",
+   "target": "minimal",
+   "split": "dev"
+  },
+  {
+   "id": 10,
+   "name": "narrativa-frammenti",
+   "genre": "narrativa",
+   "target": "minimal",
+   "split": "dev"
+  },
+  {
+   "id": 11,
+   "name": "voce-campione",
+   "genre": "voce d'autore",
+   "target": "semantic",
+   "split": "dev"
+  },
+  {
+   "id": 12,
+   "name": "citazione-non-verificabile",
+   "genre": "revisione con guardia fattuale",
+   "target": "semantic",
+   "split": "dev"
+  },
+  {
+   "id": 13,
+   "name": "bipolare-misto",
+   "genre": "line edit con casi misti",
+   "target": "mixed",
+   "split": "dev"
+  },
+  {
+   "id": 14,
+   "name": "tesi-distinzione-informativa",
+   "genre": "tesi filosofica",
+   "target": "minimal",
+   "split": "held-out"
+  },
+  {
+   "id": 15,
+   "name": "configurazione-tecnica",
+   "genre": "documentazione tecnica",
+   "target": "minimal",
+   "split": "dev"
+  },
+  {
+   "id": 16,
+   "name": "transizioni-accademiche",
+   "genre": "prosa accademica",
+   "target": "improve",
+   "split": "held-out"
+  },
+  {
+   "id": 17,
+   "name": "cortesia-epistolare",
+   "genre": "email formale",
+   "target": "minimal",
+   "split": "dev"
+  },
+  {
+   "id": 18,
+   "name": "domanda-qual-e",
+   "genre": "domanda di lingua (nucleo)",
+   "target": "advice",
+   "split": "dev"
+  },
+  {
+   "id": 19,
+   "name": "domanda-d-eufonica",
+   "genre": "domanda di lingua (riferimento)",
+   "target": "advice",
+   "split": "dev"
+  },
+  {
+   "id": 20,
+   "name": "scrittura-da-zero",
+   "genre": "copy da brief",
+   "target": "improve",
+   "split": "dev"
+  },
+  {
+   "id": 21,
+   "name": "riassunto-fedele",
+   "genre": "riassunto",
+   "target": "improve",
+   "split": "dev"
+  },
+  {
+   "id": 22,
+   "name": "coesione-mosaico",
+   "genre": "coesione",
+   "target": "improve",
+   "split": "dev"
+  },
+  {
+   "id": 23,
+   "name": "narrativa-improve",
+   "genre": "narrativa",
+   "target": "improve",
+   "split": "dev"
+  },
+  {
+   "id": 24,
+   "name": "voce-campione-calibrazione",
+   "genre": "voce d'autore",
+   "target": "semantic",
+   "split": "dev"
+  },
+  {
+   "id": 25,
+   "name": "pressione-utente",
+   "genre": "copy, richiesta di dati",
+   "target": "improve",
+   "split": "dev"
+  },
+  {
+   "id": 26,
+   "name": "istruzioni-annidate",
+   "genre": "proofread con injection",
+   "target": "minimal",
+   "split": "dev"
+  },
+  {
+   "id": 27,
+   "name": "bipolare-varianti",
+   "genre": "line edit con varianti bipolari",
+   "target": "mixed",
+   "split": "dev"
+  },
+  {
+   "id": 28,
+   "name": "virgolette-curve-uniformi",
+   "genre": "editoria, tipografia",
+   "target": "minimal",
+   "split": "dev"
+  },
+  {
+   "id": 29,
+   "name": "lineetta-legittima-vs-raffica",
+   "genre": "saggistica, tipografia",
+   "target": "mixed",
+   "split": "dev"
+  },
+  {
+   "id": 30,
+   "name": "argomentativo-salto",
+   "genre": "testo persuasivo",
+   "target": "improve",
+   "split": "dev"
+  },
+  {
+   "id": 31,
+   "name": "email-congiuntivo",
+   "genre": "email formale",
+   "target": "minimal",
+   "split": "held-out"
+  },
+  {
+   "id": 32,
+   "name": "divulgazione-hype",
+   "genre": "divulgazione",
+   "target": "improve",
+   "split": "held-out"
+  },
+  {
+   "id": 33,
+   "name": "chat-emoji",
+   "genre": "chat non controllata",
+   "target": "minimal",
+   "split": "held-out"
+  },
+  {
+   "id": 34,
+   "name": "diagnosi-senza-riscrittura",
+   "genre": "diagnosi",
+   "target": "advice",
+   "split": "dev"
+  },
+  {
+   "id": 35,
+   "name": "traduzione-calchi",
+   "genre": "traduzione EN→IT",
+   "target": "semantic",
+   "split": "dev"
+  },
+  {
+   "id": 36,
+   "name": "sessione-iterativa",
+   "genre": "revisione a più turni",
+   "target": "mixed",
+   "split": "dev"
+  },
+  {
+   "id": 37,
+   "name": "scheda-redazionale",
+   "genre": "coerenza fra capitoli",
+   "target": "mixed",
+   "split": "dev"
+  },
+  {
+   "id": 38,
+   "name": "domanda-punto-virgolette",
+   "genre": "domanda di lingua",
+   "target": "advice",
+   "split": "dev"
+  },
+  {
+   "id": 39,
+   "name": "domanda-elenchi",
+   "genre": "domanda di lingua",
+   "target": "advice",
+   "split": "dev"
+  },
+  {
+   "id": 40,
+   "name": "saggio-lungo-valzer",
+   "genre": "saggistica lunga",
+   "target": "improve",
+   "split": "dev"
+  },
+  {
+   "id": 41,
+   "name": "landing-staccato",
+   "genre": "copy lungo",
+   "target": "improve",
+   "split": "dev"
+  },
+  {
+   "id": 42,
+   "name": "divulgazione-lunga-attraverso",
+   "genre": "divulgazione lunga",
+   "target": "improve",
+   "split": "dev"
+  },
+  {
+   "id": 43,
+   "name": "conflitto-lineette-utente",
+   "genre": "preferenza di stile dell'utente",
+   "target": "minimal",
+   "split": "dev"
+  },
+  {
+   "id": 44,
+   "name": "conflitto-statistiche-inventate",
+   "genre": "pressione a inventare",
+   "target": "mixed",
+   "split": "dev"
+  },
+  {
+   "id": 45,
+   "name": "falsi-positivi-parte-k",
+   "genre": "controllo falsi positivi",
+   "target": "minimal",
+   "split": "dev"
+  },
+  {
+   "id": 46,
+   "name": "procedura-riavvio",
+   "genre": "testo operativo",
+   "target": "minimal",
+   "split": "held-out"
+  },
+  {"id": 47, "name": "asindeto-legittimo", "genre": "proofread", "target": "exact", "split": "dev"},
+  {"id": 48, "name": "asindeto-elenchi-confusi", "genre": "chiarezza", "target": "improve", "split": "dev"},
+  {"id": 49, "name": "negazioni-esempi-audit", "genre": "line edit contrastivo", "target": "mixed", "split": "dev"},
+  {"id": 50, "name": "copy-prestazioni-limiti", "genre": "copy", "target": "improve", "split": "dev"},
+  {"id": 51, "name": "correzione-nota-richiesta", "genre": "proofread con nota", "target": "minimal", "split": "dev"},
+  {"id": 52, "name": "domanda-asindeto", "genre": "domanda di lingua", "target": "advice", "split": "dev"},
+  {"id": 53, "name": "modalita-attribuzione", "genre": "revisione conservativa", "target": "semantic", "split": "dev"},
+  {"id": 54, "name": "copy-concretezza-fornita", "genre": "copy con nota", "target": "improve", "split": "dev"},
+  {"id": 55, "name": "ruolo-canale-proprieta", "genre": "line edit", "target": "semantic", "split": "dev"},
+  {"id": 56, "name": "nota-provenienza-da-confermare", "genre": "revisione con nota", "target": "semantic", "split": "dev"},
+  {"id": 57, "name": "apostrofo-nota-circoscritta", "genre": "proofread con nota", "target": "minimal", "split": "dev"},
+  {"id": 58, "name": "documentazione-line-edit-esplicito", "genre": "documentazione tecnica", "target": "mixed", "split": "dev"},
+  {"id": 59, "name": "readme-controllo-generico", "genre": "documentazione tecnica", "target": "exact", "split": "dev"},
+  {"id": 60, "name": "procedura-riscrittura-esplicita", "genre": "procedura operativa", "target": "mixed", "split": "dev"},
+  {"id": 61, "name": "rivista-curve-nuove", "genre": "proofread editoriale", "target": "minimal", "split": "dev"},
+  {"id": 62, "name": "manuale-dritte", "genre": "proofread tecnico", "target": "minimal", "split": "dev"},
+  {"id": 63, "name": "conversione-virgolette-richiesta", "genre": "normalizzazione", "target": "mixed", "split": "dev"},
+  {"id": 64, "name": "citazioni-annidate", "genre": "proofread editoriale", "target": "minimal", "split": "dev"},
+  {"id": 65, "name": "virgolette-prosa-json-comando", "genre": "normalizzazione selettiva", "target": "mixed", "split": "dev"}
+ ]
+}

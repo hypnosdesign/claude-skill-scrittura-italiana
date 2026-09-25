@@ -1,0 +1,73 @@
+{
+  "fingerprint": "068fa0236c30fddfab6aa6b7374dd99b82445ac5b5effeb8f8dc168eb2f7e384",
+  "output": "**Capitolo 1 (invariato):** Maria pensava solo a sé stessa. “La coerenza,” diceva, “è una forma di rispetto.”\n\n**Capitolo 2:** Paolo, al contrario, non pensava mai a sé stesso. “L'attenzione agli altri,” ripeteva, “si impara.”",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 89331,
+      "inputTokens": 89043,
+      "cachedInputTokens": 3840,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 288,
+      "reasoningOutputTokens": 209
+    },
+    "last": {
+      "totalTokens": 89331,
+      "inputTokens": 89043,
+      "cachedInputTokens": 3840,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 288,
+      "reasoningOutputTokens": 209
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 11172,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "11e68a134e96eb889ca919d60e8fbe148339bbcd5d8f45f5c2c8a8a3f167d5d1",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

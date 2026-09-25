@@ -1,0 +1,73 @@
+{
+  "fingerprint": "5ebc59f8473b2ddc8833242210e758a9906b5d1d48162efb092a0c83087021fc",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":true,\"invented\":1,\"expectations\":[true,true,false,true],\"notes\":\"«Roba già vista» non conserva con precisione il fatto che i contenuti fossero noti alla maggior parte dei partecipanti. «Per la maggior parte di noi» attribuisce invece a quella maggioranza il giudizio di scarsa utilità, spostando il quantificatore su un altro fatto.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 11316,
+      "inputTokens": 10869,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 447,
+      "reasoningOutputTokens": 346
+    },
+    "last": {
+      "totalTokens": 11316,
+      "inputTokens": 10869,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 447,
+      "reasoningOutputTokens": 346
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 13138,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "6df2a792363575a525e47502f4a0ab9a8cfc72cc8c59a00777af46f8f7ad5bf6",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

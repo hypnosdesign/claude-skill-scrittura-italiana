@@ -1,0 +1,73 @@
+{
+  "fingerprint": "41c35b027ef74b3691e1a260242dfd347741487d3de45833d02d05644d3cf4ec",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":true,\"invented\":0,\"expectations\":[true,true,true,true],\"notes\":\"I termini e l’elenco inline sono conservati, ma il livello minimal ammetteva solo correzioni oggettive: backtick, virgole e riformulazioni come «in formato JSON» e «un errore 401» sono ritocchi non necessari. Non ci sono note editoriali da valutare.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 22490,
+      "inputTokens": 21928,
+      "cachedInputTokens": 18176,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 562,
+      "reasoningOutputTokens": 408
+    },
+    "last": {
+      "totalTokens": 11488,
+      "inputTokens": 11033,
+      "cachedInputTokens": 10752,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 455,
+      "reasoningOutputTokens": 351
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 20534,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "6ffe3e2f8cccc23b3e7908e7fd23cf189aa07d34f1b3ca1d697cb64dc5df9c73",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

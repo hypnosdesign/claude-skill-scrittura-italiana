@@ -1,0 +1,79 @@
+{
+  "fingerprint": "e990e94d3317e1a9d407424cf5de67cde5f2835f78c99be07440559d44dedd4b",
+  "output": "Bottega aperta a Vicenza nel 1987, realizziamo mobili su misura in legno massello.  \nSiamo due artigiani e seguiamo ogni lavorazione con cura.  \nConsegniamo in tutto il Veneto.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 34140,
+      "inputTokens": 33942,
+      "cachedInputTokens": 14848,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 198,
+      "reasoningOutputTokens": 106
+    },
+    "last": {
+      "totalTokens": 21846,
+      "inputTokens": 21790,
+      "cachedInputTokens": 12032,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 56,
+      "reasoningOutputTokens": 0
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [
+    {
+      "path": "references/retorica-efficacia.md",
+      "sha256": "e8dbb46b2f473bbad8ec4742289a109a76c08951b39288743e191d15c467c1de",
+      "bytes": 30985
+    }
+  ],
+  "durationMs": 9885,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "1901f07b9c7232cd2a34af67131458463d635ce8460d2eb0157f20b4f5bcb820",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

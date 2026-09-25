@@ -1,0 +1,79 @@
+{
+  "fingerprint": "840c83417fe24d485cbe1ea8fc30f98d96a23df9b9575cd7f667469732fe5a2b",
+  "output": "Il corso annuale? Poco utile. Le stesse cose le sapevano già quasi tutti. E poi è andato avanti più del previsto.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 50183,
+      "inputTokens": 50086,
+      "cachedInputTokens": 36352,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 97,
+      "reasoningOutputTokens": 18
+    },
+    "last": {
+      "totalTokens": 31014,
+      "inputTokens": 30980,
+      "cachedInputTokens": 18176,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 34,
+      "reasoningOutputTokens": 0
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [
+    {
+      "path": "references/stile-naturale.md",
+      "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+      "bytes": 68321
+    }
+  ],
+  "durationMs": 5979,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "ac891a4625a711381529f58095a769c3efbf5bb60d10e3d22b3b2a5e7524daef",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

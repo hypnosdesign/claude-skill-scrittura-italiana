@@ -1,0 +1,73 @@
+{
+  "fingerprint": "336c98ed9c0677f983353fe932c641eb597904b59d7a3a28332069c185a5edd5",
+  "output": "Il direttore ha definito la mostra “un esperimento riuscito a metà”. Il catalogo, però, segnala un po' di ritardo nella produzione: la data d'uscita resta incerta.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 88132,
+      "inputTokens": 88056,
+      "cachedInputTokens": 1792,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 76,
+      "reasoningOutputTokens": 26
+    },
+    "last": {
+      "totalTokens": 88132,
+      "inputTokens": 88056,
+      "cachedInputTokens": 1792,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 76,
+      "reasoningOutputTokens": 26
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 6789,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "87be5bb5bd384150d7de1e85ebae863cb9286c9737302fd58bb1f16e35e85f14",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

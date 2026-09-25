@@ -1,0 +1,73 @@
+{
+  "fingerprint": "3e3f23dd1bcdfa9c6b10683577560b6e51470249c5896f22d201b5f7452ee511",
+  "output": "Inserisci il token nell'header `Authorization`. Se il token è assente, l'API restituisce il codice `401`. Il comando di prova è `curl -H 'Authorization: Bearer TOKEN' https://api.example.test/v1/items`. Il campo `retry_limit` deve restare a `3`; non ripetere la richiesta se ricevi `403`.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 88661,
+      "inputTokens": 88552,
+      "cachedInputTokens": 87808,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 109,
+      "reasoningOutputTokens": 26
+    },
+    "last": {
+      "totalTokens": 88661,
+      "inputTokens": 88552,
+      "cachedInputTokens": 87808,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 109,
+      "reasoningOutputTokens": 26
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 6626,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "1b07098ab7c411f3251ca7dfaf8fed3cc18cd1ef296c69918edd67d13d44f46a",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

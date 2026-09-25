@@ -1,0 +1,73 @@
+{
+  "fingerprint": "5a39a0798866eacdc6fb359c7b8458808a1e1c9b300f8f65d2db26463abb2926",
+  "output": "Non ci sono errori grammaticali evidenti. Il problema è che il paragrafo promette più di quanto spieghi:\n\n- «Nel panorama attuale» è un’apertura generica: non aggiunge contesto.\n- La distinzione tra «erogare corsi» e «costruire percorsi» potrebbe essere importante, ma non viene chiarita.\n- «Soluzioni innovative», «punto di riferimento» e «risultati concreti» sono giudizi senza elementi che li sostengano. «Garantendo» rende la promessa particolarmente forte.\n- I gerundi finali accumulano azioni e suggeriscono un nesso tra innovazione, risultati e crescita personale che il testo non dimostra.",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 89316,
+      "inputTokens": 89022,
+      "cachedInputTokens": 3840,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 294,
+      "reasoningOutputTokens": 137
+    },
+    "last": {
+      "totalTokens": 89316,
+      "inputTokens": 89022,
+      "cachedInputTokens": 3840,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 294,
+      "reasoningOutputTokens": 137
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 10640,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "0e64e5f3b908303bdade3e92f3cdab9a2dba1e6aa1e6616cf9405762125c4621",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

@@ -1,0 +1,73 @@
+{
+  "fingerprint": "62d7c5376fc93b4bb16ae4fa5140b5f35715aad9a835aa9032b176abca5bc5a0",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":true,\"invented\":1,\"expectations\":[true,true,true,true,false,true],\"notes\":\"«Il modello dei patti locali» diventa «i patti locali»: si perde la distinzione tra modello e patti. La chiusa conserva il pivot generico «Nell’epoca digitale, la sfida è» e sostituisce l’assenza di richieste d’acquisto con la diversa affermazione che comprare non sia necessario.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 12497,
+      "inputTokens": 11675,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 822,
+      "reasoningOutputTokens": 707
+    },
+    "last": {
+      "totalTokens": 12497,
+      "inputTokens": 11675,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 822,
+      "reasoningOutputTokens": 707
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 21005,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "c1fce2f580b4b0973e95b25b2ac367e2df37f8cbb174c7ab4a06d00753c5590b",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

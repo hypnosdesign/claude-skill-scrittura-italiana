@@ -1,0 +1,73 @@
+{
+  "fingerprint": "5fc50401381216398e2e206817a29387213ea62dbd57a8688ae7dbf892e465d0",
+  "output": "Per autenticarti, invia il token nell'header Authorization. La risposta è in JSON e contiene: id (identificatore univoco), email (indirizzo associato), created_at (data ISO 8601). Se il token manca, l'API restituisce 401.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 12520,
+      "inputTokens": 12315,
+      "cachedInputTokens": 2816,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 205,
+      "reasoningOutputTokens": 140
+    },
+    "last": {
+      "totalTokens": 12520,
+      "inputTokens": 12315,
+      "cachedInputTokens": 2816,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 205,
+      "reasoningOutputTokens": 140
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 6843,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "dde4b3544b42243deb2c43b61e66fdd0b2c9fd3bb689d2e5152d04d8c901028b",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

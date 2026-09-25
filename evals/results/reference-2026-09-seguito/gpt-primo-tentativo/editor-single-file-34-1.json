@@ -1,0 +1,73 @@
+{
+  "fingerprint": "3830597c96cf67e2ca3bd601f7bc318ec1a96a69cee24f2419d3a5f9a5defd8d",
+  "output": "- **Apertura generica:** «Nel panorama attuale» non inquadra nulla di concreto.\n- **Formula bipolare promozionale:** «non si tratta… ma di…» crea enfasi, ma non spiega quale differenza operativa ci sia tra corsi e percorsi.\n- **Antilingua aziendale:** «implementando soluzioni innovative» è astratto: non dice quali soluzioni né che cosa facciano.\n- **Perifrasi enfatica:** «si configura come un vero punto di riferimento» è una formula autocelebrativa e non verificabile.\n- **Promessa vaga:** «garantendo risultati concreti» non specifica risultati, criteri o limiti della garanzia.\n- **Gerundi in coda:** «garantendo» e «sottolineando» prolungano la frase senza aggiungere informazioni verificabili.\n- **Lessico generico:** «crescita personale» resta indeterminata e può non coincidere con gli obiettivi della formazione aziendale.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 88270,
+      "inputTokens": 87932,
+      "cachedInputTokens": 86784,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 338,
+      "reasoningOutputTokens": 117
+    },
+    "last": {
+      "totalTokens": 88270,
+      "inputTokens": 87932,
+      "cachedInputTokens": 86784,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 338,
+      "reasoningOutputTokens": 117
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 9871,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "287f17b940550cca62749be978a58f6fe29de44728da0b08af2ca0bc33c62a13",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

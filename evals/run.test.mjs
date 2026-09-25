@@ -172,12 +172,18 @@ test('main persiste snapshot, fingerprint, transcript e tempi', () => {
   const fake = join(root, 'claude-fake.mjs')
   const out = join(root, 'run')
   writeFileSync(fake, `#!/usr/bin/env node
+import { readFileSync, writeFileSync } from 'node:fs'
 let input = ''
 process.stdin.setEncoding('utf8')
 process.stdin.on('data', chunk => { input += chunk })
 process.stdin.on('end', () => {
   if (process.argv.includes('--version')) {
     process.stdout.write('fake-claude 1.0')
+  } else if (process.argv.includes('fake-editor-snapshot')) {
+    const snapshot = process.argv[process.argv.indexOf('--append-system-prompt-file') + 1]
+    const content = readFileSync(snapshot, 'utf8')
+    writeFileSync(${JSON.stringify(join(root, 'mutable-skill.md'))}, 'mutated during run')
+    process.stdout.write(content)
   } else if (process.argv.includes('fake-editor')) {
     process.stdout.write("Il verbale dell'ultima assemblea non riporta la decisione sul bilancio, perciò conviene rinviare l'approvazione.")
   } else if (process.argv.includes('fake-editor-exit1')) {
@@ -261,6 +267,12 @@ process.stdin.on('end', () => {
       assert.throws(() => main(['--ids', '5', '--resume', resumable, '--model', 'fake-editor', '--judge-model', 'fake-judge']), /judge policy/)
     }
     writeFileSync(join(resumable, 'meta.json'), JSON.stringify(resumedMeta))
+    for (const name of ['skill.md', 'suite.json', 'manifest.json']) {
+      const saved = readFileSync(join(resumable, name))
+      writeFileSync(join(resumable, name), 'alterato')
+      assert.throws(() => main(['--ids', '5', '--resume', resumable, '--model', 'fake-editor', '--judge-model', 'fake-judge']), /snapshot.*alterato/)
+      writeFileSync(join(resumable, name), saved)
+    }
     const savedRows = readFileSync(join(resumable, 'results.jsonl'), 'utf8')
     writeFileSync(join(resumable, 'results.jsonl'), JSON.stringify({ ...row, verdict: { ...row.verdict, responseOk: false } }) + '\n')
     assert.throws(() => main(['--ids', '5', '--resume', resumable, '--model', 'fake-editor', '--judge-model', 'fake-judge']), /verdetto persistito/)
@@ -329,6 +341,14 @@ process.stdin.on('end', () => {
     assert.deepEqual(judgeMismatch.summary.modelMismatches, ['#5 run1 (giudice)'])
     assert.equal(judgeMismatch.gate.ok, false, 'anche il fallback del giudice invalida il gate')
 
+    const mutableSource = join(root, 'mutable-skill.md')
+    writeFileSync(mutableSource, 'policy iniziale')
+    const frozen = main(['--ids', '5', '--runs', '2', '--skill', mutableSource,
+      '--out', join(root, 'frozen'), '--model', 'fake-editor-snapshot', '--judge-model', 'fake-judge'])
+    const frozenRows = readFileSync(join(frozen.outDir, 'results.jsonl'), 'utf8').trim().split('\n').map(JSON.parse)
+    assert.deepEqual(frozenRows.map(r => r.output), ['policy iniziale', 'policy iniziale'])
+    assert.equal(readFileSync(mutableSource, 'utf8'), 'mutated during run')
+
     const fixtures = join(root, 'calibration.json')
     writeFileSync(fixtures, JSON.stringify({ cases: [{ id: 'control', target: 'minimal', prompt: 'p',
       output: 'o', expectations: ['a', 'b', 'c'], expected: { pass: true, textOk: true, responseOk: true, invented: 0 } }] }))
@@ -354,13 +374,13 @@ test('main usa dev per default e rifiuta flag o id sconosciuti', () => {
     assert.equal(checked.splitFilter, 'dev')
     // dev = 1–13 (storici) + 15 (declassato: usato per tarare la guardia sul testo
     // operativo, come già #17) + 17 (declassato) + 18–30 (estensione 2026-07) + 34–39
-    // (superficie 2.16.0) + 40–45 (tell 2026) + 47–57 (audit 2026-09)
+    // (superficie 2.16.0) + 40–45 (tell 2026) + 47–66 (audit 2026-09)
     assert.deepEqual(checked.ids, [
       ...Array.from({ length: 13 }, (_, i) => i + 1),
       15,
       ...Array.from({ length: 14 }, (_, i) => i + 17),
       ...Array.from({ length: 12 }, (_, i) => i + 34),
-      ...Array.from({ length: 11 }, (_, i) => i + 47),
+      ...Array.from({ length: 20 }, (_, i) => i + 47),
     ])
     const heldOut = main(['--validate-only', '--split', 'held-out'])
     assert.deepEqual(heldOut.ids, [14, 16, 31, 32, 33, 46])

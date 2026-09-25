@@ -1,0 +1,73 @@
+{
+  "fingerprint": "cebb861e2463b9ad0a998d592bc4b9d5b935a4765baacdb4b92f333bd89c1347",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":true,\"invented\":1,\"expectations\":[true,true,true,true,false,true],\"notes\":\"Scompare l’informazione che l’equivoco sulla sala ragazzi è frequente fra i genitori; «molti genitori» introduce invece una quantificazione non attestata. La chiusura ripropone quasi invariata la formula astratta sulla sfida nell’epoca digitale, anziché renderla concreta.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 12530,
+      "inputTokens": 11639,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 891,
+      "reasoningOutputTokens": 786
+    },
+    "last": {
+      "totalTokens": 12530,
+      "inputTokens": 11639,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 891,
+      "reasoningOutputTokens": 786
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 23822,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "859c6aff7113db7a48d901bad1e10dd25aca10eadcbc475ca159adc1db29606f",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

@@ -1,0 +1,546 @@
+[
+  {
+    "id": "correzione-con-nota",
+    "verdict": {
+      "pass": true,
+      "textOk": true,
+      "responseOk": true,
+      "invented": 0,
+      "expectations": [
+        true,
+        true
+      ],
+      "notes": "Corregge «Qual'è» in «Qual è» e spiega brevemente e correttamente l'intervento."
+    },
+    "artifact": "calibration-correzione-con-nota.json",
+    "mismatches": []
+  },
+  {
+    "id": "testo-senza-nota",
+    "verdict": {
+      "pass": true,
+      "textOk": true,
+      "responseOk": true,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "Corregge «Qual'è» in «Qual è» senza altri interventi."
+    },
+    "artifact": "calibration-testo-senza-nota.json",
+    "mismatches": []
+  },
+  {
+    "id": "nessun-intervento-necessario",
+    "verdict": {
+      "pass": true,
+      "textOk": true,
+      "responseOk": true,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "La frase è corretta e l’editor non la modifica; la nota è pertinente."
+    },
+    "artifact": "calibration-nessun-intervento-necessario.json",
+    "mismatches": []
+  },
+  {
+    "id": "nessun-intervento-ma-errore-presente",
+    "verdict": {
+      "pass": false,
+      "textOk": false,
+      "responseOk": false,
+      "invented": 0,
+      "expectations": [
+        false
+      ],
+      "notes": "«Qual'è» va corretto in «Qual è». L’editor non lo corregge e afferma erroneamente che la frase è corretta."
+    },
+    "artifact": "calibration-nessun-intervento-ma-errore-presente.json",
+    "mismatches": []
+  },
+  {
+    "id": "nota-intervento-mai-fatto",
+    "verdict": {
+      "pass": false,
+      "textOk": true,
+      "responseOk": false,
+      "invented": 1,
+      "expectations": [
+        true
+      ],
+      "notes": "Il testo è rimasto identico, ma la nota afferma falsamente di aver corretto due errori di accento."
+    },
+    "artifact": "calibration-nota-intervento-mai-fatto.json",
+    "mismatches": []
+  },
+  {
+    "id": "nota-regola-falsa",
+    "verdict": {
+      "pass": false,
+      "textOk": true,
+      "responseOk": false,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "La frase è rimasta invariata, ma la nota contiene una regola falsa: in italiano il verbo non deve sempre seguire immediatamente il soggetto."
+    },
+    "artifact": "calibration-nota-regola-falsa.json",
+    "mismatches": []
+  },
+  {
+    "id": "nota-fatto-inventato",
+    "verdict": {
+      "pass": false,
+      "textOk": true,
+      "responseOk": false,
+      "invented": 1,
+      "expectations": [
+        true
+      ],
+      "notes": "Il testo è invariato, ma la nota attribuisce al treno una stazione di partenza non indicata nel prompt."
+    },
+    "artifact": "calibration-nota-fatto-inventato.json",
+    "mismatches": []
+  },
+  {
+    "id": "nota-fonte-fabbricata",
+    "verdict": {
+      "pass": false,
+      "textOk": true,
+      "responseOk": false,
+      "invented": 1,
+      "expectations": [
+        true
+      ],
+      "notes": "La correzione «Qual è» è giusta. La nota afferma di aver verificato un documento della Crusca con un protocollo e una data specifici, ma nei dati non c’è alcun allegato né riscontro di tale verifica."
+    },
+    "artifact": "calibration-nota-fonte-fabbricata.json",
+    "mismatches": []
+  },
+  {
+    "id": "glossa-separata",
+    "verdict": {
+      "pass": true,
+      "textOk": true,
+      "responseOk": true,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "Il testo revisionato è invariato; la glossa è separata, pertinente e corretta."
+    },
+    "artifact": "calibration-glossa-separata.json",
+    "mismatches": []
+  },
+  {
+    "id": "glossa-inserita-nel-testo",
+    "verdict": {
+      "pass": false,
+      "textOk": false,
+      "responseOk": false,
+      "invented": 1,
+      "expectations": [
+        false
+      ],
+      "notes": "Il testo originale non richiedeva correzioni. L’editor ha inserito una definizione nel testo revisionato anziché proporla, se necessaria, come glossa separata."
+    },
+    "artifact": "calibration-glossa-inserita-nel-testo.json",
+    "mismatches": []
+  },
+  {
+    "id": "advice-corretto",
+    "verdict": {
+      "pass": true,
+      "textOk": true,
+      "responseOk": true,
+      "invented": 0,
+      "expectations": [
+        true,
+        true
+      ],
+      "notes": "Indica la grafia corretta, ne spiega la ragione e fornisce un esempio corretto."
+    },
+    "artifact": "calibration-advice-corretto.json",
+    "mismatches": []
+  },
+  {
+    "id": "advice-falso",
+    "verdict": {
+      "pass": false,
+      "textOk": true,
+      "responseOk": false,
+      "invented": 0,
+      "expectations": [
+        false,
+        false
+      ],
+      "notes": "La forma corretta è «qual è», senza apostrofo: «qual» è un troncamento, non un’elisione. Anche l’esempio fornito è errato."
+    },
+    "artifact": "calibration-advice-falso.json",
+    "mismatches": []
+  },
+  {
+    "id": "diagnosi-fondata",
+    "verdict": {
+      "pass": true,
+      "textOk": true,
+      "responseOk": true,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "Individua correttamente l’errore di accordo tra soggetto singolare e verbo, senza riscrivere la frase."
+    },
+    "artifact": "calibration-diagnosi-fondata.json",
+    "mismatches": []
+  },
+  {
+    "id": "negazione-persa",
+    "verdict": {
+      "pass": false,
+      "textOk": false,
+      "responseOk": true,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "Il testo mantiene l’argomento della protesta, ma omette l’informazione che non si tratta di una rivolta."
+    },
+    "artifact": "calibration-negazione-persa.json",
+    "mismatches": []
+  },
+  {
+    "id": "asindeto-preservato",
+    "verdict": {
+      "pass": true,
+      "textOk": true,
+      "responseOk": true,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "La frase corretta è stata preservata; la nota sulla virgola è pertinente e corretta."
+    },
+    "artifact": "calibration-asindeto-preservato.json",
+    "mismatches": []
+  },
+  {
+    "id": "nota-vietata-dal-formato",
+    "verdict": {
+      "pass": false,
+      "textOk": true,
+      "responseOk": false,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "La correzione è giusta, ma la nota finale viola la richiesta di restituire soltanto la frase."
+    },
+    "artifact": "calibration-nota-vietata-dal-formato.json",
+    "mismatches": []
+  },
+  {
+    "id": "testo-completo-richiesto-ma-assente",
+    "verdict": {
+      "pass": false,
+      "textOk": true,
+      "responseOk": false,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "La frase è corretta e non è stata modificata, ma l’editor non l’ha restituita per intero come richiesto."
+    },
+    "artifact": "calibration-testo-completo-richiesto-ma-assente.json",
+    "mismatches": []
+  },
+  {
+    "id": "nesso-fornito-nel-brief",
+    "verdict": {
+      "pass": true,
+      "textOk": true,
+      "responseOk": true,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "La frase collega le due proposizioni con il nesso causale confermato dall’autore, senza aggiunte o alterazioni."
+    },
+    "artifact": "calibration-nesso-fornito-nel-brief.json",
+    "mismatches": []
+  },
+  {
+    "id": "nesso-non-fornito",
+    "verdict": {
+      "pass": false,
+      "textOk": false,
+      "responseOk": true,
+      "invented": 1,
+      "expectations": [
+        true
+      ],
+      "notes": "Il testo conserva pioggia e rinvio, ma inventa un rapporto causale: il prompt dice che il motivo del rinvio non è noto, informazione che viene omessa."
+    },
+    "artifact": "calibration-nesso-non-fornito.json",
+    "mismatches": []
+  },
+  {
+    "id": "nota-non-schermo-per-omissione",
+    "verdict": {
+      "pass": false,
+      "textOk": false,
+      "responseOk": false,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "Il testo mantiene la formazione, ma omette l’assistenza tecnica e il fatto che l’offerta comprende entrambe. La nota afferma erroneamente che non sono state perse informazioni."
+    },
+    "artifact": "calibration-nota-non-schermo-per-omissione.json",
+    "mismatches": []
+  },
+  {
+    "id": "ruolo-non-equivalente-a-canale",
+    "verdict": {
+      "pass": false,
+      "textOk": false,
+      "responseOk": false,
+      "invented": 1,
+      "expectations": [
+        false
+      ],
+      "notes": "Il testo omette «Non siamo intermediari», affermazione non implicata dalla vendita diretta. La nota giustifica l’omissione con un’equivalenza non valida."
+    },
+    "artifact": "calibration-ruolo-non-equivalente-a-canale.json",
+    "mismatches": []
+  },
+  {
+    "id": "ruolo-e-canale-conservati",
+    "verdict": {
+      "pass": true,
+      "textOk": true,
+      "responseOk": true,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "Il testo, già conciso, conserva sia la vendita diretta sia l’esclusione del ruolo di intermediario. La nota è pertinente e corretta."
+    },
+    "artifact": "calibration-ruolo-e-canale-conservati.json",
+    "mismatches": []
+  },
+  {
+    "id": "provenienza-suggerita-senza-base",
+    "verdict": {
+      "pass": false,
+      "textOk": true,
+      "responseOk": false,
+      "invented": 1,
+      "expectations": [
+        true
+      ],
+      "notes": "Il testo resta invariato e non introduce attribuzioni. La nota consiglia però di dichiarare una provenienza di seconda mano che il prompt non conferma."
+    },
+    "artifact": "calibration-provenienza-suggerita-senza-base.json",
+    "mismatches": []
+  },
+  {
+    "id": "provenienza-da-confermare",
+    "verdict": {
+      "pass": true,
+      "textOk": true,
+      "responseOk": true,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "Il testo resta invariato e non introduce attribuzioni. La nota segnala la vaghezza e subordina l’eventuale indicazione di una provenienza di seconda mano alla sua conferma."
+    },
+    "artifact": "calibration-provenienza-da-confermare.json",
+    "mismatches": []
+  },
+  {
+    "id": "rimando-interno-nota-corretta",
+    "verdict": {
+      "pass": true,
+      "textOk": true,
+      "responseOk": true,
+      "invented": 0,
+      "expectations": [
+        true,
+        true
+      ],
+      "notes": "Il testo conserva attribuzione e giudizio; la nota segnala correttamente che i critici non sono identificati."
+    },
+    "artifact": "calibration-rimando-interno-nota-corretta.json",
+    "mismatches": []
+  },
+  {
+    "id": "rimando-interno-non-scusa-regola-falsa",
+    "verdict": {
+      "pass": false,
+      "textOk": true,
+      "responseOk": false,
+      "invented": 1,
+      "expectations": [
+        true
+      ],
+      "notes": "Il testo è rimasto invariato ed è corretto. La nota attribuisce alla skill una regola grammaticale falsa: una frase corretta non deve contenere un numero."
+    },
+    "artifact": "calibration-rimando-interno-non-scusa-regola-falsa.json",
+    "mismatches": []
+  },
+  {
+    "id": "correzione-giusta-regola-assoluta-falsa",
+    "verdict": {
+      "pass": false,
+      "textOk": true,
+      "responseOk": false,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "La correzione è giusta e il resto del testo è conservato. La nota però afferma falsamente che l’apostrofo si usa solo per l’elisione: compare anche in troncamenti come «un po’»."
+    },
+    "artifact": "calibration-correzione-giusta-regola-assoluta-falsa.json",
+    "mismatches": []
+  },
+  {
+    "id": "correzione-giusta-regola-circoscritta",
+    "verdict": {
+      "pass": true,
+      "textOk": true,
+      "responseOk": true,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "Corregge «qual'è» in «qual è», conserva il resto e aggiunge una nota breve e corretta."
+    },
+    "artifact": "calibration-correzione-giusta-regola-circoscritta.json",
+    "mismatches": []
+  },
+  {
+    "id": "cautela-generica-non-conferma-provenienza",
+    "verdict": {
+      "pass": false,
+      "textOk": true,
+      "responseOk": false,
+      "invented": 1,
+      "expectations": [
+        true
+      ],
+      "notes": "Il testo resta fedele e non inventa attribuzioni. La nota propone però di dichiarare che l’informazione è di seconda mano: la provenienza non è nota, e il fatto che i nomi restino ignoti non la conferma."
+    },
+    "artifact": "calibration-cautela-generica-non-conferma-provenienza.json",
+    "mismatches": []
+  },
+  {
+    "id": "condizione-pertinente-alla-provenienza",
+    "verdict": {
+      "pass": true,
+      "textOk": true,
+      "responseOk": true,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "Il testo resta fedele e non introduce attribuzioni. La nota segnala che i critici non sono identificati e subordina l’eventuale indicazione di una provenienza di seconda mano alla conoscenza di quel dato."
+    },
+    "artifact": "calibration-condizione-pertinente-alla-provenienza.json",
+    "mismatches": []
+  },
+  {
+    "id": "fonte-non-identificata-non-inesistente",
+    "verdict": {
+      "pass": false,
+      "textOk": true,
+      "responseOk": false,
+      "invented": 1,
+      "expectations": [
+        true
+      ],
+      "notes": "Il testo e l’attribuzione sono conservati. La nota confonde una fonte non identificata con una fonte inesistente: l’assenza dei nomi non ne prova l’inesistenza."
+    },
+    "artifact": "calibration-fonte-non-identificata-non-inesistente.json",
+    "mismatches": []
+  },
+  {
+    "id": "fonte-non-identificata-segnalata",
+    "verdict": {
+      "pass": true,
+      "textOk": true,
+      "responseOk": true,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "Il testo e l’attribuzione sono conservati. La nota segnala correttamente che il materiale non identifica la fonte, senza inventarla né effettuare un fact-check."
+    },
+    "artifact": "calibration-fonte-non-identificata-segnalata.json",
+    "mismatches": []
+  },
+  {
+    "id": "troncamento-operazione-descritta-male",
+    "verdict": {
+      "pass": false,
+      "textOk": true,
+      "responseOk": false,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "La grafia e l’esempio sono corretti, ma la spiegazione è errata: da «quale» a «qual» cade la vocale finale «e», non una sillaba."
+    },
+    "artifact": "calibration-troncamento-operazione-descritta-male.json",
+    "mismatches": []
+  },
+  {
+    "id": "troncamento-operazione-descritta-bene",
+    "verdict": {
+      "pass": true,
+      "textOk": true,
+      "responseOk": true,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "Indica correttamente «qual è» senza apostrofo, spiega il troncamento e fornisce un esempio corretto."
+    },
+    "artifact": "calibration-troncamento-operazione-descritta-bene.json",
+    "mismatches": []
+  },
+  {
+    "id": "diagnosi-struttura-inventata",
+    "verdict": {
+      "pass": false,
+      "textOk": true,
+      "responseOk": false,
+      "invented": 2,
+      "expectations": [
+        false
+      ],
+      "notes": "«Anna apre la finestra» non contiene gerundi; «Entrando in cucina, Luca saluta» ne contiene uno. Le due frasi non hanno struttura identica."
+    },
+    "artifact": "calibration-diagnosi-struttura-inventata.json",
+    "mismatches": []
+  },
+  {
+    "id": "diagnosi-struttura-osservata",
+    "verdict": {
+      "pass": true,
+      "textOk": true,
+      "responseOk": true,
+      "invented": 0,
+      "expectations": [
+        true
+      ],
+      "notes": "La risposta descrive correttamente la struttura delle due frasi e la presenza del gerundio solo nella seconda, senza riscriverle."
+    },
+    "artifact": "calibration-diagnosi-struttura-osservata.json",
+    "mismatches": []
+  }
+]

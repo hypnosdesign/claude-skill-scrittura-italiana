@@ -1,0 +1,79 @@
+{
+  "fingerprint": "7d9e7710aa51dadbe0ef7f9373bb5b42f50a83834514d1d2781663596aa2cc81",
+  "output": "L'installazione è semplice: bastano tre passaggi. I dati vengono eliminati dopo novanta giorni. La responsabilità dell'esportazione è del cliente, e non del fornitore. Il limite dei novanta giorni non è tecnico: è contrattuale.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 50257,
+      "inputTokens": 50049,
+      "cachedInputTokens": 35328,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 208,
+      "reasoningOutputTokens": 112
+    },
+    "last": {
+      "totalTokens": 31113,
+      "inputTokens": 30955,
+      "cachedInputTokens": 18176,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 158,
+      "reasoningOutputTokens": 96
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [
+    {
+      "path": "references/stile-naturale.md",
+      "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+      "bytes": 68321
+    }
+  ],
+  "durationMs": 7796,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "fcdce53217585115b00c5827631db41a19bc18db9fc017418169683a4e788aac",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

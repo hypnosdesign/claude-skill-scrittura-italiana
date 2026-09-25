@@ -1,0 +1,73 @@
+{
+  "fingerprint": "3784f1b32d465f8138877e4f19122f21eb2fe8c032baf3680e05abe21991c6c5",
+  "output": "{\"pass\":true,\"textOk\":true,\"responseOk\":true,\"invented\":0,\"expectations\":[true,true,true,true],\"notes\":\"Convertite solo le virgolette nella prosa; blocco JSON e comando invariati, senza note né esecuzione.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 22150,
+      "inputTokens": 21897,
+      "cachedInputTokens": 18048,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 253,
+      "reasoningOutputTokens": 140
+    },
+    "last": {
+      "totalTokens": 11136,
+      "inputTokens": 11045,
+      "cachedInputTokens": 10624,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 91,
+      "reasoningOutputTokens": 28
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 9474,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "689f35256995eae51632575be29392e7462367f5632afb1cedc785eb6c9ef83e",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

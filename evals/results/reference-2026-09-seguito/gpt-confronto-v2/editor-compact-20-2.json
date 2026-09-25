@@ -1,0 +1,73 @@
+{
+  "fingerprint": "de40866406605ae817877a7c217cb2e68c43595b9107582f6b8a374a22dad63a",
+  "output": "Bottega artigiana aperta a Vicenza nel 1987. Due artigiani realizzano mobili su misura in legno massello. Le consegne sono disponibili in tutto il Veneto.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 12389,
+      "inputTokens": 12294,
+      "cachedInputTokens": 2816,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 95,
+      "reasoningOutputTokens": 47
+    },
+    "last": {
+      "totalTokens": 12389,
+      "inputTokens": 12294,
+      "cachedInputTokens": 2816,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 95,
+      "reasoningOutputTokens": 47
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 5200,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "70abb932cdfbf0d6bb4deabdf95a3410239fa3df464e2da6ee47d8f52ed3ebdd",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

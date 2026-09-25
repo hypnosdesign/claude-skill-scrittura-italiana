@@ -1,0 +1,73 @@
+{
+  "fingerprint": "3830597c96cf67e2ca3bd601f7bc318ec1a96a69cee24f2419d3a5f9a5defd8d",
+  "output": "- **Incipit generico:** «Nel panorama attuale» è una cornice vuota; non aggiunge informazioni sulla formazione aziendale.\n- **Lessico promozionale e vago:** «soluzioni innovative», «vero punto di riferimento», «risultati concreti» sono formule applicabili a molti enti senza dire che cosa facciano o quali risultati ottengano.\n- **Perifrasi gonfia:** «si configura come» evita il verbo diretto e alza artificialmente il tono.\n- **Gerundi in catena:** «Implementando», «garantendo», «sottolineando» allungano la frase senza chiarire bene i rapporti logici; soprattutto gli ultimi due sembrano appendici aggiunte per dare rilievo.\n- **Affermazione non sostenuta:** «garantendo risultati concreti» è molto forte, ma non specifica risultati, criteri o condizioni.\n- **Filo argomentativo debole:** il passaggio da corsi a percorsi, poi al ruolo dell’ente e alla crescita personale resta dichiarato, non mostrato.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 88364,
+      "inputTokens": 87932,
+      "cachedInputTokens": 0,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 432,
+      "reasoningOutputTokens": 198
+    },
+    "last": {
+      "totalTokens": 88364,
+      "inputTokens": 87932,
+      "cachedInputTokens": 0,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 432,
+      "reasoningOutputTokens": 198
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 10872,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "b1676f2ec652ca9cf35669627731b1dfd12b9b0d0266b96839a2dab9353ab603",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

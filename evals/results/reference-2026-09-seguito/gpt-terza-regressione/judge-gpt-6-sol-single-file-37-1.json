@@ -1,0 +1,73 @@
+{
+  "fingerprint": "d404b6eea73b72cca91267193eef584ce2b9d834665140ab5d8cd241a4f6c0e4",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":false,\"invented\":0,\"expectations\":[false,true,false,true],\"notes\":\"«Sé stesso» e le virgolette curve sono uniformati, ma la virgola dopo «altri» è fuori dalle virgolette, a differenza del capitolo 1 approvato. Manca inoltre la nota sulle scelte editoriali applicate.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 11482,
+      "inputTokens": 10874,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 608,
+      "reasoningOutputTokens": 516
+    },
+    "last": {
+      "totalTokens": 11482,
+      "inputTokens": 10874,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 608,
+      "reasoningOutputTokens": 516
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 18869,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "c359b074872d72465357b236ee78ecbb10a3289d053d619a760db6a81d02054c",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

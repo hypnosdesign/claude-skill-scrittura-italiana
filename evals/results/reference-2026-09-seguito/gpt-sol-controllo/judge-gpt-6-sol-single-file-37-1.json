@@ -1,0 +1,73 @@
+{
+  "fingerprint": "8b26f38416f911eba4d530c41e053498b7cb7c62a85056e61ae92caf8d20888e",
+  "output": "{\"pass\":false,\"textOk\":true,\"responseOk\":false,\"invented\":0,\"expectations\":[true,true,false,true],\"notes\":\"Il capitolo 2 è uniformato al primo e il capitolo 1 resta intatto, ma manca una nota che dichiari le scelte editoriali applicate.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 11195,
+      "inputTokens": 10919,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 276,
+      "reasoningOutputTokens": 203
+    },
+    "last": {
+      "totalTokens": 11195,
+      "inputTokens": 10919,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 276,
+      "reasoningOutputTokens": 203
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 8885,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "23a2bb968885430a892bc1f657678c5db5e8645eada5ccfd10318a8c57e4fcd9",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

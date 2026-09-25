@@ -1,0 +1,73 @@
+{
+  "fingerprint": "a8eef4b1fdb92b4db72b6f232aa41d6b02965525894a34babdf65ece2d74fe3d",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":true,\"invented\":1,\"expectations\":[true,false,false,true],\"notes\":\"I fatti richiesti ci sono, ma «seguiamo ogni progetto con cura» aggiunge un’affermazione non fornita ed è una formula promozionale generica.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 11079,
+      "inputTokens": 10837,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 242,
+      "reasoningOutputTokens": 169
+    },
+    "last": {
+      "totalTokens": 11079,
+      "inputTokens": 10837,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 242,
+      "reasoningOutputTokens": 169
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 9078,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "33e8bc69ee58142d530b9a0a0152e821c40981a663be00570b133ebc6f763ea9",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

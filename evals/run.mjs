@@ -160,6 +160,11 @@ export function main(argv = process.argv.slice(2)) {
     if (prev.runs !== runs) mismatches.push('runs')
     if (prev.splitFilter !== splitFilter) mismatches.push('split')
     if (mismatches.length) throw new Error(`--resume: il run originale differisce per ${mismatches.join(', ')} — riprendere non è un merge`)
+    for (const [file, expected] of [['skill.md', fingerprints.skill], ['suite.json', fingerprints.suite], ['manifest.json', fingerprints.manifest]]) {
+      if (expected !== null && (!existsSync(join(outDir, file)) || sha256(readFileSync(join(outDir, file), 'utf8')) !== expected)) {
+        throw new Error(`--resume: snapshot ${file} assente o alterato`)
+      }
+    }
     const prevIds = new Set(prev.ids ?? [])
     const extra = selected.map(e => e.id).filter(id => !prevIds.has(id))
     if (extra.length) throw new Error(`--resume: casi assenti dal run originale: ${extra.join(', ')}`)
@@ -226,7 +231,11 @@ export function main(argv = process.argv.slice(2)) {
       let editorModelMismatch = false
       let judged = null
       try {
-        const edited = callClaude(e.prompt, noSkill ? [] : ['--append-system-prompt-file', skillFile], editorModel)
+        // Tutte le chiamate leggono lo snapshot, non il sorgente che può cambiare
+        // durante un run lungo. L'impronta deve descrivere la policy davvero usata.
+        const snapshotFile = join(outDir, 'skill.md')
+        if (!noSkill && sha256(readFileSync(snapshotFile, 'utf8')) !== fingerprints.skill) throw new Error('snapshot skill alterato durante il run')
+        const edited = callClaude(e.prompt, noSkill ? [] : ['--append-system-prompt-file', snapshotFile], editorModel)
         output = edited.text
         editorDurationMs = edited.durationMs
         editorModels = edited.models

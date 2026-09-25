@@ -1,0 +1,73 @@
+{
+  "fingerprint": "d29c5d09ee1583d6d2922d3e5b92782c52067ede6c8973590d30e4c93a455099",
+  "output": "Il corso di aggiornamento annuale l’ho trovato poco utile. I contenuti li conosceva già la maggior parte dei partecipanti. E l’incontro è durato più del previsto.",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 89680,
+      "inputTokens": 89321,
+      "cachedInputTokens": 3840,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 359,
+      "reasoningOutputTokens": 314
+    },
+    "last": {
+      "totalTokens": 89680,
+      "inputTokens": 89321,
+      "cachedInputTokens": 3840,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 359,
+      "reasoningOutputTokens": 314
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 11739,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "f71f16d0feb70245130cc5a26e3bac2a8f3bb6b8fbdbac3a62e7423b7ab28176",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

@@ -1,0 +1,79 @@
+{
+  "fingerprint": "c5e7678371a973b3fa58d89424037ebf7ddcf970443479a75f9bf9931ad31ffb",
+  "output": "Entrambe sono forme corrette, ma nello scritto sorvegliato oggi si preferisce:\n\n- **a ogni costo** (più comune di *ad ogni costo*);\n- **e ora** (più comune di *ed ora*).\n\nLa *d* eufonica è consigliata soprattutto davanti alla stessa vocale: **ad andare**, **ed entrare**. Davanti a vocale diversa, come in *ad ogni* ed *ed ora*, non è un errore: è una variante tradizionale, oggi un po’ più sostenuta o datata.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 39439,
+      "inputTokens": 39266,
+      "cachedInputTokens": 14848,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 173,
+      "reasoningOutputTokens": 22
+    },
+    "last": {
+      "totalTokens": 27132,
+      "inputTokens": 27009,
+      "cachedInputTokens": 12032,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 123,
+      "reasoningOutputTokens": 0
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [
+    {
+      "path": "references/dubbi-e-errori.md",
+      "sha256": "b035dd5046bb39973e79d0bc8cb555a1c2e533c92770c6ba278c5d15051404c6",
+      "bytes": 45847
+    }
+  ],
+  "durationMs": 8471,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "4a9aea1b0d1f888d4193147c5ba1ed3f56c1e7db4647427748cc03867a201107",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

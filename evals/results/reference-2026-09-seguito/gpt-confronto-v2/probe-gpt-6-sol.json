@@ -1,0 +1,79 @@
+{
+  "fingerprint": "69f47d2608f78bb3727361094f67783b0ea6f6988ed71af1a87408c9e886804d",
+  "output": "CAMPIONE_731",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 18514,
+      "inputTokens": 18465,
+      "cachedInputTokens": 12928,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 49,
+      "reasoningOutputTokens": 16
+    },
+    "last": {
+      "totalTokens": 9280,
+      "inputTokens": 9253,
+      "cachedInputTokens": 9088,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 27,
+      "reasoningOutputTokens": 16
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [
+    {
+      "path": "references/prova.md",
+      "sha256": "8f6e3ebc6ceca00e96d20a37f73754c721984604b201bab5550102001a02bda3",
+      "bytes": 20
+    }
+  ],
+  "durationMs": 9226,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "d538d89463d26399f856c65f1e687574778e26dd7a081090e6ad20977eed9886",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

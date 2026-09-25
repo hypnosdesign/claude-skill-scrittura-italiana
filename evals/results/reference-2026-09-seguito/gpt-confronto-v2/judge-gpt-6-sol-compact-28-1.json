@@ -1,0 +1,73 @@
+{
+  "fingerprint": "8ba53dcd602449a7dc020239a76aca596b6de71493a87d1044b4de1b4892bb4d",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":true,\"invented\":0,\"expectations\":[false,true,true,true],\"notes\":\"«Un pò» è corretto, ma diventa «un po’» anziché «un po'»: nel livello minimal richiesto, l’apostrofo tipografico introduce una variazione non richiesta rispetto a quello già usato in «d'uscita». Le virgolette della citazione restano uniformi; non ci sono note da valutare.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 11760,
+      "inputTokens": 10818,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 942,
+      "reasoningOutputTokens": 829
+    },
+    "last": {
+      "totalTokens": 11760,
+      "inputTokens": 10818,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 942,
+      "reasoningOutputTokens": 829
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 24974,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "4dbf7110cbab7c7dba5cfc7ecbefd8a4ffaea0af6026c78fdbeb31331c98e1b2",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

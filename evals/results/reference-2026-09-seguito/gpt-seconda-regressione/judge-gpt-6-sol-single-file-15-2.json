@@ -1,0 +1,73 @@
+{
+  "fingerprint": "c4616b069f4b148609c105d3095d1b91eb1713db625bfd7e66443c030d5992ac",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":true,\"invented\":0,\"expectations\":[true,true,true,false],\"notes\":\"Chiavi, valori e condizione sono preservati, ma il livello minimal non autorizzava l’aggiunta dei backtick né i ritocchi di punteggiatura e preposizioni. L’aspettativa vieta espressamente il markup.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 11081,
+      "inputTokens": 10838,
+      "cachedInputTokens": 0,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 243,
+      "reasoningOutputTokens": 152
+    },
+    "last": {
+      "totalTokens": 11081,
+      "inputTokens": 10838,
+      "cachedInputTokens": 0,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 243,
+      "reasoningOutputTokens": 152
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 8955,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "52fb987a50d3f8c1fdb19b5a28d03a8afe0c46b4f9532840d9f25727e1bdb20a",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

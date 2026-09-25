@@ -1,0 +1,73 @@
+{
+  "fingerprint": "f2d0110acef46524e51009ae308d5459092ee61f3642211f8984d9f480c2030a",
+  "output": "1. Verifica che lo spazio libero sia di almeno 20 GB, poi esegui `./backup.sh --mode full`.\n\n2. Al termine del backup, controlla il file `backup.log`.\n\n3. Esegui `./restart.sh` solo se `backup.log` contiene la stringa `OK`; altrimenti fermati e avvisa il referente.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 88194,
+      "inputTokens": 88114,
+      "cachedInputTokens": 87808,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 80,
+      "reasoningOutputTokens": 0
+    },
+    "last": {
+      "totalTokens": 88194,
+      "inputTokens": 88114,
+      "cachedInputTokens": 87808,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 80,
+      "reasoningOutputTokens": 0
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 4538,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "78eee1192f749eb97eba25ad26bd5eaeca78793a6f0667edec7db65c53b4d1f5",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

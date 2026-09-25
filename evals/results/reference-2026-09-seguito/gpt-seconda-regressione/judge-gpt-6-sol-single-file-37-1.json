@@ -1,0 +1,73 @@
+{
+  "fingerprint": "d404b6eea73b72cca91267193eef584ce2b9d834665140ab5d8cd241a4f6c0e4",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":false,\"invented\":0,\"expectations\":[false,true,false,true],\"notes\":\"Il capitolo 2 adotta «sé stesso» e le virgolette curve, ma colloca la virgola fuori dalle virgolette, diversamente dal capitolo 1. Manca inoltre la nota sulle scelte editoriali applicate.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 44575,
+      "inputTokens": 44063,
+      "cachedInputTokens": 39808,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 512,
+      "reasoningOutputTokens": 292
+    },
+    "last": {
+      "totalTokens": 11465,
+      "inputTokens": 11145,
+      "cachedInputTokens": 10880,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 320,
+      "reasoningOutputTokens": 232
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 23409,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "bf4f2ee19290c88a06dcc4bdfbb40648bbdc89680e3beac5baaefc1edf782771",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

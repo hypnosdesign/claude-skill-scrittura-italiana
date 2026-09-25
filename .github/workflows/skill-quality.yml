@@ -47,7 +47,7 @@ jobs:
         with:
           node-version: 22
       - name: Test deterministici (runner, stabilità, kit cieco, attivazione)
-        run: node --test evals/run.test.mjs evals/stability.test.mjs evals/blind-kit.test.mjs evals/activation.test.mjs
+        run: node --test evals/run.test.mjs evals/stability.test.mjs evals/blind-kit.test.mjs evals/activation.test.mjs evals/context-study.test.mjs evals/gpt-study.test.mjs
       - name: Validazione suite e manifest (zero LLM)
         run: node evals/run.mjs --validate-only
       - name: Lunghezza della description (limite Desktop/claude.ai)

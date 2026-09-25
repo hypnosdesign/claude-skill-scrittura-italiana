@@ -1,0 +1,417 @@
+{
+  "planned": 10,
+  "completed": 10,
+  "pass": 9,
+  "rows": [
+    {
+      "id": 7,
+      "repetition": 1,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-7-1.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          false,
+          true,
+          true
+        ],
+        "notes": "La revisione conserva i termini e i codici, ma cambia l’elenco inline aggiungendo «i campi» e la congiunzione «e», e trasforma «è in JSON» in «è in formato JSON»: ritocchi non necessari per un livello minimal. Le aspettative 1, 3 e 4 sono rispettate; la 2 no."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-7-1.json",
+      "editorDurationMs": 6751,
+      "usage": {
+        "total": {
+          "totalTokens": 88108,
+          "inputTokens": 87935,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 173,
+          "reasoningOutputTokens": 94
+        },
+        "last": {
+          "totalTokens": 88108,
+          "inputTokens": 87935,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 173,
+          "reasoningOutputTokens": 94
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 7,
+      "repetition": 2,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-7-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Il testo è riprodotto invariato, conserva termini e struttura e non aggiunge note o metaspiegazioni."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-7-2.json",
+      "editorDurationMs": 6265,
+      "usage": {
+        "total": {
+          "totalTokens": 88087,
+          "inputTokens": 87935,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 152,
+          "reasoningOutputTokens": 87
+        },
+        "last": {
+          "totalTokens": 88087,
+          "inputTokens": 87935,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 152,
+          "reasoningOutputTokens": 87
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 28,
+      "repetition": 1,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-28-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "È stato corretto «un pò» in «un po'»; le virgolette curve uniformi sono state mantenute e non sono stati fatti altri interventi."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-28-1.json",
+      "editorDurationMs": 6108,
+      "usage": {
+        "total": {
+          "totalTokens": 88028,
+          "inputTokens": 87916,
+          "cachedInputTokens": 1792,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 112,
+          "reasoningOutputTokens": 62
+        },
+        "last": {
+          "totalTokens": 88028,
+          "inputTokens": 87916,
+          "cachedInputTokens": 1792,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 112,
+          "reasoningOutputTokens": 62
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 28,
+      "repetition": 2,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-28-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "È stato corretto «un pò» in «un po'»; il resto del testo, comprese le virgolette curve uniformi, è rimasto invariato."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-28-2.json",
+      "editorDurationMs": 4729,
+      "usage": {
+        "total": {
+          "totalTokens": 88003,
+          "inputTokens": 87916,
+          "cachedInputTokens": 85760,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 87,
+          "reasoningOutputTokens": 37
+        },
+        "last": {
+          "totalTokens": 88003,
+          "inputTokens": 87916,
+          "cachedInputTokens": 85760,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 87,
+          "reasoningOutputTokens": 37
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 58,
+      "repetition": 1,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-58-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La prosa è più diretta e conserva comando, identificatori, valori, condizioni e divieto sui retry. La risposta contiene soltanto il testo revisionato."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-58-1.json",
+      "editorDurationMs": 5410,
+      "usage": {
+        "total": {
+          "totalTokens": 88093,
+          "inputTokens": 87993,
+          "cachedInputTokens": 85760,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 100,
+          "reasoningOutputTokens": 13
+        },
+        "last": {
+          "totalTokens": 88093,
+          "inputTokens": 87993,
+          "cachedInputTokens": 85760,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 100,
+          "reasoningOutputTokens": 13
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 58,
+      "repetition": 2,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-58-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La prosa è più diretta e il testo conserva comando, identificatori, valori, condizioni e divieto sui retry richiesti; la risposta contiene solo il testo revisionato."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-58-2.json",
+      "editorDurationMs": 5215,
+      "usage": {
+        "total": {
+          "totalTokens": 88096,
+          "inputTokens": 87993,
+          "cachedInputTokens": 85760,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 103,
+          "reasoningOutputTokens": 16
+        },
+        "last": {
+          "totalTokens": 88096,
+          "inputTokens": 87993,
+          "cachedInputTokens": 85760,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 103,
+          "reasoningOutputTokens": 16
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 65,
+      "repetition": 1,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-65-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La prosa usa i caporali richiesti; il blocco JSON e il comando sono invariati. Nessuna nota aggiunta."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-65-1.json",
+      "editorDurationMs": 5673,
+      "usage": {
+        "total": {
+          "totalTokens": 88062,
+          "inputTokens": 87931,
+          "cachedInputTokens": 85760,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 131,
+          "reasoningOutputTokens": 82
+        },
+        "last": {
+          "totalTokens": 88062,
+          "inputTokens": 87931,
+          "cachedInputTokens": 85760,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 131,
+          "reasoningOutputTokens": 82
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 65,
+      "repetition": 2,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-65-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La prosa usa i caporali richiesti; blocco JSON e comando restano invariati. Non sono state aggiunte note."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-65-2.json",
+      "editorDurationMs": 7004,
+      "usage": {
+        "total": {
+          "totalTokens": 88088,
+          "inputTokens": 87931,
+          "cachedInputTokens": 86784,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 157,
+          "reasoningOutputTokens": 108
+        },
+        "last": {
+          "totalTokens": 88088,
+          "inputTokens": 87931,
+          "cachedInputTokens": 86784,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 157,
+          "reasoningOutputTokens": 108
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 66,
+      "repetition": 1,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-66-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Corregge solo «rispsta» in «risposta», mantiene invariati gli altri elementi e non aggiunge note."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-66-1.json",
+      "editorDurationMs": 5399,
+      "usage": {
+        "total": {
+          "totalTokens": 87961,
+          "inputTokens": 87899,
+          "cachedInputTokens": 85760,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 62,
+          "reasoningOutputTokens": 29
+        },
+        "last": {
+          "totalTokens": 87961,
+          "inputTokens": 87899,
+          "cachedInputTokens": 85760,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 62,
+          "reasoningOutputTokens": 29
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 66,
+      "repetition": 2,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-66-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "È stato corretto solo «rispsta» in «risposta»; il resto del testo è invariato e non ci sono note aggiuntive."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-66-2.json",
+      "editorDurationMs": 6023,
+      "usage": {
+        "total": {
+          "totalTokens": 87997,
+          "inputTokens": 87899,
+          "cachedInputTokens": 85760,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 98,
+          "reasoningOutputTokens": 65
+        },
+        "last": {
+          "totalTokens": 87997,
+          "inputTokens": 87899,
+          "cachedInputTokens": 85760,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 98,
+          "reasoningOutputTokens": 65
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    }
+  ]
+}

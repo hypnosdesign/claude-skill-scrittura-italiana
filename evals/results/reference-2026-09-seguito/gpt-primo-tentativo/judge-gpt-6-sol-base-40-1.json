@@ -1,0 +1,73 @@
+{
+  "fingerprint": "8817ecd7510afb9d7772f63fbda3d775247393c24bd9ef0ff45730864e1e6f52",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":true,\"invented\":0,\"expectations\":[true,true,true,true,false,true],\"notes\":\"La chiusura conserva quasi intatta la formula richiesta da sostituire: «In un mondo sempre più digitale, la sfida è…». Togliere «vera» non la rende una chiusura concreta. Per il resto, dati e distinzioni sono conservati.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 36274,
+      "inputTokens": 35279,
+      "cachedInputTokens": 30592,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 995,
+      "reasoningOutputTokens": 818
+    },
+    "last": {
+      "totalTokens": 12712,
+      "inputTokens": 11847,
+      "cachedInputTokens": 11648,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 865,
+      "reasoningOutputTokens": 768
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 27154,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "6a66442e5ef5333d409b20aa3ab70f77761b5a58c6dbdc7ad83650e9968217fa",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

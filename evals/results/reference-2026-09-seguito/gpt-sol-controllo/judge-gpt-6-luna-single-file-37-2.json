@@ -1,0 +1,73 @@
+{
+  "fingerprint": "4fb5c8e84b82ca18466df75189aa8db865f029b647b4fe33ad1d280ba0989b1c",
+  "output": "{\"pass\":false,\"textOk\":true,\"responseOk\":false,\"invented\":0,\"expectations\":[true,true,false,true],\"notes\":\"Il capitolo 2 è allineato: «se stesso» diventa «sé stesso» e le virgolette sono curve. Il capitolo 1 resta intatto e il contenuto non è riscritto. Manca però la nota che dichiari le scelte editoriali, richiesta esplicitamente.\"}",
+  "model": "gpt-6-luna",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 11159,
+      "inputTokens": 10916,
+      "cachedInputTokens": 6912,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 243,
+      "reasoningOutputTokens": 140
+    },
+    "last": {
+      "totalTokens": 11159,
+      "inputTokens": 10916,
+      "cachedInputTokens": 6912,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 243,
+      "reasoningOutputTokens": 140
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 10140,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-luna",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "e22dc3db04670fba97bf65df48b23807b4f6411b33450a2e874fb7aea86bfa86",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

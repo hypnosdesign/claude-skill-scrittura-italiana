@@ -1,0 +1,73 @@
+{
+  "fingerprint": "220fb1b7e9daebf7bc062af7ed5de708ad19f6ce52cfe3ed541cd4c4aed71c0d",
+  "output": "Il corso di aggiornamento annuale? Poco utile. I contenuti, la maggior parte dei partecipanti li conosceva già. E l’incontro è durato più del previsto.",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 89333,
+      "inputTokens": 89047,
+      "cachedInputTokens": 3840,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 286,
+      "reasoningOutputTokens": 242
+    },
+    "last": {
+      "totalTokens": 89333,
+      "inputTokens": 89047,
+      "cachedInputTokens": 3840,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 286,
+      "reasoningOutputTokens": 242
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 9246,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "e0ebd262fd19e3c4d73a8658718efd0aae9259aa2a81c548c266c0bbeb0da267",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

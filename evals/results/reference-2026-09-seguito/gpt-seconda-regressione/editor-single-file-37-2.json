@@ -1,0 +1,73 @@
+{
+  "fingerprint": "d40ee2b25b5e955aae789a89a3b830b611ecab9f20162bee2c2b3e7e4c89cec2",
+  "output": "Paolo, al contrario, non pensava mai a sé stesso. “L'attenzione agli altri”, ripeteva, “si impara.”",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 88250,
+      "inputTokens": 88093,
+      "cachedInputTokens": 87808,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 157,
+      "reasoningOutputTokens": 120
+    },
+    "last": {
+      "totalTokens": 88250,
+      "inputTokens": 88093,
+      "cachedInputTokens": 87808,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 157,
+      "reasoningOutputTokens": 120
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 5963,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "014a52082eb46b15d1cc778b6fb4a091bf1aef30364f610e3102dad72103a89d",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

@@ -1,0 +1,79 @@
+{
+  "fingerprint": "6d4b970da5084ebbf864e9fa9517f14cc31e9821e6fb39ff7de2bc7ae638d345",
+  "output": "- **Incipit generico:** “Nel panorama attuale della formazione aziendale” ritarda il punto e non aggiunge informazioni.\n- **Contrasto formulaico:** “non si tratta semplicemente di… ma di…” è una struttura promozionale frequente; qui non chiarisce che cosa distingua davvero corsi e percorsi.\n- **Lessico aziendalese e astratto:** “erogare”, “costruire percorsi”, “implementando soluzioni innovative”, “crescita personale” restano generici e intercambiabili con quelli di molti altri testi corporate.\n- **Perifrasi enfatica:** “l’ente si configura come un vero punto di riferimento” gonfia l’affermazione senza dire per chi, in quale ambito o sulla base di cosa.\n- **Gerundi in coda:** “garantendo” e “sottolineando” accumulano effetti dichiarati invece di precisare azioni, nessi e responsabilità.\n- **Promesse non dimostrate:** “soluzioni innovative” e “risultati concreti” sono formule pubblicitarie prive di elementi verificabili.\n- **Coesione debole:** non è chiaro il rapporto tra l’adozione delle soluzioni, il ruolo dell’ente, i risultati e la crescita personale.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 45065,
+      "inputTokens": 44749,
+      "cachedInputTokens": 14848,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 316,
+      "reasoningOutputTokens": 14
+    },
+    "last": {
+      "totalTokens": 32712,
+      "inputTokens": 32437,
+      "cachedInputTokens": 12032,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 275,
+      "reasoningOutputTokens": 0
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [
+    {
+      "path": "references/stile-naturale.md",
+      "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+      "bytes": 68321
+    }
+  ],
+  "durationMs": 13706,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "34e58420cb3129a0d45220d9036a836d5857f8ad95f19a5dafbed694a74d8c08",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

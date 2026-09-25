@@ -1,0 +1,73 @@
+{
+  "fingerprint": "c1a1dbdc42c2fda4431ae3d7a17bb5bd03ef76745da83678dd638453531055a3",
+  "output": "Le biblioteche di quartiere sono servizi comunali e presìdi di prossimità. I prestiti calano da un decennio, ma le presenze crescono: nel 2024 la rete urbana di Modena ha registrato 410.000 ingressi, contro 280.000 prestiti. Il libro resta al centro della missione; gli spazi, però, servono sempre più per studiare, lavorare e incontrarsi. Non è la fine della biblioteca: è la sua forma contemporanea.\n\nLe sale studio sono piene già alle nove del mattino. Gli studenti arrivano prima dell’apertura: sono il pubblico più costante e mostrano quanto contino spazi gratuiti e riscaldati. La sala ragazzi non è un luogo di custodia, ma un servizio educativo; molti genitori, invece, la usano come parcheggio pomeridiano.\n\nIl bilancio resta un nodo. Il fondo statale per l’acquisto di libri è stato rinnovato e 14 comuni della provincia hanno aderito al sistema unico di tessere. La spesa pro capite italiana resta sotto la media europea, ma i patti locali per la lettura mostrano che non tutto dipende dalle risorse economiche.\n\nLa biblioteca di quartiere sta cambiando. Servono personale formato, orari serali e un’idea di città. Nell’epoca digitale, la sfida è tenere aperto un luogo in cui nessuno chiede di comprare nulla.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 89585,
+      "inputTokens": 88841,
+      "cachedInputTokens": 87808,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 744,
+      "reasoningOutputTokens": 426
+    },
+    "last": {
+      "totalTokens": 89585,
+      "inputTokens": 88841,
+      "cachedInputTokens": 87808,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 744,
+      "reasoningOutputTokens": 426
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 17161,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "7eb5b6f5c2bda2dcbc97f66dc10b3c3b791dfc10efd179b1e032dee878b17f70",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

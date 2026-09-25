@@ -1,0 +1,73 @@
+{
+  "fingerprint": "82160d906f33fddbb77b2c4ce0e302e33baeeb507a7983de567129d923c2758a",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":false,\"invented\":0,\"expectations\":[true],\"notes\":\"Il testo mantiene la formazione, ma omette l’assistenza tecnica e il fatto che l’offerta comprende entrambe. La nota afferma erroneamente che non sono state perse informazioni.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 32772,
+      "inputTokens": 32374,
+      "cachedInputTokens": 28544,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 398,
+      "reasoningOutputTokens": 240
+    },
+    "last": {
+      "totalTokens": 11110,
+      "inputTokens": 10900,
+      "cachedInputTokens": 10624,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 210,
+      "reasoningOutputTokens": 138
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 19553,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "4ceec3822a3f7de96fe66787b8c5ef608aa8ca8f94fc5864a4b351104c86a063",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

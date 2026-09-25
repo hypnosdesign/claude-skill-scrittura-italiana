@@ -1,0 +1,73 @@
+{
+  "fingerprint": "5b78133e2b2016fc10de7d51e772e21baee6d356ae9f74f7df93d2c95df4ef7c",
+  "output": "{\"pass\":true,\"textOk\":true,\"responseOk\":true,\"invented\":0,\"expectations\":[true,true,true,true],\"notes\":\"La risposta offre solo una diagnosi, ancorata a espressioni del paragrafo. Individua più di tre problemi pertinenti, senza riscrivere il testo né aggiungere fatti sull’ente.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 34240,
+      "inputTokens": 33805,
+      "cachedInputTokens": 29440,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 435,
+      "reasoningOutputTokens": 267
+    },
+    "last": {
+      "totalTokens": 11585,
+      "inputTokens": 11390,
+      "cachedInputTokens": 11136,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 195,
+      "reasoningOutputTokens": 115
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 15516,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "6bce5aa755238a066427b4c407767dd84051f314b10f41b65a603ecc520d6a68",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

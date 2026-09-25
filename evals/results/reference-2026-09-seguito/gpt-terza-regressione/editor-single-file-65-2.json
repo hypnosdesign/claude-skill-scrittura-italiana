@@ -1,0 +1,73 @@
+{
+  "fingerprint": "0a58aa383376c1ba5d6b4e58cba33e75367bf5d785e5217b940e6dbdbead1dca",
+  "output": "Scegli «Pronto» e poi «Invia».\n\n```json\n{\"status\":\"ready\",\"retry_limit\":3}\n```\n\nEsegui `tool --label \"Pronto\" --status ready`.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 88659,
+      "inputTokens": 88490,
+      "cachedInputTokens": 87808,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 169,
+      "reasoningOutputTokens": 120
+    },
+    "last": {
+      "totalTokens": 88659,
+      "inputTokens": 88490,
+      "cachedInputTokens": 87808,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 169,
+      "reasoningOutputTokens": 120
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 6484,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "5c81c74e2c18c6d88a515b4ef52de7e1ee7da8ad85f8d3c922f5d0a5484a5d9e",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

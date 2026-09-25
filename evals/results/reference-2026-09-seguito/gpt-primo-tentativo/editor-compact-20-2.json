@@ -1,0 +1,73 @@
+{
+  "fingerprint": "e990e94d3317e1a9d407424cf5de67cde5f2835f78c99be07440559d44dedd4b",
+  "output": "Dal 1987 la nostra bottega lavora a Vicenza. Siamo due artigiani e realizziamo mobili su misura in legno massello. Seguiamo ogni progetto con cura, dalla lavorazione alla consegna. Consegniamo in tutto il Veneto.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 12230,
+      "inputTokens": 12152,
+      "cachedInputTokens": 9984,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 78,
+      "reasoningOutputTokens": 14
+    },
+    "last": {
+      "totalTokens": 12230,
+      "inputTokens": 12152,
+      "cachedInputTokens": 9984,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 78,
+      "reasoningOutputTokens": 14
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 4847,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "47968b343d18cc656561efe3e3796ef4d26993884b9f115e12dfea168a31bf04",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

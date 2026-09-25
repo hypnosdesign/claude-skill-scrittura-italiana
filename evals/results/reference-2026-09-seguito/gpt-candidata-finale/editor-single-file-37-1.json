@@ -1,0 +1,73 @@
+{
+  "fingerprint": "75d36b415ded8d7b06ec209e93db6b5683ae3b73f5da40127327836feb7d89f9",
+  "output": "**Capitolo 2:** Paolo, al contrario, non pensava mai a sé stesso. “L'attenzione agli altri,” ripeteva, “si impara.”\n\nHo seguito il capitolo approvato per *sé stesso*, virgolette e punteggiatura del dialogo, senza modificarlo.",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 89595,
+      "inputTokens": 89317,
+      "cachedInputTokens": 3840,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 278,
+      "reasoningOutputTokens": 206
+    },
+    "last": {
+      "totalTokens": 89595,
+      "inputTokens": 89317,
+      "cachedInputTokens": 3840,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 278,
+      "reasoningOutputTokens": 206
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 10197,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "c5c195464abecd6c41ecd5e95ed0cafa280d38ff8dd11b6c764466d20ab46ca1",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

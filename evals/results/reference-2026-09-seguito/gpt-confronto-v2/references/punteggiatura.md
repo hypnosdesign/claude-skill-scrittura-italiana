@@ -1,0 +1,541 @@
+# Punteggiatura e tipografia italiana — regole operative
+
+Riferimento prescrittivo per **scrivere e correggere** la punteggiatura in italiano.
+Sintesi azionabile da B. Mortara Garavelli, *Prontuario di punteggiatura* (Laterza,
+2003), Parti I–II. I test decisionali sul punto e sul `;` riprendono anche gli spunti di
+Yasmina Pani, *Come usare la punteggiatura* e *Perché non si può scrivere bene senza il
+punto e virgola*, come criteri di scelta, non come divieti delle alternative legittime.
+Per la coordinazione per asindeto: [Accademia della Crusca, «La punteggiatura»](https://accademiadellacrusca.it/it/consulenza/la-punteggiatura/143).
+Solo precetti ed esempi: nessuna teoria, nessuna storia.
+
+**Mappa del file:** principî generali; virgola; punto e virgola; due punti; punto fermo;
+interrogativo ed esclamativo; virgolette (col punto di chiusura); lineette, trattini e
+dialogo narrativo; parentesi; puntini; barra e asterisco; apostrofo tipografico; numeri,
+date e percentuali; corsivo; spazi, capoversi e paragrafi; elenchi puntati e numerati;
+richiami di nota; maiuscole e minuscole; abbreviazioni e sigle.
+
+## Principî generali (validi per TUTTI i segni)
+
+- **Gerarchia di forza:** virgola < punto e virgola < punto. Il segno più forte
+  assorbe quello più debole nella stessa posizione (una relativa appositiva a fine
+  frase è chiusa dal punto, non da virgola + punto).
+- **Non duplicare lo stesso segno contiguo:** il punto di abbreviazione si fonde col
+  punto fermo finale (`…libri, giornali ecc.`, non `ecc..`). Se due virgole di
+  funzione diversa cadono nello stesso punto, se ne scrive una sola.
+- **La punteggiatura è demarcazione sintattico-testuale, non "respiro/pausa".**
+  L'implicazione vale in un senso solo: dove c'è un segno, nel parlato ci sarebbe una pausa;
+  ma **non** ogni pausa del parlato chiede un segno. Nel parlato si respira, si enfatizza,
+  si dà tempo a chi ascolta — nello scritto il tempo se lo prende il lettore. Quindi non
+  punteggiare a orecchio.
+  **Unico test acustico ammesso:** davanti a un periodo lunghissimo rimasto senza segni,
+  rileggilo ad alta voce. I segni però vanno dove cadono gli **snodi del ragionamento**,
+  non dove finisce il fiato.
+- **Coerenza interna:** ogni convenzione facoltativa (tipo di virgolette, trattino
+  sì/no…) si sceglie una volta e si mantiene in tutto il testo.
+- **⚠ Registro (aptum):** queste norme valgono per il **testo controllato** (editoria,
+  documenti, pubblicazioni). Nel **testo non controllato** (web, social, chat, commenti)
+  valgono le convenzioni da tastiera — virgolette dritte o assenti, accenti "da tastiera"
+  (`perche`, `e'`), niente lineette lunghe — che **non sono errori e non vanno corrette**.
+  Vedi `retorica-efficacia.md` §1 → "livello di controllo del testo".
+
+---
+
+## VIRGOLA
+
+**Funzione.** Marca di confine sintagmatico: separa, isola, mette in serie. Il segno
+più ricco di funzioni; può cambiare il senso della frase.
+
+**Regole d'uso**
+
+- **Vocativo:** isolalo sempre. `Mario, è venuto Paolo` ≠ `Mario è venuto, Paolo`.
+- **Inciso = due virgole (apri e chiudi).** Ogni inciso, apposizione o relativa
+  appositiva va racchiuso tra **due** virgole. Mai una sola, salvo quando l'altra è
+  neutralizzata da un segno più forte a inizio/fine frase.
+- **Apposizioni e gruppi attributivi** a inizio o fine enunciato: separali con virgola.
+- **Incisi e segnali discorsivi** (`ecco`, `dicevo`, `insomma`, avverbi frasali come
+  `probabilmente`): tra virgole.
+- **Coordinazione, anche senza congiunzione (asindeto):** la virgola può separare
+  proposizioni indipendenti: `Entrò, posò la borsa, si sedette`; anche con soggetti diversi:
+  `Io preparo il pranzo, tu apparecchi`. Il cambio di soggetto non impone da solo il punto
+  e virgola. Valuta chiarezza, lunghezza e articolazione del periodo.
+- **Complementi di tempo/luogo/causa a inizio frase:** se lunghi, separali dalla
+  reggente. In coda la virgola spesso cade (`chiedi informazioni per trovare la strada`).
+- **Elenchi:** virgole tra i membri; davanti all'ultima `e` di norma niente virgola.
+- **Davanti a `e`:** NIENTE virgola se coordina una serie continua. METTILA per:
+  disambiguare (`Giorgio, Ada, Ugo, e Anna` = quattro), distaccare un membro lungo,
+  valore avversativo (`Chiamava, chiamava, e nessuno rispondeva`), chiudere un inciso.
+  ⚠ La regoletta scolastica «prima di una congiunzione la virgola non si mette **mai**» non
+  esiste in nessuna grammatica: dipende dal caso, come sopra. In revisione non applicarla,
+  cioè non togliere virgole legittime, e se l'utente la invoca correggi la premessa.
+- **`ma`:** virgola prima se coordina due frasi; facoltativa tra sintagmi brevi
+  (`Poveri ma belli`). La posizione sposta il fuoco: `Guarda ma non vede` vs
+  `Guarda, ma non vede`.
+- **`o`:** niente virgola se è esplicativo (= cioè): `i comandamenti o decalogo`. Due
+  virgole col valore correttivo `o meglio`: `È tempo di muoversi, o meglio, di impegnarsi`.
+- **`sia… sia`, `né… né`:** virgola prima della seconda occorrenza solo se le
+  correlative sono molto distanti.
+
+**Errori comuni (da NON fare)**
+
+- **MAI virgola tra soggetto e verbo, né tra verbo e i suoi argomenti** se contigui.
+  ✗ `Il bollettino meteorologico, non lascia prevedere…` ✗ `…non lascia prevedere, un
+  miglioramento`. Lecito solo se interponi un segmento chiuso da DUE virgole:
+  `Il bollettino, da troppi giorni, non lascia prevedere, purtroppo, …`.
+  > **Da dove nasce, e come si ripara.** Quasi sempre è la trascrizione di una pausa
+  > **enfatica** del parlato: chi scrive `Noi, non abbiamo partecipato` sta marcando il
+  > soggetto. L'enfasi è legittima, il segno no — nello scritto passa al **corsivo**
+  > (`*Noi* non abbiamo partecipato`) o all'ordine delle parole. In revisione **ripara**,
+  > non limitarti a cancellare: la virgola tolta e basta perde ciò che l'autore voleva dire.
+- **Non confondere asindeto e accumulo poco leggibile.** Una virgola fra indipendenti
+  non è di per sé un errore in italiano: non applicare un divieto generale di «comma
+  splice». `C'erano moltissime persone, nessuno interveniva` può restare; `…persone;
+  nessuno interveniva` dà più risalto allo stacco. Se una sequenza contiene già incisi
+  o elenchi e i confini si confondono, valuta `;` o punto: `Anna prepara pane, frutta,
+  acqua, Luca controlla le mappe, le chiavi, i documenti` → `Anna prepara pane, frutta,
+  acqua; Luca controlla le mappe, le chiavi, i documenti`. È un intervento di chiarezza,
+  non la riparazione di ogni asindeto. Aggiungi una congiunzione soltanto se il nesso è
+  ricavabile dal contesto; non inventare cause o contrasti per giustificare il segno.
+- **MAI una virgola spaiata** che apre un inciso senza chiuderlo.
+- **Non separare la relativa restrittiva** dal suo antecedente (vedi sotto).
+- Non appiattire con sole virgole una gerarchia che il lettore fatica a ricostruire.
+  In una correzione di soli errori, conserva invece le alternative già chiare e legittime.
+
+**Relative restrittive vs esplicative (regola chiave)**
+
+- **Restrittiva (limita il referente): NIENTE virgola.**
+  `Non seguo i programmi televisivi che mi sembrano scadenti` = solo quelli scadenti.
+- **Esplicativa (commenta tutto l'antecedente): virgola.**
+  `Non seguo i programmi televisivi, che mi sembrano scadenti` = tutti, e per inciso
+  sono scadenti.
+- **Eccezione disambiguante:** virgola anche davanti a una restrittiva se serve a
+  impedire che il relativo si agganci all'antecedente sbagliato più vicino.
+
+**Esempi corretti**
+
+- `La Repubblica, una e indivisibile, riconosce e promuove le autonomie locali.`
+- `Si sente così stanca e triste, la signora Leuca.` (soggetto posposto: virgola necessaria)
+
+---
+
+## PUNTO E VIRGOLA
+
+**Funzione.** Demarcazione intermedia: separa più nettamente della virgola senza
+chiudere come il punto; segnala gerarchie e connessioni a distanza.
+
+**Il test.** *Le due frasi sono sintatticamente compiute, ma vuoi tenerle nello stesso
+passaggio del ragionamento?* Il punto e virgola è una possibilità, non un obbligo:
+`Oggi ho mangiato una mela; era ottima`. Punto e virgola, punto e, nei contesti adatti,
+virgola danno articolazioni diverse. Non sostituire un segno legittimo solo per applicare
+il test.
+
+**Quando preferirlo**
+
+- **Serie di membri lunghi/complessi**, o che contengono già virgole al loro interno:
+  qui è insostituibile.
+- **Serie di frasi** (non di semplici sintagmi), specie in testi formali/giuridici. Caso
+  tipico, il **`;` seriale:** un elenco i cui membri sono frasi intere, con soggetti
+  *diversi*, tenute insieme da un'unica scena. `Mio padre lavava i piatti canticchiando;
+  mia madre stendeva i panni; a me toccava il cane.` (La virgola non è sbagliata, ma
+  appiattisce l'elenco su una serie di sintagmi.)
+- **Cambio di soggetto o di tema** tra frasi giustapposte o coordinate, restando dentro lo
+  stesso discorso: `L'appartamento era moderno e funzionale; i mobili, però, erano antichi.`
+  Uso classico della narrativa italiana: dentro una scena sola, il `;` sposta l'inquadratura
+  da un personaggio all'altro dove il punto la interromperebbe.
+- **Stesso soggetto, cambio di fase o di prospettiva** dentro una sequenza lunga: quando si
+  elencano azioni o aspetti di uno stesso referente e la virgola non regge più il carico.
+- **Davanti a un connettivo forte**, che porta il peso argomentativo: conclusivi (*dunque,
+  quindi, perciò*), esplicativi (*infatti*), avversativi (*ma, tuttavia, nondimeno*),
+  restrittivi (`…; a meno che…`), e l'avverbio *invece*. `Ci aspettavamo che si gettasse
+  nella mischia; invece si diede alla fuga.`
+
+**Sostituibilità**
+
+- Con il **punto:** quasi sempre possibile tra due frasi indipendenti.
+- Con la **virgola:** spesso in serie brevi; il `;` dà più risalto e netta gerarchia.
+- **NON** può racchiudere incisi (lo fanno virgola, parentesi, lineette).
+
+**⚠ Il `;` non è automaticamente la scelta colta.** Rispetto ai due punti *lascia implicita*
+la relazione: dice «queste due cose stanno insieme», non dice *come*. Se il rapporto è di
+causa, spiegazione o conseguenza, dichiaralo con i due punti (o con la congiunzione); il `;`
+al loro posto è più vago, non più raffinato.
+
+**La stessa frase, tre segni** (il modo più rapido per scegliere):
+
+- `È juventino. È una persona di cui non fidarsi.` → informazioni **separate**: hanno in
+  comune solo il referente.
+- `È juventino; è una persona di cui non fidarsi.` → **collegate**, ma il nesso non è
+  dichiarato: resta al lettore capire se e quale sia.
+- `È juventino: è una persona di cui non fidarsi.` → **causa ed effetto**: il primo fatto
+  motiva il secondo (= *perciò*, oppure *infatti*).
+
+**Non solo sintassi: anche tono.** Tra virgola e `;` può decidere il ritmo che vuoi.
+`Mi hai già irritato abbastanza, perciò smettila`: la virgola mima la concitazione, buona in
+un dialogo. `…abbastanza; perciò smettila`: distanzia e pesa, buona nella narrazione e nella
+prosa argomentativa. Vedi `narrativa.md` (ritmo) e `retorica-efficacia.md` §1 (registro).
+
+**Esempio**
+`Il razzismo non può che produrre mali: l'equivoco della razza pura; la volontà di
+dominio; il genocidio.`
+
+---
+
+## DUE PUNTI
+
+**Funzione.** Segno plurifunzionale e "metatestuale": annuncia ciò che segue. Può
+sostituire congiunzioni causali, dichiarative, consecutive.
+
+**Funzioni**
+
+- **Presentativa:** introduce un elemento o un elenco.
+  `…l'antica lingua della cultura indiana: il sanscrito.`
+- **Esplicativa:** sviluppa o chiarisce.
+- **Connettiva (causale, bidirezionale):** causa→effetto (= perciò): `Sono stanca:
+  interrompo il lavoro.` / effetto→causa (= perché): `Interrompo il lavoro: sono stanca.`
+- **Conseguenza:** sostituisce un'intera frase ("di conseguenza…").
+- **Discorso diretto:** introducono la citazione quando il citante precede; la prima
+  parola citata va in **maiuscola**.
+
+**Avvertenze**
+
+- **Niente maiuscola dopo i due punti** all'interno della frase (la maiuscola vale solo
+  per il discorso diretto citato).
+- La **ripetizione** di due punti nello stesso periodo è di norma sconsigliata (ammessa
+  in catene consequenziali).
+- Davanti a un elenco: se i membri sono oggetto/soggetto diretto del verbo che precede,
+  **niente** due punti (`Ci permettono di elaborare emozioni, idee, paure…`).
+- **Come connettivo "snello":** i due punti possono sostituire un nesso logico con vantaggio di
+  scioltezza — `La rapina fallì: la vittima diede l'allarme` (= perché). ⚠ Evita due segni
+  intermedi forti uguali (`:` o `;`) in **periodi adiacenti**: alterna, o i due periodi si
+  leggono come un unico blocco.
+
+---
+
+## PUNTO (FERMO)
+
+**Funzione.** Chiusura di frase, periodo, testo. La pausa più forte; impone la
+maiuscola dopo di sé.
+
+**Regole**
+
+- Chiude l'unità sintattica; impone l'iniziale maiuscola successiva.
+- In prospettiva testuale può **focalizzare** isolando un elemento
+  (`Il mondo finì in una discarica. Abusiva.`).
+- Si fonde col punto di abbreviazione finale (`…ecc.`).
+
+**Test prima di lasciare un punto**
+
+Quando ne hai messo uno e stai per cominciare la frase dopo, chiediti in quest'ordine:
+
+1. quello che segue è ancora **strettamente legato** a ciò che ho appena chiuso?
+2. avrei potuto legarli con una **congiunzione** (*quindi, ma, perché*)?
+3. se sì, non serviva piuttosto il **punto e virgola**?
+
+Tre sì, e quel punto sta scaricando sul lettore un nesso che toccava a te esplicitare.
+**Contrappeso:** conta anche quanto hai già scritto — se il periodo è arrivato a quattro o
+cinque righe, chiudi e riparti *con* la congiunzione (`Ma…`, `E infatti…`). ⚠ Cominciare un
+periodo con *e* o con *ma* **non è un errore**: è la seconda regoletta scolastica senza
+fondamento (l'altra è la virgola davanti alle congiunzioni, vedi «Virgola»).
+
+**Uso sconsigliato**
+
+- **Frantumazione eccessiva** ("invadenza del punto"): spezzare in frammenti ciò che è
+  sintatticamente coeso maschera la subordinazione e ostacola la lettura. Dove serve
+  chiarezza, esplicita l'ipotassi con virgola / punto e virgola / due punti. Il vizio
+  sistemico che ne nasce — la corsa di frasi brevi giustapposte — sta in
+  `stile-naturale.md` §19.
+
+---
+
+## PUNTO INTERROGATIVO
+
+**Funzione.** Marca la domanda (anche retorica, dubbio, sospetto).
+
+**Regole**
+
+- **Maiuscola/minuscola dopo:** maiuscola se l'interrogativa chiude frase/periodo (vale
+  come punto fermo); minuscola se è integrata nella frase.
+- **Tra parentesi `(?)`:** commento metatestuale = si mette in dubbio / si ironizza su
+  ciò che precede. `…per quanto viziata (?) da un sistema anomalo…`
+
+## PUNTO ESCLAMATIVO
+
+**Funzione.** Marca l'esclamazione enfatica (ordine, sorpresa, ironia).
+
+**Regole**
+
+- **Parsimonia:** è "indice di esagitazione"; da evitare in scritture pacate, testi
+  legislativi, prosa tecnico-scientifica.
+- **Esclamativo di commento** tra parentesi `(!)`: sottolinea errore/assurdità di ciò
+  che precede. `Ha promesso di mantenere tutte (!) le promesse.`
+
+## INTERROGATIVO + ESCLAMATIVO
+
+- `?!` (spesso tra parentesi): domanda incredula / sorpresa. `Tu rimani qui?!`
+
+**Posizione di `? ! …` rispetto a virgolette/lineette di chiusura**
+
+- **PRIMA** della chiusura se riguardano l'enunciato **citato**:
+  `«Papà, quando finiscono i giorni?»`.
+- **DOPO** la chiusura se riguardano l'enunciato **che contiene** la citazione:
+  `Qual è il vero autore della definizione: «…»?`
+
+---
+
+## VIRGOLETTE
+
+**Prima di scegliere la forma**
+
+Una richiesta esplicita di conversione prevale sulla convenzione esistente; in sua assenza,
+conserva lo stile coerente dell'originale o della collana. La destinazione alla stampa e
+il livello controllato non bastano a chiedere caporali. Le preferenze qui sotto servono
+quando scrivi da zero o manca una convenzione, non autorizzano conversioni in revisione.
+Controlla l'uniformità per funzione e livello: citazioni annidate, menzioni e codice
+possono legittimamente avere delimitatori diversi. Non normalizzare stringhe di codice.
+
+**Forme (tipografia italiana)**
+
+- **Caporali / basse / "francesi" `« »`:** una convenzione del testo editoriale per
+  citazioni e discorso diretto, non una forma obbligatoria.
+- **Alte / doppie / "inglesi" `" "`:** comuni nel web, giornali, testi digitali — e la
+  scelta giusta nel **testo non controllato** (non essendo i caporali sulla tastiera).
+  Nella forma curva `“ ”` sono anche uno stile d'editoria diffuso: se il testo le usa
+  **uniformi**, è una scelta di collana, non un errore da convertire.
+- **Apici / semplici `' '`:** per citazioni dentro citazioni o per i significati.
+
+> ⚠ Nel web/social/chat non pretendere i caporali: le virgolette dritte (o l'assenza di
+> virgolette) sono la norma da tastiera, non un errore. Vedi `retorica-efficacia.md` §1.
+
+**Regole**
+
+- **Citazioni e discorso diretto:** virgolette doppie (caporali o alte).
+- **Citazione dentro citazione** ("chi apre chiuda"): esterno `« »` → interno `" "`;
+  esterno `" "` → interno `' '`.
+- **Uso metalinguistico:** *menzione* (la forma della parola) → corsivo o apici;
+  *significato* / tecnicismo "con riserva" → virgolette doppie o apici. Se usi il
+  corsivo per le menzioni, riserva le virgolette ai significati (e mantieni la scelta).
+- **Pensieri** in forma di discorso diretto: virgolette, come le parole pronunciate.
+- **Distanziamento / ironia:** le virgolette equivalgono a *cosiddetto / sedicente /
+  si fa per dire*.
+- **Uniformità:** mantieni la stessa convenzione per usi equivalenti; rispetta le
+  differenze funzionali indicate sopra.
+- **Punto fermo e chiusura:** di norma il punto va **dopo** le virgolette di chiusura, anche
+  se la citazione è una frase compiuta: `Disse che era «una decisione presa in fretta».` Nel
+  discorso diretto autonomo introdotto dai due punti l'uso oscilla fra le case editrici
+  (punto interno o esterno): scegli — o segui lo stile della collana — e mantieni. **Mai due
+  punti fermi** (uno dentro e uno fuori); se la battuta chiude con `? !`, questi restano
+  dentro e il punto non si aggiunge (vedi «Posizione di `? ! …`»).
+- **⚠ Non abusare delle virgolette di distanziamento.** Mettile solo per ironia *vera* o per
+  segnalare che la parola non è tua (citazione, gergo, neologismo dubbio). ✗ *ieri ho visto le
+  "amiche del cuore"*, ✗ *ha fatto una "bella figura"* — espressioni comuni che non chiedono
+  riserva. È un tic della scrittura non esperta.
+
+---
+
+## LINEETTE E TRATTINI
+
+**Distinzione fondamentale**
+
+- **Trattino (breve) `-`: UNISCE**, senza spazi. Usi: divisione a fine riga; intervalli
+  (`pagine 15-18`, `lunedì-venerdì`); composti e giustapposizioni (`tecnico-scientifico`,
+  `Torino-Milano`, `Italia-Germania`); prefissi nei composti occasionali (`anti-ingrassante`)
+  — sparisce nei composti stabili (`antifascista`, `ecosistema`). Negli aggettivi
+  giustapposti il primo è al maschile singolare (`giuridico-burocratici`).
+- **Lineetta (lunga) `–`/`—`: SEPARA**, sempre **con uno spazio** prima e dopo.
+
+**Regole della lineetta**
+
+- **Incisi (lineetta enunciativa):** coppia di lineette, alternativa a virgole e
+  parentesi. A fine frase la lineetta finale è neutralizzata dal punto.
+- **Discorso diretto/dialoghi:** lineetta di apertura per ogni turno; la lineetta di
+  chiusura si omette, salvo quando segue l'enunciato citante. A capo a fine turno.
+
+**Punteggiare il dialogo narrativo (col citante).** Le due convenzioni maggioritarie:
+
+- **Caporali (o alte):** la virgola del citante sta **fuori** dalla chiusura — `«Vieni»,
+  disse.` Se la battuta chiude con `? !`, restano dentro e la virgola non si aggiunge:
+  `«Vieni?» chiese.` Citante in inciso: `«Vieni», disse, «è tardi».`
+- **Lineette:** lineetta d'apertura, citante fra lineette, la battuta riprende senza segno
+  d'apertura — `— Vieni, — disse — è tardi.` (Le collane variano sulla virgola prima o dopo
+  la lineetta del citante: conta scegliere **una** convenzione per tutto il libro.)
+
+⚠ Il verbo del citante resta **minuscolo** anche dopo `? !`: `«Vieni?» chiese` (non *Chiese*).
+In revisione non convertire un sistema nell'altro se il testo ne usa già uno coerente (è una
+scelta editoriale: vedi «livello di controllo»); si uniforma solo il misto.
+
+> ⚠️ **In italiano la lineetta lunga è rara.** La tipografia italiana si appoggia su
+> virgole, due punti, parentesi tonde, punto e virgola. Un testo con molte `—` è quasi
+> sempre tradotto dall'inglese o generato da AI: vedi `stile-naturale.md` §21.
+
+**Scelta tra parentesi / lineette / virgole per gli incisi:** in un periodo già pieno di
+virgole, usa parentesi o lineette. Le **parentesi tonde** marcano l'estraneità in modo
+più deciso.
+
+---
+
+## PARENTESI
+
+**Tonde `( )`** — espressioni incidentali (alternativa a lineette e virgole);
+richiami bibliografici, rinvii; didascalie teatrali; commenti metatestuali `(?)` `(!)` `(?!)`.
+
+**Quadre `[ ]`** — incidentali dentro altre incidentali già tra tonde; **integrazioni**
+dell'autore in un passo citato; **omissioni** nelle citazioni `[…]`; in filologia
+integrazioni/espunzioni.
+
+**Endolessematiche** (dentro una parola): `(De)formazione`, `Scripta mane(n)t` — risorsa
+retorica/giornalistica.
+
+**Galateo redazionale:** dichiara le scelte se diverse dalle consuetudini, e applicale
+con uniformità.
+
+---
+
+## PUNTINI DI SOSPENSIONE / RETICENZA
+
+**Funzione.** Interruzione, reticenza, sospensione allusiva, esitazione, elenco aperto
+(= eccetera), omissione in citazione.
+
+**Regole**
+
+- **Sempre tre** (più di tre solo come scelta stilistica d'autore).
+- **Omissione in citazione:** racchiusi tra parentesi `[…]` ("puntini di omissione").
+- **Posizione** rispetto a virgolette/lineette: prima della chiusura se appartengono
+  all'enunciato citato, dopo se appartengono all'enunciato che cita.
+
+---
+
+## BARRA E ASTERISCO
+
+**Barra obliqua `/`** — divisoria (elenchi orizzontali, versi citati senza a capo, più
+autori in bibliografia) oppure oppositiva (`vero/falso`, alternativa `indo-europeo/indoeuropeo`).
+
+**Asterisco `*`** (uso specialistico — ⚠️ non "correggerlo"):
+omissione volontaria di un nome; in linguistica storica forma ricostruita (`*adripare`);
+in linguistica descrittiva costrutto **agrammaticale** (`*un bello libro`).
+
+---
+
+## APOSTROFO TIPOGRAFICO
+
+- **Due forme:** dritto `'` e tipografico `’`. In revisione segui la stessa precedenza
+  delle virgolette: richiesta esplicita, poi convenzione coerente dell'originale, infine
+  preferenza predefinita. In un proofread non convertire apostrofi validi per la sola
+  destinazione editoriale: correggere *pò* non autorizza a cambiare anche *d'uscita*.
+  Da zero il tipografico è una scelta editoriale, il dritto è comune nel digitato.
+- **Coerenza:** usa una convenzione per la prosa; i caratteri in codice e dati letterali
+  non seguono le normalizzazioni tipografiche.
+- ⚠ **Mai l'apostrofo al posto dell'accento** nel testo controllato: ✗ `E' tardi`,
+  `perche'` → ✓ `È tardi`, `perché` (vedi `dubbi-e-errori.md` §1; nel digitato la forma da
+  tastiera è tollerata).
+
+---
+
+## NUMERI, DATE, PERCENTUALI
+
+- **Cifre o lettere:** in prosa corrente i numeri brevi e d'uso comune in lettere (*tre
+  giorni, cento pagine*); cifre per dati, misure, date, elenchi tecnici. Scegli un criterio
+  e tienilo per tutto il testo.
+- **Migliaia col punto:** `200.000` (✗ `200,000` all'inglese). In italiano la **virgola** è
+  il separatore dei **decimali**: `3,14`.
+- **Percentuali:** in prosa la forma corrente è `%` attaccato alla cifra (`82%`); la forma
+  spaziata (`82 %`) è una convenzione tecnico-scientifica. Scegli e mantieni. Con
+  l'articolo: *l'82%* (elisione normale).
+- **Date e decenni:** `15 luglio 2026` (mese minuscolo). Decenni: *gli anni Trenta* è la
+  forma della prosa sorvegliata; *gli anni '30* è corrente ma meno formale (coerenza,
+  comunque). Secoli sostantivati con la maiuscola: *il Novecento*.
+- **Intervalli:** trattino breve senza spazi: `pp. 15-18`, `2019-2024` (vedi «Lineette e
+  trattini»).
+- **Falsa precisione:** non riportare più decimali di quanti la misura regga (vedi
+  `spiegare-con-chiarezza.md` §4).
+
+---
+
+## CORSIVO
+
+- **Titoli di opere** (libri, film, quadri, album; testate citate come opere): in
+  **corsivo**, non tra virgolette: *Il nome della rosa*, *La dolce vita*. Le *parti* di
+  un'opera (articoli, capitoli, singoli brani) tra virgolette.
+- **Forestierismi non adattati** o citati come termini: corsivo alla prima occorrenza
+  (*background*, *plot*); i prestiti acclimatati (computer, sport, film, mail) in tondo.
+- **Menzione:** la parola citata *come parola* va in corsivo (vedi «Virgolette», uso
+  metalinguistico). **Enfasi:** col contagocce — se tutto è enfatico, niente lo è.
+- ⚠ Dove il corsivo non esiste (chat, testo semplice) le alternative sono le virgolette o
+  niente: nel testo controllato non surrogarlo con MAIUSCOLE (grido) né con gli asterischi
+  del markdown.
+
+---
+
+## SPAZI BIANCHI, A CAPO, CAPOVERSI, PARAGRAFI
+
+- **A capo:** separa blocchi di informazione; segnala cambio di argomento. Usalo per
+  articolare il testo.
+- **Capoverso:** porzione che inizia andando a capo (con rientro), compresa tra due "a capo".
+- **Paragrafo:** unità di contenuto autonoma (può contenere più capoversi). Simbolo `§`.
+  ⚠️ Non confondere *paragrafo* e *capoverso* (calco errato dall'inglese *paragraph*).
+
+---
+
+## ELENCHI PUNTATI E NUMERATI
+
+Due convenzioni coerenti; decide la **natura delle voci**:
+
+- **Voci brevi** (sintagmi, non frasi): iniziale **minuscola**; a fine voce `;` (stile
+  tradizionale) oppure nessun segno (stile moderno) — mai mescolare i due; **punto fermo
+  all'ultima voce** (nello stile col `;`). La frase introduttiva chiude coi due punti.
+- **Voci-frase** (una o più frasi compiute): iniziale **maiuscola** e **punto** a fine di
+  ogni voce.
+
+Regole comuni: struttura **parallela** fra le voci (tutte sintagmi o tutte frasi, tutte
+rette dallo stesso attacco: non mescolare); numeri solo se ordine o conteggio contano,
+altrimenti punti elenco; la coerenza vale per l'intero documento, non per il singolo
+elenco. ⚠ Per l'elenco come *scelta di scrittura* (quando è legittimo, quando è slop da
+chatbot) vedi `stile-naturale.md` §67.
+
+---
+
+## RICHIAMI DI NOTA (esponenti)
+
+- **Rispetto alla punteggiatura:** l'uso tradizionale italiano colloca il richiamo **prima**
+  del segno (`…come nota Serianni¹.`); quello anglosassone **dopo** (`….¹`). In editoria
+  convivono per scelta di collana: **scegli e mantieni** per tutto il testo.
+- Con le **virgolette**, il richiamo va **fuori** dalla chiusura (`«…»¹`), attaccato senza
+  spazio.
+- Il richiamo si lega a **ciò che annota**: a fine frase se annota la frase, subito dopo la
+  parola (o il virgolettato) se annota quella.
+
+---
+
+## MAIUSCOLE E MINUSCOLE
+
+**Maiuscola:**
+- a inizio frase e dopo `.` `?` `!` che chiudono il periodo;
+- nomi propri (persone, luoghi, fiumi, monti): *Roma, il Po, le Alpi*;
+- enti e istituzioni nella forma ufficiale: *il Senato, l'Università di Bologna, la Costituzione*;
+- feste: *Natale, Pasqua, Ferragosto*;
+- epoche e secoli sostantivati: *il Rinascimento, il Novecento, il Sessantotto*;
+- punti cardinali come **regione**: *il Sud, l'Oriente* (ma direzione → minuscola: *vado a sud*);
+- corpi celesti in senso **astronomico**: *la Terra, il Sole, la Luna* (ma *un bel sole* → minuscola).
+
+**Minuscola in italiano (≠ inglese):**
+- **mesi e giorni:** ✓ *gennaio, lunedì* (✗ *Gennaio, Lunedì*);
+- **nazionalità e lingue** (nomi e aggettivi): ✓ *un italiano, il pane francese, parla spagnolo* (✗ *un Italiano*);
+- **titoli e cariche** nell'uso comune: ✓ *il presidente, il papa, il ministro* (maiuscola solo nel
+  protocollo o per la carica specifica: *il Presidente della Repubblica*).
+
+**Oscillanti** (scegli e mantieni la coerenza): abitanti al plurale (*gli italiani / gli Italiani*),
+cariche di rilievo (*il Re / il re*). Maiuscola di riguardo *La, Le* nelle lettere formali: vedi
+`dubbi-e-errori.md` §23.
+
+> ⚠ **Tic da calco inglese / da AI:** ✗ *ogni Lunedì, nel mese di Gennaio, Direttore Generale*,
+> titoli in *Title Case* → ✓ *ogni lunedì, gennaio, direttore generale*, titoli in **sentence case**
+> (solo prima parola e nomi propri). Vedi `stile-naturale.md` §24.
+
+## IL PUNTO NELLE ABBREVIAZIONI E SIGLE
+
+- **Contrazione** (restano iniziale e finale): punto interno/finale — `ill.mo`, `f.lli`, `ca.`
+- **Troncamento per iniziali:** punto finale — `dott.`, `prof.`, `ecc.`, `pag./pagg.`,
+  `art./artt.`, `vol./voll.`; lettera singola raddoppiata al plurale: `p./pp.`, `v./vv.`
+- **Abbreviazioni composte:** iniziali col punto — `c.p.c.`, `G.U.`, `D.P.R.`, `s.l.m.`
+- **Sigle/acronimi: punto OMESSO** — `CAP, FAI, FAO, ISTAT, UTET`.
+- **`dr` / `cfr`:** senza punto se contrazioni, con punto (`dr.`, `cfr.`) se troncamenti —
+  scegli e mantieni.
+- **Mai duplicare il punto:** quello abbreviativo finale si fonde col punto fermo.

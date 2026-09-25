@@ -1,0 +1,83 @@
+{
+  "output": "ALFA_841, BETA_392, GAMMA_675",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 46386,
+      "inputTokens": 46236,
+      "cachedInputTokens": 27392,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 150,
+      "reasoningOutputTokens": 30
+    },
+    "last": {
+      "totalTokens": 18589,
+      "inputTokens": 18571,
+      "cachedInputTokens": 18304,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 18,
+      "reasoningOutputTokens": 0
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [
+    {
+      "path": "references/prova-lunga.md",
+      "sha256": "7be518e58346c979079af23c5eb1387622a1447f73a519a855e07d39175a7e41",
+      "bytes": 71884
+    },
+    {
+      "path": "references/prova-lunga.md",
+      "sha256": "7be518e58346c979079af23c5eb1387622a1447f73a519a855e07d39175a7e41",
+      "bytes": 71884
+    }
+  ],
+  "durationMs": 11668,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "ad482d4bffadf60b06d45a55f0c3fe773bd1564e00cd54a09360b319712b3792",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

@@ -1,0 +1,73 @@
+{
+  "fingerprint": "2324b196c6ef2606b7ceeb16bb20ff55d1fb6c29a3de4efc5a282a8b773b0742",
+  "output": "{\"pass\":true,\"textOk\":true,\"responseOk\":true,\"invented\":0,\"expectations\":[true,true,true],\"notes\":\"Il testo è restituito invariato: conserva prima persona, tono brusco, opinione e ritmo, senza aggiunte. Non erano necessari interventi.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 33164,
+      "inputTokens": 32883,
+      "cachedInputTokens": 28800,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 281,
+      "reasoningOutputTokens": 134
+    },
+    "last": {
+      "totalTokens": 11153,
+      "inputTokens": 11076,
+      "cachedInputTokens": 10752,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 77,
+      "reasoningOutputTokens": 10
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 16537,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "d824564070a2ba59574296b3e5e7118e6a154b6add40d90a7fb67bd5f609d332",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

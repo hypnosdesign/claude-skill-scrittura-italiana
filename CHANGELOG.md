@@ -5,6 +5,30 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## In lavorazione — seguito dell'audit di settembre
+
+- Revisione della documentazione: applicare alla prosa il livello richiesto, proteggendo
+  codice, dati, vincoli e ordine operativo. Nessun markup aggiunto nei controlli minimi.
+- Precedenza tipografica unica per virgolette e apostrofi: richiesta esplicita, convenzione
+  coerente dell'originale, preferenza predefinita. Distinti annidamento e stringhe di codice.
+- Note editoriali senza rimandi interni superflui; quelli richiesti vanno verificati.
+- Nove casi dev aggiunti (58–66), senza modificare lo split held-out.
+- Runner su snapshot congelato; harness del client con snapshot dei riferimenti, transcript,
+  risposta finale, token e controllo dei modelli. Candidata compatta separata per il confronto.
+- Prove GPT con Terra 5.6, Sol 6 e Luna 6, su richiesta dell'utente. Il client verifica
+  modello, restrizioni e riferimenti consegnati; i risultati restano separati da Claude.
+- Eliminati il mandato di variare sempre il ritmo e il default di punteggiatura che
+  prevaleva sullo stile della collana. Audit finale entro il livello di revisione richiesto.
+- Distinto l'adattamento richiesto della persona grammaticale dall'invenzione di
+  esperienze; precisata la nota di consegna per le uniformazioni editoriali fra estratti.
+- Precisata la provenienza incompleta della prova A/B 2.19.0: la parità osservata non prova
+  equivalenza o non inferiorità e i conteggi storici non sono un benchmark verificabile.
+
+Stato e verifiche nel [seguito dell'audit](AUDIT-2026-09-SEGUITO.md). I controlli locali
+sono superati; le prove GPT sono terminate, con rilievi comportamentali ancora aperti.
+La candidata compatta testata non viene adottata: il risparmio di token include letture
+omesse e non compensa le perdite semantiche osservate. Non è dichiarata equivalente.
+
 ## [2.19.1] — 2026-09-25
 
 Correzioni dei primi tre rilievi dell'[audit di settembre](AUDIT-2026-09.md):
@@ -90,7 +114,13 @@ stata cambiata: sono aggiunte, e dove le due fonti divergono resta Garavelli.
   riparazione.
 - Rimandi incrociati nuovi fra «frantumazione eccessiva» (`punteggiatura.md`) e §19.
 
-### Misurato — A/B appaiato, **nessun guadagno misurabile**
+### Risultati riferiti — A/B, stesso pass rate osservato
+
+**Provenienza incompleta:** non sono disponibili nel repository gli artefatti dei due
+bracci di questa prova né del ricontrollo sulle virgolette citato sotto. I conteggi
+seguenti sono quelli annotati all'epoca, non risultati riproducibili o verificati sui
+singoli output. Non usarli come benchmark della versione corrente. Gli artefatti del
+kit cieco sono un'altra prova e non possono sostituire quelli di questo A/B.
 
 Dodici casi scelti (sei di rischio-regressione, cinque dove la patch dovrebbe agire, uno di
 routing), due run per braccio, `claude-sonnet-5` con giudice `claude-opus-4-8`, bracci in
@@ -127,10 +157,11 @@ dove il modello lo incontra per primo; misurato, resta 0/3. La correzione è ten
 testo è comunque più preciso, ma **non conta come fix**: la falla resta aperta e non ha
 ancora una contromisura che regga alla misura.
 
-**Conclusione onesta: la patch non è dimostrata migliore, è dimostrata non peggiore sul pass
-rate.** Entra per la qualità del contenuto — precetti corretti, con fonte — non per un
-guadagno misurato. La misura che deciderebbe (nota vincolata + più run sui casi `minimal`)
-non è stata fatta.
+**Stesso pass rate osservato; evidenza insufficiente per concludere equivalenza o non
+inferiorità.** Il 13/24 nei due bracci non dimostra che la patch non peggiori la qualità.
+La versione fu adottata per ragioni editoriali, non per un guadagno misurato; la 2.19.1
+ha poi corretto anche alcune delle regole qui introdotte. La misura proposta con note
+vincolate e più ripetizioni sui casi `minimal` non fu eseguita.
 
 ### Misurato — l'ipotesi del canarino sul `;`, **non confermata**
 

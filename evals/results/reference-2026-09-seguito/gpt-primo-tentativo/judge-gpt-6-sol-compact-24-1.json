@@ -1,0 +1,73 @@
+{
+  "fingerprint": "372212d0b39207e8975c7e6bab3503fb7e0afb5775089ae4c5f1e3fbfe78db42",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":true,\"invented\":2,\"expectations\":[false,true,false,false],\"notes\":\"Manca la prima persona singolare del campione. «Quasi tutti» rafforza «la maggior parte»; «ci hanno fatto sforare» attribuisce a qualcuno la responsabilità del ritardo, assente nell’originale.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 11170,
+      "inputTokens": 10861,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 309,
+      "reasoningOutputTokens": 221
+    },
+    "last": {
+      "totalTokens": 11170,
+      "inputTokens": 10861,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 309,
+      "reasoningOutputTokens": 221
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 13151,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "664dbdf7e0ec5c21d0f3fe53b8d9ac133a4a3d0eedc37c1c54587d4eaf082081",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

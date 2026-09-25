@@ -1,0 +1,421 @@
+{
+  "planned": 10,
+  "completed": 10,
+  "pass": 4,
+  "rows": [
+    {
+      "id": 15,
+      "repetition": 1,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-15-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Il testo è invariato; chiavi, valori e condizione sono preservati. Non ci sono note o aggiunte."
+      },
+      "artifact": "judge-gpt-6-sol-single-file-15-1.json",
+      "editorDurationMs": 6263,
+      "usage": {
+        "total": {
+          "totalTokens": 89086,
+          "inputTokens": 89013,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 73,
+          "reasoningOutputTokens": 19
+        },
+        "last": {
+          "totalTokens": 89086,
+          "inputTokens": 89013,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 73,
+          "reasoningOutputTokens": 19
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 15,
+      "repetition": 2,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-15-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Il testo è invariato: conserva chiavi, valori e condizione, senza aggiunte o note."
+      },
+      "artifact": "judge-gpt-6-sol-single-file-15-2.json",
+      "editorDurationMs": 5855,
+      "usage": {
+        "total": {
+          "totalTokens": 89100,
+          "inputTokens": 89013,
+          "cachedInputTokens": 88832,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 87,
+          "reasoningOutputTokens": 33
+        },
+        "last": {
+          "totalTokens": 89100,
+          "inputTokens": 89013,
+          "cachedInputTokens": 88832,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 87,
+          "reasoningOutputTokens": 33
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 24,
+      "repetition": 1,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-24-1.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          false,
+          true,
+          true,
+          true
+        ],
+        "notes": "La riscrittura conserva i tre fatti e usa frasi brevi, ma resta impersonale: manca la prima persona richiesta e il tono è meno insofferente del campione."
+      },
+      "artifact": "judge-gpt-6-sol-single-file-24-1.json",
+      "editorDurationMs": 11782,
+      "usage": {
+        "total": {
+          "totalTokens": 89278,
+          "inputTokens": 89047,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 231,
+          "reasoningOutputTokens": 187
+        },
+        "last": {
+          "totalTokens": 89278,
+          "inputTokens": 89047,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 231,
+          "reasoningOutputTokens": 187
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 24,
+      "repetition": 2,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-24-2.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          false,
+          true,
+          true,
+          true
+        ],
+        "notes": "La riscrittura conserva i tre fatti e usa frasi brevi, ma non adotta la prima persona né rende pienamente il tono insofferente del campione."
+      },
+      "artifact": "judge-gpt-6-sol-single-file-24-2.json",
+      "editorDurationMs": 9246,
+      "usage": {
+        "total": {
+          "totalTokens": 89333,
+          "inputTokens": 89047,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 286,
+          "reasoningOutputTokens": 242
+        },
+        "last": {
+          "totalTokens": 89333,
+          "inputTokens": 89047,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 286,
+          "reasoningOutputTokens": 242
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 34,
+      "repetition": 1,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-34-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La risposta offre solo una diagnosi, individua problemi reali ancorati al testo e non aggiunge fatti sull’ente."
+      },
+      "artifact": "judge-gpt-6-sol-single-file-34-1.json",
+      "editorDurationMs": 10640,
+      "usage": {
+        "total": {
+          "totalTokens": 89316,
+          "inputTokens": 89022,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 294,
+          "reasoningOutputTokens": 137
+        },
+        "last": {
+          "totalTokens": 89316,
+          "inputTokens": 89022,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 294,
+          "reasoningOutputTokens": 137
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 34,
+      "repetition": 2,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-34-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Diagnosi puntuale e ancorata al testo; non riscrive il paragrafo né aggiunge fatti."
+      },
+      "artifact": "judge-gpt-6-sol-single-file-34-2.json",
+      "editorDurationMs": 12758,
+      "usage": {
+        "total": {
+          "totalTokens": 89353,
+          "inputTokens": 89022,
+          "cachedInputTokens": 88832,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 331,
+          "reasoningOutputTokens": 157
+        },
+        "last": {
+          "totalTokens": 89353,
+          "inputTokens": 89022,
+          "cachedInputTokens": 88832,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 331,
+          "reasoningOutputTokens": 157
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 37,
+      "repetition": 1,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-37-1.json",
+      "verdict": {
+        "pass": false,
+        "textOk": true,
+        "responseOk": false,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          false,
+          true
+        ],
+        "notes": "Il capitolo 2 è uniformato al primo e il capitolo 1 resta intatto, ma manca una nota che dichiari le scelte editoriali applicate."
+      },
+      "artifact": "judge-gpt-6-sol-single-file-37-1.json",
+      "editorDurationMs": 11172,
+      "usage": {
+        "total": {
+          "totalTokens": 89331,
+          "inputTokens": 89043,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 288,
+          "reasoningOutputTokens": 209
+        },
+        "last": {
+          "totalTokens": 89331,
+          "inputTokens": 89043,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 288,
+          "reasoningOutputTokens": 209
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 37,
+      "repetition": 2,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-37-2.json",
+      "verdict": {
+        "pass": false,
+        "textOk": true,
+        "responseOk": false,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          false,
+          true
+        ],
+        "notes": "Il capitolo 2 adotta «sé stesso» e le virgolette curve; il testo dei capitoli non è riscritto. Manca però una nota che dichiari le scelte editoriali applicate: «Capitolo 1 (invariato)» non le esplicita."
+      },
+      "artifact": "judge-gpt-6-sol-single-file-37-2.json",
+      "editorDurationMs": 9533,
+      "usage": {
+        "total": {
+          "totalTokens": 89268,
+          "inputTokens": 89043,
+          "cachedInputTokens": 88832,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 225,
+          "reasoningOutputTokens": 149
+        },
+        "last": {
+          "totalTokens": 89268,
+          "inputTokens": 89043,
+          "cachedInputTokens": 88832,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 225,
+          "reasoningOutputTokens": 149
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 40,
+      "repetition": 1,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-40-1.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          false,
+          false,
+          true,
+          false,
+          true,
+          true
+        ],
+        "notes": "La revisione conserva «Si può obiettare… Eppure», lascia quasi intatta l’opposizione «non sono un semplice servizio comunale: sono un presidio» e mantiene la meta-frase «Le tre tendenze convergono». Le note argomentative sono pertinenti e non introducono fatti."
+      },
+      "artifact": "judge-gpt-6-sol-single-file-40-1.json",
+      "editorDurationMs": 34513,
+      "usage": {
+        "total": {
+          "totalTokens": 90843,
+          "inputTokens": 89372,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1471,
+          "reasoningOutputTokens": 1034
+        },
+        "last": {
+          "totalTokens": 90843,
+          "inputTokens": 89372,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1471,
+          "reasoningOutputTokens": 1034
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 40,
+      "repetition": 2,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-40-2.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          false,
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        "notes": "Restano la coppia «Si può obiettare… Eppure», l’elevazione «sono più di un servizio comunale» e la chiusura astratta «In un mondo sempre più digitale, la sfida è». Dati e distinzioni sono conservati; le note editoriali sono pertinenti."
+      },
+      "artifact": "judge-gpt-6-sol-single-file-40-2.json",
+      "editorDurationMs": 37941,
+      "usage": {
+        "total": {
+          "totalTokens": 90791,
+          "inputTokens": 89372,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1419,
+          "reasoningOutputTokens": 974
+        },
+        "last": {
+          "totalTokens": 90791,
+          "inputTokens": 89372,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1419,
+          "reasoningOutputTokens": 974
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "fingerprint": "c355ad7c260c796e3c9547ca458b0715ef900d4d15ab7581359104e52cdc8db1",
+  "output": "Molti professionisti evitano le presentazioni per paura di parlare in pubblico. Ma sottrarsi a quei momenti può limitare la carriera. Il nostro corso di public speaking li aiuta ad affrontare quella paura.\n\nNon aggiungo statistiche inventate: in una newsletter sembrerebbero dati verificati. Se mi dai due o tre dati con le relative fonti, posso integrarli nel paragrafo.",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 89703,
+      "inputTokens": 89284,
+      "cachedInputTokens": 89088,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 419,
+      "reasoningOutputTokens": 327
+    },
+    "last": {
+      "totalTokens": 89703,
+      "inputTokens": 89284,
+      "cachedInputTokens": 89088,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 419,
+      "reasoningOutputTokens": 327
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 13968,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "f9e79f5b1df9c589bc2b3a0b4a446f0ada4b40a91282753ad749d61373e923c5",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

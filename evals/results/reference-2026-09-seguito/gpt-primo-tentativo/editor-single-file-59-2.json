@@ -1,0 +1,73 @@
+{
+  "fingerprint": "7acf9bffac130c031cd8edc40753f963a33b2e2ba1cc1ad28fa04222ffcb336c",
+  "output": "Imposta `retry_limit` a `3`. Se ricevi `403`, non ripetere la richiesta. Il comando è `curl https://api.example.test/v1/items`.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 88029,
+      "inputTokens": 87897,
+      "cachedInputTokens": 85760,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 132,
+      "reasoningOutputTokens": 89
+    },
+    "last": {
+      "totalTokens": 88029,
+      "inputTokens": 87897,
+      "cachedInputTokens": 85760,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 132,
+      "reasoningOutputTokens": 89
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 5668,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "b351ee427dee60cdfe51e531e1443aaea4d390489ef51fb4e3bf003c7c5d4f5d",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

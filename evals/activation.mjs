@@ -19,7 +19,8 @@
 // CLI), n piccolo, un solo modello per run. Indicativa, non un benchmark.
 // L'ambiente NON è ermetico per default: HOME resta quello reale, quindi skill
 // personali (inclusa un'eventuale copia di scrittura-italiana in ~/.claude/skills)
-// e memoria globale possono entrare nella misura. Per questo l'harness CLASSIFICA
+// possono entrare nella misura. La memoria automatica e i CLAUDE.md sono disabilitati.
+// Per questo l'harness CLASSIFICA
 // separatamente invocazione, attribuzione provata alla copia di progetto e letture
 // della copia personale. Con --hermetic HOME e XDG_* puntano a una
 // home usa-e-getta nella workdir: isola davvero, ma su macchine dove le
@@ -39,15 +40,24 @@
 
 import { execFileSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
-import { appendFileSync, cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from 'node:fs'
+import { appendFileSync, cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, realpathSync, rmSync, writeFileSync } from 'node:fs'
 import { homedir, tmpdir } from 'node:os'
 import { join, resolve, dirname } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
-import { isSessionLimit } from './run.mjs'
+import { isSessionLimit, requestedModelMismatch } from './run.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const REPO = resolve(HERE, '..')
 const safe = (fn, fb) => { try { return fn() } catch { return fb } }
+export const CLIENT_POLICY = Object.freeze({
+  tools: ['Skill', 'Read', 'Glob', 'Grep'], restricted: true, strictMcp: true,
+  permissionPrompts: 'none', noSessionPersistence: true,
+  env: {
+    CLAUDE_CODE_DISABLE_AUTO_MEMORY: '1',
+    CLAUDE_CODE_DISABLE_CLAUDE_MDS: '1',
+    CLAUDE_CODE_DISABLE_BACKGROUND_TASKS: '1',
+  },
+})
 
 export function main(argv = process.argv.slice(2)) {
   const args = parseArgs(argv)
@@ -57,9 +67,16 @@ export function main(argv = process.argv.slice(2)) {
   const skillSrc = resolve(args['skill-src'] ?? REPO)
   const claudeBin = process.env.CLAUDE_BIN || 'claude'
   const stamp = new Date().toISOString().replace(/[:.]/g, '-')
+  if (args['max-turns'] !== undefined && (!Number.isInteger(Number(args['max-turns'])) || Number(args['max-turns']) < 1)) {
+    throw new Error('--max-turns richiede un intero positivo')
+  }
 
-  const casesFile = join(HERE, 'activation-cases.json')
+  const casesFile = resolve(args.cases ?? join(HERE, 'activation-cases.json'))
   const all = JSON.parse(readFileSync(casesFile, 'utf8')).cases
+  if (!Array.isArray(all) || all.some(c => !Number.isInteger(c.id) || typeof c.prompt !== 'string'
+    || !['positive', 'negative', 'routing'].includes(c.kind))
+    || new Set(all.map(c => c.id)).size !== all.length) throw new Error('casi di attivazione non validi')
+  if (onlyIds && [...onlyIds].some(id => !all.some(c => c.id === id))) throw new Error('id assenti dai casi')
   let selected = all.filter(c =>
     (!onlyIds || onlyIds.has(c.id)) && (kindFilter === 'all' || c.kind === kindFilter))
   if (args.probe) selected = [all.find(c => c.kind === 'positive'), all.find(c => c.kind === 'routing')].filter(Boolean)
@@ -87,13 +104,18 @@ export function main(argv = process.argv.slice(2)) {
   const outDir = resolve(args.out ?? join(HERE, 'results', `${stamp}__activation`))
   if (existsSync(outDir)) throw new Error(`directory di output già esistente: ${outDir}`)
   mkdirSync(outDir, { recursive: true })
+  cpSync(skillDir, join(outDir, 'skill'), { recursive: true })
+  cpSync(casesFile, join(outDir, 'cases.json'))
+  const files = ['SKILL.md', ...readdirSync(join(skillDir, 'references')).filter(f => f.endsWith('.md')).map(f => `references/${f}`)].sort()
+  const skillFiles = Object.fromEntries(files.map(f => [f, sha256(readFileSync(join(skillDir, f)))]))
 
   const claudeVer = safe(() => execFileSync(claudeBin, ['--version'], { encoding: 'utf8', env: claudeEnv() }).trim(), '?')
   const gitSha = safe(() => execFileSync('git', ['rev-parse', '--short', 'HEAD'], { cwd: REPO, encoding: 'utf8' }).trim(), 'nogit')
   writeFileSync(join(outDir, 'meta.json'), JSON.stringify({
-    schemaVersion: 2, stamp, argv, model, kindFilter, git: gitSha, hermetic,
+    schemaVersion: 3, stamp, argv, model, kindFilter, git: gitSha, hermetic,
+    clientPolicy: CLIENT_POLICY,
     personalCopyAbsent, personalHomonym,
-    skillSrc, skillSha, workDir, claudeVer, node: process.version,
+    skillSrc, skillSha, skillFiles, casesSha: sha256(readFileSync(casesFile)), workDir, claudeVer, node: process.version,
     ids: selected.map(c => c.id),
   }, null, 2))
 
@@ -104,6 +126,9 @@ export function main(argv = process.argv.slice(2)) {
   for (const c of selected) {
     const maxTurns = Number(args['max-turns'] ?? (c.kind === 'routing' ? 15 : 6))
     const row = runCase(c, { claudeBin, model, maxTurns, workDir, fakeHome, personalCopyAbsent })
+    row.transcriptFile = `transcript-${c.id}.jsonl`
+    writeFileSync(join(outDir, row.transcriptFile), row.raw)
+    delete row.raw
     rows.push(row)
     appendFileSync(join(outDir, 'results.jsonl'), JSON.stringify(row) + '\n')
     const mark = row.error ? 'ERR' : row.skillFired ? 'FIRE' : row.activationAttribution === 'ambiguous' ? '?' : 'no'
@@ -118,6 +143,7 @@ export function main(argv = process.argv.slice(2)) {
   }
 
   const summary = summarize(rows)
+  summary.modelMismatches = rows.filter(r => r.modelMismatch).length
   if (aborted) summary.aborted = aborted
   writeFileSync(join(outDir, 'summary.json'), JSON.stringify(summary, null, 2))
   const md = renderSummary(summary, { model, claudeVer, skillSha, gitSha })
@@ -125,7 +151,7 @@ export function main(argv = process.argv.slice(2)) {
   console.log('\n' + md + `\n→ artefatti: ${outDir}`)
   if (args['keep-workdir']) console.log(`workdir conservata: ${workDir}`)
   else safe(() => rmSync(workDir, { recursive: true, force: true }), null)
-  return { outDir, summary, rows, aborted }
+  return { outDir, summary, rows, aborted, failed: Boolean(aborted || summary.errors || summary.modelMismatches) }
 }
 
 function runCase(c, { claudeBin, model, maxTurns, workDir, fakeHome, personalCopyAbsent = false }) {
@@ -136,7 +162,10 @@ function runCase(c, { claudeBin, model, maxTurns, workDir, fakeHome, personalCop
     raw = execFileSync(claudeBin, [
       '-p', '--output-format', 'stream-json', '--verbose',
       '--model', model, '--max-turns', String(maxTurns),
-      '--allowedTools', 'Skill Read Glob Grep',
+      '--tools', CLIENT_POLICY.tools.join(','),
+      '--allowedTools', CLIENT_POLICY.tools.join(','),
+      '--restricted', '--strict-mcp-config', '--no-session-persistence',
+      '--permission-prompts', CLIENT_POLICY.permissionPrompts,
     ], {
       input: c.prompt,
       cwd: workDir,
@@ -158,7 +187,8 @@ function runCase(c, { claudeBin, model, maxTurns, workDir, fakeHome, personalCop
   // risolti /private/var/folders/… — si confronta sulla forma canonica.
   const realWorkDir = safe(() => realpathSync(workDir), workDir)
   const observed = analyzeEvents(events, { workDir, realWorkDir, hermetic: Boolean(fakeHome), personalCopyAbsent })
-  const result = events.find(ev => ev?.type === 'result')
+  const completion = readCompletion(events, model)
+  error ||= completion.error
   const expected = c.expectReads ?? null
   const routingHit = expected ? observed.referenceReads.some(r => expected.some(e => r.includes(e))) : null
 
@@ -166,15 +196,35 @@ function runCase(c, { claudeBin, model, maxTurns, workDir, fakeHome, personalCop
     id: c.id,
     kind: c.kind,
     prompt: c.prompt,
+    raw,
+    output: completion.output,
+    usage: completion.usage,
+    modelMismatch: completion.modelMismatch,
     ...observed,
     expectReads: expected,
     routingHit,
-    numTurns: result?.num_turns ?? null,
-    costUsd: typeof result?.total_cost_usd === 'number' ? result.total_cost_usd : null,
-    models: Object.keys(result?.modelUsage ?? {}),
+    numTurns: completion.numTurns,
+    maxTurns,
+    costUsd: completion.costUsd,
+    models: completion.models,
     durationMs: Number((process.hrtime.bigint() - started) / 1_000_000n),
     error,
   }
+}
+
+// Senza una risposta finale verificabile il run non può misurare qualità o costo.
+// Conservare separati input, cache e output evita di scambiare token fatturati per
+// lunghezza delle letture; il transcript conserva il dettaglio degli strumenti.
+export function readCompletion(events, model) {
+  const result = events.filter(ev => ev?.type === 'result').at(-1)
+  const models = Object.keys(result?.modelUsage ?? {})
+  const output = typeof result?.result === 'string' ? result.result : null
+  const error = !result ? 'evento result assente'
+    : result.is_error || result.subtype !== 'success' ? `client non riuscito (${result.api_error_status ?? result.subtype ?? 'errore'}): ${result.result ?? ''}`
+      : !output?.trim() ? 'risposta finale assente' : null
+  return { output, error, models, modelMismatch: requestedModelMismatch(model, models),
+    usage: result?.usage ?? null, numTurns: result?.num_turns ?? null,
+    costUsd: typeof result?.total_cost_usd === 'number' ? result.total_cost_usd : null }
 }
 
 // Classificatore puro: testabile senza chiamare il client. `skillFired` significa
@@ -276,6 +326,7 @@ function renderSummary(s, h) {
   L.push(`- **Routing — skill attiva:** ${pct(s.routing.fired, s.routing.n)} · **riferimento atteso aperto:** ${pct(s.routing.expectedReadHit, s.routing.n)}`)
   L.push(`- invocazioni del tool Skill osservate: ${s.skillInvocations} · attribuzione ambigua: ${s.ambiguousInvocations}`)
   L.push(`- errori harness: ${s.errors} · costo API dichiarato: $${s.costUsd}`)
+  if (s.modelMismatches) L.push(`- ⚠ modello pinnato non rispettato: ${s.modelMismatches} casi; confronto non valido.`)
   if (s.ambiguousInvocations) L.push('- ⚠ Le invocazioni ambigue non entrano nei tassi di attivazione: ripetere con `--hermetic`, o spostare la copia personale fuori da `~/.claude/skills` (l\'harness verifica l\'assenza e attribuisce come `project-isolated`).')
   if (s.isolatedAttributions) L.push(`- attribuzioni \`project-isolated\`: ${s.isolatedAttributions} — omonima personale assente al momento del run, verificata dall'harness.`)
   if (s.personalCopyReads) L.push(`- ⚠ letture della copia PERSONALE della skill (contaminazione, escluse dai conteggi): ${s.personalCopyReads}`)
@@ -295,7 +346,7 @@ function sha256(text) {
 }
 
 function claudeEnv(fakeHome = null) {
-  const env = { ...process.env }
+  const env = { ...process.env, ...CLIENT_POLICY.env }
   delete env.CLAUDECODE
   if (fakeHome) {
     env.HOME = fakeHome
@@ -308,7 +359,7 @@ function claudeEnv(fakeHome = null) {
 
 function parseArgs(argv) {
   const o = {}
-  const allowed = new Set(['model', 'kind', 'ids', 'max-turns', 'out', 'skill-src', 'probe', 'hermetic', 'keep-workdir'])
+  const allowed = new Set(['model', 'kind', 'ids', 'max-turns', 'out', 'skill-src', 'cases', 'probe', 'hermetic', 'keep-workdir'])
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i]
     if (a.startsWith('--')) {
@@ -324,7 +375,7 @@ function parseArgs(argv) {
 
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   try {
-    main()
+    if (main().failed) process.exitCode = 1
   } catch (err) {
     console.error(`errore: ${err.message}`)
     process.exit(1)

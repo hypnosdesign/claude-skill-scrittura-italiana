@@ -1,0 +1,73 @@
+{
+  "fingerprint": "079cd38abfc3241f0a35d77eb2739748e4ae471d0573619268e3763c7aecef2b",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":true,\"invented\":0,\"expectations\":[true,false,true,true],\"notes\":\"I termini e i codici sono conservati, ma il livello minimal non autorizzava ritocchi stilistici: sono stati aggiunti i backtick e riformulati l’elenco inline, «in JSON» e «restituisce 401». Non ci sono note da valutare.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 11312,
+      "inputTokens": 10895,
+      "cachedInputTokens": 0,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 417,
+      "reasoningOutputTokens": 318
+    },
+    "last": {
+      "totalTokens": 11312,
+      "inputTokens": 10895,
+      "cachedInputTokens": 0,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 417,
+      "reasoningOutputTokens": 318
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 13310,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "1da7268456e2f1196ce0fdf318ed7925eb6ce4be29d6d512c6ed60097a411cf5",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

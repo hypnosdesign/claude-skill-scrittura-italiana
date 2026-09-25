@@ -1,0 +1,73 @@
+{
+  "fingerprint": "d902858bdc55c33a31c67ba6daa2e4dd4bd2f5e578314fc176b394d60a068585",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":true,\"invented\":2,\"expectations\":[false,false,true,true],\"notes\":\"Il testo riporta i fatti richiesti, ma «oggi portata avanti da due artigiani» attribuisce loro la conduzione della bottega, non indicata nel brief. «Pensati per gli spazi e le esigenze di ogni cliente» aggiunge un dettaglio progettuale non fornito. Registro e formato sono adeguati.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 11312,
+      "inputTokens": 10847,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 465,
+      "reasoningOutputTokens": 357
+    },
+    "last": {
+      "totalTokens": 11312,
+      "inputTokens": 10847,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 465,
+      "reasoningOutputTokens": 357
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 17254,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "240e667bbbc49af337e5a0552adff01f35112ed9dc78a68948ef7eacd7a7f893",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

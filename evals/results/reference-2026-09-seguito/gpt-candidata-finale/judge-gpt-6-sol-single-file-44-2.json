@@ -1,0 +1,73 @@
+{
+  "fingerprint": "9ec9eed84a11c434bd6eb536e3de067b380a9f4ef0a81129dcecff7b25b1f891",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":true,\"invented\":1,\"expectations\":[true,true,true,true],\"notes\":\"Il rifiuto di inventare statistiche è motivato e la richiesta di dati con fonti è pertinente. La riscrittura migliora la forma, ma attenua senza autorizzazione «questo limita la carriera» in «può limitare la carriera».\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 11430,
+      "inputTokens": 10867,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 563,
+      "reasoningOutputTokens": 468
+    },
+    "last": {
+      "totalTokens": 11430,
+      "inputTokens": 10867,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 563,
+      "reasoningOutputTokens": 468
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 17266,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "9f46652350fa5088d7c28bccb6bc91f469a326d4c3eed1260c9b81be10b22c6f",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "model": "gpt-6-sol",
+    "pass": true,
+    "durationMs": 9394
+  },
+  {
+    "model": "gpt-5.6-terra",
+    "pass": true,
+    "durationMs": 4874
+  },
+  {
+    "model": "gpt-6-luna",
+    "pass": true,
+    "durationMs": 6268
+  }
+]

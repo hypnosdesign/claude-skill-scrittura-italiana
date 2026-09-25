@@ -1,0 +1,2481 @@
+{
+  "planned": 56,
+  "completed": 56,
+  "pass": 37,
+  "rows": [
+    {
+      "id": 7,
+      "repetition": 1,
+      "arm": "base",
+      "editorArtifact": "editor-base-7-1.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Il testo conserva termini, codici ed elenco, ma aggiunge due «in formato» non necessari: ritocchi stilistici vietati dal livello minimal. Non ci sono note da valutare."
+      },
+      "artifact": "judge-gpt-6-sol-base-7-1.json",
+      "editorDurationMs": 10538,
+      "usage": {
+        "total": {
+          "totalTokens": 58893,
+          "inputTokens": 58603,
+          "cachedInputTokens": 20992,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 290,
+          "reasoningOutputTokens": 195
+        },
+        "last": {
+          "totalTokens": 39605,
+          "inputTokens": 39372,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 233,
+          "reasoningOutputTokens": 165
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "repetition": 1,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-7-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Il testo è invariato, conserva tutti i termini e i codici richiesti e non aggiunge note."
+      },
+      "artifact": "judge-gpt-6-sol-compact-7-1.json",
+      "editorDurationMs": 4974,
+      "usage": {
+        "total": {
+          "totalTokens": 12416,
+          "inputTokens": 12315,
+          "cachedInputTokens": 2816,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 101,
+          "reasoningOutputTokens": 36
+        },
+        "last": {
+          "totalTokens": 12416,
+          "inputTokens": 12315,
+          "cachedInputTokens": 2816,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 101,
+          "reasoningOutputTokens": 36
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 7,
+      "repetition": 2,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-7-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Il testo è invariato, conserva tutti i termini e i codici richiesti e non aggiunge note o commenti."
+      },
+      "artifact": "judge-gpt-6-sol-compact-7-2.json",
+      "editorDurationMs": 6843,
+      "usage": {
+        "total": {
+          "totalTokens": 12520,
+          "inputTokens": 12315,
+          "cachedInputTokens": 2816,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 205,
+          "reasoningOutputTokens": 140
+        },
+        "last": {
+          "totalTokens": 12520,
+          "inputTokens": 12315,
+          "cachedInputTokens": 2816,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 205,
+          "reasoningOutputTokens": 140
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 7,
+      "repetition": 2,
+      "arm": "base",
+      "editorArtifact": "editor-base-7-2.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Il testo conserva tutti i dati e l’elenco inline, ma introduce ritocchi non necessari per il livello minimal: formattazione dei termini come codice, «in formato» e «un codice», oltre alla modifica della punteggiatura dell’elenco."
+      },
+      "artifact": "judge-gpt-6-sol-base-7-2.json",
+      "editorDurationMs": 5943,
+      "usage": {
+        "total": {
+          "totalTokens": 41950,
+          "inputTokens": 41818,
+          "cachedInputTokens": 20992,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 132,
+          "reasoningOutputTokens": 27
+        },
+        "last": {
+          "totalTokens": 22662,
+          "inputTokens": 22587,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 75,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/spiegare-con-chiarezza.md",
+          "sha256": "242aad5b8ce5f7da4f6148e82636411d4e8c8fbe89364c245bf008e0a0380bc9",
+          "bytes": 11271
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "repetition": 1,
+      "arm": "base",
+      "editorArtifact": "editor-base-19-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La risposta distingue correttamente le varianti dagli errori, consiglia le forme preferibili nel saggio e spiega l’uso moderno della d eufonica con esempi pertinenti."
+      },
+      "artifact": "judge-gpt-6-sol-base-19-1.json",
+      "editorDurationMs": 7333,
+      "usage": {
+        "total": {
+          "totalTokens": 53254,
+          "inputTokens": 53098,
+          "cachedInputTokens": 20992,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 156,
+          "reasoningOutputTokens": 22
+        },
+        "last": {
+          "totalTokens": 34031,
+          "inputTokens": 33925,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 106,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/dubbi-e-errori.md",
+          "sha256": "b035dd5046bb39973e79d0bc8cb555a1c2e533c92770c6ba278c5d15051404c6",
+          "bytes": 45847
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "repetition": 1,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-19-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La risposta distingue le varianti dagli errori, consiglia «a ogni costo» ed «e ora» e spiega l’uso della d eufonica con esempi pertinenti."
+      },
+      "artifact": "judge-gpt-6-sol-compact-19-1.json",
+      "editorDurationMs": 8975,
+      "usage": {
+        "total": {
+          "totalTokens": 39434,
+          "inputTokens": 39267,
+          "cachedInputTokens": 14848,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 167,
+          "reasoningOutputTokens": 23
+        },
+        "last": {
+          "totalTokens": 27126,
+          "inputTokens": 27010,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 116,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/dubbi-e-errori.md",
+          "sha256": "b035dd5046bb39973e79d0bc8cb555a1c2e533c92770c6ba278c5d15051404c6",
+          "bytes": 45847
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "repetition": 2,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-19-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Distingue correttamente le varianti dagli errori, consiglia le forme richieste e spiega l’uso moderno della d eufonica con esempi pertinenti."
+      },
+      "artifact": "judge-gpt-6-sol-compact-19-2.json",
+      "editorDurationMs": 8471,
+      "usage": {
+        "total": {
+          "totalTokens": 39439,
+          "inputTokens": 39266,
+          "cachedInputTokens": 14848,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 173,
+          "reasoningOutputTokens": 22
+        },
+        "last": {
+          "totalTokens": 27132,
+          "inputTokens": 27009,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 123,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/dubbi-e-errori.md",
+          "sha256": "b035dd5046bb39973e79d0bc8cb555a1c2e533c92770c6ba278c5d15051404c6",
+          "bytes": 45847
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "repetition": 2,
+      "arm": "base",
+      "editorArtifact": "editor-base-19-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La risposta consiglia le forme preferibili nel registro sorvegliato, chiarisce che le varianti con d eufonica non sono errori e fornisce esempi pertinenti."
+      },
+      "artifact": "judge-gpt-6-sol-base-19-2.json",
+      "editorDurationMs": 8188,
+      "usage": {
+        "total": {
+          "totalTokens": 53286,
+          "inputTokens": 53105,
+          "cachedInputTokens": 20992,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 181,
+          "reasoningOutputTokens": 29
+        },
+        "last": {
+          "totalTokens": 34056,
+          "inputTokens": 33932,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 124,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/dubbi-e-errori.md",
+          "sha256": "b035dd5046bb39973e79d0bc8cb555a1c2e533c92770c6ba278c5d15051404c6",
+          "bytes": 45847
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "repetition": 1,
+      "arm": "base",
+      "editorArtifact": "editor-base-20-1.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 1,
+        "expectations": [
+          true,
+          false,
+          false,
+          true
+        ],
+        "notes": "«Curati in ogni fase della lavorazione» aggiunge un dettaglio non fornito e una formula promozionale generica. Gli altri fatti richiesti sono presenti."
+      },
+      "artifact": "judge-gpt-6-sol-base-20-1.json",
+      "editorDurationMs": 8824,
+      "usage": {
+        "total": {
+          "totalTokens": 48109,
+          "inputTokens": 47980,
+          "cachedInputTokens": 20992,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 129,
+          "reasoningOutputTokens": 46
+        },
+        "last": {
+          "totalTokens": 28824,
+          "inputTokens": 28770,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 54,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/retorica-efficacia.md",
+          "sha256": "e8dbb46b2f473bbad8ec4742289a109a76c08951b39288743e191d15c467c1de",
+          "bytes": 30985
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "repetition": 1,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-20-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Tre frasi sobrie riportano tutti i fatti richiesti, senza slogan o dettagli aggiunti. Nessuna nota o vincolo di formato disatteso."
+      },
+      "artifact": "judge-gpt-6-sol-compact-20-1.json",
+      "editorDurationMs": 4240,
+      "usage": {
+        "total": {
+          "totalTokens": 12360,
+          "inputTokens": 12294,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 66,
+          "reasoningOutputTokens": 19
+        },
+        "last": {
+          "totalTokens": 12360,
+          "inputTokens": 12294,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 66,
+          "reasoningOutputTokens": 19
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 20,
+      "repetition": 2,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-20-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Tre frasi sobrie che riportano tutti i fatti richiesti, senza slogan o dettagli inventati. Non sono presenti note editoriali."
+      },
+      "artifact": "judge-gpt-6-sol-compact-20-2.json",
+      "editorDurationMs": 5200,
+      "usage": {
+        "total": {
+          "totalTokens": 12389,
+          "inputTokens": 12294,
+          "cachedInputTokens": 2816,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 95,
+          "reasoningOutputTokens": 47
+        },
+        "last": {
+          "totalTokens": 12389,
+          "inputTokens": 12294,
+          "cachedInputTokens": 2816,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 95,
+          "reasoningOutputTokens": 47
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 20,
+      "repetition": 2,
+      "arm": "base",
+      "editorArtifact": "editor-base-20-2.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 1,
+        "expectations": [
+          true,
+          false,
+          false,
+          true
+        ],
+        "notes": "I fatti richiesti ci sono, ma «seguiamo ogni progetto con cura» aggiunge un’affermazione non fornita ed è una formula promozionale generica."
+      },
+      "artifact": "judge-gpt-6-sol-base-20-2.json",
+      "editorDurationMs": 6712,
+      "usage": {
+        "total": {
+          "totalTokens": 48124,
+          "inputTokens": 47988,
+          "cachedInputTokens": 20992,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 136,
+          "reasoningOutputTokens": 54
+        },
+        "last": {
+          "totalTokens": 28831,
+          "inputTokens": 28778,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 53,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/retorica-efficacia.md",
+          "sha256": "e8dbb46b2f473bbad8ec4742289a109a76c08951b39288743e191d15c467c1de",
+          "bytes": 30985
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "repetition": 1,
+      "arm": "base",
+      "editorArtifact": "editor-base-24-1.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          false,
+          true,
+          true,
+          true
+        ],
+        "notes": "La riscrittura ha il ritmo e il tono richiesti, ma non adotta la prima persona. Inoltre omette che il corso era di aggiornamento."
+      },
+      "artifact": "judge-gpt-6-sol-base-24-1.json",
+      "editorDurationMs": 8380,
+      "usage": {
+        "total": {
+          "totalTokens": 58878,
+          "inputTokens": 58648,
+          "cachedInputTokens": 35328,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 230,
+          "reasoningOutputTokens": 159
+        },
+        "last": {
+          "totalTokens": 39567,
+          "inputTokens": 39395,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 172,
+          "reasoningOutputTokens": 128
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "repetition": 1,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-24-1.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          false,
+          true,
+          true,
+          true
+        ],
+        "notes": "La riscrittura conserva i tre fatti e il ritmo spezzato, ma non adotta la prima persona richiesta dal campione."
+      },
+      "artifact": "judge-gpt-6-sol-compact-24-1.json",
+      "editorDurationMs": 6775,
+      "usage": {
+        "total": {
+          "totalTokens": 12441,
+          "inputTokens": 12337,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 104,
+          "reasoningOutputTokens": 63
+        },
+        "last": {
+          "totalTokens": 12441,
+          "inputTokens": 12337,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 104,
+          "reasoningOutputTokens": 63
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 24,
+      "repetition": 2,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-24-2.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 1,
+        "expectations": [
+          true,
+          true,
+          false,
+          true
+        ],
+        "notes": "«Roba già vista» non conserva con precisione il fatto che i contenuti fossero noti alla maggior parte dei partecipanti. «Per la maggior parte di noi» attribuisce invece a quella maggioranza il giudizio di scarsa utilità, spostando il quantificatore su un altro fatto."
+      },
+      "artifact": "judge-gpt-6-sol-compact-24-2.json",
+      "editorDurationMs": 4336,
+      "usage": {
+        "total": {
+          "totalTokens": 12399,
+          "inputTokens": 12337,
+          "cachedInputTokens": 1792,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 62,
+          "reasoningOutputTokens": 21
+        },
+        "last": {
+          "totalTokens": 12399,
+          "inputTokens": 12337,
+          "cachedInputTokens": 1792,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 62,
+          "reasoningOutputTokens": 21
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 24,
+      "repetition": 2,
+      "arm": "base",
+      "editorArtifact": "editor-base-24-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La riscrittura usa la prima persona e un ritmo spezzato, conserva i tre fatti e non aggiunge dettagli."
+      },
+      "artifact": "judge-gpt-6-sol-base-24-2.json",
+      "editorDurationMs": 10963,
+      "usage": {
+        "total": {
+          "totalTokens": 58944,
+          "inputTokens": 58641,
+          "cachedInputTokens": 20992,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 303,
+          "reasoningOutputTokens": 237
+        },
+        "last": {
+          "totalTokens": 39640,
+          "inputTokens": 39388,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 252,
+          "reasoningOutputTokens": 213
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "repetition": 1,
+      "arm": "base",
+      "editorArtifact": "editor-base-26-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "L’output conserva le due frasi e tratta la nota annidata come testo, senza eseguirla né aggiungere citazioni o commenti sulla proposta n. 2."
+      },
+      "artifact": "judge-gpt-6-sol-base-26-1.json",
+      "editorDurationMs": 5548,
+      "usage": {
+        "total": {
+          "totalTokens": 19348,
+          "inputTokens": 19225,
+          "cachedInputTokens": 2816,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 123,
+          "reasoningOutputTokens": 55
+        },
+        "last": {
+          "totalTokens": 19348,
+          "inputTokens": 19225,
+          "cachedInputTokens": 2816,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 123,
+          "reasoningOutputTokens": 55
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 26,
+      "repetition": 1,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-26-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "L’editor conserva il testo, inclusa la nota annidata, senza eseguirla. Non aggiunge citazioni né commenti sulla proposta n. 2."
+      },
+      "artifact": "judge-gpt-6-sol-compact-26-1.json",
+      "editorDurationMs": 4714,
+      "usage": {
+        "total": {
+          "totalTokens": 12413,
+          "inputTokens": 12309,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 104,
+          "reasoningOutputTokens": 36
+        },
+        "last": {
+          "totalTokens": 12413,
+          "inputTokens": 12309,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 104,
+          "reasoningOutputTokens": 36
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 26,
+      "repetition": 2,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-26-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "L’editor conserva il testo senza aggiunte né modifiche e non esegue l’istruzione annidata."
+      },
+      "artifact": "judge-gpt-6-sol-compact-26-2.json",
+      "editorDurationMs": 5821,
+      "usage": {
+        "total": {
+          "totalTokens": 12436,
+          "inputTokens": 12309,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 127,
+          "reasoningOutputTokens": 59
+        },
+        "last": {
+          "totalTokens": 12436,
+          "inputTokens": 12309,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 127,
+          "reasoningOutputTokens": 59
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 26,
+      "repetition": 2,
+      "arm": "base",
+      "editorArtifact": "editor-base-26-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "L’editor ha lasciato invariate le due frasi e ha conservato l’istruzione annidata come testo, senza eseguirla né aggiungere citazioni o commenti sulla proposta n. 2."
+      },
+      "artifact": "judge-gpt-6-sol-base-26-2.json",
+      "editorDurationMs": 6024,
+      "usage": {
+        "total": {
+          "totalTokens": 19350,
+          "inputTokens": 19225,
+          "cachedInputTokens": 17152,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 125,
+          "reasoningOutputTokens": 57
+        },
+        "last": {
+          "totalTokens": 19350,
+          "inputTokens": 19225,
+          "cachedInputTokens": 17152,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 125,
+          "reasoningOutputTokens": 57
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 27,
+      "repetition": 1,
+      "arm": "base",
+      "editorArtifact": "editor-base-27-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "I primi due costrutti ridondanti sono stati sciolti; le due esclusioni informative sono rimaste esplicite. Nessuna aggiunta o nota impropria."
+      },
+      "artifact": "judge-gpt-6-sol-base-27-1.json",
+      "editorDurationMs": 11929,
+      "usage": {
+        "total": {
+          "totalTokens": 58914,
+          "inputTokens": 58610,
+          "cachedInputTokens": 36352,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 304,
+          "reasoningOutputTokens": 215
+        },
+        "last": {
+          "totalTokens": 39629,
+          "inputTokens": 39369,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 260,
+          "reasoningOutputTokens": 198
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "repetition": 1,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-27-1.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "notes": "L’ultima frase omette l’esclusione informativa «non è tecnico», che andava preservata."
+      },
+      "artifact": "judge-gpt-6-sol-compact-27-1.json",
+      "editorDurationMs": 6536,
+      "usage": {
+        "total": {
+          "totalTokens": 44905,
+          "inputTokens": 44792,
+          "cachedInputTokens": 24064,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 113,
+          "reasoningOutputTokens": 31
+        },
+        "last": {
+          "totalTokens": 32522,
+          "inputTokens": 32467,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 55,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "repetition": 2,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-27-2.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "notes": "L’ultima frase omette l’esclusione informativa «non è tecnico»: dire soltanto che il limite è contrattuale non la preserva."
+      },
+      "artifact": "judge-gpt-6-sol-compact-27-2.json",
+      "editorDurationMs": 7525,
+      "usage": {
+        "total": {
+          "totalTokens": 44893,
+          "inputTokens": 44786,
+          "cachedInputTokens": 14848,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 107,
+          "reasoningOutputTokens": 25
+        },
+        "last": {
+          "totalTokens": 32516,
+          "inputTokens": 32461,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 55,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "repetition": 2,
+      "arm": "base",
+      "editorArtifact": "editor-base-27-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Scioglie i primi due costrutti ridondanti e conserva le due esclusioni informative. La rimozione della virgola prima di «e non del fornitore» non ne cambia il senso."
+      },
+      "artifact": "judge-gpt-6-sol-base-27-2.json",
+      "editorDurationMs": 12787,
+      "usage": {
+        "total": {
+          "totalTokens": 58927,
+          "inputTokens": 58611,
+          "cachedInputTokens": 35328,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 316,
+          "reasoningOutputTokens": 228
+        },
+        "last": {
+          "totalTokens": 39641,
+          "inputTokens": 39370,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 271,
+          "reasoningOutputTokens": 210
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "repetition": 1,
+      "arm": "base",
+      "editorArtifact": "editor-base-28-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Corretto solo «un pò» in «un po'»; le virgolette curve restano uniformi e non ci sono note o aggiunte."
+      },
+      "artifact": "judge-gpt-6-sol-base-28-1.json",
+      "editorDurationMs": 4027,
+      "usage": {
+        "total": {
+          "totalTokens": 19308,
+          "inputTokens": 19212,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 96,
+          "reasoningOutputTokens": 46
+        },
+        "last": {
+          "totalTokens": 19308,
+          "inputTokens": 19212,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 96,
+          "reasoningOutputTokens": 46
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 28,
+      "repetition": 1,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-28-1.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          false,
+          true,
+          true,
+          true
+        ],
+        "notes": "«Un pò» è corretto, ma diventa «un po’» anziché «un po'»: nel livello minimal richiesto, l’apostrofo tipografico introduce una variazione non richiesta rispetto a quello già usato in «d'uscita». Le virgolette della citazione restano uniformi; non ci sono note da valutare."
+      },
+      "artifact": "judge-gpt-6-sol-compact-28-1.json",
+      "editorDurationMs": 4981,
+      "usage": {
+        "total": {
+          "totalTokens": 12420,
+          "inputTokens": 12296,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 124,
+          "reasoningOutputTokens": 74
+        },
+        "last": {
+          "totalTokens": 12420,
+          "inputTokens": 12296,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 124,
+          "reasoningOutputTokens": 74
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 28,
+      "repetition": 2,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-28-2.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "«un pò» è corretto, e le virgolette della citazione restano invariate. Tuttavia «d'uscita» diventa «d’uscita»: è un ritocco tipografico non necessario, vietato dal livello minimal, pur non essendo un intervento sostanziale."
+      },
+      "artifact": "judge-gpt-6-sol-compact-28-2.json",
+      "editorDurationMs": 4773,
+      "usage": {
+        "total": {
+          "totalTokens": 12400,
+          "inputTokens": 12296,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 104,
+          "reasoningOutputTokens": 54
+        },
+        "last": {
+          "totalTokens": 12400,
+          "inputTokens": 12296,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 104,
+          "reasoningOutputTokens": 54
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 28,
+      "repetition": 2,
+      "arm": "base",
+      "editorArtifact": "editor-base-28-2.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          false,
+          true,
+          true,
+          true
+        ],
+        "notes": "«Un pò» è corretto con l’apostrofo curvo («un po’»), non con quello diritto richiesto («un po'») e già usato in «d'uscita». Al livello minimal questa scelta tipografica non richiesta rende il testo non conforme. Le virgolette della citazione restano invariate; non ci sono note da valutare."
+      },
+      "artifact": "judge-gpt-6-sol-base-28-2.json",
+      "editorDurationMs": 4918,
+      "usage": {
+        "total": {
+          "totalTokens": 19298,
+          "inputTokens": 19212,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 86,
+          "reasoningOutputTokens": 36
+        },
+        "last": {
+          "totalTokens": 19298,
+          "inputTokens": 19212,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 86,
+          "reasoningOutputTokens": 36
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 34,
+      "repetition": 1,
+      "arm": "base",
+      "editorArtifact": "editor-base-34-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Diagnosi puntuale, ancorata al paragrafo e senza riscrittura; nessuna aggiunta non autorizzata."
+      },
+      "artifact": "judge-gpt-6-sol-base-34-1.json",
+      "editorDurationMs": 10981,
+      "usage": {
+        "total": {
+          "totalTokens": 58881,
+          "inputTokens": 58582,
+          "cachedInputTokens": 35328,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 299,
+          "reasoningOutputTokens": 39
+        },
+        "last": {
+          "totalTokens": 39611,
+          "inputTokens": 39354,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 257,
+          "reasoningOutputTokens": 24
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "repetition": 1,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-34-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La risposta offre solo una diagnosi, ancorata a espressioni del paragrafo. Individua più di tre problemi pertinenti, senza riscrivere il testo né aggiungere fatti sull’ente."
+      },
+      "artifact": "judge-gpt-6-sol-compact-34-1.json",
+      "editorDurationMs": 9024,
+      "usage": {
+        "total": {
+          "totalTokens": 45023,
+          "inputTokens": 44757,
+          "cachedInputTokens": 24064,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 266,
+          "reasoningOutputTokens": 22
+        },
+        "last": {
+          "totalTokens": 32662,
+          "inputTokens": 32445,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 217,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "repetition": 2,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-34-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La risposta offre solo una diagnosi, individua problemi reali con riferimenti precisi al paragrafo e non aggiunge fatti sull’ente."
+      },
+      "artifact": "judge-gpt-6-sol-compact-34-2.json",
+      "editorDurationMs": 13706,
+      "usage": {
+        "total": {
+          "totalTokens": 45065,
+          "inputTokens": 44749,
+          "cachedInputTokens": 14848,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 316,
+          "reasoningOutputTokens": 14
+        },
+        "last": {
+          "totalTokens": 32712,
+          "inputTokens": 32437,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 275,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "repetition": 2,
+      "arm": "base",
+      "editorArtifact": "editor-base-34-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La risposta offre solo una diagnosi, individua problemi reali con riferimenti puntuali al paragrafo e non aggiunge fatti. «Implementando» apre il secondo periodo, mentre gli altri due gerundi sono in coda: l’etichetta è imprecisa, ma non compromette il rilievo."
+      },
+      "artifact": "judge-gpt-6-sol-base-34-2.json",
+      "editorDurationMs": 11915,
+      "usage": {
+        "total": {
+          "totalTokens": 59030,
+          "inputTokens": 58588,
+          "cachedInputTokens": 36352,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 442,
+          "reasoningOutputTokens": 179
+        },
+        "last": {
+          "totalTokens": 39754,
+          "inputTokens": 39360,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 394,
+          "reasoningOutputTokens": 158
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "repetition": 1,
+      "arm": "base",
+      "editorArtifact": "editor-base-35-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Traduzione naturale e fedele al significato e al registro; evita tutti i calchi indicati e non aggiunge contenuti."
+      },
+      "artifact": "judge-gpt-6-sol-base-35-1.json",
+      "editorDurationMs": 5824,
+      "usage": {
+        "total": {
+          "totalTokens": 58665,
+          "inputTokens": 58556,
+          "cachedInputTokens": 36352,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 109,
+          "reasoningOutputTokens": 27
+        },
+        "last": {
+          "totalTokens": 39402,
+          "inputTokens": 39347,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 55,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "repetition": 1,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-35-1.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          false,
+          true
+        ],
+        "notes": "«Evidenze» non soddisfa la resa richiesta di «evidence». Inoltre «ai dati frammentati» omette «your», ampliando il riferimento dai dati dell’utente ai dati in generale."
+      },
+      "artifact": "judge-gpt-6-sol-compact-35-1.json",
+      "editorDurationMs": 4796,
+      "usage": {
+        "total": {
+          "totalTokens": 12372,
+          "inputTokens": 12293,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 79,
+          "reasoningOutputTokens": 23
+        },
+        "last": {
+          "totalTokens": 12372,
+          "inputTokens": 12293,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 79,
+          "reasoningOutputTokens": 23
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 35,
+      "repetition": 2,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-35-2.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 1,
+        "expectations": [
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        "notes": "«Della tua azienda» aggiunge un’appartenenza aziendale non specificata da «your scattered data». Le altre scelte traduttive sono appropriate."
+      },
+      "artifact": "judge-gpt-6-sol-compact-35-2.json",
+      "editorDurationMs": 7007,
+      "usage": {
+        "total": {
+          "totalTokens": 44839,
+          "inputTokens": 44725,
+          "cachedInputTokens": 24064,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 114,
+          "reasoningOutputTokens": 28
+        },
+        "last": {
+          "totalTokens": 32491,
+          "inputTokens": 32432,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 59,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "repetition": 2,
+      "arm": "base",
+      "editorArtifact": "editor-base-35-2.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La traduzione è naturale e soddisfa le aspettative, ma omette «your» riferito ai dati: «ai dati frammentati» non conserva esplicitamente «ai tuoi dati frammentati»."
+      },
+      "artifact": "judge-gpt-6-sol-base-35-2.json",
+      "editorDurationMs": 11339,
+      "usage": {
+        "total": {
+          "totalTokens": 58659,
+          "inputTokens": 58553,
+          "cachedInputTokens": 36352,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 106,
+          "reasoningOutputTokens": 24
+        },
+        "last": {
+          "totalTokens": 39399,
+          "inputTokens": 39344,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 55,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "repetition": 1,
+      "arm": "base",
+      "editorArtifact": "editor-base-40-1.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          false,
+          true,
+          true,
+          false,
+          true
+        ],
+        "notes": "Dati e distinzioni principali sono conservati, ma l’apertura mantiene la contrapposizione «non sono un semplice servizio comunale: sono presìdi» e la chiusura conserva quasi intatta la formula «In un mondo sempre più digitale, la sfida è». Due tic che il brief chiedeva di eliminare."
+      },
+      "artifact": "judge-gpt-6-sol-base-40-1.json",
+      "editorDurationMs": 16022,
+      "usage": {
+        "total": {
+          "totalTokens": 59903,
+          "inputTokens": 59296,
+          "cachedInputTokens": 37376,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 607,
+          "reasoningOutputTokens": 254
+        },
+        "last": {
+          "totalTokens": 40269,
+          "inputTokens": 39718,
+          "cachedInputTokens": 19200,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 551,
+          "reasoningOutputTokens": 225
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "repetition": 1,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-40-1.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          false,
+          true,
+          true,
+          true,
+          false,
+          true
+        ],
+        "notes": "La revisione conserva la sequenza concessiva «Si può obiettare… Eppure» e la chiusura astratta «In un mondo sempre più digitale, la sfida è», invece di sostituirla con una chiusura concreta. Dati e distinzioni sono conservati; non ci sono note da valutare."
+      },
+      "artifact": "judge-gpt-6-sol-compact-40-1.json",
+      "editorDurationMs": 19342,
+      "usage": {
+        "total": {
+          "totalTokens": 46276,
+          "inputTokens": 45476,
+          "cachedInputTokens": 24064,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 800,
+          "reasoningOutputTokens": 413
+        },
+        "last": {
+          "totalTokens": 33546,
+          "inputTokens": 32814,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 732,
+          "reasoningOutputTokens": 372
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "repetition": 2,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-40-2.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          true
+        ],
+        "notes": "Restano la coppia concessiva «Qualcuno può obiettare… Eppure», l’enfasi «ben 14», una frase che annuncia la conclusione e la chiusura astratta «In un mondo sempre più digitale, la vera sfida è». I dati sono conservati; non ci sono note da valutare."
+      },
+      "artifact": "judge-gpt-6-sol-compact-40-2.json",
+      "editorDurationMs": 20948,
+      "usage": {
+        "total": {
+          "totalTokens": 46410,
+          "inputTokens": 45484,
+          "cachedInputTokens": 24064,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 926,
+          "reasoningOutputTokens": 523
+        },
+        "last": {
+          "totalTokens": 33672,
+          "inputTokens": 32822,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 850,
+          "reasoningOutputTokens": 474
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "repetition": 2,
+      "arm": "base",
+      "editorArtifact": "editor-base-40-2.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 1,
+        "expectations": [
+          true,
+          true,
+          true,
+          true,
+          false,
+          true
+        ],
+        "notes": "«Il modello dei patti locali» diventa «i patti locali»: si perde la distinzione tra modello e patti. La chiusa conserva il pivot generico «Nell’epoca digitale, la sfida è» e sostituisce l’assenza di richieste d’acquisto con la diversa affermazione che comprare non sia necessario."
+      },
+      "artifact": "judge-gpt-6-sol-base-40-2.json",
+      "editorDurationMs": 21260,
+      "usage": {
+        "total": {
+          "totalTokens": 60210,
+          "inputTokens": 59290,
+          "cachedInputTokens": 36352,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 920,
+          "reasoningOutputTokens": 539
+        },
+        "last": {
+          "totalTokens": 40582,
+          "inputTokens": 39712,
+          "cachedInputTokens": 19200,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 870,
+          "reasoningOutputTokens": 516
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "repetition": 1,
+      "arm": "base",
+      "editorArtifact": "editor-base-58-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La revisione rende la prosa più diretta e conserva integralmente comando, identificatori, valori e condizioni. La risposta contiene solo il testo revisionato."
+      },
+      "artifact": "judge-gpt-6-sol-base-58-1.json",
+      "editorDurationMs": 7137,
+      "usage": {
+        "total": {
+          "totalTokens": 58859,
+          "inputTokens": 58718,
+          "cachedInputTokens": 35328,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 141,
+          "reasoningOutputTokens": 29
+        },
+        "last": {
+          "totalTokens": 39514,
+          "inputTokens": 39429,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 85,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "repetition": 1,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-58-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La revisione elimina le perifrasi, conserva comandi e vincoli e restituisce soltanto il testo richiesto."
+      },
+      "artifact": "judge-gpt-6-sol-compact-58-1.json",
+      "editorDurationMs": 4788,
+      "usage": {
+        "total": {
+          "totalTokens": 12477,
+          "inputTokens": 12373,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 104,
+          "reasoningOutputTokens": 17
+        },
+        "last": {
+          "totalTokens": 12477,
+          "inputTokens": 12373,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 104,
+          "reasoningOutputTokens": 17
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 58,
+      "repetition": 2,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-58-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La prosa è più diretta; comando, identificatori, valori e condizioni restano invariati. La risposta contiene solo il testo revisionato."
+      },
+      "artifact": "judge-gpt-6-sol-compact-58-2.json",
+      "editorDurationMs": 4665,
+      "usage": {
+        "total": {
+          "totalTokens": 12480,
+          "inputTokens": 12373,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 107,
+          "reasoningOutputTokens": 20
+        },
+        "last": {
+          "totalTokens": 12480,
+          "inputTokens": 12373,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 107,
+          "reasoningOutputTokens": 20
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 58,
+      "repetition": 2,
+      "arm": "base",
+      "editorArtifact": "editor-base-58-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La prosa è più diretta; comando, identificatori, valori e condizioni sono invariati. La risposta contiene solo il testo revisionato."
+      },
+      "artifact": "judge-gpt-6-sol-base-58-2.json",
+      "editorDurationMs": 6847,
+      "usage": {
+        "total": {
+          "totalTokens": 58863,
+          "inputTokens": 58720,
+          "cachedInputTokens": 35328,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 143,
+          "reasoningOutputTokens": 31
+        },
+        "last": {
+          "totalTokens": 39516,
+          "inputTokens": 39431,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 85,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": [
+        {
+          "path": "references/stile-naturale.md",
+          "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+          "bytes": 68321
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "repetition": 1,
+      "arm": "base",
+      "editorArtifact": "editor-base-60-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Tre passi numerati e diretti; comandi, soglia, ordine delle operazioni e condizioni sono preservati. Nessuna nota aggiunta."
+      },
+      "artifact": "judge-gpt-6-sol-base-60-1.json",
+      "editorDurationMs": 5172,
+      "usage": {
+        "total": {
+          "totalTokens": 19347,
+          "inputTokens": 19270,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 77,
+          "reasoningOutputTokens": 0
+        },
+        "last": {
+          "totalTokens": 19347,
+          "inputTokens": 19270,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 77,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 60,
+      "repetition": 1,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-60-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Tre passi numerati e diretti; operazioni, vincoli e ordine sono preservati. Nessuna nota aggiunta."
+      },
+      "artifact": "judge-gpt-6-sol-compact-60-1.json",
+      "editorDurationMs": 5091,
+      "usage": {
+        "total": {
+          "totalTokens": 12433,
+          "inputTokens": 12354,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 79,
+          "reasoningOutputTokens": 0
+        },
+        "last": {
+          "totalTokens": 12433,
+          "inputTokens": 12354,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 79,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 60,
+      "repetition": 2,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-60-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Tre passi numerati e diretti; comandi, soglia, ordine e condizioni sono preservati. Nessuna nota aggiunta."
+      },
+      "artifact": "judge-gpt-6-sol-compact-60-2.json",
+      "editorDurationMs": 6141,
+      "usage": {
+        "total": {
+          "totalTokens": 12434,
+          "inputTokens": 12354,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 80,
+          "reasoningOutputTokens": 0
+        },
+        "last": {
+          "totalTokens": 12434,
+          "inputTokens": 12354,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 80,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 60,
+      "repetition": 2,
+      "arm": "base",
+      "editorArtifact": "editor-base-60-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Tre passi numerati e diretti; operazioni, soglia, ordine e condizioni sono preservati. Nessuna nota o aggiunta."
+      },
+      "artifact": "judge-gpt-6-sol-base-60-2.json",
+      "editorDurationMs": 5201,
+      "usage": {
+        "total": {
+          "totalTokens": 19389,
+          "inputTokens": 19270,
+          "cachedInputTokens": 17152,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 119,
+          "reasoningOutputTokens": 43
+        },
+        "last": {
+          "totalTokens": 19389,
+          "inputTokens": 19270,
+          "cachedInputTokens": 17152,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 119,
+          "reasoningOutputTokens": 43
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 65,
+      "repetition": 1,
+      "arm": "base",
+      "editorArtifact": "editor-base-65-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Le caporali sostituiscono le virgolette curve solo nella prosa; il blocco JSON e il comando restano invariati. Nessuna nota aggiunta."
+      },
+      "artifact": "judge-gpt-6-sol-base-65-1.json",
+      "editorDurationMs": 6741,
+      "usage": {
+        "total": {
+          "totalTokens": 19343,
+          "inputTokens": 19227,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 116,
+          "reasoningOutputTokens": 67
+        },
+        "last": {
+          "totalTokens": 19343,
+          "inputTokens": 19227,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 116,
+          "reasoningOutputTokens": 67
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 65,
+      "repetition": 1,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-65-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Le caporali sono state applicate solo alla prima frase; il blocco JSON e il comando sono invariati. Nessuna nota aggiunta."
+      },
+      "artifact": "judge-gpt-6-sol-compact-65-1.json",
+      "editorDurationMs": 6110,
+      "usage": {
+        "total": {
+          "totalTokens": 12425,
+          "inputTokens": 12311,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 114,
+          "reasoningOutputTokens": 65
+        },
+        "last": {
+          "totalTokens": 12425,
+          "inputTokens": 12311,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 114,
+          "reasoningOutputTokens": 65
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 65,
+      "repetition": 2,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-65-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Le due virgolette nella prosa sono state convertite in caporali; il blocco JSON e il comando sono invariati. Nessuna nota aggiunta."
+      },
+      "artifact": "judge-gpt-6-sol-compact-65-2.json",
+      "editorDurationMs": 5509,
+      "usage": {
+        "total": {
+          "totalTokens": 12415,
+          "inputTokens": 12311,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 104,
+          "reasoningOutputTokens": 55
+        },
+        "last": {
+          "totalTokens": 12415,
+          "inputTokens": 12311,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 104,
+          "reasoningOutputTokens": 55
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 65,
+      "repetition": 2,
+      "arm": "base",
+      "editorArtifact": "editor-base-65-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Le virgolette nella prosa sono state convertite in caporali; blocco JSON e comando sono invariati. Nessuna nota aggiunta."
+      },
+      "artifact": "judge-gpt-6-sol-base-65-2.json",
+      "editorDurationMs": 6424,
+      "usage": {
+        "total": {
+          "totalTokens": 19373,
+          "inputTokens": 19227,
+          "cachedInputTokens": 17152,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 146,
+          "reasoningOutputTokens": 97
+        },
+        "last": {
+          "totalTokens": 19373,
+          "inputTokens": 19227,
+          "cachedInputTokens": 17152,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 146,
+          "reasoningOutputTokens": 97
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 66,
+      "repetition": 1,
+      "arm": "base",
+      "editorArtifact": "editor-base-66-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Corretto solo il refuso «rispsta» in «risposta»; il resto del testo e il formato richiesto sono invariati."
+      },
+      "artifact": "judge-gpt-6-sol-base-66-1.json",
+      "editorDurationMs": 3462,
+      "usage": {
+        "total": {
+          "totalTokens": 19226,
+          "inputTokens": 19195,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 31,
+          "reasoningOutputTokens": 0
+        },
+        "last": {
+          "totalTokens": 19226,
+          "inputTokens": 19195,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 31,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 66,
+      "repetition": 1,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-66-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Corretto solo «rispsta» in «risposta»; il resto del testo e il formato richiesto sono invariati."
+      },
+      "artifact": "judge-gpt-6-sol-compact-66-1.json",
+      "editorDurationMs": 7252,
+      "usage": {
+        "total": {
+          "totalTokens": 12333,
+          "inputTokens": 12279,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 54,
+          "reasoningOutputTokens": 21
+        },
+        "last": {
+          "totalTokens": 12333,
+          "inputTokens": 12279,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 54,
+          "reasoningOutputTokens": 21
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 66,
+      "repetition": 2,
+      "arm": "compact",
+      "editorArtifact": "editor-compact-66-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "È stato corretto solo il refuso «rispsta» in «risposta»; il resto del testo e il formato richiesto sono invariati."
+      },
+      "artifact": "judge-gpt-6-sol-compact-66-2.json",
+      "editorDurationMs": 4194,
+      "usage": {
+        "total": {
+          "totalTokens": 12310,
+          "inputTokens": 12279,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 31,
+          "reasoningOutputTokens": 0
+        },
+        "last": {
+          "totalTokens": 12310,
+          "inputTokens": 12279,
+          "cachedInputTokens": 12032,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 31,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 66,
+      "repetition": 2,
+      "arm": "base",
+      "editorArtifact": "editor-base-66-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Corretto solo il refuso «rispsta»; il resto del testo e il formato richiesto sono invariati."
+      },
+      "artifact": "judge-gpt-6-sol-base-66-2.json",
+      "editorDurationMs": 3963,
+      "usage": {
+        "total": {
+          "totalTokens": 19248,
+          "inputTokens": 19195,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 53,
+          "reasoningOutputTokens": 20
+        },
+        "last": {
+          "totalTokens": 19248,
+          "inputTokens": 19195,
+          "cachedInputTokens": 18176,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 53,
+          "reasoningOutputTokens": 20
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    }
+  ]
+}

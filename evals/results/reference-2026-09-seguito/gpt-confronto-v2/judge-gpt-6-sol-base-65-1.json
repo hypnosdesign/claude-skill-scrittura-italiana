@@ -1,0 +1,73 @@
+{
+  "fingerprint": "3784f1b32d465f8138877e4f19122f21eb2fe8c032baf3680e05abe21991c6c5",
+  "output": "{\"pass\":true,\"textOk\":true,\"responseOk\":true,\"invented\":0,\"expectations\":[true,true,true,true],\"notes\":\"Le caporali sostituiscono le virgolette curve solo nella prosa; il blocco JSON e il comando restano invariati. Nessuna nota aggiunta.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 33197,
+      "inputTokens": 32909,
+      "cachedInputTokens": 32000,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 288,
+      "reasoningOutputTokens": 135
+    },
+    "last": {
+      "totalTokens": 11195,
+      "inputTokens": 11069,
+      "cachedInputTokens": 10752,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 126,
+      "reasoningOutputTokens": 53
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 13467,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "3ebd847fa28cf1d103a509fda696afff81bf01cdbf8254ca4e5db98809e2412f",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

@@ -1,0 +1,73 @@
+{
+  "fingerprint": "e3351b13207fa3e8f566c62edf2d7d535dd73dbf0b2f8ec239ab42c829a581b3",
+  "output": "{\"pass\":false,\"textOk\":true,\"responseOk\":false,\"invented\":2,\"expectations\":[false],\"notes\":\"«Anna apre la finestra» non contiene gerundi; «Entrando in cucina, Luca saluta» ne contiene uno. Le due frasi non hanno struttura identica.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 10988,
+      "inputTokens": 10697,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 291,
+      "reasoningOutputTokens": 221
+    },
+    "last": {
+      "totalTokens": 10988,
+      "inputTokens": 10697,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 291,
+      "reasoningOutputTokens": 221
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 8901,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "1c1bb40278fe52e10a0548b07e56c93aca145d3f278ec792988dae077b926d91",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

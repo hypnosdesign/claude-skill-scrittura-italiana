@@ -1,0 +1,73 @@
+{
+  "fingerprint": "f812685a594320676ff5459bf31ca0fbe96ed6b28f59621279f4b3d90791f14e",
+  "output": "{\"pass\":true,\"textOk\":true,\"responseOk\":true,\"invented\":0,\"expectations\":[true,true,true,true],\"notes\":\"La riscrittura usa la prima persona, un tono diretto e periodi brevi. Conserva i tre fatti senza aggiungerne; non ci sono note da valutare.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 33489,
+      "inputTokens": 33100,
+      "cachedInputTokens": 29056,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 389,
+      "reasoningOutputTokens": 235
+    },
+    "last": {
+      "totalTokens": 11315,
+      "inputTokens": 11156,
+      "cachedInputTokens": 10880,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 159,
+      "reasoningOutputTokens": 85
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 15206,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "cd06a1eaf2860355d939c0da14a43bfbf49781852a465d1b64a40744bddebb56",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

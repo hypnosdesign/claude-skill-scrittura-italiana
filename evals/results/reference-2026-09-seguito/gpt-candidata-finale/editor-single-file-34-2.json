@@ -1,0 +1,73 @@
+{
+  "fingerprint": "36035d1725111776c927185a1c71b6d5a515131456313bfa0cbb2318881581d1",
+  "output": "Il paragrafo non presenta errori grammaticali evidenti. Il problema è che **promette molto senza precisare nulla**:\n\n- «Nel panorama attuale» è un’apertura generica che non aggiunge contesto.\n- Il contrasto fra «erogare corsi» e «costruire percorsi» non chiarisce che cosa cambi, in pratica.\n- «Soluzioni innovative», «punto di riferimento» e «risultati concreti» sono giudizi promozionali privi, nel paragrafo, di elementi che li sostengano.\n- I tre gerundi («implementando», «garantendo», «sottolineando») accumulano azioni diverse in una sola frase. In particolare, «garantendo» formula una promessa forte, non motivata dal testo.\n\nIl lettore arriva alla fine senza sapere che cosa faccia l’ente di diverso né quali risultati intenda garantire.",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 89623,
+      "inputTokens": 89296,
+      "cachedInputTokens": 3840,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 327,
+      "reasoningOutputTokens": 127
+    },
+    "last": {
+      "totalTokens": 89623,
+      "inputTokens": 89296,
+      "cachedInputTokens": 3840,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 327,
+      "reasoningOutputTokens": 127
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 14175,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "548b1a57b634affb1c71c648061db3e60150192d94198dd9550195dd00537f60",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

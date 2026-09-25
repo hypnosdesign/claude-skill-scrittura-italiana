@@ -1,0 +1,79 @@
+{
+  "fingerprint": "be130f468ee1c3a9477d359ad73453ed2d95afd766d6f70230fc3cd7185adce2",
+  "output": "Per autenticarti, inserisci il token nell'header `Authorization`. Se il token è assente, l'API restituisce il codice `401`. Il comando di prova è `curl -H 'Authorization: Bearer TOKEN' https://api.example.test/v1/items`. Il campo `retry_limit` deve restare a `3`; non ripetere la richiesta se ricevi `403`.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 58859,
+      "inputTokens": 58718,
+      "cachedInputTokens": 35328,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 141,
+      "reasoningOutputTokens": 29
+    },
+    "last": {
+      "totalTokens": 39514,
+      "inputTokens": 39429,
+      "cachedInputTokens": 18176,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 85,
+      "reasoningOutputTokens": 0
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [
+    {
+      "path": "references/stile-naturale.md",
+      "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+      "bytes": 68321
+    }
+  ],
+  "durationMs": 7137,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "34692105fcf65e0232f44d4ee783b11dcef6403a1f4ff681da6f3af9db5bfe66",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

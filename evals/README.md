@@ -27,6 +27,11 @@ prestazioni del copy, note editoriali, modalità, ruoli, apostrofo e dettagli no
 held-out resta invariato. I criteri dei casi 13 e 40 conservano anche le funzioni
 espresse nel primo polo del copy: ridurre una cornice promozionale non autorizza omissioni.
 
+I casi **58–66** coprono il seguito dell'audit: revisione esplicita della documentazione,
+prudenza su richieste generiche, conservazione delle virgolette e dei livelli di citazione,
+conversione richiesta della sola prosa, codice protetto e assenza di markup non richiesto.
+Sono dev; l'aggiunta di casi non equivale a una verifica superata del comportamento.
+
 ## Provenienza della prova 2.12.0
 
 La prova di sviluppo descritta nel changelog confrontava:
@@ -72,6 +77,10 @@ Prima di avviare chiamate LLM, il runner valida suite e manifest. Ogni run conse
   errori; `pass` viene ricalcolato da `textOk`, `responseOk`, aspettative e `invented === 0`;
 - snapshot `judge-policy.json` e impronta SHA-256 del contratto, riportata anche in ogni riga.
 
+L'editor legge lo snapshot salvato, non il sorgente vivo: una modifica durante un run
+non cambia la policy delle chiamate successive. Il resume verifica anche l'integrità
+degli snapshot di skill, suite e manifest, non soltanto i metadati.
+
 ### Contratto del giudice (v2, dalla 2.19.1)
 
 `textOk` misura fedeltà e livello di intervento sul testo revisionato; `responseOk`
@@ -102,7 +111,7 @@ con valutatori umani indipendenti. Non ritoccare le etichette per ottenere un es
 
 ```bash
 node evals/run.mjs --validate-only                   # schema + fingerprint, zero chiamate LLM
-node evals/run.mjs --split dev --label new-dev       # 51 casi di sviluppo
+node evals/run.mjs --split dev --label new-dev       # 60 casi di sviluppo
 node evals/run.mjs --split held-out --label new-ho   # 6 casi congelati
 node evals/run.mjs --ids 7,8,12,13 --runs 3          # sottoinsieme, 3 run/eval
 node evals/run.mjs --no-skill --label baseline-nuda  # braccio SENZA skill (valore aggiunto)
@@ -207,6 +216,31 @@ espone il path risolto: fuori dalla modalità ermetica viene riportato come invo
 `XDG_*` puntano a una home usa-e-getta — isolamento vero, ma opt-in perché su macchine
 dove le credenziali del CLI vivono su disco (non nel keychain) può rompere l'auth. La
 workdir temporanea viene rimossa a fine run, salvo `--keep-workdir`.
+
+Lo schema 3 degli artefatti conserva anche tutti i riferimenti della skill con le loro
+impronte, i casi effettivi, il transcript per caso, la risposta finale e i token dichiarati
+dal client. Output assente, limite dei turni o modello pinnato non rispettato fanno fallire
+il comando. Le letture osservate in un'esecuzione incompleta restano dati parziali, non
+una prova della qualità della risposta. `--cases <file>` permette studi separati senza
+modificare la suite di attivazione canonica.
+
+L'harness espone solo `Skill`, `Read`, `Glob` e `Grep` in modalità restricted, senza
+server MCP o permessi interattivi. La configurazione è persistita come `clientPolicy`:
+i confronti nuovi rifiutano policy diverse o assenti, anche a parità di modello.
+Sono disabilitati memoria automatica, caricamento dei `CLAUDE.md` e attività in
+background nel solo processo di prova. Lo studio richiede anche lo stesso limite
+dei turni per caso; dettagli e fonte della configurazione nel protocollo seguente.
+
+Il [confronto del nucleo compatto](experiments/README.md) usa questo percorso nel client
+reale: non deduce il costo dell'instradamento dal solo single-file iniettato. La candidata
+rimane sperimentale finché non sono disponibili confronto e rilettura degli output.
+
+Il seguito GPT usa invece `gpt-study.mjs` e il client Codex, con Terra 5.6 come editor,
+Sol 6 come giudice e Luna 6 per controlli incrociati. Snapshot e risultati sono separati
+da Claude. Il tool di lettura controllato misura l'instradamento con la skill già
+fornita, non la sua attivazione automatica. Modelli, restrizioni, letture, token e tempi
+sono registrati; il costo fatturato non è disponibile. Comandi e limiti nel
+[protocollo GPT](experiments/README.md#seguito-con-gpt-richiesto-il-25-settembre).
 
 ## Rigiudicare senza rieseguire (`run.mjs --rejudge`)
 

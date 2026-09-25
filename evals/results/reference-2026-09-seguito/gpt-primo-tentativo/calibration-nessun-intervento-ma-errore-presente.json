@@ -1,0 +1,73 @@
+{
+  "fingerprint": "41bca0579d799d209f4b0cd822b6747cc09fb6f2ce4e158c1b9ad6ae81aa6188",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":false,\"invented\":0,\"expectations\":[false],\"notes\":\"«Qual'è» va corretto in «Qual è». L’editor non lo corregge e afferma erroneamente che la frase è corretta.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 10746,
+      "inputTokens": 10647,
+      "cachedInputTokens": 0,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 99,
+      "reasoningOutputTokens": 33
+    },
+    "last": {
+      "totalTokens": 10746,
+      "inputTokens": 10647,
+      "cachedInputTokens": 0,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 99,
+      "reasoningOutputTokens": 33
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 5234,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "c9c220b4d849c8c88e67769b661213ff3612e680fd4cebdef53e3156fd9f4c83",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

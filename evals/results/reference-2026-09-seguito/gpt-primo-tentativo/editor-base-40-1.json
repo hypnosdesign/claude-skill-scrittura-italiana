@@ -1,0 +1,79 @@
+{
+  "fingerprint": "40c5bc6c359f22170fe9388c8827d7874ac7713886ed0c6e388323580218f18e",
+  "output": "Le biblioteche di quartiere sono servizi comunali, ma anche presìdi di prossimità. I prestiti calano da un decennio, mentre le presenze crescono: nel 2024 la rete urbana di Modena ha registrato 410.000 ingressi, contro 280.000 prestiti. Il libro resta al centro della missione, ma gli spazi servono sempre più anche per studiare, lavorare e incontrarsi. Si può obiettare che non sia più una biblioteca; è invece la sua forma contemporanea.\n\nLe sale studio sono piene già alle nove del mattino. Gli studenti arrivano prima dell’apertura: per loro contano spazi gratuiti e riscaldati, e sono il pubblico più costante del servizio. La sala ragazzi non è uno spazio di custodia, ma un servizio educativo. L’equivoco è frequente tra i genitori, che la usano come parcheggio pomeridiano.\n\nIl bilancio resta il nodo. Il fondo statale per l’acquisto di libri è stato rinnovato e 14 comuni della provincia hanno aderito al sistema unico di tessere. La spesa pro capite italiana rimane sotto la media europea, ma i patti locali per la lettura mostrano che non conta solo la leva economica.\n\nLa biblioteca di quartiere sta cambiando pelle. Per accompagnare il cambiamento servono personale formato, orari serali e un’idea di città. In un mondo sempre più digitale, la sfida è tenere aperto un luogo dove nessuno ti chiede di comprare niente.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 51593,
+      "inputTokens": 50735,
+      "cachedInputTokens": 36352,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 858,
+      "reasoningOutputTokens": 472
+    },
+    "last": {
+      "totalTokens": 32100,
+      "inputTokens": 31304,
+      "cachedInputTokens": 19200,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 796,
+      "reasoningOutputTokens": 455
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [
+    {
+      "path": "references/stile-naturale.md",
+      "sha256": "ab6907da9fb39406fc1b204b1f75c62c6fb08c406e10c961294bc6e00059d217",
+      "bytes": 68321
+    }
+  ],
+  "durationMs": 19788,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "91ca206e20d99a34171df71a6f83bfe52cde7da58951747e985bb938948b056e",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

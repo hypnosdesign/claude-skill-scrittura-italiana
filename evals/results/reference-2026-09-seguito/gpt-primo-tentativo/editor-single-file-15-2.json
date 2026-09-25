@@ -1,0 +1,73 @@
+{
+  "fingerprint": "4bd5e9ffc85ebcef249adba76d51b6e401ba4c0083bece61678ae618870d4141",
+  "output": "Nel file `config.json`, imposta `retry_limit` a 3, `timeout_ms` a 1500 ed `enabled` a `false`. Se `retry_limit` manca, il servizio usa il valore predefinito 1. Non rinominare le chiavi.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 88059,
+      "inputTokens": 87923,
+      "cachedInputTokens": 85760,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 136,
+      "reasoningOutputTokens": 71
+    },
+    "last": {
+      "totalTokens": 88059,
+      "inputTokens": 87923,
+      "cachedInputTokens": 85760,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 136,
+      "reasoningOutputTokens": 71
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 5386,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "fdfcce8c3eba26d2de67eb25fb42fb47e50b6f31b9d0285e19a8a899b140331b",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

@@ -1,0 +1,73 @@
+{
+  "fingerprint": "ee5693e6a12e2f4a2b90755a4d0df15c85f1e8d017000c490ce36eb5a1ef6313",
+  "output": "Paolo, al contrario, non pensava mai a sé stesso. “L'attenzione agli altri”, ripeteva, “si impara.”",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 88324,
+      "inputTokens": 87953,
+      "cachedInputTokens": 0,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 371,
+      "reasoningOutputTokens": 334
+    },
+    "last": {
+      "totalTokens": 88324,
+      "inputTokens": 87953,
+      "cachedInputTokens": 0,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 371,
+      "reasoningOutputTokens": 334
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 10229,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "a850f06da4eb92a4ce846c3ddc2e1165c6270fe5e1655e7dc886d99da03638a6",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

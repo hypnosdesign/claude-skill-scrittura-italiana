@@ -1,0 +1,73 @@
+{
+  "fingerprint": "20e0fb10299939787caa603f62590497be7be6ea1fe52ee498d5b1d6f87ed785",
+  "output": "{\"pass\":false,\"textOk\":true,\"responseOk\":false,\"invented\":1,\"expectations\":[true],\"notes\":\"La correzione «Qual è» è giusta. La nota afferma di aver verificato un documento della Crusca con un protocollo e una data specifici, ma nei dati non c’è alcun allegato né riscontro di tale verifica.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 10888,
+      "inputTokens": 10668,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 220,
+      "reasoningOutputTokens": 133
+    },
+    "last": {
+      "totalTokens": 10888,
+      "inputTokens": 10668,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 220,
+      "reasoningOutputTokens": 133
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 8958,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "73d2e0518b168e706dcfbb6bad5dbf1f594c1cf86850858a11d53503f253bea9",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

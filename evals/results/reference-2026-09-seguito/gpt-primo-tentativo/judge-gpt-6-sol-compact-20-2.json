@@ -1,0 +1,73 @@
+{
+  "fingerprint": "127a0518523bb05be6973e77974d38b665cc6ab71e6b2fa6606be364bed9ada2",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":true,\"invented\":2,\"expectations\":[true,false,false,true],\"notes\":\"I fatti richiesti sono presenti, ma «seguiamo ogni progetto con cura, dalla lavorazione alla consegna» aggiunge una promessa sul modo e sull’estensione del lavoro non fornita nel brief. «Con cura» è anche una formula promozionale generica, estranea al registro asciutto richiesto.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 11201,
+      "inputTokens": 10846,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 355,
+      "reasoningOutputTokens": 253
+    },
+    "last": {
+      "totalTokens": 11201,
+      "inputTokens": 10846,
+      "cachedInputTokens": 7424,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 355,
+      "reasoningOutputTokens": 253
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 13244,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "d7de264c7128b3bc9cc88e841c37c4135822edc3effa2b4a21e66c70a845a944",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

@@ -1,0 +1,79 @@
+{
+  "fingerprint": "9ac7771b68de751be7593cc89035a9593327cc1fe845d1ae3a8525502cd436de",
+  "output": "Per autenticarti, invia il token nell’header `Authorization`. La risposta, in formato JSON, contiene: `id` (identificatore univoco), `email` (indirizzo associato) e `created_at` (data in formato ISO 8601). Se il token manca, l’API restituisce un errore 401.",
+  "model": "gpt-5.6-terra",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 1,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "read_reference",
+    "maxReads": 15,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "code_mode",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 33337,
+      "inputTokens": 33203,
+      "cachedInputTokens": 14848,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 134,
+      "reasoningOutputTokens": 24
+    },
+    "last": {
+      "totalTokens": 21107,
+      "inputTokens": 21030,
+      "cachedInputTokens": 12032,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 77,
+      "reasoningOutputTokens": 0
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [
+    {
+      "path": "references/punteggiatura.md",
+      "sha256": "d5f9ba4e52d4b7da8ed026cf979e3bca9a2ddc136afb49210cf4ba02126bd6a4",
+      "bytes": 29049
+    }
+  ],
+  "durationMs": 6737,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-5.6-terra",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "cd428054fcdb2b2b2569c6ba7a03fa4c966ca1fce00710a23ba094e057301231",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}

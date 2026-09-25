@@ -1,0 +1,421 @@
+{
+  "planned": 10,
+  "completed": 10,
+  "pass": 4,
+  "rows": [
+    {
+      "id": 15,
+      "repetition": 1,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-15-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Il testo è riprodotto invariato: chiavi, valori, condizione e formato richiesti sono preservati."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-15-1.json",
+      "editorDurationMs": 6263,
+      "usage": {
+        "total": {
+          "totalTokens": 89086,
+          "inputTokens": 89013,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 73,
+          "reasoningOutputTokens": 19
+        },
+        "last": {
+          "totalTokens": 89086,
+          "inputTokens": 89013,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 73,
+          "reasoningOutputTokens": 19
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 15,
+      "repetition": 2,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-15-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Il testo è riprodotto invariato: chiavi, valori, condizione e formato richiesti sono preservati; non ci sono note o aggiunte."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-15-2.json",
+      "editorDurationMs": 5855,
+      "usage": {
+        "total": {
+          "totalTokens": 89100,
+          "inputTokens": 89013,
+          "cachedInputTokens": 88832,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 87,
+          "reasoningOutputTokens": 33
+        },
+        "last": {
+          "totalTokens": 89100,
+          "inputTokens": 89013,
+          "cachedInputTokens": 88832,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 87,
+          "reasoningOutputTokens": 33
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 24,
+      "repetition": 1,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-24-1.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          false,
+          true,
+          true,
+          true
+        ],
+        "notes": "Il testo conserva i tre fatti e non aggiunge dettagli, ma non adotta la prima persona richiesta: resta impersonale. Il tono è diretto e insofferente, con periodi brevi e ritmo spezzato."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-24-1.json",
+      "editorDurationMs": 11782,
+      "usage": {
+        "total": {
+          "totalTokens": 89278,
+          "inputTokens": 89047,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 231,
+          "reasoningOutputTokens": 187
+        },
+        "last": {
+          "totalTokens": 89278,
+          "inputTokens": 89047,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 231,
+          "reasoningOutputTokens": 187
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 24,
+      "repetition": 2,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-24-2.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          false,
+          true,
+          true,
+          true
+        ],
+        "notes": "Il testo resta impersonale: non adotta la prima persona richiesta e attenua il tono insofferente del campione. I tre fatti sono conservati, senza aggiunte; il ritmo è breve e spezzato."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-24-2.json",
+      "editorDurationMs": 9246,
+      "usage": {
+        "total": {
+          "totalTokens": 89333,
+          "inputTokens": 89047,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 286,
+          "reasoningOutputTokens": 242
+        },
+        "last": {
+          "totalTokens": 89333,
+          "inputTokens": 89047,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 286,
+          "reasoningOutputTokens": 242
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 34,
+      "repetition": 1,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-34-1.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La risposta non riscrive il paragrafo e individua più di tre problemi, citando formulazioni precise. La diagnosi sui gerundi in coda è fondata; non attribuisce gerundi al primo periodo né aggiunge fatti sull’ente."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-34-1.json",
+      "editorDurationMs": 10640,
+      "usage": {
+        "total": {
+          "totalTokens": 89316,
+          "inputTokens": 89022,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 294,
+          "reasoningOutputTokens": 137
+        },
+        "last": {
+          "totalTokens": 89316,
+          "inputTokens": 89022,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 294,
+          "reasoningOutputTokens": 137
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 34,
+      "repetition": 2,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-34-2.json",
+      "verdict": {
+        "pass": true,
+        "textOk": true,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La risposta offre solo una diagnosi, individua più di tre problemi reali e ancora ogni rilievo a parole precise. Non attribuisce gerundi al primo periodo, non inventa simmetrie sintattiche né aggiunge informazioni sull’ente."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-34-2.json",
+      "editorDurationMs": 12758,
+      "usage": {
+        "total": {
+          "totalTokens": 89353,
+          "inputTokens": 89022,
+          "cachedInputTokens": 88832,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 331,
+          "reasoningOutputTokens": 157
+        },
+        "last": {
+          "totalTokens": 89353,
+          "inputTokens": 89022,
+          "cachedInputTokens": 88832,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 331,
+          "reasoningOutputTokens": 157
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 37,
+      "repetition": 1,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-37-1.json",
+      "verdict": {
+        "pass": false,
+        "textOk": true,
+        "responseOk": false,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          false,
+          true
+        ],
+        "notes": "Il testo del capitolo 2 è allineato e il capitolo 1 resta invariato, senza aggiunte di contenuto. Manca però la nota che dichiari le scelte editoriali applicate."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-37-1.json",
+      "editorDurationMs": 11172,
+      "usage": {
+        "total": {
+          "totalTokens": 89331,
+          "inputTokens": 89043,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 288,
+          "reasoningOutputTokens": 209
+        },
+        "last": {
+          "totalTokens": 89331,
+          "inputTokens": 89043,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 288,
+          "reasoningOutputTokens": 209
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 37,
+      "repetition": 2,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-37-2.json",
+      "verdict": {
+        "pass": false,
+        "textOk": true,
+        "responseOk": false,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          false,
+          true
+        ],
+        "notes": "Il capitolo 2 è allineato: «se stesso» diventa «sé stesso» e le virgolette sono curve. Il capitolo 1 resta intatto e il contenuto non è riscritto. Manca però la nota che dichiari le scelte editoriali, richiesta esplicitamente."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-37-2.json",
+      "editorDurationMs": 9533,
+      "usage": {
+        "total": {
+          "totalTokens": 89268,
+          "inputTokens": 89043,
+          "cachedInputTokens": 88832,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 225,
+          "reasoningOutputTokens": 149
+        },
+        "last": {
+          "totalTokens": 89268,
+          "inputTokens": 89043,
+          "cachedInputTokens": 88832,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 225,
+          "reasoningOutputTokens": 149
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 40,
+      "repetition": 1,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-40-1.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "La revisione elimina correttamente i tic indicati e conserva i dati, ma omette la specificazione «In un mondo sempre più digitale», parte del contesto della sfida finale. Le aspettative specifiche risultano comunque soddisfatte."
+      },
+      "artifact": "judge-gpt-6-luna-single-file-40-1.json",
+      "editorDurationMs": 34513,
+      "usage": {
+        "total": {
+          "totalTokens": 90843,
+          "inputTokens": 89372,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1471,
+          "reasoningOutputTokens": 1034
+        },
+        "last": {
+          "totalTokens": 90843,
+          "inputTokens": 89372,
+          "cachedInputTokens": 3840,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1471,
+          "reasoningOutputTokens": 1034
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    },
+    {
+      "id": 40,
+      "repetition": 2,
+      "arm": "single-file",
+      "editorArtifact": "editor-single-file-40-2.json",
+      "verdict": {
+        "pass": false,
+        "textOk": false,
+        "responseOk": true,
+        "invented": 0,
+        "expectations": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "notes": "Il testo è stato snellito e conserva i dati, ma omette che gli studenti arrivano prima dell’apertura e ne attenua il significato: la loro attesa «mette in luce» l’importanza degli spazi, mentre l’originale affermava che la loro condotta la sottolinea. La nota sul confronto fra ingressi e prestiti è "
+      },
+      "artifact": "judge-gpt-6-luna-single-file-40-2.json",
+      "editorDurationMs": 37941,
+      "usage": {
+        "total": {
+          "totalTokens": 90791,
+          "inputTokens": 89372,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1419,
+          "reasoningOutputTokens": 974
+        },
+        "last": {
+          "totalTokens": 90791,
+          "inputTokens": 89372,
+          "cachedInputTokens": 0,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 1419,
+          "reasoningOutputTokens": 974
+        },
+        "modelContextWindow": 258400
+      },
+      "reads": []
+    }
+  ]
+}

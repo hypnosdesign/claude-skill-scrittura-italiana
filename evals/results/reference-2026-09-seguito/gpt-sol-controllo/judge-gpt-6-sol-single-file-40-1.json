@@ -1,0 +1,73 @@
+{
+  "fingerprint": "abde18eb7da7c8c6ed113048f94d7c90c3a964c5e70bc3c92d19a237a77c079a",
+  "output": "{\"pass\":false,\"textOk\":false,\"responseOk\":true,\"invented\":0,\"expectations\":[false,false,true,false,true,true],\"notes\":\"La revisione conserva «Si può obiettare… Eppure», lascia quasi intatta l’opposizione «non sono un semplice servizio comunale: sono un presidio» e mantiene la meta-frase «Le tre tendenze convergono». Le note argomentative sono pertinenti e non introducono fatti.\"}",
+  "model": "gpt-6-sol",
+  "modelProvider": "openai",
+  "version": "codex-cli 0.156.1",
+  "policy": {
+    "version": 2,
+    "provider": "openai",
+    "effort": "medium",
+    "sandbox": "read-only",
+    "approval": "never",
+    "ephemeral": true,
+    "autoActivation": false,
+    "referenceTool": "skill_reference.read_reference",
+    "maxReads": 15,
+    "referenceOutputTokens": 65536,
+    "disabled": [
+      "shell_tool",
+      "multi_agent",
+      "apps",
+      "plugins",
+      "memories",
+      "hooks",
+      "browser_use",
+      "browser_use_external",
+      "computer_use",
+      "image_generation",
+      "view_image",
+      "goals",
+      "sleep_tool",
+      "skill_search"
+    ]
+  },
+  "usage": {
+    "total": {
+      "totalTokens": 36500,
+      "inputTokens": 35569,
+      "cachedInputTokens": 30592,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 931,
+      "reasoningOutputTokens": 745
+    },
+    "last": {
+      "totalTokens": 12746,
+      "inputTokens": 11950,
+      "cachedInputTokens": 11648,
+      "cacheWriteInputTokens": 0,
+      "outputTokens": 796,
+      "reasoningOutputTokens": 690
+    },
+    "modelContextWindow": 258400
+  },
+  "reads": [],
+  "durationMs": 27513,
+  "costUsd": null,
+  "costNote": "Il client non restituisce un costo fatturato.",
+  "instructionHashes": [
+    "8de3a82be9f121c620758478c0a3d8fa3b80c9b4ae8cf18dca38389eb1ee08d2"
+  ],
+  "confirmed": {
+    "model": "gpt-6-sol",
+    "modelProvider": "openai",
+    "approvalPolicy": "never",
+    "sandbox": {
+      "type": "readOnly",
+      "networkAccess": false
+    },
+    "reasoningEffort": "medium"
+  },
+  "rawSha256": "80d2aae0af2d9104c156a824f83fbbba40c48150a68eb40334215749d604012c",
+  "exportNote": "Estratto: transcript, stderr, ID e percorsi personali omessi. Non è un artefatto di resume."
+}
