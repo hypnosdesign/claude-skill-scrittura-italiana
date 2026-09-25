@@ -30,13 +30,12 @@ accenti, punteggiatura), **chiarisci** (periodi e filo del discorso), **riscrivi
 e ritmo nuovi, contenuto identico), **umanizza**, **risolvi un dubbio di lingua** (regola,
 esempio e fonte).
 
-Il caso d'uso più cercato è l'ultimo rimasto senza nome proprio: incolli un testo che «sa di
-AI» e te lo restituisce naturale — via perifrasi, gerundite, triadi, avverbi in *-mente*,
-trattini lunghi, antilingua, cliché, chiusure ottimistiche vuote. È l'uso da humanizer; il
-motore sotto è lo stesso delle altre cinque azioni.
+Puoi usarla anche come *humanizer*: incolli un testo che «sa di AI» e chiedi di renderlo
+più naturale. La revisione interviene su perifrasi, gerundite, triadi, avverbi in *-mente*,
+trattini lunghi, antilingua, cliché e chiusure vuote. Applica lo stesso metodo editoriale
+usato per le altre cinque azioni.
 
-**Il metodo è la differenza**: a differenza di un trova-e-sostituisci, questa skill conosce
-l'italiano, perché è costruita sulle **quattro virtù dell'espressione**
+Le istruzioni seguono le **quattro virtù dell'espressione**
 (*virtutes elocutionis*) della retorica classica:
 
 1. **aptum** — appropriatezza a scopo, destinatario, registro e **livello di controllo** del
@@ -121,6 +120,19 @@ troncamento, non un'elisione → niente apostrofo. È anche un consulente, non s
 
 `SKILL.md` è autosufficiente per i casi frequenti; i file in `references/` vengono consultati
 quando serve il dettaglio (*progressive disclosure*).
+
+### Perché le istruzioni sono in italiano
+
+I file Markdown della skill sono in italiano perché descrivono regole, registri ed esempi
+della lingua italiana. Scriverli nella lingua del compito permette di controllare gli esempi
+senza tradurli. Questo, da solo, non prova che un modello risponda meglio a istruzioni in
+italiano: le [valutazioni del progetto](evals/README.md) confrontano la skill con altre
+condizioni, ma non isolano la lingua delle istruzioni in un confronto italiano/inglese.
+
+`SKILL.md` contiene le istruzioni che l'assistente carica quando la skill si attiva; i file
+in `references/` vengono letti quando servono. Questo README spiega il progetto a chi lo
+visita e non entra automaticamente nel contesto della skill. La sua prosa è stata rivista
+con gli stessi criteri editoriali, rispettando comandi, nomi di file, esempi e dati.
 
 ## Documentazione
 
@@ -279,9 +291,9 @@ Questa skill è un'opera derivata e cita le sue fonti:
 
 ## In English
 
-**scrittura-italiana** is a Claude [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills)
-that gives Claude the full framework for **writing and editing Italian**. The skill's
-content is in Italian (it has to be), but here's what it does and how to use it.
+**scrittura-italiana** is an [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills)
+for **writing and editing Italian**. Its instructions and examples are in Italian; this
+section explains what it does and how to use it.
 
 ### What it does — an editorial skill for Italian
 
@@ -331,6 +343,11 @@ punctuation question (e.g. *"Correggi questo testo"*, *"ci vuole la virgola prim
 Provide a sample of your own writing and it will match your voice instead of flattening
 everything to neutral Italian. See the **Esempi (prima → dopo)** section above for before/after
 demonstrations.
+
+The skill instructions and examples are in Italian because they deal with Italian usage.
+The README is documentation for readers; it is not automatically loaded when the skill
+activates. Our [evaluations](evals/README.md) do not isolate instruction language, so they
+do not establish that Italian instructions alone improve model output.
 
 ### Sources & license
 
