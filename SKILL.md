@@ -10,14 +10,14 @@ description: |
   dell'AI, voce), CORRETTEZZA (punteggiatura, accenti, omofoni, plurali,
   pronomi), CHIAREZZA ed EFFICACIA (retorica, figure, ritmo,
   argomentazione). Per umanizzare, scrivere, tradurre, riassumere,
-  revisionare o editare testi italiani — saggistica, tesi, articoli, copy,
+  revisionare, profilare la voce o editare testi italiani — saggistica, tesi, articoli, copy,
   narrativa, divulgazione, email, discorsi, appunti — o per dubbi di
   lingua (virgola, due punti, virgolette; qual è, un po', da/dà, sé
   stesso, congiuntivo).
 license: CC-BY-SA-4.0
 compatibility: claude-code claude-desktop opencode claude.ai
 metadata:
-  version: "2.20.0"
+  version: "2.21.0"
   language: it
 allowed-tools: Read Write Edit Grep Glob AskUserQuestion
 ---
@@ -116,6 +116,7 @@ compito (le voci «obbligatorio» non sono facoltative):
 | **line edit / umanizza** | `references/stile-naturale.md`, prima della passata 4 | `references/cliche-e-parole-alla-moda.md` (copy, giornalismo) |
 | → se saggistica/tesi/accademico | in particolare §9 e §58-65 (tic saggistico-accademici) | `references/coesione-e-connettivi.md` se il filo non tiene |
 | → se chat/email/social/divulgazione | in particolare §66-75 (slop da assistente) | `references/spiegare-con-chiarezza.md` (divulgazione) |
+| **profilo di voce riutilizzabile / adattamento da più campioni** | `references/voce-autore.md` | `references/stile-naturale.md` → «Dare voce» |
 | **deep rewrite / scrivere da zero** | `references/retorica-efficacia.md` (§1-2, §6) **+** il file del genere: `references/spiegare-con-chiarezza.md` (divulgare/documentare), `references/narrativa.md` (raccontare) | `references/revisione-e-proprieta.md` per la lima |
 | **argomentare / costruire una tesi** | `references/retorica-efficacia.md` §5-7 | `references/coesione-e-connettivi.md` |
 | **spiegare / divulgare** (anche breve) | `references/spiegare-con-chiarezza.md` | `references/retorica-efficacia.md` §2a (preset divulgazione) |
@@ -147,6 +148,9 @@ compito (le voci «obbligatorio» non sono facoltative):
   "caporali o virgolette?"), grammatica/sintassi ("congiuntivo o indicativo?", "che tempo qui?"),
   oppure di stile/retorica ("come rendo più efficace questo passaggio?", "che registro uso?").
 - Stai producendo tu stesso prosa italiana per l'utente e vuoi che sia impeccabile.
+- L'utente chiede una **scheda della propria voce** o un confronto fra campioni e una
+  riscrittura. Osservazioni e misure seguono `references/voce-autore.md`; lo strumento
+  di conteggio è facoltativo e si esegue solo su richiesta.
 
 ---
 
@@ -239,6 +243,9 @@ di chiarezza o ritmo. Non devi trovare qualcosa da correggere in ogni passata.
 
 Mantieni sempre **significato e registro**. Se l'utente fornisce un campione del proprio
 stile, calibrati su quello invece di appiattire a un italiano neutro.
+Se chiede un profilo da riutilizzare o fornisce più campioni, apri
+`references/voce-autore.md`: separa caratteristiche osservate, misure effettive e
+preferenze richieste. Un'assenza nel campione non diventa un divieto per l'autore.
 Se chiede di riscrivere nella propria voce e il campione usa la prima persona,
 adotta quella persona per i giudizi già forniti nel brano. È un cambio di punto
 di vista autorizzato, non l'invenzione di un'esperienza: non aggiungere azioni,
@@ -260,6 +267,14 @@ guidano la stesura, non la correggono. Poi quattro passi:
    il filo fra frasi e capoversi (`coesione-e-connettivi.md`).
 4. **Stesura e audit.** Scrivi già rispettando le virtù — non produrre prosa da ripulire
    dopo — e chiudi con l'**audit anti-AI** e la **checklist tipografica**.
+
+**Testo destinato alla pubblicazione:** leggilo come chi vede solo il documento, senza
+la chat. Chiarisci riferimenti alla conversazione usando informazioni già fornite;
+elimina formule rivolte a chi ha scritto il prompt. Conserva domande, negazioni e
+segnali di percorso quando fanno avanzare il contenuto. Se manca un antecedente,
+segnala il dato necessario a parte: non inventarlo. In revisione rispetta il livello
+richiesto; in proofread non riscrivere per questo controllo. Dettaglio ed esempi in
+`references/stile-naturale.md` → «Autonomia del testo pubblicabile».
 
 A seconda del genere, apri il riferimento dedicato: **argomentare/persuadere** →
 `retorica-efficacia.md` §5, §7-8; **divulgare/documentare** (spiegare cose complesse, numeri,
@@ -363,6 +378,8 @@ termini tecnici) → `spiegare-con-chiarezza.md`; **narrativa** (idea, punto di 
   **saggistico-accademici** (§58-65); lo **slop da assistente e semantico** con le invarianti
   (Parte J, §66-75); i **tic di terza generazione 2025-26** (Parte K, §76-80); la nota «Quando
   il compito è tradurre»; «Dare voce» (argine *non fabbricare soggettività*) e l'audit finale.
+- **`references/voce-autore.md`** — scheda riutilizzabile, riscontri nei campioni,
+  preferenze richieste e confronto facoltativo delle misure di una riscrittura.
 - **`references/cliche-e-parole-alla-moda.md`** — *non pensare per formule*. Parole alla moda,
   tormentoni, elogi triti, luoghi comuni, metafore morte, plastismi, cliché scientifici.
 - **`references/coesione-e-connettivi.md`** — *il filo del discorso*. Coesione vs coerenza,

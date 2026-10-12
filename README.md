@@ -18,7 +18,7 @@
 
 [![Sito](https://img.shields.io/badge/sito-scrittura--italiana-9c2a1f.svg)](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.20.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.21.0-blue.svg)
 
 🔗 **[Sito del progetto →](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)**
 
@@ -100,9 +100,11 @@ troncamento, non un'elisione → niente apostrofo. È anche un consulente, non s
 │   ├── cliche-e-parole-alla-moda.md  # parole alla moda, tormentoni, luoghi comuni, cliché, plastismi
 │   ├── spiegare-con-chiarezza.md # divulgare/documentare: chiarezza, numeri, termine tecnico, anti-hype
 │   ├── narrativa.md              # raccontare: idea vs trama, personaggio, dialogo, scena, tensione, revisione
-│   └── revisione-e-proprieta.md  # la parola giusta (le mot juste), collaudo metafore, revisione a freddo
+│   ├── revisione-e-proprieta.md  # la parola giusta (le mot juste), collaudo metafore, revisione a freddo
+│   └── voce-autore.md           # scheda di voce, riscontri e preferenze dell'autore
+├── scripts/confronta-voce.mjs    # misure locali facoltative, JSON e confronto con la bozza
 └── evals/
-    ├── evals.json                # 60 casi dev + 6 held-out congelati
+    ├── evals.json                # 69 casi dev + 6 held-out congelati
     ├── manifest.json             # nomi, generi, livelli (exact/minimal/semantic/…) e split
     ├── run.mjs                   # runner content-addressed, verdetti fail-closed, braccio --no-skill
     ├── run.test.mjs              # test deterministici del runner
@@ -142,16 +144,18 @@ con gli stessi criteri editoriali, rispettando comandi, nomi di file, esempi e d
 
 ## Stato e verifiche
 
-La **2.20.0** aggiunge il marketplace e il plugin Claude Code, con installazione
-e aggiornamenti gestiti dal client. Le istruzioni editoriali e i nove riferimenti
-sono quelli della 2.19.2. Il pacchetto contiene il nucleo completo: la variante
+La release **2.21.0** aggiunge una decima guida per il profilo di voce, un misuratore
+facoltativo e il controllo che il testo pubblicabile si regga senza la chat.
+Il marketplace e il plugin Claude Code, introdotti nella 2.20.0, gestiscono
+installazione e aggiornamenti. Il pacchetto contiene il nucleo completo: la variante
 compatta sperimentale **non è stata adottata**, perché nelle prove perdeva informazioni.
-Le [note della release](docs/releases/v2.20.0.md) riepilogano cosa cambia.
+Le [note della release](docs/releases/v2.21.0.md) riepilogano cosa cambia.
 
-La suite comprende **66 casi: 60 di sviluppo e 6 held-out**. I sei held-out restano
-fuori dalle prove usate per correggere la skill. I **48 test deterministici** verificano gli
-strumenti di valutazione e la sincronizzazione del sito; non misurano la qualità
-editoriale delle risposte.
+La suite comprende **75 casi: 69 di sviluppo e 6 held-out**. I sei held-out restano
+fuori dalle prove usate per correggere la skill. I test deterministici verificano gli
+strumenti di valutazione, il misuratore, il pacchetto e la sincronizzazione del sito;
+non misurano la qualità editoriale delle risposte. I nove casi nuovi sono aspettative
+da verificare con i modelli, senza risultati comportamentali ancora dichiarati.
 
 Le prove di settembre usano **GPT Terra 5.6, Sol 6 e Luna 6**, con ruoli e risultati
 distinti. Nel controllo finale mirato, Sol ottiene **18 risposte conformi su 22**
@@ -184,6 +188,16 @@ installati: Claude Code, Cursor, Copilot…):
 ```bash
 npx skills add hypnosdesign/claude-skill-scrittura-italiana
 ```
+
+Per aggiornare questa skill, esegui nel terminale:
+
+```bash
+npx skills update scrittura-italiana
+```
+
+Con `npx skills update`, senza il nome, aggiorni tutte le skill gestite dal CLI.
+Gli aggiornamenti vanno avviati manualmente. Vedi la
+[documentazione di skills](https://github.com/vercel-labs/skills).
 
 ### Claude Code — marketplace (consigliato per Claude Code)
 
@@ -262,6 +276,31 @@ una domanda di punteggiatura. Esempi:
 
 Se fornisci un **campione del tuo stile**, la skill calibra la voce su quello invece di
 appiattire tutto a un italiano neutro.
+
+## Conservare e confrontare la propria voce
+
+Chiedi «Crea una scheda riutilizzabile della mia voce per le newsletter» e fornisci
+campioni dello stesso contesto. La skill documenta le caratteristiche osservate con
+riscontri nei testi e registra separatamente le preferenze richieste. La scheda può
+essere fornita insieme ai brief successivi; non trasferisce i fatti dei campioni.
+
+Per le misure facoltative serve Node.js 22 o successivo. Dalla cartella della skill:
+
+```bash
+node scripts/confronta-voce.mjs --campione campioni/ --registro newsletter
+node scripts/confronta-voce.mjs --campione campioni/ --testo bozza.md --registro newsletter
+```
+
+Il risultato JSON contiene lunghezze di frasi e capoversi, punteggiatura, ricorrenze,
+metodo e impronte dei file. Lo strumento non modifica i testi. Le differenze servono
+a individuare scelte da valutare: non sono un punteggio o un obiettivo da raggiungere.
+Senza Node puoi usare la scheda con osservazioni qualitative. Dettagli, convenzioni di
+conteggio e limiti in [voce-autore.md](references/voce-autore.md).
+
+Per una pubblicazione puoi chiedere «Rendi questo avviso comprensibile senza la nostra
+chat, usando solo il brief». La skill chiarisce i riferimenti con informazioni già
+fornite e segnala a parte le lacune. Conserva domande utili e segnali di percorso;
+una richiesta di soli refusi non autorizza questa riscrittura.
 
 ## Esempi (prima → dopo)
 
@@ -418,17 +457,19 @@ do not establish that Italian instructions alone improve model output.
 
 ### Release status and limits
 
-Version **2.20.0** adds the Claude Code marketplace and plugin. Run
+Version **2.21.0** adds a reusable voice profile, optional local measurements
+and a check that publishable documents make sense without the originating chat.
+The Claude Code marketplace and plugin were introduced in 2.20.0. Run
 `/plugin marketplace add hypnosdesign/claude-skill-scrittura-italiana`, then
 `/plugin install scrittura-italiana@scrittura-italiana` inside Claude Code.
 Enable auto-update for this marketplace under `/plugin` → **Marketplaces**.
-The editorial instructions and references are unchanged from 2.19.2.
 The experimental compact variant is not included: it lost information in the
 comparison. Download the installable ZIP from the
 [latest release](https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/latest).
 
-The suite has **60 development cases and 6 held-out cases**. Its 48 deterministic
-tests check the evaluation tools and site synchronization, not writing quality.
+The suite has **69 development cases and 6 held-out cases**. Deterministic tests
+check tools, measurements, packaging and site synchronization, not writing quality.
+The nine new behavioral cases have not been run against models yet.
 The final targeted Sol check returned 18/22 automatic passes; four outputs remain
 non-compliant after the assistant's review. Tests also used Terra and Luna in
 separate roles. There were no independent human readers, and the results do not

@@ -381,6 +381,7 @@ test('main usa dev per default e rifiuta flag o id sconosciuti', () => {
       ...Array.from({ length: 14 }, (_, i) => i + 17),
       ...Array.from({ length: 12 }, (_, i) => i + 34),
       ...Array.from({ length: 20 }, (_, i) => i + 47),
+      ...Array.from({ length: 9 }, (_, i) => i + 67),
     ])
     const heldOut = main(['--validate-only', '--split', 'held-out'])
     assert.deepEqual(heldOut.ids, [14, 16, 31, 32, 33, 46])

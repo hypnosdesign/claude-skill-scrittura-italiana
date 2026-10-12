@@ -692,6 +692,114 @@
    "expected_output": "La risposta è in JSON e contiene il campo created_at. L'export usa il file dati.json e non cambia il valore false.",
    "files": [],
    "expectations": ["Corregge soltanto rispsta in risposta.", "Non aggiunge backtick, corsivo o grassetto attorno a JSON, created_at, dati.json o false.", "Mantiene l'apostrofo dritto in L'export, punteggiatura e contenuto invariati.", "Non aggiunge note."]
+  },
+  {
+   "id": 67,
+   "prompt": "Crea una scheda riutilizzabile della mia voce per avvisi ai soci, usando questi due campioni originali. Non eseguire strumenti. A: «La palestra apre alle sette, salvo i giorni festivi. Portate una tessera valida.» B: «La segreteria chiude alle cinque, salvo il mercoledì. Lasciate i moduli al banco.»",
+   "expected_output": "Scheda circoscritta agli avvisi: struttura regolare ed eccezioni, riscontri nei campioni, nessun conteggio inventato.",
+   "files": [],
+   "expectations": [
+    "Identifica genere e registro degli avvisi e limita le osservazioni ai due campioni.",
+    "Sostiene almeno una caratteristica con un passo effettivamente presente, senza inventare citazioni.",
+    "Conserva la regolarità come scelta funzionale; non prescrive frasi cortissime e lunghe in ogni capoverso.",
+    "Non inventa misure quantitative, biografia o stabilità dello stile fuori dai campioni."
+   ]
+  },
+  {
+   "id": 68,
+   "prompt": "Prepara una scheda di voce per le mie prossime newsletter. Campioni: «Il sentiero, quando piove, diventa scivoloso. Meglio partire presto.» e «Il ponte, dopo il disgelo, resta chiuso. Il giro lungo è aperto.» Per i nuovi testi voglio meno incisi: non cambiare i campioni e non eseguire strumenti.",
+   "expected_output": "Distingue incisi osservati e preferenza di ridurli; lascia intatti i campioni.",
+   "files": [],
+   "expectations": [
+    "Descrive gli incisi osservati con un esempio esistente.",
+    "Registra separatamente la richiesta di ridurre gli incisi nei testi futuri.",
+    "Non sostiene che i campioni mostrino già lo stile desiderato.",
+    "Non riscrive i campioni né esegue strumenti."
+   ]
+  },
+  {
+   "id": 69,
+   "prompt": "Descrivi la mia voce in questi due testi, separando i contesti. Avviso al pubblico: «Il parcheggio chiude alle diciotto. Ritirate il veicolo entro quell'ora.» Racconto: «Sotto il telo trovai la bicicletta. Era ancora lì, con il campanello storto e la polvere di tre estati.» Non usare strumenti.",
+   "expected_output": "Due descrizioni circoscritte ai rispettivi contesti, senza voce media unica.",
+   "files": [],
+   "expectations": [
+    "Distingue il registro funzionale dell'avviso dalla prosa narrativa.",
+    "Non combina i due brani in un unico obbligo stilistico per l'autore.",
+    "Sostiene le osservazioni con materiale presente.",
+    "Non inventa biografia, misure o preferenze non dichiarate."
+   ]
+  },
+  {
+   "id": 70,
+   "prompt": "Crea una scheda di voce usando solo questo campione: «Ho lasciato la chiave al vicino. Torno martedì.» Non eseguire strumenti e non calcolare statistiche.",
+   "expected_output": "Osservazioni limitate al breve campione, nessun divieto ricavato da assenze.",
+   "files": [],
+   "expectations": [
+    "Dichiara il limite del campione senza rifiutare ogni osservazione.",
+    "Non trasforma l'assenza di domande, metafore o incisi in divieti generali.",
+    "Non inventa percentuali, frequenze, tratti stabili o biografia.",
+    "Conserva i soli due fatti come esempi, senza riscriverli o eseguire strumenti."
+   ]
+  },
+  {
+   "id": 71,
+   "prompt": "Riscrivi nella voce asciutta di questi miei due campioni; usa i campioni solo per lo stile. A: «A Lodi ho perso l'ultimo treno. Pazienza. Sono tornato a piedi.» B: «La mostra di Nora era piena. Sono rimasto fuori. Poco male.» Il testo da riscrivere è: «Il negozio di riparazioni chiuderà venerdì per manutenzione e riaprirà lunedì. Le prenotazioni restano valide.» Restituisci solo il nuovo testo e non eseguire strumenti.",
+   "expected_output": "Stessi fatti sul negozio con prosa asciutta; nessuna vicenda o persona importata dai campioni.",
+   "files": [],
+   "expectations": [
+    "Mantiene chiusura venerdì, motivo di manutenzione, riapertura lunedì e validità delle prenotazioni.",
+    "Non importa Lodi, Nora, treni, mostra o esperienze personali dai campioni.",
+    "Non aggiunge opinioni, ricordi o altri fatti per replicare la voce.",
+    "Restituisce soltanto il testo richiesto."
+   ]
+  },
+  {
+   "id": 72,
+   "prompt": "Riscrivi come avviso da pubblicare sul sito del museo, leggibile senza la nostra chat. Fatti forniti: la biglietteria riapre il 18 ottobre; orario 9-13. Bozza: «Come mi hai chiesto, confermo la data di cui parlavamo. L'orario è quello indicato sopra.» Solo testo finale.",
+   "expected_output": "Avviso autonomo con biglietteria, 18 ottobre e 9-13.",
+   "files": [],
+   "expectations": [
+    "Esplicita biglietteria, riapertura il 18 ottobre e orario 9-13 usando il brief.",
+    "Elimina i riferimenti al destinatario del prompt e alla chat.",
+    "Non aggiunge giorno della settimana, anno, motivi, prezzi o altri dati.",
+    "Restituisce solo l'avviso."
+   ]
+  },
+  {
+   "id": 73,
+   "prompt": "Fai un line edit per pubblicare questo avviso, senza inventare informazioni. Non so a quale modifica si riferisca: segnalami il dato mancante in una nota separata. «Quella modifica entra in vigore venerdì. Gli utenti già iscritti mantengono le condizioni attuali.»",
+   "expected_output": "Preserva data e condizioni; segnala quale modifica manca senza completarla a intuito.",
+   "files": [],
+   "expectations": [
+    "Non inventa l'oggetto della modifica, la sua causa o chi l'ha decisa.",
+    "Conserva entrata in vigore venerdì e condizioni attuali per gli utenti già iscritti.",
+    "Segnala separatamente che occorre identificare la modifica.",
+    "Non inserisce una propria ipotesi nel testo dell'avviso."
+   ]
+  },
+  {
+   "id": 74,
+   "prompt": "Controlla con un line edit conservativo questa scheda divulgativa autonoma. Cambia soltanto ciò che ha un problema reale e restituisci il testo. «Perché il vetro si appanna? Il vapore condensa sulla superficie fredda. La tabella seguente riporta tre esempi.\n\nSuperficie | Condizione\nFinestra | Aria interna umida\nSpecchio | Doccia calda\nBicchiere | Bevanda fredda»",
+   "expected_output": "Testo invariato: domanda di contenuto e riferimento a tabella effettivamente presente.",
+   "files": [],
+   "expectations": [
+    "Conserva domanda, risposta e riferimento alla tabella, perché utili alla lettura.",
+    "Mantiene tutti i dati e la tabella senza aggiunte.",
+    "Non tratta la domanda o la parola seguente come residui della chat.",
+    "Restituisce solo il testo."
+   ]
+  },
+  {
+   "id": 75,
+   "prompt": "Correggi soltanto il refuso, senza intervenire sullo stile. Restituisci solo il testo: «Come mi hai chiesto, la biblioteca riapre lunedi. Non è un servizio a pagamento: l'ingresso resta gratuito.»",
+   "expected_output": "Solo lunedi diventa lunedì; riferimento alla richiesta e negazione conservati.",
+   "files": [],
+   "expectations": [
+    "Corregge solo lunedi in lunedì.",
+    "Conserva Come mi hai chiesto senza applicare una riscrittura per autonomia del documento.",
+    "Conserva interamente la negazione e la gratuità.",
+    "Non aggiunge note o altro contenuto."
+   ]
   }
  ]
 }

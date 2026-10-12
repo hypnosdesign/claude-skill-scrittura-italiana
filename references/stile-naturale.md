@@ -89,6 +89,9 @@ prima di replicarlo, lungo dimensioni concrete:
 - **livello lessicale, tic ricorrenti, uso di tu/Lei.**
 
 **Replica quella voce**, non limitarti a togliere i tic.
+Per una scheda riutilizzabile o più campioni, apri `references/voce-autore.md`:
+le osservazioni richiedono riscontri, i conteggi un metodo dichiarato. Mantieni separate
+abitudini osservate e preferenze richieste; le misure facoltative non impongono un ritmo.
 Se la richiesta è di riscrivere nella voce di un campione in prima persona,
 puoi esprimere in quella persona i giudizi già dati nel brano. Non devi inventare
 azioni o ricordi per farlo: cambiare la persona grammaticale non autorizza nuovi
@@ -957,6 +960,30 @@ sipario, entra nel soggetto (parenti: §45 incipit di cornice, §46 domanda-amo)
 meteo per pianificare le scorte.* ✓ *NuvolaPro incrocia vendite e meteo per pianificare
 le scorte.* La funzione era già dichiarata, non è una promessa aggiunta dal revisore.
 
+## Autonomia del testo pubblicabile
+
+Quando produci o rivedi un documento destinato a persone che non hanno visto la chat,
+controlla a chi si rivolgono le frasi e da dove vengono i loro riferimenti.
+Un articolo non può richiedere al lettore di conoscere il prompt che lo ha generato.
+
+- **Riferimento disponibile nel brief:** rendilo esplicito nel documento, se il livello
+  di intervento autorizza la riscrittura. Esempio originale: il brief indica una
+  riapertura sabato, la bozza dice «Come richiesto, confermo quella data». Per un avviso
+  pubblico: «La sede riapre sabato». Non aggiungere orari o ragioni assenti.
+- **Riferimento mancante:** «Quella modifica entra in vigore venerdì», senza indicazioni
+  su quale modifica, non si completa a intuito. Mantieni il passaggio e segnala a parte
+  quale informazione serve; in scrittura da zero puoi usare un segnaposto dichiarato.
+- **Domanda di contenuto:** «Perché l'acqua congela prima vicino alla parete?» può
+  introdurre una spiegazione pertinente. Non toglierla soltanto perché è una domanda.
+- **Orientamento utile:** «La seconda tabella riporta i tempi di consegna» resta se la
+  tabella è nel documento. «Come abbiamo deciso in chat» richiede invece un contesto
+  che il lettore non possiede.
+
+Il criterio è la destinazione: un'email può rispondere a una richiesta del destinatario
+e citare scambi precedenti. Non ripulire questi riferimenti in modo automatico. Restano
+sempre protetti citazioni, negazioni informative, modalità e condizioni. In proofread
+limita il controllo a una segnalazione utile, senza riscrivere la prosa.
+
 ## Audit finale anti-AI (passaggio obbligato)
 
 Dopo la riscrittura, fai questo passaggio **internamente** (salvo richiesta di note):
@@ -977,6 +1004,8 @@ Non trasformare l'audit in metadiscorso nell'output. Verifica che il testo:
 - non accumuli avverbi o gerundi senza funzione; conserva quelli che portano informazione,
   cautela o voce, senza applicare un limite numerico automatico;
 - non abbia periodi sopra 35-40 parole senza ragione.
+- se destinato alla pubblicazione, sia comprensibile senza il prompt e la chat;
+  applica il controllo secondo la destinazione e il livello richiesti, come sopra.
 
 **Verifica di conservazione (la domanda gemella).** Prima di consegnare, confronta
 internamente output e input su cinque voci: **entità e numeri** (nomi, date, quantità, fonti);

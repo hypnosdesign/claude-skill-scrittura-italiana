@@ -351,6 +351,69 @@
   {"id": 63, "name": "conversione-virgolette-richiesta", "genre": "normalizzazione", "target": "mixed", "split": "dev"},
   {"id": 64, "name": "citazioni-annidate", "genre": "proofread editoriale", "target": "minimal", "split": "dev"},
   {"id": 65, "name": "virgolette-prosa-json-comando", "genre": "normalizzazione selettiva", "target": "mixed", "split": "dev"},
-  {"id": 66, "name": "readme-refuso-senza-markup", "genre": "proofread tecnico", "target": "minimal", "split": "dev"}
+  {"id": 66, "name": "readme-refuso-senza-markup", "genre": "proofread tecnico", "target": "minimal", "split": "dev"},
+  {
+   "id": 67,
+   "name": "profilo-voce-ritmo-regolare",
+   "genre": "scheda di voce",
+   "target": "advice",
+   "split": "dev"
+  },
+  {
+   "id": 68,
+   "name": "profilo-osservato-preferenze",
+   "genre": "profilo e preferenze",
+   "target": "advice",
+   "split": "dev"
+  },
+  {
+   "id": 69,
+   "name": "profilo-registri-distinti",
+   "genre": "corpus misto",
+   "target": "advice",
+   "split": "dev"
+  },
+  {
+   "id": 70,
+   "name": "profilo-campione-breve",
+   "genre": "profilo breve",
+   "target": "advice",
+   "split": "dev"
+  },
+  {
+   "id": 71,
+   "name": "voce-senza-trasferire-fatti",
+   "genre": "adattamento da campioni",
+   "target": "semantic",
+   "split": "dev"
+  },
+  {
+   "id": 72,
+   "name": "pubblicabile-contesto-fornito",
+   "genre": "avviso pubblico",
+   "target": "improve",
+   "split": "dev"
+  },
+  {
+   "id": 73,
+   "name": "pubblicabile-antecedente-mancante",
+   "genre": "revisione con lacuna",
+   "target": "mixed",
+   "split": "dev"
+  },
+  {
+   "id": 74,
+   "name": "pubblicabile-domanda-segnavia",
+   "genre": "divulgazione già chiara",
+   "target": "exact",
+   "split": "dev"
+  },
+  {
+   "id": 75,
+   "name": "pubblicabile-proofread-limite",
+   "genre": "proofread",
+   "target": "minimal",
+   "split": "dev"
+  }
  ]
 }

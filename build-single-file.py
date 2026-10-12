@@ -32,11 +32,12 @@ PARTS = [
     ("spiegare-con-chiarezza.md",     "Parte G — Spiegare con chiarezza (divulgare)",  "Parte G"),
     ("narrativa.md",                  "Parte H — Narrativa",                           "Parte H"),
     ("revisione-e-proprieta.md",      "Parte I — Revisione e proprietà della parola",  "Parte I"),
+    ("voce-autore.md",                "Parte J — Profilare la voce di un autore",       "Parte J"),
 ]
 
 INTRO = """# scrittura-italiana — versione in un solo file
 
-> **Cos'è.** È la skill *scrittura-italiana* (SKILL.md + i suoi 9 riferimenti) raccolta in un
+> **Cos'è.** È la skill *scrittura-italiana* (SKILL.md + i suoi 10 riferimenti) raccolta in un
 > unico documento, per gli assistenti che **non** supportano il formato Agent Skills e quindi
 > non caricano i file `references/` separati: app Gemini (come istruzioni di un *Gem*), Custom
 > GPT di ChatGPT, ecc.
@@ -90,7 +91,7 @@ def build() -> str:
 def main():
     doc = build()
     OUT.write_text(doc, encoding="utf-8")
-    residui = len(re.findall(r"(punteggiatura|dubbi-e-errori|retorica-efficacia|coesione-e-connettivi|stile-naturale|cliche-e-parole-alla-moda|spiegare-con-chiarezza|narrativa|revisione-e-proprieta)\.md", doc))
+    residui = sum(doc.count(fname) for fname, _, _ in PARTS)
     h1 = len(re.findall(r"^# ", doc, flags=re.M))
     print(f"Generato {OUT.name}: {h1} titoli H1, {len(doc):,} caratteri, rimandi a file residui: {residui}")
     if residui:

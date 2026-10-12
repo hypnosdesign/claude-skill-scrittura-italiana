@@ -1,6 +1,6 @@
 # scrittura-italiana — versione in un solo file
 
-> **Cos'è.** È la skill *scrittura-italiana* (SKILL.md + i suoi 9 riferimenti) raccolta in un
+> **Cos'è.** È la skill *scrittura-italiana* (SKILL.md + i suoi 10 riferimenti) raccolta in un
 > unico documento, per gli assistenti che **non** supportano il formato Agent Skills e quindi
 > non caricano i file `references/` separati: app Gemini (come istruzioni di un *Gem*), Custom
 > GPT di ChatGPT, ecc.
@@ -108,6 +108,7 @@ compito (le voci «obbligatorio» non sono facoltative):
 | **line edit / umanizza** | **Parte E**, prima della passata 4 | **Parte F** (copy, giornalismo) |
 | → se saggistica/tesi/accademico | in particolare §9 e §58-65 (tic saggistico-accademici) | **Parte D** se il filo non tiene |
 | → se chat/email/social/divulgazione | in particolare §66-75 (slop da assistente) | **Parte G** (divulgazione) |
+| **profilo di voce riutilizzabile / adattamento da più campioni** | **Parte J** | **Parte E** → «Dare voce» |
 | **deep rewrite / scrivere da zero** | **Parte C** (§1-2, §6) **+** il file del genere: **Parte G** (divulgare/documentare), **Parte H** (raccontare) | **Parte I** per la lima |
 | **argomentare / costruire una tesi** | **Parte C** §5-7 | **Parte D** |
 | **spiegare / divulgare** (anche breve) | **Parte G** | **Parte C** §2a (preset divulgazione) |
@@ -139,6 +140,9 @@ compito (le voci «obbligatorio» non sono facoltative):
   "caporali o virgolette?"), grammatica/sintassi ("congiuntivo o indicativo?", "che tempo qui?"),
   oppure di stile/retorica ("come rendo più efficace questo passaggio?", "che registro uso?").
 - Stai producendo tu stesso prosa italiana per l'utente e vuoi che sia impeccabile.
+- L'utente chiede una **scheda della propria voce** o un confronto fra campioni e una
+  riscrittura. Osservazioni e misure seguono **Parte J**; lo strumento
+  di conteggio è facoltativo e si esegue solo su richiesta.
 
 ---
 
@@ -231,6 +235,9 @@ di chiarezza o ritmo. Non devi trovare qualcosa da correggere in ogni passata.
 
 Mantieni sempre **significato e registro**. Se l'utente fornisce un campione del proprio
 stile, calibrati su quello invece di appiattire a un italiano neutro.
+Se chiede un profilo da riutilizzare o fornisce più campioni, apri
+**Parte J**: separa caratteristiche osservate, misure effettive e
+preferenze richieste. Un'assenza nel campione non diventa un divieto per l'autore.
 Se chiede di riscrivere nella propria voce e il campione usa la prima persona,
 adotta quella persona per i giudizi già forniti nel brano. È un cambio di punto
 di vista autorizzato, non l'invenzione di un'esperienza: non aggiungere azioni,
@@ -252,6 +259,14 @@ guidano la stesura, non la correggono. Poi quattro passi:
    il filo fra frasi e capoversi (**Parte D**).
 4. **Stesura e audit.** Scrivi già rispettando le virtù — non produrre prosa da ripulire
    dopo — e chiudi con l'**audit anti-AI** e la **checklist tipografica**.
+
+**Testo destinato alla pubblicazione:** leggilo come chi vede solo il documento, senza
+la chat. Chiarisci riferimenti alla conversazione usando informazioni già fornite;
+elimina formule rivolte a chi ha scritto il prompt. Conserva domande, negazioni e
+segnali di percorso quando fanno avanzare il contenuto. Se manca un antecedente,
+segnala il dato necessario a parte: non inventarlo. In revisione rispetta il livello
+richiesto; in proofread non riscrivere per questo controllo. Dettaglio ed esempi in
+**Parte E** → «Autonomia del testo pubblicabile».
 
 A seconda del genere, apri il riferimento dedicato: **argomentare/persuadere** →
 **Parte C** §5, §7-8; **divulgare/documentare** (spiegare cose complesse, numeri,
@@ -355,6 +370,8 @@ termini tecnici) → **Parte G**; **narrativa** (idea, punto di vista, licenze) 
   **saggistico-accademici** (§58-65); lo **slop da assistente e semantico** con le invarianti
   (Parte J, §66-75); i **tic di terza generazione 2025-26** (Parte K, §76-80); la nota «Quando
   il compito è tradurre»; «Dare voce» (argine *non fabbricare soggettività*) e l'audit finale.
+- ****Parte J**** — scheda riutilizzabile, riscontri nei campioni,
+  preferenze richieste e confronto facoltativo delle misure di una riscrittura.
 - ****Parte F**** — *non pensare per formule*. Parole alla moda,
   tormentoni, elogi triti, luoghi comuni, metafore morte, plastismi, cliché scientifici.
 - ****Parte D**** — *il filo del discorso*. Coesione vs coerenza,
@@ -2484,6 +2501,9 @@ prima di replicarlo, lungo dimensioni concrete:
 - **livello lessicale, tic ricorrenti, uso di tu/Lei.**
 
 **Replica quella voce**, non limitarti a togliere i tic.
+Per una scheda riutilizzabile o più campioni, apri **Parte J**:
+le osservazioni richiedono riscontri, i conteggi un metodo dichiarato. Mantieni separate
+abitudini osservate e preferenze richieste; le misure facoltative non impongono un ritmo.
 Se la richiesta è di riscrivere nella voce di un campione in prima persona,
 puoi esprimere in quella persona i giudizi già dati nel brano. Non devi inventare
 azioni o ricordi per farlo: cambiare la persona grammaticale non autorizza nuovi
@@ -3352,6 +3372,30 @@ sipario, entra nel soggetto (parenti: §45 incipit di cornice, §46 domanda-amo)
 meteo per pianificare le scorte.* ✓ *NuvolaPro incrocia vendite e meteo per pianificare
 le scorte.* La funzione era già dichiarata, non è una promessa aggiunta dal revisore.
 
+## Autonomia del testo pubblicabile
+
+Quando produci o rivedi un documento destinato a persone che non hanno visto la chat,
+controlla a chi si rivolgono le frasi e da dove vengono i loro riferimenti.
+Un articolo non può richiedere al lettore di conoscere il prompt che lo ha generato.
+
+- **Riferimento disponibile nel brief:** rendilo esplicito nel documento, se il livello
+  di intervento autorizza la riscrittura. Esempio originale: il brief indica una
+  riapertura sabato, la bozza dice «Come richiesto, confermo quella data». Per un avviso
+  pubblico: «La sede riapre sabato». Non aggiungere orari o ragioni assenti.
+- **Riferimento mancante:** «Quella modifica entra in vigore venerdì», senza indicazioni
+  su quale modifica, non si completa a intuito. Mantieni il passaggio e segnala a parte
+  quale informazione serve; in scrittura da zero puoi usare un segnaposto dichiarato.
+- **Domanda di contenuto:** «Perché l'acqua congela prima vicino alla parete?» può
+  introdurre una spiegazione pertinente. Non toglierla soltanto perché è una domanda.
+- **Orientamento utile:** «La seconda tabella riporta i tempi di consegna» resta se la
+  tabella è nel documento. «Come abbiamo deciso in chat» richiede invece un contesto
+  che il lettore non possiede.
+
+Il criterio è la destinazione: un'email può rispondere a una richiesta del destinatario
+e citare scambi precedenti. Non ripulire questi riferimenti in modo automatico. Restano
+sempre protetti citazioni, negazioni informative, modalità e condizioni. In proofread
+limita il controllo a una segnalazione utile, senza riscrivere la prosa.
+
 ## Audit finale anti-AI (passaggio obbligato)
 
 Dopo la riscrittura, fai questo passaggio **internamente** (salvo richiesta di note):
@@ -3372,6 +3416,8 @@ Non trasformare l'audit in metadiscorso nell'output. Verifica che il testo:
 - non accumuli avverbi o gerundi senza funzione; conserva quelli che portano informazione,
   cautela o voce, senza applicare un limite numerico automatico;
 - non abbia periodi sopra 35-40 parole senza ragione.
+- se destinato alla pubblicazione, sia comprensibile senza il prompt e la chat;
+  applica il controllo secondo la destinazione e il livello richiesti, come sopra.
 
 **Verifica di conservazione (la domanda gemella).** Prima di consegnare, confronta
 internamente output e input su cinque voci: **entità e numeri** (nomi, date, quantità, fonti);
@@ -4192,3 +4238,120 @@ La proprietà è cercare *la* parola — non quella elegante, non quella sinonim
 portata di mano. La revisione è togliere a freddo ciò che non si guadagna il posto, collaudare
 le metafore alla lettera, diffidare degli intensificatori. Due segnali infallibili: la *curiosità*
 mentre scrivi, e il *lettore-cavia* quando hai finito.
+
+---
+
+# Parte J — Profilare la voce di un autore
+
+Apri questa guida quando l'utente chiede una scheda di voce da riutilizzare o fornisce
+più campioni per una riscrittura. Per un singolo adattamento breve bastano le dimensioni
+in «Dare voce» di **Parte E**. La scheda serve a scegliere interventi
+coerenti con un autore in un contesto preciso; il contenuto del nuovo testo viene dal
+suo brief, non dai fatti raccontati nei campioni.
+
+## 1. Delimitare i materiali
+
+Identifica autore, destinazione e registro dei campioni. Se la stessa persona scrive
+avvisi al pubblico e racconti, descrivi quei contesti separatamente. Non mediare le
+due voci. Segnala l'eventuale intervento di altri editor o assistenti quando è noto;
+non dedurre l'autenticità dalla forma del testo.
+
+Distinguere **voce osservata** e **voce richiesta** cambia il lavoro. La prima descrive
+i materiali disponibili. La seconda raccoglie le preferenze espresse dall'utente,
+anche quando chiede di cambiare abitudini. Se dice «mantieni il mio stile ma elimina
+gli incisi», registra sia gli incisi osservati sia la richiesta di ridurli.
+Chiedi una precisazione soltanto quando questa distinzione modifica la consegna.
+
+Un campione breve consente osservazioni circoscritte. Non descrivere un tratto come
+stabile senza riscontri in passaggi o testi diversi. «Nessuna domanda nei due brani
+letti» non significa «l'autore non usa mai domande». L'assenza osservata diventa una
+preferenza da applicare soltanto se l'utente la conferma.
+
+## 2. Preparare una scheda utilizzabile
+
+La scheda distingue i seguenti elementi; usa solo quelli sostenuti dal materiale.
+
+| Elemento | Cosa riportare |
+|---|---|
+| Campo d'uso | autore, destinatario, genere, registro e scopo |
+| Materiali | nomi o etichette dei campioni, date se note, limiti della selezione |
+| Conteggi disponibili | misura, unità, metodo e campione a cui si riferisce |
+| Caratteristiche osservate | tratto, breve passo che lo mostra e sua posizione |
+| Preferenze richieste | indicazioni dell'utente, distinte dalle abitudini osservate |
+| Scelte operative | cosa conservare o modificare in questo genere di testo |
+
+Per le osservazioni considera persona grammaticale, lessico, ritmo, incisi,
+punteggiatura, aperture, chiusure e rapporto con il lettore. Non compilare tutte le
+dimensioni per forza. Un conteggio deve essere realmente effettuato: non attribuire
+al corpus medie, frequenze o percentuali stimate a impressione. Senza uno strumento
+usa una descrizione qualitativa con un esempio, oppure dichiara il conteggio manuale
+e la porzione esaminata.
+
+Esempio originale, ricavato da due brevi avvisi:
+
+> Materiali: avviso A «Il laboratorio apre alle nove. Portate il grembiule.»;
+> avviso B «La sala chiude alle sei. Lasciate liberi i tavoli.»
+> Osservazione: in entrambi, una frase dà l'orario e la successiva indica un'azione.
+> Scelta operativa per altri avvisi: rendere riconoscibili orario e azione richiesta.
+> Limite: questi due avvisi non descrivono lo stile dell'autore nella narrativa.
+
+Consegna la scheda in chat quando è richiesta. Salvala in un file solo se l'utente
+chiede di conservarla, scegliendo una destinazione che non sostituisca i campioni.
+Per riutilizzarla basta fornirla insieme al nuovo brief; non richiede un'installazione
+o una modifica delle istruzioni globali dell'assistente.
+
+## 3. Applicare la scheda
+
+Conserva le scelte d'autore documentate quando il livello di revisione le permette.
+Un inciso o una formula ricorrente non va eliminato soltanto perché compare anche
+nella prosa generata. La regolarità di un avviso può essere funzionale: non imporre
+un'alternanza di frasi brevi e lunghe.
+
+Le preferenze richieste valgono per il nuovo lavoro e non cambiano retroattivamente
+la descrizione dei campioni. In proofread correggi solo gli errori autorizzati;
+una scheda di voce non amplia il livello d'intervento. Le licenze narrative e le
+convenzioni valide seguono la guardia di registro in `SKILL.md`.
+
+Prima di consegnare controlla due aspetti separatamente: il testo conserva i fatti,
+le condizioni e la modalità del brief? Le scelte di persona, ritmo e lessico sono
+coerenti con la scheda e con le preferenze richieste? Non trasportare nel nuovo testo
+aneddoti, opinioni, nomi o cifre presi dai campioni per riprodurne la voce.
+
+## 4. Confronto facoltativo delle misure
+
+Con Node.js 22 o successivo, lo strumento locale `scripts/confronta-voce.mjs` produce
+JSON su standard output. Legge file `.txt`, `.md` o `.markdown`, oppure i file di
+questi tipi presenti direttamente in una cartella. Non modifica i materiali.
+
+```bash
+node scripts/confronta-voce.mjs --campione campioni/ --registro newsletter
+node scripts/confronta-voce.mjs --campione campioni/ --testo bozza.md --registro newsletter
+```
+
+Il primo comando descrive il campione; il secondo aggiunge le misure della bozza e
+le differenze. Esegui il comando solo su richiesta di misura e con strumenti di
+esecuzione disponibili. Il percorso dello script è relativo alla cartella della
+skill; nel plugin corrisponde a `${CLAUDE_PLUGIN_ROOT}/scripts/confronta-voce.mjs`.
+Se Node o lo script non sono disponibili, procedi con osservazioni documentate:
+le altre funzioni della skill restano utilizzabili.
+
+Lo strumento riporta lunghezze di frasi e capoversi, frequenze di punteggiatura,
+domande e sequenze di parole ricorrenti. Registra versione del metodo e impronte
+SHA-256 dei file; le differenze sono confrontabili soltanto con lo stesso metodo.
+L'etichetta del registro è fornita dall'utente: lo script non verifica che tutti i
+file appartengano davvero a quel registro. Usa raccolte coerenti e confronta testi
+con funzione e dimensioni comparabili; una differenza può dipendere dall'argomento
+o dal formato, non dalla voce.
+
+Il conteggio è euristico: include i valori numerici come unità, conserva apostrofi
+interni e forme flesse, non analizza la sintassi; abbreviazioni insolite possono
+alterare i confini di frase. In Markdown
+esclude titoli, blocchi e frammenti di codice, commenti HTML e destinazioni dei link.
+Le righe consecutive formano un capoverso; gli elementi di elenco sono separati.
+Un campione con poche frasi viene segnalato come breve, senza certificare la
+rappresentatività degli altri campioni.
+
+Leggi le differenze come domande da verificare: «la bozza contiene meno incisi;
+è una scelta richiesta o abbiamo levigato la voce?». Nessun valore costituisce
+un obiettivo obbligatorio, una prova di qualità o un rilevatore di autorialità.
+Le ricorrenze possono dipendere dal lessico tecnico e vanno valutate nel contesto.

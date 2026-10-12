@@ -32,6 +32,14 @@ prudenza su richieste generiche, conservazione delle virgolette e dei livelli di
 conversione richiesta della sola prosa, codice protetto e assenza di markup non richiesto.
 Sono dev; l'aggiunta di casi non equivale a una verifica superata del comportamento.
 
+I casi **67–75** verificano le nuove funzioni di sviluppo: profilo di voce con riscontri,
+distinzione fra stile osservato e richiesto, registri separati e campione breve;
+adattamento senza importare fatti; documento comprensibile senza la chat, con lacune
+segnalate e domande utili conservate; rispetto del proofread. Tutti sono dev, con
+materiali originali; i sei held-out restano invariati. I casi di instradamento 44–45
+richiedono la lettura di `voce-autore.md`. La presenza dei casi non attesta risultati
+dei modelli: le nuove prove comportamentali non sono ancora eseguite.
+
 ## Provenienza della prova 2.12.0
 
 La prova di sviluppo descritta nel changelog confrontava:
@@ -111,7 +119,7 @@ con valutatori umani indipendenti. Non ritoccare le etichette per ottenere un es
 
 ```bash
 node evals/run.mjs --validate-only                   # schema + fingerprint, zero chiamate LLM
-node evals/run.mjs --split dev --label new-dev       # 60 casi di sviluppo
+node evals/run.mjs --split dev --label new-dev       # 69 casi di sviluppo
 node evals/run.mjs --split held-out --label new-ho   # 6 casi congelati
 node evals/run.mjs --ids 7,8,12,13 --runs 3          # sottoinsieme, 3 run/eval
 node evals/run.mjs --no-skill --label baseline-nuda  # braccio SENZA skill (valore aggiunto)

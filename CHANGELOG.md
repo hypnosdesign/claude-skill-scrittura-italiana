@@ -5,6 +5,18 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.21.0] — 2026-10-12
+
+- Scheda riutilizzabile della voce: materiali identificati, osservazioni documentate,
+  preferenze richieste distinte dalle abitudini e limiti dei campioni brevi o misti.
+- Misuratore locale facoltativo in Node.js: profilo e confronto in JSON, impronte dei
+  file, conteggi descrittivi e nessuna modifica ai materiali. Incluso nel pacchetto.
+- Controllo dell'autonomia del documento pubblicabile, rispettando livello di
+  revisione, domande utili, segnavia e informazioni effettivamente disponibili.
+- Dieci riferimenti nel file unico; nove nuovi casi dev e due casi di instradamento.
+  Test deterministici del misuratore e della distribuzione, senza benchmark editoriale.
+- Istruzioni per aggiornare la skill installata con il CLI di skills.sh.
+
 ## [2.20.0] — 2026-10-12
 
 - Marketplace Claude Code nel repository, con il plugin `scrittura-italiana` che
