@@ -1,10 +1,8 @@
 #!/usr/bin/env node
 // Guardia di coerenza della versione dichiarata nei vari canali.
 //
-// La versione vive in quattro posti che finora erano allineati solo per
-// disciplina manuale: il frontmatter di SKILL.md (fonte di verità), i badge
-// hardcoded di README/FAQ/ESEMPI e la prima release del CHANGELOG. Questo
-// script li confronta e fallisce al primo disallineamento.
+// Fonte di verità: il frontmatter di SKILL.md. Il manifest del plugin, i badge
+// di README/FAQ/ESEMPI e la prima release del CHANGELOG devono coincidere.
 
 import { readFileSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
@@ -21,6 +19,11 @@ if (!source) {
 
 const mismatches = []
 
+const plugin = JSON.parse(read('.claude-plugin/plugin.json'))
+if (plugin.version !== source) {
+  mismatches.push(`.claude-plugin/plugin.json: versione ${plugin.version} ≠ frontmatter ${source}`)
+}
+
 for (const name of ['README.md', 'FAQ.md', 'ESEMPI.md']) {
   const badge = read(name).match(/badge\/version-([0-9.]+)-/)?.[1]
   if (!badge) mismatches.push(`${name}: badge di versione non trovato`)
@@ -36,4 +39,4 @@ if (mismatches.length) {
   for (const m of mismatches) console.error(`errore: ${m}`)
   process.exit(1)
 }
-console.log(`versione coerente: ${source} (frontmatter, badge README/FAQ/ESEMPI, CHANGELOG)`)
+console.log(`versione coerente: ${source} (frontmatter, plugin, badge README/FAQ/ESEMPI, CHANGELOG)`)

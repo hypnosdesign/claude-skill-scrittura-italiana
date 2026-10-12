@@ -18,7 +18,7 @@
 
 [![Sito](https://img.shields.io/badge/sito-scrittura--italiana-9c2a1f.svg)](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-![Version](https://img.shields.io/badge/version-2.19.2-blue.svg)
+![Version](https://img.shields.io/badge/version-2.20.0-blue.svg)
 
 🔗 **[Sito del progetto →](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)**
 
@@ -142,11 +142,11 @@ con gli stessi criteri editoriali, rispettando comandi, nomi di file, esempi e d
 
 ## Stato e verifiche
 
-La **2.19.2** raccoglie le correzioni dell'audit di settembre e le modifiche delle
-versioni 2.19.0 e 2.19.1, finora presenti su `main` ma senza una release GitHub.
-Il pacchetto contiene il nucleo completo e i nove riferimenti: la variante compatta
-sperimentale **non è stata adottata**, perché nelle prove perdeva informazioni.
-Le [note della release](docs/releases/v2.19.2.md) riepilogano cosa cambia.
+La **2.20.0** aggiunge il marketplace e il plugin Claude Code, con installazione
+e aggiornamenti gestiti dal client. Le istruzioni editoriali e i nove riferimenti
+sono quelli della 2.19.2. Il pacchetto contiene il nucleo completo: la variante
+compatta sperimentale **non è stata adottata**, perché nelle prove perdeva informazioni.
+Le [note della release](docs/releases/v2.20.0.md) riepilogano cosa cambia.
 
 La suite comprende **66 casi: 60 di sviluppo e 6 held-out**. I sei held-out restano
 fuori dalle prove usate per correggere la skill. I **48 test deterministici** verificano gli
@@ -184,6 +184,34 @@ installati: Claude Code, Cursor, Copilot…):
 ```bash
 npx skills add hypnosdesign/claude-skill-scrittura-italiana
 ```
+
+### Claude Code — marketplace (consigliato per Claude Code)
+
+Esegui questi due comandi dentro Claude Code:
+
+```text
+/plugin marketplace add hypnosdesign/claude-skill-scrittura-italiana
+/plugin install scrittura-italiana@scrittura-italiana
+```
+
+Il marketplace e il plugin si chiamano entrambi `scrittura-italiana`. Riapri Claude
+Code dopo l'installazione. La skill si attiva sulle richieste pertinenti; puoi anche
+invocarla con `/scrittura-italiana:scrittura-italiana`.
+
+Per ricevere **aggiornamenti automatici**, apri `/plugin` → **Marketplaces**, seleziona
+`scrittura-italiana` e abilita **Enable auto-update**. L'opzione è disattivata per
+impostazione predefinita nei marketplace aggiunti dall'utente.
+Per aggiornare manualmente, esegui nel terminale:
+
+```bash
+claude plugin marketplace update scrittura-italiana
+claude plugin update scrittura-italiana@scrittura-italiana
+```
+
+Riapri Claude Code per caricare la versione aggiornata. Vedi la
+[documentazione sugli aggiornamenti](https://code.claude.com/docs/en/plugins/host-marketplace#keep-users-up-to-date).
+Se avevi già installato la skill con Git o `npx skills`, rimuovi quella copia quando
+passi al plugin, per evitare che Claude Code carichi due volte la stessa skill.
 
 ### Claude Code (CLI) — manuale
 
@@ -390,9 +418,13 @@ do not establish that Italian instructions alone improve model output.
 
 ### Release status and limits
 
-Version **2.19.2** includes the September audit fixes and the previously unreleased
-2.19.0 and 2.19.1 changes. The experimental compact variant is not included: it lost
-information in the comparison. Download the installable ZIP from the
+Version **2.20.0** adds the Claude Code marketplace and plugin. Run
+`/plugin marketplace add hypnosdesign/claude-skill-scrittura-italiana`, then
+`/plugin install scrittura-italiana@scrittura-italiana` inside Claude Code.
+Enable auto-update for this marketplace under `/plugin` → **Marketplaces**.
+The editorial instructions and references are unchanged from 2.19.2.
+The experimental compact variant is not included: it lost information in the
+comparison. Download the installable ZIP from the
 [latest release](https://github.com/hypnosdesign/claude-skill-scrittura-italiana/releases/latest).
 
 The suite has **60 development cases and 6 held-out cases**. Its 48 deterministic

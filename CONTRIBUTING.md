@@ -54,6 +54,26 @@ Questa skill ha una linea precisa. Per restare coerenti:
   e includi `scrittura-italiana-single-file.md` aggiornato nella PR (è un file generato, non
   va modificato a mano).
 
+## Marketplace e release
+
+Il repository è anche un marketplace Claude Code con un solo plugin. Il manifest
+`.claude-plugin/plugin.json` carica `SKILL.md` dalla radice tramite `"skills": "./"`;
+i riferimenti restano in `references/`, senza copie da sincronizzare.
+
+A ogni release aggiorna `metadata.version` in `SKILL.md` e `version` in
+`.claude-plugin/plugin.json`, insieme ai badge e al CHANGELOG. Claude Code usa la
+versione del plugin per decidere se sostituire la copia in cache: un commit con
+la stessa versione non distribuisce nuovi contenuti agli utenti già installati.
+La versione è dichiarata soltanto nel manifest del plugin, non nel catalogo.
+
+Prima di pubblicare, verifica con Claude Code 2.1.278 o successivo:
+
+```bash
+node scripts/check-versions.mjs
+claude plugin validate .claude-plugin/plugin.json --strict
+claude plugin validate .claude-plugin/marketplace.json --strict
+```
+
 ## Licenza dei contributi
 
 Inviando un contributo accetti che venga rilasciato sotto **CC BY-SA 4.0**, la stessa licenza

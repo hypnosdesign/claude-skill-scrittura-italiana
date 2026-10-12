@@ -5,6 +5,14 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [2.20.0] — 2026-10-12
+
+- Marketplace Claude Code nel repository, con il plugin `scrittura-italiana` che
+  carica la skill e i riferimenti esistenti senza duplicarli.
+- Istruzioni per installazione, aggiornamenti automatici e passaggio dalla copia
+  manuale al plugin nel README e nel sito.
+- Controllo della versione del plugin e validazione dei manifest in CI.
+
 ## [2.19.2] — 2026-09-25
 
 Seguito dell'audit di settembre. Questa release GitHub include anche le modifiche

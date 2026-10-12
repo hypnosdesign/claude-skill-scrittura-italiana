@@ -1,0 +1,14 @@
+{
+  "name": "scrittura-italiana",
+  "description": "Marketplace della skill editoriale Scrittura italiana.",
+  "owner": {
+    "name": "hypnosdesign"
+  },
+  "plugins": [
+    {
+      "name": "scrittura-italiana",
+      "source": "./",
+      "description": "Skill editoriale per scrivere, correggere e rendere naturali i testi italiani senza cambiarne il significato."
+    }
+  ]
+}

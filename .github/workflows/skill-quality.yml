@@ -5,6 +5,7 @@ name: Skill quality
 on:
   pull_request:
     paths:
+      - ".claude-plugin/**"
       - "SKILL.md"
       - "references/**"
       - "evals/**"
@@ -21,6 +22,7 @@ on:
   push:
     branches: [main]
     paths:
+      - ".claude-plugin/**"
       - "SKILL.md"
       - "references/**"
       - "evals/**"
@@ -52,7 +54,7 @@ jobs:
         run: node evals/run.mjs --validate-only
       - name: Lunghezza della description (limite Desktop/claude.ai)
         run: node scripts/check-description.mjs
-      - name: Coerenza della versione (frontmatter, badge, CHANGELOG)
+      - name: Coerenza della versione (frontmatter, plugin, badge, CHANGELOG)
         run: node scripts/check-versions.mjs
       - name: Freschezza del single-file (ricostruzione + diff)
         run: |

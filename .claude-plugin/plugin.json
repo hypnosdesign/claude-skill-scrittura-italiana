@@ -1,0 +1,13 @@
+{
+  "name": "scrittura-italiana",
+  "version": "2.20.0",
+  "description": "Skill editoriale per scrivere, correggere e rendere naturali i testi italiani senza cambiarne il significato.",
+  "author": {
+    "name": "hypnosdesign"
+  },
+  "homepage": "https://hypnosdesign.github.io/claude-skill-scrittura-italiana/",
+  "repository": "https://github.com/hypnosdesign/claude-skill-scrittura-italiana",
+  "license": "CC-BY-SA-4.0",
+  "keywords": ["italiano", "scrittura", "editoria", "humanizer"],
+  "skills": "./"
+}

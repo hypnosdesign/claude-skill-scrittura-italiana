@@ -1,0 +1,34 @@
+name: Plugin quality
+
+on:
+  pull_request:
+    paths:
+      - ".claude-plugin/**"
+      - "SKILL.md"
+      - "references/**"
+      - ".github/workflows/plugin-quality.yml"
+  push:
+    branches: [main]
+    paths:
+      - ".claude-plugin/**"
+      - "SKILL.md"
+      - "references/**"
+      - ".github/workflows/plugin-quality.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Installa il validatore Claude Code
+        run: npm install --global @anthropic-ai/claude-code@2.1.278
+      - name: Valida il plugin
+        run: claude plugin validate .claude-plugin/plugin.json --strict
+      - name: Valida il marketplace
+        run: claude plugin validate .claude-plugin/marketplace.json --strict
