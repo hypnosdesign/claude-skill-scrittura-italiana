@@ -5,6 +5,15 @@ Tutte le modifiche rilevanti a *scrittura-italiana* sono documentate qui.
 Il formato segue [Keep a Changelog](https://keepachangelog.com/it/1.1.0/) e il progetto adotta
 il [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [Unreleased]
+
+- Sito e documentazione presentano la skill come istruzioni editoriali per gli LLM,
+  con modalità d'uso per GPT, Claude, Qwen, DeepSeek e altri modelli.
+- Titoli, H1, descrizioni e anteprime social delle cinque pagine aggiornati.
+  JSON-LD per sito, pagine e risorsa in Markdown; controlli SEO con prove per mutazione in CI.
+- Rimosso il robots.txt nella sottocartella GitHub Pages, dove non governa la scansione.
+  Documentata la gestione della sitemap; Search Console rinviata dal manutentore.
+
 ## [2.21.0] — 2026-10-12
 
 - Scheda riutilizzabile della voce: materiali identificati, osservazioni documentate,

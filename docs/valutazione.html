@@ -3,15 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Valutazione ed eval | Scrittura italiana</title>
-  <meta name="description" content="Come viene misurata Scrittura italiana: suite dev e held-out, runner fail-closed, artefatti e limiti.">
+  <title>Test e limiti della skill per LLM | Scrittura italiana</title>
+  <meta name="description" content="Come valutiamo la skill di scrittura italiana: prove con Claude e GPT, casi di sviluppo e held-out, conservazione del significato e limiti dei risultati.">
   <link rel="canonical" href="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/valutazione.html">
-  <meta property="og:locale" content="it_IT"><meta property="og:type" content="article"><meta property="og:title" content="Valutazione ed eval | Scrittura italiana"><meta property="og:description" content="Prompt, output, verdetti e limiti della misura, conservati come artefatti verificabili."><meta property="og:url" content="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/valutazione.html">
+  <meta property="og:locale" content="it_IT"><meta property="og:type" content="website"><meta property="og:title" content="Test e limiti della skill per LLM | Scrittura italiana"><meta property="og:description" content="Come valutiamo la skill di scrittura italiana: prove con Claude e GPT, casi di sviluppo e held-out, conservazione del significato e limiti dei risultati."><meta property="og:url" content="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/valutazione.html">
+  <meta property="og:image" content="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Scrittura italiana: correggere, chiarire e riscrivere con gli LLM">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Test e limiti della skill per LLM | Scrittura italiana">
+  <meta name="twitter:description" content="Come valutiamo la skill di scrittura italiana: prove con Claude e GPT, casi di sviluppo e held-out, conservazione del significato e limiti dei risultati.">
+  <meta name="twitter:image" content="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/assets/og-image.png">
+  <meta name="twitter:image:alt" content="Scrittura italiana: correggere, chiarire e riscrivere con gli LLM">
   <meta name="theme-color" content="#2154c9">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&amp;display=swap">
   <link rel="stylesheet" href="assets/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://hypnosdesign.github.io/claude-skill-scrittura-italiana/valutazione.html#pagina",
+        "url": "https://hypnosdesign.github.io/claude-skill-scrittura-italiana/valutazione.html",
+        "name": "Test e limiti della skill per LLM | Scrittura italiana",
+        "description": "Come valutiamo la skill di scrittura italiana: prove con Claude e GPT, casi di sviluppo e held-out, conservazione del significato e limiti dei risultati.",
+        "inLanguage": "it",
+        "isPartOf": {
+          "@id": "https://hypnosdesign.github.io/claude-skill-scrittura-italiana/#sito"
+        },
+        "about": {
+          "@id": "https://hypnosdesign.github.io/claude-skill-scrittura-italiana/#skill"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#contenuto">Vai al contenuto</a>
@@ -23,7 +53,7 @@
   </div></header>
 
   <main id="contenuto">
-    <header class="page-hero"><div class="shell"><h1 class="page-title">Misurare senza raccontarsela.</h1><p>Gli eval servono a trovare regressioni e falsi positivi. Non trasformano un giudizio linguistico in una certezza matematica.</p><div class="meta-line"><span>Schema artefatti 4</span><span><span data-dev-count>69</span> casi dev</span><span><span data-heldout-count>6</span> casi held-out</span></div></div></header>
+    <header class="page-hero"><div class="shell"><h1 class="page-title">Test e limiti della skill per LLM.</h1><p>Gli eval servono a trovare regressioni e falsi positivi. Non trasformano un giudizio linguistico in una certezza matematica.</p><div class="meta-line"><span>Schema artefatti 4</span><span><span data-dev-count>69</span> casi dev</span><span><span data-heldout-count>6</span> casi held-out</span></div></div></header>
 
     <div class="doc-shell">
       <nav class="toc" aria-label="Indice della pagina"><p>In questa pagina</p><ol><li><a href="#misuriamo">Che cosa misuriamo</a></li><li><a href="#suite">Struttura della suite</a></li><li><a href="#runner">Runner</a></li><li><a href="#risultato">Riferimenti 2.14.0 e 2.15.x</a></li><li><a href="#lettura">Come leggere i risultati</a></li><li><a href="#riprodurre">Riprodurre un run</a></li></ol></nav>
@@ -40,6 +70,9 @@
             <li>assenza di over-editing su prosa già buona e testo funzionale.</li>
           </ul>
           <blockquote><p>Un testo può essere più elegante e fallire lo stesso, se trasforma un “potrebbe” in un “è” o aggiunge una causa non presente.</p></blockquote>
+          <h3>Prove con modelli diversi</h3>
+          <p>Le istruzioni della skill sono utilizzabili con diversi LLM; i risultati dipendono dal modello e dal modo in cui l'interfaccia fornisce istruzioni e riferimenti. Le prove storiche sotto usano Claude. Nel settembre 2026 abbiamo eseguito anche prove con GPT Terra 5.6, Sol 6 e Luna 6, con ruoli e risultati separati.</p>
+          <p>Nel controllo finale mirato, Sol ha ottenuto 18 risposte conformi su 22 secondo il giudice automatico. La rilettura dell'assistente conserva quattro output non conformi. Queste prove non sono una valutazione umana indipendente e non misurano Qwen, DeepSeek o tutti gli altri LLM. <a href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/blob/main/evals/results/reference-2026-09-seguito/GPT.md">Protocollo, output e limiti delle prove GPT</a>.</p>
         </section>
 
         <section id="suite">

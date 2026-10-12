@@ -3,16 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Scrittura italiana | La skill editoriale per l'italiano</title>
-  <meta name="description" content="La skill editoriale per l'italiano: corregge, chiarisce e riscrive il testo senza cambiarne il significato. Puoi usarla anche come humanizer per i tic della prosa generata.">
+  <title>Scrittura italiana: skill di scrittura e revisione per LLM</title>
+  <meta name="description" content="Skill editoriale per scrivere, correggere e umanizzare testi italiani con GPT, Claude, Qwen, DeepSeek e altri LLM. Formato Agent Skills o file unico.">
   <link rel="canonical" href="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/">
   <meta property="og:locale" content="it_IT">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Scrittura italiana | La skill editoriale per l'italiano">
-  <meta property="og:description" content="Corregge, chiarisce e riscrive: la lingua migliora; fatti, intenzione e registro restano dell'autore.">
+  <meta property="og:title" content="Scrittura italiana: skill di scrittura e revisione per LLM">
+  <meta property="og:description" content="Skill editoriale per scrivere, correggere e umanizzare testi italiani con GPT, Claude, Qwen, DeepSeek e altri LLM. Formato Agent Skills o file unico.">
   <meta property="og:url" content="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/">
   <meta property="og:image" content="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Scrittura italiana: correggere, chiarire e riscrivere con gli LLM">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Scrittura italiana: skill di scrittura e revisione per LLM">
+  <meta name="twitter:description" content="Skill editoriale per scrivere, correggere e umanizzare testi italiani con GPT, Claude, Qwen, DeepSeek e altri LLM. Formato Agent Skills o file unico.">
+  <meta name="twitter:image" content="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/assets/og-image.png">
+  <meta name="twitter:image:alt" content="Scrittura italiana: correggere, chiarire e riscrivere con gli LLM">
   <meta name="theme-color" content="#2154c9">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,14 +29,42 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Scrittura italiana",
-    "applicationCategory": "WritingApplication",
-    "operatingSystem": "Claude Code, Claude Desktop, agenti compatibili con Agent Skills",
-    "softwareVersion": "2.21.0",
-    "description": "La skill editoriale per l'italiano: corregge, chiarisce e riscrive conservando significato, intenzione e registro.",
-    "license": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "codeRepository": "https://github.com/hypnosdesign/claude-skill-scrittura-italiana"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://hypnosdesign.github.io/claude-skill-scrittura-italiana/#sito",
+        "url": "https://hypnosdesign.github.io/claude-skill-scrittura-italiana/",
+        "name": "Scrittura italiana",
+        "description": "Skill editoriale di scrittura e revisione in italiano per gli LLM.",
+        "inLanguage": "it"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://hypnosdesign.github.io/claude-skill-scrittura-italiana/#pagina",
+        "url": "https://hypnosdesign.github.io/claude-skill-scrittura-italiana/",
+        "name": "Scrittura italiana: skill di scrittura e revisione per LLM",
+        "description": "Skill editoriale per scrivere, correggere e umanizzare testi italiani con GPT, Claude, Qwen, DeepSeek e altri LLM. Formato Agent Skills o file unico.",
+        "inLanguage": "it",
+        "isPartOf": {
+          "@id": "https://hypnosdesign.github.io/claude-skill-scrittura-italiana/#sito"
+        },
+        "about": {
+          "@id": "https://hypnosdesign.github.io/claude-skill-scrittura-italiana/#skill"
+        }
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://hypnosdesign.github.io/claude-skill-scrittura-italiana/#skill",
+        "name": "Scrittura italiana",
+        "url": "https://github.com/hypnosdesign/claude-skill-scrittura-italiana",
+        "description": "Istruzioni editoriali in Markdown per scrivere, correggere e riscrivere testi italiani con gli LLM. Distribuite in formato Agent Skills e in un file unico.",
+        "inLanguage": "it",
+        "encodingFormat": "text/markdown",
+        "version": "2.21.0",
+        "isAccessibleForFree": true,
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ]
   }
   </script>
 </head>
@@ -67,9 +102,9 @@
     <section class="hero" aria-labelledby="titolo">
       <div class="shell hero-grid">
         <div>
-          <p class="hero-kicker">La skill editoriale per l'italiano.</p>
-          <h1 id="titolo">Correggi. Chiarisci. <span class="correction">Riscrivi.</span></h1>
-          <p class="hero-lede">Migliora la lingua, la struttura e il ritmo del testo. Toglie i tic della prosa generata e conserva fatti, intenzione e registro.</p>
+          <p class="hero-kicker">Correggi. Chiarisci. Riscrivi.</p>
+          <h1 id="titolo">Scrittura italiana <span class="correction">per gli LLM.</span></h1>
+          <p class="hero-lede">Una skill editoriale per GPT, Claude, Qwen, DeepSeek e altri modelli linguistici. Migliora lingua, struttura e ritmo del testo, conservando fatti, intenzione e registro.</p>
           <div class="button-row">
             <a class="button" href="installazione.html">Installa la skill <span aria-hidden="true">↗</span></a>
             <a class="button secondary" href="#prima-e-dopo">Guarda un prima e dopo</a>
@@ -126,6 +161,21 @@
           <li><strong>Umanizza</strong><span>Riconosce e toglie i tic della prosa generata, senza trucchi anti-detector.</span></li>
           <li><strong>Risolvi un dubbio</strong><span>Virgola, congiuntivo, qual è, sé stesso: regola, esempio e fonte.</span></li>
         </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="modelli">
+      <div class="shell">
+        <div class="section-heading">
+          <h2 id="modelli">Una skill, diversi modelli e interfacce.</h2>
+          <p>Le istruzioni editoriali sono in Markdown e puoi usarle con un LLM che legge istruzioni in italiano. Il modo di caricarle dipende dall'interfaccia.</p>
+        </div>
+        <ul class="virtue-lines">
+          <li><strong>Agenti con supporto alle skill</strong><span>Installa il formato Agent Skills con <code>npx skills</code>. L'agente carica i riferimenti quando servono.</span></li>
+          <li><strong>GPT, Qwen, DeepSeek e altri LLM</strong><span>Fornisci la versione monofile come istruzioni o documento di riferimento, poi il testo e il livello di revisione richiesto.</span></li>
+          <li><strong>Claude Code</strong><span>Puoi usare anche il plugin dal marketplace, con aggiornamenti gestiti dal client.</span></li>
+        </ul>
+        <p><a href="installazione.html">Come usare la skill con il tuo assistente</a>. L'attivazione, gli strumenti e il contesto disponibile dipendono dal client. I risultati osservati sono nella <a href="valutazione.html">pagina di valutazione</a>.</p>
       </div>
     </section>
 

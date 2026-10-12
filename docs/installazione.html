@@ -3,15 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Installazione e uso | Scrittura italiana</title>
-  <meta name="description" content="Installa Scrittura italiana in Claude Code, Claude Desktop o in un agente compatibile e scegli il livello di revisione.">
+  <title>Usare la skill con GPT, Claude, Qwen e altri LLM</title>
+  <meta name="description" content="Installa Scrittura italiana con skills.sh o il plugin Claude Code. Usa il file unico con GPT, Qwen, DeepSeek e altri LLM che accettano istruzioni.">
   <link rel="canonical" href="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/installazione.html">
-  <meta property="og:locale" content="it_IT"><meta property="og:type" content="article"><meta property="og:title" content="Installazione e uso | Scrittura italiana"><meta property="og:description" content="Istruzioni per Claude, agenti compatibili e assistenti senza supporto nativo alle skill."><meta property="og:url" content="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/installazione.html">
+  <meta property="og:locale" content="it_IT"><meta property="og:type" content="website"><meta property="og:title" content="Usare la skill con GPT, Claude, Qwen e altri LLM"><meta property="og:description" content="Installa Scrittura italiana con skills.sh o il plugin Claude Code. Usa il file unico con GPT, Qwen, DeepSeek e altri LLM che accettano istruzioni."><meta property="og:url" content="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/installazione.html">
+  <meta property="og:image" content="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Scrittura italiana: correggere, chiarire e riscrivere con gli LLM">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Usare la skill con GPT, Claude, Qwen e altri LLM">
+  <meta name="twitter:description" content="Installa Scrittura italiana con skills.sh o il plugin Claude Code. Usa il file unico con GPT, Qwen, DeepSeek e altri LLM che accettano istruzioni.">
+  <meta name="twitter:image" content="https://hypnosdesign.github.io/claude-skill-scrittura-italiana/assets/og-image.png">
+  <meta name="twitter:image:alt" content="Scrittura italiana: correggere, chiarire e riscrivere con gli LLM">
   <meta name="theme-color" content="#2154c9">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&amp;display=swap">
   <link rel="stylesheet" href="assets/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://hypnosdesign.github.io/claude-skill-scrittura-italiana/installazione.html#pagina",
+        "url": "https://hypnosdesign.github.io/claude-skill-scrittura-italiana/installazione.html",
+        "name": "Usare la skill con GPT, Claude, Qwen e altri LLM",
+        "description": "Installa Scrittura italiana con skills.sh o il plugin Claude Code. Usa il file unico con GPT, Qwen, DeepSeek e altri LLM che accettano istruzioni.",
+        "inLanguage": "it",
+        "isPartOf": {
+          "@id": "https://hypnosdesign.github.io/claude-skill-scrittura-italiana/#sito"
+        },
+        "about": {
+          "@id": "https://hypnosdesign.github.io/claude-skill-scrittura-italiana/#skill"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#contenuto">Vai al contenuto</a>
@@ -23,10 +53,10 @@
   </div></header>
 
   <main id="contenuto">
-    <header class="page-hero"><div class="shell"><h1 class="page-title">Installa. Poi indica quanto toccare.</h1><p>Il metodo più semplice usa il formato Agent Skills. Per gli assistenti che non lo supportano esiste una versione completa in un solo file.</p><div class="meta-line"><span>Versione <span data-project-version>2.21.0</span></span><span>Licenza CC BY-SA 4.0</span></div></div></header>
+    <header class="page-hero"><div class="shell"><h1 class="page-title">Usare la skill con il tuo LLM.</h1><p>Puoi usare le stesse istruzioni editoriali con GPT, Claude, Qwen, DeepSeek e altri LLM. Scegli il formato in base al supporto dell’interfaccia: Agent Skills oppure un file completo in Markdown.</p><div class="meta-line"><span>Versione <span data-project-version>2.21.0</span></span><span>Licenza CC BY-SA 4.0</span></div></div></header>
 
     <div class="doc-shell">
-      <nav class="toc" aria-label="Indice della pagina"><p>In questa pagina</p><ol><li><a href="#npx">Installazione rapida</a></li><li><a href="#claude-code">Claude Code</a></li><li><a href="#desktop">Claude Desktop</a></li><li><a href="#altri">Altri assistenti</a></li><li><a href="#uso">Come usarla</a></li><li><a href="#aggiornare">Aggiornare</a></li></ol></nav>
+      <nav class="toc" aria-label="Indice della pagina"><p>In questa pagina</p><ol><li><a href="#npx">Installazione rapida</a></li><li><a href="#claude-code">Claude Code</a></li><li><a href="#desktop">Claude Desktop</a></li><li><a href="#altri">GPT, Qwen, DeepSeek e altri LLM</a></li><li><a href="#uso">Come usarla</a></li><li><a href="#aggiornare">Aggiornare</a></li></ol></nav>
 
       <article class="doc-content">
         <section id="npx">
@@ -61,8 +91,15 @@
         </section>
 
         <section id="altri">
-          <h2>Altri assistenti</h2>
-          <p>Gli agenti compatibili con Agent Skills possono usare lo stesso comando <code>npx skills add</code>. Per Custom GPT, Gem e assistenti che accettano istruzioni o file di conoscenza, usa il documento completo.</p>
+          <h2>GPT, Qwen, DeepSeek e altri LLM</h2>
+          <p>Il modello e l’interfaccia sono due scelte distinte. Se il tuo agente supporta Agent Skills, installa la cartella con <code>npx skills add</code>. In una chat o in un ambiente che accetta istruzioni e documenti, usa la versione monofile.</p>
+          <ol>
+            <li>Scarica il file Markdown completo dal collegamento qui sotto.</li>
+            <li>Caricalo come documento di riferimento oppure forniscilo come istruzioni, entro il contesto disponibile.</li>
+            <li>Chiedi di applicare la skill Scrittura italiana e indica il livello di revisione: proofread, line edit o deep rewrite.</li>
+            <li>Fornisci il testo, il destinatario e i vincoli. Per lavori successivi, conserva il file nell’ambiente che stai usando.</li>
+          </ol>
+          <p>Le regole editoriali sono comuni ai modelli; attivazione automatica, lettura dei file ed esecuzione del misuratore dipendono dall’interfaccia. Le <a href="valutazione.html">prove con Claude e GPT</a> documentano i risultati osservati, senza estenderli ai modelli non valutati.</p>
           <p><a class="button quiet" href="https://github.com/hypnosdesign/claude-skill-scrittura-italiana/blob/main/scrittura-italiana-single-file.md">Apri la versione in un solo file</a></p>
           <div class="callout warning"><h3>Limite della versione singola</h3><p>Il contenuto resta disponibile, ma si perde l'attivazione automatica e il caricamento progressivo dei riferimenti. Il prompt completo è inoltre più pesante.</p></div>
         </section>

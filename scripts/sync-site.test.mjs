@@ -13,7 +13,8 @@ test('sync-site --write aggiorna i dati ma non nasconde errori HTML o link rotti
     writeFileSync(join(root, 'SKILL.md'), '---\nmetadata:\n  version: "2.19.1"\n---\n')
     writeFileSync(join(root, 'references/stile-naturale.md'), '**1. Pattern.**\n')
     writeFileSync(join(root, 'evals/manifest.json'), '{"evals":[{"split":"dev"}]}')
-    const html = '<html lang="it"><head><meta name="description" content="Prova"></head><body>' +
+    const html = '<html lang="it"><head><meta name="description" content="Prova">' +
+      '<script type="application/ld+json">{"@type":"CreativeWork","version":"old"}</script></head><body>' +
       '<a class="skip-link" href="#main">Salta</a><main id="main"><h1>Prova</h1>' +
       '<span data-project-version>old</span></main></body></html>'
     const page = join(root, 'docs/index.html')
@@ -22,6 +23,7 @@ test('sync-site --write aggiorna i dati ma non nasconde errori HTML o link rotti
     assert.equal(run().status, 1, 'i dati obsoleti sono segnalati')
     assert.equal(run('--write').status, 0)
     assert.match(readFileSync(page, 'utf8'), /data-project-version>2\.19\.1/)
+    assert.match(readFileSync(page, 'utf8'), /"version":"2\.19\.1"/)
     assert.equal(run().status, 0)
     for (const bad of [html.replace('</main>', '<h1>Duplicato</h1></main>'),
       html.replace('</main>', '<a href="inesistente.html">Link</a></main>')]) {

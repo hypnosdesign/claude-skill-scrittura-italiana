@@ -6,6 +6,7 @@ on:
       - "docs/**"
       - "scripts/sync-site.mjs"
       - "scripts/sync-site.test.mjs"
+      - "scripts/check-seo*.mjs"
       - ".github/workflows/site-quality.yml"
       - "SKILL.md"
       - "references/**"
@@ -16,6 +17,7 @@ on:
       - "docs/**"
       - "scripts/sync-site.mjs"
       - "scripts/sync-site.test.mjs"
+      - "scripts/check-seo*.mjs"
       - ".github/workflows/site-quality.yml"
       - "SKILL.md"
       - "references/**"
@@ -33,8 +35,10 @@ jobs:
         with:
           node-version: 22
       - name: Test site synchronization gate
-        run: node --test scripts/sync-site.test.mjs
+        run: node --test scripts/sync-site.test.mjs scripts/check-seo.test.mjs
       - name: Check site data and local links
         run: node scripts/sync-site.mjs
       - name: Check progressive-enhancement JavaScript
         run: node --check docs/assets/site.js
+      - name: Check SEO metadata, structured data and sitemap
+        run: node scripts/check-seo.mjs

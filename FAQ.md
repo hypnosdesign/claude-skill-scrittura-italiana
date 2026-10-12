@@ -62,13 +62,17 @@ editoriali si applicano solo al testo controllato (o se le chiedi esplicitamente
 
 ### Funziona con il mio assistente / in che lingua?
 
-I contenuti sono in **italiano** (deve esserlo). Funziona con Claude Code, Claude Desktop,
-claude.ai e gli altri agent compatibili con il formato Agent Skills (Cursor, Copilot…) via
-`npx skills add hypnosdesign/claude-skill-scrittura-italiana`.
+I contenuti sono in **italiano**. Puoi usarli con **GPT, Claude, Qwen, DeepSeek e altri
+LLM** che seguono istruzioni in italiano. Negli agenti compatibili con Agent Skills
+usa `npx skills add hypnosdesign/claude-skill-scrittura-italiana`; nelle altre
+interfacce fornisci la [versione monofile](scrittura-italiana-single-file.md) come
+istruzioni o documento di riferimento. Caricamento, attivazione e strumenti
+dipendono dall'interfaccia; le valutazioni disponibili restano specifiche dei
+modelli e dei casi provati.
 
 ### Come la uso, in pratica?
 
-Installala, poi chiedi a Claude di scrivere o correggere un testo — dicendo **se è tuo o
+Caricala nel tuo assistente, poi chiedigli di scrivere o correggere un testo — dicendo **se è tuo o
 generato dall'AI** e **in che registro** (editoriale o informale). Se vuoi che mantenga la tua
 voce, incolla un campione del tuo modo di scrivere.
 

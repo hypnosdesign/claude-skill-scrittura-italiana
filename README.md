@@ -7,7 +7,7 @@
 > generata (perifrasi, gerundite, triadi, trattini lunghi, frasi fatte), senza trucchi per
 > aggirare i detector.
 >
-> *A Claude [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills) — the editorial
+> *An editorial skill for LLMs, distributed as Agent Skills and a single Markdown file — the editorial
 > skill for Italian: corrects, clarifies and rewrites without changing meaning, working from
 > real knowledge of Italian rules, register and structure. Also works as an Italian humanizer
 > for the tics of generated prose. Content is in Italian.*
@@ -23,6 +23,11 @@
 🔗 **[Sito del progetto →](https://hypnosdesign.github.io/claude-skill-scrittura-italiana/)**
 
 ## Cos'è
+
+Le istruzioni editoriali sono utilizzabili con **GPT, Claude, Qwen, DeepSeek e altri
+LLM** che leggono istruzioni in italiano. Il modo di caricarle dipende dall'interfaccia:
+formato Agent Skills negli agenti compatibili, oppure versione monofile come istruzioni
+o documento di riferimento. Il plugin Claude Code è uno dei canali di installazione.
 
 Una **skill editoriale**: la installi e il tuo assistente lavora sul testo come un editor —
 con sei azioni riconoscibili. **Scrivi** (da un brief o da appunti), **correggi** (refusi,
@@ -177,6 +182,7 @@ nel [seguito dell'audit](AUDIT-2026-09-SEGUITO.md).
 - **[scrittura-italiana-single-file.md](scrittura-italiana-single-file.md)** — tutta la skill in un file, per Gemini/ChatGPT e assistenti senza supporto nativo alle Skill.
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** — come contribuire.
 - **[CHANGELOG.md](CHANGELOG.md)** — storia delle versioni.
+- **[SEO del sito](docs/SEO.md)** — controlli dei metadati e configurazione futura di Search Console.
 
 ## Installazione
 
@@ -254,10 +260,12 @@ Riavvia/riapri Claude Code: la skill comparirà tra quelle disponibili.
 > abilitala lì o aggiorna l'app. Claude Desktop e claude.ai condividono lo stesso account:
 > una skill caricata è disponibile in entrambi.
 
-### Altri assistenti (Gemini, ChatGPT…)
+### GPT, Qwen, DeepSeek, Gemini e altri LLM
 
 - **Gemini CLI** e altri agent compatibili col formato Agent Skills: usa lo stesso
   `npx skills add hypnosdesign/claude-skill-scrittura-italiana` (rileva l'agent installato).
+- **GPT, Qwen, DeepSeek e altri LLM**: fornisci la versione monofile come istruzioni
+  o documento di riferimento, secondo le capacità e il contesto dell'interfaccia.
 - **App Gemini, Custom GPT di ChatGPT** e simili (niente supporto nativo alle Skill): usa la
   **[versione in un solo file](scrittura-italiana-single-file.md)** — incolla quel documento
   nelle istruzioni di un *Gem* / Custom GPT, o caricalo come file di conoscenza. La skill è
@@ -266,8 +274,9 @@ Riavvia/riapri Claude Code: la skill comparirà tra quelle disponibili.
 
 ## Uso
 
-La skill si attiva da sola quando chiedi di scrivere o correggere testo italiano, o quando fai
-una domanda di punteggiatura. Esempi:
+Negli agenti che supportano le skill, l'attivazione può avvenire sulle richieste
+pertinenti. Nelle altre interfacce, fornisci le istruzioni e chiedi di applicare
+Scrittura italiana. Esempi:
 
 - «Correggi questo testo in italiano: …»
 - «Scrivi l'introduzione della tesi su … in italiano»
@@ -434,18 +443,19 @@ Pontiggia, Rigotti and others).
 ### Install
 
 ```bash
-# Claude Code (personal skills)
-git clone https://github.com/hypnosdesign/claude-skill-scrittura-italiana \
-  ~/.claude/skills/scrittura-italiana
+# Agents that support Agent Skills
+npx skills add hypnosdesign/claude-skill-scrittura-italiana
 ```
 
-For a single project, clone into `.claude/skills/scrittura-italiana` at the repo root. On
-claude.ai / Claude Desktop, upload the folder (or a `.zip`) under Capabilities → Skills.
+Use the complete Markdown file as instructions or a reference document with GPT,
+Claude, Qwen, DeepSeek and other LLMs. How you load it depends on your interface.
+The Claude Code plugin is another installation option; see the instructions above.
 
 ### Use
 
-The skill triggers automatically when you ask Claude to write or edit Italian text, or ask a
-punctuation question (e.g. *"Correggi questo testo"*, *"ci vuole la virgola prima di che?"*).
+Ask your assistant to apply Scrittura italiana when writing or editing Italian text, or
+answering a punctuation question (e.g. *"Correggi questo testo"*, *"ci vuole la virgola prima di che?"*).
+Automatic activation and reference loading depend on the client's support for skills.
 Provide a sample of your own writing and it will match your voice instead of flattening
 everything to neutral Italian. See the **Esempi (prima → dopo)** section above for before/after
 demonstrations.

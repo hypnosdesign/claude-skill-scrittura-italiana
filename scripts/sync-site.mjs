@@ -54,7 +54,7 @@ for (const name of htmlFiles) {
     html = html.replace(pattern, `$1${value}$3`);
   }
 
-  html = html.replace(/("softwareVersion"\s*:\s*")[^"]+("\s*)/, `$1${version}$2`);
+  html = html.replace(/("(?:softwareVersion|version)"\s*:\s*")[^"]+("\s*)/, `$1${version}$2`);
 
   if (html !== original) {
     if (write) await writeFile(path, html);
