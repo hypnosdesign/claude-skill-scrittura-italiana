@@ -167,12 +167,12 @@
     <section class="section" aria-labelledby="modelli">
       <div class="shell">
         <div class="section-heading">
-          <h2 id="modelli">Una skill, diversi modelli e interfacce.</h2>
-          <p>Le istruzioni editoriali sono in Markdown e puoi usarle con un LLM che legge istruzioni in italiano. Il modo di caricarle dipende dall'interfaccia.</p>
+          <h2 id="modelli">Usala con il tuo LLM.</h2>
+          <p>Le istruzioni sono in Markdown. Puoi usarle con GPT, Claude, Qwen, DeepSeek e altri LLM; scegli come caricarle in base all'interfaccia.</p>
         </div>
         <ul class="virtue-lines">
-          <li><strong>Agenti con supporto alle skill</strong><span>Installa il formato Agent Skills con <code>npx skills</code>. L'agente carica i riferimenti quando servono.</span></li>
-          <li><strong>GPT, Qwen, DeepSeek e altri LLM</strong><span>Fornisci la versione monofile come istruzioni o documento di riferimento, poi il testo e il livello di revisione richiesto.</span></li>
+          <li><strong>Agenti con Agent Skills</strong><span>Installa la skill con <code>npx skills</code>. L'agente legge le guide di riferimento quando servono.</span></li>
+          <li><strong>Chat e altri ambienti</strong><span>Carica il file completo come istruzioni o documento di riferimento. Poi fornisci il testo e indica quanto vuoi modificarlo.</span></li>
           <li><strong>Claude Code</strong><span>Puoi usare anche il plugin dal marketplace, con aggiornamenti gestiti dal client.</span></li>
         </ul>
         <p><a href="installazione.html">Come usare la skill con il tuo assistente</a>. L'attivazione, gli strumenti e il contesto disponibile dipendono dal client. I risultati osservati sono nella <a href="valutazione.html">pagina di valutazione</a>.</p>
@@ -230,11 +230,12 @@
 
     <section class="section dark" aria-labelledby="prove">
       <div class="shell evidence-layout">
-        <h2 class="evidence-statement" id="prove"><span class="verified">Artefatti, non promesse.</span> La suite conserva prompt, output, giudizi e fingerprint.</h2>
+        <h2 class="evidence-statement" id="prove">Le prove sono <span class="verified">consultabili.</span></h2>
         <div class="evidence-note">
+          <p>La suite conserva richieste, risposte, giudizi e impronte dei file usati, così puoi esaminare come sono stati ottenuti i risultati.</p>
           <p>La versione <span data-project-version>2.21.0</span> include <span data-dev-count>69</span> casi di sviluppo e <span data-heldout-count>6</span> casi held-out. Il valutatore distingue la fedeltà del testo dalla correttezza delle note editoriali: una spiegazione utile non è un fatto inventato, una nota falsa resta un errore.</p>
           <p>I confronti storici nella pagina Valutazione riguardano versioni e criteri precedenti, non misurano questa versione. Il giudice è un modello: le prove automatiche non sostituiscono la lettura umana e non certificano una superiorità generale.</p>
-          <p><a class="button secondary" href="valutazione.html">Come leggiamo gli eval</a></p>
+          <p><a class="button secondary" href="valutazione.html">Esamina prove e limiti</a></p>
         </div>
       </div>
     </section>
@@ -242,12 +243,12 @@
     <section class="section" aria-labelledby="documentazione">
       <div class="shell">
         <div class="section-heading">
-          <h2 id="documentazione">La documentazione parte da qui.</h2>
-          <p>La landing presenta il progetto. Le pagine seguenti spiegano regole, installazione, misura e fonti con collegamenti diretti ai file canonici.</p>
+          <h2 id="documentazione">Approfondisci il metodo.</h2>
+          <p>Scopri come lavora la skill, come usarla e quali prove sono disponibili. Le guide rimandano ai file del progetto e alle fonti.</p>
         </div>
         <ul class="link-ledger">
           <li><a href="metodo.html"><strong>Metodo</strong><span>Contratto, livelli, workflow e quattro virtù.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-          <li><a href="installazione.html"><strong>Installazione</strong><span>Claude, agenti compatibili e uso in un solo file.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="installazione.html"><strong>Installazione</strong><span>Agent Skills, plugin e file completo per gli altri LLM.</span><span class="arrow" aria-hidden="true">→</span></a></li>
           <li><a href="valutazione.html"><strong>Valutazione</strong><span>Suite, runner, risultati e limiti della misura.</span><span class="arrow" aria-hidden="true">→</span></a></li>
           <li><a href="riferimenti.html"><strong>Riferimenti</strong><span>Guide, esempi, fonti e modi per contribuire.</span><span class="arrow" aria-hidden="true">→</span></a></li>
         </ul>

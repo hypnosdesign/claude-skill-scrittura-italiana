@@ -7,6 +7,9 @@ il [Versionamento Semantico](https://semver.org/lang/it/).
 
 ## [Unreleased]
 
+- Contrasto delle liste corretto sulle superfici chiare, fascia dei dati centrata
+  sulla griglia e sezione delle prove allineata. Titoli e copy più compatti,
+  feedback dei controlli brevi e compatibili con le preferenze di movimento ridotto.
 - Sito e documentazione presentano la skill come istruzioni editoriali per gli LLM,
   con modalità d'uso per GPT, Claude, Qwen, DeepSeek e altri modelli.
 - Titoli, H1, descrizioni e anteprime social delle cinque pagine aggiornati.
